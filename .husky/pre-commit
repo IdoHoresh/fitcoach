@@ -1,1 +1,2 @@
+bash scripts/check-claude-checklist.sh
 npx lint-staged
