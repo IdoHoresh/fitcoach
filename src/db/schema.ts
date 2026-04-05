@@ -1,0 +1,159 @@
+/**
+ * SQLite Database Schema.
+ *
+ * All tables defined here — single source of truth for database structure.
+ * Uses parameterized queries ONLY — no string concatenation, ever.
+ *
+ * SECURITY:
+ * - All queries use ? placeholders (SQL injection prevention)
+ * - Sensitive data (future auth tokens) stored in expo-secure-store, NOT here
+ * - Health data stays on device only (no cloud sync without user consent)
+ */
+
+/** Current schema version — increment when modifying tables */
+export const SCHEMA_VERSION = 1;
+
+/**
+ * All CREATE TABLE statements.
+ * Executed in order during initial setup or migration.
+ */
+export const CREATE_TABLE_STATEMENTS: readonly string[] = [
+  // ── User Profile ──
+  `CREATE TABLE IF NOT EXISTS user_profile (
+    id TEXT PRIMARY KEY,
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+    height_cm REAL NOT NULL,
+    weight_kg REAL NOT NULL,
+    age INTEGER NOT NULL,
+    sex TEXT NOT NULL CHECK (sex IN ('male', 'female')),
+    body_fat_percent REAL,
+    goal TEXT NOT NULL CHECK (goal IN ('muscle_gain', 'fat_loss', 'maintenance')),
+    experience TEXT NOT NULL CHECK (experience IN ('beginner', 'intermediate')),
+    training_days TEXT NOT NULL,
+    equipment TEXT NOT NULL CHECK (equipment IN ('full_gym', 'home_gym', 'minimal')),
+    activity_level TEXT NOT NULL CHECK (activity_level IN ('sedentary', 'light', 'moderate', 'active', 'very_active'))
+  )`,
+
+  // ── Workout Plan (generated from algorithm) ──
+  `CREATE TABLE IF NOT EXISTS workout_plan (
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL,
+    split_type TEXT NOT NULL,
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    is_active INTEGER NOT NULL DEFAULT 1,
+    FOREIGN KEY (user_id) REFERENCES user_profile(id)
+  )`,
+
+  // ── Workout Templates (individual workout days) ──
+  `CREATE TABLE IF NOT EXISTS workout_template (
+    id TEXT PRIMARY KEY,
+    plan_id TEXT NOT NULL,
+    day_type TEXT NOT NULL,
+    name_he TEXT NOT NULL,
+    name_en TEXT NOT NULL,
+    estimated_minutes INTEGER NOT NULL,
+    FOREIGN KEY (plan_id) REFERENCES workout_plan(id)
+  )`,
+
+  // ── Exercise Prescriptions (exercises within a template) ──
+  `CREATE TABLE IF NOT EXISTS exercise_prescription (
+    id TEXT PRIMARY KEY,
+    template_id TEXT NOT NULL,
+    exercise_id TEXT NOT NULL,
+    sets INTEGER NOT NULL,
+    min_reps INTEGER NOT NULL,
+    max_reps INTEGER NOT NULL,
+    rest_seconds INTEGER NOT NULL,
+    exercise_order INTEGER NOT NULL,
+    FOREIGN KEY (template_id) REFERENCES workout_template(id)
+  )`,
+
+  // ── Workout Logs (completed workouts) ──
+  `CREATE TABLE IF NOT EXISTS workout_log (
+    id TEXT PRIMARY KEY,
+    date TEXT NOT NULL,
+    template_id TEXT NOT NULL,
+    day_type TEXT NOT NULL,
+    started_at TEXT NOT NULL,
+    completed_at TEXT,
+    duration_minutes INTEGER NOT NULL DEFAULT 0,
+    FOREIGN KEY (template_id) REFERENCES workout_template(id)
+  )`,
+
+  // ── Set Logs (individual sets within a workout) ──
+  `CREATE TABLE IF NOT EXISTS set_log (
+    id TEXT PRIMARY KEY,
+    workout_log_id TEXT NOT NULL,
+    exercise_id TEXT NOT NULL,
+    set_number INTEGER NOT NULL,
+    weight_kg REAL NOT NULL,
+    reps INTEGER NOT NULL,
+    rpe REAL,
+    is_warmup INTEGER NOT NULL DEFAULT 0,
+    notes TEXT DEFAULT '',
+    FOREIGN KEY (workout_log_id) REFERENCES workout_log(id)
+  )`,
+
+  // ── Food Log (daily nutrition tracking) ──
+  `CREATE TABLE IF NOT EXISTS food_log (
+    id TEXT PRIMARY KEY,
+    food_id TEXT NOT NULL,
+    meal_type TEXT NOT NULL,
+    date TEXT NOT NULL,
+    serving_amount REAL NOT NULL,
+    serving_unit TEXT NOT NULL,
+    grams_consumed REAL NOT NULL,
+    calories REAL NOT NULL,
+    protein REAL NOT NULL,
+    fat REAL NOT NULL,
+    carbs REAL NOT NULL
+  )`,
+
+  // ── Saved Meals (user's frequently eaten meal combos) ──
+  `CREATE TABLE IF NOT EXISTS saved_meal (
+    id TEXT PRIMARY KEY,
+    name_he TEXT NOT NULL,
+    total_calories REAL NOT NULL,
+    total_protein REAL NOT NULL,
+    total_fat REAL NOT NULL,
+    total_carbs REAL NOT NULL
+  )`,
+
+  `CREATE TABLE IF NOT EXISTS saved_meal_item (
+    id TEXT PRIMARY KEY,
+    saved_meal_id TEXT NOT NULL,
+    food_id TEXT NOT NULL,
+    serving_amount REAL NOT NULL,
+    serving_unit TEXT NOT NULL,
+    grams_consumed REAL NOT NULL,
+    FOREIGN KEY (saved_meal_id) REFERENCES saved_meal(id)
+  )`,
+
+  // ── Body Measurements (progress tracking) ──
+  `CREATE TABLE IF NOT EXISTS body_measurement (
+    id TEXT PRIMARY KEY,
+    date TEXT NOT NULL,
+    weight_kg REAL NOT NULL,
+    body_fat_percent REAL,
+    notes TEXT DEFAULT ''
+  )`,
+
+  // ── Mesocycle Tracking ──
+  `CREATE TABLE IF NOT EXISTS mesocycle (
+    id TEXT PRIMARY KEY,
+    start_date TEXT NOT NULL,
+    end_date TEXT,
+    week_number INTEGER NOT NULL DEFAULT 1,
+    total_weeks INTEGER NOT NULL,
+    is_deload_week INTEGER NOT NULL DEFAULT 0
+  )`,
+
+  // ── Indexes for fast lookups ──
+  `CREATE INDEX IF NOT EXISTS idx_workout_log_date ON workout_log(date)`,
+  `CREATE INDEX IF NOT EXISTS idx_set_log_workout ON set_log(workout_log_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_set_log_exercise ON set_log(exercise_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_food_log_date ON food_log(date)`,
+  `CREATE INDEX IF NOT EXISTS idx_food_log_meal ON food_log(date, meal_type)`,
+  `CREATE INDEX IF NOT EXISTS idx_body_measurement_date ON body_measurement(date)`,
+];

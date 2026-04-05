@@ -1,0 +1,43 @@
+/**
+ * Central type exports.
+ * Import from '@/types' instead of individual files.
+ */
+
+export type {
+  BiologicalSex,
+  TrainingGoal,
+  ExperienceLevel,
+  EquipmentAccess,
+  DayOfWeek,
+  ActivityLevel,
+  UserProfile,
+  NutritionTargets,
+  BodyMeasurement,
+} from './user';
+
+export type {
+  MuscleGroup,
+  MovementPattern,
+  SplitType,
+  WorkoutDayType,
+  Exercise,
+  ExercisePrescription,
+  WorkoutTemplate,
+  LoggedSet,
+  LoggedExercise,
+  WorkoutLog,
+  ProgressionAdvice,
+  Mesocycle,
+} from './workout';
+
+export type {
+  FoodCategory,
+  MealType,
+  ServingUnit,
+  FoodItem,
+  ServingSize,
+  FoodLogEntry,
+  SavedMeal,
+  SavedMealItem,
+  DailyNutritionSummary,
+} from './nutrition';
