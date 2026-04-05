@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -34,10 +34,9 @@ jobs:
       - name: Run tests
         run: npm test -- --passWithNoTests --ci
 
-      # TODO: Enable after retroactive algorithm tests are written
-      # - name: Algorithm coverage check
-      #   run: |
-      #     npm test -- --coverage \
-      #       --collectCoverageFrom='src/algorithms/**/*.ts' \
-      #       --coverageThreshold='{"global":{"branches":80,"functions":80,"lines":80}}' \
-      #       --ci
+      - name: Algorithm coverage check
+        run: |
+          npm test -- --coverage \
+            --collectCoverageFrom='src/algorithms/**/*.ts' \
+            --coverageThreshold='{"global":{"branches":80,"functions":80,"lines":80}}' \
+            --ci
