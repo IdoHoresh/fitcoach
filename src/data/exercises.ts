@@ -26,37 +26,37 @@
  * - Exercise selection: Helms (3DMJ), Israetel (RP), Nippard, Norton, McDonald
  */
 
-import type { Exercise, MuscleGroup } from '../types';
-import type { EquipmentItem } from '../types/user';
+import type { Exercise, MuscleGroup } from '../types'
+import type { EquipmentItem } from '../types/user'
 
 // ── Exercise Position Tag ──────────────────────────────────────────
 // Not part of the Exercise type (UI doesn't need it),
 // but used internally by the workout generator for smart selection.
 
-export type MusclePosition = 'stretched' | 'shortened' | 'neutral';
+export type MusclePosition = 'stretched' | 'shortened' | 'neutral'
 
 export interface ExerciseWithMeta extends Exercise {
   /** Does this exercise load the muscle in a stretched position? */
-  readonly musclePosition: MusclePosition;
+  readonly musclePosition: MusclePosition
   /** Is this a compound (multi-joint) or isolation (single-joint) movement? */
-  readonly isCompound: boolean;
+  readonly isCompound: boolean
 }
 
 // ── Helper to create exercises with type safety ────────────────────
 
-let exerciseCounter = 0;
+let exerciseCounter = 0
 
 function createExercise(
   params: Omit<ExerciseWithMeta, 'id' | 'instructions'> & {
-    instructions?: string;
+    instructions?: string
   },
 ): ExerciseWithMeta {
-  exerciseCounter += 1;
+  exerciseCounter += 1
   return {
     ...params,
     id: `ex_${String(exerciseCounter).padStart(3, '0')}`,
     instructions: params.instructions ?? '',
-  };
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════
@@ -73,7 +73,7 @@ export const BARBELL_BENCH_PRESS = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const INCLINE_DUMBBELL_PRESS = createExercise({
   nameEn: 'Incline Dumbbell Press',
@@ -85,7 +85,7 @@ export const INCLINE_DUMBBELL_PRESS = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const DUMBBELL_BENCH_PRESS = createExercise({
   nameEn: 'Dumbbell Bench Press',
@@ -97,7 +97,7 @@ export const DUMBBELL_BENCH_PRESS = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const DUMBBELL_FLY = createExercise({
   nameEn: 'Dumbbell Fly',
@@ -109,7 +109,7 @@ export const DUMBBELL_FLY = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const CABLE_CROSSOVER = createExercise({
   nameEn: 'Cable Crossover',
@@ -121,7 +121,7 @@ export const CABLE_CROSSOVER = createExercise({
   musclePosition: 'shortened',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const PUSH_UP = createExercise({
   nameEn: 'Push-Up',
@@ -133,7 +133,7 @@ export const PUSH_UP = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const MACHINE_CHEST_PRESS = createExercise({
   nameEn: 'Machine Chest Press',
@@ -141,11 +141,11 @@ export const MACHINE_CHEST_PRESS = createExercise({
   primaryMuscle: 'chest',
   secondaryMuscles: ['triceps', 'shoulders'],
   movementPattern: 'horizontal_push',
-  requiredEquipment: ['leg_machines'],  // gym machines category
+  requiredEquipment: ['leg_machines'], // gym machines category
   musclePosition: 'neutral',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const DECLINE_PUSH_UP = createExercise({
   nameEn: 'Decline Push-Up (Feet Elevated)',
@@ -157,7 +157,7 @@ export const DECLINE_PUSH_UP = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const BAND_CHEST_FLY = createExercise({
   nameEn: 'Resistance Band Chest Fly',
@@ -169,7 +169,7 @@ export const BAND_CHEST_FLY = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // BACK
@@ -185,7 +185,7 @@ export const BARBELL_ROW = createExercise({
   musclePosition: 'neutral',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const SEATED_CABLE_ROW = createExercise({
   nameEn: 'Seated Cable Row',
@@ -197,7 +197,7 @@ export const SEATED_CABLE_ROW = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const DUMBBELL_ROW = createExercise({
   nameEn: 'Single-Arm Dumbbell Row',
@@ -209,7 +209,7 @@ export const DUMBBELL_ROW = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const LAT_PULLDOWN = createExercise({
   nameEn: 'Lat Pulldown',
@@ -221,7 +221,7 @@ export const LAT_PULLDOWN = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const PULL_UP = createExercise({
   nameEn: 'Pull-Up',
@@ -233,7 +233,7 @@ export const PULL_UP = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const CABLE_PULLOVER = createExercise({
   nameEn: 'Cable Pullover',
@@ -245,7 +245,7 @@ export const CABLE_PULLOVER = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const CHEST_SUPPORTED_ROW = createExercise({
   nameEn: 'Chest-Supported Dumbbell Row',
@@ -257,7 +257,7 @@ export const CHEST_SUPPORTED_ROW = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const T_BAR_ROW = createExercise({
   nameEn: 'T-Bar Row',
@@ -269,7 +269,7 @@ export const T_BAR_ROW = createExercise({
   musclePosition: 'neutral',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const INVERTED_ROW = createExercise({
   nameEn: 'Inverted Row (Bodyweight)',
@@ -277,11 +277,11 @@ export const INVERTED_ROW = createExercise({
   primaryMuscle: 'back',
   secondaryMuscles: ['biceps'],
   movementPattern: 'horizontal_pull',
-  requiredEquipment: ['none'],  // Can use a sturdy table edge or low bar
+  requiredEquipment: ['none'], // Can use a sturdy table edge or low bar
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const BAND_PULL_APART = createExercise({
   nameEn: 'Band Pull-Apart',
@@ -293,7 +293,7 @@ export const BAND_PULL_APART = createExercise({
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // SHOULDERS
@@ -309,7 +309,7 @@ export const OVERHEAD_PRESS = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const DUMBBELL_SHOULDER_PRESS = createExercise({
   nameEn: 'Dumbbell Shoulder Press',
@@ -321,7 +321,7 @@ export const DUMBBELL_SHOULDER_PRESS = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const PIKE_PUSH_UP = createExercise({
   nameEn: 'Pike Push-Up',
@@ -333,7 +333,7 @@ export const PIKE_PUSH_UP = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const DUMBBELL_LATERAL_RAISE = createExercise({
   nameEn: 'Dumbbell Lateral Raise',
@@ -345,7 +345,7 @@ export const DUMBBELL_LATERAL_RAISE = createExercise({
   musclePosition: 'shortened',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const CABLE_LATERAL_RAISE = createExercise({
   nameEn: 'Cable Lateral Raise',
@@ -357,7 +357,7 @@ export const CABLE_LATERAL_RAISE = createExercise({
   musclePosition: 'shortened',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const BAND_LATERAL_RAISE = createExercise({
   nameEn: 'Resistance Band Lateral Raise',
@@ -369,7 +369,7 @@ export const BAND_LATERAL_RAISE = createExercise({
   musclePosition: 'shortened',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const CABLE_REAR_DELT_FLY = createExercise({
   nameEn: 'Cable Rear Delt Fly',
@@ -381,7 +381,7 @@ export const CABLE_REAR_DELT_FLY = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const FACE_PULL = createExercise({
   nameEn: 'Face Pull',
@@ -393,7 +393,7 @@ export const FACE_PULL = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const REVERSE_DUMBBELL_FLY = createExercise({
   nameEn: 'Reverse Dumbbell Fly',
@@ -405,7 +405,7 @@ export const REVERSE_DUMBBELL_FLY = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const BAND_FACE_PULL = createExercise({
   nameEn: 'Band Face Pull',
@@ -417,7 +417,7 @@ export const BAND_FACE_PULL = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // BICEPS
@@ -430,10 +430,10 @@ export const INCLINE_DUMBBELL_CURL = createExercise({
   secondaryMuscles: [],
   movementPattern: 'isolation',
   requiredEquipment: ['dumbbells', 'bench'],
-  musclePosition: 'stretched',  // Shoulder extended = bicep long head stretched
+  musclePosition: 'stretched', // Shoulder extended = bicep long head stretched
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const BARBELL_CURL = createExercise({
   nameEn: 'Barbell Curl',
@@ -445,7 +445,7 @@ export const BARBELL_CURL = createExercise({
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const HAMMER_CURL = createExercise({
   nameEn: 'Hammer Curl',
@@ -457,7 +457,7 @@ export const HAMMER_CURL = createExercise({
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const CABLE_CURL = createExercise({
   nameEn: 'Cable Curl',
@@ -469,7 +469,7 @@ export const CABLE_CURL = createExercise({
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const PREACHER_CURL = createExercise({
   nameEn: 'Preacher Curl',
@@ -481,7 +481,7 @@ export const PREACHER_CURL = createExercise({
   musclePosition: 'shortened',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const CHIN_UP = createExercise({
   nameEn: 'Chin-Up (Underhand Grip)',
@@ -493,7 +493,7 @@ export const CHIN_UP = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const BAND_CURL = createExercise({
   nameEn: 'Resistance Band Curl',
@@ -505,7 +505,7 @@ export const BAND_CURL = createExercise({
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const BODYWEIGHT_BICEP_CURL = createExercise({
   nameEn: 'Self-Resisted Bicep Curl',
@@ -513,11 +513,11 @@ export const BODYWEIGHT_BICEP_CURL = createExercise({
   primaryMuscle: 'biceps',
   secondaryMuscles: [],
   movementPattern: 'isolation',
-  requiredEquipment: ['none'],  // One arm resists the other, or use a towel
+  requiredEquipment: ['none'], // One arm resists the other, or use a towel
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // TRICEPS
@@ -530,10 +530,10 @@ export const OVERHEAD_TRICEP_EXTENSION = createExercise({
   secondaryMuscles: [],
   movementPattern: 'isolation',
   requiredEquipment: ['cable_machine'],
-  musclePosition: 'stretched',  // Shoulder flexed = long head stretched
+  musclePosition: 'stretched', // Shoulder flexed = long head stretched
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const OVERHEAD_DUMBBELL_TRICEP_EXTENSION = createExercise({
   nameEn: 'Overhead Dumbbell Tricep Extension',
@@ -545,7 +545,7 @@ export const OVERHEAD_DUMBBELL_TRICEP_EXTENSION = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const SKULL_CRUSHER = createExercise({
   nameEn: 'Skull Crusher (EZ Bar)',
@@ -557,7 +557,7 @@ export const SKULL_CRUSHER = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const TRICEP_PUSHDOWN = createExercise({
   nameEn: 'Tricep Pushdown (Cable)',
@@ -569,7 +569,7 @@ export const TRICEP_PUSHDOWN = createExercise({
   musclePosition: 'shortened',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const CLOSE_GRIP_BENCH_PRESS = createExercise({
   nameEn: 'Close-Grip Bench Press',
@@ -581,7 +581,7 @@ export const CLOSE_GRIP_BENCH_PRESS = createExercise({
   musclePosition: 'neutral',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const DIAMOND_PUSH_UP = createExercise({
   nameEn: 'Diamond Push-Up',
@@ -593,7 +593,7 @@ export const DIAMOND_PUSH_UP = createExercise({
   musclePosition: 'neutral',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const BENCH_DIP = createExercise({
   nameEn: 'Bench Dip',
@@ -601,11 +601,11 @@ export const BENCH_DIP = createExercise({
   primaryMuscle: 'triceps',
   secondaryMuscles: ['chest', 'shoulders'],
   movementPattern: 'isolation',
-  requiredEquipment: ['none'],  // Can use any elevated surface (chair, step)
+  requiredEquipment: ['none'], // Can use any elevated surface (chair, step)
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const BAND_TRICEP_PUSHDOWN = createExercise({
   nameEn: 'Band Tricep Pushdown',
@@ -617,7 +617,7 @@ export const BAND_TRICEP_PUSHDOWN = createExercise({
   musclePosition: 'shortened',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // QUADS
@@ -633,7 +633,7 @@ export const BARBELL_BACK_SQUAT = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const LEG_PRESS = createExercise({
   nameEn: 'Leg Press',
@@ -645,7 +645,7 @@ export const LEG_PRESS = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const BULGARIAN_SPLIT_SQUAT = createExercise({
   nameEn: 'Bulgarian Split Squat',
@@ -653,11 +653,11 @@ export const BULGARIAN_SPLIT_SQUAT = createExercise({
   primaryMuscle: 'quads',
   secondaryMuscles: ['glutes'],
   movementPattern: 'squat',
-  requiredEquipment: ['dumbbells'],  // Can also do bodyweight, but DB version is standard
+  requiredEquipment: ['dumbbells'], // Can also do bodyweight, but DB version is standard
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const GOBLET_SQUAT = createExercise({
   nameEn: 'Goblet Squat',
@@ -669,7 +669,7 @@ export const GOBLET_SQUAT = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const LEG_EXTENSION = createExercise({
   nameEn: 'Leg Extension',
@@ -681,7 +681,7 @@ export const LEG_EXTENSION = createExercise({
   musclePosition: 'shortened',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const WALKING_LUNGE = createExercise({
   nameEn: 'Walking Lunge',
@@ -693,7 +693,7 @@ export const WALKING_LUNGE = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const HACK_SQUAT = createExercise({
   nameEn: 'Hack Squat',
@@ -705,7 +705,7 @@ export const HACK_SQUAT = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const BODYWEIGHT_SQUAT = createExercise({
   nameEn: 'Bodyweight Squat',
@@ -717,7 +717,7 @@ export const BODYWEIGHT_SQUAT = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const PISTOL_SQUAT = createExercise({
   nameEn: 'Pistol Squat (Single-Leg)',
@@ -729,7 +729,7 @@ export const PISTOL_SQUAT = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const STEP_UP = createExercise({
   nameEn: 'Step-Up',
@@ -737,11 +737,11 @@ export const STEP_UP = createExercise({
   primaryMuscle: 'quads',
   secondaryMuscles: ['glutes'],
   movementPattern: 'squat',
-  requiredEquipment: ['none'],  // Any elevated surface
+  requiredEquipment: ['none'], // Any elevated surface
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // HAMSTRINGS
@@ -757,7 +757,7 @@ export const ROMANIAN_DEADLIFT = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const DUMBBELL_RDL = createExercise({
   nameEn: 'Dumbbell Romanian Deadlift',
@@ -769,7 +769,7 @@ export const DUMBBELL_RDL = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const SEATED_LEG_CURL = createExercise({
   nameEn: 'Seated Leg Curl',
@@ -778,10 +778,10 @@ export const SEATED_LEG_CURL = createExercise({
   secondaryMuscles: [],
   movementPattern: 'isolation',
   requiredEquipment: ['leg_machines'],
-  musclePosition: 'stretched',  // Hip flexed = hamstring stretched at proximal end
+  musclePosition: 'stretched', // Hip flexed = hamstring stretched at proximal end
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const LYING_LEG_CURL = createExercise({
   nameEn: 'Lying Leg Curl',
@@ -793,7 +793,7 @@ export const LYING_LEG_CURL = createExercise({
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const NORDIC_CURL = createExercise({
   nameEn: 'Nordic Hamstring Curl',
@@ -801,11 +801,11 @@ export const NORDIC_CURL = createExercise({
   primaryMuscle: 'hamstrings',
   secondaryMuscles: [],
   movementPattern: 'isolation',
-  requiredEquipment: ['none'],  // Anchor feet under couch/partner
+  requiredEquipment: ['none'], // Anchor feet under couch/partner
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const BARBELL_DEADLIFT = createExercise({
   nameEn: 'Conventional Deadlift',
@@ -817,7 +817,7 @@ export const BARBELL_DEADLIFT = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const SINGLE_LEG_RDL = createExercise({
   nameEn: 'Single-Leg Romanian Deadlift',
@@ -825,11 +825,11 @@ export const SINGLE_LEG_RDL = createExercise({
   primaryMuscle: 'hamstrings',
   secondaryMuscles: ['glutes', 'back'],
   movementPattern: 'hip_hinge',
-  requiredEquipment: ['none'],  // Bodyweight or with DB
+  requiredEquipment: ['none'], // Bodyweight or with DB
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const SLIDING_LEG_CURL = createExercise({
   nameEn: 'Sliding Leg Curl',
@@ -837,11 +837,11 @@ export const SLIDING_LEG_CURL = createExercise({
   primaryMuscle: 'hamstrings',
   secondaryMuscles: ['glutes'],
   movementPattern: 'isolation',
-  requiredEquipment: ['none'],  // Towel on smooth floor or socks
+  requiredEquipment: ['none'], // Towel on smooth floor or socks
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // GLUTES
@@ -849,7 +849,7 @@ export const SLIDING_LEG_CURL = createExercise({
 
 export const HIP_THRUST = createExercise({
   nameEn: 'Barbell Hip Thrust',
-  nameHe: 'היפ ת\'ראסט עם מוט',
+  nameHe: "היפ ת'ראסט עם מוט",
   primaryMuscle: 'glutes',
   secondaryMuscles: ['hamstrings'],
   movementPattern: 'hip_hinge',
@@ -857,7 +857,7 @@ export const HIP_THRUST = createExercise({
   musclePosition: 'shortened',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const GLUTE_BRIDGE = createExercise({
   nameEn: 'Glute Bridge',
@@ -869,7 +869,7 @@ export const GLUTE_BRIDGE = createExercise({
   musclePosition: 'shortened',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const SINGLE_LEG_GLUTE_BRIDGE = createExercise({
   nameEn: 'Single-Leg Glute Bridge',
@@ -881,7 +881,7 @@ export const SINGLE_LEG_GLUTE_BRIDGE = createExercise({
   musclePosition: 'shortened',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 export const CABLE_PULL_THROUGH = createExercise({
   nameEn: 'Cable Pull-Through',
@@ -893,7 +893,7 @@ export const CABLE_PULL_THROUGH = createExercise({
   musclePosition: 'stretched',
   isCompound: true,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // CALVES
@@ -906,10 +906,10 @@ export const STANDING_CALF_RAISE = createExercise({
   secondaryMuscles: [],
   movementPattern: 'isolation',
   requiredEquipment: ['leg_machines'],
-  musclePosition: 'stretched',  // Straight leg = gastrocnemius stretched
+  musclePosition: 'stretched', // Straight leg = gastrocnemius stretched
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const SEATED_CALF_RAISE = createExercise({
   nameEn: 'Seated Calf Raise',
@@ -918,10 +918,10 @@ export const SEATED_CALF_RAISE = createExercise({
   secondaryMuscles: [],
   movementPattern: 'isolation',
   requiredEquipment: ['leg_machines'],
-  musclePosition: 'neutral',  // Targets soleus (bent knee)
+  musclePosition: 'neutral', // Targets soleus (bent knee)
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const BODYWEIGHT_CALF_RAISE = createExercise({
   nameEn: 'Single-Leg Calf Raise (Bodyweight)',
@@ -933,7 +933,7 @@ export const BODYWEIGHT_CALF_RAISE = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // ABS / CORE
@@ -949,7 +949,7 @@ export const CABLE_CRUNCH = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const HANGING_LEG_RAISE = createExercise({
   nameEn: 'Hanging Leg Raise',
@@ -961,7 +961,7 @@ export const HANGING_LEG_RAISE = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const AB_WHEEL_ROLLOUT = createExercise({
   nameEn: 'Ab Wheel Rollout',
@@ -969,11 +969,11 @@ export const AB_WHEEL_ROLLOUT = createExercise({
   primaryMuscle: 'abs',
   secondaryMuscles: [],
   movementPattern: 'core',
-  requiredEquipment: ['none'],  // Ab wheel is cheap and common
+  requiredEquipment: ['none'], // Ab wheel is cheap and common
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const PLANK = createExercise({
   nameEn: 'Plank',
@@ -985,7 +985,7 @@ export const PLANK = createExercise({
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const LYING_LEG_RAISE = createExercise({
   nameEn: 'Lying Leg Raise',
@@ -997,7 +997,7 @@ export const LYING_LEG_RAISE = createExercise({
   musclePosition: 'stretched',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 export const MOUNTAIN_CLIMBER = createExercise({
   nameEn: 'Mountain Climber',
@@ -1009,7 +1009,7 @@ export const MOUNTAIN_CLIMBER = createExercise({
   musclePosition: 'neutral',
   isCompound: false,
   substitutionIds: [],
-});
+})
 
 // ═══════════════════════════════════════════════════════════════════
 // FULL EXERCISE CATALOG
@@ -1103,29 +1103,27 @@ export const EXERCISE_DATABASE: readonly ExerciseWithMeta[] = [
   PLANK,
   LYING_LEG_RAISE,
   MOUNTAIN_CLIMBER,
-] as const;
+] as const
 
 // ── Lookup Helpers ─────────────────────────────────────────────────
 
 /** Map of exercise ID → exercise for O(1) lookup */
 export const EXERCISE_MAP = new Map<string, ExerciseWithMeta>(
   EXERCISE_DATABASE.map((ex) => [ex.id, ex]),
-);
+)
 
 /** Get exercise by ID — throws if not found (dev error) */
 export function getExerciseById(id: string): ExerciseWithMeta {
-  const exercise = EXERCISE_MAP.get(id);
+  const exercise = EXERCISE_MAP.get(id)
   if (!exercise) {
-    throw new Error(`Exercise not found: ${id}. Check EXERCISE_DATABASE.`);
+    throw new Error(`Exercise not found: ${id}. Check EXERCISE_DATABASE.`)
   }
-  return exercise;
+  return exercise
 }
 
 /** Get all exercises for a specific muscle group */
 export function getExercisesByMuscle(muscle: MuscleGroup): readonly ExerciseWithMeta[] {
-  return EXERCISE_DATABASE.filter(
-    (ex) => ex.primaryMuscle === muscle,
-  );
+  return EXERCISE_DATABASE.filter((ex) => ex.primaryMuscle === muscle)
 }
 
 /**
@@ -1143,16 +1141,14 @@ export function canPerformExercise(
   exercise: ExerciseWithMeta,
   userEquipment: readonly EquipmentItem[],
 ): boolean {
-  return exercise.requiredEquipment.every(
-    (item) => item === 'none' || userEquipment.includes(item),
-  );
+  return exercise.requiredEquipment.every((item) => item === 'none' || userEquipment.includes(item))
 }
 
 /** Get exercises available with the user's specific equipment */
 export function getExercisesForEquipment(
   userEquipment: readonly EquipmentItem[],
 ): readonly ExerciseWithMeta[] {
-  return EXERCISE_DATABASE.filter((ex) => canPerformExercise(ex, userEquipment));
+  return EXERCISE_DATABASE.filter((ex) => canPerformExercise(ex, userEquipment))
 }
 
 /** Get exercises for a muscle that match equipment AND prefer stretch position */
@@ -1160,19 +1156,19 @@ export function getBestExercisesForMuscle(
   muscle: MuscleGroup,
   userEquipment: readonly EquipmentItem[],
 ): readonly ExerciseWithMeta[] {
-  const available = getExercisesForEquipment(userEquipment);
-  const forMuscle = available.filter((ex) => ex.primaryMuscle === muscle);
+  const available = getExercisesForEquipment(userEquipment)
+  const forMuscle = available.filter((ex) => ex.primaryMuscle === muscle)
 
   // Sort: stretch-position first, then compound before isolation
   return [...forMuscle].sort((a, b) => {
-    const posOrder: Record<MusclePosition, number> = { stretched: 0, neutral: 1, shortened: 2 };
-    const posDiff = posOrder[a.musclePosition] - posOrder[b.musclePosition];
-    if (posDiff !== 0) return posDiff;
+    const posOrder: Record<MusclePosition, number> = { stretched: 0, neutral: 1, shortened: 2 }
+    const posDiff = posOrder[a.musclePosition] - posOrder[b.musclePosition]
+    if (posDiff !== 0) return posDiff
 
     // Compound before isolation
-    if (a.isCompound && !b.isCompound) return -1;
-    if (!a.isCompound && b.isCompound) return 1;
+    if (a.isCompound && !b.isCompound) return -1
+    if (!a.isCompound && b.isCompound) return 1
 
-    return 0;
-  });
+    return 0
+  })
 }

@@ -9,30 +9,30 @@
  * SECURITY: Every query uses ? placeholders. String concatenation is forbidden.
  */
 
-import * as Crypto from 'expo-crypto';
-import type { SQLiteBindValue } from 'expo-sqlite';
-import { getDatabase } from './database';
+import * as Crypto from 'expo-crypto'
+import type { SQLiteBindValue } from 'expo-sqlite'
+import { getDatabase } from './database'
 
 /**
  * Generates a cryptographically secure unique ID.
  * Uses expo-crypto (hardware-backed on iOS).
  */
 export function generateId(): string {
-  return Crypto.randomUUID();
+  return Crypto.randomUUID()
 }
 
 /**
  * Returns current ISO datetime string for timestamps.
  */
 export function nowISO(): string {
-  return new Date().toISOString();
+  return new Date().toISOString()
 }
 
 /**
  * Returns current ISO date string (YYYY-MM-DD).
  */
 export function todayISO(): string {
-  return new Date().toISOString().split('T')[0];
+  return new Date().toISOString().split('T')[0]
 }
 
 /**
@@ -45,10 +45,10 @@ export function todayISO(): string {
  *   }
  */
 export abstract class BaseRepository<T extends { id: string }> {
-  protected readonly tableName: string;
+  protected readonly tableName: string
 
   constructor(tableName: string) {
-    this.tableName = tableName;
+    this.tableName = tableName
   }
 
   /**
@@ -56,12 +56,9 @@ export abstract class BaseRepository<T extends { id: string }> {
    * Returns null if not found (never throws for missing records).
    */
   async findById(id: string): Promise<T | null> {
-    const db = getDatabase();
-    const result = await db.getFirstAsync<T>(
-      `SELECT * FROM ${this.tableName} WHERE id = ?`,
-      [id]
-    );
-    return result ?? null;
+    const db = getDatabase()
+    const result = await db.getFirstAsync<T>(`SELECT * FROM ${this.tableName} WHERE id = ?`, [id])
+    return result ?? null
   }
 
   /**
@@ -70,11 +67,8 @@ export abstract class BaseRepository<T extends { id: string }> {
    * @param params - Values for the placeholders
    */
   async findWhere(whereClause: string, params: SQLiteBindValue[]): Promise<T[]> {
-    const db = getDatabase();
-    return db.getAllAsync<T>(
-      `SELECT * FROM ${this.tableName} WHERE ${whereClause}`,
-      params
-    );
+    const db = getDatabase()
+    return db.getAllAsync<T>(`SELECT * FROM ${this.tableName} WHERE ${whereClause}`, params)
   }
 
   /**
@@ -83,11 +77,9 @@ export abstract class BaseRepository<T extends { id: string }> {
    * @param direction - ASC or DESC
    */
   async findAll(orderBy?: string, direction: 'ASC' | 'DESC' = 'ASC'): Promise<T[]> {
-    const db = getDatabase();
-    const orderClause = orderBy ? ` ORDER BY ${orderBy} ${direction}` : '';
-    return db.getAllAsync<T>(
-      `SELECT * FROM ${this.tableName}${orderClause}`
-    );
+    const db = getDatabase()
+    const orderClause = orderBy ? ` ORDER BY ${orderBy} ${direction}` : ''
+    return db.getAllAsync<T>(`SELECT * FROM ${this.tableName}${orderClause}`)
   }
 
   /**
@@ -95,23 +87,20 @@ export abstract class BaseRepository<T extends { id: string }> {
    * Returns true if a record was deleted, false if it didn't exist.
    */
   async deleteById(id: string): Promise<boolean> {
-    const db = getDatabase();
-    const result = await db.runAsync(
-      `DELETE FROM ${this.tableName} WHERE id = ?`,
-      [id]
-    );
-    return result.changes > 0;
+    const db = getDatabase()
+    const result = await db.runAsync(`DELETE FROM ${this.tableName} WHERE id = ?`, [id])
+    return result.changes > 0
   }
 
   /**
    * Counts records matching a WHERE clause.
    */
   async count(whereClause?: string, params?: SQLiteBindValue[]): Promise<number> {
-    const db = getDatabase();
+    const db = getDatabase()
     const query = whereClause
       ? `SELECT COUNT(*) as count FROM ${this.tableName} WHERE ${whereClause}`
-      : `SELECT COUNT(*) as count FROM ${this.tableName}`;
-    const result = await db.getFirstAsync<{ count: number }>(query, params ?? []);
-    return result?.count ?? 0;
+      : `SELECT COUNT(*) as count FROM ${this.tableName}`
+    const result = await db.getFirstAsync<{ count: number }>(query, params ?? [])
+    return result?.count ?? 0
   }
 }

@@ -56,3 +56,7 @@ coverage/
 
 # Design docs (not for production)
 docs/plans/
+
+# Claude Code
+.claude/settings.local.json
+.claude/worktrees/

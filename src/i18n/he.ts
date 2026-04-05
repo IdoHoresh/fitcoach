@@ -211,11 +211,11 @@ export const he = {
     loadFailed: 'הטעינה נכשלה',
     networkError: 'בעיית חיבור',
   },
-} as const;
+} as const
 
 /** Deep structure type — allows different string values per language */
 type DeepStringRecord<T> = {
-  [K in keyof T]: T[K] extends string ? string : DeepStringRecord<T[K]>;
-};
+  [K in keyof T]: T[K] extends string ? string : DeepStringRecord<T[K]>
+}
 
-export type TranslationKeys = DeepStringRecord<typeof he>;
+export type TranslationKeys = DeepStringRecord<typeof he>

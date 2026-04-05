@@ -32,7 +32,7 @@ import type {
   LifestyleProfile,
   OccupationType,
   TdeeBreakdown,
-} from '../types';
+} from '../types'
 import {
   BMR_COEFFICIENTS,
   BMR_SEX_OFFSET,
@@ -48,7 +48,7 @@ import {
   NEAT_STEP_BASELINE,
   OCCUPATION_NEAT,
   TEF_PERCENTAGE,
-} from '../data/constants';
+} from '../data/constants'
 
 // ── BMR Calculations ────────────────────────────────────────────────
 
@@ -69,9 +69,9 @@ export function calculateBmrMifflin(
     BMR_COEFFICIENTS.WEIGHT * weightKg +
     BMR_COEFFICIENTS.HEIGHT * heightCm -
     BMR_COEFFICIENTS.AGE * age +
-    BMR_SEX_OFFSET[sex];
+    BMR_SEX_OFFSET[sex]
 
-  return Math.round(baseBmr);
+  return Math.round(baseBmr)
 }
 
 /**
@@ -80,14 +80,11 @@ export function calculateBmrMifflin(
  *
  * Formula: 370 + 21.6 × lean_body_mass(kg)
  */
-export function calculateBmrKatchMcArdle(
-  weightKg: number,
-  bodyFatPercent: number,
-): number {
-  const leanBodyMass = weightKg * (1 - bodyFatPercent / 100);
-  const bmr = KATCH_MCARDLE.BASE + KATCH_MCARDLE.LBM_COEFFICIENT * leanBodyMass;
+export function calculateBmrKatchMcArdle(weightKg: number, bodyFatPercent: number): number {
+  const leanBodyMass = weightKg * (1 - bodyFatPercent / 100)
+  const bmr = KATCH_MCARDLE.BASE + KATCH_MCARDLE.LBM_COEFFICIENT * leanBodyMass
 
-  return Math.round(bmr);
+  return Math.round(bmr)
 }
 
 /**
@@ -102,9 +99,9 @@ export function calculateBmr(
   bodyFatPercent: number | null,
 ): number {
   if (bodyFatPercent !== null) {
-    return calculateBmrKatchMcArdle(weightKg, bodyFatPercent);
+    return calculateBmrKatchMcArdle(weightKg, bodyFatPercent)
   }
-  return calculateBmrMifflin(weightKg, heightCm, age, sex);
+  return calculateBmrMifflin(weightKg, heightCm, age, sex)
 }
 
 // ── NEAT Calculation ────────────────────────────────────────────────
@@ -114,7 +111,7 @@ export function calculateBmr(
  * This is the extra calories burned at work above resting.
  */
 export function calculateOccupationNeat(occupation: OccupationType): number {
-  return OCCUPATION_NEAT[occupation];
+  return OCCUPATION_NEAT[occupation]
 }
 
 /**
@@ -127,15 +124,15 @@ export function calculateOccupationNeat(occupation: OccupationType): number {
  *    2,000 steps → 0 kcal (below baseline)
  */
 export function calculateStepNeat(dailySteps: number): number {
-  const stepsAboveBaseline = Math.max(0, dailySteps - NEAT_STEP_BASELINE);
-  return Math.round((stepsAboveBaseline / 1000) * NEAT_KCAL_PER_1000_STEPS);
+  const stepsAboveBaseline = Math.max(0, dailySteps - NEAT_STEP_BASELINE)
+  return Math.round((stepsAboveBaseline / 1000) * NEAT_KCAL_PER_1000_STEPS)
 }
 
 /**
  * Calculates NEAT from after-work lifestyle activity.
  */
 export function calculateLifestyleNeat(activity: LifestyleActivity): number {
-  return LIFESTYLE_NEAT[activity];
+  return LIFESTYLE_NEAT[activity]
 }
 
 /**
@@ -146,16 +143,16 @@ export function estimateDailySteps(
   occupation: OccupationType,
   afterWorkActivity: LifestyleActivity,
 ): number {
-  const baseSteps = ESTIMATED_STEPS_BY_OCCUPATION[occupation];
+  const baseSteps = ESTIMATED_STEPS_BY_OCCUPATION[occupation]
 
   // Lifestyle adjustment: sedentary people walk less after work, active more
   const lifestyleAdjustments: Record<LifestyleActivity, number> = {
     sedentary: -1500,
     moderate: 0,
     active: 2500,
-  };
+  }
 
-  return Math.max(0, baseSteps + lifestyleAdjustments[afterWorkActivity]);
+  return Math.max(0, baseSteps + lifestyleAdjustments[afterWorkActivity])
 }
 
 /**
@@ -170,15 +167,15 @@ export function calculateTotalNeat(
   // If user provides actual steps, use step-based NEAT (more accurate)
   // and skip occupation NEAT (steps already capture work walking)
   if (dailySteps !== null) {
-    const stepNeat = calculateStepNeat(dailySteps);
-    const lifestyleNeat = calculateLifestyleNeat(afterWorkActivity);
-    return stepNeat + lifestyleNeat;
+    const stepNeat = calculateStepNeat(dailySteps)
+    const lifestyleNeat = calculateLifestyleNeat(afterWorkActivity)
+    return stepNeat + lifestyleNeat
   }
 
   // No steps data: use occupation + lifestyle estimates
-  const occupationNeat = calculateOccupationNeat(occupation);
-  const lifestyleNeat = calculateLifestyleNeat(afterWorkActivity);
-  return occupationNeat + lifestyleNeat;
+  const occupationNeat = calculateOccupationNeat(occupation)
+  const lifestyleNeat = calculateLifestyleNeat(afterWorkActivity)
+  return occupationNeat + lifestyleNeat
 }
 
 // ── EAT Calculation ─────────────────────────────────────────────────
@@ -205,40 +202,40 @@ export function calculateEat(
   exerciseType: ExerciseType,
   weightKg: number,
 ): number {
-  if (exerciseDaysPerWeek === 0) return 0;
+  if (exerciseDaysPerWeek === 0) return 0
 
   // Convert session time to ACTIVE minutes (accounts for rest periods)
-  const activeRatio = ACTIVE_TIME_RATIO[exerciseType];
-  const activeMinutesPerSession = sessionMinutes * activeRatio;
-  const weeklyActiveMinutes = exerciseDaysPerWeek * activeMinutesPerSession;
+  const activeRatio = ACTIVE_TIME_RATIO[exerciseType]
+  const activeMinutesPerSession = sessionMinutes * activeRatio
+  const weeklyActiveMinutes = exerciseDaysPerWeek * activeMinutesPerSession
 
   // Scale calorie burn by body weight relative to reference
-  const weightScale = weightKg / EXERCISE_REFERENCE_WEIGHT_KG;
+  const weightScale = weightKg / EXERCISE_REFERENCE_WEIGHT_KG
 
   // Burn per minute of ACTIVE movement, scaled by weight
-  const kcalPerActiveMinute = EXERCISE_KCAL_PER_ACTIVE_MIN[intensity] * weightScale;
+  const kcalPerActiveMinute = EXERCISE_KCAL_PER_ACTIVE_MIN[intensity] * weightScale
 
   // Apply diminishing returns for high volume (Pontzer's model)
   // Note: cap is based on ACTIVE minutes, not total session time
   const fullEffectMin = Math.min(
     weeklyActiveMinutes,
     EXERCISE_DIMINISHING_RETURNS.FULL_EFFECT_MINUTES_PER_WEEK,
-  );
+  )
   const reducedEffectMin = Math.max(
     0,
     weeklyActiveMinutes - EXERCISE_DIMINISHING_RETURNS.FULL_EFFECT_MINUTES_PER_WEEK,
-  );
+  )
 
   const weeklyBurn =
     fullEffectMin * kcalPerActiveMinute +
-    reducedEffectMin * kcalPerActiveMinute * EXERCISE_DIMINISHING_RETURNS.REDUCED_EFFECT_MULTIPLIER;
+    reducedEffectMin * kcalPerActiveMinute * EXERCISE_DIMINISHING_RETURNS.REDUCED_EFFECT_MULTIPLIER
 
   // Apply EPOC multiplier
-  const weeklyBurnWithEpoc = weeklyBurn * EPOC_MULTIPLIER[exerciseType];
+  const weeklyBurnWithEpoc = weeklyBurn * EPOC_MULTIPLIER[exerciseType]
 
   // Convert to daily average
-  const daysPerWeek = 7;
-  return Math.round(weeklyBurnWithEpoc / daysPerWeek);
+  const daysPerWeek = 7
+  return Math.round(weeklyBurnWithEpoc / daysPerWeek)
 }
 
 // ── TEF Calculation ─────────────────────────────────────────────────
@@ -254,8 +251,8 @@ export function calculateEat(
 export function calculateTef(bmr: number, neat: number, eat: number): number {
   // TEF = 0.10 × intake ≈ 0.10 × (BMR + NEAT + EAT) / (1 - 0.10)
   // Simplified: TEF ≈ (BMR + NEAT + EAT) × TEF% / (1 - TEF%)
-  const baseExpenditure = bmr + neat + eat;
-  return Math.round(baseExpenditure * TEF_PERCENTAGE / (1 - TEF_PERCENTAGE));
+  const baseExpenditure = bmr + neat + eat
+  return Math.round((baseExpenditure * TEF_PERCENTAGE) / (1 - TEF_PERCENTAGE))
 }
 
 // ── Complete TDEE ───────────────────────────────────────────────────
@@ -283,7 +280,7 @@ export function calculateTdeeBreakdown(
     lifestyle.occupation,
     lifestyle.dailySteps,
     lifestyle.afterWorkActivity,
-  );
+  )
 
   const eat = calculateEat(
     lifestyle.exerciseDaysPerWeek,
@@ -291,9 +288,9 @@ export function calculateTdeeBreakdown(
     lifestyle.exerciseIntensity,
     lifestyle.exerciseType,
     weightKg,
-  );
+  )
 
-  const tef = calculateTef(bmr, neat, eat);
+  const tef = calculateTef(bmr, neat, eat)
 
   return {
     bmr,
@@ -301,5 +298,5 @@ export function calculateTdeeBreakdown(
     eat,
     tef,
     total: bmr + neat + eat + tef,
-  };
+  }
 }

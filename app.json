@@ -33,12 +33,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      "expo-sqlite",
-      "expo-secure-store",
-      "expo-crypto"
-    ],
+    "plugins": ["expo-router", "expo-sqlite", "expo-secure-store", "expo-crypto"],
     "extra": {
       "eas": {
         "projectId": ""

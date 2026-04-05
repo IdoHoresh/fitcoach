@@ -13,34 +13,34 @@ import type {
   TrainingLocation,
   UserEquipment,
   UserProfile,
-} from '../types';
-import { BaseRepository, generateId, nowISO, todayISO } from './base-repository';
-import { getDatabase } from './database';
+} from '../types'
+import { BaseRepository, generateId, nowISO, todayISO } from './base-repository'
+import { getDatabase } from './database'
 
 /** Database row shape for user_profile table */
 interface UserProfileRow {
-  id: string;
-  created_at: string;
-  updated_at: string;
-  height_cm: number;
-  weight_kg: number;
-  age: number;
-  sex: string;
-  body_fat_percent: number | null;
-  goal: string;
-  experience: string;
-  training_days: string; // JSON array stored as text
-  training_location: string;
-  available_equipment: string; // JSON array stored as text
+  id: string
+  created_at: string
+  updated_at: string
+  height_cm: number
+  weight_kg: number
+  age: number
+  sex: string
+  body_fat_percent: number | null
+  goal: string
+  experience: string
+  training_days: string // JSON array stored as text
+  training_location: string
+  available_equipment: string // JSON array stored as text
   // Lifestyle fields (component-based TDEE)
-  occupation: string;
-  daily_steps: number | null;
-  after_work_activity: string;
-  exercise_days_per_week: number;
-  exercise_type: string;
-  session_duration_minutes: number;
-  exercise_intensity: string;
-  sleep_hours_per_night: number;
+  occupation: string
+  daily_steps: number | null
+  after_work_activity: string
+  exercise_days_per_week: number
+  exercise_type: string
+  session_duration_minutes: number
+  exercise_intensity: string
+  sleep_hours_per_night: number
 }
 
 /** Maps a database row to a UserProfile domain object */
@@ -54,12 +54,12 @@ function rowToProfile(row: UserProfileRow): UserProfile {
     sessionDurationMinutes: row.session_duration_minutes as SessionDuration,
     exerciseIntensity: row.exercise_intensity as LifestyleProfile['exerciseIntensity'],
     sleepHoursPerNight: row.sleep_hours_per_night,
-  };
+  }
 
   const equipment: UserEquipment = {
     location: row.training_location as TrainingLocation,
     availableEquipment: JSON.parse(row.available_equipment) as EquipmentItem[],
-  };
+  }
 
   return {
     id: row.id,
@@ -75,23 +75,21 @@ function rowToProfile(row: UserProfileRow): UserProfile {
     trainingDays: JSON.parse(row.training_days) as DayOfWeek[],
     equipment,
     lifestyle,
-  };
+  }
 }
 
 class UserRepository extends BaseRepository<UserProfileRow> {
   constructor() {
-    super('user_profile');
+    super('user_profile')
   }
 
   /**
    * Gets the current user profile (there's only ever one).
    */
   async getProfile(): Promise<UserProfile | null> {
-    const db = getDatabase();
-    const row = await db.getFirstAsync<UserProfileRow>(
-      'SELECT * FROM user_profile LIMIT 1'
-    );
-    return row ? rowToProfile(row) : null;
+    const db = getDatabase()
+    const row = await db.getFirstAsync<UserProfileRow>('SELECT * FROM user_profile LIMIT 1')
+    return row ? rowToProfile(row) : null
   }
 
   /**
@@ -99,12 +97,12 @@ class UserRepository extends BaseRepository<UserProfileRow> {
    * Only one profile exists at a time.
    */
   async saveProfile(
-    data: Omit<UserProfile, 'id' | 'createdAt' | 'updatedAt'>
+    data: Omit<UserProfile, 'id' | 'createdAt' | 'updatedAt'>,
   ): Promise<UserProfile> {
-    const db = getDatabase();
-    const existing = await this.getProfile();
-    const now = nowISO();
-    const ls = data.lifestyle;
+    const db = getDatabase()
+    const existing = await this.getProfile()
+    const now = nowISO()
+    const ls = data.lifestyle
 
     if (existing) {
       await db.runAsync(
@@ -119,24 +117,34 @@ class UserRepository extends BaseRepository<UserProfileRow> {
           updated_at = ?
         WHERE id = ?`,
         [
-          data.heightCm, data.weightKg, data.age, data.sex,
-          data.bodyFatPercent, data.goal, data.experience,
+          data.heightCm,
+          data.weightKg,
+          data.age,
+          data.sex,
+          data.bodyFatPercent,
+          data.goal,
+          data.experience,
           JSON.stringify(data.trainingDays),
           data.equipment.location,
           JSON.stringify(data.equipment.availableEquipment),
-          ls.occupation, ls.dailySteps, ls.afterWorkActivity,
-          ls.exerciseDaysPerWeek, ls.exerciseType,
-          ls.sessionDurationMinutes, ls.exerciseIntensity,
+          ls.occupation,
+          ls.dailySteps,
+          ls.afterWorkActivity,
+          ls.exerciseDaysPerWeek,
+          ls.exerciseType,
+          ls.sessionDurationMinutes,
+          ls.exerciseIntensity,
           ls.sleepHoursPerNight,
-          now, existing.id,
-        ]
-      );
+          now,
+          existing.id,
+        ],
+      )
 
-      return { ...existing, ...data, updatedAt: now };
+      return { ...existing, ...data, updatedAt: now }
     }
 
     // Create new profile
-    const id = generateId();
+    const id = generateId()
     await db.runAsync(
       `INSERT INTO user_profile (
         id, height_cm, weight_kg, age, sex,
@@ -149,36 +157,47 @@ class UserRepository extends BaseRepository<UserProfileRow> {
         created_at, updated_at
       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
-        id, data.heightCm, data.weightKg, data.age, data.sex,
-        data.bodyFatPercent, data.goal, data.experience,
+        id,
+        data.heightCm,
+        data.weightKg,
+        data.age,
+        data.sex,
+        data.bodyFatPercent,
+        data.goal,
+        data.experience,
         JSON.stringify(data.trainingDays),
         data.equipment.location,
         JSON.stringify(data.equipment.availableEquipment),
-        ls.occupation, ls.dailySteps, ls.afterWorkActivity,
-        ls.exerciseDaysPerWeek, ls.exerciseType,
-        ls.sessionDurationMinutes, ls.exerciseIntensity,
+        ls.occupation,
+        ls.dailySteps,
+        ls.afterWorkActivity,
+        ls.exerciseDaysPerWeek,
+        ls.exerciseType,
+        ls.sessionDurationMinutes,
+        ls.exerciseIntensity,
         ls.sleepHoursPerNight,
-        now, now,
-      ]
-    );
+        now,
+        now,
+      ],
+    )
 
     return {
       id,
       createdAt: now,
       updatedAt: now,
       ...data,
-    };
+    }
   }
 }
 
 // ── Body Measurements ───────────────────────────────────────────────
 
 interface MeasurementRow {
-  id: string;
-  date: string;
-  weight_kg: number;
-  body_fat_percent: number | null;
-  notes: string;
+  id: string
+  date: string
+  weight_kg: number
+  body_fat_percent: number | null
+  notes: string
 }
 
 function rowToMeasurement(row: MeasurementRow): BodyMeasurement {
@@ -188,59 +207,54 @@ function rowToMeasurement(row: MeasurementRow): BodyMeasurement {
     weightKg: row.weight_kg,
     bodyFatPercent: row.body_fat_percent,
     notes: row.notes,
-  };
+  }
 }
 
 class MeasurementRepository extends BaseRepository<MeasurementRow> {
   constructor() {
-    super('body_measurement');
+    super('body_measurement')
   }
 
-  async addMeasurement(
-    data: Omit<BodyMeasurement, 'id'>
-  ): Promise<BodyMeasurement> {
-    const db = getDatabase();
-    const id = generateId();
+  async addMeasurement(data: Omit<BodyMeasurement, 'id'>): Promise<BodyMeasurement> {
+    const db = getDatabase()
+    const id = generateId()
 
     await db.runAsync(
       `INSERT INTO body_measurement (id, date, weight_kg, body_fat_percent, notes)
        VALUES (?, ?, ?, ?, ?)`,
-      [id, data.date, data.weightKg, data.bodyFatPercent, data.notes]
-    );
+      [id, data.date, data.weightKg, data.bodyFatPercent, data.notes],
+    )
 
-    return { id, ...data };
+    return { id, ...data }
   }
 
-  async getMeasurementsByDateRange(
-    startDate: string,
-    endDate: string,
-  ): Promise<BodyMeasurement[]> {
-    const rows = await this.findWhere(
-      'date >= ? AND date <= ? ORDER BY date ASC',
-      [startDate, endDate]
-    );
-    return rows.map(rowToMeasurement);
+  async getMeasurementsByDateRange(startDate: string, endDate: string): Promise<BodyMeasurement[]> {
+    const rows = await this.findWhere('date >= ? AND date <= ? ORDER BY date ASC', [
+      startDate,
+      endDate,
+    ])
+    return rows.map(rowToMeasurement)
   }
 
   async getLatestMeasurement(): Promise<BodyMeasurement | null> {
-    const db = getDatabase();
+    const db = getDatabase()
     const row = await db.getFirstAsync<MeasurementRow>(
-      'SELECT * FROM body_measurement ORDER BY date DESC LIMIT 1'
-    );
-    return row ? rowToMeasurement(row) : null;
+      'SELECT * FROM body_measurement ORDER BY date DESC LIMIT 1',
+    )
+    return row ? rowToMeasurement(row) : null
   }
 
   async getTodaysMeasurement(): Promise<BodyMeasurement | null> {
-    const db = getDatabase();
+    const db = getDatabase()
     const row = await db.getFirstAsync<MeasurementRow>(
       'SELECT * FROM body_measurement WHERE date = ?',
-      [todayISO()]
-    );
-    return row ? rowToMeasurement(row) : null;
+      [todayISO()],
+    )
+    return row ? rowToMeasurement(row) : null
   }
 }
 
 // ── Singleton exports ───────────────────────────────────────────────
 
-export const userRepository = new UserRepository();
-export const measurementRepository = new MeasurementRepository();
+export const userRepository = new UserRepository()
+export const measurementRepository = new MeasurementRepository()

@@ -20,7 +20,7 @@
  * Pure functions only — no side effects, no state.
  */
 
-import type { NutritionTargets, TrainingGoal } from '../types';
+import type { NutritionTargets, TrainingGoal } from '../types'
 import {
   CALORIC_ADJUSTMENTS,
   CALORIES_PER_GRAM,
@@ -29,7 +29,7 @@ import {
   FAT_TARGETS,
   PROTEIN_TARGETS,
   PROTEIN_WEIGHT_ADJUSTMENT,
-} from '../data/constants';
+} from '../data/constants'
 
 // ── Adjusted Body Weight ────────────────────────────────────────────
 
@@ -54,20 +54,20 @@ export function calculateAdjustedWeight(
   bodyFatPercent: number | null,
 ): number {
   if (bodyFatPercent !== null) {
-    const leanMass = weightKg * (1 - bodyFatPercent / 100);
-    return leanMass * 1.1;
+    const leanMass = weightKg * (1 - bodyFatPercent / 100)
+    return leanMass * 1.1
   }
 
-  const heightM = heightCm / 100;
-  const bmi = weightKg / (heightM * heightM);
+  const heightM = heightCm / 100
+  const bmi = weightKg / (heightM * heightM)
 
   if (bmi <= PROTEIN_WEIGHT_ADJUSTMENT.BMI_THRESHOLD) {
-    return weightKg;
+    return weightKg
   }
 
-  const idealWeight = PROTEIN_WEIGHT_ADJUSTMENT.BMI_THRESHOLD * heightM * heightM;
-  const excessWeight = weightKg - idealWeight;
-  return idealWeight + PROTEIN_WEIGHT_ADJUSTMENT.ADJUSTMENT_FACTOR * excessWeight;
+  const idealWeight = PROTEIN_WEIGHT_ADJUSTMENT.BMI_THRESHOLD * heightM * heightM
+  const excessWeight = weightKg - idealWeight
+  return idealWeight + PROTEIN_WEIGHT_ADJUSTMENT.ADJUSTMENT_FACTOR * excessWeight
 }
 
 // ── Individual Macro Calculations ───────────────────────────────────
@@ -75,26 +75,20 @@ export function calculateAdjustedWeight(
 /**
  * Calculates target calories based on TDEE and training goal.
  */
-export function calculateTargetCalories(
-  tdee: number,
-  goal: TrainingGoal,
-): number {
-  const adjustment = CALORIC_ADJUSTMENTS[goal];
-  const midpointAdjustment = (adjustment.min + adjustment.max) / 2;
-  return Math.round(tdee + midpointAdjustment);
+export function calculateTargetCalories(tdee: number, goal: TrainingGoal): number {
+  const adjustment = CALORIC_ADJUSTMENTS[goal]
+  const midpointAdjustment = (adjustment.min + adjustment.max) / 2
+  return Math.round(tdee + midpointAdjustment)
 }
 
 /**
  * Step 2: Protein — calculated FIRST (non-negotiable).
  * Uses ADJUSTED body weight × goal-specific g/kg.
  */
-export function calculateProteinGrams(
-  adjustedWeightKg: number,
-  goal: TrainingGoal,
-): number {
-  const range = PROTEIN_TARGETS[goal];
-  const gramsPerKg = (range.min + range.max) / 2;
-  return Math.round(adjustedWeightKg * gramsPerKg);
+export function calculateProteinGrams(adjustedWeightKg: number, goal: TrainingGoal): number {
+  const range = PROTEIN_TARGETS[goal]
+  const gramsPerKg = (range.min + range.max) / 2
+  return Math.round(adjustedWeightKg * gramsPerKg)
 }
 
 /**
@@ -102,13 +96,10 @@ export function calculateProteinGrams(
  * Uses ACTUAL body weight × goal-specific g/kg range.
  * Will be reduced toward hard floor if carbs would be too low.
  */
-export function calculateFatGrams(
-  actualWeightKg: number,
-  goal: TrainingGoal,
-): number {
-  const range = FAT_TARGETS[goal];
-  const gramsPerKg = (range.min + range.max) / 2;
-  return Math.round(actualWeightKg * gramsPerKg);
+export function calculateFatGrams(actualWeightKg: number, goal: TrainingGoal): number {
+  const range = FAT_TARGETS[goal]
+  const gramsPerKg = (range.min + range.max) / 2
+  return Math.round(actualWeightKg * gramsPerKg)
 }
 
 /**
@@ -119,10 +110,10 @@ export function calculateCarbGrams(
   proteinGrams: number,
   fatGrams: number,
 ): number {
-  const proteinCalories = proteinGrams * CALORIES_PER_GRAM.PROTEIN;
-  const fatCalories = fatGrams * CALORIES_PER_GRAM.FAT;
-  const remainingCalories = targetCalories - proteinCalories - fatCalories;
-  return Math.max(0, Math.round(remainingCalories / CALORIES_PER_GRAM.CARBS));
+  const proteinCalories = proteinGrams * CALORIES_PER_GRAM.PROTEIN
+  const fatCalories = fatGrams * CALORIES_PER_GRAM.FAT
+  const remainingCalories = targetCalories - proteinCalories - fatCalories
+  return Math.max(0, Math.round(remainingCalories / CALORIES_PER_GRAM.CARBS))
 }
 
 // ── Main Entry Point ────────────────────────────────────────────────
@@ -142,27 +133,27 @@ export function calculateNutritionTargets(
   bodyFatPercent: number | null,
   goal: TrainingGoal,
 ): NutritionTargets {
-  const targetCalories = calculateTargetCalories(tdee, goal);
-  const adjustedWeight = calculateAdjustedWeight(weightKg, heightCm, bodyFatPercent);
+  const targetCalories = calculateTargetCalories(tdee, goal)
+  const adjustedWeight = calculateAdjustedWeight(weightKg, heightCm, bodyFatPercent)
 
   // Step 2: Protein first (non-negotiable)
-  const proteinGrams = calculateProteinGrams(adjustedWeight, goal);
+  const proteinGrams = calculateProteinGrams(adjustedWeight, goal)
 
   // Step 3: Fat second (initial target)
-  let fatGrams = calculateFatGrams(weightKg, goal);
+  let fatGrams = calculateFatGrams(weightKg, goal)
 
   // Step 4: Carbs = remainder
-  let carbGrams = calculateCarbGrams(targetCalories, proteinGrams, fatGrams);
+  let carbGrams = calculateCarbGrams(targetCalories, proteinGrams, fatGrams)
 
   // Carb floor protection: if carbs too low, reduce fat
   if (carbGrams < CARB_MINIMUM_GRAMS) {
-    const hardFloorFat = Math.round(weightKg * FAT_HARD_FLOOR_PER_KG);
-    fatGrams = Math.max(hardFloorFat, fatGrams);
+    const hardFloorFat = Math.round(weightKg * FAT_HARD_FLOOR_PER_KG)
+    fatGrams = Math.max(hardFloorFat, fatGrams)
 
     // Try reducing fat gradually toward floor
     while (carbGrams < CARB_MINIMUM_GRAMS && fatGrams > hardFloorFat) {
-      fatGrams -= 1;
-      carbGrams = calculateCarbGrams(targetCalories, proteinGrams, fatGrams);
+      fatGrams -= 1
+      carbGrams = calculateCarbGrams(targetCalories, proteinGrams, fatGrams)
     }
   }
 
@@ -173,5 +164,5 @@ export function calculateNutritionTargets(
     proteinGrams,
     fatGrams,
     carbGrams,
-  };
+  }
 }

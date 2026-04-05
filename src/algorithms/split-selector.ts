@@ -13,21 +13,21 @@
  * Pure function — no side effects.
  */
 
-import type { DayOfWeek, ExperienceLevel, SplitType, WorkoutDayType } from '../types';
-import { SPLIT_THRESHOLDS } from '../data/constants';
+import type { DayOfWeek, ExperienceLevel, SplitType, WorkoutDayType } from '../types'
+import { SPLIT_THRESHOLDS } from '../data/constants'
 
 /** Result of split selection — includes the split type and day assignments */
 export interface SplitRecommendation {
-  readonly splitType: SplitType;
-  readonly schedule: readonly ScheduleDay[];
-  readonly reasoning: string;
-  readonly reasoningHe: string;
+  readonly splitType: SplitType
+  readonly schedule: readonly ScheduleDay[]
+  readonly reasoning: string
+  readonly reasoningHe: string
 }
 
 /** A single day in the weekly schedule */
 export interface ScheduleDay {
-  readonly dayOfWeek: DayOfWeek;
-  readonly dayType: WorkoutDayType;
+  readonly dayOfWeek: DayOfWeek
+  readonly dayType: WorkoutDayType
 }
 
 /**
@@ -38,19 +38,19 @@ export function recommendSplitType(
   experience: ExperienceLevel,
 ): SplitType {
   if (trainingDaysCount <= SPLIT_THRESHOLDS.FULL_BODY_MAX_DAYS) {
-    return 'full_body';
+    return 'full_body'
   }
 
   if (trainingDaysCount === SPLIT_THRESHOLDS.UPPER_LOWER_DAYS) {
-    return 'upper_lower';
+    return 'upper_lower'
   }
 
   // 5-6 days: PPL for experienced, Upper/Lower for beginners
   if (experience === 'beginner') {
-    return 'upper_lower';
+    return 'upper_lower'
   }
 
-  return 'push_pull_legs';
+  return 'push_pull_legs'
 }
 
 /**
@@ -61,48 +61,45 @@ export function assignDayTypes(
   trainingDays: readonly DayOfWeek[],
   splitType: SplitType,
 ): readonly ScheduleDay[] {
-  const sorted = [...trainingDays].sort((a, b) => a - b);
+  const sorted = [...trainingDays].sort((a, b) => a - b)
 
   switch (splitType) {
     case 'full_body':
-      return assignFullBodyDays(sorted);
+      return assignFullBodyDays(sorted)
     case 'upper_lower':
-      return assignUpperLowerDays(sorted);
+      return assignUpperLowerDays(sorted)
     case 'push_pull_legs':
-      return assignPplDays(sorted);
+      return assignPplDays(sorted)
   }
 }
 
 function assignFullBodyDays(days: DayOfWeek[]): ScheduleDay[] {
-  const dayTypes: WorkoutDayType[] = ['full_body_a', 'full_body_b', 'full_body_c'];
+  const dayTypes: WorkoutDayType[] = ['full_body_a', 'full_body_b', 'full_body_c']
 
   return days.map((day, index) => ({
     dayOfWeek: day,
     dayType: dayTypes[index % dayTypes.length],
-  }));
+  }))
 }
 
 function assignUpperLowerDays(days: DayOfWeek[]): ScheduleDay[] {
   // Pattern: Upper, Lower, Upper, Lower (alternating)
-  const dayTypes: WorkoutDayType[] = ['upper_a', 'lower_a', 'upper_b', 'lower_b'];
+  const dayTypes: WorkoutDayType[] = ['upper_a', 'lower_a', 'upper_b', 'lower_b']
 
   return days.map((day, index) => ({
     dayOfWeek: day,
     dayType: dayTypes[index % dayTypes.length],
-  }));
+  }))
 }
 
 function assignPplDays(days: DayOfWeek[]): ScheduleDay[] {
   // Pattern: Push, Pull, Legs (A variants first, then B)
-  const dayTypes: WorkoutDayType[] = [
-    'push_a', 'pull_a', 'legs_a',
-    'push_b', 'pull_b', 'legs_b',
-  ];
+  const dayTypes: WorkoutDayType[] = ['push_a', 'pull_a', 'legs_a', 'push_b', 'pull_b', 'legs_b']
 
   return days.map((day, index) => ({
     dayOfWeek: day,
     dayType: dayTypes[index % dayTypes.length],
-  }));
+  }))
 }
 
 /**
@@ -112,8 +109,8 @@ export function createSplitRecommendation(
   trainingDays: readonly DayOfWeek[],
   experience: ExperienceLevel,
 ): SplitRecommendation {
-  const splitType = recommendSplitType(trainingDays.length, experience);
-  const schedule = assignDayTypes(trainingDays, splitType);
+  const splitType = recommendSplitType(trainingDays.length, experience)
+  const schedule = assignDayTypes(trainingDays, splitType)
 
   const reasoningMap: Record<SplitType, { en: string; he: string }> = {
     full_body: {
@@ -128,12 +125,12 @@ export function createSplitRecommendation(
       en: `With ${trainingDays.length} training days, Push/Pull/Legs maximizes volume per muscle with dedicated sessions.`,
       he: `עם ${trainingDays.length} ימי אימון, דחיפה/משיכה/רגליים מאפשר נפח מקסימלי עם אימונים ייעודיים.`,
     },
-  };
+  }
 
   return {
     splitType,
     schedule,
     reasoning: reasoningMap[splitType].en,
     reasoningHe: reasoningMap[splitType].he,
-  };
+  }
 }

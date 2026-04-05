@@ -1,0 +1,35 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write \"$CLAUDE_FILE_PATH\" 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"$CLAUDE_FILE_PATH\" | grep -qiE '\\.(env|pem|key)$|credentials|secrets' && echo 'BLOCKED: Cannot write to sensitive files (.env, credentials, secrets, keys)' && exit 2 || exit 0"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"$CLAUDE_TOOL_INPUT\" | grep -qiE 'rm\\s+-rf\\s+(\\/|\\.|src|app|\\~)|--force\\s+push|drop\\s+table|truncate\\s+table' && echo 'BLOCKED: Dangerous command detected (rm -rf on protected paths, force push, DROP/TRUNCATE TABLE). rm -rf node_modules and rm -rf dist are allowed.' && exit 2 || exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}

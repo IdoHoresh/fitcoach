@@ -21,7 +21,7 @@ export type {
   NutritionTargets,
   TdeeBreakdown,
   BodyMeasurement,
-} from './user';
+} from './user'
 
 export type {
   MuscleGroup,
@@ -36,7 +36,7 @@ export type {
   WorkoutLog,
   ProgressionAdvice,
   Mesocycle,
-} from './workout';
+} from './workout'
 
 export type {
   FoodCategory,
@@ -48,4 +48,4 @@ export type {
   SavedMeal,
   SavedMealItem,
   DailyNutritionSummary,
-} from './nutrition';
+} from './nutrition'

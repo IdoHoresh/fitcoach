@@ -29,34 +29,34 @@ import type {
   SplitType,
   WorkoutDayType,
   WorkoutTemplate,
-} from '../types';
-import type { EquipmentItem } from '../types/user';
+} from '../types'
+import type { EquipmentItem } from '../types/user'
 // ExerciseWithMeta used indirectly via EXERCISE_MAP lookups
-import type { WorkoutDayTemplate } from '../data/split-templates';
-import { createSplitRecommendation } from './split-selector';
-import type { ScheduleDay } from './split-selector';
-import { calculateAllVolumeTargets } from './volume-manager';
-import { getTemplateForDay } from '../data/split-templates';
-import { EXERCISE_MAP, getBestExercisesForMuscle } from '../data/exercises';
-import { MESOCYCLE } from '../data/constants';
+import type { WorkoutDayTemplate } from '../data/split-templates'
+import { createSplitRecommendation } from './split-selector'
+import type { ScheduleDay } from './split-selector'
+import { calculateAllVolumeTargets } from './volume-manager'
+import { getTemplateForDay } from '../data/split-templates'
+import { EXERCISE_MAP, getBestExercisesForMuscle } from '../data/exercises'
+import { MESOCYCLE } from '../data/constants'
 
 // ── Output Types ───────────────────────────────────────────────────
 
 /** A single day in the generated workout plan */
 export interface GeneratedWorkoutDay {
-  readonly dayOfWeek: DayOfWeek;
-  readonly dayType: WorkoutDayType;
-  readonly template: WorkoutTemplate | null; // null for rest days
+  readonly dayOfWeek: DayOfWeek
+  readonly dayType: WorkoutDayType
+  readonly template: WorkoutTemplate | null // null for rest days
 }
 
 /** Complete generated workout plan */
 export interface GeneratedWorkoutPlan {
-  readonly splitType: SplitType;
-  readonly reasoning: string;
-  readonly reasoningHe: string;
-  readonly weeklySchedule: readonly GeneratedWorkoutDay[];
-  readonly mesocycleWeek: number;
-  readonly totalMesocycleWeeks: number;
+  readonly splitType: SplitType
+  readonly reasoning: string
+  readonly reasoningHe: string
+  readonly weeklySchedule: readonly GeneratedWorkoutDay[]
+  readonly mesocycleWeek: number
+  readonly totalMesocycleWeeks: number
 }
 
 // ── Volume Adjustment ──────────────────────────────────────────────
@@ -66,8 +66,8 @@ export interface GeneratedWorkoutPlan {
  * Source: Israetel (RP) — beyond 8-12 direct sets per muscle per session,
  * fatigue degrades performance and stimulus quality drops.
  */
-const MAX_DIRECT_SETS_PER_MUSCLE_PER_SESSION = 12;
-const MIN_SETS_PER_EXERCISE = 2;
+const MAX_DIRECT_SETS_PER_MUSCLE_PER_SESSION = 12
+const MIN_SETS_PER_EXERCISE = 2
 
 /**
  * Adjusts a template's volume based on the mesocycle week.
@@ -91,45 +91,45 @@ export function adjustTemplateVolume(
   experience: ExperienceLevel,
   sessionsPerMusclePerWeek: ReadonlyMap<MuscleGroup, number>,
 ): WorkoutDayTemplate {
-  const volumeTargets = calculateAllVolumeTargets(weekNumber, totalWeeks, experience);
-  const targetMap = new Map(volumeTargets.map((v) => [v.muscleGroup, v.targetSets]));
+  const volumeTargets = calculateAllVolumeTargets(weekNumber, totalWeeks, experience)
+  const targetMap = new Map(volumeTargets.map((v) => [v.muscleGroup, v.targetSets]))
 
   const adjustedExercises = template.exercises.map((prescription) => {
-    const exercise = EXERCISE_MAP.get(prescription.exerciseId);
-    if (!exercise) return prescription;
+    const exercise = EXERCISE_MAP.get(prescription.exerciseId)
+    if (!exercise) return prescription
 
-    const muscle = exercise.primaryMuscle;
-    const weeklyTarget = targetMap.get(muscle);
-    if (weeklyTarget === undefined) return prescription;
+    const muscle = exercise.primaryMuscle
+    const weeklyTarget = targetMap.get(muscle)
+    if (weeklyTarget === undefined) return prescription
 
-    const sessionsForMuscle = sessionsPerMusclePerWeek.get(muscle) ?? 1;
-    const perSessionTarget = Math.ceil(weeklyTarget / sessionsForMuscle);
+    const sessionsForMuscle = sessionsPerMusclePerWeek.get(muscle) ?? 1
+    const perSessionTarget = Math.ceil(weeklyTarget / sessionsForMuscle)
 
     // Count how many exercises in this template hit this muscle
     const exercisesForMuscle = template.exercises.filter((p) => {
-      const ex = EXERCISE_MAP.get(p.exerciseId);
-      return ex?.primaryMuscle === muscle;
-    });
+      const ex = EXERCISE_MAP.get(p.exerciseId)
+      return ex?.primaryMuscle === muscle
+    })
 
     // Distribute sets evenly across exercises for this muscle
-    const setsPerExercise = Math.ceil(perSessionTarget / exercisesForMuscle.length);
+    const setsPerExercise = Math.ceil(perSessionTarget / exercisesForMuscle.length)
 
     // Enforce bounds
     const clampedSets = Math.max(
       MIN_SETS_PER_EXERCISE,
       Math.min(setsPerExercise, MAX_DIRECT_SETS_PER_MUSCLE_PER_SESSION),
-    );
+    )
 
     return {
       ...prescription,
       sets: clampedSets,
-    };
-  });
+    }
+  })
 
   return {
     ...template,
     exercises: adjustedExercises,
-  };
+  }
 }
 
 // ── Equipment Substitution ─────────────────────────────────────────
@@ -152,45 +152,45 @@ export function substituteForEquipment(
   template: WorkoutDayTemplate,
   userEquipment: readonly EquipmentItem[],
 ): WorkoutDayTemplate {
-  const usedExerciseIds = new Set<string>();
+  const usedExerciseIds = new Set<string>()
 
   const adjustedExercises = template.exercises.map((prescription) => {
-    const exercise = EXERCISE_MAP.get(prescription.exerciseId);
-    if (!exercise) return prescription;
+    const exercise = EXERCISE_MAP.get(prescription.exerciseId)
+    if (!exercise) return prescription
 
     // Check if user has ALL required equipment for this exercise
     const canPerform = exercise.requiredEquipment.every(
       (item) => item === 'none' || userEquipment.includes(item),
-    );
+    )
 
     if (canPerform && !usedExerciseIds.has(exercise.id)) {
-      usedExerciseIds.add(exercise.id);
-      return prescription;
+      usedExerciseIds.add(exercise.id)
+      return prescription
     }
 
     // Need to substitute — find best alternative the user CAN do
-    const alternatives = getBestExercisesForMuscle(exercise.primaryMuscle, userEquipment);
+    const alternatives = getBestExercisesForMuscle(exercise.primaryMuscle, userEquipment)
     const replacement = alternatives.find(
       (alt) => !usedExerciseIds.has(alt.id) && alt.id !== exercise.id,
-    );
+    )
 
     if (replacement) {
-      usedExerciseIds.add(replacement.id);
+      usedExerciseIds.add(replacement.id)
       return {
         ...prescription,
         exerciseId: replacement.id,
-      };
+      }
     }
 
     // No alternative found — keep original (shouldn't happen with good exercise DB)
-    usedExerciseIds.add(exercise.id);
-    return prescription;
-  });
+    usedExerciseIds.add(exercise.id)
+    return prescription
+  })
 
   return {
     ...template,
     exercises: adjustedExercises,
-  };
+  }
 }
 
 // ── Sessions-Per-Muscle Counter ────────────────────────────────────
@@ -206,28 +206,28 @@ export function substituteForEquipment(
 export function countSessionsPerMuscle(
   schedule: readonly ScheduleDay[],
 ): ReadonlyMap<MuscleGroup, number> {
-  const counts = new Map<MuscleGroup, number>();
+  const counts = new Map<MuscleGroup, number>()
 
   for (const day of schedule) {
-    const template = getTemplateForDay(day.dayType);
-    if (!template) continue; // Rest day
+    const template = getTemplateForDay(day.dayType)
+    if (!template) continue // Rest day
 
     // Track which muscles are hit in this session (avoid double-counting)
-    const musclesInSession = new Set<MuscleGroup>();
+    const musclesInSession = new Set<MuscleGroup>()
 
     for (const prescription of template.exercises) {
-      const exercise = EXERCISE_MAP.get(prescription.exerciseId);
-      if (!exercise) continue;
+      const exercise = EXERCISE_MAP.get(prescription.exerciseId)
+      if (!exercise) continue
 
-      musclesInSession.add(exercise.primaryMuscle);
+      musclesInSession.add(exercise.primaryMuscle)
     }
 
     for (const muscle of musclesInSession) {
-      counts.set(muscle, (counts.get(muscle) ?? 0) + 1);
+      counts.set(muscle, (counts.get(muscle) ?? 0) + 1)
     }
   }
 
-  return counts;
+  return counts
 }
 
 // ── Main Entry Point ───────────────────────────────────────────────
@@ -254,10 +254,10 @@ export function generateWorkoutPlan(
   totalMesocycleWeeks: number = MESOCYCLE.DEFAULT_WEEKS,
 ): GeneratedWorkoutPlan {
   // Step 1: Determine split and schedule
-  const recommendation = createSplitRecommendation(trainingDays, experience);
+  const recommendation = createSplitRecommendation(trainingDays, experience)
 
   // Step 2: Count sessions per muscle (for volume distribution)
-  const sessionsPerMuscle = countSessionsPerMuscle(recommendation.schedule);
+  const sessionsPerMuscle = countSessionsPerMuscle(recommendation.schedule)
 
   // Step 3: Build each workout day
   const weeklySchedule: GeneratedWorkoutDay[] = buildFullWeekSchedule(
@@ -267,7 +267,7 @@ export function generateWorkoutPlan(
     mesocycleWeek,
     totalMesocycleWeeks,
     sessionsPerMuscle,
-  );
+  )
 
   return {
     splitType: recommendation.splitType,
@@ -276,7 +276,7 @@ export function generateWorkoutPlan(
     weeklySchedule,
     mesocycleWeek,
     totalMesocycleWeeks,
-  };
+  }
 }
 
 /**
@@ -291,18 +291,18 @@ function buildFullWeekSchedule(
   totalMesocycleWeeks: number,
   sessionsPerMuscle: ReadonlyMap<MuscleGroup, number>,
 ): GeneratedWorkoutDay[] {
-  const DAYS_PER_WEEK = 7;
+  const DAYS_PER_WEEK = 7
 
   // Create a map of dayOfWeek → scheduleDay for quick lookup
   const trainingDayMap = new Map<DayOfWeek, ScheduleDay>(
     trainingSchedule.map((day) => [day.dayOfWeek, day]),
-  );
+  )
 
-  const fullWeek: GeneratedWorkoutDay[] = [];
+  const fullWeek: GeneratedWorkoutDay[] = []
 
   for (let d = 0; d < DAYS_PER_WEEK; d++) {
-    const dayOfWeek = d as DayOfWeek;
-    const trainingDay = trainingDayMap.get(dayOfWeek);
+    const dayOfWeek = d as DayOfWeek
+    const trainingDay = trainingDayMap.get(dayOfWeek)
 
     if (!trainingDay) {
       // Rest day
@@ -310,20 +310,20 @@ function buildFullWeekSchedule(
         dayOfWeek,
         dayType: 'rest',
         template: null,
-      });
-      continue;
+      })
+      continue
     }
 
     // Training day — get base template, adjust volume, substitute equipment
-    const baseTemplate = getTemplateForDay(trainingDay.dayType);
+    const baseTemplate = getTemplateForDay(trainingDay.dayType)
 
     if (!baseTemplate) {
       fullWeek.push({
         dayOfWeek,
         dayType: trainingDay.dayType,
         template: null,
-      });
-      continue;
+      })
+      continue
     }
 
     // Adjust volume for current mesocycle week
@@ -333,10 +333,10 @@ function buildFullWeekSchedule(
       totalMesocycleWeeks,
       experience,
       sessionsPerMuscle,
-    );
+    )
 
     // Substitute exercises for user's available equipment
-    const equipmentAdjusted = substituteForEquipment(volumeAdjusted, userEquipment);
+    const equipmentAdjusted = substituteForEquipment(volumeAdjusted, userEquipment)
 
     // Convert to WorkoutTemplate format
     const template: WorkoutTemplate = {
@@ -347,25 +347,25 @@ function buildFullWeekSchedule(
       nameHe: equipmentAdjusted.nameHe,
       exercises: equipmentAdjusted.exercises,
       estimatedMinutes: estimateWorkoutDuration(equipmentAdjusted),
-    };
+    }
 
     fullWeek.push({
       dayOfWeek,
       dayType: trainingDay.dayType,
       template,
-    });
+    })
   }
 
-  return fullWeek;
+  return fullWeek
 }
 
 // ── Helper Functions ───────────────────────────────────────────────
 
 /** Derives split type from day type string */
 function getSplitTypeFromDayType(dayType: WorkoutDayType): SplitType {
-  if (dayType.startsWith('full_body')) return 'full_body';
-  if (dayType.startsWith('upper') || dayType.startsWith('lower')) return 'upper_lower';
-  return 'push_pull_legs';
+  if (dayType.startsWith('full_body')) return 'full_body'
+  if (dayType.startsWith('upper') || dayType.startsWith('lower')) return 'upper_lower'
+  return 'push_pull_legs'
 }
 
 /**
@@ -377,17 +377,17 @@ function getSplitTypeFromDayType(dayType: WorkoutDayType): SplitType {
  * Assumes ~40 seconds per working set (average across compounds and isolation).
  */
 function estimateWorkoutDuration(template: WorkoutDayTemplate): number {
-  const SECONDS_PER_SET = 40;
-  const WARMUP_OVERHEAD_MINUTES = 5; // General warmup + setup
+  const SECONDS_PER_SET = 40
+  const WARMUP_OVERHEAD_MINUTES = 5 // General warmup + setup
 
-  let totalSeconds = 0;
+  let totalSeconds = 0
 
   for (const prescription of template.exercises) {
-    const setTime = SECONDS_PER_SET + prescription.restSeconds;
-    totalSeconds += prescription.sets * setTime;
+    const setTime = SECONDS_PER_SET + prescription.restSeconds
+    totalSeconds += prescription.sets * setTime
   }
 
-  return Math.round(totalSeconds / 60) + WARMUP_OVERHEAD_MINUTES;
+  return Math.round(totalSeconds / 60) + WARMUP_OVERHEAD_MINUTES
 }
 
 // ── Summary Helpers (for UI) ───────────────────────────────────────
@@ -396,41 +396,41 @@ function estimateWorkoutDuration(template: WorkoutDayTemplate): number {
 export function calculatePlanWeeklyVolume(
   plan: GeneratedWorkoutPlan,
 ): ReadonlyMap<MuscleGroup, number> {
-  const volumes = new Map<MuscleGroup, number>();
+  const volumes = new Map<MuscleGroup, number>()
 
   for (const day of plan.weeklySchedule) {
-    if (!day.template) continue;
+    if (!day.template) continue
 
     for (const prescription of day.template.exercises) {
-      const exercise = EXERCISE_MAP.get(prescription.exerciseId);
-      if (!exercise) continue;
+      const exercise = EXERCISE_MAP.get(prescription.exerciseId)
+      if (!exercise) continue
 
-      const current = volumes.get(exercise.primaryMuscle) ?? 0;
-      volumes.set(exercise.primaryMuscle, current + prescription.sets);
+      const current = volumes.get(exercise.primaryMuscle) ?? 0
+      volumes.set(exercise.primaryMuscle, current + prescription.sets)
     }
   }
 
-  return volumes;
+  return volumes
 }
 
 /** Gets a human-readable summary of the plan */
 export function getPlanSummary(plan: GeneratedWorkoutPlan): {
-  readonly trainingDaysCount: number;
-  readonly restDaysCount: number;
-  readonly totalWeeklySets: number;
-  readonly estimatedWeeklyMinutes: number;
+  readonly trainingDaysCount: number
+  readonly restDaysCount: number
+  readonly totalWeeklySets: number
+  readonly estimatedWeeklyMinutes: number
 } {
-  const trainingDays = plan.weeklySchedule.filter((d) => d.template !== null);
-  const restDays = plan.weeklySchedule.filter((d) => d.template === null);
+  const trainingDays = plan.weeklySchedule.filter((d) => d.template !== null)
+  const restDays = plan.weeklySchedule.filter((d) => d.template === null)
 
-  let totalSets = 0;
-  let totalMinutes = 0;
+  let totalSets = 0
+  let totalMinutes = 0
 
   for (const day of trainingDays) {
-    if (!day.template) continue;
-    totalMinutes += day.template.estimatedMinutes;
+    if (!day.template) continue
+    totalMinutes += day.template.estimatedMinutes
     for (const ex of day.template.exercises) {
-      totalSets += ex.sets;
+      totalSets += ex.sets
     }
   }
 
@@ -439,5 +439,5 @@ export function getPlanSummary(plan: GeneratedWorkoutPlan): {
     restDaysCount: restDays.length,
     totalWeeklySets: totalSets,
     estimatedWeeklyMinutes: totalMinutes,
-  };
+  }
 }

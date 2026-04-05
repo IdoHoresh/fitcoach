@@ -18,17 +18,17 @@ export const fontSize = {
   xxl: 24,
   /** 32px — hero numbers (e.g., calorie count) */
   hero: 32,
-} as const;
+} as const
 
 export const fontWeight = {
   regular: '400' as const,
   medium: '500' as const,
   semibold: '600' as const,
   bold: '700' as const,
-};
+}
 
 export const lineHeight = {
   tight: 1.2,
   normal: 1.5,
   relaxed: 1.75,
-} as const;
+} as const

@@ -24,7 +24,7 @@ export const spacing = {
   xl: 32,
   /** 48px — hero spacing */
   xxl: 48,
-} as const;
+} as const
 
 /** Border radius values */
 export const borderRadius = {
@@ -38,4 +38,4 @@ export const borderRadius = {
   xl: 16,
   /** 9999px — fully round (pills, avatars) */
   full: 9999,
-} as const;
+} as const

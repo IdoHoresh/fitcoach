@@ -10,12 +10,12 @@
  * - Foreign keys enforced
  */
 
-import * as SQLite from 'expo-sqlite';
-import { CREATE_TABLE_STATEMENTS, SCHEMA_VERSION } from './schema';
+import * as SQLite from 'expo-sqlite'
+import { CREATE_TABLE_STATEMENTS, SCHEMA_VERSION } from './schema'
 
-const DATABASE_NAME = 'fitcoach.db';
+const DATABASE_NAME = 'fitcoach.db'
 
-let dbInstance: SQLite.SQLiteDatabase | null = null;
+let dbInstance: SQLite.SQLiteDatabase | null = null
 
 /**
  * Opens (or creates) the database and runs all migrations.
@@ -23,22 +23,22 @@ let dbInstance: SQLite.SQLiteDatabase | null = null;
  */
 export async function initializeDatabase(): Promise<SQLite.SQLiteDatabase> {
   if (dbInstance !== null) {
-    return dbInstance;
+    return dbInstance
   }
 
-  const db = await SQLite.openDatabaseAsync(DATABASE_NAME);
+  const db = await SQLite.openDatabaseAsync(DATABASE_NAME)
 
   // Enable WAL mode for better performance
-  await db.execAsync('PRAGMA journal_mode = WAL');
+  await db.execAsync('PRAGMA journal_mode = WAL')
 
   // Enforce foreign key constraints
-  await db.execAsync('PRAGMA foreign_keys = ON');
+  await db.execAsync('PRAGMA foreign_keys = ON')
 
   // Run schema creation
-  await runMigrations(db);
+  await runMigrations(db)
 
-  dbInstance = db;
-  return db;
+  dbInstance = db
+  return db
 }
 
 /**
@@ -47,11 +47,9 @@ export async function initializeDatabase(): Promise<SQLite.SQLiteDatabase> {
  */
 export function getDatabase(): SQLite.SQLiteDatabase {
   if (dbInstance === null) {
-    throw new Error(
-      '[Database] Not initialized. Call initializeDatabase() at app startup.'
-    );
+    throw new Error('[Database] Not initialized. Call initializeDatabase() at app startup.')
   }
-  return dbInstance;
+  return dbInstance
 }
 
 /**
@@ -60,28 +58,24 @@ export function getDatabase(): SQLite.SQLiteDatabase {
  */
 async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
   // Check current version
-  const versionResult = await db.getFirstAsync<{ user_version: number }>(
-    'PRAGMA user_version'
-  );
-  const currentVersion = versionResult?.user_version ?? 0;
+  const versionResult = await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version')
+  const currentVersion = versionResult?.user_version ?? 0
 
   if (currentVersion >= SCHEMA_VERSION) {
-    return; // Already up to date
+    return // Already up to date
   }
 
   // Run all CREATE statements in a transaction (atomic — all or nothing)
   await db.withTransactionAsync(async () => {
     for (const statement of CREATE_TABLE_STATEMENTS) {
-      await db.execAsync(statement);
+      await db.execAsync(statement)
     }
 
     // Update version
-    await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`);
-  });
+    await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
+  })
 
-  console.log(
-    `[Database] Migrated from v${currentVersion} to v${SCHEMA_VERSION}`
-  );
+  console.log(`[Database] Migrated from v${currentVersion} to v${SCHEMA_VERSION}`)
 }
 
 /**
@@ -90,7 +84,7 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
  */
 export async function closeDatabase(): Promise<void> {
   if (dbInstance !== null) {
-    await dbInstance.closeAsync();
-    dbInstance = null;
+    await dbInstance.closeAsync()
+    dbInstance = null
   }
 }

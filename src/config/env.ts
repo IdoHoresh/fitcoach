@@ -6,7 +6,7 @@
  * SECURITY: No fallback values for secrets. If it's not set, the app must not start.
  */
 
-import { z } from 'zod';
+import { z } from 'zod'
 
 /**
  * Schema for required environment variables.
@@ -23,11 +23,11 @@ const envSchema = z.object({
 
   // Sentry — required only when error tracking is enabled
   EXPO_PUBLIC_SENTRY_DSN: z.string().url().optional(),
-});
+})
 
-type EnvConfig = z.infer<typeof envSchema>;
+type EnvConfig = z.infer<typeof envSchema>
 
-let cachedEnv: EnvConfig | null = null;
+let cachedEnv: EnvConfig | null = null
 
 /**
  * Loads and validates environment variables.
@@ -35,7 +35,7 @@ let cachedEnv: EnvConfig | null = null;
  */
 export function loadEnv(): EnvConfig {
   if (cachedEnv !== null) {
-    return cachedEnv;
+    return cachedEnv
   }
 
   const rawEnv = {
@@ -43,19 +43,17 @@ export function loadEnv(): EnvConfig {
     EXPO_PUBLIC_SUPABASE_URL: process.env.EXPO_PUBLIC_SUPABASE_URL,
     EXPO_PUBLIC_SUPABASE_ANON_KEY: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
     EXPO_PUBLIC_SENTRY_DSN: process.env.EXPO_PUBLIC_SENTRY_DSN,
-  };
-
-  const result = envSchema.safeParse(rawEnv);
-
-  if (!result.success) {
-    const errors = result.error.issues
-      .map((i) => `  ${i.path.join('.')}: ${i.message}`)
-      .join('\n');
-    throw new Error(`[Config] Invalid environment variables:\n${errors}`);
   }
 
-  cachedEnv = result.data;
-  return cachedEnv;
+  const result = envSchema.safeParse(rawEnv)
+
+  if (!result.success) {
+    const errors = result.error.issues.map((i) => `  ${i.path.join('.')}: ${i.message}`).join('\n')
+    throw new Error(`[Config] Invalid environment variables:\n${errors}`)
+  }
+
+  cachedEnv = result.data
+  return cachedEnv
 }
 
 /**
@@ -63,15 +61,17 @@ export function loadEnv(): EnvConfig {
  * Use this to conditionally enable features.
  */
 export function isFeatureEnabled(feature: 'payments' | 'cloud_sync' | 'error_tracking'): boolean {
-  const env = loadEnv();
+  const env = loadEnv()
 
   switch (feature) {
     case 'payments':
-      return env.EXPO_PUBLIC_REVENUECAT_API_KEY !== undefined;
+      return env.EXPO_PUBLIC_REVENUECAT_API_KEY !== undefined
     case 'cloud_sync':
-      return env.EXPO_PUBLIC_SUPABASE_URL !== undefined
-        && env.EXPO_PUBLIC_SUPABASE_ANON_KEY !== undefined;
+      return (
+        env.EXPO_PUBLIC_SUPABASE_URL !== undefined &&
+        env.EXPO_PUBLIC_SUPABASE_ANON_KEY !== undefined
+      )
     case 'error_tracking':
-      return env.EXPO_PUBLIC_SENTRY_DSN !== undefined;
+      return env.EXPO_PUBLIC_SENTRY_DSN !== undefined
   }
 }

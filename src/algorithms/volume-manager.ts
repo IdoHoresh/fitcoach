@@ -10,14 +10,14 @@
  * Pure functions only.
  */
 
-import type { ExperienceLevel, MuscleGroup } from '../types';
-import { MESOCYCLE, VOLUME_LANDMARKS } from '../data/constants';
+import type { ExperienceLevel, MuscleGroup } from '../types'
+import { MESOCYCLE, VOLUME_LANDMARKS } from '../data/constants'
 
 /** Volume prescription for a single muscle group in a given week */
 export interface WeeklyVolumeTarget {
-  readonly muscleGroup: MuscleGroup;
-  readonly targetSets: number;
-  readonly isDeload: boolean;
+  readonly muscleGroup: MuscleGroup
+  readonly targetSets: number
+  readonly isDeload: boolean
 }
 
 /**
@@ -40,39 +40,37 @@ export function calculateWeeklyVolume(
   totalWeeks: number,
   experience: ExperienceLevel,
 ): WeeklyVolumeTarget {
-  const landmarks = VOLUME_LANDMARKS[muscleGroup];
-  const isDeload = weekNumber >= totalWeeks;
+  const landmarks = VOLUME_LANDMARKS[muscleGroup]
+  const isDeload = weekNumber >= totalWeeks
 
   if (isDeload) {
     return {
       muscleGroup,
-      targetSets: Math.round(landmarks.mv * MESOCYCLE.DELOAD_VOLUME_REDUCTION) +
-        landmarks.mv,
+      targetSets: Math.round(landmarks.mv * MESOCYCLE.DELOAD_VOLUME_REDUCTION) + landmarks.mv,
       isDeload: true,
-    };
+    }
   }
 
   // Calculate progression through the mesocycle (0 to 1)
-  const workingWeeks = totalWeeks - 1; // Exclude deload week
-  const progress = (weekNumber - 1) / Math.max(1, workingWeeks - 1);
+  const workingWeeks = totalWeeks - 1 // Exclude deload week
+  const progress = (weekNumber - 1) / Math.max(1, workingWeeks - 1)
 
   // Beginners start lower, intermediates start higher
-  const startVolume = experience === 'beginner'
-    ? landmarks.mev
-    : landmarks.mev + Math.round((landmarks.mavLow - landmarks.mev) / 2);
+  const startVolume =
+    experience === 'beginner'
+      ? landmarks.mev
+      : landmarks.mev + Math.round((landmarks.mavLow - landmarks.mev) / 2)
 
-  const peakVolume = experience === 'beginner'
-    ? landmarks.mavLow
-    : landmarks.mavHigh;
+  const peakVolume = experience === 'beginner' ? landmarks.mavLow : landmarks.mavHigh
 
   // Linear interpolation from start to peak
-  const targetSets = Math.round(startVolume + progress * (peakVolume - startVolume));
+  const targetSets = Math.round(startVolume + progress * (peakVolume - startVolume))
 
   return {
     muscleGroup,
     targetSets,
     isDeload: false,
-  };
+  }
 }
 
 /**
@@ -84,13 +82,21 @@ export function calculateAllVolumeTargets(
   experience: ExperienceLevel,
 ): readonly WeeklyVolumeTarget[] {
   const allMuscles: MuscleGroup[] = [
-    'chest', 'back', 'shoulders', 'quads', 'hamstrings',
-    'biceps', 'triceps', 'glutes', 'calves', 'abs',
-  ];
+    'chest',
+    'back',
+    'shoulders',
+    'quads',
+    'hamstrings',
+    'biceps',
+    'triceps',
+    'glutes',
+    'calves',
+    'abs',
+  ]
 
   return allMuscles.map((muscle) =>
-    calculateWeeklyVolume(muscle, weekNumber, totalWeeks, experience)
-  );
+    calculateWeeklyVolume(muscle, weekNumber, totalWeeks, experience),
+  )
 }
 
 /**
@@ -101,12 +107,12 @@ export function assessVolumeStatus(
   muscleGroup: MuscleGroup,
   actualSets: number,
 ): 'under' | 'on_target' | 'over' | 'excessive' {
-  const landmarks = VOLUME_LANDMARKS[muscleGroup];
+  const landmarks = VOLUME_LANDMARKS[muscleGroup]
 
-  if (actualSets < landmarks.mev) return 'under';
-  if (actualSets > landmarks.mrv) return 'excessive';
-  if (actualSets > landmarks.mavHigh) return 'over';
-  return 'on_target';
+  if (actualSets < landmarks.mev) return 'under'
+  if (actualSets > landmarks.mrv) return 'excessive'
+  if (actualSets > landmarks.mavHigh) return 'over'
+  return 'on_target'
 }
 
 /**
@@ -123,15 +129,15 @@ export function shouldDeload(
 ): boolean {
   // Trigger 1: Performance decline
   if (consecutiveDeclines >= MESOCYCLE.DECLINE_THRESHOLD) {
-    return true;
+    return true
   }
 
   // Trigger 2: Any muscle group exceeding MRV
   for (const [muscle, sets] of muscleVolumes) {
     if (sets > VOLUME_LANDMARKS[muscle].mrv) {
-      return true;
+      return true
     }
   }
 
-  return false;
+  return false
 }

@@ -16,7 +16,7 @@ export {
   calculateEat,
   calculateTef,
   calculateTdeeBreakdown,
-} from './tdee-calculator';
+} from './tdee-calculator'
 
 // Macronutrients
 export {
@@ -25,15 +25,11 @@ export {
   calculateFatGrams,
   calculateCarbGrams,
   calculateNutritionTargets,
-} from './macro-calculator';
+} from './macro-calculator'
 
 // Split selection
-export {
-  recommendSplitType,
-  assignDayTypes,
-  createSplitRecommendation,
-} from './split-selector';
-export type { SplitRecommendation, ScheduleDay } from './split-selector';
+export { recommendSplitType, assignDayTypes, createSplitRecommendation } from './split-selector'
+export type { SplitRecommendation, ScheduleDay } from './split-selector'
 
 // Progressive overload
 export {
@@ -41,7 +37,7 @@ export {
   allSetsAtTopOfRange,
   hasPerfDeclined,
   getProgressionAdvice,
-} from './progressive-overload';
+} from './progressive-overload'
 
 // Volume management
 export {
@@ -49,5 +45,5 @@ export {
   calculateAllVolumeTargets,
   assessVolumeStatus,
   shouldDeload,
-} from './volume-manager';
-export type { WeeklyVolumeTarget } from './volume-manager';
+} from './volume-manager'
+export type { WeeklyVolumeTarget } from './volume-manager'

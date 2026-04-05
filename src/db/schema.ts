@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 2;
+export const SCHEMA_VERSION = 2
 
 /**
  * All CREATE TABLE statements.
@@ -164,4 +164,4 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
   `CREATE INDEX IF NOT EXISTS idx_food_log_date ON food_log(date)`,
   `CREATE INDEX IF NOT EXISTS idx_food_log_meal ON food_log(date, meal_type)`,
   `CREATE INDEX IF NOT EXISTS idx_body_measurement_date ON body_measurement(date)`,
-];
+]

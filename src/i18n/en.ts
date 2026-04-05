@@ -3,7 +3,7 @@
  * Structure mirrors he.ts exactly for type safety.
  */
 
-import type { TranslationKeys } from './he';
+import type { TranslationKeys } from './he'
 
 export const en: TranslationKeys = {
   common: {
@@ -204,4 +204,4 @@ export const en: TranslationKeys = {
     loadFailed: 'Load failed',
     networkError: 'Connection error',
   },
-} as const;
+} as const
