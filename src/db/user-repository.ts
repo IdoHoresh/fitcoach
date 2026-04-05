@@ -7,8 +7,11 @@
 import type {
   BodyMeasurement,
   DayOfWeek,
+  EquipmentItem,
   LifestyleProfile,
   SessionDuration,
+  TrainingLocation,
+  UserEquipment,
   UserProfile,
 } from '../types';
 import { BaseRepository, generateId, nowISO, todayISO } from './base-repository';
@@ -27,7 +30,8 @@ interface UserProfileRow {
   goal: string;
   experience: string;
   training_days: string; // JSON array stored as text
-  equipment: string;
+  training_location: string;
+  available_equipment: string; // JSON array stored as text
   // Lifestyle fields (component-based TDEE)
   occupation: string;
   daily_steps: number | null;
@@ -52,6 +56,11 @@ function rowToProfile(row: UserProfileRow): UserProfile {
     sleepHoursPerNight: row.sleep_hours_per_night,
   };
 
+  const equipment: UserEquipment = {
+    location: row.training_location as TrainingLocation,
+    availableEquipment: JSON.parse(row.available_equipment) as EquipmentItem[],
+  };
+
   return {
     id: row.id,
     createdAt: row.created_at,
@@ -64,7 +73,7 @@ function rowToProfile(row: UserProfileRow): UserProfile {
     goal: row.goal as UserProfile['goal'],
     experience: row.experience as UserProfile['experience'],
     trainingDays: JSON.parse(row.training_days) as DayOfWeek[],
-    equipment: row.equipment as UserProfile['equipment'],
+    equipment,
     lifestyle,
   };
 }
@@ -102,7 +111,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
         `UPDATE user_profile SET
           height_cm = ?, weight_kg = ?, age = ?, sex = ?,
           body_fat_percent = ?, goal = ?, experience = ?,
-          training_days = ?, equipment = ?,
+          training_days = ?, training_location = ?, available_equipment = ?,
           occupation = ?, daily_steps = ?, after_work_activity = ?,
           exercise_days_per_week = ?, exercise_type = ?,
           session_duration_minutes = ?, exercise_intensity = ?,
@@ -112,7 +121,9 @@ class UserRepository extends BaseRepository<UserProfileRow> {
         [
           data.heightCm, data.weightKg, data.age, data.sex,
           data.bodyFatPercent, data.goal, data.experience,
-          JSON.stringify(data.trainingDays), data.equipment,
+          JSON.stringify(data.trainingDays),
+          data.equipment.location,
+          JSON.stringify(data.equipment.availableEquipment),
           ls.occupation, ls.dailySteps, ls.afterWorkActivity,
           ls.exerciseDaysPerWeek, ls.exerciseType,
           ls.sessionDurationMinutes, ls.exerciseIntensity,
@@ -130,17 +141,19 @@ class UserRepository extends BaseRepository<UserProfileRow> {
       `INSERT INTO user_profile (
         id, height_cm, weight_kg, age, sex,
         body_fat_percent, goal, experience,
-        training_days, equipment,
+        training_days, training_location, available_equipment,
         occupation, daily_steps, after_work_activity,
         exercise_days_per_week, exercise_type,
         session_duration_minutes, exercise_intensity,
         sleep_hours_per_night,
         created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         id, data.heightCm, data.weightKg, data.age, data.sex,
         data.bodyFatPercent, data.goal, data.experience,
-        JSON.stringify(data.trainingDays), data.equipment,
+        JSON.stringify(data.trainingDays),
+        data.equipment.location,
+        JSON.stringify(data.equipment.availableEquipment),
         ls.occupation, ls.dailySteps, ls.afterWorkActivity,
         ls.exerciseDaysPerWeek, ls.exerciseType,
         ls.sessionDurationMinutes, ls.exerciseIntensity,

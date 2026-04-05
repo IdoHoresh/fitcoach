@@ -12,8 +12,54 @@ export type TrainingGoal = 'muscle_gain' | 'fat_loss' | 'maintenance';
 /** Training experience — determines starting volume and progression speed */
 export type ExperienceLevel = 'beginner' | 'intermediate';
 
-/** Available equipment — determines exercise selection and substitutions */
-export type EquipmentAccess = 'full_gym' | 'home_gym' | 'minimal';
+/**
+ * Individual equipment items the user might have.
+ * Used as a checklist — user picks what they actually own.
+ *
+ * 'none' means bodyweight only (no equipment needed for the exercise).
+ * Exercises tagged with ['none'] can always be performed.
+ */
+export type EquipmentItem =
+  | 'none'            // Bodyweight — always available
+  | 'barbell'         // Barbell + weight plates (implies squat rack if paired with rack)
+  | 'squat_rack'      // Squat rack / power cage
+  | 'dumbbells'       // Dumbbells (adjustable or set)
+  | 'bench'           // Flat or adjustable bench
+  | 'pull_up_bar'     // Pull-up bar (doorframe or standalone)
+  | 'cable_machine'   // Cable pulley system
+  | 'leg_machines'    // Leg press, leg curl, leg extension machines
+  | 'resistance_bands'; // Resistance bands / tubes
+
+/**
+ * Where the user primarily trains.
+ * 'full_gym' auto-selects all equipment items.
+ * 'home' shows the equipment checklist.
+ * 'bodyweight_only' selects only 'none'.
+ */
+export type TrainingLocation = 'full_gym' | 'home' | 'bodyweight_only';
+
+/**
+ * Complete equipment profile — training location + specific items.
+ *
+ * Onboarding flow:
+ *   1. "Where do you usually train?" → TrainingLocation
+ *   2. If 'home' → "What equipment do you have?" → EquipmentItem[]
+ *   3. If 'full_gym' → all items auto-selected
+ *   4. If 'bodyweight_only' → only 'none'
+ */
+export interface UserEquipment {
+  readonly location: TrainingLocation;
+  readonly availableEquipment: readonly EquipmentItem[];
+}
+
+/** All equipment items that a full gym provides */
+export const FULL_GYM_EQUIPMENT: readonly EquipmentItem[] = [
+  'none', 'barbell', 'squat_rack', 'dumbbells', 'bench',
+  'pull_up_bar', 'cable_machine', 'leg_machines', 'resistance_bands',
+] as const;
+
+/** Equipment for bodyweight-only training */
+export const BODYWEIGHT_EQUIPMENT: readonly EquipmentItem[] = ['none'] as const;
 
 /** Days of the week (0 = Sunday, matching JS Date.getDay()) */
 export type DayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
@@ -100,7 +146,7 @@ export interface UserProfile {
   readonly goal: TrainingGoal;
   readonly experience: ExperienceLevel;
   readonly trainingDays: readonly DayOfWeek[];
-  readonly equipment: EquipmentAccess;
+  readonly equipment: UserEquipment;
 
   // Lifestyle (component-based TDEE estimation)
   readonly lifestyle: LifestyleProfile;

@@ -65,7 +65,15 @@ const isoDateSchema = z
 const sexSchema = z.enum(['male', 'female']);
 const goalSchema = z.enum(['muscle_gain', 'fat_loss', 'maintenance']);
 const experienceSchema = z.enum(['beginner', 'intermediate']);
-const equipmentSchema = z.enum(['full_gym', 'home_gym', 'minimal']);
+const equipmentItemSchema = z.enum([
+  'none', 'barbell', 'squat_rack', 'dumbbells', 'bench',
+  'pull_up_bar', 'cable_machine', 'leg_machines', 'resistance_bands',
+]);
+const trainingLocationSchema = z.enum(['full_gym', 'home', 'bodyweight_only']);
+const userEquipmentSchema = z.object({
+  location: trainingLocationSchema,
+  availableEquipment: z.array(equipmentItemSchema).min(1, 'Must have at least one equipment option'),
+});
 const dayOfWeekSchema = z.number().int().min(0).max(6);
 
 // Lifestyle / activity component schemas
@@ -126,7 +134,7 @@ export const userProfileSchema = z.object({
     .array(dayOfWeekSchema)
     .min(2, 'Select at least 2 training days')
     .max(6, 'Maximum 6 training days'),
-  equipment: equipmentSchema,
+  equipment: userEquipmentSchema,
   lifestyle: lifestyleProfileSchema,
 });
 

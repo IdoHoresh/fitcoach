@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 1;
+export const SCHEMA_VERSION = 2;
 
 /**
  * All CREATE TABLE statements.
@@ -31,7 +31,8 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     goal TEXT NOT NULL CHECK (goal IN ('muscle_gain', 'fat_loss', 'maintenance')),
     experience TEXT NOT NULL CHECK (experience IN ('beginner', 'intermediate')),
     training_days TEXT NOT NULL,
-    equipment TEXT NOT NULL CHECK (equipment IN ('full_gym', 'home_gym', 'minimal')),
+    training_location TEXT NOT NULL CHECK (training_location IN ('full_gym', 'home', 'bodyweight_only')),
+    available_equipment TEXT NOT NULL,
     occupation TEXT NOT NULL CHECK (occupation IN ('desk', 'mixed', 'active', 'physical_labor')),
     daily_steps INTEGER,
     after_work_activity TEXT NOT NULL CHECK (after_work_activity IN ('sedentary', 'moderate', 'active')),

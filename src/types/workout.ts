@@ -3,7 +3,7 @@
  * Covers exercises, sets, workout templates, and logging.
  */
 
-import type { EquipmentAccess } from './user';
+import type { EquipmentItem } from './user';
 
 /** Muscle groups tracked for volume management */
 export type MuscleGroup =
@@ -57,7 +57,7 @@ export interface Exercise {
   readonly primaryMuscle: MuscleGroup;
   readonly secondaryMuscles: readonly MuscleGroup[];
   readonly movementPattern: MovementPattern;
-  readonly equipmentRequired: EquipmentAccess;
+  readonly requiredEquipment: readonly EquipmentItem[];
   readonly substitutionIds: readonly string[]; // IDs of alternative exercises
   readonly instructions: string;
 }
