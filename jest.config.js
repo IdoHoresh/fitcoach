@@ -19,6 +19,7 @@ module.exports = {
     '^@/theme$': '<rootDir>/src/theme/index.ts',
     '^@/i18n$': '<rootDir>/src/i18n/index.ts',
     '^@/security$': '<rootDir>/src/security/index.ts',
+    '^@/stores$': '<rootDir>/src/stores/index.ts',
   },
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/**/index.ts'],
 }

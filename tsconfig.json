@@ -16,7 +16,8 @@
       "@/db": ["src/db/index.ts"],
       "@/theme": ["src/theme/index.ts"],
       "@/i18n": ["src/i18n/index.ts"],
-      "@/security": ["src/security/index.ts"]
+      "@/security": ["src/security/index.ts"],
+      "@/stores": ["src/stores/index.ts"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
