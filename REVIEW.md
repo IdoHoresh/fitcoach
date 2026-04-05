@@ -59,4 +59,7 @@ Review every change against these rules. Flag violations with confidence score (
 
 ## Patterns Learned (updated as we ship)
 
-<!-- Add patterns from PR feedback and production bugs here -->
+- **No unsafe `as` casts on partial data.** Don't cast `Partial<T>` to `T` — validate first with Zod or manual checks. SQLite NOT NULL constraints will throw at runtime. (2026-04-06)
+- **Async store actions must handle errors.** `try/finally` resets loading state but swallows the error. Either re-throw or set an `error` state field so the UI can show a message. (2026-04-06)
+- **No inline IIFEs.** `(({ id, ...rest }) => rest)(obj)` is hard to read. Extract to a named helper function. (2026-04-06)
+- **Run `/review` before committing, not after.** Review catches issues that should be fixed before they enter git history. (2026-04-06)

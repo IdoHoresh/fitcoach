@@ -11,7 +11,10 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 
 ## What Has Failed
 
-<!-- Add patterns that caused bugs or PR feedback here -->
+- `SessionDuration` is `30 | 45 | 60 | 75 | 90` — don't pass `0` for "no exercise", use `30` (ignored when `exerciseDaysPerWeek: 0`). Caused CI #2 failure. (2026-04-06)
+- `LifestyleProfile` requires `sleepHoursPerNight` — easy to forget in test fixtures. Caused CI #2 failure. (2026-04-06)
+- Pushed code without running local checks (lint/typecheck/tests) — caused avoidable CI failure. Always run all three before committing. (2026-04-06)
+- GitHub Actions `@v4` targets Node 20 internally — bumping `node-version` doesn't fix the deprecation warning. Use `@v5` for native Node 24 support. (2026-04-06)
 
 ## Expo / React Native Gotchas
 
@@ -24,8 +27,18 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - Path aliases (@/algorithms, @/types) for clean imports
 - Parameterized SQL only — never concatenate user input
 
+## Zustand Store Patterns
+
+- One store per domain (user, workout, nutrition) — decided 2026-04-06
+- Draft pattern for onboarding: accumulate in `Partial<T>`, save all at end
+- TDEE/macros recalculated on app open (not cached in SQLite) — fast, avoids stale data
+- Workout plan saved to SQLite (complex, user may customize)
+- Store calls algorithms automatically — UI just calls actions, never triggers calculations directly
+- Validate draft with Zod before casting `Partial<T>` to full `T` — SQLite will throw on NULL violations otherwise
+- Handle async errors in store actions — `try/finally` resets loading but swallows errors; use error state or re-throw
+- Don't use inline IIFEs for object stripping — extract to named helper for readability
+
 ## Open Questions
 
-- Zustand store structure: one store per domain or single store?
 - Navigation: stack-based onboarding → tab-based main app?
 - Offline-first sync strategy when we add a backend later?
