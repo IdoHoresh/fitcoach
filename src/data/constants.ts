@@ -96,14 +96,36 @@ export const NEAT_KCAL_PER_1000_STEPS = 35;
 export const NEAT_STEP_BASELINE = 3000;
 
 /**
- * Exercise calorie burn rates per minute by intensity.
+ * Exercise calorie burn rates per minute of ACTIVE movement by intensity.
  * Source: Ainsworth Compendium, ACSM metabolic equations
  * Values are kcal/min for a ~75kg person — scaled by weight in the algorithm.
+ *
+ * IMPORTANT: These are per minute of actual movement, NOT per minute of session.
+ * The active time ratio below accounts for rest periods.
  */
-export const EXERCISE_KCAL_PER_MIN: Record<ExerciseIntensity, number> = {
+export const EXERCISE_KCAL_PER_ACTIVE_MIN: Record<ExerciseIntensity, number> = {
   light: 4,     // ~3-4 METs (yoga, easy walk, stretching)
   moderate: 7,  // ~5-7 METs (brisk walk, moderate lifting, cycling)
   intense: 10,  // ~8-10 METs (HIIT, heavy lifting, sprinting)
+} as const;
+
+/**
+ * What fraction of a session is actual movement vs. resting.
+ *
+ * Strength training reality:
+ *   - A set takes ~30-45 seconds
+ *   - Rest between sets: 1-3 minutes
+ *   - Walking between machines, setup, water breaks
+ *   - In a 90-min session, you're actively moving ~35-40% of the time
+ *
+ * Cardio is continuous movement — nearly 100% active time.
+ *
+ * This is the #1 reason other apps overestimate strength training calories.
+ */
+export const ACTIVE_TIME_RATIO: Record<ExerciseType, number> = {
+  strength: 0.35,  // ~35% active (rest periods are the majority of time)
+  cardio: 0.95,    // ~95% active (continuous movement)
+  both: 0.60,      // ~60% active (mix of both)
 } as const;
 
 /** Reference body weight for exercise calorie scaling (kg) */
@@ -154,23 +176,73 @@ export const CALORIC_ADJUSTMENTS: Record<TrainingGoal, { min: number; max: numbe
 } as const;
 
 /**
- * Protein targets in g/kg body weight by goal.
- * Source: Helms 2014, Iraki 2019
+ * Protein targets in g/kg of ADJUSTED body weight by goal.
+ *
+ * Applied to adjusted body weight (not total) for overweight individuals.
+ * Every major evidence-based pro (Helms, Aragon, Norton, Israetel, McDonald)
+ * agrees: don't multiply g/kg by total weight when excess body fat is present.
+ *
+ * Sources:
+ * - Helms 2014 meta-analysis: 2.3-3.1 g/kg of LBM during deficit
+ * - Aragon: 2.2-3.3 g/kg of target body weight
+ * - RP (Israetel): 1.6-2.2 g/kg with diminishing rate at higher BF%
+ * - Norton: goal bodyweight or LBM
+ * - McDonald: 2.2 g/kg of LBM as baseline
+ *
+ * We use midpoint of range → fat_loss: (1.8+2.2)/2 = 2.0 g/kg adjusted
  */
 export const PROTEIN_TARGETS: Record<TrainingGoal, { min: number; max: number }> = {
   muscle_gain: { min: 1.6, max: 2.2 },
-  fat_loss: { min: 2.0, max: 2.4 },
+  fat_loss: { min: 1.8, max: 2.2 },
   maintenance: { min: 1.6, max: 2.0 },
 } as const;
 
 /**
- * Fat targets in g/kg body weight.
- * Minimum for hormone health: ~0.8 g/kg
+ * Adjusted body weight formula for protein calculation.
+ *
+ * When body fat % is unknown, we use BMI-based adjustment:
+ * - If BMI ≤ 25 (healthy range): use actual weight (no adjustment needed)
+ * - If BMI > 25: adjusted = ideal_weight + ADJUSTMENT_FACTOR × (actual - ideal)
+ *
+ * This matches Helms' recommended formula: ideal + 0.25-0.5 × excess.
+ * We use 0.4 (middle of his range).
+ * Source: Helms (Muscle & Strength Pyramids), clinical nutrition practice
  */
-export const FAT_TARGETS = {
-  MIN_PER_KG: 0.8,
-  MAX_PER_KG: 1.0,
+export const PROTEIN_WEIGHT_ADJUSTMENT = {
+  BMI_THRESHOLD: 25,
+  /** How much of the "extra" weight to count (40% = assume 40% of excess is lean mass) */
+  ADJUSTMENT_FACTOR: 0.4,
 } as const;
+
+/**
+ * Fat targets in g/kg of ACTUAL body weight by goal.
+ *
+ * Fat uses actual weight (not adjusted) — hormonal needs scale with total mass.
+ * During a cut: lower end to free up calories for carbs (training performance).
+ * Hard floor: 0.5 g/kg — below this, hormones suffer.
+ *
+ * Sources:
+ * - Helms (3DMJ): 0.5-1.0 g/kg, floor 0.5 g/kg
+ * - RP (Israetel): 0.7-0.9 g/kg during cut, floor 0.6-0.7 g/kg
+ * - Norton: 20-35% of calories, floor 0.5-0.7 g/kg
+ * - McDonald: 0.6-0.8 g/kg during cut, floor 0.6 g/kg
+ * - Aragon: 20-35% of calories, floor 0.5 g/kg
+ */
+export const FAT_TARGETS: Record<TrainingGoal, { min: number; max: number }> = {
+  fat_loss: { min: 0.7, max: 0.9 },
+  muscle_gain: { min: 0.8, max: 1.2 },
+  maintenance: { min: 0.8, max: 1.0 },
+} as const;
+
+/** Absolute minimum fat — never go below this regardless of goal */
+export const FAT_HARD_FLOOR_PER_KG = 0.5;
+
+/**
+ * Minimum carbs in grams — protects thyroid function and training performance.
+ * If carbs would drop below this, reduce fat toward the hard floor first.
+ * Source: McDonald (The Protein Book), general sports nutrition consensus
+ */
+export const CARB_MINIMUM_GRAMS = 100;
 
 /** Calorie content per gram of macronutrient */
 export const CALORIES_PER_GRAM = {

@@ -36,10 +36,11 @@ import type {
 import {
   BMR_COEFFICIENTS,
   BMR_SEX_OFFSET,
+  ACTIVE_TIME_RATIO,
   EPOC_MULTIPLIER,
   ESTIMATED_STEPS_BY_OCCUPATION,
   EXERCISE_DIMINISHING_RETURNS,
-  EXERCISE_KCAL_PER_MIN,
+  EXERCISE_KCAL_PER_ACTIVE_MIN,
   EXERCISE_REFERENCE_WEIGHT_KG,
   KATCH_MCARDLE,
   LIFESTYLE_NEAT,
@@ -187,9 +188,15 @@ export function calculateTotalNeat(
  * Averages weekly exercise over 7 days for daily estimate.
  *
  * Includes:
- * - Weight scaling (heavier = more calories per minute)
+ * - Active time ratio (strength = ~35% active, cardio = ~95% active)
+ * - Weight scaling (heavier = more calories per minute of movement)
  * - EPOC (post-exercise burn, higher for strength training)
  * - Diminishing returns (Pontzer: body compensates above ~5 hrs/week)
+ *
+ * Why active time ratio matters:
+ *   A 90-min strength session ≠ 90 min of movement.
+ *   ~60% is rest between sets (standing, sitting, on phone).
+ *   Only ~35% is actual lifting. Most apps ignore this and overestimate.
  */
 export function calculateEat(
   exerciseDaysPerWeek: number,
@@ -200,27 +207,31 @@ export function calculateEat(
 ): number {
   if (exerciseDaysPerWeek === 0) return 0;
 
-  const weeklyMinutes = exerciseDaysPerWeek * sessionMinutes;
+  // Convert session time to ACTIVE minutes (accounts for rest periods)
+  const activeRatio = ACTIVE_TIME_RATIO[exerciseType];
+  const activeMinutesPerSession = sessionMinutes * activeRatio;
+  const weeklyActiveMinutes = exerciseDaysPerWeek * activeMinutesPerSession;
 
   // Scale calorie burn by body weight relative to reference
   const weightScale = weightKg / EXERCISE_REFERENCE_WEIGHT_KG;
 
-  // Base burn per minute, scaled by weight
-  const kcalPerMinute = EXERCISE_KCAL_PER_MIN[intensity] * weightScale;
+  // Burn per minute of ACTIVE movement, scaled by weight
+  const kcalPerActiveMinute = EXERCISE_KCAL_PER_ACTIVE_MIN[intensity] * weightScale;
 
   // Apply diminishing returns for high volume (Pontzer's model)
+  // Note: cap is based on ACTIVE minutes, not total session time
   const fullEffectMin = Math.min(
-    weeklyMinutes,
+    weeklyActiveMinutes,
     EXERCISE_DIMINISHING_RETURNS.FULL_EFFECT_MINUTES_PER_WEEK,
   );
   const reducedEffectMin = Math.max(
     0,
-    weeklyMinutes - EXERCISE_DIMINISHING_RETURNS.FULL_EFFECT_MINUTES_PER_WEEK,
+    weeklyActiveMinutes - EXERCISE_DIMINISHING_RETURNS.FULL_EFFECT_MINUTES_PER_WEEK,
   );
 
   const weeklyBurn =
-    fullEffectMin * kcalPerMinute +
-    reducedEffectMin * kcalPerMinute * EXERCISE_DIMINISHING_RETURNS.REDUCED_EFFECT_MULTIPLIER;
+    fullEffectMin * kcalPerActiveMinute +
+    reducedEffectMin * kcalPerActiveMinute * EXERCISE_DIMINISHING_RETURNS.REDUCED_EFFECT_MULTIPLIER;
 
   // Apply EPOC multiplier
   const weeklyBurnWithEpoc = weeklyBurn * EPOC_MULTIPLIER[exerciseType];
