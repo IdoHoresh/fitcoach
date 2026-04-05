@@ -3,6 +3,7 @@
  */
 
 export {
+  lifestyleProfileSchema,
   userProfileSchema,
   loggedSetSchema,
   loggedExerciseSchema,

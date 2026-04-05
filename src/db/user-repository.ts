@@ -4,7 +4,13 @@
  * Uses parameterized queries only.
  */
 
-import type { BodyMeasurement, DayOfWeek, UserProfile } from '../types';
+import type {
+  BodyMeasurement,
+  DayOfWeek,
+  LifestyleProfile,
+  SessionDuration,
+  UserProfile,
+} from '../types';
 import { BaseRepository, generateId, nowISO, todayISO } from './base-repository';
 import { getDatabase } from './database';
 
@@ -22,11 +28,30 @@ interface UserProfileRow {
   experience: string;
   training_days: string; // JSON array stored as text
   equipment: string;
-  activity_level: string;
+  // Lifestyle fields (component-based TDEE)
+  occupation: string;
+  daily_steps: number | null;
+  after_work_activity: string;
+  exercise_days_per_week: number;
+  exercise_type: string;
+  session_duration_minutes: number;
+  exercise_intensity: string;
+  sleep_hours_per_night: number;
 }
 
 /** Maps a database row to a UserProfile domain object */
 function rowToProfile(row: UserProfileRow): UserProfile {
+  const lifestyle: LifestyleProfile = {
+    occupation: row.occupation as LifestyleProfile['occupation'],
+    dailySteps: row.daily_steps,
+    afterWorkActivity: row.after_work_activity as LifestyleProfile['afterWorkActivity'],
+    exerciseDaysPerWeek: row.exercise_days_per_week,
+    exerciseType: row.exercise_type as LifestyleProfile['exerciseType'],
+    sessionDurationMinutes: row.session_duration_minutes as SessionDuration,
+    exerciseIntensity: row.exercise_intensity as LifestyleProfile['exerciseIntensity'],
+    sleepHoursPerNight: row.sleep_hours_per_night,
+  };
+
   return {
     id: row.id,
     createdAt: row.created_at,
@@ -40,7 +65,7 @@ function rowToProfile(row: UserProfileRow): UserProfile {
     experience: row.experience as UserProfile['experience'],
     trainingDays: JSON.parse(row.training_days) as DayOfWeek[],
     equipment: row.equipment as UserProfile['equipment'],
-    activityLevel: row.activity_level as UserProfile['activityLevel'],
+    lifestyle,
   };
 }
 
@@ -70,20 +95,28 @@ class UserRepository extends BaseRepository<UserProfileRow> {
     const db = getDatabase();
     const existing = await this.getProfile();
     const now = nowISO();
+    const ls = data.lifestyle;
 
     if (existing) {
-      // Update existing profile
       await db.runAsync(
         `UPDATE user_profile SET
           height_cm = ?, weight_kg = ?, age = ?, sex = ?,
           body_fat_percent = ?, goal = ?, experience = ?,
-          training_days = ?, equipment = ?, activity_level = ?,
+          training_days = ?, equipment = ?,
+          occupation = ?, daily_steps = ?, after_work_activity = ?,
+          exercise_days_per_week = ?, exercise_type = ?,
+          session_duration_minutes = ?, exercise_intensity = ?,
+          sleep_hours_per_night = ?,
           updated_at = ?
         WHERE id = ?`,
         [
           data.heightCm, data.weightKg, data.age, data.sex,
           data.bodyFatPercent, data.goal, data.experience,
-          JSON.stringify(data.trainingDays), data.equipment, data.activityLevel,
+          JSON.stringify(data.trainingDays), data.equipment,
+          ls.occupation, ls.dailySteps, ls.afterWorkActivity,
+          ls.exerciseDaysPerWeek, ls.exerciseType,
+          ls.sessionDurationMinutes, ls.exerciseIntensity,
+          ls.sleepHoursPerNight,
           now, existing.id,
         ]
       );
@@ -97,13 +130,21 @@ class UserRepository extends BaseRepository<UserProfileRow> {
       `INSERT INTO user_profile (
         id, height_cm, weight_kg, age, sex,
         body_fat_percent, goal, experience,
-        training_days, equipment, activity_level,
+        training_days, equipment,
+        occupation, daily_steps, after_work_activity,
+        exercise_days_per_week, exercise_type,
+        session_duration_minutes, exercise_intensity,
+        sleep_hours_per_night,
         created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         id, data.heightCm, data.weightKg, data.age, data.sex,
         data.bodyFatPercent, data.goal, data.experience,
-        JSON.stringify(data.trainingDays), data.equipment, data.activityLevel,
+        JSON.stringify(data.trainingDays), data.equipment,
+        ls.occupation, ls.dailySteps, ls.afterWorkActivity,
+        ls.exerciseDaysPerWeek, ls.exerciseType,
+        ls.sessionDurationMinutes, ls.exerciseIntensity,
+        ls.sleepHoursPerNight,
         now, now,
       ]
     );

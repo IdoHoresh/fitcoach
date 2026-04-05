@@ -32,7 +32,14 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     experience TEXT NOT NULL CHECK (experience IN ('beginner', 'intermediate')),
     training_days TEXT NOT NULL,
     equipment TEXT NOT NULL CHECK (equipment IN ('full_gym', 'home_gym', 'minimal')),
-    activity_level TEXT NOT NULL CHECK (activity_level IN ('sedentary', 'light', 'moderate', 'active', 'very_active'))
+    occupation TEXT NOT NULL CHECK (occupation IN ('desk', 'mixed', 'active', 'physical_labor')),
+    daily_steps INTEGER,
+    after_work_activity TEXT NOT NULL CHECK (after_work_activity IN ('sedentary', 'moderate', 'active')),
+    exercise_days_per_week INTEGER NOT NULL,
+    exercise_type TEXT NOT NULL CHECK (exercise_type IN ('strength', 'cardio', 'both')),
+    session_duration_minutes INTEGER NOT NULL,
+    exercise_intensity TEXT NOT NULL CHECK (exercise_intensity IN ('light', 'moderate', 'intense')),
+    sleep_hours_per_night REAL NOT NULL
   )`,
 
   // ── Workout Plan (generated from algorithm) ──

@@ -66,14 +66,52 @@ const sexSchema = z.enum(['male', 'female']);
 const goalSchema = z.enum(['muscle_gain', 'fat_loss', 'maintenance']);
 const experienceSchema = z.enum(['beginner', 'intermediate']);
 const equipmentSchema = z.enum(['full_gym', 'home_gym', 'minimal']);
-const activitySchema = z.enum(['sedentary', 'light', 'moderate', 'active', 'very_active']);
 const dayOfWeekSchema = z.number().int().min(0).max(6);
+
+// Lifestyle / activity component schemas
+const occupationSchema = z.enum(['desk', 'mixed', 'active', 'physical_labor']);
+const lifestyleActivitySchema = z.enum(['sedentary', 'moderate', 'active']);
+const exerciseIntensitySchema = z.enum(['light', 'moderate', 'intense']);
+const exerciseTypeSchema = z.enum(['strength', 'cardio', 'both']);
+const sessionDurationSchema = z.union([
+  z.literal(30), z.literal(45), z.literal(60), z.literal(75), z.literal(90),
+]);
+
+const dailyStepsSchema = z
+  .number()
+  .int()
+  .min(VALIDATION.DAILY_STEPS.min)
+  .max(VALIDATION.DAILY_STEPS.max)
+  .nullable();
+
+const sleepHoursSchema = z
+  .number()
+  .min(VALIDATION.SLEEP_HOURS.min)
+  .max(VALIDATION.SLEEP_HOURS.max);
+
+const exerciseDaysSchema = z
+  .number()
+  .int()
+  .min(VALIDATION.EXERCISE_DAYS.min)
+  .max(VALIDATION.EXERCISE_DAYS.max);
 
 const mealTypeSchema = z.enum([
   'breakfast', 'lunch', 'dinner', 'snack', 'pre_workout', 'post_workout',
 ]);
 
 // ── Composite schemas ───────────────────────────────────────────────
+
+/** Validates lifestyle questionnaire from onboarding */
+export const lifestyleProfileSchema = z.object({
+  occupation: occupationSchema,
+  dailySteps: dailyStepsSchema,
+  afterWorkActivity: lifestyleActivitySchema,
+  exerciseDaysPerWeek: exerciseDaysSchema,
+  exerciseType: exerciseTypeSchema,
+  sessionDurationMinutes: sessionDurationSchema,
+  exerciseIntensity: exerciseIntensitySchema,
+  sleepHoursPerNight: sleepHoursSchema,
+});
 
 /** Validates complete user profile from onboarding */
 export const userProfileSchema = z.object({
@@ -89,7 +127,7 @@ export const userProfileSchema = z.object({
     .min(2, 'Select at least 2 training days')
     .max(6, 'Maximum 6 training days'),
   equipment: equipmentSchema,
-  activityLevel: activitySchema,
+  lifestyle: lifestyleProfileSchema,
 });
 
 /** Validates a single logged set */

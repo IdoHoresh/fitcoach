@@ -3,12 +3,19 @@
  * These are the "brains" of the app — pure logic, no UI, no side effects.
  */
 
-// TDEE & BMR
+// TDEE & BMR (component-based)
 export {
   calculateBmr,
   calculateBmrMifflin,
   calculateBmrKatchMcArdle,
-  calculateTdee,
+  calculateOccupationNeat,
+  calculateStepNeat,
+  calculateLifestyleNeat,
+  estimateDailySteps,
+  calculateTotalNeat,
+  calculateEat,
+  calculateTef,
+  calculateTdeeBreakdown,
 } from './tdee-calculator';
 
 // Macronutrients

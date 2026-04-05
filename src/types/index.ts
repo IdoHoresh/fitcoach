@@ -9,9 +9,15 @@ export type {
   ExperienceLevel,
   EquipmentAccess,
   DayOfWeek,
-  ActivityLevel,
+  OccupationType,
+  LifestyleActivity,
+  ExerciseIntensity,
+  ExerciseType,
+  SessionDuration,
+  LifestyleProfile,
   UserProfile,
   NutritionTargets,
+  TdeeBreakdown,
   BodyMeasurement,
 } from './user';
 

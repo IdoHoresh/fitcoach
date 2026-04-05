@@ -7,10 +7,13 @@
  */
 
 import type {
-  ActivityLevel,
   BiologicalSex,
+  ExerciseIntensity,
+  ExerciseType,
   ExperienceLevel,
+  LifestyleActivity,
   MuscleGroup,
+  OccupationType,
   TrainingGoal,
 } from '../types';
 
@@ -38,13 +41,109 @@ export const KATCH_MCARDLE = {
   LBM_COEFFICIENT: 21.6,
 } as const;
 
-/** Activity level multipliers for TDEE calculation */
-export const ACTIVITY_MULTIPLIERS: Record<ActivityLevel, number> = {
-  sedentary: 1.2,
-  light: 1.375,
-  moderate: 1.55,
-  active: 1.725,
-  very_active: 1.9,
+// ── Component-Based TDEE Constants ──────────────────────────────────
+// Replaces the old single-dropdown activity multiplier system.
+// Source: Levine 2005 (NEAT), Ainsworth 2011 (Compendium), Tudor-Locke 2011 (steps)
+
+/**
+ * NEAT from occupation — extra daily kcal above BMR from work activity.
+ * Based on Ainsworth Compendium MET values × average 8-hour workday.
+ *
+ * These are ADDITIONAL calories beyond BMR (not multipliers).
+ * Source: Ainsworth BE et al. (2011), Compendium of Physical Activities
+ */
+export const OCCUPATION_NEAT: Record<OccupationType, number> = {
+  desk: 150,            // ~1.3 MET, mostly sitting (programmer, accountant)
+  mixed: 350,           // ~2.0 MET, half sitting half moving (teacher, retail)
+  active: 550,          // ~3.0 MET, walking/standing most of day (nurse, waiter)
+  physical_labor: 900,  // ~4.5 MET, heavy manual work (construction, farming)
+} as const;
+
+/**
+ * NEAT from after-work lifestyle — extra daily kcal from non-work, non-exercise activity.
+ * Source: Levine JA (2005), Science — NEAT variation research
+ */
+export const LIFESTYLE_NEAT: Record<LifestyleActivity, number> = {
+  sedentary: 50,    // TV, gaming, couch — minimal movement
+  moderate: 200,    // Errands, walking, chores, cooking
+  active: 400,      // Kids, physical hobbies, gardening, DIY projects
+} as const;
+
+/**
+ * Estimated daily steps by occupation type — used as fallback when user
+ * doesn't know their step count.
+ * Source: Tudor-Locke C et al. (2011), step-based activity classification
+ */
+export const ESTIMATED_STEPS_BY_OCCUPATION: Record<OccupationType, number> = {
+  desk: 3500,
+  mixed: 7000,
+  active: 12000,
+  physical_labor: 15000,
+} as const;
+
+/**
+ * Additional NEAT calories per 1,000 steps above a baseline of 3,000.
+ * Source: Creasy SA et al. (2016) — walking energy expenditure
+ * ~0.04 kcal/step for 75kg person → ~40 kcal per 1,000 steps.
+ * We use 35 to be conservative (varies by weight/speed).
+ */
+export const NEAT_KCAL_PER_1000_STEPS = 35;
+
+/**
+ * Baseline steps for NEAT step calculation.
+ * Below this, step-based NEAT adds nothing (already counted in BMR/occupation).
+ */
+export const NEAT_STEP_BASELINE = 3000;
+
+/**
+ * Exercise calorie burn rates per minute by intensity.
+ * Source: Ainsworth Compendium, ACSM metabolic equations
+ * Values are kcal/min for a ~75kg person — scaled by weight in the algorithm.
+ */
+export const EXERCISE_KCAL_PER_MIN: Record<ExerciseIntensity, number> = {
+  light: 4,     // ~3-4 METs (yoga, easy walk, stretching)
+  moderate: 7,  // ~5-7 METs (brisk walk, moderate lifting, cycling)
+  intense: 10,  // ~8-10 METs (HIIT, heavy lifting, sprinting)
+} as const;
+
+/** Reference body weight for exercise calorie scaling (kg) */
+export const EXERCISE_REFERENCE_WEIGHT_KG = 75;
+
+/**
+ * EPOC (Excess Post-Exercise Oxygen Consumption) multiplier by exercise type.
+ * Strength training has higher post-exercise calorie burn than cardio.
+ * Source: LaForgia J et al. (2006), Sports Medicine — EPOC review
+ */
+export const EPOC_MULTIPLIER: Record<ExerciseType, number> = {
+  strength: 1.15,  // 15% extra burn from EPOC (resistance training)
+  cardio: 1.05,    // 5% extra burn from EPOC (steady-state)
+  both: 1.10,      // Average of both
+} as const;
+
+/**
+ * Diminishing returns cap — exercise beyond this weekly duration (minutes)
+ * has reduced caloric impact. Based on Pontzer's Constrained Energy model.
+ * Source: Pontzer H et al. (2021), Science — "Constrained Total Energy Expenditure"
+ */
+export const EXERCISE_DIMINISHING_RETURNS = {
+  FULL_EFFECT_MINUTES_PER_WEEK: 300,  // Full caloric credit up to 5 hours/week
+  REDUCED_EFFECT_MULTIPLIER: 0.5,      // Beyond that, only 50% caloric credit
+} as const;
+
+/**
+ * TEF (Thermic Effect of Food) — percentage of caloric intake.
+ * Source: Westerterp KR (2004), Nutrition & Metabolism
+ */
+export const TEF_PERCENTAGE = 0.10; // 10% of total intake
+
+/**
+ * Sleep health thresholds.
+ * Source: Spaeth AM et al. (2015), Markwald RR et al. (2013)
+ */
+export const SLEEP = {
+  LOW_WARNING_HOURS: 6,      // Below this: show health warning
+  OPTIMAL_MIN_HOURS: 7,
+  OPTIMAL_MAX_HOURS: 9,
 } as const;
 
 /** Caloric adjustments by goal (kcal/day relative to TDEE) */
@@ -186,7 +285,9 @@ export const VALIDATION = {
   WEIGHT_KG: { min: 30, max: 300 },
   AGE: { min: 14, max: 100 },
   BODY_FAT_PERCENT: { min: 3, max: 60 },
-  STEPS: { min: 0, max: 500_000 },
+  DAILY_STEPS: { min: 0, max: 100_000 },
+  SLEEP_HOURS: { min: 2, max: 14 },
+  EXERCISE_DAYS: { min: 0, max: 7 },
   WEIGHT_LOGGED_KG: { min: 0, max: 500 },
   REPS: { min: 0, max: 100 },
   RPE: { min: 1, max: 10 },
