@@ -57,6 +57,7 @@ beforeEach(() => {
     tdeeBreakdown: null,
     isOnboarded: false,
     isLoading: false,
+    error: null,
     draft: {},
   })
   jest.clearAllMocks()
@@ -294,5 +295,102 @@ describe('updateProfile', () => {
 
     expect(mockSaveProfile).not.toHaveBeenCalled()
     expect(useUserStore.getState().profile).toBeNull()
+  })
+
+  it('sets_error_when_save_fails', async () => {
+    mockGetProfile.mockResolvedValue(SAVED_PROFILE)
+    await useUserStore.getState().loadProfile()
+
+    mockSaveProfile.mockRejectedValue(new Error('DB write failed'))
+
+    await useUserStore.getState().updateProfile({ goal: 'muscle_gain' })
+
+    expect(useUserStore.getState().error).toBe('DB write failed')
+  })
+})
+
+// ── Draft validation ───────────────────────────────────────────────
+
+describe('draft validation', () => {
+  it('blocks_onboarding_when_draft_is_incomplete', async () => {
+    const { updateDraft } = useUserStore.getState()
+
+    // Only fill some fields — missing goal, experience, etc.
+    updateDraft({ heightCm: 189, weightKg: 113 })
+
+    await useUserStore.getState().completeOnboarding()
+
+    const state = useUserStore.getState()
+    expect(state.isOnboarded).toBe(false)
+    expect(state.error).toContain('Missing required')
+    expect(mockSaveProfile).not.toHaveBeenCalled()
+  })
+
+  it('clears_error_when_draft_is_updated', async () => {
+    // Trigger an error first
+    const { updateDraft } = useUserStore.getState()
+    updateDraft({ heightCm: 189 })
+    await useUserStore.getState().completeOnboarding()
+    expect(useUserStore.getState().error).not.toBeNull()
+
+    // Updating draft should clear the error
+    useUserStore.getState().updateDraft({ weightKg: 113 })
+    expect(useUserStore.getState().error).toBeNull()
+  })
+
+  it('clears_error_when_draft_is_reset', async () => {
+    const { updateDraft } = useUserStore.getState()
+    updateDraft({ heightCm: 189 })
+    await useUserStore.getState().completeOnboarding()
+
+    useUserStore.getState().resetDraft()
+    expect(useUserStore.getState().error).toBeNull()
+  })
+})
+
+// ── Error handling ─────────────────────────────────────────────────
+
+describe('error handling', () => {
+  it('sets_error_when_completeOnboarding_save_fails', async () => {
+    const { updateDraft } = useUserStore.getState()
+    mockSaveProfile.mockRejectedValue(new Error('SQLite error'))
+
+    updateDraft(COMPLETE_DRAFT)
+    await useUserStore.getState().completeOnboarding()
+
+    const state = useUserStore.getState()
+    expect(state.error).toBe('SQLite error')
+    expect(state.isOnboarded).toBe(false)
+    expect(state.isLoading).toBe(false)
+  })
+
+  it('sets_error_when_loadProfile_fails', async () => {
+    mockGetProfile.mockRejectedValue(new Error('DB read failed'))
+
+    await useUserStore.getState().loadProfile()
+
+    const state = useUserStore.getState()
+    expect(state.error).toBe('DB read failed')
+    expect(state.isLoading).toBe(false)
+  })
+
+  it('clears_error_on_successful_action', async () => {
+    // First cause an error
+    mockGetProfile.mockRejectedValue(new Error('temporary failure'))
+    await useUserStore.getState().loadProfile()
+    expect(useUserStore.getState().error).not.toBeNull()
+
+    // Now succeed
+    mockGetProfile.mockResolvedValue(SAVED_PROFILE)
+    await useUserStore.getState().loadProfile()
+    expect(useUserStore.getState().error).toBeNull()
+  })
+
+  it('handles_non_error_throws', async () => {
+    mockGetProfile.mockRejectedValue('string error')
+
+    await useUserStore.getState().loadProfile()
+
+    expect(useUserStore.getState().error).toBe('Failed to load profile')
   })
 })

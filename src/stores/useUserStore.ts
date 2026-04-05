@@ -27,6 +27,7 @@ interface UserStore {
   tdeeBreakdown: TdeeBreakdown | null
   isOnboarded: boolean
   isLoading: boolean
+  error: string | null
 
   // Onboarding draft (temporary, not persisted)
   draft: Partial<UserProfile>
@@ -37,6 +38,35 @@ interface UserStore {
   completeOnboarding: () => Promise<void>
   loadProfile: () => Promise<void>
   updateProfile: (fields: Partial<UserProfile>) => Promise<void>
+}
+
+// ── Required Draft Fields ──────────────────────────────────────────
+
+const REQUIRED_DRAFT_FIELDS = [
+  'heightCm',
+  'weightKg',
+  'age',
+  'sex',
+  'goal',
+  'experience',
+  'trainingDays',
+  'equipment',
+  'lifestyle',
+] as const
+
+/** Validates that all required fields are present in the draft. */
+function validateDraft(
+  draft: Partial<UserProfile>,
+): draft is Omit<UserProfile, 'id' | 'createdAt' | 'updatedAt'> {
+  return REQUIRED_DRAFT_FIELDS.every((field) => draft[field] !== undefined)
+}
+
+/** Strips id/createdAt/updatedAt from a profile for saving. */
+function stripMetaFields(
+  profile: UserProfile,
+): Omit<UserProfile, 'id' | 'createdAt' | 'updatedAt'> {
+  const { id: _id, createdAt: _c, updatedAt: _u, ...rest } = profile
+  return rest
 }
 
 // ── TDEE Calculation Helper ────────────────────────────────────────
@@ -65,30 +95,32 @@ export const useUserStore = create<UserStore>((set, get) => ({
   tdeeBreakdown: null,
   isOnboarded: false,
   isLoading: false,
+  error: null,
   draft: {},
 
   updateDraft: (fields) => {
     set((state) => ({
       draft: { ...state.draft, ...fields },
+      error: null,
     }))
   },
 
   resetDraft: () => {
-    set({ draft: {} })
+    set({ draft: {}, error: null })
   },
 
   completeOnboarding: async () => {
     const { draft } = get()
 
-    set({ isLoading: true })
+    if (!validateDraft(draft)) {
+      set({ error: 'Missing required profile fields. Complete all onboarding steps.' })
+      return
+    }
+
+    set({ isLoading: true, error: null })
 
     try {
-      // Save the draft to SQLite — repository handles ID + timestamps
-      const saved = await userRepository.saveProfile(
-        draft as Omit<UserProfile, 'id' | 'createdAt' | 'updatedAt'>,
-      )
-
-      // Calculate TDEE from the saved profile
+      const saved = await userRepository.saveProfile(draft)
       const tdeeBreakdown = calculateTdeeFromProfile(saved)
 
       set({
@@ -97,13 +129,15 @@ export const useUserStore = create<UserStore>((set, get) => ({
         isOnboarded: true,
         draft: {},
       })
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to save profile' })
     } finally {
       set({ isLoading: false })
     }
   },
 
   loadProfile: async () => {
-    set({ isLoading: true })
+    set({ isLoading: true, error: null })
 
     try {
       const profile = await userRepository.getProfile()
@@ -120,6 +154,8 @@ export const useUserStore = create<UserStore>((set, get) => ({
         tdeeBreakdown,
         isOnboarded: true,
       })
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to load profile' })
     } finally {
       set({ isLoading: false })
     }
@@ -129,21 +165,19 @@ export const useUserStore = create<UserStore>((set, get) => ({
     const { profile } = get()
     if (!profile) return
 
-    // Merge fields into existing profile
-    const updated = { ...profile, ...fields }
+    set({ error: null })
 
-    // Save to SQLite
-    const saved = await userRepository.saveProfile(
-      // Strip id/createdAt/updatedAt — repository manages those
-      (({ id: _id, createdAt: _c, updatedAt: _u, ...rest }) => rest)(updated),
-    )
+    try {
+      const updated = { ...profile, ...fields } as UserProfile
+      const saved = await userRepository.saveProfile(stripMetaFields(updated))
+      const tdeeBreakdown = calculateTdeeFromProfile(saved)
 
-    // Recalculate TDEE
-    const tdeeBreakdown = calculateTdeeFromProfile(saved)
-
-    set({
-      profile: saved,
-      tdeeBreakdown,
-    })
+      set({
+        profile: saved,
+        tdeeBreakdown,
+      })
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to update profile' })
+    }
   },
 }))
