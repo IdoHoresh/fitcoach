@@ -251,6 +251,7 @@ describe('calculateTdeeBreakdown', () => {
       sessionDurationMinutes: 60,
       exerciseIntensity: 'moderate',
       exerciseType: 'strength',
+      sleepHoursPerNight: 8,
     })
 
     expect(result.total).toBe(result.bmr + result.neat + result.eat + result.tef)
@@ -262,9 +263,10 @@ describe('calculateTdeeBreakdown', () => {
       dailySteps: null,
       afterWorkActivity: 'sedentary',
       exerciseDaysPerWeek: 0,
-      sessionDurationMinutes: 0,
+      sessionDurationMinutes: 30,
       exerciseIntensity: 'light',
       exerciseType: 'strength',
+      sleepHoursPerNight: 8,
     })
 
     expect(result.bmr).toBe(1800)
@@ -277,9 +279,10 @@ describe('calculateTdeeBreakdown', () => {
       dailySteps: null,
       afterWorkActivity: 'sedentary',
       exerciseDaysPerWeek: 0,
-      sessionDurationMinutes: 0,
+      sessionDurationMinutes: 30,
       exerciseIntensity: 'light',
       exerciseType: 'strength',
+      sleepHoursPerNight: 8,
     })
 
     // TDEE should be modest: ~2000-2200 for sedentary person
@@ -298,6 +301,7 @@ describe('calculateTdeeBreakdown', () => {
       sessionDurationMinutes: 60,
       exerciseIntensity: 'moderate',
       exerciseType: 'strength',
+      sleepHoursPerNight: 7,
     })
 
     // Should be notably higher than desk worker
@@ -316,6 +320,7 @@ describe('calculateTdeeBreakdown', () => {
       sessionDurationMinutes: 90,
       exerciseIntensity: 'light',
       exerciseType: 'strength',
+      sleepHoursPerNight: 7,
     })
 
     // Should be in the ballpark of 2288 (±200 kcal)
