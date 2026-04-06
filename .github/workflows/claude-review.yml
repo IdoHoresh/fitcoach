@@ -7,6 +7,7 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  id-token: write
 
 jobs:
   review:
@@ -15,7 +16,7 @@ jobs:
     if: github.event.pull_request.draft == false
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -23,7 +24,7 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          review_comment_prompt: |
+          prompt: |
             Review this PR against the project's REVIEW.md rules.
             Focus on: security, algorithm accuracy, code quality, TypeScript safety.
             Only flag issues with confidence >= 80.
