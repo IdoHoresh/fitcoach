@@ -37,6 +37,9 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - Validate draft with Zod before casting `Partial<T>` to full `T` — SQLite will throw on NULL violations otherwise
 - Handle async errors in store actions — `try/finally` resets loading but swallows errors; use error state or re-throw
 - Don't use inline IIFEs for object stripping — extract to named helper for readability
+- Repository methods must return domain types, never raw DB row types — leaking snake_case fields into stores creates coupling
+- Track SQLite UUIDs (planId, templateId) in store state — foreign keys need real IDs, not day-type strings
+- Wrap JSON.parse on DB columns in try/catch — corrupted data shouldn't crash the whole store
 
 ## Open Questions
 

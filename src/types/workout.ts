@@ -129,3 +129,32 @@ export interface Mesocycle {
   readonly totalWeeks: number
   readonly isDeloadWeek: boolean
 }
+
+/** Mesocycle state managed by the workout store */
+export interface MesocycleState {
+  readonly id: string
+  readonly planId: string // SQLite UUID of the associated workout_plan
+  readonly startDate: string
+  readonly currentWeek: number
+  readonly totalWeeks: number
+  readonly isDeloadWeek: boolean
+  readonly weekStartDate: string // ISO date of current week's start
+}
+
+/** Active in-progress workout session */
+export interface ActiveSession {
+  readonly templateId: string // SQLite UUID of the workout_template
+  readonly workoutDayType: WorkoutDayType
+  readonly startedAt: string // ISO datetime
+  readonly currentExerciseIndex: number
+  readonly loggedExercises: LoggedExercise[]
+}
+
+/** Archived plan snapshot for history */
+export interface ArchivedPlan {
+  readonly id: string
+  readonly splitType: SplitType
+  readonly mesocycleWeeks: number
+  readonly workoutsCompleted: number
+  readonly archivedAt: string // ISO datetime
+}

@@ -63,3 +63,6 @@ Review every change against these rules. Flag violations with confidence score (
 - **Async store actions must handle errors.** `try/finally` resets loading state but swallows the error. Either re-throw or set an `error` state field so the UI can show a message. (2026-04-06)
 - **No inline IIFEs.** `(({ id, ...rest }) => rest)(obj)` is hard to read. Extract to a named helper function. (2026-04-06)
 - **Run `/review` before committing, not after.** Review catches issues that should be fixed before they enter git history. (2026-04-06)
+- **Repository must return domain types, not DB rows.** Exposing `SetLogRow` (snake_case) into the store layer creates tight coupling. Map inside the repository. (2026-04-07)
+- **Track SQLite UUIDs in store state.** `planId` and `templateId` must be the actual DB UUIDs — passing day-type strings as foreign keys causes silent data corruption. (2026-04-07)
+- **Wrap `JSON.parse` on DB columns.** Corrupted or null JSON columns crash the whole call chain. Add try/catch with descriptive error. (2026-04-07)

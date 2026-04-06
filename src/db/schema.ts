@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 2
+export const SCHEMA_VERSION = 3
 
 /**
  * All CREATE TABLE statements.
@@ -157,6 +157,25 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     is_deload_week INTEGER NOT NULL DEFAULT 0
   )`,
 
+  // ── Archived Plans (history of completed/abandoned mesocycles) ──
+  `CREATE TABLE IF NOT EXISTS archived_plan (
+    id TEXT PRIMARY KEY,
+    plan_id TEXT NOT NULL,
+    split_type TEXT NOT NULL,
+    mesocycle_weeks INTEGER NOT NULL,
+    workouts_completed INTEGER NOT NULL DEFAULT 0,
+    weekly_schedule_json TEXT NOT NULL,
+    archived_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )`,
+
+  // ── Archived Workout Logs (logs belonging to archived plans) ──
+  `CREATE TABLE IF NOT EXISTS archived_workout_log (
+    id TEXT PRIMARY KEY,
+    archived_plan_id TEXT NOT NULL,
+    original_log_json TEXT NOT NULL,
+    FOREIGN KEY (archived_plan_id) REFERENCES archived_plan(id)
+  )`,
+
   // ── Indexes for fast lookups ──
   `CREATE INDEX IF NOT EXISTS idx_workout_log_date ON workout_log(date)`,
   `CREATE INDEX IF NOT EXISTS idx_set_log_workout ON set_log(workout_log_id)`,
@@ -164,4 +183,5 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
   `CREATE INDEX IF NOT EXISTS idx_food_log_date ON food_log(date)`,
   `CREATE INDEX IF NOT EXISTS idx_food_log_meal ON food_log(date, meal_type)`,
   `CREATE INDEX IF NOT EXISTS idx_body_measurement_date ON body_measurement(date)`,
+  `CREATE INDEX IF NOT EXISTS idx_archived_log_plan ON archived_workout_log(archived_plan_id)`,
 ]
