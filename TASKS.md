@@ -2,9 +2,9 @@
 
 ## Current Sprint
 
-- [ ] Set up development workflow (ESLint, Prettier, Husky, CI, skills)
-- [ ] Write retroactive tests for existing algorithms
-- [ ] Zustand state management stores
+- [x] Set up development workflow (ESLint, Prettier, Husky, CI, skills)
+- [x] Write retroactive tests for existing algorithms (222 tests, 100% coverage)
+- [ ] Zustand state management stores (user + workout done, nutrition next)
 - [ ] Onboarding flow (7-8 screens)
 
 ## Up Next
@@ -26,6 +26,8 @@
 - [x] Progressive overload (double progression)
 - [x] Equipment system (checklist-based)
 - [x] SQLite database + repositories
+- [x] Zustand user profile store (67 tests)
+- [x] Zustand workout store (102 tests) — plan lifecycle, mesocycle, session tracking
 - [x] Security (Zod, secure store, env validation)
 - [x] i18n (Hebrew + English)
 - [x] Theme system

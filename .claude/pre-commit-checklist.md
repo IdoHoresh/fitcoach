@@ -1,5 +1,6 @@
 # Pre-Commit Checklist
 
+- [x] On a feature branch (NOT main) — `git branch --show-current`
 - [x] /review ran and findings fixed
 - [x] lessons.md updated (if new patterns found)
 - [x] REVIEW.md updated (if new patterns found)
