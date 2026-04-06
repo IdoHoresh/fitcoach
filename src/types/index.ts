@@ -36,6 +36,9 @@ export type {
   WorkoutLog,
   ProgressionAdvice,
   Mesocycle,
+  MesocycleState,
+  ActiveSession,
+  ArchivedPlan,
 } from './workout'
 
 export type {

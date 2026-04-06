@@ -5,7 +5,7 @@
  */
 
 import { z } from 'zod'
-import { VALIDATION } from '../data/constants'
+import { MESOCYCLE, VALIDATION } from '../data/constants'
 
 // ── Primitive validators ────────────────────────────────────────────
 
@@ -172,6 +172,47 @@ export const bodyMeasurementSchema = z.object({
   weightKg: weightSchema,
   bodyFatPercent: bodyFatSchema,
   notes: z.string().max(500).default(''),
+})
+
+const isoDateTimeSchema = z
+  .string()
+  .regex(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/, 'Must be an ISO datetime (YYYY-MM-DDTHH:mm:ss)')
+  .refine((dt) => !isNaN(new Date(dt).getTime()), 'Invalid datetime')
+
+const workoutDayTypeSchema = z.enum([
+  'full_body_a',
+  'full_body_b',
+  'full_body_c',
+  'upper_a',
+  'upper_b',
+  'lower_a',
+  'lower_b',
+  'push_a',
+  'push_b',
+  'pull_a',
+  'pull_b',
+  'legs_a',
+  'legs_b',
+  'rest',
+])
+
+/** Validates a complete workout log before persistence */
+export const workoutLogSchema = z.object({
+  date: isoDateSchema,
+  templateId: z.string().min(1),
+  dayType: workoutDayTypeSchema,
+  startedAt: isoDateTimeSchema,
+  completedAt: isoDateTimeSchema.nullable(),
+  exercises: z.array(loggedExerciseSchema).min(1, 'Must log at least 1 exercise'),
+  durationMinutes: z.number().int().min(0).max(300),
+})
+
+/** Validates mesocycle state transitions */
+export const mesocycleStateSchema = z.object({
+  currentWeek: z.number().int().min(1).max(MESOCYCLE.MAX_WEEKS),
+  totalWeeks: z.number().int().min(MESOCYCLE.MIN_WEEKS).max(MESOCYCLE.MAX_WEEKS),
+  isDeloadWeek: z.boolean(),
+  startDate: isoDateSchema,
 })
 
 // ── Validation helper ───────────────────────────────────────────────
