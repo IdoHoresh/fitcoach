@@ -60,14 +60,19 @@ npm run test:coverage # Jest with coverage report
 
 ## Development Flow
 
+**NEVER commit directly to main.** Create a feature branch BEFORE the first commit.
+
 ```
+git checkout -b feat/<name>          ← FIRST STEP, before any code
 /brainstorm → Spec (docs/specs/) → /plan → Approve
   → For each task:
     1. Write failing test (RED)     ← test defines the spec
     2. Implement to pass (GREEN)    ← Claude makes it green
     3. Refactor (CLEAN)             ← improve without breaking
     4. Run tests to confirm
-  → /review → PR → CI → Merge
+  → /review → commit → push → PR
+  → Wait for CI + AI review → fix if needed
+  → Complete ALL PR test plan items → Merge
 ```
 
 TDD is MANDATORY for business logic (algorithms, state, data transforms).
