@@ -51,6 +51,7 @@ export const he = {
       female: 'נקבה',
       bodyFat: 'אחוז שומן (אופציונלי)',
       bodyFatHelp: 'אם לא בטוח, דלג — נחשב בלעדיו',
+      bodyFatSkip: 'דלג, חשב בלעדיו',
     },
     experience: {
       title: 'ניסיון באימונים',
@@ -72,6 +73,18 @@ export const he = {
       homeGymDesc: 'משקולות יד, ספסל, מתח',
       minimal: 'מינימלי',
       minimalDesc: 'משקל גוף + גומיות',
+      items: {
+        barbell: 'מוט ומשקולות',
+        squat_rack: 'מתקן סקוואט',
+        dumbbells: 'משקולות יד',
+        bench: 'ספסל אימון',
+        pull_up_bar: 'מתח',
+        cable_machine: 'מכונת כבלים',
+        leg_machines: 'מכונות רגליים',
+        resistance_bands: 'גומיות התנגדות',
+      },
+      selectedAll: 'כל הציוד נבחר אוטומטית',
+      selectYours: 'בחר את הציוד שיש לך בבית',
     },
     occupation: {
       title: 'מה סוג העבודה שלך?',

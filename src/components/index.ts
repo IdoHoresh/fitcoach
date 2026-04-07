@@ -5,3 +5,10 @@ export { Card } from './Card'
 export { NumberInput } from './NumberInput'
 export { OptionSelector } from './OptionSelector'
 export { CheckboxList } from './CheckboxList'
+export { ProgressBar } from './ProgressBar'
+export {
+  OnboardingLayout,
+  OnboardingTitle,
+  OnboardingSubtitle,
+  OnboardingContent,
+} from './OnboardingLayout'

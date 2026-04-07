@@ -51,6 +51,7 @@ export const en: TranslationKeys = {
       female: 'Female',
       bodyFat: 'Body Fat % (optional)',
       bodyFatHelp: "Not sure? Skip — we'll calculate without it",
+      bodyFatSkip: 'Skip, calculate without it',
     },
     experience: {
       title: 'Training Experience',
@@ -72,6 +73,18 @@ export const en: TranslationKeys = {
       homeGymDesc: 'Dumbbells, bench, pull-up bar',
       minimal: 'Minimal',
       minimalDesc: 'Bodyweight + resistance bands',
+      items: {
+        barbell: 'Barbell & plates',
+        squat_rack: 'Squat rack',
+        dumbbells: 'Dumbbells',
+        bench: 'Bench',
+        pull_up_bar: 'Pull-up bar',
+        cable_machine: 'Cable machine',
+        leg_machines: 'Leg machines',
+        resistance_bands: 'Resistance bands',
+      },
+      selectedAll: 'All equipment auto-selected',
+      selectYours: 'Select the equipment you have at home',
     },
     occupation: {
       title: 'What type of work do you do?',
