@@ -142,8 +142,39 @@ export const he = {
     home: 'בית',
     workout: 'אימון',
     nutrition: 'תזונה',
-    progress: 'התקדמות',
-    settings: 'הגדרות',
+    profile: 'פרופיל',
+  },
+
+  // ── Home ──
+  home: {
+    greetings: {
+      morning: 'בוקר טוב, {name}',
+      afternoon: 'צהריים טובים, {name}',
+      evening: 'ערב טוב, {name}',
+      night: 'לילה טוב, {name}',
+    },
+    motivational: [
+      'עקביות מנצחת עוצמה',
+      'כל חזרה נחשבת',
+      'העצמי העתידי שלך יודה לך',
+      'התקדמות, לא שלמות',
+      'הגוף שלך יכול, הראש צריך להאמין',
+      'היום אתה יותר חזק מאתמול',
+      'אין קיצורי דרך, יש עקביות',
+      'תן לתוצאות לדבר',
+      'כל אימון הוא השקעה בעצמך',
+      'השינוי מתחיל כשנגמר הנוח',
+      'אל תספור ימים, תעשה שהימים יספרו',
+      'הדרך הכי ארוכה מתחילה בצעד אחד',
+      'אתה לא צריך להיות מושלם, רק עקבי',
+      'המקום הכי טוב להתחיל הוא כאן',
+      'גם יום קשה באימון עדיף מיום על הספה',
+      'אימון של 20 דקות עדיף מאפס דקות',
+      'השרירים גדלים במנוחה — תן לגוף להתאושש',
+      'תזונה זה 80% מהתוצאה',
+      'אל תשווה את עצמך לאחרים, רק לעצמך של אתמול',
+      'הדרך לשינוי עוברת דרך ההרגלים',
+    ],
   },
 
   // ── Workout ──
@@ -254,7 +285,11 @@ export const he = {
 
 /** Deep structure type — allows different string values per language */
 type DeepStringRecord<T> = {
-  [K in keyof T]: T[K] extends string ? string : DeepStringRecord<T[K]>
+  [K in keyof T]: T[K] extends readonly string[]
+    ? string[]
+    : T[K] extends string
+      ? string
+      : DeepStringRecord<T[K]>
 }
 
 export type TranslationKeys = DeepStringRecord<typeof he>

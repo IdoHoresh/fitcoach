@@ -27,11 +27,11 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="nutrition"
         options={{
-          title: labels.home,
+          title: labels.nutrition,
           tabBarIcon: ({ color, size }: TabIconProps) => (
-            <Ionicons name="home-outline" size={size} color={color} />
+            <Ionicons name="nutrition-outline" size={size} color={color} />
           ),
         }}
       />
@@ -45,30 +45,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="nutrition"
+        name="index"
         options={{
-          title: labels.nutrition,
+          title: labels.home,
+          headerShown: false,
           tabBarIcon: ({ color, size }: TabIconProps) => (
-            <Ionicons name="nutrition-outline" size={size} color={color} />
+            <Ionicons name="home-outline" size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="progress"
+        name="profile"
         options={{
-          title: labels.progress,
-          tabBarIcon: ({ color, size }: TabIconProps) => (
-            <Ionicons name="trending-up-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: labels.settings,
-          tabBarIcon: ({ color, size }: TabIconProps) => (
-            <Ionicons name="settings-outline" size={size} color={color} />
-          ),
+          href: null,
+          title: labels.profile,
         }}
       />
     </Tabs>
