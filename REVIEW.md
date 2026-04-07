@@ -68,3 +68,5 @@ Review every change against these rules. Flag violations with confidence score (
 - **Repository must return domain types, not DB rows.** Exposing `SetLogRow` (snake_case) into the store layer creates tight coupling. Map inside the repository. (2026-04-07)
 - **Track SQLite UUIDs in store state.** `planId` and `templateId` must be the actual DB UUIDs — passing day-type strings as foreign keys causes silent data corruption. (2026-04-07)
 - **Wrap `JSON.parse` on DB columns.** Corrupted or null JSON columns crash the whole call chain. Add try/catch with descriptive error. (2026-04-07)
+- **Resolve i18n keys before DB persistence.** Don't store raw i18n key paths in DB columns — resolve to actual language strings at write time. (2026-04-07)
+- **Date windows must not overlap.** Rolling windows for weekly comparisons must be non-overlapping. Off-by-one in boundaries causes shared data points between "current" and "previous" week. (2026-04-07)
