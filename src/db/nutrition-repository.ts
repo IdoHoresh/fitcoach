@@ -14,6 +14,8 @@ import type {
   MealType,
   PlannedMeal,
   PlannedMealItem,
+  SavedMeal,
+  SavedMealItem,
   ServingUnit,
   WeeklyCheckIn,
 } from '../types'
@@ -88,6 +90,24 @@ interface DailySummaryRow {
   total_fat: number
   total_carbs: number
   meal_count: number
+}
+
+interface SavedMealRow {
+  id: string
+  name_he: string
+  total_calories: number
+  total_protein: number
+  total_fat: number
+  total_carbs: number
+}
+
+interface SavedMealItemRow {
+  id: string
+  saved_meal_id: string
+  food_id: string
+  serving_amount: number
+  serving_unit: string
+  grams_consumed: number
 }
 
 // ── Row mappers ───────────────────────────────────────────────────
@@ -465,8 +485,84 @@ class WeeklyCheckInRepository extends BaseRepository<WeeklyCheckInRow> {
   }
 }
 
+// ── Saved Meal Repository ──────────────────────────────────────────
+
+function rowToSavedMealItem(row: SavedMealItemRow): SavedMealItem {
+  return {
+    foodId: row.food_id,
+    servingAmount: row.serving_amount,
+    servingUnit: row.serving_unit as ServingUnit,
+    gramsConsumed: row.grams_consumed,
+  }
+}
+
+class SavedMealRepository extends BaseRepository<SavedMealRow> {
+  constructor() {
+    super('saved_meal')
+  }
+
+  async saveMeal(data: Omit<SavedMeal, 'id'>): Promise<SavedMeal> {
+    const db = getDatabase()
+    const id = generateId()
+
+    await db.withTransactionAsync(async () => {
+      await db.runAsync(
+        `INSERT INTO saved_meal (id, name_he, total_calories, total_protein, total_fat, total_carbs)
+         VALUES (?, ?, ?, ?, ?, ?)`,
+        [id, data.nameHe, data.totalCalories, data.totalProtein, data.totalFat, data.totalCarbs],
+      )
+
+      for (const item of data.items) {
+        await db.runAsync(
+          `INSERT INTO saved_meal_item (id, saved_meal_id, food_id, serving_amount, serving_unit, grams_consumed)
+           VALUES (?, ?, ?, ?, ?, ?)`,
+          [generateId(), id, item.foodId, item.servingAmount, item.servingUnit, item.gramsConsumed],
+        )
+      }
+    })
+
+    return { id, ...data }
+  }
+
+  async getSavedMeals(): Promise<SavedMeal[]> {
+    const db = getDatabase()
+    const mealRows = await db.getAllAsync<SavedMealRow>(
+      'SELECT * FROM saved_meal ORDER BY name_he ASC',
+      [],
+    )
+
+    const meals: SavedMeal[] = []
+    for (const row of mealRows) {
+      const itemRows = await db.getAllAsync<SavedMealItemRow>(
+        'SELECT * FROM saved_meal_item WHERE saved_meal_id = ?',
+        [row.id],
+      )
+      meals.push({
+        id: row.id,
+        nameHe: row.name_he,
+        items: itemRows.map(rowToSavedMealItem),
+        totalCalories: row.total_calories,
+        totalProtein: row.total_protein,
+        totalFat: row.total_fat,
+        totalCarbs: row.total_carbs,
+      })
+    }
+
+    return meals
+  }
+
+  async deleteSavedMeal(mealId: string): Promise<void> {
+    const db = getDatabase()
+    await db.withTransactionAsync(async () => {
+      await db.runAsync('DELETE FROM saved_meal_item WHERE saved_meal_id = ?', [mealId])
+      await db.runAsync('DELETE FROM saved_meal WHERE id = ?', [mealId])
+    })
+  }
+}
+
 // ── Singleton exports ──────────────────────────────────────────────
 
 export const foodLogRepository = new FoodLogRepository()
 export const mealPlanRepository = new MealPlanRepository()
+export const savedMealRepository = new SavedMealRepository()
 export const weeklyCheckInRepository = new WeeklyCheckInRepository()

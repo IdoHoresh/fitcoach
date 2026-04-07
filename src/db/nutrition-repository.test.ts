@@ -1,7 +1,8 @@
-import type { FoodLogEntry, MealPlan, WeeklyCheckIn } from '../types'
+import type { FoodLogEntry, MealPlan, SavedMeal, WeeklyCheckIn } from '../types'
 import {
   foodLogRepository,
   mealPlanRepository,
+  savedMealRepository,
   weeklyCheckInRepository,
 } from './nutrition-repository'
 
@@ -84,6 +85,18 @@ const MOCK_MEAL_PLAN: Omit<MealPlan, 'id' | 'createdAt'> = {
       totalCarbs: 1,
     },
   ],
+}
+
+const MOCK_SAVED_MEAL: Omit<SavedMeal, 'id'> = {
+  nameHe: 'ארוחת הבוקר שלי',
+  items: [
+    { foodId: 'food_006', servingAmount: 2, servingUnit: 'piece', gramsConsumed: 100 },
+    { foodId: 'food_015', servingAmount: 1, servingUnit: 'serving', gramsConsumed: 150 },
+  ],
+  totalCalories: 435,
+  totalProtein: 28,
+  totalFat: 19,
+  totalCarbs: 39,
 }
 
 const MOCK_CHECKIN: Omit<WeeklyCheckIn, 'id' | 'createdAt'> = {
@@ -695,6 +708,115 @@ describe('WeeklyCheckInRepository', () => {
       const result = await weeklyCheckInRepository.getCheckInByWeek('2026-05-01')
 
       expect(result).toBeNull()
+    })
+  })
+})
+
+// ═══════════════════════════════════════════════════════════════════
+// SAVED MEAL REPOSITORY
+// ═══════════════════════════════════════════════════════════════════
+
+describe('SavedMealRepository', () => {
+  describe('saveMeal', () => {
+    it('should save a meal with items in a transaction and return it with ID', async () => {
+      const result = await savedMealRepository.saveMeal(MOCK_SAVED_MEAL)
+
+      expect(result.id).toBeDefined()
+      expect(result.nameHe).toBe('ארוחת הבוקר שלי')
+      expect(result.totalCalories).toBe(435)
+      expect(result.items).toHaveLength(2)
+      expect(mockWithTransactionAsync).toHaveBeenCalledTimes(1)
+
+      // Should insert saved_meal row (but not saved_meal_item)
+      const mealInserts = mockRunAsync.mock.calls.filter(
+        (call: string[]) =>
+          call[0].includes('INSERT INTO saved_meal') &&
+          !call[0].includes('INSERT INTO saved_meal_item'),
+      )
+      expect(mealInserts).toHaveLength(1)
+
+      // Should insert 2 saved_meal_item rows
+      const itemInserts = mockRunAsync.mock.calls.filter((call: string[]) =>
+        call[0].includes('INSERT INTO saved_meal_item'),
+      )
+      expect(itemInserts).toHaveLength(2)
+    })
+  })
+
+  describe('getSavedMeals', () => {
+    it('should return all saved meals with their items', async () => {
+      // First call: get all saved meals
+      mockGetAllAsync
+        .mockResolvedValueOnce([
+          {
+            id: 'sm-1',
+            name_he: 'ארוחת הבוקר שלי',
+            total_calories: 435,
+            total_protein: 28,
+            total_fat: 19,
+            total_carbs: 39,
+          },
+        ])
+        // Second call: get items for sm-1
+        .mockResolvedValueOnce([
+          {
+            id: 'smi-1',
+            saved_meal_id: 'sm-1',
+            food_id: 'food_006',
+            serving_amount: 2,
+            serving_unit: 'piece',
+            grams_consumed: 100,
+          },
+          {
+            id: 'smi-2',
+            saved_meal_id: 'sm-1',
+            food_id: 'food_015',
+            serving_amount: 1,
+            serving_unit: 'serving',
+            grams_consumed: 150,
+          },
+        ])
+
+      const result = await savedMealRepository.getSavedMeals()
+
+      expect(result).toHaveLength(1)
+      expect(result[0].nameHe).toBe('ארוחת הבוקר שלי')
+      expect(result[0].items).toHaveLength(2)
+      expect(result[0].items[0].foodId).toBe('food_006')
+      expect(result[0].items[1].foodId).toBe('food_015')
+    })
+
+    it('should return empty array when no saved meals exist', async () => {
+      mockGetAllAsync.mockResolvedValueOnce([])
+
+      const result = await savedMealRepository.getSavedMeals()
+
+      expect(result).toHaveLength(0)
+    })
+  })
+
+  describe('deleteSavedMeal', () => {
+    it('should delete items first then meal in a transaction', async () => {
+      mockRunAsync.mockResolvedValue({ changes: 1 })
+
+      await savedMealRepository.deleteSavedMeal('sm-1')
+
+      expect(mockWithTransactionAsync).toHaveBeenCalledTimes(1)
+
+      // Should delete items first, then meal
+      const deleteCalls = mockRunAsync.mock.calls.filter(
+        (call: string[]) =>
+          call[0].includes('DELETE FROM saved_meal_item') ||
+          call[0].includes('DELETE FROM saved_meal WHERE'),
+      )
+      expect(deleteCalls).toHaveLength(2)
+
+      // Items deleted first
+      expect(deleteCalls[0][0]).toContain('saved_meal_item')
+      expect(deleteCalls[0][1]).toEqual(['sm-1'])
+      // Then meal
+      expect(deleteCalls[1][0]).toContain('DELETE FROM saved_meal WHERE')
+      expect(deleteCalls[1][1]).toEqual(['sm-1'])
     })
   })
 })

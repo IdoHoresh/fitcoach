@@ -9,6 +9,7 @@ export { workoutRepository } from './workout-repository'
 export {
   foodLogRepository,
   mealPlanRepository,
+  savedMealRepository,
   weeklyCheckInRepository,
 } from './nutrition-repository'
 export { SCHEMA_VERSION } from './schema'

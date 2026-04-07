@@ -252,6 +252,15 @@ class MeasurementRepository extends BaseRepository<MeasurementRow> {
     )
     return row ? rowToMeasurement(row) : null
   }
+
+  async getWeeklyAverageWeight(startDate: string, endDate: string): Promise<number | null> {
+    const db = getDatabase()
+    const row = await db.getFirstAsync<{ avg_weight: number | null }>(
+      'SELECT AVG(weight_kg) as avg_weight FROM body_measurement WHERE date >= ? AND date <= ?',
+      [startDate, endDate],
+    )
+    return row?.avg_weight ?? null
+  }
 }
 
 // ── Singleton exports ───────────────────────────────────────────────
