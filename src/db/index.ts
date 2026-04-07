@@ -6,4 +6,9 @@ export { initializeDatabase, getDatabase, closeDatabase } from './database'
 export { generateId, nowISO, todayISO, BaseRepository } from './base-repository'
 export { userRepository, measurementRepository } from './user-repository'
 export { workoutRepository } from './workout-repository'
+export {
+  foodLogRepository,
+  mealPlanRepository,
+  weeklyCheckInRepository,
+} from './nutrition-repository'
 export { SCHEMA_VERSION } from './schema'
