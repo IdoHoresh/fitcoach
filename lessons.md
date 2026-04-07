@@ -18,7 +18,7 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 
 ## Expo / React Native Gotchas
 
-<!-- Add RN-specific issues as we encounter them -->
+- Always wrap `setState` calls inside `useAnimatedReaction` with `runOnJS(setter)(value)` — reanimated callbacks run on the UI thread. Direct `setState` works in Jest (mocked) but crashes on real devices. (2026-04-08)
 
 ## Architecture Patterns
 

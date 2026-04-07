@@ -18,6 +18,8 @@ export const fontSize = {
   xxl: 24,
   /** 32px — hero numbers (e.g., calorie count) */
   hero: 32,
+  /** 48px — large display numbers (e.g., TDEE reveal counter) */
+  display: 48,
 } as const
 
 export const fontWeight = {

@@ -103,6 +103,7 @@ export const en: TranslationKeys = {
       subtitle: 'Check your phone or smartwatch health app',
       inputPlaceholder: 'Number of steps',
       dontKnow: "I don't know, estimate for me",
+      iKnow: 'I know my step count',
       helpText: "Not sure? No worries — we'll estimate from your work and routine",
     },
     lifestyle: {
@@ -147,6 +148,8 @@ export const en: TranslationKeys = {
       eatLabel: 'Workouts',
       tefLabel: 'Food digestion',
       totalLabel: 'Total daily burn',
+      disclaimer: 'Based on research and personalized to you. This is not medical advice.',
+      missingData: 'Missing profile data. Go back and complete all steps.',
     },
   },
 
