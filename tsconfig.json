@@ -17,9 +17,11 @@
       "@/theme": ["src/theme/index.ts"],
       "@/i18n": ["src/i18n/index.ts"],
       "@/security": ["src/security/index.ts"],
-      "@/stores": ["src/stores/index.ts"]
+      "@/stores": ["src/stores/index.ts"],
+      "@/hooks": ["src/hooks/index.ts"],
+      "@/components": ["src/components/index.ts"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "docs"]
+  "exclude": ["node_modules", "docs", "src/test"]
 }
