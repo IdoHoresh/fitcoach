@@ -435,6 +435,14 @@ export const TRAINING_DAY_CARB_SHIFT = 0.15
  */
 export const MACRO_TOLERANCE_PERCENT = 0.05
 
+/**
+ * Scale factor bounds for template portion scaling.
+ * Below 0.3 = unrealistically tiny portions (half a bite of chicken).
+ * Above 2.5 = unrealistically large (5 chicken breasts in one meal).
+ */
+export const MIN_SCALE_FACTOR = 0.3
+export const MAX_SCALE_FACTOR = 2.5
+
 // ── Weekly Recalibration Constants ─────────────────────────────────
 // How the app adjusts calories based on weekly weight change.
 // Conservative approach — small adjustments prevent yo-yo dieting.
