@@ -78,6 +78,31 @@ git checkout -b feat/<name>          ← FIRST STEP, before any code
 TDD is MANDATORY for business logic (algorithms, state, data transforms).
 TDD is optional for UI-only work (styling, layout, navigation).
 
+## Workflow Enforcement (HIGHEST PRIORITY — NEVER SKIP ANY STEP)
+
+**Every step of the development flow must be genuinely completed. NEVER auto-check, rubber-stamp, or skip ANY step. This applies to the ENTIRE flow, not just the pre-commit checklist.**
+
+Before every commit, Claude MUST show verification for each checklist item:
+
+1. **Branch check** — run `git branch --show-current`, show output
+2. **Review ran** — only after actually running `/review` and fixing ALL findings
+3. **lessons.md** — state what was added, or explain why nothing applies
+4. **REVIEW.md** — state what was added, or explain why nothing applies
+5. **Secrets scan** — run `git diff --cached`, actually scan for keys/tokens
+6. **Lint** — run `npm run lint`, show clean output
+7. **Typecheck** — run `npm run typecheck`, show clean output
+8. **Tests** — run `npm test`, show pass count
+9. **Size check** — run `git diff --cached --stat`, show line count
+
+After every PR merged:
+
+1. Wait for CI to pass before starting next task
+2. Update PR test plan checkbox once CI passes
+3. **Create Notion page** — beginner-friendly feature guide (see reference_notion_template.md)
+4. **Update TASKS.md** — move completed items to Done, update test count
+
+**If ANY step is skipped, the task is NOT complete. No exceptions.**
+
 ## Security Rules (NEVER skip)
 
 1. Never hardcode secrets (keys, tokens, passwords) in any file

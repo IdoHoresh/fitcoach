@@ -1,4 +1,29 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Notion__notion-create-pages",
+      "Bash(xargs wc:*)",
+      "Bash(curl -s \"https://search.brave.com/api/suggest?q=carloss+app\")",
+      "WebFetch(domain:carloss.com)",
+      "WebFetch(domain:play.google.com)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://fitly.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://repp.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://coachly.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://movva.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://lifta.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://gympal.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://reppa.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://forma.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://pumpi.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://traini.com\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://hadar.app\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://nevo.app\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://kaddo.app\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://luko.app\")",
+      "Bash(node -e ':*)",
+      "Bash(git config:*)"
+    ]
+  },
   "hooks": {
     "PostToolUse": [
       {
