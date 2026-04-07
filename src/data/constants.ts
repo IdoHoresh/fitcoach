@@ -12,6 +12,8 @@ import type {
   ExerciseType,
   ExperienceLevel,
   LifestyleActivity,
+  MealsPerDay,
+  MealType,
   MuscleGroup,
   OccupationType,
   TrainingGoal,
@@ -371,4 +373,112 @@ export const VALIDATION = {
 export const BMR_SEX_OFFSET: Record<BiologicalSex, number> = {
   male: BMR_COEFFICIENTS.MALE_OFFSET,
   female: BMR_COEFFICIENTS.FEMALE_OFFSET,
+} as const
+
+// ── Meal Planning Constants ────────────────────────────────────────
+// How daily calories/macros are distributed across meals.
+// Based on sports nutrition best practices (Aragon, Schoenfeld, Helms).
+
+/**
+ * Calorie distribution across meals by meal count.
+ * Protein is distributed ~evenly (leucine threshold: 30-40g per meal).
+ * Carbs and fat follow calorie distribution, adjusted on training days.
+ *
+ * Source: Aragon AA & Schoenfeld BJ (2013), Nutrient timing revisited
+ */
+export const MEAL_CALORIE_DISTRIBUTION: Record<MealsPerDay, Record<MealType, number>> = {
+  3: {
+    breakfast: 0.3,
+    lunch: 0.35,
+    dinner: 0.35,
+    snack: 0,
+    pre_workout: 0,
+    post_workout: 0,
+  },
+  4: {
+    breakfast: 0.25,
+    lunch: 0.3,
+    dinner: 0.3,
+    snack: 0.15,
+    pre_workout: 0,
+    post_workout: 0,
+  },
+  5: {
+    breakfast: 0.2,
+    lunch: 0.25,
+    dinner: 0.25,
+    snack: 0.15,
+    pre_workout: 0.15,
+    post_workout: 0,
+  },
+  6: {
+    breakfast: 0.18,
+    lunch: 0.22,
+    dinner: 0.22,
+    snack: 0.12,
+    pre_workout: 0.12,
+    post_workout: 0.14,
+  },
+} as const
+
+/**
+ * On training days, shift this fraction of total carbs toward peri-workout meals.
+ * Pre/post workout carbs improve performance and recovery.
+ *
+ * Source: Kerksick CM et al. (2017), ISSN position stand on nutrient timing
+ */
+export const TRAINING_DAY_CARB_SHIFT = 0.15
+
+/**
+ * Tolerance when matching meal templates to macro targets.
+ * A template within ±5% of the target is considered a good match.
+ */
+export const MACRO_TOLERANCE_PERCENT = 0.05
+
+// ── Weekly Recalibration Constants ─────────────────────────────────
+// How the app adjusts calories based on weekly weight change.
+// Conservative approach — small adjustments prevent yo-yo dieting.
+//
+// Source: Helms ER et al. (2014), Evidence-based recommendations for contest prep
+// Source: Israetel M, RP Strength — rate of weight change guidelines
+
+/**
+ * Expected weekly weight change by goal (kg/week).
+ * Fat loss: 0.5-1% of body weight → ~0.3-0.7 kg for most users.
+ * Muscle gain: slower to prevent excess fat gain.
+ */
+export const EXPECTED_WEEKLY_CHANGE: Record<TrainingGoal, { min: number; max: number }> = {
+  fat_loss: { min: -0.7, max: -0.3 },
+  muscle_gain: { min: 0.1, max: 0.3 },
+  maintenance: { min: -0.3, max: 0.3 },
+} as const
+
+/**
+ * How much to adjust calories per recalibration step (kcal).
+ * Small steps prevent overshooting — patience beats aggression.
+ */
+export const CALORIE_ADJUSTMENT_STEP = 100
+
+/** Maximum calorie adjustment in a single recalibration (kcal) */
+export const MAX_CALORIE_ADJUSTMENT = 300
+
+/**
+ * Minimum weeks of data before the first recalibration.
+ * Week 1 weight is unreliable (water shifts from diet change).
+ */
+export const MIN_WEEKS_BEFORE_RECALIBRATION = 2
+
+/**
+ * Minimum food logging adherence to make a recalibration decision.
+ * Below this, we ask the user to log more consistently.
+ */
+export const MIN_ADHERENCE_FOR_RECALIBRATION = 0.6
+
+/**
+ * Absolute calorie floors — never go below these (hormonal health).
+ * Source: ACSM position stand, clinical nutrition guidelines
+ */
+export const CALORIE_FLOOR: Record<BiologicalSex, number> = {
+  male: 1500,
+  female: 1200,
 } as const
