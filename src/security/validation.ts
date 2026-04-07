@@ -207,6 +207,31 @@ export const workoutLogSchema = z.object({
   durationMinutes: z.number().int().min(0).max(300),
 })
 
+/** Validates meal plan creation input */
+export const mealPlanInputSchema = z.object({
+  startDate: isoDateSchema,
+  endDate: isoDateSchema,
+  targetCalories: z.number().positive().max(10000),
+  targetProtein: z.number().min(0).max(500),
+  targetFat: z.number().min(0).max(500),
+  targetCarbs: z.number().min(0).max(1000),
+  mealsPerDay: z.union([z.literal(3), z.literal(4), z.literal(5), z.literal(6)]),
+})
+
+/** Validates weekly check-in input */
+export const weeklyCheckInSchema = z.object({
+  weekStartDate: isoDateSchema,
+  weekEndDate: isoDateSchema,
+  avgWeight: weightSchema,
+  prevAvgWeight: weightSchema.nullable(),
+  weightChange: z.number().nullable(),
+  expectedChange: z.number(),
+  calorieAdjustment: z.number().min(-500).max(500),
+  newTargetCalories: z.number().positive().max(10000),
+  coachMessage: z.string().min(1),
+  coachMessageEn: z.string().min(1),
+})
+
 /** Validates mesocycle state transitions */
 export const mesocycleStateSchema = z.object({
   currentWeek: z.number().int().min(1).max(MESOCYCLE.MAX_WEEKS),

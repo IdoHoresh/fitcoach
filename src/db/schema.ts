@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 3
+export const SCHEMA_VERSION = 4
 
 /**
  * All CREATE TABLE statements.
@@ -176,6 +176,55 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     FOREIGN KEY (archived_plan_id) REFERENCES archived_plan(id)
   )`,
 
+  // ── Meal Plan (generated nutrition plan) ──
+  `CREATE TABLE IF NOT EXISTS meal_plan (
+    id TEXT PRIMARY KEY,
+    start_date TEXT NOT NULL,
+    end_date TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'archived')),
+    target_calories REAL NOT NULL,
+    target_protein REAL NOT NULL,
+    target_fat REAL NOT NULL,
+    target_carbs REAL NOT NULL,
+    meals_per_day INTEGER NOT NULL CHECK (meals_per_day IN (3, 4, 5, 6)),
+    plan_json TEXT NOT NULL,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )`,
+
+  // ── Planned Meals (individual meals within a plan) ──
+  `CREATE TABLE IF NOT EXISTS planned_meal (
+    id TEXT PRIMARY KEY,
+    plan_id TEXT NOT NULL,
+    day_of_week INTEGER NOT NULL CHECK (day_of_week BETWEEN 0 AND 6),
+    is_training_day INTEGER NOT NULL DEFAULT 0,
+    meal_type TEXT NOT NULL,
+    order_index INTEGER NOT NULL,
+    time_slot TEXT,
+    template_id TEXT,
+    items_json TEXT NOT NULL,
+    total_calories REAL NOT NULL,
+    total_protein REAL NOT NULL,
+    total_fat REAL NOT NULL,
+    total_carbs REAL NOT NULL,
+    FOREIGN KEY (plan_id) REFERENCES meal_plan(id)
+  )`,
+
+  // ── Weekly Check-in (recalibration records) ──
+  `CREATE TABLE IF NOT EXISTS weekly_checkin (
+    id TEXT PRIMARY KEY,
+    week_start_date TEXT NOT NULL,
+    week_end_date TEXT NOT NULL,
+    avg_weight REAL NOT NULL,
+    prev_avg_weight REAL,
+    weight_change REAL,
+    expected_change REAL NOT NULL,
+    calorie_adjustment REAL NOT NULL,
+    new_target_calories REAL NOT NULL,
+    coach_message TEXT NOT NULL,
+    coach_message_en TEXT NOT NULL,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )`,
+
   // ── Indexes for fast lookups ──
   `CREATE INDEX IF NOT EXISTS idx_workout_log_date ON workout_log(date)`,
   `CREATE INDEX IF NOT EXISTS idx_set_log_workout ON set_log(workout_log_id)`,
@@ -184,4 +233,7 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
   `CREATE INDEX IF NOT EXISTS idx_food_log_meal ON food_log(date, meal_type)`,
   `CREATE INDEX IF NOT EXISTS idx_body_measurement_date ON body_measurement(date)`,
   `CREATE INDEX IF NOT EXISTS idx_archived_log_plan ON archived_workout_log(archived_plan_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_meal_plan_status ON meal_plan(status)`,
+  `CREATE INDEX IF NOT EXISTS idx_planned_meal_plan ON planned_meal(plan_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_weekly_checkin_date ON weekly_checkin(week_start_date)`,
 ]
