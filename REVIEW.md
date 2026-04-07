@@ -62,6 +62,8 @@ Review every change against these rules. Flag violations with confidence score (
 - **No unsafe `as` casts on partial data.** Don't cast `Partial<T>` to `T` — validate first with Zod or manual checks. SQLite NOT NULL constraints will throw at runtime. (2026-04-06)
 - **Async store actions must handle errors.** `try/finally` resets loading state but swallows the error. Either re-throw or set an `error` state field so the UI can show a message. (2026-04-06)
 - **No inline IIFEs.** `(({ id, ...rest }) => rest)(obj)` is hard to read. Extract to a named helper function. (2026-04-06)
+- **Generated IDs must be globally unique.** When building objects inside nested loops (days × meals), include ALL loop indices in the ID — not just the inner one. `planned_0` repeats across days; `planned_d0_0` is unique. (2026-04-07)
+- **i18n keys built from enums need exhaustive coverage.** If `getKey(action, severity)` produces `action.severity` keys, every valid `action × severity` combination must exist in both language files. TypeScript won't catch missing nested keys. (2026-04-07)
 - **Run `/review` before committing, not after.** Review catches issues that should be fixed before they enter git history. (2026-04-06)
 - **Repository must return domain types, not DB rows.** Exposing `SetLogRow` (snake_case) into the store layer creates tight coupling. Map inside the repository. (2026-04-07)
 - **Track SQLite UUIDs in store state.** `planId` and `templateId` must be the actual DB UUIDs — passing day-type strings as foreign keys causes silent data corruption. (2026-04-07)

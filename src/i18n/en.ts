@@ -198,6 +198,35 @@ export const en: TranslationKeys = {
     deload: 'Time for a deload',
   },
 
+  recalibration: {
+    stay_course: "You're right on track! Keep doing what you're doing.",
+    increase_calories: {
+      minor_adjust: "You're losing a bit fast. Adding 100 kcal to protect muscle.",
+      significant_adjust:
+        'Losing too quickly. Adding 200 kcal — muscle preservation is the priority.',
+      concern:
+        'Weight is dropping fast. Adding 300 kcal. If this continues, consult a professional.',
+    },
+    decrease_calories: {
+      minor_adjust: 'Weight drifting up slightly. Reducing by 100 kcal.',
+      significant_adjust: 'Gaining more than expected. Reducing by 200 kcal.',
+      concern: 'Significant weight gain. Reducing by 300 kcal. Time to tighten up.',
+    },
+    increase_deficit: {
+      minor_adjust: 'Progress is a bit slow. Reducing 100 kcal to get things moving.',
+      significant_adjust: 'Fat loss has stalled. Reducing 200 kcal.',
+      concern:
+        'Fat loss has completely stalled. Reducing 300 kcal. If this persists, consult a professional.',
+    },
+    reduce_surplus: {
+      minor_adjust: 'Gaining a bit fast. Reducing surplus by 100 kcal to minimize fat gain.',
+      significant_adjust: 'Too much surplus. Cutting 200 kcal.',
+      concern: 'Gaining very fast. Cutting 300 kcal. Time to investigate what is going on.',
+    },
+    log_more: 'Not enough data this week. Try to weigh yourself and log food more consistently.',
+    goal_achieved: "You've hit your target! Time to switch to maintenance.",
+  },
+
   errors: {
     invalidInput: 'Invalid input',
     saveFailed: 'Save failed',

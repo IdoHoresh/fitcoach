@@ -47,3 +47,27 @@ export {
   shouldDeload,
 } from './volume-manager'
 export type { WeeklyVolumeTarget } from './volume-manager'
+
+// Macro distribution across meals
+export { distributeMacros, getMealTypesForCount } from './macro-distributor'
+export type { MealMacroTarget } from './macro-distributor'
+
+// Meal plan generation
+export {
+  calculateScaleFactor,
+  calculateTemplateMacros,
+  generateWeeklyMealPlan,
+  isWithinTolerance,
+  scaleTemplate,
+  selectTemplate,
+} from './meal-plan-generator'
+
+// Weekly recalibration
+export {
+  calculateCalorieAdjustment,
+  calculateWeightTrend,
+  determineAction,
+  determineSeverity,
+  getCoachMessageKey,
+  recalibrate,
+} from './weekly-recalibration'
