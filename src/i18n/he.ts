@@ -231,6 +231,18 @@ export const he = {
     goal_achieved: 'הגעת ליעד! הגיע הזמן לעבור למצב שמירה.',
   },
 
+  // ── Components ──
+  components: {
+    numberInput: {
+      increment: 'הגדל',
+      decrement: 'הקטן',
+    },
+    checkboxList: {
+      selectAll: 'בחר הכל',
+      clearAll: 'נקה הכל',
+    },
+  },
+
   // ── Errors ──
   errors: {
     invalidInput: 'קלט לא תקין',

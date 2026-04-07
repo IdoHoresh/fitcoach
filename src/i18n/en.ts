@@ -227,6 +227,17 @@ export const en: TranslationKeys = {
     goal_achieved: "You've hit your target! Time to switch to maintenance.",
   },
 
+  components: {
+    numberInput: {
+      increment: 'Increase',
+      decrement: 'Decrease',
+    },
+    checkboxList: {
+      selectAll: 'Select all',
+      clearAll: 'Clear all',
+    },
+  },
+
   errors: {
     invalidInput: 'Invalid input',
     saveFailed: 'Save failed',
