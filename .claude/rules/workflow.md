@@ -74,6 +74,23 @@ POST-COMMIT VERIFICATION:
 Next task: [task name] — [brief description]. PR #X ([feature]) just merged. Y tests passing. Start with /brainstorm.
 ```
 
+### Every 5 PRs — Full Codebase QA
+
+After every 5th merged PR, run a deep QA review before starting the next feature. This catches cross-cutting bugs that per-PR reviews miss.
+
+**What it covers:**
+
+1. **Schema ↔ repository alignment** — every INSERT/UPDATE column exists in the CREATE TABLE
+2. **TODO audit** — any TODO in a logic path (not comments/docs) is treated as a defect and fixed
+3. **Cross-module consistency** — duplicate utilities, divergent implementations of the same concept
+4. **Integration correctness** — things unit tests can't catch because the DB is mocked
+5. **Validation coverage** — algorithm entry points, data boundaries, error paths
+6. **Security scan** — log messages, error messages, hardcoded values
+
+**How:** Launch 3 parallel Explore agents (algorithms+types, DB+security+stores, UI+tests+config), compile findings, fix, verify all tests/lint/typecheck pass.
+
+**Track it:** After each PR merge, note the PR count. On every 5th PR, the next session starts with QA instead of a new feature.
+
 ## Why This Matters
 
 FitCoach handles people's health data. Every shortcut is a potential bug that reaches real users. Ido has asked MULTIPLE TIMES to never skip steps. This rule has been violated before. It must NEVER be violated again.
