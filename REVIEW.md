@@ -70,3 +70,5 @@ Review every change against these rules. Flag violations with confidence score (
 - **Wrap `JSON.parse` on DB columns.** Corrupted or null JSON columns crash the whole call chain. Add try/catch with descriptive error. (2026-04-07)
 - **Resolve i18n keys before DB persistence.** Don't store raw i18n key paths in DB columns — resolve to actual language strings at write time. (2026-04-07)
 - **Date windows must not overlap.** Rolling windows for weekly comparisons must be non-overlapping. Off-by-one in boundaries causes shared data points between "current" and "previous" week. (2026-04-07)
+- **RTL-sensitive style properties must be dynamic.** Never hardcode `transformOrigin`, directional `textAlign`, or directional padding — use `isRTL()` to set them. Static `'left'` breaks Hebrew layout. (2026-04-08)
+- **Timer components must clean up on unmount.** Any `setInterval`/`setTimeout` (long-press, polling) needs a `useEffect` cleanup return. Otherwise callbacks fire on unmounted components. (2026-04-08)

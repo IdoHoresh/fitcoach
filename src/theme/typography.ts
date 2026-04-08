@@ -3,6 +3,13 @@
  * All sizes are in logical pixels (React Native handles density).
  */
 
+export const fontFamily = {
+  regular: 'Rubik_400Regular',
+  medium: 'Rubik_500Medium',
+  semibold: 'Rubik_600SemiBold',
+  bold: 'Rubik_700Bold',
+} as const
+
 export const fontSize = {
   /** 11px — fine print, captions */
   xs: 11,

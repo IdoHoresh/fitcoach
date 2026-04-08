@@ -1,5 +1,7 @@
 import React from 'react'
+import { StyleSheet } from 'react-native'
 import { render, screen } from '@testing-library/react-native'
+import * as rtlModule from '@/hooks/rtl'
 import { ProgressBar } from './ProgressBar'
 import { colors } from '@/theme/colors'
 
@@ -35,6 +37,28 @@ describe('ProgressBar', () => {
       expect(screen.getByTestId('progress-fill')).toHaveStyle({
         backgroundColor: colors.primary,
       })
+    })
+  })
+
+  describe('RTL support', () => {
+    afterEach(() => {
+      jest.restoreAllMocks()
+    })
+
+    it('uses right transformOrigin in RTL mode', () => {
+      jest.spyOn(rtlModule, 'isRTL').mockReturnValue(true)
+      render(<ProgressBar current={5} total={10} testID="progress" />)
+      const fill = screen.getByTestId('progress-fill')
+      const flat = StyleSheet.flatten(fill.props.style)
+      expect(flat.transformOrigin).toBe('right')
+    })
+
+    it('uses left transformOrigin in LTR mode', () => {
+      jest.spyOn(rtlModule, 'isRTL').mockReturnValue(false)
+      render(<ProgressBar current={5} total={10} testID="progress" />)
+      const fill = screen.getByTestId('progress-fill')
+      const flat = StyleSheet.flatten(fill.props.style)
+      expect(flat.transformOrigin).toBe('left')
     })
   })
 
