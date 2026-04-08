@@ -72,3 +72,4 @@ Review every change against these rules. Flag violations with confidence score (
 - **Date windows must not overlap.** Rolling windows for weekly comparisons must be non-overlapping. Off-by-one in boundaries causes shared data points between "current" and "previous" week. (2026-04-07)
 - **RTL-sensitive style properties must be dynamic.** Never hardcode `transformOrigin`, directional `textAlign`, or directional padding — use `isRTL()` to set them. Static `'left'` breaks Hebrew layout. (2026-04-08)
 - **Timer components must clean up on unmount.** Any `setInterval`/`setTimeout` (long-press, polling) needs a `useEffect` cleanup return. Otherwise callbacks fire on unmounted components. (2026-04-08)
+- **`forceRTL` must be called at module level.** Calling `I18nManager.forceRTL()` inside `useEffect` is too late — the layout is already rendered LTR. Call it at the top of the root layout file, outside any component. (2026-04-08)
