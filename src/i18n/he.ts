@@ -117,8 +117,8 @@ export const he = {
       activeDesc: 'ילדים, תחביבים פיזיים, גינה',
     },
     exercise: {
-      title: 'ספר לי על האימונים שלך',
-      daysPerWeek: 'כמה ימים בשבוע?',
+      title: 'העדפות אימון',
+      subtitle: 'כבר יודעים מתי, עכשיו נקבע איך',
       sessionLength: 'כמה זמן כל אימון?',
       minutes: 'דקות',
       type: 'מה סוג האימון?',

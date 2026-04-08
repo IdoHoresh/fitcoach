@@ -162,6 +162,26 @@ describe('completeOnboarding', () => {
     expect(useUserStore.getState().draft).toEqual({})
   })
 
+  it('derives_exerciseDaysPerWeek_from_trainingDays_length', async () => {
+    const { updateDraft } = useUserStore.getState()
+    mockSaveProfile.mockResolvedValue(SAVED_PROFILE)
+
+    // Set trainingDays to 5 days but exerciseDaysPerWeek to a different value
+    updateDraft({
+      ...COMPLETE_DRAFT,
+      trainingDays: [0, 1, 2, 3, 4],
+      lifestyle: {
+        ...COMPLETE_DRAFT.lifestyle,
+        exerciseDaysPerWeek: 2, // intentionally wrong — should be overridden
+      },
+    })
+
+    await useUserStore.getState().completeOnboarding()
+
+    const savedArg = mockSaveProfile.mock.calls[0][0]
+    expect(savedArg.lifestyle.exerciseDaysPerWeek).toBe(5)
+  })
+
   it('sets_isLoading_during_save', async () => {
     const { updateDraft } = useUserStore.getState()
 

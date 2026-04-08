@@ -63,6 +63,11 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - Always resolve i18n keys to actual strings before persisting to DB — storing raw keys like `'recalibration.stay_course'` instead of the Hebrew/English text means the DB contains untranslated data. (2026-04-07)
 - Date window helpers for "current week" and "previous week" must not overlap — `today - 0..6` and `today - 7..13` share day `-7`. Use non-overlapping ranges like `today - 1..7` and `today - 8..14`. (2026-04-07)
 
+## Derived Fields
+
+- When a field is derived (not user-entered), ensure derivation happens in ALL code paths that read the draft — not just the final save. The result screen previews TDEE from the draft _before_ `completeOnboarding` runs, so deriving `exerciseDaysPerWeek` only in `completeOnboarding` caused NaN on the preview. (2026-04-08)
+- Test files inside `app/` directory crash the app — expo-router treats them as routes and tries to execute `describe()` at runtime. Keep test files in `src/` or co-located outside the router. (2026-04-08)
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
