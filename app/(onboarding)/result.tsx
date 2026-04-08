@@ -231,7 +231,7 @@ export default function ResultScreen() {
 
         {/* TDEE animated counter */}
         <Text style={styles.sectionLabel}>{strings.calories}</Text>
-        <AnimatedCounter target={total} />
+        <AnimatedCounter target={nutrition.targetCalories} />
 
         {/* Macro cards */}
         <View style={styles.macroRow}>
