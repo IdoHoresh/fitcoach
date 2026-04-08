@@ -21,7 +21,26 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://kaddo.app\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://luko.app\")",
       "Bash(node -e ':*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach stash pop)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach diff -- app.json)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach show HEAD:app.json)",
+      "Bash(npx kill-port:*)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(emulator -list-avds)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach checkout -b fix/result-screen-calories)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach branch --show-current)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach add app/\\\\\\(onboarding\\\\\\)/result.tsx src/algorithms/result-screen.test.ts lessons.md REVIEW.md)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach diff --cached --stat)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach diff --cached)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach add .claude/pre-commit-checklist.md)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach push -u origin fix/result-screen-calories)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach stash)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach checkout main)",
+      "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach pull)",
+      "Bash(adb devices:*)",
+      "Read(//c/Program Files/Microsoft/jdk-17.0.18.8-hotspot//**)",
+      "Bash(export JAVA_HOME=\"/c/Program Files/Microsoft/jdk-17.0.18.8-hotspot\")"
     ]
   },
   "hooks": {

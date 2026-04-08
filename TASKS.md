@@ -447,3 +447,6 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Tab Redesign — 3 tabs RTL, greeting header, avatar, motivational pool (PR #12), 1,475 tests
 - [x] Onboarding Flow screens 1-7 — ProgressBar, OnboardingLayout, Welcome-TrainingDays (PR #13), 1,496 tests
 - [x] Onboarding Flow screens 8-11 — Activity, Exercise, Sleep, animated TDEE Result (PR #14), 1,512 tests
+- [x] Onboarding bug fixes — ProgressBar RTL, NumberInput blur/unmount (PR #15), 1,518 tests
+- [x] Calculating animation screen — 10s animated step checklist before results, RTL fix (PR #16), 1,518 tests
+- [x] Critical fix: display goal-adjusted calories instead of maintenance TDEE (PR #17), 1,538 tests
