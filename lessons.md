@@ -23,6 +23,10 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - Timer-based components (`setInterval`/`setTimeout` in long-press, polling, etc.) must clean up on unmount via `useEffect` return. Otherwise timers fire on unmounted components. (2026-04-08)
 - `I18nManager.forceRTL()` must be called at **module level** (outside components/effects), not inside `useEffect`. On Android, `forceRTL` requires an app restart — calling it inside `useEffect` is too late, the layout is already rendered LTR. Guard with `if (isRTL() && !I18nManager.isRTL)`. (2026-04-08)
 
+## UI ↔ Algorithm Wiring
+
+- **Always verify the displayed value matches the intended value.** When multiple similar numbers exist (TDEE maintenance vs goal-adjusted calories), the UI can wire the wrong one. Result screen showed `tdeeBreakdown.total` (maintenance) instead of `nutrition.targetCalories` (with deficit/surplus applied). Every user saw wrong calories. Write regression tests asserting `targetCalories !== total` for non-maintenance goals. (2026-04-08)
+
 ## Architecture Patterns
 
 - Pure functions for all algorithms (no side effects, easy to test)
