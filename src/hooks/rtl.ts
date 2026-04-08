@@ -1,6 +1,9 @@
-import { I18nManager } from 'react-native'
+/**
+ * RTL detection — delegates to i18n (single source of truth).
+ * Wrapped as a local function so tests can spy on it via jest.spyOn.
+ */
+import { isRTL as i18nIsRTL } from '../i18n'
 
-/** Returns true if the system layout direction is RTL (e.g., Hebrew). */
 export function isRTL(): boolean {
-  return I18nManager.isRTL
+  return i18nIsRTL()
 }

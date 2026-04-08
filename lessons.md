@@ -68,6 +68,16 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - When a field is derived (not user-entered), ensure derivation happens in ALL code paths that read the draft — not just the final save. The result screen previews TDEE from the draft _before_ `completeOnboarding` runs, so deriving `exerciseDaysPerWeek` only in `completeOnboarding` caused NaN on the preview. (2026-04-08)
 - Test files inside `app/` directory crash the app — expo-router treats them as routes and tries to execute `describe()` at runtime. Keep test files in `src/` or co-located outside the router. (2026-04-08)
 
+## QA Review Patterns (2026-04-09)
+
+- **Schema ↔ repository column drift is the #1 crash risk.** The `workout_plan` table was missing 5 columns the repository tried to INSERT. `CREATE TABLE IF NOT EXISTS` doesn't update existing tables — any schema change needs explicit ALTER TABLE migrations with version gates.
+- **TODO comments in logic paths ship as bugs.** `primaryMuscle: 'chest' // TODO` meant ALL exercises used chest for progression. If a TODO affects runtime behavior, fix it before merging — it's not a note, it's a defect.
+- **Duplicate utility functions diverge silently.** Two `isRTL()` functions existed — one checked the language setting, another checked `I18nManager.isRTL`. They could return different values. Single source of truth, re-export if needed for import convenience.
+- **Date parsing timezone traps.** `new Date('2026-04-09')` is UTC midnight. `.getDay()` converts to local timezone. In Israel (UTC+2/3) it's fine, but the pattern is a landmine. For "today's day of week", use `new Date().getDay()` directly.
+- **Test with fake timers when logic depends on "now".** Tests that hardcode a date for "today" break when run on different days. `jest.useFakeTimers({ now: fixedDate })` makes `new Date()` deterministic.
+- **Validation at boundaries is not enough — add guards at algorithm entry points.** Zod catches bad input at the UI layer, but algorithms called directly (from stores, tests, or future code) can receive NaN. Lightweight `RangeError` guards at the entry function catch this.
+- **Secure storage error messages should not include key names.** Logging which key failed exposes what sensitive data exists. Log the operation type only.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?

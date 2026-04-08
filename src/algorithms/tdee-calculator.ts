@@ -48,6 +48,7 @@ import {
   NEAT_STEP_BASELINE,
   OCCUPATION_NEAT,
   TEF_PERCENTAGE,
+  VALIDATION,
 } from '../data/constants'
 
 // ── BMR Calculations ────────────────────────────────────────────────
@@ -98,6 +99,22 @@ export function calculateBmr(
   sex: BiologicalSex,
   bodyFatPercent: number | null,
 ): number {
+  if (weightKg < VALIDATION.WEIGHT_KG.min || weightKg > VALIDATION.WEIGHT_KG.max) {
+    throw new RangeError(
+      `weightKg ${weightKg} outside valid range [${VALIDATION.WEIGHT_KG.min}-${VALIDATION.WEIGHT_KG.max}]`,
+    )
+  }
+  if (heightCm < VALIDATION.HEIGHT_CM.min || heightCm > VALIDATION.HEIGHT_CM.max) {
+    throw new RangeError(
+      `heightCm ${heightCm} outside valid range [${VALIDATION.HEIGHT_CM.min}-${VALIDATION.HEIGHT_CM.max}]`,
+    )
+  }
+  if (age < VALIDATION.AGE.min || age > VALIDATION.AGE.max) {
+    throw new RangeError(
+      `age ${age} outside valid range [${VALIDATION.AGE.min}-${VALIDATION.AGE.max}]`,
+    )
+  }
+
   if (bodyFatPercent !== null) {
     return calculateBmrKatchMcArdle(weightKg, bodyFatPercent)
   }

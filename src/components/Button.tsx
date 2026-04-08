@@ -87,7 +87,7 @@ export function Button({
       onPressOut={onPressOut}
       disabled={isDisabled}
       accessibilityRole="button"
-      accessibilityLabel={label}
+      accessibilityLabel={loading ? 'loading' : label}
       accessibilityState={{ disabled: isDisabled }}
       testID={testID}
       style={[

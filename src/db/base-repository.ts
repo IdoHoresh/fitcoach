@@ -78,7 +78,13 @@ export abstract class BaseRepository<T extends { id: string }> {
    */
   async findAll(orderBy?: string, direction: 'ASC' | 'DESC' = 'ASC'): Promise<T[]> {
     const db = getDatabase()
-    const orderClause = orderBy ? ` ORDER BY ${orderBy} ${direction}` : ''
+    let orderClause = ''
+    if (orderBy) {
+      if (!/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(orderBy)) {
+        throw new Error(`[BaseRepository] Invalid orderBy column name: ${orderBy}`)
+      }
+      orderClause = ` ORDER BY ${orderBy} ${direction}`
+    }
     return db.getAllAsync<T>(`SELECT * FROM ${this.tableName}${orderClause}`)
   }
 

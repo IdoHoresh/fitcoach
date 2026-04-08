@@ -7,7 +7,7 @@ import { fontSize, fontWeight } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 import { triggerHaptic } from '@/hooks/useHaptics'
 
-const SELECTED_BG = colors.primary + '26'
+const SELECTED_BG = colors.primaryTint
 
 type OptionLayout = 'grid' | 'list'
 

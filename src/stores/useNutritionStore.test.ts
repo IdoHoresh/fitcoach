@@ -858,13 +858,22 @@ describe('getRemainingMacros', () => {
 })
 
 describe('getMealPlanForToday', () => {
+  // Pin "now" to 2026-04-07T12:00:00 local time so new Date().getDay() is deterministic
+  const FAKE_NOW = new Date('2026-04-07T12:00:00')
+  const FAKE_DOW = FAKE_NOW.getDay() as DayOfWeek // Tuesday = 2
+
+  beforeEach(() => {
+    jest.useFakeTimers({ now: FAKE_NOW })
+  })
+
+  afterEach(() => {
+    jest.useRealTimers()
+  })
+
   it('should return todays meal plan day when plan exists', () => {
-    // Today is Monday (2026-04-07), getDay() returns 2 for Tuesday... actually
-    // todayISO returns '2026-04-07' which is a Tuesday in 2026, getDay() = 2
-    // But our mock day has dayOfWeek: 0, so let's add a day matching today
     const todayPlanDay: MealPlanDay = {
       ...MOCK_MEAL_PLAN_DAY,
-      dayOfWeek: new Date('2026-04-07').getDay() as DayOfWeek,
+      dayOfWeek: FAKE_DOW,
     }
     useNutritionStore.setState({
       activePlan: { ...MOCK_MEAL_PLAN, days: [todayPlanDay] },
@@ -873,7 +882,7 @@ describe('getMealPlanForToday', () => {
     const result = useNutritionStore.getState().getMealPlanForToday()
 
     expect(result).not.toBeNull()
-    expect(result!.dayOfWeek).toBe(new Date('2026-04-07').getDay())
+    expect(result!.dayOfWeek).toBe(FAKE_DOW)
   })
 
   it('should return null when no plan exists', () => {
@@ -881,7 +890,7 @@ describe('getMealPlanForToday', () => {
   })
 
   it('should return null when today has no scheduled meals', () => {
-    // 2026-04-07 = Tuesday = getDay() 2, so dayOfWeek 6 (Saturday) won't match
+    // FAKE_DOW is Tuesday (2), so Saturday (6) won't match
     useNutritionStore.setState({
       activePlan: { ...MOCK_MEAL_PLAN, days: [{ ...MOCK_MEAL_PLAN_DAY, dayOfWeek: 6 }] },
     })

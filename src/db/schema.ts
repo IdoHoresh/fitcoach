@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 4
+export const SCHEMA_VERSION = 5
 
 /**
  * All CREATE TABLE statements.
@@ -50,6 +50,11 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     split_type TEXT NOT NULL,
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
     is_active INTEGER NOT NULL DEFAULT 1,
+    weekly_schedule_json TEXT NOT NULL DEFAULT '[]',
+    mesocycle_week INTEGER NOT NULL DEFAULT 1,
+    total_mesocycle_weeks INTEGER NOT NULL DEFAULT 6,
+    reasoning TEXT NOT NULL DEFAULT '',
+    reasoning_he TEXT NOT NULL DEFAULT '',
     FOREIGN KEY (user_id) REFERENCES user_profile(id)
   )`,
 

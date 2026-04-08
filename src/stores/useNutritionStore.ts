@@ -539,7 +539,7 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
     const { activePlan } = get()
     if (!activePlan) return null
 
-    const todayDow = new Date(todayISO()).getDay() as DayOfWeek
+    const todayDow = new Date().getDay() as DayOfWeek
     return activePlan.days.find((d) => d.dayOfWeek === todayDow) ?? null
   },
 }))

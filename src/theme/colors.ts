@@ -8,6 +8,7 @@ export const colors = {
   primary: '#4F46E5', // Indigo — main CTA, active states
   primaryLight: '#818CF8', // Lighter indigo — backgrounds, hover
   primaryDark: '#3730A3', // Darker indigo — pressed states
+  primaryTint: '#4F46E526', // Indigo at 15% opacity — selected backgrounds
 
   // ── Semantic ──
   success: '#10B981', // Green — completed, on target

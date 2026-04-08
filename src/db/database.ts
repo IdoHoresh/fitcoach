@@ -53,7 +53,7 @@ export function getDatabase(): SQLite.SQLiteDatabase {
 }
 
 /**
- * Runs all CREATE TABLE statements.
+ * Runs all CREATE TABLE statements and version-gated ALTER migrations.
  * Uses IF NOT EXISTS so it's safe to run multiple times.
  */
 async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
@@ -71,11 +71,39 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
       await db.execAsync(statement)
     }
 
+    // Version-gated ALTER TABLE migrations for existing databases
+    if (currentVersion > 0 && currentVersion < 5) {
+      await migrateToV5(db)
+    }
+
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
   })
 
   console.log(`[Database] Migrated from v${currentVersion} to v${SCHEMA_VERSION}`)
+}
+
+/**
+ * v5: Add missing columns to workout_plan table.
+ * Uses a helper to skip columns that already exist (safe for fresh installs).
+ */
+async function migrateToV5(db: SQLite.SQLiteDatabase): Promise<void> {
+  const columns = await db.getAllAsync<{ name: string }>(`PRAGMA table_info(workout_plan)`)
+  const existing = new Set(columns.map((c) => c.name))
+
+  const additions: { col: string; def: string }[] = [
+    { col: 'weekly_schedule_json', def: "TEXT NOT NULL DEFAULT '[]'" },
+    { col: 'mesocycle_week', def: 'INTEGER NOT NULL DEFAULT 1' },
+    { col: 'total_mesocycle_weeks', def: 'INTEGER NOT NULL DEFAULT 6' },
+    { col: 'reasoning', def: "TEXT NOT NULL DEFAULT ''" },
+    { col: 'reasoning_he', def: "TEXT NOT NULL DEFAULT ''" },
+  ]
+
+  for (const { col, def } of additions) {
+    if (!existing.has(col)) {
+      await db.execAsync(`ALTER TABLE workout_plan ADD COLUMN ${col} ${def}`)
+    }
+  }
 }
 
 /**
