@@ -19,6 +19,8 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 ## Expo / React Native Gotchas
 
 - Always wrap `setState` calls inside `useAnimatedReaction` with `runOnJS(setter)(value)` — reanimated callbacks run on the UI thread. Direct `setState` works in Jest (mocked) but crashes on real devices. (2026-04-08)
+- RTL-sensitive CSS properties (`transformOrigin`, `textAlign`, directional padding/margin) must never be hardcoded — use `isRTL()` dynamically. Hardcoded `transformOrigin: 'left'` caused the ProgressBar to fill from the wrong direction in Hebrew. (2026-04-08)
+- Timer-based components (`setInterval`/`setTimeout` in long-press, polling, etc.) must clean up on unmount via `useEffect` return. Otherwise timers fire on unmounted components. (2026-04-08)
 
 ## Architecture Patterns
 

@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native'
 import Animated, { useAnimatedStyle, withSpring } from 'react-native-reanimated'
 import { colors } from '@/theme/colors'
 import { borderRadius } from '@/theme/spacing'
+import { isRTL } from '@/hooks/rtl'
 
 const BAR_HEIGHT = 4
 const SPRING_CONFIG = { damping: 15, stiffness: 100 }
@@ -28,7 +29,7 @@ export function ProgressBar({ current, total, testID }: ProgressBarProps) {
       accessibilityValue={{ min: 0, max: 100, now: Math.round(progress * 100) }}
     >
       <Animated.View
-        style={[styles.fill, animatedStyle]}
+        style={[styles.fill, { transformOrigin: isRTL() ? 'right' : 'left' }, animatedStyle]}
         testID={testID ? `${testID}-fill` : undefined}
       />
     </View>
@@ -47,6 +48,5 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: colors.primary,
     borderRadius: borderRadius.full,
-    transformOrigin: 'left',
   },
 })

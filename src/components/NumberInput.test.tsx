@@ -141,6 +141,21 @@ describe('NumberInput', () => {
       expect(defaultProps.onChangeValue).toHaveBeenCalledTimes(countAfterRelease)
     })
 
+    it('clears timers on unmount', () => {
+      render(<NumberInput {...defaultProps} />)
+      const btn = screen.getByTestId('weight-increment')
+
+      fireEvent(btn, 'pressIn')
+      const callCount = defaultProps.onChangeValue.mock.calls.length
+
+      // Unmount while timer is running
+      screen.unmount()
+
+      // Advancing timers should not fire more callbacks
+      act(() => jest.advanceTimersByTime(1000))
+      expect(defaultProps.onChangeValue).toHaveBeenCalledTimes(callCount)
+    })
+
     it('fires multiple decrements on long press', () => {
       render(<NumberInput {...defaultProps} value={100} />)
       const btn = screen.getByTestId('weight-decrement')
@@ -186,7 +201,31 @@ describe('NumberInput', () => {
       expect(defaultProps.onChangeValue).not.toHaveBeenCalled()
     })
 
-    it('exits editing on blur', () => {
+    it('saves edited value on blur', () => {
+      render(<NumberInput {...defaultProps} />)
+      fireEvent.press(screen.getByTestId('weight-value'))
+      fireEvent.changeText(screen.getByTestId('weight-edit'), '85')
+      fireEvent(screen.getByTestId('weight-edit'), 'blur')
+      expect(defaultProps.onChangeValue).toHaveBeenCalledWith(85)
+    })
+
+    it('clamps edited value on blur', () => {
+      render(<NumberInput {...defaultProps} />)
+      fireEvent.press(screen.getByTestId('weight-value'))
+      fireEvent.changeText(screen.getByTestId('weight-edit'), '999')
+      fireEvent(screen.getByTestId('weight-edit'), 'blur')
+      expect(defaultProps.onChangeValue).toHaveBeenCalledWith(200)
+    })
+
+    it('does not call onChangeValue on blur with invalid input', () => {
+      render(<NumberInput {...defaultProps} />)
+      fireEvent.press(screen.getByTestId('weight-value'))
+      fireEvent.changeText(screen.getByTestId('weight-edit'), 'abc')
+      fireEvent(screen.getByTestId('weight-edit'), 'blur')
+      expect(defaultProps.onChangeValue).not.toHaveBeenCalled()
+    })
+
+    it('exits editing mode on blur', () => {
       render(<NumberInput {...defaultProps} />)
       fireEvent.press(screen.getByTestId('weight-value'))
       expect(screen.getByTestId('weight-edit')).toBeTruthy()

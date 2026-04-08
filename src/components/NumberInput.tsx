@@ -1,9 +1,9 @@
-import React, { useState, useRef, useCallback } from 'react'
+import React, { useState, useRef, useCallback, useEffect } from 'react'
 import { View, Text, Pressable, TextInput as RNTextInput, StyleSheet } from 'react-native'
 import Animated from 'react-native-reanimated'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
-import { fontSize, fontWeight } from '@/theme/typography'
+import { fontSize, fontFamily } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 import { triggerHaptic } from '@/hooks/useHaptics'
 import { isRTL } from '@/hooks/rtl'
@@ -135,6 +135,12 @@ export function NumberInput({
     }
   }, [])
 
+  useEffect(() => {
+    return () => {
+      clearTimers()
+    }
+  }, [clearTimers])
+
   const startLongPress = useCallback(
     (action: () => void) => {
       clearTimers()
@@ -164,7 +170,7 @@ export function NumberInput({
     setIsEditing(true)
   }, [value])
 
-  const handleEditSubmit = useCallback(() => {
+  const commitEdit = useCallback(() => {
     const parsed = parseFloat(editText)
     if (!isNaN(parsed)) {
       const clamped = clamp(parsed, min, max)
@@ -173,9 +179,8 @@ export function NumberInput({
     setIsEditing(false)
   }, [editText, min, max, onChangeValue])
 
-  const handleEditBlur = useCallback(() => {
-    setIsEditing(false)
-  }, [])
+  const handleEditSubmit = commitEdit
+  const handleEditBlur = commitEdit
 
   const valueLabel = unit ? `${value} ${unit}` : String(value)
 
@@ -243,7 +248,7 @@ const styles = StyleSheet.create({
   label: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
-    fontWeight: fontWeight.medium,
+    fontFamily: fontFamily.medium,
   },
   row: {
     alignItems: 'center',
@@ -262,7 +267,7 @@ const styles = StyleSheet.create({
   stepperText: {
     color: colors.textPrimary,
     fontSize: fontSize.xl,
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
   },
   stepperTextDisabled: {
     color: colors.textMuted,
@@ -281,19 +286,19 @@ const styles = StyleSheet.create({
   value: {
     color: colors.textPrimary,
     fontSize: fontSize.hero,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     textAlign: 'center',
   },
   unit: {
     color: colors.textSecondary,
     fontSize: fontSize.md,
-    fontWeight: fontWeight.medium,
+    fontFamily: fontFamily.medium,
   },
   valueInput: {
     flex: 1,
     color: colors.textPrimary,
     fontSize: fontSize.hero,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     backgroundColor: colors.surface,
     borderRadius: borderRadius.md,
     borderWidth: 1,
@@ -304,5 +309,6 @@ const styles = StyleSheet.create({
   error: {
     color: colors.error,
     fontSize: fontSize.xs,
+    fontFamily: fontFamily.regular,
   },
 })

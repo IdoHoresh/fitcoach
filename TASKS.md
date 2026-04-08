@@ -14,9 +14,9 @@
 
 ### ⚡ Start Now (Parallel with coding)
 
-- [ ] Reserve social media handles (Instagram: @fitcoach_il, TikTok: @fitcoach_il)
+- [ ] Reserve social media handles (Instagram: @gibor_app, TikTok: @gibor_app)
 - [ ] 💰 Apple Developer account ($99/year) — takes a few days to approve
-- [ ] Register domain (fitcoach.co.il or fitcoach-app.com)
+- [x] Register domain — gibor.app ✅
 - [ ] Set up simple landing page with email capture (Carrd $19/year or free Vercel)
 - [ ] Join 5 Israeli fitness Facebook groups — start participating genuinely, don't promote
   - כושר ואימונים
@@ -30,39 +30,72 @@
 
 ## Phase 2: Navigation & App Shell
 
-- [ ] Root layout (app/\_layout.tsx — database init, conditional routing)
-- [ ] Onboarding stack navigator (app/(onboarding)/\_layout.tsx)
-- [ ] Tab navigator (app/(tabs)/\_layout.tsx — 5 tabs with icons)
-- [ ] "Is onboarded?" routing (onboarding → tabs transition)
-- [ ] Splash screen (branded, fast load)
+- [x] Root layout (app/\_layout.tsx — database init, conditional routing)
+- [x] Onboarding stack navigator (app/(onboarding)/\_layout.tsx)
+- [x] Tab navigator (app/(tabs)/\_layout.tsx — 5 tabs with icons)
+- [x] "Is onboarded?" routing (onboarding → tabs transition)
+- [x] Splash screen (branded, fast load)
+- [x] Tab redesign — 3 tabs RTL (Nutrition | Workout | Home), greeting header, avatar (PR #12), 1,475 tests
 
 ---
 
 ## Phase 3: Shared Components
 
-- [ ] Button component (primary, secondary, outline variants)
-- [ ] Input fields (text, number, with validation errors)
-- [ ] Card component (for workout/nutrition display)
-- [ ] Picker/selector (for goals, equipment, experience)
-- [ ] Checkbox list (for equipment selection)
+### Tier 1: Foundation (PR #10 — Done)
+
+- [x] RTL-aware layout wrappers (RTLWrapper + isRTL helper)
+- [x] Button component (primary, secondary, outline, ghost variants + 3 sizes)
+- [x] TextInput component (text input with validation errors, RTL support)
+- [x] Card component (default, elevated, outlined variants)
+- [x] Shared hooks (useAnimatedPress, useHaptics)
+- [x] Infrastructure (react-native-reanimated, expo-haptics, jest component testing)
+
+### Tier 2: Onboarding-critical (PR #11 — Done)
+
+- [x] NumberInput (numeric stepper with +/- buttons, tap-to-edit, long-press)
+- [x] OptionSelector (single-choice cards/chips, grid + list layouts)
+- [x] CheckboxList (multi-choice with checkmarks, select all/clear all)
+- [x] i18n component strings (he + en)
+
+### Tier 3: Post-onboarding (PR #12 — Next)
+
 - [ ] Progress bar / macro ring chart (test RTL directionality early — charts look weird mirrored)
-- [ ] Workout timer / rest countdown
-- [ ] RTL-aware layout wrappers (I18nManager.isRTL — ensure icons flip: back arrows, progress bars)
 - [ ] Streak counter component (workouts this week/month — retention hook)
+- [ ] Workout timer / rest countdown
 
 ---
 
-## Phase 4: Onboarding Flow (7-8 screens)
+## Phase 4: Onboarding Flow (11 screens)
 
-- [ ] Welcome screen (app intro, get started CTA)
-- [ ] Goal picker (muscle_gain / fat_loss / maintenance)
-- [ ] Body stats form (height, weight, age, sex, body fat)
-- [ ] Experience level picker (beginner / intermediate)
-- [ ] Equipment checklist (gym / home / bodyweight)
-- [ ] Training days picker (which days, how many)
-- [ ] Lifestyle questions (occupation, steps, sleep, activity)
-- [ ] Review & confirm screen (summary → completeOnboarding)
-- [ ] Health disclaimer in onboarding footer (Apple scrutinizes health apps — use "suggested" not "prescribed")
+### PR #13 — Done
+
+- [x] ProgressBar + OnboardingLayout shared components (21 tests)
+- [x] Welcome screen (pulse CTA animation)
+- [x] Goal picker (muscle_gain / fat_loss / maintenance)
+- [x] Body stats form (height, weight, age, sex)
+- [x] Body fat (optional, with skip)
+- [x] Experience level picker (beginner / intermediate)
+- [x] Equipment checklist (conditional: full_gym / home / bodyweight)
+- [x] Training days picker (min 2, max 6)
+
+### PR #14 — Done
+
+- [x] Activity screen (occupation + after-work activity + daily steps)
+- [x] Exercise habits screen (days/week, duration, type, intensity)
+- [x] Sleep screen (hours + warning if < 6)
+- [x] Review & confirm screen (animated TDEE reveal, macros, completeOnboarding)
+- [x] Health disclaimer in onboarding footer
+- [x] Removed Claude AI Code Review CI workflow (redundant with local /review)
+
+### Future Improvements (Backlog)
+
+- [ ] Split Activity screen into 2 screens (occupation + activity | daily steps)
+- [ ] Add input summary screen before result screen
+- [ ] Persist onboarding draft to AsyncStorage (resume if user exits mid-flow)
+- [ ] Add edit capability from result screen (navigate back to specific screen)
+- [ ] Improve body fat skip messaging (explain that an estimate will be used)
+- [ ] Add excessive sleep warning (>9 hours)
+- [ ] ProgressBar text label option ("Step X of Y")
 
 ---
 
@@ -98,7 +131,7 @@
 
 ### App Store Listing — Hebrew Primary
 
-- [ ] App name (30 chars): "FitCoach - מאמן כושר אישי"
+- [ ] App name (30 chars): "Gibor - מאמן כושר אישי"
 - [ ] Subtitle (30 chars): "תוכנית אימונים מבוססת מדע"
 - [ ] Keywords (100 chars, Hebrew): אימון,כושר,תזונה,שריר,דיאטה,חדר כושר,משקולות,תרגילים,בריאות,מאקרו,חיטוב,מסה,אפליקציית כושר
 - [ ] Description — Hebrew (first 3 lines = most important, visible before "more" tap)
@@ -167,7 +200,7 @@
 - [ ] Privacy policy page (local-only data, no cloud sync, no tracking)
 - [ ] Terms of service page
 - [ ] Health/fitness disclaimer (app is not medical advice)
-- [ ] Support email set up (support@fitcoach... or dedicated Gmail)
+- [ ] Support email set up (support@gibor.app)
 
 ---
 
@@ -407,3 +440,10 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] 1,223 tests passing
 - [x] Nutrition algorithms — macro distributor, meal plan generator, weekly recalibration (PR #6)
 - [x] 1,312 tests passing
+- [x] Nutrition store (useNutritionStore — last Zustand store) — PR #7, 1,348 tests
+- [x] Navigation & App Shell — root layout, onboarding stack, tab navigator (PR #9), 1,348 tests
+- [x] Shared Components Foundation — RTLWrapper, Button, TextInput, Card, hooks (PR #10), 1,395 tests
+- [x] Onboarding Components — NumberInput, OptionSelector, CheckboxList (PR #11), 1,460 tests
+- [x] Tab Redesign — 3 tabs RTL, greeting header, avatar, motivational pool (PR #12), 1,475 tests
+- [x] Onboarding Flow screens 1-7 — ProgressBar, OnboardingLayout, Welcome-TrainingDays (PR #13), 1,496 tests
+- [x] Onboarding Flow screens 8-11 — Activity, Exercise, Sleep, animated TDEE Result (PR #14), 1,512 tests
