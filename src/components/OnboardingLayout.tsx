@@ -7,7 +7,7 @@ import { ProgressBar } from './ProgressBar'
 import { Button } from './Button'
 import { t } from '@/i18n'
 
-const TOTAL_STEPS = 10 // Screens 2-11 (Welcome has no progress bar)
+const TOTAL_STEPS = 11 // Screens 2-12 (Welcome has no progress bar)
 const ENTRANCE_DURATION = 400
 const STAGGER_DELAY = 80
 

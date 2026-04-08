@@ -31,7 +31,7 @@ export const en: TranslationKeys = {
 
   onboarding: {
     welcome: {
-      title: 'Welcome to FitCoach',
+      title: 'Welcome to Gibor',
       subtitle: "We'll build your personal plan in 2 minutes",
       cta: "Let's go",
     },
@@ -134,6 +134,14 @@ export const en: TranslationKeys = {
       title: 'How many hours of sleep per night?',
       hours: 'hours',
       lowWarning: 'Less than 6 hours hurts recovery and results. Worth improving!',
+    },
+    calculating: {
+      title: 'Building Your Plan',
+      step1: 'Calculating base metabolism...',
+      step2: 'Analyzing daily movement...',
+      step3: 'Adding workout burn...',
+      step4: 'Factoring food digestion...',
+      step5: 'Building your plan...',
     },
     result: {
       title: 'Your Plan is Ready!',

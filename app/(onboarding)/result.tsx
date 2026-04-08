@@ -12,7 +12,7 @@ import Animated, {
   useAnimatedStyle,
   Easing,
 } from 'react-native-reanimated'
-import { colors, fontSize, fontWeight, spacing, borderRadius } from '@/theme'
+import { colors, fontSize, fontFamily, spacing, borderRadius } from '@/theme'
 import { t } from '@/i18n'
 import { useUserStore } from '@/stores/useUserStore'
 import {
@@ -191,7 +191,7 @@ export default function ResultScreen() {
   if (!results) {
     return (
       <OnboardingLayout
-        step={10}
+        step={11}
         onNext={() => router.back()}
         nextLabel={t().common.back}
         testID="result-screen"
@@ -211,7 +211,7 @@ export default function ResultScreen() {
 
   return (
     <OnboardingLayout
-      step={10}
+      step={11}
       onNext={handleStart}
       nextLabel={strings.cta}
       nextDisabled={isLoading}
@@ -307,21 +307,21 @@ export default function ResultScreen() {
 const styles = StyleSheet.create({
   title: {
     fontSize: fontSize.xxl,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     color: colors.textPrimary,
     textAlign: 'center',
     marginBottom: spacing.md,
   },
   splitText: {
     fontSize: fontSize.lg,
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
     color: colors.primary,
     textAlign: 'center',
     marginBottom: spacing.lg,
   },
   sectionLabel: {
     fontSize: fontSize.md,
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
     color: colors.textSecondary,
     textAlign: 'center',
     marginTop: spacing.lg,
@@ -335,11 +335,12 @@ const styles = StyleSheet.create({
   },
   counterValue: {
     fontSize: fontSize.display,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     color: colors.textPrimary,
   },
   counterUnit: {
     fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
     color: colors.textSecondary,
     marginTop: spacing.xs,
   },
@@ -360,17 +361,18 @@ const styles = StyleSheet.create({
   },
   macroName: {
     fontSize: fontSize.xs,
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
     color: colors.textSecondary,
     marginBottom: spacing.xs,
   },
   macroGrams: {
     fontSize: fontSize.lg,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     color: colors.textPrimary,
   },
   macroPercent: {
     fontSize: fontSize.xs,
+    fontFamily: fontFamily.regular,
     color: colors.textSecondary,
     marginTop: spacing.xs,
   },
@@ -388,11 +390,12 @@ const styles = StyleSheet.create({
   },
   barLabel: {
     fontSize: fontSize.sm,
+    fontFamily: fontFamily.regular,
     color: colors.textSecondary,
   },
   barValue: {
     fontSize: fontSize.sm,
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
     color: colors.textPrimary,
   },
   barTrack: {
@@ -410,6 +413,7 @@ const styles = StyleSheet.create({
   // Disclaimer
   disclaimer: {
     fontSize: fontSize.xs,
+    fontFamily: fontFamily.regular,
     color: colors.textSecondary,
     textAlign: 'center',
     marginTop: spacing.xl,
@@ -419,6 +423,7 @@ const styles = StyleSheet.create({
   // Error
   errorText: {
     fontSize: fontSize.sm,
+    fontFamily: fontFamily.regular,
     color: colors.error,
     textAlign: 'center',
     marginTop: spacing.md,

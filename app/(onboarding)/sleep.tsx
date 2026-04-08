@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
-import { colors, fontSize, fontWeight, spacing, borderRadius } from '@/theme'
+import { colors, fontSize, fontFamily, spacing, borderRadius } from '@/theme'
 import { t } from '@/i18n'
 import { useUserStore } from '@/stores/useUserStore'
 import { VALIDATION, SLEEP } from '@/data/constants'
@@ -28,7 +28,7 @@ export default function SleepScreen() {
         sleepHoursPerNight: sleepHours,
       } as typeof draft.lifestyle,
     })
-    router.push('/(onboarding)/result')
+    router.push('/(onboarding)/calculating')
   }
 
   return (
@@ -68,7 +68,7 @@ export default function SleepScreen() {
 const styles = StyleSheet.create({
   title: {
     fontSize: fontSize.xxl,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     color: colors.textPrimary,
     textAlign: 'center',
     marginBottom: spacing.xl,
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
   warningText: {
     flex: 1,
     fontSize: fontSize.sm,
+    fontFamily: fontFamily.regular,
     color: colors.warning,
     lineHeight: fontSize.sm * 1.5,
   },

@@ -21,6 +21,7 @@ export default function OnboardingLayout() {
       <Stack.Screen name="activity" />
       <Stack.Screen name="exercise" />
       <Stack.Screen name="sleep" />
+      <Stack.Screen name="calculating" options={{ gestureEnabled: false }} />
       <Stack.Screen name="result" options={{ gestureEnabled: false }} />
     </Stack>
   )
