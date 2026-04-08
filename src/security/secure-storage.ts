@@ -17,7 +17,9 @@ const MAX_SECURE_VALUE_LENGTH = 2048
  */
 export async function setSecureItem(key: string, value: string): Promise<boolean> {
   if (value.length > MAX_SECURE_VALUE_LENGTH) {
-    console.warn(`[SecureStorage] Value too long for key "${key}" (${value.length} chars)`)
+    console.warn(
+      `[SecureStorage] Value too long (${value.length} chars, max ${MAX_SECURE_VALUE_LENGTH})`,
+    )
     return false
   }
 
@@ -25,7 +27,7 @@ export async function setSecureItem(key: string, value: string): Promise<boolean
     await SecureStore.setItemAsync(key, value)
     return true
   } catch (error) {
-    console.error(`[SecureStorage] Failed to store key "${key}":`, error)
+    console.error('[SecureStorage] Failed to store value:', error)
     return false
   }
 }
@@ -38,7 +40,7 @@ export async function getSecureItem(key: string): Promise<string | null> {
   try {
     return await SecureStore.getItemAsync(key)
   } catch (error) {
-    console.error(`[SecureStorage] Failed to retrieve key "${key}":`, error)
+    console.error('[SecureStorage] Failed to retrieve value:', error)
     return null
   }
 }
@@ -52,7 +54,7 @@ export async function deleteSecureItem(key: string): Promise<boolean> {
     await SecureStore.deleteItemAsync(key)
     return true
   } catch (error) {
-    console.error(`[SecureStorage] Failed to delete key "${key}":`, error)
+    console.error('[SecureStorage] Failed to delete value:', error)
     return false
   }
 }

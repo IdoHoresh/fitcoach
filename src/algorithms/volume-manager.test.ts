@@ -82,6 +82,17 @@ describe('calculateWeeklyVolume', () => {
       const deload = calculateWeeklyVolume('chest', totalWeeks, totalWeeks, 'intermediate')
       expect(deload.targetSets).toBeLessThan(peak.targetSets)
     })
+
+    it('mv_zero_muscles_get_zero_deload_sets', () => {
+      // Glutes and abs have MV=0 — scientifically valid since they get
+      // indirect work from compounds. Deload = 0 + round(0 * 0.5) = 0 sets.
+      const glutes = calculateWeeklyVolume('glutes', totalWeeks, totalWeeks, 'beginner')
+      const abs = calculateWeeklyVolume('abs', totalWeeks, totalWeeks, 'beginner')
+      expect(glutes.targetSets).toBe(0)
+      expect(abs.targetSets).toBe(0)
+      expect(glutes.isDeload).toBe(true)
+      expect(abs.isDeload).toBe(true)
+    })
   })
 
   describe('different_muscles', () => {

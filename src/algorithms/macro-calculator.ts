@@ -29,6 +29,7 @@ import {
   FAT_TARGETS,
   PROTEIN_TARGETS,
   PROTEIN_WEIGHT_ADJUSTMENT,
+  VALIDATION,
 } from '../data/constants'
 
 // ── Adjusted Body Weight ────────────────────────────────────────────
@@ -133,6 +134,26 @@ export function calculateNutritionTargets(
   bodyFatPercent: number | null,
   goal: TrainingGoal,
 ): NutritionTargets {
+  if (weightKg < VALIDATION.WEIGHT_KG.min || weightKg > VALIDATION.WEIGHT_KG.max) {
+    throw new RangeError(
+      `weightKg ${weightKg} outside valid range [${VALIDATION.WEIGHT_KG.min}-${VALIDATION.WEIGHT_KG.max}]`,
+    )
+  }
+  if (heightCm < VALIDATION.HEIGHT_CM.min || heightCm > VALIDATION.HEIGHT_CM.max) {
+    throw new RangeError(
+      `heightCm ${heightCm} outside valid range [${VALIDATION.HEIGHT_CM.min}-${VALIDATION.HEIGHT_CM.max}]`,
+    )
+  }
+  if (
+    bodyFatPercent !== null &&
+    (bodyFatPercent < VALIDATION.BODY_FAT_PERCENT.min ||
+      bodyFatPercent > VALIDATION.BODY_FAT_PERCENT.max)
+  ) {
+    throw new RangeError(
+      `bodyFatPercent ${bodyFatPercent} outside valid range [${VALIDATION.BODY_FAT_PERCENT.min}-${VALIDATION.BODY_FAT_PERCENT.max}]`,
+    )
+  }
+
   const targetCalories = calculateTargetCalories(tdee, goal)
   const adjustedWeight = calculateAdjustedWeight(weightKg, heightCm, bodyFatPercent)
 

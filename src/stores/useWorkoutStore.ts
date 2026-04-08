@@ -32,6 +32,7 @@ import type {
 } from '../types'
 import type { GeneratedWorkoutDay, GeneratedWorkoutPlan } from '../algorithms/workout-generator'
 import { generateWorkoutPlan } from '../algorithms/workout-generator'
+import { EXERCISE_MAP } from '../data/exercises'
 import { getProgressionAdvice as getProgressionAdviceAlgo } from '../algorithms/progressive-overload'
 import { nowISO, todayISO, workoutRepository } from '../db'
 import { useUserStore } from './useUserStore'
@@ -113,10 +114,11 @@ function findPrescription(
     if (!day.template) continue
     const prescription = day.template.exercises.find((e) => e.exerciseId === exerciseId)
     if (prescription) {
+      const exercise = EXERCISE_MAP.get(exerciseId)
       return {
         minReps: prescription.minReps,
         maxReps: prescription.maxReps,
-        primaryMuscle: 'chest', // TODO: look up from EXERCISE_MAP when store has access
+        primaryMuscle: exercise?.primaryMuscle ?? 'chest',
       }
     }
   }
