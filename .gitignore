@@ -54,6 +54,9 @@ yarn-error.*
 # Testing
 coverage/
 
+# Screenshots (debug/test)
+screenshots/
+
 # Design docs (not for production)
 docs/plans/
 
