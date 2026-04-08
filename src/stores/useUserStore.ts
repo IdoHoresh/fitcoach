@@ -117,10 +117,22 @@ export const useUserStore = create<UserStore>((set, get) => ({
       return
     }
 
+    // Derive exerciseDaysPerWeek from selected training days
+    const resolvedDraft = {
+      ...draft,
+      lifestyle: {
+        ...draft.lifestyle,
+        exerciseDaysPerWeek: draft.trainingDays!.length,
+      },
+    }
+
     set({ isLoading: true, error: null })
 
     try {
-      const saved = await userRepository.saveProfile(draft)
+      // validateDraft() confirmed all fields exist; spread loses that narrowing
+      const saved = await userRepository.saveProfile(
+        resolvedDraft as Omit<UserProfile, 'id' | 'createdAt' | 'updatedAt'>,
+      )
       const tdeeBreakdown = calculateTdeeFromProfile(saved)
 
       set({

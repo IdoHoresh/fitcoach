@@ -7,11 +7,6 @@ import { useUserStore } from '@/stores/useUserStore'
 import { OnboardingLayout, OnboardingTitle, OnboardingContent, OptionSelector } from '@/components'
 import type { ExerciseType, ExerciseIntensity, SessionDuration } from '@/types'
 
-const DAYS_OPTIONS = Array.from({ length: 7 }, (_, i) => ({
-  id: String(i + 1),
-  label: String(i + 1),
-}))
-
 const DURATION_VALUES: SessionDuration[] = [30, 45, 60, 75, 90]
 
 const TYPE_KEYS = ['strength', 'cardio', 'both'] as const
@@ -23,9 +18,6 @@ export default function ExerciseScreen() {
   const updateDraft = useUserStore((s) => s.updateDraft)
   const draft = useUserStore((s) => s.draft)
 
-  const [daysPerWeek, setDaysPerWeek] = useState<string>(
-    draft.lifestyle?.exerciseDaysPerWeek?.toString() ?? '',
-  )
   const [duration, setDuration] = useState<string>(
     draft.lifestyle?.sessionDurationMinutes?.toString() ?? '',
   )
@@ -47,13 +39,12 @@ export default function ExerciseScreen() {
     label: strings[key] as string,
   }))
 
-  const isValid = daysPerWeek !== '' && duration !== '' && exerciseType !== '' && intensity !== ''
+  const isValid = duration !== '' && exerciseType !== '' && intensity !== ''
 
   const handleNext = () => {
     updateDraft({
       lifestyle: {
         ...draft.lifestyle,
-        exerciseDaysPerWeek: Number(daysPerWeek),
         sessionDurationMinutes: Number(duration) as SessionDuration,
         exerciseType: exerciseType as ExerciseType,
         exerciseIntensity: intensity as ExerciseIntensity,
@@ -74,14 +65,7 @@ export default function ExerciseScreen() {
         <Text style={styles.title}>{strings.title}</Text>
       </OnboardingTitle>
       <OnboardingContent>
-        <Text style={styles.sectionLabel}>{strings.daysPerWeek}</Text>
-        <OptionSelector
-          options={DAYS_OPTIONS}
-          selected={daysPerWeek}
-          onSelect={setDaysPerWeek}
-          layout="grid"
-          testID="days-per-week"
-        />
+        <Text style={styles.subtitle}>{strings.subtitle}</Text>
 
         <Text style={styles.sectionLabel}>{strings.sessionLength}</Text>
         <OptionSelector
@@ -121,6 +105,12 @@ const styles = StyleSheet.create({
     color: colors.textPrimary,
     textAlign: 'center',
     marginBottom: spacing.xl,
+  },
+  subtitle: {
+    fontSize: fontSize.sm,
+    color: colors.textSecondary,
+    textAlign: 'center',
+    marginBottom: spacing.lg,
   },
   sectionLabel: {
     fontSize: fontSize.md,

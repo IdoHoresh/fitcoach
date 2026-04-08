@@ -45,7 +45,12 @@ function computeResults(draft: Partial<UserProfile>) {
     draft.sex!,
     draft.bodyFatPercent ?? null,
   )
-  const tdeeBreakdown = calculateTdeeBreakdown(bmr, draft.weightKg!, draft.lifestyle!)
+  // Derive exerciseDaysPerWeek from training days selection
+  const lifestyle = {
+    ...draft.lifestyle!,
+    exerciseDaysPerWeek: draft.trainingDays!.length,
+  }
+  const tdeeBreakdown = calculateTdeeBreakdown(bmr, draft.weightKg!, lifestyle)
   const nutrition = calculateNutritionTargets(
     bmr,
     tdeeBreakdown.total,

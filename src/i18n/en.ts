@@ -117,8 +117,8 @@ export const en: TranslationKeys = {
       activeDesc: 'Kids, physical hobbies, gardening',
     },
     exercise: {
-      title: 'Tell me about your workouts',
-      daysPerWeek: 'How many days per week?',
+      title: 'Training Preferences',
+      subtitle: "We know when — now let's set how you train",
       sessionLength: 'How long per session?',
       minutes: 'minutes',
       type: 'What type of exercise?',
