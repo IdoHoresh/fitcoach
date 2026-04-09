@@ -197,6 +197,17 @@ export const en: TranslationKeys = {
       'Compare yourself only to who you were yesterday',
       'The path to change runs through your habits',
     ],
+    dashboard: {
+      logMeal: 'Log Meal',
+      todaysWorkout: "Today's Workout",
+      todaysMacros: "Today's Nutrition",
+      noPlanYet: "You don't have a workout plan yet",
+      noMealPlanYet: 'Nutrition targets not set yet',
+      restDay: 'Rest day — no workout scheduled',
+      workoutSummary: '{count} exercises · ~{minutes} min',
+      moreExercises: '+{count} more',
+      setsReps: '{sets}×{minReps}-{maxReps}',
+    },
   },
 
   workout: {

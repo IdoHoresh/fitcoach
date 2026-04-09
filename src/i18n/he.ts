@@ -199,6 +199,17 @@ export const he = {
       'אל תשווה את עצמך לאחרים, רק לעצמך של אתמול',
       'הדרך לשינוי עוברת דרך ההרגלים',
     ],
+    dashboard: {
+      logMeal: 'הוסף ארוחה',
+      todaysWorkout: 'האימון של היום',
+      todaysMacros: 'תזונה היום',
+      noPlanYet: 'עדיין אין לך תוכנית אימון',
+      noMealPlanYet: 'עדיין לא הגדרנו יעדי תזונה',
+      restDay: 'יום מנוחה — אין אימון מתוכנן להיום',
+      workoutSummary: '{count} תרגילים · ~{minutes} דק׳',
+      moreExercises: '+{count} נוספים',
+      setsReps: '{sets}×{minReps}-{maxReps}',
+    },
   },
 
   // ── Workout ──

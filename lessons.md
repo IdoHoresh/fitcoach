@@ -87,6 +87,12 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Validation at boundaries is not enough — add guards at algorithm entry points.** Zod catches bad input at the UI layer, but algorithms called directly (from stores, tests, or future code) can receive NaN. Lightweight `RangeError` guards at the entry function catch this.
 - **Secure storage error messages should not include key names.** Logging which key failed exposes what sensitive data exists. Log the operation type only.
 
+## Home Dashboard (2026-04-09)
+
+- **No throwing lookups in render paths.** `getExerciseById(id)` throws on missing — fine in algorithms (dev error) but catastrophic in a React render tree: one stale exerciseId in a saved plan crashes the whole Home screen. In components, use `EXERCISE_MAP.get(id)` with a graceful fallback (raw id, placeholder label). Reserve throwing variants for data-layer code where a miss is genuinely unrecoverable.
+- **`mesocycle.currentWeek` is the _in-progress_ week, not a completed-streak counter.** Surfacing it directly as a "streak" shows "1 week" on Day 1 of Week 1 before the user has finished anything. Subtract 1 (floored at 0), or add a dedicated `getCompletedStreakWeeks()` selector when stricter semantics are needed.
+- **Component tests that import a Zustand store transitively pull in `expo-sqlite`.** Even if the component never calls a DB method, `@/stores/useWorkoutStore` → `@/db` → `expo-sqlite` runs at import time and explodes under jest. Mock `@/db` (and transitive deps like `@/stores/useUserStore`) at the top of each component test file. `jest.mock` calls are hoisted, so regular `import` statements can stay at the top of the file and `import/first` is happy.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
