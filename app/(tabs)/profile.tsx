@@ -3,7 +3,10 @@ import { Ionicons } from '@expo/vector-icons'
 import { colors, spacing, fontSize } from '@/theme'
 import { t } from '@/i18n'
 import { Button } from '@/components/Button'
-import { resetApp } from '@/dev/resetApp'
+// Relative import: `src/dev/` was added after Metro's initial cache build
+// and this is a single dev-only consumer — a relative path is simpler than
+// asking contributors to `expo start --clear` on first pull.
+import { resetApp } from '../../src/dev/resetApp'
 
 /** Dev-only: deletes the SQLite DB and reloads the bundle after confirmation. */
 function handleDevReset() {
