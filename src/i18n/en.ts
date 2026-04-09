@@ -43,6 +43,8 @@ export const en: TranslationKeys = {
     },
     bodyStats: {
       title: 'Body Stats',
+      name: "What's your first name?",
+      namePlaceholder: 'Your first name',
       height: 'Height',
       weight: 'Weight',
       age: 'Age',

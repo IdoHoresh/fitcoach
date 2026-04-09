@@ -9,6 +9,12 @@ import { MESOCYCLE, VALIDATION } from '../data/constants'
 
 // ── Primitive validators ────────────────────────────────────────────
 
+const nameSchema = z
+  .string()
+  .trim()
+  .min(VALIDATION.NAME_LENGTH.min, 'Name is required')
+  .max(VALIDATION.NAME_LENGTH.max, `Name must be at most ${VALIDATION.NAME_LENGTH.max} characters`)
+
 const heightSchema = z
   .number()
   .min(VALIDATION.HEIGHT_CM.min, `Height must be at least ${VALIDATION.HEIGHT_CM.min}cm`)
@@ -126,6 +132,7 @@ export const lifestyleProfileSchema = z.object({
 
 /** Validates complete user profile from onboarding */
 export const userProfileSchema = z.object({
+  name: nameSchema,
   heightCm: heightSchema,
   weightKg: weightSchema,
   age: ageSchema,

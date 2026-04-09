@@ -78,6 +78,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion > 0 && currentVersion < 6) {
       await migrateToV6(db)
     }
+    if (currentVersion > 0 && currentVersion < 7) {
+      await migrateToV7(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -121,6 +124,19 @@ async function migrateToV6(db: SQLite.SQLiteDatabase): Promise<void> {
     await db.execAsync(
       `ALTER TABLE user_profile ADD COLUMN coach_marks_completed INTEGER NOT NULL DEFAULT 0`,
     )
+  }
+}
+
+/**
+ * v7: Add name column to user_profile.
+ * Stores the user's first name for personalized greetings (HomeHeader).
+ */
+async function migrateToV7(db: SQLite.SQLiteDatabase): Promise<void> {
+  const columns = await db.getAllAsync<{ name: string }>(`PRAGMA table_info(user_profile)`)
+  const existing = new Set(columns.map((c) => c.name))
+
+  if (!existing.has('name')) {
+    await db.execAsync(`ALTER TABLE user_profile ADD COLUMN name TEXT NOT NULL DEFAULT ''`)
   }
 }
 

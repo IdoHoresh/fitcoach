@@ -21,6 +21,7 @@ jest.mock('../db', () => ({
 // ── Test fixtures ──────────────────────────────────────────────────
 
 const COMPLETE_DRAFT: Omit<UserProfile, 'id' | 'createdAt' | 'updatedAt'> = {
+  name: 'דני',
   heightCm: 189,
   weightKg: 113,
   age: 30,

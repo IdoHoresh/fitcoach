@@ -22,6 +22,7 @@ interface UserProfileRow {
   id: string
   created_at: string
   updated_at: string
+  name: string
   height_cm: number
   weight_kg: number
   age: number
@@ -65,6 +66,7 @@ function rowToProfile(row: UserProfileRow): UserProfile {
     id: row.id,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
+    name: row.name,
     heightCm: row.height_cm,
     weightKg: row.weight_kg,
     age: row.age,
@@ -129,6 +131,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
     if (existing) {
       await db.runAsync(
         `UPDATE user_profile SET
+          name = ?,
           height_cm = ?, weight_kg = ?, age = ?, sex = ?,
           body_fat_percent = ?, goal = ?, experience = ?,
           training_days = ?, training_location = ?, available_equipment = ?,
@@ -139,6 +142,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
           updated_at = ?
         WHERE id = ?`,
         [
+          data.name,
           data.heightCm,
           data.weightKg,
           data.age,
@@ -169,7 +173,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
     const id = generateId()
     await db.runAsync(
       `INSERT INTO user_profile (
-        id, height_cm, weight_kg, age, sex,
+        id, name, height_cm, weight_kg, age, sex,
         body_fat_percent, goal, experience,
         training_days, training_location, available_equipment,
         occupation, daily_steps, after_work_activity,
@@ -177,9 +181,10 @@ class UserRepository extends BaseRepository<UserProfileRow> {
         session_duration_minutes, exercise_intensity,
         sleep_hours_per_night,
         created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         id,
+        data.name,
         data.heightCm,
         data.weightKg,
         data.age,

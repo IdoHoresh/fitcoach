@@ -355,6 +355,7 @@ export const WARMUP_SETS = [
 // ── Validation Boundaries ───────────────────────────────────────────
 
 export const VALIDATION = {
+  NAME_LENGTH: { min: 1, max: 50 },
   HEIGHT_CM: { min: 100, max: 250 },
   WEIGHT_KG: { min: 30, max: 300 },
   AGE: { min: 14, max: 100 },

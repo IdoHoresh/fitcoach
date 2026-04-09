@@ -1,4 +1,9 @@
-import { workoutLogSchema, mesocycleStateSchema, validateInput } from './validation'
+import {
+  workoutLogSchema,
+  mesocycleStateSchema,
+  userProfileSchema,
+  validateInput,
+} from './validation'
 
 // ── Test fixtures ──────────────────────────────────────────────────
 
@@ -24,6 +29,32 @@ const VALID_WORKOUT_LOG = {
   completedAt: '2026-04-07T10:15:00Z',
   exercises: [VALID_EXERCISE],
   durationMinutes: 75,
+}
+
+const VALID_USER_PROFILE = {
+  name: 'Dan',
+  heightCm: 175,
+  weightKg: 75,
+  age: 28,
+  sex: 'male' as const,
+  bodyFatPercent: null,
+  goal: 'muscle_gain' as const,
+  experience: 'beginner' as const,
+  trainingDays: [0, 2, 4],
+  equipment: {
+    location: 'full_gym' as const,
+    availableEquipment: ['barbell', 'dumbbells'] as const,
+  },
+  lifestyle: {
+    occupation: 'desk' as const,
+    dailySteps: 6000,
+    afterWorkActivity: 'moderate' as const,
+    exerciseDaysPerWeek: 3,
+    exerciseType: 'strength' as const,
+    sessionDurationMinutes: 60,
+    exerciseIntensity: 'moderate' as const,
+    sleepHoursPerNight: 7.5,
+  },
 }
 
 const VALID_MESOCYCLE_STATE = {
@@ -120,6 +151,54 @@ describe('workoutLogSchema', () => {
       const result = validateInput(workoutLogSchema, log)
       expect(result.success).toBe(true)
     }
+  })
+})
+
+// ── userProfileSchema (name field) ─────────────────────────────────
+
+describe('userProfileSchema name field', () => {
+  it('accepts a valid profile with a Latin name', () => {
+    const result = validateInput(userProfileSchema, VALID_USER_PROFILE)
+    expect(result.success).toBe(true)
+    expect(result.data!.name).toBe('Dan')
+  })
+
+  it('accepts a valid Hebrew name', () => {
+    const profile = { ...VALID_USER_PROFILE, name: 'דני' }
+    const result = validateInput(userProfileSchema, profile)
+    expect(result.success).toBe(true)
+    expect(result.data!.name).toBe('דני')
+  })
+
+  it('trims surrounding whitespace', () => {
+    const profile = { ...VALID_USER_PROFILE, name: '  Dan  ' }
+    const result = validateInput(userProfileSchema, profile)
+    expect(result.success).toBe(true)
+    expect(result.data!.name).toBe('Dan')
+  })
+
+  it('rejects empty name', () => {
+    const profile = { ...VALID_USER_PROFILE, name: '' }
+    const result = validateInput(userProfileSchema, profile)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects whitespace-only name', () => {
+    const profile = { ...VALID_USER_PROFILE, name: '   ' }
+    const result = validateInput(userProfileSchema, profile)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects name longer than 50 characters', () => {
+    const profile = { ...VALID_USER_PROFILE, name: 'a'.repeat(51) }
+    const result = validateInput(userProfileSchema, profile)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects missing name field', () => {
+    const { name: _, ...noName } = VALID_USER_PROFILE
+    const result = validateInput(userProfileSchema, noName)
+    expect(result.success).toBe(false)
   })
 })
 

@@ -43,6 +43,8 @@ export const he = {
     },
     bodyStats: {
       title: 'נתוני גוף',
+      name: 'איך לקרוא לך?',
+      namePlaceholder: 'השם הפרטי שלך',
       height: 'גובה',
       weight: 'משקל',
       age: 'גיל',

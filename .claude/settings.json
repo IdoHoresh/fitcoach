@@ -40,7 +40,16 @@
       "Bash(git -C /c/Users/user/Desktop/Projects/fitcoach pull)",
       "Bash(adb devices:*)",
       "Read(//c/Program Files/Microsoft/jdk-17.0.18.8-hotspot//**)",
-      "Bash(export JAVA_HOME=\"/c/Program Files/Microsoft/jdk-17.0.18.8-hotspot\")"
+      "Bash(export JAVA_HOME=\"/c/Program Files/Microsoft/jdk-17.0.18.8-hotspot\")",
+      "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")",
+      "Bash(grep -r \"Animated\\\\|reanimated\" c:/Users/user/Desktop/Projects/fitcoach/src/components/*.tsx)",
+      "Bash(find c:/Users/user/Desktop/Projects/fitcoach/src/components -name \"*.tsx\" -exec grep -l \"onLayout\\\\|measureInWindow\\\\|ref\" {} \\\\;)",
+      "mcp__claude_ai_Notion__notion-search",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "Bash(wc -l src/components/home/*.tsx src/utils/buildTodaysPlan.ts src/utils/buildTodaysPlan.test.ts)",
+      "mcp__claude_ai_Notion__notion-get-teams",
+      "Bash(xargs grep:*)",
+      "Bash(grep -n \"SCHEMA_VERSION\\\\|ALTER TABLE\\\\|migrate\" src/db/*.ts)"
     ]
   },
   "hooks": {
