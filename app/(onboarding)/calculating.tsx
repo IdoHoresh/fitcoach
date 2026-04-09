@@ -172,10 +172,20 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginTop: spacing.xl,
     position: 'relative',
+    // RTL fix: mirror the entire track horizontally. The fill is pinned to
+    // `left: 0` and animates its `width` via reanimated's `useAnimatedStyle`.
+    // React Native is supposed to auto-swap `left` ↔ `right` in RTL, but
+    // that swap does NOT apply to style arrays that include a reanimated
+    // animated-style output — the UI-thread setter bypasses the JS-side
+    // layout interpolator that handles the swap. Result: the fill would
+    // grow left→right in both languages, which looks backwards in Hebrew.
+    //
+    // `transform: scaleX(-1)` is unaffected by RTL auto-swap and flips the
+    // entire track visually. The fill still grows left→right in raw layout,
+    // but the viewer sees right→left. The track has no text children, so
+    // there's nothing else to worry about mirroring.
+    transform: isRTL() ? [{ scaleX: -1 }] : undefined,
   },
-  // Fill uses `left: 0` — React Native auto-swaps to `right: 0` when
-  // I18nManager.isRTL is true, so it grows from the correct edge in both
-  // directions. Do NOT add an RTL conditional.
   progressFill: {
     position: 'absolute',
     top: 0,

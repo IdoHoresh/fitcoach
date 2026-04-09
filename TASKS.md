@@ -101,6 +101,7 @@
 
 ## Phase 5: Main Screens
 
+- [x] Post-onboarding coach marks tab tour (PR #24) — 3-step tour highlighting Home/Workout/Nutrition tab icons on first entry, dev-only reset button in Profile, 1,595 tests
 - [ ] Home screen (welcome, TDEE/macros summary, today's workout preview, streak counter)
 - [ ] Workout screen (daily workout display, exercise list with sets/reps)
 - [ ] Active workout UI (guided session — current exercise, log sets, rest timer)
@@ -453,3 +454,4 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Tier 3 shared components — MacroRing, StreakCounter, RestTimer + calculateStreak algorithm (PR #21), 1,570 tests
 - [x] RTL rendering bugs across onboarding + remove invalid app.json plugins (PR #22), 1,524 tests + Node 24 dev server fix
 - [x] Test flake fix — useWorkoutStore week-advance test was using real Date.now vs mocked todayISO (PR #21/#22)
+- [x] Post-onboarding coach marks tab tour (PR #24) — 3-step tour, SQLite v6 migration, dev reset button, 1,595 tests

@@ -411,6 +411,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surfaceElevated,
     borderRadius: borderRadius.sm,
     overflow: 'hidden',
+    // RTL fix: same gotcha as calculating.tsx — reanimated's animated
+    // `width` output on the fill bypasses RN's RTL auto-alignment, so the
+    // bar would grow left→right in both languages. Mirror the entire
+    // track so the fill appears to grow from the correct edge in RTL.
+    // Track has no text children, so mirroring is safe.
+    transform: isRTL() ? [{ scaleX: -1 }] : undefined,
   },
   barFill: {
     height: '100%',
