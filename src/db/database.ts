@@ -75,6 +75,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion > 0 && currentVersion < 5) {
       await migrateToV5(db)
     }
+    if (currentVersion > 0 && currentVersion < 6) {
+      await migrateToV6(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -103,6 +106,21 @@ async function migrateToV5(db: SQLite.SQLiteDatabase): Promise<void> {
     if (!existing.has(col)) {
       await db.execAsync(`ALTER TABLE workout_plan ADD COLUMN ${col} ${def}`)
     }
+  }
+}
+
+/**
+ * v6: Add coach_marks_completed column to user_profile.
+ * Tracks whether the user has dismissed the post-onboarding tour.
+ */
+async function migrateToV6(db: SQLite.SQLiteDatabase): Promise<void> {
+  const columns = await db.getAllAsync<{ name: string }>(`PRAGMA table_info(user_profile)`)
+  const existing = new Set(columns.map((c) => c.name))
+
+  if (!existing.has('coach_marks_completed')) {
+    await db.execAsync(
+      `ALTER TABLE user_profile ADD COLUMN coach_marks_completed INTEGER NOT NULL DEFAULT 0`,
+    )
   }
 }
 
