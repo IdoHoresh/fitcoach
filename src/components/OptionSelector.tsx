@@ -6,6 +6,7 @@ import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 import { triggerHaptic } from '@/hooks/useHaptics'
+import { isRTL } from '@/hooks/rtl'
 
 const SELECTED_BG = colors.primaryTint
 
@@ -26,16 +27,21 @@ interface OptionSelectorProps {
   testID?: string
 }
 
-const LAYOUT_STYLES: Record<OptionLayout, ViewStyle> = {
-  grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: spacing.sm,
-  },
-  list: {
+// Grid uses explicit row-reverse in RTL instead of relying on RN's auto-flip,
+// which is unreliable for flexWrap: 'wrap' layouts in Expo Go.
+// Evaluated per render so it can react to language changes.
+function getLayoutStyle(layout: OptionLayout): ViewStyle {
+  if (layout === 'grid') {
+    return {
+      flexDirection: isRTL() ? 'row-reverse' : 'row',
+      flexWrap: 'wrap',
+      gap: spacing.sm,
+    }
+  }
+  return {
     flexDirection: 'column',
     gap: spacing.sm,
-  },
+  }
 }
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable)
@@ -98,7 +104,7 @@ export function OptionSelector({
 
   return (
     <View
-      style={LAYOUT_STYLES[layout]}
+      style={getLayoutStyle(layout)}
       testID={testID ? `${testID}-container` : 'selector-container'}
     >
       {options.map((option) => (

@@ -14,6 +14,7 @@ import { colors, spacing, fontSize, fontFamily, borderRadius } from '@/theme'
 import { t } from '@/i18n'
 import { OnboardingLayout, OnboardingTitle, OnboardingContent } from '@/components'
 import { RTLWrapper } from '@/components/shared/RTLWrapper'
+import { isRTL } from '@/hooks/rtl'
 
 const STEP_DURATION = 2000
 const TOTAL_DURATION = 10000
@@ -58,10 +59,10 @@ function CalculatingStep({
       testID={`calculating-step-${index}`}
     >
       <RTLWrapper style={styles.stepRow}>
+        <Text style={[styles.stepLabel, { color: textColor }]}>{label}</Text>
         <Animated.Text style={[styles.stepIcon, { color: iconColor }, dotStyle]}>
           {icon}
         </Animated.Text>
-        <Text style={[styles.stepLabel, { color: textColor }]}>{label}</Text>
       </RTLWrapper>
     </Animated.View>
   )
@@ -162,6 +163,7 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     fontFamily: fontFamily.medium,
     flex: 1,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   progressTrack: {
     height: 6,
@@ -169,9 +171,16 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.full,
     overflow: 'hidden',
     marginTop: spacing.xl,
+    position: 'relative',
   },
+  // Fill uses `left: 0` — React Native auto-swaps to `right: 0` when
+  // I18nManager.isRTL is true, so it grows from the correct edge in both
+  // directions. Do NOT add an RTL conditional.
   progressFill: {
-    height: '100%',
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
     backgroundColor: colors.primary,
     borderRadius: borderRadius.full,
   },

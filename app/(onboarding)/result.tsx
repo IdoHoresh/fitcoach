@@ -14,6 +14,7 @@ import Animated, {
 } from 'react-native-reanimated'
 import { colors, fontSize, fontFamily, spacing, borderRadius } from '@/theme'
 import { t } from '@/i18n'
+import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
 import {
   calculateBmr,
@@ -153,7 +154,7 @@ function MacroCard({
   return (
     <Animated.View
       entering={FadeInUp.delay(delay).duration(400)}
-      style={[styles.macroCard, { borderLeftColor: color }]}
+      style={[styles.macroCard, { [isRTL() ? 'borderRightColor' : 'borderLeftColor']: color }]}
     >
       <Text style={styles.macroName}>{name}</Text>
       <Text style={styles.macroGrams}>
@@ -352,7 +353,7 @@ const styles = StyleSheet.create({
 
   // Macro cards
   macroRow: {
-    flexDirection: 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
     gap: spacing.sm,
     marginTop: spacing.md,
   },
@@ -360,7 +361,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.surfaceElevated,
     borderRadius: borderRadius.lg,
-    borderLeftWidth: 3,
+    ...(isRTL() ? { borderRightWidth: 3 } : { borderLeftWidth: 3 }),
     padding: spacing.md,
     alignItems: 'center',
   },
@@ -390,18 +391,20 @@ const styles = StyleSheet.create({
     gap: spacing.xs,
   },
   barLabelRow: {
-    flexDirection: 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
     justifyContent: 'space-between',
   },
   barLabel: {
     fontSize: fontSize.sm,
     fontFamily: fontFamily.regular,
     color: colors.textSecondary,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   barValue: {
     fontSize: fontSize.sm,
     fontFamily: fontFamily.semibold,
     color: colors.textPrimary,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   barTrack: {
     height: 8,

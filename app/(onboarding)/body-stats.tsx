@@ -3,6 +3,7 @@ import { Text, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { colors, fontSize, fontWeight, spacing } from '@/theme'
 import { t } from '@/i18n'
+import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
 import { VALIDATION } from '@/data/constants'
 import {
@@ -121,5 +122,6 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.medium,
     color: colors.textSecondary,
     marginTop: spacing.md,
+    textAlign: isRTL() ? 'right' : 'left',
   },
 })

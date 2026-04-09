@@ -74,10 +74,22 @@ describe('OptionSelector', () => {
   // ── Layout ──
 
   describe('layout', () => {
-    it('grid layout uses flexWrap row', () => {
+    afterEach(() => {
+      jest.restoreAllMocks()
+    })
+
+    it('grid layout uses row direction in LTR', () => {
+      jest.spyOn(rtlModule, 'isRTL').mockReturnValue(false)
       render(<OptionSelector {...defaultProps} layout="grid" />)
       const container = screen.getByTestId('goal-container')
       expect(container).toHaveStyle({ flexDirection: 'row', flexWrap: 'wrap' })
+    })
+
+    it('grid layout uses row-reverse in RTL', () => {
+      jest.spyOn(rtlModule, 'isRTL').mockReturnValue(true)
+      render(<OptionSelector {...defaultProps} layout="grid" />)
+      const container = screen.getByTestId('goal-container')
+      expect(container).toHaveStyle({ flexDirection: 'row-reverse', flexWrap: 'wrap' })
     })
 
     it('list layout uses column direction', () => {

@@ -7,6 +7,7 @@ import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import { getGreetingKey, getRandomMotivation } from '@/utils/greeting'
+import { isRTL } from '@/hooks/rtl'
 
 const AVATAR_SIZE = 36
 
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
   header: {
-    flexDirection: 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: spacing.lg,
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: spacing.md,
+    marginStart: spacing.md,
   },
   avatarText: {
     color: colors.textPrimary,
