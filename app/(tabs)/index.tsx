@@ -1,45 +1,113 @@
-import { useState } from 'react'
-import { View, Text, Pressable, StyleSheet } from 'react-native'
+import { View, ScrollView, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { colors } from '@/theme/colors'
-import { spacing, borderRadius } from '@/theme/spacing'
-import { fontSize, fontWeight } from '@/theme/typography'
-import { t } from '@/i18n'
-import { getGreetingKey, getRandomMotivation } from '@/utils/greeting'
-import { isRTL } from '@/hooks/rtl'
+import { spacing } from '@/theme/spacing'
+import { Card } from '@/components/Card'
+import { HomeHeader } from '@/components/home/HomeHeader'
+import { MacroGauge } from '@/components/home/MacroGauge'
+import { MacroLegend } from '@/components/home/MacroLegend'
+import { TodaysPlanList } from '@/components/home/TodaysPlanList'
+import { WeekdayStreakStrip } from '@/components/home/WeekdayStreakStrip'
+import { useNutritionStore } from '@/stores/useNutritionStore'
+import { useWorkoutStore } from '@/stores/useWorkoutStore'
+import type { DayOfWeek } from '@/types/user'
 
-const AVATAR_SIZE = 36
+// Fallback weekly workout target for users who haven't generated a plan
+// yet — 3 sessions/week is the minimum effective training frequency from
+// Schoenfeld 2016 (the lower bound of "2+ sessions per muscle group").
+const DEFAULT_WEEKLY_WORKOUT_GOAL = 3
 
 export default function HomeScreen() {
   const router = useRouter()
   const insets = useSafeAreaInsets()
-  const [motivation] = useState(() => getRandomMotivation())
 
-  const hour = new Date().getHours()
-  const greetingKey = getGreetingKey(hour)
-  const greetingTemplate = t().home.greetings[greetingKey]
-  // TODO: get real user name from store once onboarding is built
-  const userName: string = '?'
-  const greeting = greetingTemplate.replace('{name}', userName)
-  const initial = userName === '?' ? '?' : userName.charAt(0).toUpperCase()
+  // ── Nutrition store: gauge + legend props ──
+  const activePlan = useNutritionStore((s) => s.activePlan)
+  const dailySummary = useNutritionStore((s) => s.dailySummary)
+
+  const consumedCalories = dailySummary?.totalCalories ?? 0
+  const goalCalories = activePlan?.targetCalories ?? 0
+
+  const protein = {
+    current: dailySummary?.totalProtein ?? 0,
+    goal: activePlan?.targetProtein ?? 0,
+  }
+  const carbs = {
+    current: dailySummary?.totalCarbs ?? 0,
+    goal: activePlan?.targetCarbs ?? 0,
+  }
+  const fat = {
+    current: dailySummary?.totalFat ?? 0,
+    goal: activePlan?.targetFat ?? 0,
+  }
+
+  // ── Workout store: streak strip props ──
+  const mesocycle = useWorkoutStore((s) => s.mesocycle)
+  const recentLogs = useWorkoutStore((s) => s.recentLogs)
+
+  // Filter completed workouts to "this week" using mesocycle.weekStartDate.
+  // Each completed log contributes its day-of-week to the strip.
+  const weekStart = mesocycle?.weekStartDate ?? null
+  const completedThisWeekLogs = weekStart
+    ? recentLogs.filter((log) => log.date >= weekStart && log.completedAt !== null)
+    : []
+  const completedDaysOfWeek: DayOfWeek[] = completedThisWeekLogs.map(
+    (log) => new Date(log.date).getDay() as DayOfWeek,
+  )
+
+  // Weekly goal: count training days in the active plan, fall back to the default.
+  const plan = useWorkoutStore((s) => s.plan)
+  const weeklyGoal = plan
+    ? plan.weeklySchedule.filter((d) => d.template !== null).length
+    : DEFAULT_WEEKLY_WORKOUT_GOAL
+
+  const todayDayOfWeek = new Date().getDay() as DayOfWeek
+
+  // Routing handlers — passed into TodaysPlanList so it stays
+  // expo-router-agnostic and easy to unit-test.
+  const goToProfile = () => router.push('/(tabs)/profile')
+  const goToNutrition = () => router.push('/(tabs)/nutrition')
+  const goToWorkout = () => router.push('/(tabs)/workout')
+  // Ghost rows route to the onboarding flow's first screen so a fresh-install
+  // user can set up their plan from anywhere they tap on the dashboard.
+  const goToOnboarding = () => router.push('/(onboarding)/welcome')
 
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
-      <View style={styles.header}>
-        <View style={styles.greetingContainer}>
-          <Text style={styles.greeting}>{greeting}</Text>
-          <Text style={styles.motivation}>{motivation}</Text>
-        </View>
-        <Pressable
-          onPress={() => router.push('/(tabs)/profile')}
-          accessibilityRole="button"
-          accessibilityLabel={t().tabs.profile}
-          style={styles.avatar}
-        >
-          <Text style={styles.avatarText}>{initial}</Text>
-        </Pressable>
-      </View>
+      <HomeHeader onAvatarPress={goToProfile} testID="home-header" />
+
+      <ScrollView
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        <Card>
+          <MacroGauge
+            consumedCalories={consumedCalories}
+            goalCalories={goalCalories}
+            testID="home-gauge"
+          />
+          <View style={styles.legendSpacer} />
+          <MacroLegend protein={protein} carbs={carbs} fat={fat} testID="home-legend" />
+        </Card>
+
+        <TodaysPlanList
+          onMealPress={goToNutrition}
+          onWorkoutPress={goToWorkout}
+          onOnboardingPress={goToOnboarding}
+          testID="home-plan"
+        />
+
+        <WeekdayStreakStrip
+          weekNumber={mesocycle?.currentWeek ?? null}
+          completedThisWeek={completedThisWeekLogs.length}
+          weeklyGoal={weeklyGoal}
+          completedDaysOfWeek={completedDaysOfWeek}
+          todayDayOfWeek={todayDayOfWeek}
+          testID="home-streak"
+        />
+      </ScrollView>
     </View>
   )
 }
@@ -49,38 +117,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-  header: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
-  },
-  greetingContainer: {
+  scroll: {
     flex: 1,
-    gap: spacing.xs,
   },
-  greeting: {
-    color: colors.textPrimary,
-    fontSize: fontSize.xl,
-    fontWeight: fontWeight.bold,
+  scrollContent: {
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.md,
+    paddingBottom: spacing.xl,
+    gap: spacing.lg,
   },
-  motivation: {
-    color: colors.textSecondary,
-    fontSize: fontSize.sm,
-  },
-  avatar: {
-    width: AVATAR_SIZE,
-    height: AVATAR_SIZE,
-    borderRadius: borderRadius.full,
-    backgroundColor: colors.primary,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginStart: spacing.md,
-  },
-  avatarText: {
-    color: colors.textPrimary,
-    fontSize: fontSize.sm,
-    fontWeight: fontWeight.bold,
+  legendSpacer: {
+    height: spacing.md,
   },
 })
