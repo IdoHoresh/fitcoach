@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { colors, fontSize, fontWeight, spacing } from '@/theme'
 import { t } from '@/i18n'
+import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
 import { VALIDATION } from '@/data/constants'
 import {
@@ -176,6 +177,7 @@ const styles = StyleSheet.create({
     color: colors.textPrimary,
     marginTop: spacing.xl,
     marginBottom: spacing.xs,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   sectionSubtitle: {
     fontSize: fontSize.sm,

@@ -516,17 +516,20 @@ describe('checkWeekAdvance', () => {
   })
 
   it('advances when 7 days have elapsed since week start', async () => {
-    // Set weekStartDate to 8 days ago
-    const eightDaysAgo = new Date(Date.now() - 8 * 86400000).toISOString().split('T')[0]
+    // `todayISO()` is mocked to return '2026-04-07' (see top of file).
+    // Use a weekStartDate 8 days before THAT, not before real Date.now(),
+    // otherwise the expiry math runs against a mismatched reference and
+    // the 7-day threshold is never crossed.
+    const eightDaysBeforeMockedToday = '2026-03-30'
     useWorkoutStore.setState({
       mesocycle: {
         id: 'meso-1',
         planId: 'plan-1',
-        startDate: eightDaysAgo,
+        startDate: eightDaysBeforeMockedToday,
         currentWeek: 1,
         totalWeeks: 6,
         isDeloadWeek: false,
-        weekStartDate: eightDaysAgo,
+        weekStartDate: eightDaysBeforeMockedToday,
       },
     })
 
