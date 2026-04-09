@@ -6,6 +6,9 @@ export { NumberInput } from './NumberInput'
 export { OptionSelector } from './OptionSelector'
 export { CheckboxList } from './CheckboxList'
 export { ProgressBar } from './ProgressBar'
+export { MacroRing } from './MacroRing'
+export { StreakCounter } from './StreakCounter'
+export { RestTimer } from './RestTimer'
 export {
   OnboardingLayout,
   OnboardingTitle,

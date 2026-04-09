@@ -62,6 +62,9 @@ export {
   selectTemplate,
 } from './meal-plan-generator'
 
+// Streak calculation
+export { calculateStreak } from './streak'
+
 // Weekly recalibration
 export {
   calculateCalorieAdjustment,
