@@ -46,5 +46,18 @@ export function isRTL(): boolean {
   return currentLanguage === 'he'
 }
 
+/**
+ * Picks the value matching the active language from an (he, en) pair.
+ *
+ * Used for per-entity locale strings that live on data objects
+ * (e.g. exercise.nameHe / nameEn, workoutTemplate.nameHe / nameEn)
+ * rather than in the top-level translations map. Keeps the call-site
+ * terse and avoids sprinkling `getLanguage() === 'he' ? ... : ...`
+ * ternaries across components.
+ */
+export function pickLocale<T>(he: T, en: T): T {
+  return currentLanguage === 'he' ? he : en
+}
+
 export { he, en }
 export type { TranslationKeys } from './he'

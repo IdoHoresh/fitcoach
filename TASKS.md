@@ -102,7 +102,8 @@
 ## Phase 5: Main Screens
 
 - [x] Post-onboarding coach marks tab tour (PR #24) — 3-step tour highlighting Home/Workout/Nutrition tab icons on first entry, dev-only reset button in Profile, 1,595 tests
-- [ ] Home screen (welcome, TDEE/macros summary, today's workout preview, streak counter)
+- [x] Home dashboard review lessons port (PR #27) — 3 lessons from closed PR #26 review ported to lessons.md + REVIEW.md (throwing lookups in render, currentWeek streak semantics, mocking @/db in component tests)
+- [ ] Home screen v2 — "Today's plan" dashboard (spec: `docs/specs/2026-04-09-home-tab-v2.md`) — half-circle macro gauge + today's plan checklist with inline "Next" CTA + weekday streak strip. Supersedes closed PR #26 (card-based approach rejected after competitive research on Hevy/MacroFactor/Fitbod/WHOOP + Gemini mock pivot).
 - [ ] Workout screen (daily workout display, exercise list with sets/reps)
 - [ ] Active workout UI (guided session — current exercise, log sets, rest timer)
 - [ ] Nutrition screen (daily macro targets, food log, meal tracking)
