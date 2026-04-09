@@ -104,8 +104,8 @@
 - [x] Post-onboarding coach marks tab tour (PR #24) — 3-step tour highlighting Home/Workout/Nutrition tab icons on first entry, dev-only reset button in Profile, 1,595 tests
 - [x] Home dashboard review lessons port (PR #27) — 3 lessons from closed PR #26 review ported to lessons.md + REVIEW.md (throwing lookups in render, currentWeek streak semantics, mocking @/db in component tests)
 - [x] Home screen v2 — "Today's plan" dashboard (PR #28) — half-circle macro gauge + today's plan checklist with inline "Next" CTA + weekday streak strip. Supersedes closed PR #26. 6 new components + pure `buildTodaysPlan` utility (24 unit tests) + 4 dev-only `__DEV__` buttons on Profile for testing without a production food-logging UI. 1,680 tests passing (+85 vs main baseline). Spec: `docs/specs/2026-04-09-home-tab-v2.md`
+- [x] Add `name` field to UserProfile + onboarding (PR #29) — required string persisted via SQLite v7 migration (`ALTER TABLE … DEFAULT ''`), captured on body-stats screen as first field, HomeHeader now renders "בוקר טוב, {name}" with graceful `greetingNoName` fallback for the pre-load render. Zod bounds `[1, 50]`, trimmed. 10 new tests (7 validation + 3 HomeHeader). 1,690 tests passing.
 - [ ] Remove dev-only buttons from Profile tab (cleanup after Nutrition + Workout tabs ship)
-- [ ] Add `name` field to UserProfile + onboarding step (so HomeHeader can show "ערב טוב, עידו" instead of name-less greeting)
 - [ ] Workout screen (daily workout display, exercise list with sets/reps)
 - [ ] Active workout UI (guided session — current exercise, log sets, rest timer)
 - [ ] Nutrition screen (daily macro targets, food log, meal tracking)
