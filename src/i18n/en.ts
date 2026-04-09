@@ -307,6 +307,26 @@ export const en: TranslationKeys = {
       reset: 'Reset',
       done: 'Done!',
     },
+    coachMarks: {
+      skip: 'Skip',
+      next: 'Next',
+      done: 'Got it',
+      stepSeparator: 'of',
+      tabs: {
+        home: {
+          title: 'Your home',
+          body: 'Daily status, progress, and everything that matters — in one place.',
+        },
+        workout: {
+          title: 'Workout',
+          body: 'Your personal plan, set tracking, and smart rests between sets.',
+        },
+        nutrition: {
+          title: 'Nutrition',
+          body: 'Quick meal logging, macros and calories tuned to your goal.',
+        },
+      },
+    },
   },
 
   errors: {

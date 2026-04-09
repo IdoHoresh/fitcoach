@@ -93,6 +93,28 @@ class UserRepository extends BaseRepository<UserProfileRow> {
   }
 
   /**
+   * Reads the post-onboarding coach marks completion flag.
+   * Lives on the user_profile row (single-row table).
+   * Returns false if no profile exists yet.
+   */
+  async getCoachMarksCompleted(): Promise<boolean> {
+    const db = getDatabase()
+    const row = await db.getFirstAsync<{ coach_marks_completed: number }>(
+      'SELECT coach_marks_completed FROM user_profile LIMIT 1',
+    )
+    return row?.coach_marks_completed === 1
+  }
+
+  /**
+   * Sets the coach marks completion flag on the (single) user_profile row.
+   * Stored as INTEGER 0/1 to match SQLite booleans.
+   */
+  async setCoachMarksCompleted(value: boolean): Promise<void> {
+    const db = getDatabase()
+    await db.runAsync('UPDATE user_profile SET coach_marks_completed = ?', [value ? 1 : 0])
+  }
+
+  /**
    * Creates or updates the user profile (upsert).
    * Only one profile exists at a time.
    */

@@ -26,6 +26,12 @@ interface UserStore {
   profile: UserProfile | null
   tdeeBreakdown: TdeeBreakdown | null
   isOnboarded: boolean
+  /**
+   * True once the user has completed (or skipped) the post-onboarding
+   * coach marks tour. Persisted in SQLite via UserRepository.
+   * Stays false after completeOnboarding so the tour runs immediately.
+   */
+  coachMarksCompleted: boolean
   isLoading: boolean
   error: string | null
 
@@ -38,6 +44,7 @@ interface UserStore {
   completeOnboarding: () => Promise<void>
   loadProfile: () => Promise<void>
   updateProfile: (fields: Partial<UserProfile>) => Promise<void>
+  markCoachMarksComplete: () => Promise<void>
 }
 
 // ── Required Draft Fields ──────────────────────────────────────────
@@ -94,6 +101,7 @@ export const useUserStore = create<UserStore>((set, get) => ({
   profile: null,
   tdeeBreakdown: null,
   isOnboarded: false,
+  coachMarksCompleted: false,
   isLoading: false,
   error: null,
   draft: {},
@@ -155,21 +163,46 @@ export const useUserStore = create<UserStore>((set, get) => ({
       const profile = await userRepository.getProfile()
 
       if (!profile) {
-        set({ profile: null, tdeeBreakdown: null, isOnboarded: false })
+        set({
+          profile: null,
+          tdeeBreakdown: null,
+          isOnboarded: false,
+          coachMarksCompleted: false,
+        })
         return
       }
 
       const tdeeBreakdown = calculateTdeeFromProfile(profile)
+      const coachMarksCompleted = await userRepository.getCoachMarksCompleted()
 
       set({
         profile,
         tdeeBreakdown,
         isOnboarded: true,
+        coachMarksCompleted,
       })
     } catch (err) {
       set({ error: err instanceof Error ? err.message : 'Failed to load profile' })
     } finally {
       set({ isLoading: false })
+    }
+  },
+
+  /**
+   * Marks the post-onboarding coach marks tour as complete.
+   *
+   * Optimistic update: state flips to `true` first so the overlay closes
+   * immediately. Persistence to SQLite happens after — if it fails, we still
+   * keep the in-memory flag true (the tour should never re-open mid-session)
+   * but record the error so the next loadProfile will reflect actual DB state.
+   */
+  markCoachMarksComplete: async () => {
+    set({ coachMarksCompleted: true, error: null })
+
+    try {
+      await userRepository.setCoachMarksCompleted(true)
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to save coach marks state' })
     }
   },
 

@@ -6,11 +6,15 @@ import type { UserProfile } from '../types'
 
 const mockGetProfile = jest.fn()
 const mockSaveProfile = jest.fn()
+const mockGetCoachMarksCompleted = jest.fn()
+const mockSetCoachMarksCompleted = jest.fn()
 
 jest.mock('../db', () => ({
   userRepository: {
     getProfile: () => mockGetProfile(),
     saveProfile: (data: unknown) => mockSaveProfile(data),
+    getCoachMarksCompleted: () => mockGetCoachMarksCompleted(),
+    setCoachMarksCompleted: (value: boolean) => mockSetCoachMarksCompleted(value),
   },
 }))
 
@@ -56,11 +60,15 @@ beforeEach(() => {
     profile: null,
     tdeeBreakdown: null,
     isOnboarded: false,
+    coachMarksCompleted: false,
     isLoading: false,
     error: null,
     draft: {},
   })
   jest.clearAllMocks()
+  // Default: no coach marks state in DB
+  mockGetCoachMarksCompleted.mockResolvedValue(false)
+  mockSetCoachMarksCompleted.mockResolvedValue(undefined)
 })
 
 // ── Draft management ───────────────────────────────────────────────
@@ -412,5 +420,59 @@ describe('error handling', () => {
     await useUserStore.getState().loadProfile()
 
     expect(useUserStore.getState().error).toBe('Failed to load profile')
+  })
+})
+
+// ── coachMarksCompleted ────────────────────────────────────────────
+
+describe('coachMarksCompleted', () => {
+  it('defaults_to_false', () => {
+    expect(useUserStore.getState().coachMarksCompleted).toBe(false)
+  })
+
+  it('stays_false_after_completeOnboarding_so_tour_can_run', async () => {
+    mockSaveProfile.mockResolvedValue(SAVED_PROFILE)
+    useUserStore.getState().updateDraft(COMPLETE_DRAFT)
+
+    await useUserStore.getState().completeOnboarding()
+
+    expect(useUserStore.getState().isOnboarded).toBe(true)
+    expect(useUserStore.getState().coachMarksCompleted).toBe(false)
+  })
+
+  it('hydrates_from_repository_in_loadProfile', async () => {
+    mockGetProfile.mockResolvedValue(SAVED_PROFILE)
+    mockGetCoachMarksCompleted.mockResolvedValue(true)
+
+    await useUserStore.getState().loadProfile()
+
+    expect(useUserStore.getState().coachMarksCompleted).toBe(true)
+  })
+
+  it('stays_false_when_no_profile_loaded', async () => {
+    mockGetProfile.mockResolvedValue(null)
+    mockGetCoachMarksCompleted.mockResolvedValue(true) // shouldn't matter
+
+    await useUserStore.getState().loadProfile()
+
+    expect(useUserStore.getState().coachMarksCompleted).toBe(false)
+  })
+
+  it('markCoachMarksComplete_persists_and_updates_state', async () => {
+    await useUserStore.getState().markCoachMarksComplete()
+
+    expect(mockSetCoachMarksCompleted).toHaveBeenCalledWith(true)
+    expect(useUserStore.getState().coachMarksCompleted).toBe(true)
+  })
+
+  it('markCoachMarksComplete_optimistic_update_even_if_persistence_fails', async () => {
+    mockSetCoachMarksCompleted.mockRejectedValue(new Error('DB write failed'))
+
+    await useUserStore.getState().markCoachMarksComplete()
+
+    // State updates regardless — the tour should never re-appear in this session
+    expect(useUserStore.getState().coachMarksCompleted).toBe(true)
+    // Error is recorded but non-fatal
+    expect(useUserStore.getState().error).toBe('DB write failed')
   })
 })
