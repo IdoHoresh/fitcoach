@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 6
+export const SCHEMA_VERSION = 7
 
 /**
  * All CREATE TABLE statements.
@@ -23,6 +23,7 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     id TEXT PRIMARY KEY,
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
     updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+    name TEXT NOT NULL DEFAULT '',
     height_cm REAL NOT NULL,
     weight_kg REAL NOT NULL,
     age INTEGER NOT NULL,

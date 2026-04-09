@@ -47,6 +47,25 @@ describe('HomeHeader', () => {
     expect(screen.getByTestId('header-date')).toHaveTextContent(/אפריל/)
   })
 
+  it('interpolates the user name into the greeting when name prop is provided', () => {
+    jest.useFakeTimers({ now: new Date('2026-04-09T08:00:00') })
+    render(<HomeHeader onAvatarPress={jest.fn()} name="דני" testID="header" />)
+    const expected = t().home.greetings.morning.replace('{name}', 'דני')
+    expect(screen.getByText(expected)).toBeTruthy()
+  })
+
+  it('falls back to greetingNoName when name prop is empty string', () => {
+    jest.useFakeTimers({ now: new Date('2026-04-09T08:00:00') })
+    render(<HomeHeader onAvatarPress={jest.fn()} name="" testID="header" />)
+    expect(screen.getByText(t().home.v2.greetingNoName.morning)).toBeTruthy()
+  })
+
+  it('trims whitespace-only name prop and uses no-name fallback', () => {
+    jest.useFakeTimers({ now: new Date('2026-04-09T08:00:00') })
+    render(<HomeHeader onAvatarPress={jest.fn()} name="   " testID="header" />)
+    expect(screen.getByText(t().home.v2.greetingNoName.morning)).toBeTruthy()
+  })
+
   it('calls onAvatarPress when the avatar is tapped', () => {
     jest.useFakeTimers({ now: new Date('2026-04-09T08:00:00') })
     const onAvatarPress = jest.fn()

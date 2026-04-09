@@ -12,6 +12,7 @@ import {
   OnboardingContent,
   NumberInput,
   OptionSelector,
+  TextInput,
 } from '@/components'
 import type { BiologicalSex } from '@/types'
 
@@ -26,6 +27,7 @@ export default function BodyStatsScreen() {
   const updateDraft = useUserStore((s) => s.updateDraft)
   const draft = useUserStore((s) => s.draft)
 
+  const [name, setName] = useState(draft.name ?? '')
   const [height, setHeight] = useState(draft.heightCm ?? 170)
   const [weight, setWeight] = useState(draft.weightKg ?? 70)
   const [age, setAge] = useState(draft.age ?? 25)
@@ -36,7 +38,10 @@ export default function BodyStatsScreen() {
     label: strings[opt.id as keyof typeof strings] as string,
   }))
 
+  const trimmedName = name.trim()
   const isValid =
+    trimmedName.length >= VALIDATION.NAME_LENGTH.min &&
+    trimmedName.length <= VALIDATION.NAME_LENGTH.max &&
     height >= VALIDATION.HEIGHT_CM.min &&
     height <= VALIDATION.HEIGHT_CM.max &&
     weight >= VALIDATION.WEIGHT_KG.min &&
@@ -47,6 +52,7 @@ export default function BodyStatsScreen() {
 
   const handleNext = () => {
     updateDraft({
+      name: trimmedName,
       heightCm: height,
       weightKg: weight,
       age,
@@ -67,6 +73,13 @@ export default function BodyStatsScreen() {
         <Text style={styles.title}>{strings.title}</Text>
       </OnboardingTitle>
       <OnboardingContent>
+        <TextInput
+          label={strings.name}
+          value={name}
+          onChangeText={setName}
+          placeholder={strings.namePlaceholder}
+          testID="name"
+        />
         <NumberInput
           label={strings.height}
           value={height}

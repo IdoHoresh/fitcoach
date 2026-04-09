@@ -10,6 +10,7 @@ import { MacroLegend } from '@/components/home/MacroLegend'
 import { TodaysPlanList } from '@/components/home/TodaysPlanList'
 import { WeekdayStreakStrip } from '@/components/home/WeekdayStreakStrip'
 import { useNutritionStore } from '@/stores/useNutritionStore'
+import { useUserStore } from '@/stores/useUserStore'
 import { useWorkoutStore } from '@/stores/useWorkoutStore'
 import type { DayOfWeek } from '@/types/user'
 
@@ -21,6 +22,9 @@ const DEFAULT_WEEKLY_WORKOUT_GOAL = 3
 export default function HomeScreen() {
   const router = useRouter()
   const insets = useSafeAreaInsets()
+
+  // ── User store: personalized greeting ──
+  const userName = useUserStore((s) => s.profile?.name)
 
   // ── Nutrition store: gauge + legend props ──
   const activePlan = useNutritionStore((s) => s.activePlan)
@@ -75,7 +79,7 @@ export default function HomeScreen() {
 
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
-      <HomeHeader onAvatarPress={goToProfile} testID="home-header" />
+      <HomeHeader onAvatarPress={goToProfile} name={userName} testID="home-header" />
 
       <ScrollView
         style={styles.scroll}

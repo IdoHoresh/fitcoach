@@ -142,6 +142,9 @@ export interface UserProfile {
   readonly createdAt: string
   readonly updatedAt: string
 
+  // Identity
+  readonly name: string
+
   // Body stats
   readonly heightCm: number
   readonly weightKg: number

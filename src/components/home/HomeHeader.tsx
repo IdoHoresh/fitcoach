@@ -11,6 +11,7 @@ const AVATAR_SIZE = 40
 
 interface HomeHeaderProps {
   onAvatarPress: () => void
+  name?: string
   testID?: string
 }
 
@@ -44,10 +45,14 @@ function formatTodayDate(now: Date): string {
     .replace('{month}', month)
 }
 
-export function HomeHeader({ onAvatarPress, testID }: HomeHeaderProps) {
+export function HomeHeader({ onAvatarPress, name, testID }: HomeHeaderProps) {
   const now = new Date()
   const greetingKey = getGreetingKey(now.getHours())
-  const greeting = t().home.v2.greetingNoName[greetingKey]
+  const trimmedName = name?.trim() ?? ''
+  const greeting =
+    trimmedName.length > 0
+      ? t().home.greetings[greetingKey].replace('{name}', trimmedName)
+      : t().home.v2.greetingNoName[greetingKey]
   const dateText = formatTodayDate(now)
 
   return (

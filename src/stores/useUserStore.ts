@@ -50,6 +50,7 @@ interface UserStore {
 // ── Required Draft Fields ──────────────────────────────────────────
 
 const REQUIRED_DRAFT_FIELDS = [
+  'name',
   'heightCm',
   'weightKg',
   'age',
