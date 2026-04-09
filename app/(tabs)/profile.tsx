@@ -8,11 +8,17 @@ import { Button } from '@/components/Button'
 // asking contributors to `expo start --clear` on first pull.
 import { resetApp } from '../../src/dev/resetApp'
 
-/** Dev-only: deletes the SQLite DB and reloads the bundle after confirmation. */
+/**
+ * Dev-only: deletes the SQLite DB, then tells the user to force-close and
+ * reopen the app. We deliberately do NOT call `DevSettings.reload()` —
+ * on iOS that's a JS-only reload and leaves the native I18nManager /
+ * Yoga layout engine in a stale RTL state. A full native relaunch is
+ * the only way to guarantee the onboarding flow renders correctly.
+ */
 function handleDevReset() {
   Alert.alert(
     'Reset app?',
-    'Deletes all profile, workout, and nutrition data and restarts the bundle. Dev only — cannot be undone.',
+    'Deletes all profile, workout, and nutrition data. Dev only — cannot be undone.',
     [
       { text: 'Cancel', style: 'cancel' },
       {
@@ -21,6 +27,10 @@ function handleDevReset() {
         onPress: async () => {
           try {
             await resetApp()
+            Alert.alert(
+              'Data cleared',
+              'Now force-close the app (swipe up in the app switcher) and reopen it. A JS reload is not enough — RTL needs a full native relaunch.',
+            )
           } catch (error) {
             Alert.alert('Reset failed', String(error))
           }

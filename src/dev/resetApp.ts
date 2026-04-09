@@ -1,9 +1,23 @@
 /**
  * Dev-only app reset utility.
  *
- * Wipes the SQLite database and reloads the JS bundle so the app comes back
- * up in its first-install state: no profile → redirected to onboarding →
- * coach marks tour armed to fire again.
+ * Wipes the SQLite database so the app comes back up in its first-install
+ * state: no profile → redirected to onboarding → coach marks tour armed
+ * to fire again.
+ *
+ * Why we do NOT auto-reload the JS bundle:
+ *
+ * `DevSettings.reload()` re-evaluates the JS bundle but does NOT trigger a
+ * full native restart. On iOS, `I18nManager.forceRTL(true)` is a native-side
+ * flag that only takes effect on the NEXT native launch — a JS-only reload
+ * keeps the Yoga layout engine in whatever direction it was when the app
+ * originally launched. After a JS reload, the module-level guard in
+ * `app/_layout.tsx` sees `I18nManager.isRTL === true` and correctly skips
+ * re-forcing, but the layout engine still renders some views LTR because
+ * it was never re-initialized for RTL.
+ *
+ * The only reliable fix is to force-close and relaunch the app from the OS.
+ * So this utility wipes the DB and then tells the user to do exactly that.
  *
  * This file is only imported from `__DEV__`-gated UI — it should never run
  * in production. If you ever need a production-side "delete my data" flow,
@@ -11,19 +25,14 @@
  */
 
 import * as SQLite from 'expo-sqlite'
-import { DevSettings } from 'react-native'
 import { closeDatabase } from '../db'
 
 const DATABASE_NAME = 'fitcoach.db'
 
 /**
- * Closes the DB, deletes the SQLite file, and reloads the JS bundle.
- *
- * After reload:
- *   - RootLayout re-runs `initializeDatabase()` → creates fresh tables
- *   - `useUserStore.loadProfile()` finds no row → `isOnboarded: false`
- *   - `app/index.tsx` redirects to `/welcome`
- *   - Every Zustand store is re-created at its initial state
+ * Closes the DB and deletes the SQLite file. Does NOT reload the bundle —
+ * the caller must instruct the user to force-close and reopen the app so
+ * RTL re-initializes cleanly on iOS.
  */
 export async function resetApp(): Promise<void> {
   try {
@@ -33,10 +42,4 @@ export async function resetApp(): Promise<void> {
   }
 
   await SQLite.deleteDatabaseAsync(DATABASE_NAME)
-
-  // `DevSettings.reload` only exists in dev builds. In production this file
-  // shouldn't be imported at all, but guard just in case.
-  if (typeof DevSettings?.reload === 'function') {
-    DevSettings.reload()
-  }
 }
