@@ -57,11 +57,11 @@
 - [x] CheckboxList (multi-choice with checkmarks, select all/clear all)
 - [x] i18n component strings (he + en)
 
-### Tier 3: Post-onboarding (PR #12 — Next)
+### Tier 3: Post-onboarding (PR #21 — Done)
 
-- [ ] Progress bar / macro ring chart (test RTL directionality early — charts look weird mirrored)
-- [ ] Streak counter component (workouts this week/month — retention hook)
-- [ ] Workout timer / rest countdown
+- [x] MacroRing — animated SVG ring with calories + P/C/F stats (RTL-correct)
+- [x] StreakCounter — 7-dot weekly row + flame badge for current streak
+- [x] RestTimer — MM:SS countdown with pause/resume/reset, haptic on complete
 
 ---
 
@@ -450,3 +450,6 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Onboarding bug fixes — ProgressBar RTL, NumberInput blur/unmount (PR #15), 1,518 tests
 - [x] Calculating animation screen — 10s animated step checklist before results, RTL fix (PR #16), 1,518 tests
 - [x] Critical fix: display goal-adjusted calories instead of maintenance TDEE (PR #17), 1,538 tests
+- [x] Tier 3 shared components — MacroRing, StreakCounter, RestTimer + calculateStreak algorithm (PR #21), 1,570 tests
+- [x] RTL rendering bugs across onboarding + remove invalid app.json plugins (PR #22), 1,524 tests + Node 24 dev server fix
+- [x] Test flake fix — useWorkoutStore week-advance test was using real Date.now vs mocked todayISO (PR #21/#22)
