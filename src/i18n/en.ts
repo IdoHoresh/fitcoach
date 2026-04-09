@@ -290,6 +290,23 @@ export const en: TranslationKeys = {
       selectAll: 'Select all',
       clearAll: 'Clear all',
     },
+    macroRing: {
+      remaining: 'remaining',
+      protein: 'Protein',
+      carbs: 'Carbs',
+      fat: 'Fat',
+    },
+    streakCounter: {
+      weeklyLabel: 'workouts this week',
+      streakWeeks: 'week streak',
+      streakWeek: 'week streak',
+    },
+    restTimer: {
+      pause: 'Pause',
+      resume: 'Resume',
+      reset: 'Reset',
+      done: 'Done!',
+    },
   },
 
   errors: {

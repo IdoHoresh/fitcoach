@@ -296,6 +296,23 @@ export const he = {
       selectAll: 'בחר הכל',
       clearAll: 'נקה הכל',
     },
+    macroRing: {
+      remaining: 'נותרו',
+      protein: 'חלבון',
+      carbs: 'פחמימות',
+      fat: 'שומן',
+    },
+    streakCounter: {
+      weeklyLabel: 'אימונים השבוע',
+      streakWeeks: 'שבועות רצופים',
+      streakWeek: 'שבוע רצוף',
+    },
+    restTimer: {
+      pause: 'השהה',
+      resume: 'המשך',
+      reset: 'איפוס',
+      done: 'סיים!',
+    },
   },
 
   // ── Errors ──

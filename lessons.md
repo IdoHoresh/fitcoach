@@ -22,6 +22,7 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - RTL-sensitive CSS properties (`transformOrigin`, `textAlign`, directional padding/margin) must never be hardcoded — use `isRTL()` dynamically. Hardcoded `transformOrigin: 'left'` caused the ProgressBar to fill from the wrong direction in Hebrew. (2026-04-08)
 - Timer-based components (`setInterval`/`setTimeout` in long-press, polling, etc.) must clean up on unmount via `useEffect` return. Otherwise timers fire on unmounted components. (2026-04-08)
 - `I18nManager.forceRTL()` must be called at **module level** (outside components/effects), not inside `useEffect`. On Android, `forceRTL` requires an app restart — calling it inside `useEffect` is too late, the layout is already rendered LTR. Guard with `if (isRTL() && !I18nManager.isRTL)`. (2026-04-08)
+- `@expo/vector-icons` breaks Jest because it transitively loads `expo-modules-core`, which crashes with "Cannot read properties of undefined (reading 'EventEmitter')". Mock the whole module in `jest.setup.ts` with a factory that returns `React.createElement(View)` per icon family. Do NOT call `View(...)` directly — Babel's class transform requires `new`/`React.createElement` (calling a React Native class component as a function throws `_classCallCheck`). (2026-04-09)
 
 ## UI ↔ Algorithm Wiring
 
