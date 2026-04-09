@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { render, screen } from '@testing-library/react-native'
-import * as rtlModule from '@/hooks/rtl'
 import { ProgressBar } from './ProgressBar'
 import { colors } from '@/theme/colors'
 
@@ -41,24 +40,15 @@ describe('ProgressBar', () => {
   })
 
   describe('RTL support', () => {
-    afterEach(() => {
-      jest.restoreAllMocks()
-    })
-
-    it('uses right transformOrigin in RTL mode', () => {
-      jest.spyOn(rtlModule, 'isRTL').mockReturnValue(true)
+    it('fill uses left: 0 positioning (RN auto-swaps in RTL mode)', () => {
+      // We pin to `left: 0` and rely on React Native's I18nManager to
+      // auto-swap to `right: 0` when the system is in RTL. Do NOT add a
+      // manual conditional — that double-flips and breaks RTL rendering.
       render(<ProgressBar current={5} total={10} testID="progress" />)
       const fill = screen.getByTestId('progress-fill')
       const flat = StyleSheet.flatten(fill.props.style)
-      expect(flat.transformOrigin).toBe('right')
-    })
-
-    it('uses left transformOrigin in LTR mode', () => {
-      jest.spyOn(rtlModule, 'isRTL').mockReturnValue(false)
-      render(<ProgressBar current={5} total={10} testID="progress" />)
-      const fill = screen.getByTestId('progress-fill')
-      const flat = StyleSheet.flatten(fill.props.style)
-      expect(flat.transformOrigin).toBe('left')
+      expect(flat.left).toBe(0)
+      expect(flat.right).toBeUndefined()
     })
   })
 

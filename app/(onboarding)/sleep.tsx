@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { colors, fontSize, fontFamily, spacing, borderRadius } from '@/theme'
 import { t } from '@/i18n'
+import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
 import { VALIDATION, SLEEP } from '@/data/constants'
 import { OnboardingLayout, OnboardingTitle, OnboardingContent, NumberInput } from '@/components'
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.xl,
   },
   warningBanner: {
-    flexDirection: 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
     alignItems: 'center',
     backgroundColor: colors.warning + '1A',
     borderWidth: 1,
@@ -93,5 +94,6 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.regular,
     color: colors.warning,
     lineHeight: fontSize.sm * 1.5,
+    textAlign: isRTL() ? 'right' : 'left',
   },
 })

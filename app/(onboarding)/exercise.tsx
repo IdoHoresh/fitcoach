@@ -3,6 +3,7 @@ import { Text, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { colors, fontSize, fontWeight, spacing } from '@/theme'
 import { t } from '@/i18n'
+import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
 import { OnboardingLayout, OnboardingTitle, OnboardingContent, OptionSelector } from '@/components'
 import type { ExerciseType, ExerciseIntensity, SessionDuration } from '@/types'
@@ -118,5 +119,6 @@ const styles = StyleSheet.create({
     color: colors.textPrimary,
     marginTop: spacing.lg,
     marginBottom: spacing.sm,
+    textAlign: isRTL() ? 'right' : 'left',
   },
 })
