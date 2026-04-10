@@ -444,6 +444,55 @@ export const MACRO_TOLERANCE_PERCENT = 0.05
 export const MIN_SCALE_FACTOR = 0.3
 export const MAX_SCALE_FACTOR = 2.5
 
+// ── Per-Meal Macro Targeting Constants ────────────────────────────────
+// Meal-level calorie splits and macro role modifiers based on workout timing.
+// Used by computeMealTargets() for the guided meal logging feature.
+
+/**
+ * Calorie split across 4 meals by training goal.
+ * Fat loss / muscle gain: larger lunch + dinner (peri-workout emphasis).
+ * Maintenance: even distribution.
+ *
+ * Sources:
+ * - Aragon AA & Schoenfeld BJ (2013), Nutrient timing revisited
+ * - Helms ER et al. (2014), Evidence-based recommendations for contest prep
+ */
+export const MEAL_CALORIE_SPLIT_BY_GOAL: Record<
+  TrainingGoal,
+  Record<'breakfast' | 'lunch' | 'dinner' | 'snack', number>
+> = {
+  fat_loss: { breakfast: 0.25, lunch: 0.3, dinner: 0.3, snack: 0.15 },
+  muscle_gain: { breakfast: 0.25, lunch: 0.3, dinner: 0.3, snack: 0.15 },
+  maintenance: { breakfast: 0.25, lunch: 0.25, dinner: 0.25, snack: 0.25 },
+} as const
+
+/**
+ * Maximum fraction of meal calories from fat in a pre-workout meal.
+ * Fat slows gastric emptying and causes GI distress during training.
+ *
+ * Source: ISSN Position Stand on nutrient timing (Kerksick et al. 2017)
+ */
+export const FAT_CAP_PRE_WORKOUT = 0.15
+
+/**
+ * Protein boost multiplier for post-workout and light (snack) meals.
+ * Even protein distribution maximizes MPS, but the post-workout window
+ * benefits from slightly elevated intake for recovery.
+ *
+ * Sources:
+ * - Mamerow et al. (2014), even protein distribution
+ * - Schoenfeld & Aragon (2018), post-exercise protein timing
+ */
+export const PROTEIN_BOOST_MULTIPLIER = 1.2
+
+/**
+ * Threshold at which a macro is considered "satisfied" (≥90% of target met).
+ * Used for tab checkmarks and hint line visibility in the meal UI.
+ *
+ * Source: Practical rounding tolerance; RP (Israetel) coaching guidelines
+ */
+export const MACRO_SATISFIED_THRESHOLD = 0.9
+
 // ── Weekly Recalibration Constants ─────────────────────────────────
 // How the app adjusts calories based on weekly weight change.
 // Conservative approach — small adjustments prevent yo-yo dieting.

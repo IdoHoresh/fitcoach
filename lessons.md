@@ -105,6 +105,10 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Guard async state updates behind a ref when the triggering UI can close.** Opening a bottom sheet fires `getProgressionAdvice()` (async). If the user closes the sheet before the promise resolves, `setSheetAdvice(advice)` sets stale state on a hidden modal. Use a `useRef(boolean)` tracking whether the sheet is still open, and check it before calling any setter in the `.then`/`finally` path.
 - **Muscle names, equipment names, and other enum-like display strings must go through i18n.** Raw MuscleGroup keys (`'chest'`, `'triceps'`) are code identifiers, not user-facing labels. Add a `muscles` map to the i18n files and use a `translateMuscle()` helper. Same principle applies to equipment items when they reach the UI.
 
+## Nutrition Algorithm Patterns (cont.)
+
+- **`Math.ceil(cap) - 1` for strict integer thresholds.** When a constraint is `value < threshold` and values are integers after rounding, `Math.floor(threshold)` is wrong when `threshold` is exactly an integer (e.g. `600 × 0.15 / 9 = 10` — `Math.floor(10) = 10`, but `10 × 9 / 600 = 0.15` which fails a strict `< 0.15` test). Use `Math.ceil(threshold) - 1` instead — it gives the largest integer strictly less than the threshold in all cases. (2026-04-11)
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
