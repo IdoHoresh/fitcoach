@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, Pressable, StyleSheet } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
 import { Card } from '@/components/Card'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
@@ -49,6 +50,15 @@ export function ExerciseCard({
         <View style={styles.muscleBadge}>
           <Text style={styles.muscleText}>{translateMuscle(exercise.primaryMuscle)}</Text>
         </View>
+        <Pressable
+          onPress={onPress}
+          hitSlop={8}
+          accessibilityRole="button"
+          accessibilityLabel={t().workout.instructions}
+          testID={testID ? `${testID}-info` : undefined}
+        >
+          <Ionicons name="information-circle-outline" size={22} color={colors.textSecondary} />
+        </Pressable>
       </View>
     </Card>
   )

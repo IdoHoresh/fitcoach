@@ -60,6 +60,7 @@ export interface Exercise {
   readonly requiredEquipment: readonly EquipmentItem[]
   readonly substitutionIds: readonly string[] // IDs of alternative exercises
   readonly instructions: string
+  readonly gifUrl: string | null // ExerciseDB GIF demo URL (180p)
 }
 
 /** Exercise prescription within a workout template */

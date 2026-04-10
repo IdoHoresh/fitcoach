@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   View,
   Text,
+  Image,
   Modal,
   Pressable,
   ScrollView,
@@ -58,6 +59,8 @@ export function ExerciseDetailSheet({
           <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
             {exercise && prescription ? (
               <>
+                {exercise.gifUrl && <ExerciseGif url={exercise.gifUrl} testID={testID} />}
+
                 <Text style={styles.name}>{isRTL() ? exercise.nameHe : exercise.nameEn}</Text>
 
                 <Text style={styles.setsReps}>
@@ -139,7 +142,51 @@ export function ExerciseDetailSheet({
   )
 }
 
+const GIF_SIZE = 200
+
+function ExerciseGif({ url, testID }: { url: string; testID?: string }) {
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+
+  if (error) return null
+
+  return (
+    <View style={styles.gifContainer}>
+      {loading && (
+        <ActivityIndicator
+          style={styles.gifLoader}
+          color={colors.primary}
+          testID={testID ? `${testID}-gif-loading` : undefined}
+        />
+      )}
+      <Image
+        source={{ uri: url }}
+        style={styles.gif}
+        resizeMode="contain"
+        onLoad={() => setLoading(false)}
+        onError={() => setError(true)}
+        testID={testID ? `${testID}-gif` : undefined}
+      />
+    </View>
+  )
+}
+
 const styles = StyleSheet.create({
+  gifContainer: {
+    alignItems: 'center',
+    marginBottom: spacing.md,
+    minHeight: GIF_SIZE,
+    justifyContent: 'center',
+  },
+  gifLoader: {
+    position: 'absolute',
+  },
+  gif: {
+    width: GIF_SIZE,
+    height: GIF_SIZE,
+    borderRadius: borderRadius.md,
+    backgroundColor: colors.surfaceElevated,
+  },
   overlay: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.5)',
