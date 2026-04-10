@@ -458,3 +458,4 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] RTL rendering bugs across onboarding + remove invalid app.json plugins (PR #22), 1,524 tests + Node 24 dev server fix
 - [x] Test flake fix — useWorkoutStore week-advance test was using real Date.now vs mocked todayISO (PR #21/#22)
 - [x] Post-onboarding coach marks tab tour (PR #24) — 3-step tour, SQLite v6 migration, dev reset button, 1,595 tests
+- [x] QA audit fix: validation guards at algorithm + store boundaries (PR #31) — RangeError in calculateEat(), Zod validateInput() in logFood/logWeight/logSet, 1,696 tests

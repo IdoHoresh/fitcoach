@@ -100,6 +100,11 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **SVG geometry is not unit-testable in jest.** Props + text + testIDs render correctly under jest-expo's mocks, but the path/circle/transform math renders invisibly. Two attempts at the gauge passed all unit tests while being visually broken on device. Takeaways: (1) extract numeric helpers (like `computeGaugeProgress`) as pure functions and test those, (2) accept that pixel verification for SVG components requires device testing, and (3) when debugging SVG, always test on device between edits, not "after the tests go green."
 - **`jest.useFakeTimers` is required whenever a component reads `new Date()` at render time.** HomeHeader, TodaysPlanList and the `buildTodaysPlan` pure function all depend on "today". Without frozen time, tests pass on one weekday and fail on another. Use `beforeEach(() => jest.useFakeTimers({ now: new Date('2026-04-09T12:00:00') }))` and `afterEach(() => jest.useRealTimers())`.
 
+## Workout Screen (2026-04-10)
+
+- **Guard async state updates behind a ref when the triggering UI can close.** Opening a bottom sheet fires `getProgressionAdvice()` (async). If the user closes the sheet before the promise resolves, `setSheetAdvice(advice)` sets stale state on a hidden modal. Use a `useRef(boolean)` tracking whether the sheet is still open, and check it before calling any setter in the `.then`/`finally` path.
+- **Muscle names, equipment names, and other enum-like display strings must go through i18n.** Raw MuscleGroup keys (`'chest'`, `'triceps'`) are code identifiers, not user-facing labels. Add a `muscles` map to the i18n files and use a `translateMuscle()` helper. Same principle applies to equipment items when they reach the UI.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
