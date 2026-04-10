@@ -44,6 +44,7 @@ const COMPLETE_DRAFT: Omit<UserProfile, 'id' | 'createdAt' | 'updatedAt'> = {
     exerciseIntensity: 'light',
     sleepHoursPerNight: 7,
   },
+  workoutTime: 'flexible',
 }
 
 const SAVED_PROFILE: UserProfile = {

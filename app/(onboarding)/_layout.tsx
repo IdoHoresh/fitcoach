@@ -18,6 +18,7 @@ export default function OnboardingLayout() {
       <Stack.Screen name="experience" />
       <Stack.Screen name="equipment" />
       <Stack.Screen name="training-days" />
+      <Stack.Screen name="workout-time" />
       <Stack.Screen name="activity" />
       <Stack.Screen name="exercise" />
       <Stack.Screen name="sleep" />

@@ -88,7 +88,7 @@ export default function ActivityScreen() {
 
   return (
     <OnboardingLayout
-      step={7}
+      step={8}
       onNext={handleNext}
       onBack={() => router.back()}
       nextDisabled={!isValid}

@@ -42,6 +42,7 @@ function buildCompleteDraft(overrides?: Partial<UserProfile>): Partial<UserProfi
       availableEquipment: ['barbell', 'dumbbells', 'bench', 'squat_rack'],
     },
     lifestyle,
+    workoutTime: 'flexible' as const,
     ...overrides,
   }
 }

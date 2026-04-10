@@ -69,6 +69,16 @@ export const en: TranslationKeys = {
       subtitle: 'Select at least 2 days',
       days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     },
+    workoutTime: {
+      title: 'When do you usually work out?',
+      subtitle: 'This helps us plan meals around your training',
+      morning: 'Morning',
+      morningDesc: 'Before noon',
+      evening: 'Evening',
+      eveningDesc: 'After 5 PM',
+      flexible: 'Flexible',
+      flexibleDesc: 'Varies day to day',
+    },
     equipment: {
       title: 'What equipment do you have?',
       fullGym: 'Full Gym',

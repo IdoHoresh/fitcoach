@@ -12,6 +12,9 @@ export type TrainingGoal = 'muscle_gain' | 'fat_loss' | 'maintenance'
 /** Training experience — determines starting volume and progression speed */
 export type ExperienceLevel = 'beginner' | 'intermediate'
 
+/** Typical workout time — drives per-meal macro targeting (pre/post-workout meal roles) */
+export type WorkoutTime = 'morning' | 'evening' | 'flexible'
+
 /**
  * Individual equipment items the user might have.
  * Used as a checklist — user picks what they actually own.
@@ -160,6 +163,9 @@ export interface UserProfile {
 
   // Lifestyle (component-based TDEE estimation)
   readonly lifestyle: LifestyleProfile
+
+  // Meal planning preference
+  readonly workoutTime: WorkoutTime
 }
 
 /** Calculated nutrition targets — output of TDEE + macro algorithms */

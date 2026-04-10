@@ -56,7 +56,7 @@ export default function ExerciseScreen() {
 
   return (
     <OnboardingLayout
-      step={8}
+      step={9}
       onNext={handleNext}
       onBack={() => router.back()}
       nextDisabled={!isValid}

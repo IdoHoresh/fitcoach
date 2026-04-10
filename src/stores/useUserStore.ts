@@ -60,6 +60,7 @@ const REQUIRED_DRAFT_FIELDS = [
   'trainingDays',
   'equipment',
   'lifestyle',
+  'workoutTime',
 ] as const
 
 /** Validates that all required fields are present in the draft. */

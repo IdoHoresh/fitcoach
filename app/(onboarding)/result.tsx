@@ -197,7 +197,7 @@ export default function ResultScreen() {
   if (!results) {
     return (
       <OnboardingLayout
-        step={11}
+        step={12}
         onNext={() => router.back()}
         nextLabel={t().common.back}
         testID="result-screen"
@@ -217,7 +217,7 @@ export default function ResultScreen() {
 
   return (
     <OnboardingLayout
-      step={11}
+      step={12}
       onNext={handleStart}
       nextLabel={strings.cta}
       nextDisabled={isLoading}

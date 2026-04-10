@@ -13,6 +13,7 @@ import type {
   TrainingLocation,
   UserEquipment,
   UserProfile,
+  WorkoutTime,
 } from '../types'
 import { BaseRepository, generateId, nowISO, todayISO } from './base-repository'
 import { getDatabase } from './database'
@@ -42,6 +43,7 @@ interface UserProfileRow {
   session_duration_minutes: number
   exercise_intensity: string
   sleep_hours_per_night: number
+  workout_time: string
 }
 
 /** Maps a database row to a UserProfile domain object */
@@ -77,6 +79,7 @@ function rowToProfile(row: UserProfileRow): UserProfile {
     trainingDays: JSON.parse(row.training_days) as DayOfWeek[],
     equipment,
     lifestyle,
+    workoutTime: row.workout_time as WorkoutTime,
   }
 }
 
@@ -139,6 +142,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
           exercise_days_per_week = ?, exercise_type = ?,
           session_duration_minutes = ?, exercise_intensity = ?,
           sleep_hours_per_night = ?,
+          workout_time = ?,
           updated_at = ?
         WHERE id = ?`,
         [
@@ -161,6 +165,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
           ls.sessionDurationMinutes,
           ls.exerciseIntensity,
           ls.sleepHoursPerNight,
+          data.workoutTime,
           now,
           existing.id,
         ],
@@ -179,9 +184,9 @@ class UserRepository extends BaseRepository<UserProfileRow> {
         occupation, daily_steps, after_work_activity,
         exercise_days_per_week, exercise_type,
         session_duration_minutes, exercise_intensity,
-        sleep_hours_per_night,
+        sleep_hours_per_night, workout_time,
         created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         id,
         data.name,
@@ -203,6 +208,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
         ls.sessionDurationMinutes,
         ls.exerciseIntensity,
         ls.sleepHoursPerNight,
+        data.workoutTime,
         now,
         now,
       ],
