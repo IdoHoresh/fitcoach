@@ -104,7 +104,10 @@ export function NutritionDashboard() {
           visible={activeMealSheet === mealType}
           mealType={mealType}
           date={selectedDate}
-          onClose={() => setActiveMealSheet(null)}
+          onClose={() => {
+            setActiveMealSheet(null)
+            loadLogForDate(selectedDate)
+          }}
           testID={`food-search-${mealType}`}
         />
       ))}
