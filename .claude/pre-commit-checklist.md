@@ -1,11 +1,11 @@
 # Pre-Commit Checklist
 
-- [x] On a feature branch (NOT main) — feat/exercise-gif-demos
-- [x] /review ran and findings fixed — reviewed during implementation
-- [x] lessons.md checked — no new patterns needed
-- [x] REVIEW.md checked — no new patterns needed
-- [x] git diff scanned for secrets/keys/tokens — no secrets found (GIF URLs are public CDN)
-- [x] npm run lint passes — clean
-- [x] npm run typecheck passes — clean
-- [x] npm test passes — 1,754 / 1,754 (+3 new)
-- [x] Commit size checked — 306 lines across 8 files
+- [x] On a feature branch (NOT main) — main (docs-only update)
+- [x] /review ran and findings fixed — N/A (docs only)
+- [x] lessons.md checked — N/A
+- [x] REVIEW.md checked — N/A
+- [x] git diff scanned for secrets/keys/tokens — no secrets
+- [x] npm run lint passes — N/A (no code changes)
+- [x] npm run typecheck passes — N/A
+- [x] npm test passes — N/A
+- [x] Commit size checked — 1 line in TASKS.md

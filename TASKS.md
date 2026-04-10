@@ -461,3 +461,4 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Post-onboarding coach marks tab tour (PR #24) — 3-step tour, SQLite v6 migration, dev reset button, 1,595 tests
 - [x] QA audit fix: validation guards at algorithm + store boundaries (PR #31) — RangeError in calculateEat(), Zod validateInput() in logFood/logWeight/logSet, 1,696 tests
 - [x] Workout screen: daily workout display, exercise list, detail sheet, rest day card (PR #32) — 7 new components, i18n muscle names, 1,751 tests
+- [x] Exercise GIF demos + Hebrew instructions (PR #33) — 59 GIFs from ExerciseDB, ℹ️ info button, 76 exercises with beginner Hebrew instructions, RTL fixes, 28 Hebrew name corrections, 1,754 tests
