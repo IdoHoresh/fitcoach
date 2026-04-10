@@ -107,7 +107,7 @@
 - [x] Add `name` field to UserProfile + onboarding (PR #29) — required string persisted via SQLite v7 migration (`ALTER TABLE … DEFAULT ''`), captured on body-stats screen as first field, HomeHeader now renders "בוקר טוב, {name}" with graceful `greetingNoName` fallback for the pre-load render. Zod bounds `[1, 50]`, trimmed. 10 new tests (7 validation + 3 HomeHeader). 1,690 tests passing.
 - [ ] Remove dev-only buttons from Profile tab (cleanup after Nutrition + Workout tabs ship)
 - [x] Workout screen (daily workout display, exercise list with sets/reps)
-- [ ] Active workout UI (guided session — current exercise, log sets, rest timer)
+- [x] Active workout UI (guided session — current exercise, log sets, rest timer)
 - [ ] Nutrition screen (daily macro targets, food log, meal tracking)
 - [ ] Progress screen (weight chart, volume trends, body measurements)
 - [ ] Settings screen (edit profile, equipment, language, app info)
@@ -462,3 +462,4 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] QA audit fix: validation guards at algorithm + store boundaries (PR #31) — RangeError in calculateEat(), Zod validateInput() in logFood/logWeight/logSet, 1,696 tests
 - [x] Workout screen: daily workout display, exercise list, detail sheet, rest day card (PR #32) — 7 new components, i18n muscle names, 1,751 tests
 - [x] Exercise GIF demos + Hebrew instructions (PR #33) — 59 GIFs from ExerciseDB, ℹ️ info button, 76 exercises with beginner Hebrew instructions, RTL fixes, 28 Hebrew name corrections, 1,754 tests
+- [x] Active workout UI (PR #35) — 7 new components (SetRow, ActiveExerciseCard, ActiveWorkoutView, FloatingRestBubble, FinishWorkoutBar, EndEarlyDialog, WorkoutTimer), guided session with set logging, auto-advance, inline rest timer + floating bubble, end early dialog, 1,754 tests
