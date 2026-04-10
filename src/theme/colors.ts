@@ -1,42 +1,45 @@
 /**
- * Color palette — single source of truth for all colors in the app.
+ * Color palette — "Clinical Calm" design system.
+ * Teal primary (health + trust), cool dark backgrounds, off-white text.
+ * Based on Stitch design system for Gibor Fitness Science.
+ *
  * Named semantically (what they DO, not what they LOOK LIKE).
  */
 
 export const colors = {
   // ── Brand ──
-  primary: '#4F46E5', // Indigo — main CTA, active states
-  primaryLight: '#818CF8', // Lighter indigo — backgrounds, hover
-  primaryDark: '#3730A3', // Darker indigo — pressed states
-  primaryTint: '#4F46E526', // Indigo at 15% opacity — selected backgrounds
+  primary: '#2DD4BF', // Teal — main CTA, active states
+  primaryLight: '#57F1DB', // Lighter teal — hover, highlights
+  primaryDark: '#14B8A6', // Deeper teal — pressed states
+  primaryTint: '#2DD4BF15', // Teal at ~8% opacity — selected backgrounds
 
   // ── Semantic ──
-  success: '#10B981', // Green — completed, on target
-  warning: '#F59E0B', // Amber — approaching limit, attention
-  error: '#EF4444', // Red — over limit, errors
-  info: '#3B82F6', // Blue — informational
+  success: '#34D399', // Emerald — completed, on target
+  warning: '#FBBF24', // Warm amber — approaching limit, attention
+  error: '#FB7185', // Rose — over limit, errors (soft, not alarming)
+  info: '#818CF8', // Soft indigo — informational
 
-  // ── Neutral ──
-  background: '#0F172A', // Dark navy — main background
-  surface: '#1E293B', // Slightly lighter — cards, panels
-  surfaceElevated: '#334155', // Elevated surfaces — modals, dropdowns
-  border: '#475569', // Subtle borders
+  // ── Neutral (tonal layering, no hard borders) ──
+  background: '#10141A', // Deep dark with blue undertone — canvas
+  surface: '#1C2026', // Slightly lighter — cards, panels
+  surfaceElevated: '#262A31', // Elevated surfaces — modals, dropdowns
+  border: '#3C4A46', // Subtle teal-tinted border (outline_variant)
 
-  // ── Text ──
-  textPrimary: '#F8FAFC', // White — headings, important text
-  textSecondary: '#94A3B8', // Gray — labels, descriptions
-  textMuted: '#64748B', // Dimmer gray — timestamps, hints
-  textInverse: '#0F172A', // Dark text on light backgrounds
+  // ── Text (off-white to prevent halation on dark backgrounds) ──
+  textPrimary: '#E5E7EB', // Off-white — headings, important text
+  textSecondary: '#9CA3AF', // Silver gray — labels, descriptions
+  textMuted: '#6B7280', // Slate — timestamps, hints
+  textInverse: '#10141A', // Dark text on light backgrounds
 
   // ── Macros (nutrition) ──
-  protein: '#EF4444', // Red — protein
-  carbs: '#3B82F6', // Blue — carbohydrates
-  fat: '#F59E0B', // Amber — fats
+  protein: '#FB7185', // Rose — protein
+  carbs: '#818CF8', // Indigo — carbohydrates
+  fat: '#FBBF24', // Amber — fats
 
   // ── Workout ──
-  restTimer: '#6366F1', // Indigo — rest timer ring
-  setComplete: '#10B981', // Green — completed set
-  setActive: '#F59E0B', // Amber — current set
+  restTimer: '#2DD4BF', // Teal — rest timer ring
+  setComplete: '#34D399', // Emerald — completed set
+  setActive: '#FBBF24', // Amber — current set
 } as const
 
 export type ColorKey = keyof typeof colors
