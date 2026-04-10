@@ -16,6 +16,7 @@ const DEFAULT_SIZE = 180
 const STROKE_WIDTH = 12
 const WARNING_THRESHOLD_SECONDS = 10
 const TICK_MS = 1000
+const FONT_RATIO = fontSize.display / DEFAULT_SIZE // Scale font to ring size
 
 interface RestTimerProps {
   durationSeconds: number
@@ -110,7 +111,7 @@ export function RestTimer({
         </Svg>
         <View style={styles.centerLabel} pointerEvents="none">
           <Text
-            style={[styles.time, { color: displayColor }]}
+            style={[styles.time, { color: displayColor, fontSize: Math.round(size * FONT_RATIO) }]}
             testID={testID ? `${testID}-display` : undefined}
           >
             {formatTime(remaining)}

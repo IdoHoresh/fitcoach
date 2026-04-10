@@ -315,6 +315,9 @@ export const he = {
     greatJob: 'כל הכבוד!',
     totalSets: 'סהכ סטים',
     exercisesCompleted: '{done}/{total} תרגילים',
+    firstWorkoutTitle: 'האימון הראשון שלך!',
+    firstWorkoutMessage:
+      'השבוע הוא שבוע היכרות — בחר משקל שנוח לך לבצע איתו את כל החזרות. גיבור ילמד את הנתונים שלך ויתאים לך תוכנית התקדמות אישית.',
     muscles: {
       chest: 'חזה',
       back: 'גב',

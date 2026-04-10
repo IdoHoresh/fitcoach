@@ -312,6 +312,9 @@ export const en: TranslationKeys = {
     greatJob: 'Great job!',
     totalSets: 'Total sets',
     exercisesCompleted: '{done}/{total} exercises',
+    firstWorkoutTitle: 'Your first workout!',
+    firstWorkoutMessage:
+      'This week is about learning your weights — pick a weight you can complete all reps with comfortably. Gibor will learn your starting point and build a personalized progression plan.',
     muscles: {
       chest: 'Chest',
       back: 'Back',

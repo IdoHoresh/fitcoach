@@ -33,10 +33,10 @@ export function SetRow({
   const rtl = isRTL()
 
   const defaultReps = Math.round((prescribedReps.min + prescribedReps.max) / 2)
-  const defaultWeight = suggestedWeightKg ?? 0
+  const hasWeight = suggestedWeightKg != null && suggestedWeightKg > 0
 
   const [weightText, setWeightText] = useState(
-    loggedSet ? String(loggedSet.weightKg) : String(defaultWeight),
+    loggedSet ? String(loggedSet.weightKg) : hasWeight ? String(suggestedWeightKg) : '',
   )
   const [repsText, setRepsText] = useState(loggedSet ? String(loggedSet.reps) : String(defaultReps))
 
@@ -104,6 +104,8 @@ export function SetRow({
           keyboardType="numeric"
           editable={isActive}
           selectTextOnFocus
+          placeholder={strings.kg}
+          placeholderTextColor={colors.textMuted}
           testID={testID ? `${testID}-weight` : undefined}
           accessibilityLabel={strings.weight}
         />
