@@ -2,14 +2,14 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { colors } from '@/theme/colors'
-import { spacing } from '@/theme/spacing'
+import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import { isRTL } from '@/hooks/rtl'
 import type { DayOfWeek } from '@/types/user'
 
 const CIRCLE_SIZE = 36
-const FLAME_SIZE = 18
+const ICON_SIZE = 16
 
 // DayOfWeek in the type is 0..6 (Sunday..Saturday).
 // JS Date.getDay() matches this convention, so we can iterate 0..6 directly.
@@ -18,7 +18,6 @@ const WEEKDAY_LABEL_KEYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'] as 
 interface WeekdayStreakStripProps {
   weekNumber: number | null
   completedThisWeek: number
-  weeklyGoal: number
   completedDaysOfWeek: readonly DayOfWeek[]
   todayDayOfWeek: DayOfWeek
   testID?: string
@@ -27,7 +26,6 @@ interface WeekdayStreakStripProps {
 export function WeekdayStreakStrip({
   weekNumber,
   completedThisWeek,
-  weeklyGoal,
   completedDaysOfWeek,
   todayDayOfWeek,
   testID,
@@ -35,41 +33,30 @@ export function WeekdayStreakStrip({
   const strings = t().home.v2
   const completedSet = new Set(completedDaysOfWeek)
 
-  const weekLabel = strings.streakWeekLabel
-    .replace('{week}', String(weekNumber ?? 0))
-    .replace('{done}', String(completedThisWeek))
-    .replace('{goal}', String(weeklyGoal))
+  const daysStreakText = strings.daysStreak.replace('{done}', String(completedThisWeek))
 
   return (
     <View style={styles.container} testID={testID}>
-      {weekNumber !== null && (
-        <View style={styles.headerRow}>
-          <View testID={testID ? `${testID}-flame` : undefined}>
-            <Ionicons name="flame" size={FLAME_SIZE} color={colors.warning} />
-          </View>
-          <Text style={styles.weekLabel} testID={testID ? `${testID}-week-label` : undefined}>
-            {weekLabel}
+      <View style={styles.headerRow}>
+        <Text style={styles.progressTitle}>{strings.progressTitle}</Text>
+        {weekNumber !== null && (
+          <Text style={styles.daysStreak} testID={testID ? `${testID}-week-label` : undefined}>
+            {daysStreakText}
           </Text>
-        </View>
-      )}
-
-      {weekNumber === null && (
-        <View style={styles.headerRow}>
-          <View testID={testID ? `${testID}-flame` : undefined}>
-            <Ionicons name="flame-outline" size={FLAME_SIZE} color={colors.textSecondary} />
-          </View>
-        </View>
-      )}
+        )}
+      </View>
 
       <View style={styles.dotsRow}>
         {([0, 1, 2, 3, 4, 5, 6] as readonly DayOfWeek[]).map((dayIdx) => {
           const isCompleted = completedSet.has(dayIdx)
           const isToday = dayIdx === todayDayOfWeek
+          // A day is "future" if it hasn't arrived yet this week and wasn't completed.
+          // Safe assumption: completedDaysOfWeek is always filtered to the current ISO week
+          // by the caller (index.tsx uses mesocycle.weekStartDate as the boundary).
+          const isFuture = dayIdx > todayDayOfWeek && !isCompleted
           const labelKey = WEEKDAY_LABEL_KEYS[dayIdx]
+          const isActive = isCompleted || isToday
 
-          // The outer cell carries the canonical `strip-day-N` testID.
-          // The circle only gets the `-completed` variant when filled,
-          // so canonical and variant testIDs never collide.
           const completedCircleTestID =
             isCompleted && testID ? `${testID}-day-${dayIdx}-completed` : undefined
 
@@ -78,22 +65,25 @@ export function WeekdayStreakStrip({
           return (
             <View
               key={dayIdx}
-              style={styles.dayCell}
+              style={[styles.dayCell, isFuture && styles.dayCellFuture]}
               testID={testID ? `${testID}-day-${dayIdx}` : undefined}
             >
               <View
-                style={[
-                  styles.circle,
-                  isCompleted && styles.circleCompleted,
-                  isToday && styles.circleToday,
-                ]}
+                style={[styles.circle, isActive && styles.circleActive]}
                 testID={completedCircleTestID}
               >
-                {isToday && <View style={styles.todayInner} testID={todayMarkerTestID} />}
-                <Text style={[styles.dayLabel, isCompleted && styles.dayLabelCompleted]}>
-                  {strings.weekdayShort[labelKey]}
-                </Text>
+                {isActive && (
+                  <Ionicons
+                    name={isToday ? 'flash' : 'checkmark'}
+                    size={ICON_SIZE}
+                    color={colors.textInverse}
+                    testID={todayMarkerTestID}
+                  />
+                )}
               </View>
+              <Text style={[styles.dayLabel, isToday && styles.dayLabelToday]}>
+                {strings.weekdayShort[labelKey]}
+              </Text>
             </View>
           )
         })}
@@ -105,17 +95,27 @@ export function WeekdayStreakStrip({
 const styles = StyleSheet.create({
   container: {
     gap: spacing.sm,
+    backgroundColor: colors.surfaceElevated,
+    borderRadius: borderRadius.xl,
+    padding: spacing.lg,
+    borderWidth: 1,
+    borderColor: colors.border + '1A',
   },
   headerRow: {
     flexDirection: isRTL() ? 'row-reverse' : 'row',
     alignItems: 'center',
-    gap: spacing.xs,
+    justifyContent: 'space-between',
     paddingHorizontal: spacing.xs,
   },
-  weekLabel: {
+  progressTitle: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
-    fontWeight: fontWeight.medium,
+    fontWeight: fontWeight.semibold,
+  },
+  daysStreak: {
+    fontSize: fontSize.sm,
+    color: colors.primary,
+    fontWeight: fontWeight.semibold,
   },
   dotsRow: {
     flexDirection: isRTL() ? 'row-reverse' : 'row',
@@ -123,6 +123,10 @@ const styles = StyleSheet.create({
   },
   dayCell: {
     alignItems: 'center',
+    gap: spacing.xxs,
+  },
+  dayCellFuture: {
+    opacity: 0.4,
   },
   circle: {
     width: CIRCLE_SIZE,
@@ -132,29 +136,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: 'transparent',
+    borderColor: colors.border,
   },
-  circleCompleted: {
-    backgroundColor: colors.success,
-  },
-  circleToday: {
+  circleActive: {
+    backgroundColor: colors.primary,
     borderColor: colors.primary,
   },
-  todayInner: {
-    position: 'absolute',
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-    backgroundColor: colors.primary,
-    top: 2,
-  },
   dayLabel: {
-    fontSize: fontSize.xs,
+    fontSize: 10,
     color: colors.textSecondary,
     fontWeight: fontWeight.medium,
   },
-  dayLabelCompleted: {
-    color: colors.textPrimary,
+  dayLabelToday: {
+    color: colors.primary,
     fontWeight: fontWeight.bold,
   },
 })

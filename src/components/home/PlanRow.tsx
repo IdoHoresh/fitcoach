@@ -9,7 +9,9 @@ import { isRTL } from '@/hooks/rtl'
 import { RTLWrapper } from '../shared/RTLWrapper'
 import type { PlanItem } from '@/utils/buildTodaysPlan'
 
-const INDICATOR_SIZE = 22
+const ICON_CONTAINER_SIZE = 48
+const ICON_SIZE = 22
+const CIRCLE_SIZE = 24
 const PILL_ICON_SIZE = 14
 const NEXT_LABEL_ICON_SIZE = 12
 
@@ -24,23 +26,17 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
   const isRest = item.kind === 'rest'
   const isGhost = item.kind === 'ghost'
   const isWorkout = item.kind === 'workout'
-  const isNext = item.isNext && !isRest // defensive — rest rows should never be next
+  const isNext = item.isNext && !isRest
 
-  // ── Label resolution ──
-  // Primary label comes from i18n planItems map; workout rows have a
-  // secondaryLabel with the template's localized name.
   const planItemKey = item.labelKey as keyof typeof strings.planItems
   const primaryLabel = isRest ? strings.restDay : strings.planItems[planItemKey]
   const secondaryLabel = item.secondaryLabel
 
-  // ── Pill label (only for next rows) ──
   const pillLabel = isWorkout ? strings.startPill : strings.logPill
 
-  // ── Indicator (left side of row) ──
-  const indicator = renderIndicator(item, isRest, isGhost, testID)
-
-  // ── Trailing value ──
+  const leadingIcon = renderLeadingIcon(item, testID)
   const trailing = renderTrailing(item, strings.caloriesShort, strings.minutesShort, testID)
+  const trailingCircle = renderTrailingCircle(item, testID)
 
   const rowStyles = [
     styles.row,
@@ -70,7 +66,7 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
       )}
 
       <RTLWrapper style={styles.content}>
-        {indicator}
+        {leadingIcon}
 
         {/* Primary + secondary label stack */}
         <View style={styles.labelColumn}>
@@ -86,7 +82,7 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
           )}
         </View>
 
-        {/* Trailing value + optional pill */}
+        {/* Trailing: value + pill OR check circle */}
         <View style={styles.trailingColumn}>
           {trailing}
           {isNext && (
@@ -104,6 +100,7 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
               />
             </Pressable>
           )}
+          {!isNext && trailingCircle}
         </View>
       </RTLWrapper>
     </Pressable>
@@ -112,46 +109,40 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
 
 // ── Sub-renderers ─────────────────────────────────────────────────
 
-function renderIndicator(
-  item: PlanItem,
-  isRest: boolean,
-  isGhost: boolean,
-  testID: string | undefined,
-): React.ReactElement {
-  if (isRest) {
-    return (
-      <View style={styles.indicator}>
-        <Ionicons name="bed-outline" size={INDICATOR_SIZE} color={colors.textSecondary} />
-      </View>
-    )
-  }
+function renderLeadingIcon(item: PlanItem, testID: string | undefined): React.ReactElement {
+  const isGhost = item.kind === 'ghost'
 
-  if (isGhost) {
-    return (
-      <View style={[styles.indicator, styles.indicatorGhost]}>
-        <View
-          style={styles.pendingCircle}
-          testID={testID ? `${testID}-pending-circle` : undefined}
-        />
-      </View>
-    )
-  }
+  let iconName: React.ComponentProps<typeof Ionicons>['name'] = 'ellipsis-horizontal'
+  if (item.kind === 'workout') iconName = 'barbell-outline'
+  else if (item.kind === 'meal') iconName = 'restaurant-outline'
+  else if (item.kind === 'rest') iconName = 'bed-outline'
+
+  return (
+    <View
+      style={[styles.iconContainer, isGhost && styles.iconContainerGhost]}
+      testID={testID ? `${testID}-icon` : undefined}
+    >
+      <Ionicons name={iconName} size={ICON_SIZE} color={colors.primary} />
+    </View>
+  )
+}
+
+function renderTrailingCircle(
+  item: PlanItem,
+  testID: string | undefined,
+): React.ReactElement | null {
+  if (item.kind === 'rest') return null
 
   if (item.done) {
     return (
-      <View
-        style={[styles.indicator, styles.indicatorDone]}
-        testID={testID ? `${testID}-check` : undefined}
-      >
-        <Ionicons name="checkmark" size={INDICATOR_SIZE - 4} color={colors.textPrimary} />
+      <View style={styles.doneCircle} testID={testID ? `${testID}-check` : undefined}>
+        <Ionicons name="checkmark" size={CIRCLE_SIZE - 10} color={colors.textInverse} />
       </View>
     )
   }
 
   return (
-    <View style={styles.indicator}>
-      <View style={styles.pendingCircle} testID={testID ? `${testID}-pending-circle` : undefined} />
-    </View>
+    <View style={styles.pendingCircle} testID={testID ? `${testID}-pending-circle` : undefined} />
   )
 }
 
@@ -190,12 +181,11 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.lg,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.md,
-    borderWidth: 1,
-    borderColor: 'transparent',
   },
   rowNext: {
+    borderWidth: 1,
     borderColor: colors.warning,
-    paddingTop: spacing.lg, // more room for the "next" label
+    paddingTop: spacing.lg,
   },
   rowGhost: {
     opacity: 0.45,
@@ -227,25 +217,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: spacing.sm,
   },
-  indicator: {
-    width: INDICATOR_SIZE + 4,
-    height: INDICATOR_SIZE + 4,
+  iconContainer: {
+    width: ICON_CONTAINER_SIZE,
+    height: ICON_CONTAINER_SIZE,
+    borderRadius: borderRadius.lg,
+    backgroundColor: colors.primaryTint,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  indicatorDone: {
-    backgroundColor: colors.success,
-    borderRadius: (INDICATOR_SIZE + 4) / 2,
-  },
-  indicatorGhost: {
-    opacity: 0.6,
-  },
-  pendingCircle: {
-    width: INDICATOR_SIZE,
-    height: INDICATOR_SIZE,
-    borderRadius: INDICATOR_SIZE / 2,
-    borderWidth: 2,
-    borderColor: colors.textSecondary,
+  iconContainerGhost: {
+    opacity: 0.5,
   },
   labelColumn: {
     flex: 1,
@@ -272,6 +253,21 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     color: colors.textSecondary,
     fontWeight: fontWeight.medium,
+  },
+  doneCircle: {
+    width: CIRCLE_SIZE,
+    height: CIRCLE_SIZE,
+    borderRadius: CIRCLE_SIZE / 2,
+    backgroundColor: colors.primary,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  pendingCircle: {
+    width: CIRCLE_SIZE,
+    height: CIRCLE_SIZE,
+    borderRadius: CIRCLE_SIZE / 2,
+    borderWidth: 2,
+    borderColor: colors.border,
   },
   pill: {
     flexDirection: isRTL() ? 'row-reverse' : 'row',

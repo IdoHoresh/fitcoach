@@ -31,9 +31,11 @@ export const en: TranslationKeys = {
 
   onboarding: {
     welcome: {
-      title: 'Welcome to Gibor',
-      subtitle: "We'll build your personal plan in 2 minutes",
-      cta: "Let's go",
+      title: 'Gibor',
+      subtitle: 'Science-based personal fitness coach',
+      cta: "Let's begin",
+      authPrompt: 'Already have an account?',
+      authLink: 'Sign in',
     },
     goal: {
       title: "What's your goal?",
@@ -236,7 +238,9 @@ export const en: TranslationKeys = {
       logPill: 'Log',
       restDay: 'Rest day — recover',
       celebration: 'You crushed today',
-      streakWeekLabel: 'Week {week} · {done}/{goal} workouts',
+      menuLabel: 'Menu',
+      progressTitle: 'Weekly Progress',
+      daysStreak: '{done} days in a row',
       planItems: {
         breakfast: 'Breakfast',
         lunch: 'Lunch',
@@ -249,9 +253,6 @@ export const en: TranslationKeys = {
         ghostWorkout: 'Workout',
       },
       macroLegend: {
-        proteinLetter: 'P',
-        carbsLetter: 'C',
-        fatLetter: 'F',
         proteinLabel: 'Protein',
         carbsLabel: 'Carbs',
         fatLabel: 'Fat',

@@ -23,37 +23,33 @@ describe('MacroLegend', () => {
     expect(screen.getByTestId('legend-fat')).toBeTruthy()
   })
 
-  it('displays current/goal grams for each macro', () => {
+  it('displays current grams for each macro', () => {
     render(<MacroLegend {...defaultProps} testID="legend" />)
-    expect(screen.getByText('60g/150g')).toBeTruthy()
-    expect(screen.getByText('100g/250g')).toBeTruthy()
-    expect(screen.getByText('40g/80g')).toBeTruthy()
+    expect(screen.getByText('60g')).toBeTruthy()
+    expect(screen.getByText('100g')).toBeTruthy()
+    expect(screen.getByText('40g')).toBeTruthy()
   })
 
-  it('shows the Hebrew letter labels when language is Hebrew (default)', () => {
-    render(<MacroLegend {...defaultProps} testID="legend" />)
-    expect(screen.getByText(t().home.v2.macroLegend.proteinLetter)).toBeTruthy()
-    expect(screen.getByText(t().home.v2.macroLegend.carbsLetter)).toBeTruthy()
-    expect(screen.getByText(t().home.v2.macroLegend.fatLetter)).toBeTruthy()
-  })
-
-  it('applies macro colors to the letter labels', () => {
-    render(<MacroLegend {...defaultProps} testID="legend" />)
-    expect(screen.getByTestId('legend-protein-letter')).toHaveStyle({
-      color: colors.protein,
-    })
-    expect(screen.getByTestId('legend-carbs-letter')).toHaveStyle({
-      color: colors.carbs,
-    })
-    expect(screen.getByTestId('legend-fat-letter')).toHaveStyle({
-      color: colors.fat,
-    })
-  })
-
-  it('displays the full macro label (חלבון / פחמימות / שומן) below the letter', () => {
+  it('displays the full macro label (חלבון / פחמימות / שומן)', () => {
     render(<MacroLegend {...defaultProps} testID="legend" />)
     expect(screen.getByText(t().home.v2.macroLegend.proteinLabel)).toBeTruthy()
     expect(screen.getByText(t().home.v2.macroLegend.carbsLabel)).toBeTruthy()
     expect(screen.getByText(t().home.v2.macroLegend.fatLabel)).toBeTruthy()
+  })
+
+  it('renders a colored dot for each macro column', () => {
+    render(<MacroLegend {...defaultProps} testID="legend" />)
+    expect(screen.getByTestId('legend-protein-dot')).toBeTruthy()
+    expect(screen.getByTestId('legend-carbs-dot')).toBeTruthy()
+    expect(screen.getByTestId('legend-fat-dot')).toBeTruthy()
+  })
+
+  it('applies macro colors to each dot', () => {
+    render(<MacroLegend {...defaultProps} testID="legend" />)
+    expect(screen.getByTestId('legend-protein-dot')).toHaveStyle({
+      backgroundColor: colors.protein,
+    })
+    expect(screen.getByTestId('legend-carbs-dot')).toHaveStyle({ backgroundColor: colors.carbs })
+    expect(screen.getByTestId('legend-fat-dot')).toHaveStyle({ backgroundColor: colors.fat })
   })
 })

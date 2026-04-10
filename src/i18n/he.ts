@@ -31,9 +31,11 @@ export const he = {
   // ── Onboarding ──
   onboarding: {
     welcome: {
-      title: 'ברוך הבא ל-Gibor',
-      subtitle: 'נבנה לך תוכנית אישית ב-2 דקות',
+      title: 'גִּבּוֹר',
+      subtitle: 'מאמן כושר אישי מבוסס מדע',
       cta: 'בוא נתחיל',
+      authPrompt: 'כבר יש לך חשבון?',
+      authLink: 'התחברות',
     },
     goal: {
       title: 'מה המטרה שלך?',
@@ -238,7 +240,9 @@ export const he = {
       logPill: 'רשום',
       restDay: 'יום מנוחה — התאוששות',
       celebration: 'כל הכבוד להיום — סיימת',
-      streakWeekLabel: 'שבוע {week} · {done}/{goal} אימונים',
+      menuLabel: 'תפריט',
+      progressTitle: 'התקדמות שבועית',
+      daysStreak: '{done} ימים ברצף',
       planItems: {
         breakfast: 'ארוחת בוקר',
         lunch: 'ארוחת צהריים',
@@ -251,9 +255,6 @@ export const he = {
         ghostWorkout: 'אימון',
       },
       macroLegend: {
-        proteinLetter: 'ח',
-        carbsLetter: 'פ',
-        fatLetter: 'ש',
         proteinLabel: 'חלבון',
         carbsLabel: 'פחמימות',
         fatLabel: 'שומן',
