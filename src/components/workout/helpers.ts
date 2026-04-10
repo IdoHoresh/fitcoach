@@ -31,3 +31,29 @@ export function isRestDay(day: GeneratedWorkoutDay | undefined): boolean {
 export function translateMuscle(muscle: MuscleGroup): string {
   return t().workout.muscles[muscle]
 }
+
+/** Format a set summary for collapsed exercise card: "3/3 sets · 40kg" */
+export function formatSetsSummary(
+  loggedSets: number,
+  totalSets: number,
+  lastWeightKg: number | null,
+): string {
+  const sets = `${loggedSets}/${totalSets}`
+  if (lastWeightKg != null && lastWeightKg > 0) {
+    return `${sets} · ${lastWeightKg}${t().workout.kg}`
+  }
+  return sets
+}
+
+/** Get the midpoint of a rep range for pre-filling set rows */
+export function getMidpointReps(minReps: number, maxReps: number): number {
+  return Math.round((minReps + maxReps) / 2)
+}
+
+/** Format elapsed time from ISO start to now as "MM:SS" */
+export function formatElapsed(startedAtISO: string): string {
+  const elapsed = Math.max(0, Math.floor((Date.now() - new Date(startedAtISO).getTime()) / 1000))
+  const minutes = Math.floor(elapsed / 60)
+  const seconds = elapsed % 60
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+}

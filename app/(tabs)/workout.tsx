@@ -14,6 +14,7 @@ import { ExerciseCard } from '@/components/workout/ExerciseCard'
 import { ExerciseDetailSheet } from '@/components/workout/ExerciseDetailSheet'
 import { RestDayCard } from '@/components/workout/RestDayCard'
 import { TomorrowPreview } from '@/components/workout/TomorrowPreview'
+import { ActiveWorkoutView } from '@/components/workout/ActiveWorkoutView'
 import { isRestDay } from '@/components/workout/helpers'
 import type { DayOfWeek } from '@/types/user'
 import type { Exercise, ExercisePrescription, ProgressionAdvice } from '@/types/workout'
@@ -27,6 +28,10 @@ export default function WorkoutScreen() {
   const dayMapping = useWorkoutStore((s) => s.dayMapping)
   const mesocycle = useWorkoutStore((s) => s.mesocycle)
   const getProgressionAdvice = useWorkoutStore((s) => s.getProgressionAdvice)
+  const activeSession = useWorkoutStore((s) => s.activeSession)
+  const startWorkout = useWorkoutStore((s) => s.startWorkout)
+  const finishWorkout = useWorkoutStore((s) => s.finishWorkout)
+  const abandonWorkout = useWorkoutStore((s) => s.abandonWorkout)
 
   // ── Local state ──
   const todayDayOfWeek = new Date().getDay() as DayOfWeek
@@ -43,6 +48,21 @@ export default function WorkoutScreen() {
   const selectedWorkout = dayMapping?.get(selectedDay)
   const rest = isRestDay(selectedWorkout)
   const exercises = selectedWorkout?.template?.exercises ?? []
+
+  const isActive = activeSession != null
+
+  // ── Active workout handlers ──
+  const handleStartWorkout = useCallback(() => {
+    startWorkout(selectedDay)
+  }, [startWorkout, selectedDay])
+
+  const handleFinishWorkout = useCallback(async () => {
+    await finishWorkout()
+  }, [finishWorkout])
+
+  const handleAbandonWorkout = useCallback(async () => {
+    await abandonWorkout()
+  }, [abandonWorkout])
 
   // ── Handlers ──
   const handleExercisePress = useCallback(
@@ -99,49 +119,60 @@ export default function WorkoutScreen() {
         />
       </View>
 
-      <ScrollView
-        style={styles.scroll}
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-        {rest ? (
-          <View style={styles.restContent}>
-            <RestDayCard testID="workout-rest-card" />
-            <TomorrowPreview
-              dayMapping={dayMapping}
-              todayDayOfWeek={todayDayOfWeek}
-              testID="workout-tomorrow"
-            />
-          </View>
-        ) : (
-          <View style={styles.exerciseList}>
-            {exercises.map((prescription, index) => {
-              const exercise = EXERCISE_MAP.get(prescription.exerciseId)
-              if (!exercise) return null
-              return (
-                <ExerciseCard
-                  key={prescription.exerciseId}
-                  exercise={exercise}
-                  prescription={prescription}
-                  order={index + 1}
-                  onPress={() => handleExercisePress(prescription, exercise)}
-                  testID={`workout-exercise-${index}`}
+      {isActive && activeSession ? (
+        <ActiveWorkoutView
+          exercises={exercises}
+          activeSession={activeSession}
+          onFinish={handleFinishWorkout}
+          onAbandon={handleAbandonWorkout}
+          testID="active-workout"
+        />
+      ) : (
+        <>
+          <ScrollView
+            style={styles.scroll}
+            contentContainerStyle={styles.scrollContent}
+            showsVerticalScrollIndicator={false}
+          >
+            {rest ? (
+              <View style={styles.restContent}>
+                <RestDayCard testID="workout-rest-card" />
+                <TomorrowPreview
+                  dayMapping={dayMapping}
+                  todayDayOfWeek={todayDayOfWeek}
+                  testID="workout-tomorrow"
                 />
-              )
-            })}
-          </View>
-        )}
-      </ScrollView>
+              </View>
+            ) : (
+              <View style={styles.exerciseList}>
+                {exercises.map((prescription, index) => {
+                  const exercise = EXERCISE_MAP.get(prescription.exerciseId)
+                  if (!exercise) return null
+                  return (
+                    <ExerciseCard
+                      key={prescription.exerciseId}
+                      exercise={exercise}
+                      prescription={prescription}
+                      order={index + 1}
+                      onPress={() => handleExercisePress(prescription, exercise)}
+                      testID={`workout-exercise-${index}`}
+                    />
+                  )
+                })}
+              </View>
+            )}
+          </ScrollView>
 
-      {!rest && (
-        <View style={[styles.bottomBar, { paddingBottom: insets.bottom + spacing.sm }]}>
-          <Button
-            label={strings.comingSoon}
-            onPress={() => {}}
-            disabled
-            testID="workout-start-btn"
-          />
-        </View>
+          {!rest && (
+            <View style={[styles.bottomBar, { paddingBottom: insets.bottom + spacing.sm }]}>
+              <Button
+                label={strings.startWorkout}
+                onPress={handleStartWorkout}
+                testID="workout-start-btn"
+              />
+            </View>
+          )}
+        </>
       )}
 
       <ExerciseDetailSheet
