@@ -62,6 +62,10 @@ export {
   selectTemplate,
 } from './meal-plan-generator'
 
+// Per-meal macro targeting
+export { computeMealTargets } from './meal-targets'
+export type { MealMacroTargetByName, MealName } from './meal-targets'
+
 // Streak calculation
 export { calculateStreak } from './streak'
 
