@@ -644,6 +644,19 @@ describe('logSet', () => {
     useWorkoutStore.getState().logSet('barbell_squat', VALID_SET)
     expect(useWorkoutStore.getState().error).toBe('No active workout session.')
   })
+
+  it('rejects invalid set data and sets error', () => {
+    useWorkoutStore.getState().logSet('barbell_squat', {
+      setNumber: -1,
+      weightKg: -50,
+      reps: 999,
+      rpe: 15,
+      isWarmup: false,
+    })
+
+    expect(useWorkoutStore.getState().activeSession!.loggedExercises).toHaveLength(0)
+    expect(useWorkoutStore.getState().error).toBeTruthy()
+  })
 })
 
 describe('completeExercise', () => {

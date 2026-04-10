@@ -542,6 +542,24 @@ describe('logFood', () => {
 
     expect(useNutritionStore.getState().error).toBe('Insert failed')
   })
+
+  it('should reject invalid food log entry and set error', async () => {
+    await useNutritionStore.getState().logFood({
+      foodId: '',
+      mealType: 'lunch',
+      date: 'not-a-date',
+      servingAmount: -5,
+      servingUnit: 'piece',
+      gramsConsumed: 170,
+      calories: 281,
+      protein: 53,
+      fat: 6,
+      carbs: 0,
+    })
+
+    expect(mockAddEntry).not.toHaveBeenCalled()
+    expect(useNutritionStore.getState().error).toBeTruthy()
+  })
 })
 
 describe('removeFood', () => {
@@ -694,6 +712,20 @@ describe('logWeight', () => {
     })
     expect(useNutritionStore.getState().weightLog).toHaveLength(1)
     expect(useNutritionStore.getState().weightLog[0].weightKg).toBe(79.5)
+  })
+
+  it('should reject invalid weight and set error', async () => {
+    await useNutritionStore.getState().logWeight(-10, '2026-04-07')
+
+    expect(mockAddMeasurement).not.toHaveBeenCalled()
+    expect(useNutritionStore.getState().error).toBeTruthy()
+  })
+
+  it('should reject invalid date and set error', async () => {
+    await useNutritionStore.getState().logWeight(79.5, 'invalid-date')
+
+    expect(mockAddMeasurement).not.toHaveBeenCalled()
+    expect(useNutritionStore.getState().error).toBeTruthy()
   })
 })
 
