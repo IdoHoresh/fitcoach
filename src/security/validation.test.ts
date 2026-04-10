@@ -55,6 +55,7 @@ const VALID_USER_PROFILE = {
     exerciseIntensity: 'moderate' as const,
     sleepHoursPerNight: 7.5,
   },
+  workoutTime: 'morning' as const,
 }
 
 const VALID_MESOCYCLE_STATE = {
@@ -198,6 +199,31 @@ describe('userProfileSchema name field', () => {
   it('rejects missing name field', () => {
     const { name: _, ...noName } = VALID_USER_PROFILE
     const result = validateInput(userProfileSchema, noName)
+    expect(result.success).toBe(false)
+  })
+})
+
+// ── userProfileSchema (workoutTime field) ──────────────────────────
+
+describe('userProfileSchema workoutTime field', () => {
+  it('accepts valid workoutTime values', () => {
+    for (const value of ['morning', 'evening', 'flexible'] as const) {
+      const result = validateInput(userProfileSchema, { ...VALID_USER_PROFILE, workoutTime: value })
+      expect(result.success).toBe(true)
+    }
+  })
+
+  it('rejects missing workoutTime field', () => {
+    const { workoutTime: _, ...noWorkoutTime } = VALID_USER_PROFILE
+    const result = validateInput(userProfileSchema, noWorkoutTime)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects invalid workoutTime value', () => {
+    const result = validateInput(userProfileSchema, {
+      ...VALID_USER_PROFILE,
+      workoutTime: 'afternoon',
+    })
     expect(result.success).toBe(false)
   })
 })

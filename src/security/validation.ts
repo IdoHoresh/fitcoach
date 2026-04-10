@@ -84,6 +84,7 @@ const occupationSchema = z.enum(['desk', 'mixed', 'active', 'physical_labor'])
 const lifestyleActivitySchema = z.enum(['sedentary', 'moderate', 'active'])
 const exerciseIntensitySchema = z.enum(['light', 'moderate', 'intense'])
 const exerciseTypeSchema = z.enum(['strength', 'cardio', 'both'])
+const workoutTimeSchema = z.enum(['morning', 'evening', 'flexible'])
 const sessionDurationSchema = z.union([
   z.literal(30),
   z.literal(45),
@@ -146,6 +147,7 @@ export const userProfileSchema = z.object({
     .max(6, 'Maximum 6 training days'),
   equipment: userEquipmentSchema,
   lifestyle: lifestyleProfileSchema,
+  workoutTime: workoutTimeSchema,
 })
 
 /** Validates a single logged set */

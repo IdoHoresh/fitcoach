@@ -119,7 +119,7 @@ export default function CalculatingScreen() {
   }
 
   return (
-    <OnboardingLayout step={10} onNext={() => {}} nextDisabled={true} testID="calculating-screen">
+    <OnboardingLayout step={11} onNext={() => {}} nextDisabled={true} testID="calculating-screen">
       <OnboardingTitle>
         <Text style={styles.title}>{strings.title}</Text>
       </OnboardingTitle>

@@ -7,6 +7,7 @@ export type {
   BiologicalSex,
   TrainingGoal,
   ExperienceLevel,
+  WorkoutTime,
   EquipmentItem,
   TrainingLocation,
   UserEquipment,

@@ -81,6 +81,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion > 0 && currentVersion < 7) {
       await migrateToV7(db)
     }
+    if (currentVersion > 0 && currentVersion < 9) {
+      await migrateToV9(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -137,6 +140,21 @@ async function migrateToV7(db: SQLite.SQLiteDatabase): Promise<void> {
 
   if (!existing.has('name')) {
     await db.execAsync(`ALTER TABLE user_profile ADD COLUMN name TEXT NOT NULL DEFAULT ''`)
+  }
+}
+
+/**
+ * v9: Add workout_time column to user_profile.
+ * Drives per-meal macro targeting (pre/post-workout meal roles).
+ */
+async function migrateToV9(db: SQLite.SQLiteDatabase): Promise<void> {
+  const columns = await db.getAllAsync<{ name: string }>(`PRAGMA table_info(user_profile)`)
+  const existing = new Set(columns.map((c) => c.name))
+
+  if (!existing.has('workout_time')) {
+    await db.execAsync(
+      `ALTER TABLE user_profile ADD COLUMN workout_time TEXT NOT NULL DEFAULT 'flexible'`,
+    )
   }
 }
 

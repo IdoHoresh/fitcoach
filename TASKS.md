@@ -108,7 +108,8 @@
 - [ ] Remove dev-only buttons from Profile tab (cleanup after Nutrition + Workout tabs ship)
 - [x] Workout screen (daily workout display, exercise list with sets/reps)
 - [x] Active workout UI (guided session — current exercise, log sets, rest timer)
-- [ ] Nutrition screen (daily macro targets, food log, meal tracking)
+- [x] Nutrition screen (daily macro targets, food log, meal tracking) — PR #40, 1,853 tests
+- [ ] Guided meal logging — macro tabs, per-meal targets, meal generation, redistribution (spec: docs/specs/2026-04-11-guided-meal-logging.md)
 - [ ] Progress screen (weight chart, volume trends, body measurements)
 - [ ] Settings screen (edit profile, equipment, language, app info)
 - [ ] "Data is stored locally" notice in Settings (users need to know — no cloud sync in v1.0)
@@ -463,3 +464,5 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Workout screen: daily workout display, exercise list, detail sheet, rest day card (PR #32) — 7 new components, i18n muscle names, 1,751 tests
 - [x] Exercise GIF demos + Hebrew instructions (PR #33) — 59 GIFs from ExerciseDB, ℹ️ info button, 76 exercises with beginner Hebrew instructions, RTL fixes, 28 Hebrew name corrections, 1,754 tests
 - [x] Active workout UI (PR #35) — 7 new components (SetRow, ActiveExerciseCard, ActiveWorkoutView, FloatingRestBubble, FinishWorkoutBar, EndEarlyDialog, WorkoutTimer), guided session with set logging, auto-advance, inline rest timer + floating bubble, end early dialog, 1,754 tests
+- [x] Home dashboard Stitch redesign (PR #39) — converted Home Dashboard and Welcome screens to Stitch design system
+- [x] Nutrition screen — full daily food log with meal tracking (PR #40) — 10 new components (DaySelector, NutritionCalorieArc, NutritionMacroPills, MealSection, FoodItemRow, MealEmptyState, AdherencePicker, FoodSearchSheet, PortionPicker + helpers), MealAdherence DB table + repository, date-aware store, 1,853 tests

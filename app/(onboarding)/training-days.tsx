@@ -45,7 +45,7 @@ export default function TrainingDaysScreen() {
     updateDraft({
       trainingDays: selectedDays.map(Number) as DayOfWeek[],
     })
-    router.push('/(onboarding)/activity')
+    router.push('/(onboarding)/workout-time')
   }
 
   return (

@@ -69,6 +69,16 @@ export const he = {
       subtitle: 'בחר לפחות 2 ימים',
       days: ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'],
     },
+    workoutTime: {
+      title: 'מתי אתה בדרך כלל מתאמן?',
+      subtitle: 'זה עוזר לנו לתכנן את הארוחות סביב האימון',
+      morning: 'בוקר',
+      morningDesc: 'לפני הצהריים',
+      evening: 'ערב',
+      eveningDesc: 'אחרי 17:00',
+      flexible: 'גמיש',
+      flexibleDesc: 'משתנה מיום ליום',
+    },
     equipment: {
       title: 'איזה ציוד זמין לך?',
       fullGym: 'חדר כושר מלא',

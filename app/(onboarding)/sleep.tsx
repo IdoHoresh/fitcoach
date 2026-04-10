@@ -34,7 +34,7 @@ export default function SleepScreen() {
 
   return (
     <OnboardingLayout
-      step={9}
+      step={10}
       onNext={handleNext}
       onBack={() => router.back()}
       nextDisabled={false}
