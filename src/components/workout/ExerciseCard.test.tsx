@@ -14,6 +14,7 @@ const MOCK_EXERCISE: Exercise = {
   requiredEquipment: ['barbell', 'bench'],
   substitutionIds: [],
   instructions: 'Lower the bar to mid-chest, press back up.',
+  gifUrl: 'https://static.exercisedb.dev/media/test.gif',
 }
 
 const MOCK_PRESCRIPTION: ExercisePrescription = {
@@ -74,5 +75,10 @@ describe('ExerciseCard', () => {
     const prescription = { ...MOCK_PRESCRIPTION, minReps: 10, maxReps: 10 }
     render(<ExerciseCard {...defaultProps} prescription={prescription} />)
     expect(screen.getByText('3 × 10')).toBeTruthy()
+  })
+
+  it('renders info button', () => {
+    render(<ExerciseCard {...defaultProps} />)
+    expect(screen.getByTestId('exercise-card-info')).toBeTruthy()
   })
 })

@@ -14,6 +14,7 @@ const MOCK_EXERCISE: Exercise = {
   requiredEquipment: ['barbell', 'bench'],
   substitutionIds: [],
   instructions: 'Lower the bar to mid-chest, press back up.',
+  gifUrl: 'https://static.exercisedb.dev/media/test.gif',
 }
 
 const MOCK_PRESCRIPTION: ExercisePrescription = {
@@ -112,5 +113,16 @@ describe('ExerciseDetailSheet', () => {
     render(<ExerciseDetailSheet {...defaultProps} exercise={null} prescription={null} />)
     // Should not crash — modal is visible but empty
     expect(screen.getByTestId('detail-sheet-close')).toBeTruthy()
+  })
+
+  it('renders GIF image when gifUrl is provided', () => {
+    render(<ExerciseDetailSheet {...defaultProps} />)
+    expect(screen.getByTestId('detail-sheet-gif')).toBeTruthy()
+  })
+
+  it('does not render GIF when gifUrl is null', () => {
+    const exerciseNoGif = { ...MOCK_EXERCISE, gifUrl: null }
+    render(<ExerciseDetailSheet {...defaultProps} exercise={exerciseNoGif} />)
+    expect(screen.queryByTestId('detail-sheet-gif')).toBeNull()
   })
 })

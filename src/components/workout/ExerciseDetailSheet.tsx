@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   View,
   Text,
+  Image,
   Modal,
   Pressable,
   ScrollView,
@@ -58,6 +59,8 @@ export function ExerciseDetailSheet({
           <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
             {exercise && prescription ? (
               <>
+                {exercise.gifUrl && <ExerciseGif url={exercise.gifUrl} testID={testID} />}
+
                 <Text style={styles.name}>{isRTL() ? exercise.nameHe : exercise.nameEn}</Text>
 
                 <Text style={styles.setsReps}>
@@ -139,7 +142,51 @@ export function ExerciseDetailSheet({
   )
 }
 
+const GIF_SIZE = 200
+
+function ExerciseGif({ url, testID }: { url: string; testID?: string }) {
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+
+  if (error) return null
+
+  return (
+    <View style={styles.gifContainer}>
+      {loading && (
+        <ActivityIndicator
+          style={styles.gifLoader}
+          color={colors.primary}
+          testID={testID ? `${testID}-gif-loading` : undefined}
+        />
+      )}
+      <Image
+        source={{ uri: url }}
+        style={styles.gif}
+        resizeMode="contain"
+        onLoad={() => setLoading(false)}
+        onError={() => setError(true)}
+        testID={testID ? `${testID}-gif` : undefined}
+      />
+    </View>
+  )
+}
+
 const styles = StyleSheet.create({
+  gifContainer: {
+    alignItems: 'center',
+    marginBottom: spacing.md,
+    minHeight: GIF_SIZE,
+    justifyContent: 'center',
+  },
+  gifLoader: {
+    position: 'absolute',
+  },
+  gif: {
+    width: GIF_SIZE,
+    height: GIF_SIZE,
+    borderRadius: borderRadius.md,
+    backgroundColor: colors.surfaceElevated,
+  },
   overlay: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -153,7 +200,7 @@ const styles = StyleSheet.create({
     paddingBottom: spacing.xl,
   },
   header: {
-    flexDirection: 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: spacing.md,
@@ -174,14 +221,17 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.bold,
     color: colors.textPrimary,
     marginBottom: spacing.xs,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   setsReps: {
     fontSize: fontSize.md,
     color: colors.textSecondary,
     marginBottom: spacing.md,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   section: {
     marginBottom: spacing.md,
+    alignItems: isRTL() ? 'flex-end' : 'flex-start',
   },
   sectionTitle: {
     fontSize: fontSize.sm,
@@ -189,6 +239,7 @@ const styles = StyleSheet.create({
     color: colors.textMuted,
     textTransform: 'uppercase',
     marginBottom: spacing.xs,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   badgeRow: {
     flexDirection: isRTL() ? 'row-reverse' : 'row',
@@ -220,6 +271,7 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     color: colors.textPrimary,
     lineHeight: fontSize.md * 1.5,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   adviceCard: {
     backgroundColor: colors.surfaceElevated,
@@ -231,13 +283,16 @@ const styles = StyleSheet.create({
     fontSize: fontSize.lg,
     fontWeight: fontWeight.bold,
     color: colors.primary,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   adviceReason: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   noAdvice: {
     fontSize: fontSize.sm,
     color: colors.textMuted,
+    textAlign: isRTL() ? 'right' : 'left',
   },
 })

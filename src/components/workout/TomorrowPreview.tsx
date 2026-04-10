@@ -4,7 +4,8 @@ import { Card } from '@/components/Card'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
-import { isRTL, t } from '@/i18n'
+import { isRTL } from '@/hooks/rtl'
+import { t } from '@/i18n'
 import { getNextDay, isRestDay } from './helpers'
 import type { DayOfWeek } from '@/types/user'
 import type { GeneratedWorkoutDay } from '@/algorithms/workout-generator'
@@ -54,10 +55,12 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
     color: colors.textPrimary,
     marginBottom: spacing.sm,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   restMessage: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   workoutInfo: {
     flexDirection: isRTL() ? 'row-reverse' : 'row',
