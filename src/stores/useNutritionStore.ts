@@ -17,10 +17,12 @@
 
 import { create } from 'zustand'
 import type {
+  AdherenceLevel,
   BodyMeasurement,
   DailyNutritionSummary,
   DayOfWeek,
   FoodLogEntry,
+  MealAdherence,
   MealPlan,
   MealPlanDay,
   MealsPerDay,
@@ -35,6 +37,7 @@ import { recalibrate } from '../algorithms/weekly-recalibration'
 import { FOOD_MAP } from '../data/foods'
 import {
   foodLogRepository,
+  mealAdherenceRepository,
   mealPlanRepository,
   savedMealRepository,
   weeklyCheckInRepository,
@@ -43,7 +46,12 @@ import {
 } from '../db'
 import { useUserStore } from './useUserStore'
 import { he, en } from '../i18n'
-import { validateInput, foodLogEntrySchema, bodyMeasurementSchema } from '../security/validation'
+import {
+  validateInput,
+  foodLogEntrySchema,
+  bodyMeasurementSchema,
+  mealAdherenceSchema,
+} from '../security/validation'
 
 // ── Store Interface ───────────────────────────────────────────────
 
@@ -51,11 +59,13 @@ interface NutritionStore {
   // State
   activePlan: MealPlan | null
   todaysLog: FoodLogEntry[]
+  selectedDateLog: FoodLogEntry[] // food log for the date selected in NutritionDashboard
   dailySummary: DailyNutritionSummary | null
   savedMeals: SavedMeal[]
   recentCheckIns: WeeklyCheckIn[]
   latestRecalibration: RecalibrationResult | null
   weightLog: BodyMeasurement[]
+  dateAdherence: MealAdherence[] // adherence records for selectedDate
   isLoading: boolean
   error: string | null
 
@@ -68,6 +78,11 @@ interface NutritionStore {
   logFood: (entry: Omit<FoodLogEntry, 'id'>) => Promise<void>
   removeFood: (entryId: string) => Promise<void>
   loadTodaysLog: () => Promise<void>
+  loadLogForDate: (date: string) => Promise<void>
+
+  // Meal Adherence
+  setMealAdherence: (date: string, mealType: MealType, level: AdherenceLevel) => Promise<void>
+  loadAdherenceForDate: (date: string) => Promise<void>
 
   // Saved Meals
   saveMeal: (meal: Omit<SavedMeal, 'id'>) => Promise<void>
@@ -133,11 +148,13 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
   // Initial state
   activePlan: null,
   todaysLog: [],
+  selectedDateLog: [],
   dailySummary: null,
   savedMeals: [],
   recentCheckIns: [],
   latestRecalibration: null,
   weightLog: [],
+  dateAdherence: [],
   isLoading: false,
   error: null,
 
@@ -286,6 +303,53 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
       set({ error: err instanceof Error ? err.message : "Failed to load today's log" })
     } finally {
       set({ isLoading: false })
+    }
+  },
+
+  loadLogForDate: async (date: string) => {
+    set({ error: null })
+
+    try {
+      const entries = await foodLogRepository.getEntriesByDate(date)
+      set({ selectedDateLog: entries })
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to load food log' })
+    }
+  },
+
+  // ── Meal Adherence ────────────────────────────────────────────
+
+  setMealAdherence: async (date: string, mealType: MealType, level: AdherenceLevel) => {
+    set({ error: null })
+
+    const validation = validateInput(mealAdherenceSchema, { date, mealType, level })
+    if (!validation.success) {
+      set({ error: validation.errors.join('; ') })
+      return
+    }
+
+    try {
+      const adherence = await mealAdherenceRepository.saveAdherence({ date, mealType, level })
+
+      set((state) => ({
+        dateAdherence: [
+          ...state.dateAdherence.filter((a) => !(a.date === date && a.mealType === mealType)),
+          adherence,
+        ],
+      }))
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to save adherence' })
+    }
+  },
+
+  loadAdherenceForDate: async (date: string) => {
+    set({ error: null })
+
+    try {
+      const adherence = await mealAdherenceRepository.getAdherenceForDate(date)
+      set({ dateAdherence: adherence })
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to load adherence' })
     }
   },
 

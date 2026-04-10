@@ -8,6 +8,7 @@ export { userRepository, measurementRepository } from './user-repository'
 export { workoutRepository } from './workout-repository'
 export {
   foodLogRepository,
+  mealAdherenceRepository,
   mealPlanRepository,
   savedMealRepository,
   weeklyCheckInRepository,
