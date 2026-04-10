@@ -3,7 +3,8 @@ import { View, Text, StyleSheet } from 'react-native'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
-import { isRTL, t } from '@/i18n'
+import { isRTL } from '@/hooks/rtl'
+import { t } from '@/i18n'
 import { isRestDay } from './helpers'
 import type { GeneratedWorkoutDay } from '@/algorithms/workout-generator'
 import type { MesocycleState } from '@/types/workout'
@@ -56,6 +57,7 @@ export function WorkoutHeader({ workout, mesocycle, testID }: WorkoutHeaderProps
 const styles = StyleSheet.create({
   container: {
     gap: spacing.xs,
+    alignItems: isRTL() ? 'flex-end' : 'flex-start',
   },
   titleRow: {
     flexDirection: isRTL() ? 'row-reverse' : 'row',

@@ -81,9 +81,10 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     fontWeight: fontWeight.semibold,
     color: colors.textPrimary,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   detailsRow: {
-    flexDirection: 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
     alignItems: 'center',
     gap: spacing.xs,
   },

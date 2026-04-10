@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     paddingBottom: spacing.xl,
   },
   header: {
-    flexDirection: 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: spacing.md,
@@ -174,14 +174,17 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.bold,
     color: colors.textPrimary,
     marginBottom: spacing.xs,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   setsReps: {
     fontSize: fontSize.md,
     color: colors.textSecondary,
     marginBottom: spacing.md,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   section: {
     marginBottom: spacing.md,
+    alignItems: isRTL() ? 'flex-end' : 'flex-start',
   },
   sectionTitle: {
     fontSize: fontSize.sm,
@@ -189,6 +192,7 @@ const styles = StyleSheet.create({
     color: colors.textMuted,
     textTransform: 'uppercase',
     marginBottom: spacing.xs,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   badgeRow: {
     flexDirection: isRTL() ? 'row-reverse' : 'row',
@@ -220,6 +224,7 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     color: colors.textPrimary,
     lineHeight: fontSize.md * 1.5,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   adviceCard: {
     backgroundColor: colors.surfaceElevated,
@@ -231,13 +236,16 @@ const styles = StyleSheet.create({
     fontSize: fontSize.lg,
     fontWeight: fontWeight.bold,
     color: colors.primary,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   adviceReason: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
+    textAlign: isRTL() ? 'right' : 'left',
   },
   noAdvice: {
     fontSize: fontSize.sm,
     color: colors.textMuted,
+    textAlign: isRTL() ? 'right' : 'left',
   },
 })

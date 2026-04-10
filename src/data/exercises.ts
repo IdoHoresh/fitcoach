@@ -77,7 +77,7 @@ export const BARBELL_BENCH_PRESS = createExercise({
 
 export const INCLINE_DUMBBELL_PRESS = createExercise({
   nameEn: 'Incline Dumbbell Press',
-  nameHe: 'לחיצת חזה משופע עם משקולות',
+  nameHe: 'לחיצת חזה משופע עם דמבלים',
   primaryMuscle: 'chest',
   secondaryMuscles: ['triceps', 'shoulders'],
   movementPattern: 'horizontal_push',
@@ -89,7 +89,7 @@ export const INCLINE_DUMBBELL_PRESS = createExercise({
 
 export const DUMBBELL_BENCH_PRESS = createExercise({
   nameEn: 'Dumbbell Bench Press',
-  nameHe: 'לחיצת חזה עם משקולות',
+  nameHe: 'לחיצת חזה עם דמבלים',
   primaryMuscle: 'chest',
   secondaryMuscles: ['triceps', 'shoulders'],
   movementPattern: 'horizontal_push',
@@ -101,7 +101,7 @@ export const DUMBBELL_BENCH_PRESS = createExercise({
 
 export const DUMBBELL_FLY = createExercise({
   nameEn: 'Dumbbell Fly',
-  nameHe: 'פרפר עם משקולות',
+  nameHe: 'פרפר עם דמבלים',
   primaryMuscle: 'chest',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -189,7 +189,7 @@ export const BARBELL_ROW = createExercise({
 
 export const SEATED_CABLE_ROW = createExercise({
   nameEn: 'Seated Cable Row',
-  nameHe: 'חתירה בכבל ישיבה',
+  nameHe: 'חתירה בישיבה בכבל',
   primaryMuscle: 'back',
   secondaryMuscles: ['biceps'],
   movementPattern: 'horizontal_pull',
@@ -201,7 +201,7 @@ export const SEATED_CABLE_ROW = createExercise({
 
 export const DUMBBELL_ROW = createExercise({
   nameEn: 'Single-Arm Dumbbell Row',
-  nameHe: 'חתירה חד-צדדית עם משקולת',
+  nameHe: 'חתירה חד-צדדית עם דמבל',
   primaryMuscle: 'back',
   secondaryMuscles: ['biceps'],
   movementPattern: 'horizontal_pull',
@@ -237,7 +237,7 @@ export const PULL_UP = createExercise({
 
 export const CABLE_PULLOVER = createExercise({
   nameEn: 'Cable Pullover',
-  nameHe: 'פולאובר בכבל',
+  nameHe: 'פול אובר בכבל',
   primaryMuscle: 'back',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -313,7 +313,7 @@ export const OVERHEAD_PRESS = createExercise({
 
 export const DUMBBELL_SHOULDER_PRESS = createExercise({
   nameEn: 'Dumbbell Shoulder Press',
-  nameHe: 'לחיצת כתפיים עם משקולות',
+  nameHe: 'לחיצת כתפיים עם דמבלים',
   primaryMuscle: 'shoulders',
   secondaryMuscles: ['triceps'],
   movementPattern: 'vertical_push',
@@ -337,7 +337,7 @@ export const PIKE_PUSH_UP = createExercise({
 
 export const DUMBBELL_LATERAL_RAISE = createExercise({
   nameEn: 'Dumbbell Lateral Raise',
-  nameHe: 'הרמה צידית עם משקולות',
+  nameHe: 'הרמה צידית עם דמבלים',
   primaryMuscle: 'shoulders',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -397,7 +397,7 @@ export const FACE_PULL = createExercise({
 
 export const REVERSE_DUMBBELL_FLY = createExercise({
   nameEn: 'Reverse Dumbbell Fly',
-  nameHe: 'פרפר הפוך עם משקולות',
+  nameHe: 'פרפר הפוך עם דמבלים',
   primaryMuscle: 'shoulders',
   secondaryMuscles: ['back'],
   movementPattern: 'isolation',
@@ -425,7 +425,7 @@ export const BAND_FACE_PULL = createExercise({
 
 export const INCLINE_DUMBBELL_CURL = createExercise({
   nameEn: 'Incline Dumbbell Curl',
-  nameHe: 'כיפוף עם משקולות על ספסל משופע',
+  nameHe: 'כיפוף על ספסל משופע עם דמבלים',
   primaryMuscle: 'biceps',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -509,7 +509,7 @@ export const BAND_CURL = createExercise({
 
 export const BODYWEIGHT_BICEP_CURL = createExercise({
   nameEn: 'Self-Resisted Bicep Curl',
-  nameHe: 'כיפוף ביספס עם התנגדות עצמית',
+  nameHe: 'כיפוף יד עם התנגדות עצמית',
   primaryMuscle: 'biceps',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -525,7 +525,7 @@ export const BODYWEIGHT_BICEP_CURL = createExercise({
 
 export const OVERHEAD_TRICEP_EXTENSION = createExercise({
   nameEn: 'Overhead Tricep Extension (Cable)',
-  nameHe: 'הארכת טרייספס מעל הראש בכבל',
+  nameHe: 'פשיטת טרייספס מעל הראש בכבל',
   primaryMuscle: 'triceps',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -537,7 +537,7 @@ export const OVERHEAD_TRICEP_EXTENSION = createExercise({
 
 export const OVERHEAD_DUMBBELL_TRICEP_EXTENSION = createExercise({
   nameEn: 'Overhead Dumbbell Tricep Extension',
-  nameHe: 'הארכת טרייספס מעל הראש עם משקולת',
+  nameHe: 'פשיטת טרייספס מעל הראש עם דמבל',
   primaryMuscle: 'triceps',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -549,7 +549,7 @@ export const OVERHEAD_DUMBBELL_TRICEP_EXTENSION = createExercise({
 
 export const SKULL_CRUSHER = createExercise({
   nameEn: 'Skull Crusher (EZ Bar)',
-  nameHe: 'סקאל קראשר',
+  nameHe: 'מוחץ גולגולות',
   primaryMuscle: 'triceps',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -561,7 +561,7 @@ export const SKULL_CRUSHER = createExercise({
 
 export const TRICEP_PUSHDOWN = createExercise({
   nameEn: 'Tricep Pushdown (Cable)',
-  nameHe: 'לחיצת טרייספס בכבל',
+  nameHe: 'פשיטת מרפקים בכבל',
   primaryMuscle: 'triceps',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -597,7 +597,7 @@ export const DIAMOND_PUSH_UP = createExercise({
 
 export const BENCH_DIP = createExercise({
   nameEn: 'Bench Dip',
-  nameHe: 'טבילה על ספסל',
+  nameHe: 'דיפס על ספסל',
   primaryMuscle: 'triceps',
   secondaryMuscles: ['chest', 'shoulders'],
   movementPattern: 'isolation',
@@ -609,7 +609,7 @@ export const BENCH_DIP = createExercise({
 
 export const BAND_TRICEP_PUSHDOWN = createExercise({
   nameEn: 'Band Tricep Pushdown',
-  nameHe: 'לחיצת טרייספס בגומיה',
+  nameHe: 'פשיטת מרפקים עם גומיה',
   primaryMuscle: 'triceps',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -637,7 +637,7 @@ export const BARBELL_BACK_SQUAT = createExercise({
 
 export const LEG_PRESS = createExercise({
   nameEn: 'Leg Press',
-  nameHe: 'לג פרס',
+  nameHe: 'לחיצת רגליים',
   primaryMuscle: 'quads',
   secondaryMuscles: ['glutes'],
   movementPattern: 'squat',
@@ -661,7 +661,7 @@ export const BULGARIAN_SPLIT_SQUAT = createExercise({
 
 export const GOBLET_SQUAT = createExercise({
   nameEn: 'Goblet Squat',
-  nameHe: 'סקוואט גובלט',
+  nameHe: 'סקוואט גביע',
   primaryMuscle: 'quads',
   secondaryMuscles: ['glutes'],
   movementPattern: 'squat',
@@ -673,7 +673,7 @@ export const GOBLET_SQUAT = createExercise({
 
 export const LEG_EXTENSION = createExercise({
   nameEn: 'Leg Extension',
-  nameHe: 'לג אקסטנשן',
+  nameHe: 'יישור ברכיים',
   primaryMuscle: 'quads',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -733,7 +733,7 @@ export const PISTOL_SQUAT = createExercise({
 
 export const STEP_UP = createExercise({
   nameEn: 'Step-Up',
-  nameHe: 'עליה על משטח',
+  nameHe: 'עלייה על משטח',
   primaryMuscle: 'quads',
   secondaryMuscles: ['glutes'],
   movementPattern: 'squat',
@@ -761,7 +761,7 @@ export const ROMANIAN_DEADLIFT = createExercise({
 
 export const DUMBBELL_RDL = createExercise({
   nameEn: 'Dumbbell Romanian Deadlift',
-  nameHe: 'מתה רומני עם משקולות',
+  nameHe: 'מתה רומני עם דמבלים',
   primaryMuscle: 'hamstrings',
   secondaryMuscles: ['glutes', 'back'],
   movementPattern: 'hip_hinge',
@@ -773,7 +773,7 @@ export const DUMBBELL_RDL = createExercise({
 
 export const SEATED_LEG_CURL = createExercise({
   nameEn: 'Seated Leg Curl',
-  nameHe: 'לג קרל בישיבה',
+  nameHe: 'כפיפת ברכיים בישיבה',
   primaryMuscle: 'hamstrings',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -785,7 +785,7 @@ export const SEATED_LEG_CURL = createExercise({
 
 export const LYING_LEG_CURL = createExercise({
   nameEn: 'Lying Leg Curl',
-  nameHe: 'לג קרל שכיבה',
+  nameHe: 'כפיפת ברכיים בשכיבה',
   primaryMuscle: 'hamstrings',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -797,7 +797,7 @@ export const LYING_LEG_CURL = createExercise({
 
 export const NORDIC_CURL = createExercise({
   nameEn: 'Nordic Hamstring Curl',
-  nameHe: 'נורדיק קרל',
+  nameHe: 'כפיפה נורדית',
   primaryMuscle: 'hamstrings',
   secondaryMuscles: [],
   movementPattern: 'isolation',
@@ -809,7 +809,7 @@ export const NORDIC_CURL = createExercise({
 
 export const BARBELL_DEADLIFT = createExercise({
   nameEn: 'Conventional Deadlift',
-  nameHe: 'מתה קונבנציונלי',
+  nameHe: 'דדליפט קונבנציונלי',
   primaryMuscle: 'hamstrings',
   secondaryMuscles: ['glutes', 'back', 'quads'],
   movementPattern: 'hip_hinge',
@@ -833,7 +833,7 @@ export const SINGLE_LEG_RDL = createExercise({
 
 export const SLIDING_LEG_CURL = createExercise({
   nameEn: 'Sliding Leg Curl',
-  nameHe: 'לג קרל גלישה',
+  nameHe: 'כפיפת ברכיים בגלישה',
   primaryMuscle: 'hamstrings',
   secondaryMuscles: ['glutes'],
   movementPattern: 'isolation',
@@ -861,7 +861,7 @@ export const HIP_THRUST = createExercise({
 
 export const GLUTE_BRIDGE = createExercise({
   nameEn: 'Glute Bridge',
-  nameHe: 'גשר ישבן',
+  nameHe: 'גשר ישבני',
   primaryMuscle: 'glutes',
   secondaryMuscles: ['hamstrings'],
   movementPattern: 'hip_hinge',
@@ -873,7 +873,7 @@ export const GLUTE_BRIDGE = createExercise({
 
 export const SINGLE_LEG_GLUTE_BRIDGE = createExercise({
   nameEn: 'Single-Leg Glute Bridge',
-  nameHe: 'גשר ישבן חד-רגלי',
+  nameHe: 'גשר ישבני חד-רגלי',
   primaryMuscle: 'glutes',
   secondaryMuscles: ['hamstrings'],
   movementPattern: 'hip_hinge',
@@ -1001,7 +1001,7 @@ export const LYING_LEG_RAISE = createExercise({
 
 export const MOUNTAIN_CLIMBER = createExercise({
   nameEn: 'Mountain Climber',
-  nameHe: 'מטפס הרים',
+  nameHe: 'מטפסי הרים',
   primaryMuscle: 'abs',
   secondaryMuscles: ['shoulders'],
   movementPattern: 'core',
