@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Pressable, StyleSheet } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
@@ -9,8 +10,11 @@ import { isRTL } from '@/hooks/rtl'
 
 const AVATAR_SIZE = 40
 
+const MENU_ICON_SIZE = 24
+
 interface HomeHeaderProps {
   onAvatarPress: () => void
+  onMenuPress?: () => void
   name?: string
   testID?: string
 }
@@ -45,7 +49,7 @@ function formatTodayDate(now: Date): string {
     .replace('{month}', month)
 }
 
-export function HomeHeader({ onAvatarPress, name, testID }: HomeHeaderProps) {
+export function HomeHeader({ onAvatarPress, onMenuPress, name, testID }: HomeHeaderProps) {
   const now = new Date()
   const greetingKey = getGreetingKey(now.getHours())
   const trimmedName = name?.trim() ?? ''
@@ -57,14 +61,6 @@ export function HomeHeader({ onAvatarPress, name, testID }: HomeHeaderProps) {
 
   return (
     <View style={styles.container} testID={testID}>
-      <View style={styles.textColumn}>
-        <Text style={styles.greeting} testID={testID ? `${testID}-greeting` : undefined}>
-          {greeting}
-        </Text>
-        <Text style={styles.date} testID={testID ? `${testID}-date` : undefined}>
-          {dateText}
-        </Text>
-      </View>
       <Pressable
         onPress={onAvatarPress}
         accessibilityRole="button"
@@ -74,6 +70,23 @@ export function HomeHeader({ onAvatarPress, name, testID }: HomeHeaderProps) {
       >
         <Text style={styles.avatarText}>?</Text>
       </Pressable>
+      <View style={styles.textColumn}>
+        <Text style={styles.greeting} testID={testID ? `${testID}-greeting` : undefined}>
+          {greeting}
+        </Text>
+        <Text style={styles.date} testID={testID ? `${testID}-date` : undefined}>
+          {dateText}
+        </Text>
+      </View>
+      <Pressable
+        onPress={onMenuPress}
+        accessibilityRole="button"
+        accessibilityLabel={t().home.v2.menuLabel}
+        style={styles.menuButton}
+        testID={testID ? `${testID}-menu` : undefined}
+      >
+        <Ionicons name="menu" size={MENU_ICON_SIZE} color={colors.textSecondary} />
+      </Pressable>
     </View>
   )
 }
@@ -82,9 +95,9 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: isRTL() ? 'row-reverse' : 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
+    gap: spacing.sm,
   },
   textColumn: {
     flex: 1,
@@ -105,14 +118,21 @@ const styles = StyleSheet.create({
     width: AVATAR_SIZE,
     height: AVATAR_SIZE,
     borderRadius: borderRadius.full,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.surface,
+    borderWidth: 2,
+    borderColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
-    marginStart: spacing.md,
   },
   avatarText: {
-    color: colors.textPrimary,
+    color: colors.textSecondary,
     fontSize: fontSize.md,
     fontWeight: fontWeight.bold,
+  },
+  menuButton: {
+    width: AVATAR_SIZE,
+    height: AVATAR_SIZE,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 })

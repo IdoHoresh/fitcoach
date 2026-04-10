@@ -3,7 +3,6 @@ import { useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { colors } from '@/theme/colors'
 import { spacing } from '@/theme/spacing'
-import { Card } from '@/components/Card'
 import { HomeHeader } from '@/components/home/HomeHeader'
 import { MacroGauge } from '@/components/home/MacroGauge'
 import { MacroLegend } from '@/components/home/MacroLegend'
@@ -13,11 +12,6 @@ import { useNutritionStore } from '@/stores/useNutritionStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWorkoutStore } from '@/stores/useWorkoutStore'
 import type { DayOfWeek } from '@/types/user'
-
-// Fallback weekly workout target for users who haven't generated a plan
-// yet — 3 sessions/week is the minimum effective training frequency from
-// Schoenfeld 2016 (the lower bound of "2+ sessions per muscle group").
-const DEFAULT_WEEKLY_WORKOUT_GOAL = 3
 
 export default function HomeScreen() {
   const router = useRouter()
@@ -60,12 +54,6 @@ export default function HomeScreen() {
     (log) => new Date(log.date).getDay() as DayOfWeek,
   )
 
-  // Weekly goal: count training days in the active plan, fall back to the default.
-  const plan = useWorkoutStore((s) => s.plan)
-  const weeklyGoal = plan
-    ? plan.weeklySchedule.filter((d) => d.template !== null).length
-    : DEFAULT_WEEKLY_WORKOUT_GOAL
-
   const todayDayOfWeek = new Date().getDay() as DayOfWeek
 
   // Routing handlers — passed into TodaysPlanList so it stays
@@ -86,15 +74,12 @@ export default function HomeScreen() {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        <Card>
-          <MacroGauge
-            consumedCalories={consumedCalories}
-            goalCalories={goalCalories}
-            testID="home-gauge"
-          />
-          <View style={styles.legendSpacer} />
-          <MacroLegend protein={protein} carbs={carbs} fat={fat} testID="home-legend" />
-        </Card>
+        <MacroGauge
+          consumedCalories={consumedCalories}
+          goalCalories={goalCalories}
+          testID="home-gauge"
+        />
+        <MacroLegend protein={protein} carbs={carbs} fat={fat} testID="home-legend" />
 
         <TodaysPlanList
           onMealPress={goToNutrition}
@@ -106,7 +91,6 @@ export default function HomeScreen() {
         <WeekdayStreakStrip
           weekNumber={mesocycle?.currentWeek ?? null}
           completedThisWeek={completedThisWeekLogs.length}
-          weeklyGoal={weeklyGoal}
           completedDaysOfWeek={completedDaysOfWeek}
           todayDayOfWeek={todayDayOfWeek}
           testID="home-streak"
@@ -129,8 +113,5 @@ const styles = StyleSheet.create({
     paddingTop: spacing.md,
     paddingBottom: spacing.xl,
     gap: spacing.lg,
-  },
-  legendSpacer: {
-    height: spacing.md,
   },
 })

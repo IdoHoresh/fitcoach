@@ -155,19 +155,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'baseline',
   },
+  goalNumber: {
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.regular,
+    color: colors.textSecondary,
+  },
+  separator: {
+    fontSize: fontSize.md,
+    color: colors.textSecondary,
+  },
   consumedNumber: {
     fontSize: fontSize.hero,
     fontWeight: fontWeight.bold,
     color: colors.textPrimary,
-  },
-  separator: {
-    fontSize: fontSize.xl,
-    color: colors.textSecondary,
-  },
-  goalNumber: {
-    fontSize: fontSize.xl,
-    fontWeight: fontWeight.medium,
-    color: colors.textSecondary,
   },
   caloriesLabel: {
     fontSize: fontSize.sm,

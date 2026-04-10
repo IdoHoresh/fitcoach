@@ -2,12 +2,12 @@ import React from 'react'
 import { render, screen } from '@testing-library/react-native'
 import { WeekdayStreakStrip } from './WeekdayStreakStrip'
 import { colors } from '@/theme/colors'
+import { t } from '@/i18n'
 import type { DayOfWeek } from '@/types/user'
 
 const defaultProps = {
   weekNumber: 1,
   completedThisWeek: 2,
-  weeklyGoal: 4,
   completedDaysOfWeek: [0, 2] as readonly DayOfWeek[], // Sun + Tue
   todayDayOfWeek: 4 as DayOfWeek, // Thursday
 }
@@ -41,13 +41,18 @@ describe('WeekdayStreakStrip', () => {
     expect(screen.queryByTestId('strip-day-3-completed')).toBeNull()
   })
 
-  it('renders the week label with interpolated values', () => {
+  it('renders the days-in-a-row badge when weekNumber is set', () => {
     render(<WeekdayStreakStrip {...defaultProps} testID="strip" />)
-    expect(screen.getByTestId('strip-week-label')).toHaveTextContent(/1/)
-    expect(screen.getByTestId('strip-week-label')).toHaveTextContent(/2\/4/)
+    // completedThisWeek = 2, so badge shows "2 ימים ברצף"
+    expect(screen.getByTestId('strip-week-label')).toHaveTextContent(/2/)
   })
 
-  it('hides the week label in fresh-install mode (weekNumber is null)', () => {
+  it('renders the section heading', () => {
+    render(<WeekdayStreakStrip {...defaultProps} testID="strip" />)
+    expect(screen.getByText(t().home.v2.progressTitle)).toBeTruthy()
+  })
+
+  it('hides the days badge in fresh-install mode (weekNumber is null)', () => {
     render(
       <WeekdayStreakStrip
         {...defaultProps}
@@ -73,16 +78,10 @@ describe('WeekdayStreakStrip', () => {
     expect(screen.getByTestId('strip-day-4-today')).toBeTruthy()
   })
 
-  it('renders the flame icon container', () => {
-    render(<WeekdayStreakStrip {...defaultProps} testID="strip" />)
-    // Flame is an Ionicons element; verify its parent container is present
-    expect(screen.getByTestId('strip-flame')).toBeTruthy()
-  })
-
-  it('uses the success color for completed-day circles (visual verification via style)', () => {
+  it('uses the primary color for completed-day circles (visual verification via style)', () => {
     render(<WeekdayStreakStrip {...defaultProps} testID="strip" />)
     expect(screen.getByTestId('strip-day-0-completed')).toHaveStyle({
-      backgroundColor: colors.success,
+      backgroundColor: colors.primary,
     })
   })
 })

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { type ReactNode } from 'react'
 import {
   Pressable,
   Text,
+  View,
   ActivityIndicator,
   StyleSheet,
   type ViewStyle,
@@ -12,6 +13,7 @@ import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
+import { isRTL } from '@/hooks/rtl'
 
 const DISABLED_OPACITY = 0.5
 
@@ -25,6 +27,7 @@ interface ButtonProps {
   size?: ButtonSize
   disabled?: boolean
   loading?: boolean
+  icon?: ReactNode
   testID?: string
 }
 
@@ -73,6 +76,7 @@ export function Button({
   size = 'md',
   disabled = false,
   loading = false,
+  icon,
   testID,
 }: ButtonProps) {
   const isDisabled = disabled || loading
@@ -104,6 +108,13 @@ export function Button({
           color={VARIANT_TEXT_COLORS[variant]}
           size="small"
         />
+      ) : icon ? (
+        <View style={styles.iconRow}>
+          <Text style={[styles.label, SIZE_TEXT[size], { color: VARIANT_TEXT_COLORS[variant] }]}>
+            {label}
+          </Text>
+          {icon}
+        </View>
       ) : (
         <Text style={[styles.label, SIZE_TEXT[size], { color: VARIANT_TEXT_COLORS[variant] }]}>
           {label}
@@ -122,6 +133,12 @@ const styles = StyleSheet.create({
   label: {
     fontWeight: fontWeight.semibold,
     textAlign: 'center',
+  },
+  iconRow: {
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.sm,
   },
   disabled: {
     opacity: DISABLED_OPACITY,
