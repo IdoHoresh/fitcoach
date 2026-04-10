@@ -6,6 +6,7 @@ import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import type { FoodLogEntry, MealType, AdherenceLevel } from '@/types'
+import { FOOD_MAP } from '@/data/foods'
 import { FoodItemRow } from './FoodItemRow'
 import { MealEmptyState } from './MealEmptyState'
 import { AdherencePicker } from './AdherencePicker'
@@ -62,7 +63,7 @@ export function MealSection({
         foods.map((entry) => (
           <FoodItemRow
             key={entry.id}
-            nameHe={entry.foodId}
+            nameHe={FOOD_MAP.get(entry.foodId)?.nameHe ?? entry.foodId}
             grams={entry.gramsConsumed}
             calories={entry.calories}
             onRemove={() => onRemoveFood(entry.id)}
@@ -73,13 +74,15 @@ export function MealSection({
 
       {/* Add + Adherence inline row */}
       <View style={styles.actionsRow}>
-        <AdherencePicker
-          value={adherence}
-          onChange={onAdherenceChange}
-          testID={`${id}-adherence`}
-        />
+        <View style={styles.adherenceWrapper}>
+          <AdherencePicker
+            value={adherence}
+            onChange={onAdherenceChange}
+            testID={`${id}-adherence`}
+          />
+        </View>
         <Pressable style={styles.addButton} onPress={onAddFood} testID={`${id}-add`}>
-          <Ionicons name="add" size={18} color={colors.primary} />
+          <Ionicons name="add" size={22} color={colors.textInverse} />
         </Pressable>
       </View>
     </View>
@@ -117,18 +120,20 @@ const styles = StyleSheet.create({
   actionsRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
     borderTopWidth: 1,
     borderTopColor: colors.border,
     gap: spacing.sm,
   },
+  adherenceWrapper: {
+    flex: 1,
+  },
   addButton: {
-    width: 36,
-    height: 36,
+    width: 40,
+    height: 40,
     borderRadius: borderRadius.full,
-    backgroundColor: colors.primaryTint,
+    backgroundColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,

@@ -28,12 +28,12 @@ interface PillProps {
 
 function MacroPill({ label, stat, accentColor, pillTestID, labelTestID, valueTestID }: PillProps) {
   return (
-    <View style={[styles.pill, { borderLeftColor: accentColor }]} testID={pillTestID}>
+    <View style={[styles.pill, { borderBottomColor: accentColor }]} testID={pillTestID}>
       <Text style={styles.label} testID={labelTestID}>
         {label}
       </Text>
       <Text style={styles.value} testID={valueTestID}>
-        {`${stat.planned}g / ${stat.goal}g`}
+        {`${Math.round(stat.planned)}g`}
       </Text>
     </View>
   )
@@ -86,10 +86,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.surface,
     borderRadius: borderRadius.md,
-    borderLeftWidth: BORDER_WIDTH,
+    borderBottomWidth: BORDER_WIDTH,
     paddingVertical: spacing.sm,
     paddingHorizontal: spacing.ms,
-    alignItems: 'flex-end', // RTL: text aligns right
+    alignItems: 'center',
   },
   label: {
     fontSize: fontSize.xs,
@@ -100,7 +100,5 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     color: colors.textPrimary,
     fontWeight: fontWeight.semibold,
-    // Numeric pairs are LTR even in Hebrew apps
-    writingDirection: 'ltr',
   },
 })

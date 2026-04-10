@@ -19,7 +19,7 @@ describe('NutritionCalorieArc', () => {
     const { getByTestId } = render(
       <NutritionCalorieArc plannedCalories={1200} goalCalories={1852} testID="arc" />,
     )
-    expect(getByTestId('arc-goal')).toHaveTextContent('1,852')
+    expect(getByTestId('arc-goal')).toHaveTextContent(/1,852/)
   })
 
   it('renders the calories label', () => {

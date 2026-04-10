@@ -22,19 +22,19 @@ describe('NutritionMacroPills', () => {
     expect(getByTestId('pills-fat')).toBeTruthy()
   })
 
-  it('displays protein planned and goal grams', () => {
+  it('displays protein consumed grams', () => {
     const { getByTestId } = render(<NutritionMacroPills {...defaultProps} />)
-    expect(getByTestId('pills-protein-value')).toHaveTextContent('120g / 160g')
+    expect(getByTestId('pills-protein-value')).toHaveTextContent('120g')
   })
 
-  it('displays carbs planned and goal grams', () => {
+  it('displays carbs consumed grams', () => {
     const { getByTestId } = render(<NutritionMacroPills {...defaultProps} />)
-    expect(getByTestId('pills-carbs-value')).toHaveTextContent('185g / 220g')
+    expect(getByTestId('pills-carbs-value')).toHaveTextContent('185g')
   })
 
-  it('displays fat planned and goal grams', () => {
+  it('displays fat consumed grams', () => {
     const { getByTestId } = render(<NutritionMacroPills {...defaultProps} />)
-    expect(getByTestId('pills-fat-value')).toHaveTextContent('45g / 65g')
+    expect(getByTestId('pills-fat-value')).toHaveTextContent('45g')
   })
 
   it('displays Hebrew macro labels', () => {

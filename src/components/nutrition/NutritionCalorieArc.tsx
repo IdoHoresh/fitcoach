@@ -73,16 +73,11 @@ export function NutritionCalorieArc({
           <Text style={styles.plannedNumber} testID={testID ? `${testID}-planned` : undefined}>
             {formatNumber(plannedCalories)}
           </Text>
-          {/* Goal shown as "מתוך 1,852 קלוריות" — goal number has its own testID */}
-          <View style={styles.goalRow}>
-            <Text style={styles.goalLabelPrefix}>{strings.caloriesOf.split('{goal}')[0]}</Text>
-            <Text style={styles.goalNumber} testID={testID ? `${testID}-goal` : undefined}>
-              {formatNumber(goalCalories)}
-            </Text>
-            <Text style={styles.goalLabelSuffix}>{strings.caloriesOf.split('{goal}')[1]}</Text>
-          </View>
+          <Text style={styles.goalLabel} testID={testID ? `${testID}-goal` : undefined}>
+            {`/ ${formatNumber(goalCalories)} ${strings.kcal}`}
+          </Text>
           <Text style={styles.unitLabel} testID={testID ? `${testID}-label` : undefined}>
-            {strings.kcal}
+            {strings.caloriesOf.replace('{goal}', '')}
           </Text>
         </View>
       </View>
@@ -111,23 +106,11 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.bold,
     color: colors.textPrimary,
   },
-  goalRow: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
-    marginTop: spacing.xxs,
-  },
-  goalLabelPrefix: {
-    fontSize: fontSize.sm,
-    color: colors.textSecondary,
-  },
-  goalNumber: {
+  goalLabel: {
     fontSize: fontSize.sm,
     fontWeight: fontWeight.semibold,
     color: colors.textSecondary,
-  },
-  goalLabelSuffix: {
-    fontSize: fontSize.sm,
-    color: colors.textSecondary,
+    marginTop: spacing.xxs,
   },
   unitLabel: {
     fontSize: fontSize.xs,
