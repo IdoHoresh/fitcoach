@@ -38,6 +38,7 @@ export function DaySelector({
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
+      style={styles.scroll}
       contentContainerStyle={styles.container}
       testID={testID}
     >
@@ -87,6 +88,9 @@ export function DaySelector({
 }
 
 const styles = StyleSheet.create({
+  scroll: {
+    flexGrow: 0,
+  },
   container: {
     flexDirection: 'row',
     paddingHorizontal: spacing.md,
