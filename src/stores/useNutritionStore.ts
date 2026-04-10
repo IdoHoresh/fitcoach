@@ -43,6 +43,7 @@ import {
 } from '../db'
 import { useUserStore } from './useUserStore'
 import { he, en } from '../i18n'
+import { validateInput, foodLogEntrySchema, bodyMeasurementSchema } from '../security/validation'
 
 // ── Store Interface ───────────────────────────────────────────────
 
@@ -233,6 +234,12 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
   logFood: async (entryData: Omit<FoodLogEntry, 'id'>) => {
     set({ error: null })
 
+    const validation = validateInput(foodLogEntrySchema, entryData)
+    if (!validation.success) {
+      set({ error: validation.errors.join('; ') })
+      return
+    }
+
     try {
       const entry = await foodLogRepository.addEntry(entryData)
 
@@ -384,13 +391,15 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
   logWeight: async (weightKg: number, date: string) => {
     set({ error: null })
 
+    const entry = { date, weightKg, bodyFatPercent: null, notes: '' }
+    const validation = validateInput(bodyMeasurementSchema, entry)
+    if (!validation.success) {
+      set({ error: validation.errors.join('; ') })
+      return
+    }
+
     try {
-      const measurement = await measurementRepository.addMeasurement({
-        date,
-        weightKg,
-        bodyFatPercent: null,
-        notes: '',
-      })
+      const measurement = await measurementRepository.addMeasurement(entry)
 
       set((state) => ({
         weightLog: [...state.weightLog, measurement],

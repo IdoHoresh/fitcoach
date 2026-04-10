@@ -36,6 +36,7 @@ import { EXERCISE_MAP } from '../data/exercises'
 import { getProgressionAdvice as getProgressionAdviceAlgo } from '../algorithms/progressive-overload'
 import { nowISO, todayISO, workoutRepository } from '../db'
 import { useUserStore } from './useUserStore'
+import { validateInput, loggedSetSchema } from '../security/validation'
 
 // ── Store Interface ───────────────────────────────────────────────
 
@@ -348,6 +349,12 @@ export const useWorkoutStore = create<WorkoutStore>((set, get) => ({
 
     if (!activeSession) {
       set({ error: 'No active workout session.' })
+      return
+    }
+
+    const validation = validateInput(loggedSetSchema, setData)
+    if (!validation.success) {
+      set({ error: validation.errors.join('; ') })
       return
     }
 

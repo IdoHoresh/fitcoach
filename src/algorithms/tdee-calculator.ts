@@ -219,6 +219,11 @@ export function calculateEat(
   exerciseType: ExerciseType,
   weightKg: number,
 ): number {
+  if (weightKg < VALIDATION.WEIGHT_KG.min || weightKg > VALIDATION.WEIGHT_KG.max) {
+    throw new RangeError(
+      `weightKg ${weightKg} outside valid range [${VALIDATION.WEIGHT_KG.min}-${VALIDATION.WEIGHT_KG.max}]`,
+    )
+  }
   if (exerciseDaysPerWeek === 0) return 0
 
   // Convert session time to ACTIVE minutes (accounts for rest periods)

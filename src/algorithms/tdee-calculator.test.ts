@@ -217,6 +217,14 @@ describe('calculateEat', () => {
     expect(result).toBeGreaterThan(50)
     expect(result).toBeLessThan(400)
   })
+
+  it('throws_for_weight_below_minimum', () => {
+    expect(() => calculateEat(4, 60, 'moderate', 'strength', 10)).toThrow(RangeError)
+  })
+
+  it('throws_for_weight_above_maximum', () => {
+    expect(() => calculateEat(4, 60, 'moderate', 'strength', 400)).toThrow(RangeError)
+  })
 })
 
 // ── TEF Tests ────────────────────────────────────────────────────────
