@@ -49,7 +49,9 @@
       "Bash(wc -l src/components/home/*.tsx src/utils/buildTodaysPlan.ts src/utils/buildTodaysPlan.test.ts)",
       "mcp__claude_ai_Notion__notion-get-teams",
       "Bash(xargs grep:*)",
-      "Bash(grep -n \"SCHEMA_VERSION\\\\|ALTER TABLE\\\\|migrate\" src/db/*.ts)"
+      "Bash(grep -n \"SCHEMA_VERSION\\\\|ALTER TABLE\\\\|migrate\" src/db/*.ts)",
+      "Bash(awk '{print $1}')",
+      "Bash(node -e \"console.log\\(new Date\\('2026-04-09T12:00:00'\\).getDay\\(\\), new Date\\('2026-04-10T12:00:00'\\).getDay\\(\\)\\)\")"
     ]
   },
   "hooks": {
