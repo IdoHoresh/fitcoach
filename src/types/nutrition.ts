@@ -58,6 +58,18 @@ export interface ServingSize {
   readonly grams: number // How many grams this serving equals
 }
 
+/** How accurately a user followed a planned meal */
+export type AdherenceLevel = 'accurate' | 'roughly' | 'not_accurate'
+
+/** A recorded meal adherence entry */
+export interface MealAdherence {
+  readonly id: string
+  readonly date: string // YYYY-MM-DD
+  readonly mealType: MealType
+  readonly level: AdherenceLevel
+  readonly createdAt: string
+}
+
 /** A logged food entry in a meal */
 export interface FoodLogEntry {
   readonly id: string

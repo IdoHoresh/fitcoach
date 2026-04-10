@@ -5,8 +5,10 @@
  */
 
 import type {
+  AdherenceLevel,
   DailyNutritionSummary,
   FoodLogEntry,
+  MealAdherence,
   MealPlan,
   MealPlanDay,
   MealPlanStatus,
@@ -560,9 +562,61 @@ class SavedMealRepository extends BaseRepository<SavedMealRow> {
   }
 }
 
+// ── Meal Adherence Repository ──────────────────────────────────────
+
+interface MealAdherenceRow {
+  id: string
+  date: string
+  meal_type: string
+  level: string
+  created_at: string
+}
+
+function rowToMealAdherence(row: MealAdherenceRow): MealAdherence {
+  return {
+    id: row.id,
+    date: row.date,
+    mealType: row.meal_type as MealType,
+    level: row.level as AdherenceLevel,
+    createdAt: row.created_at,
+  }
+}
+
+class MealAdherenceRepository extends BaseRepository<MealAdherenceRow> {
+  constructor() {
+    super('meal_adherence')
+  }
+
+  async saveAdherence(data: Omit<MealAdherence, 'id' | 'createdAt'>): Promise<MealAdherence> {
+    const db = getDatabase()
+    const id = generateId()
+    const createdAt = nowISO()
+
+    // UNIQUE(date, meal_type) in schema — INSERT OR REPLACE acts as upsert:
+    // deletes the existing row for this date+meal_type and inserts the new one.
+    await db.runAsync(
+      `INSERT OR REPLACE INTO meal_adherence (id, date, meal_type, level, created_at)
+       VALUES (?, ?, ?, ?, ?)`,
+      [id, data.date, data.mealType, data.level, createdAt],
+    )
+
+    return { id, date: data.date, mealType: data.mealType, level: data.level, createdAt }
+  }
+
+  async getAdherenceForDate(date: string): Promise<MealAdherence[]> {
+    const db = getDatabase()
+    const rows = await db.getAllAsync<MealAdherenceRow>(
+      'SELECT * FROM meal_adherence WHERE date = ? ORDER BY meal_type ASC',
+      [date],
+    )
+    return rows.map(rowToMealAdherence)
+  }
+}
+
 // ── Singleton exports ──────────────────────────────────────────────
 
 export const foodLogRepository = new FoodLogRepository()
 export const mealPlanRepository = new MealPlanRepository()
 export const savedMealRepository = new SavedMealRepository()
 export const weeklyCheckInRepository = new WeeklyCheckInRepository()
+export const mealAdherenceRepository = new MealAdherenceRepository()

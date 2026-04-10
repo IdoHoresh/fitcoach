@@ -42,6 +42,8 @@ export type {
 } from './workout'
 
 export type {
+  AdherenceLevel,
+  MealAdherence,
   FoodCategory,
   MealType,
   ServingUnit,

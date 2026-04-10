@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 7
+export const SCHEMA_VERSION = 8
 
 /**
  * All CREATE TABLE statements.
@@ -243,4 +243,15 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
   `CREATE INDEX IF NOT EXISTS idx_meal_plan_status ON meal_plan(status)`,
   `CREATE INDEX IF NOT EXISTS idx_planned_meal_plan ON planned_meal(plan_id)`,
   `CREATE INDEX IF NOT EXISTS idx_weekly_checkin_date ON weekly_checkin(week_start_date)`,
+
+  // ── Meal Adherence (user's self-reported compliance per meal) ──
+  `CREATE TABLE IF NOT EXISTS meal_adherence (
+    id TEXT PRIMARY KEY,
+    date TEXT NOT NULL,
+    meal_type TEXT NOT NULL CHECK (meal_type IN ('breakfast','lunch','dinner','snack','pre_workout','post_workout')),
+    level TEXT NOT NULL CHECK (level IN ('accurate','roughly','not_accurate')),
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    UNIQUE(date, meal_type)
+  )`,
+  `CREATE INDEX IF NOT EXISTS idx_meal_adherence_date ON meal_adherence(date)`,
 ]

@@ -239,6 +239,13 @@ export const weeklyCheckInSchema = z.object({
   coachMessageEn: z.string().min(1),
 })
 
+/** Validates meal adherence input */
+export const mealAdherenceSchema = z.object({
+  date: isoDateSchema,
+  mealType: mealTypeSchema,
+  level: z.enum(['accurate', 'roughly', 'not_accurate']),
+})
+
 /** Validates mesocycle state transitions */
 export const mesocycleStateSchema = z.object({
   currentWeek: z.number().int().min(1).max(MESOCYCLE.MAX_WEEKS),
