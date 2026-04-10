@@ -1,8 +1,11 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react'
-import { View, ScrollView, StyleSheet, LayoutChangeEvent } from 'react-native'
+import { View, ScrollView, Text, StyleSheet, LayoutChangeEvent } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { Ionicons } from '@expo/vector-icons'
 import { colors } from '@/theme/colors'
-import { spacing } from '@/theme/spacing'
+import { spacing, borderRadius } from '@/theme/spacing'
+import { fontSize, fontWeight } from '@/theme/typography'
+import { t } from '@/i18n'
 import { useWorkoutStore } from '@/stores/useWorkoutStore'
 import { EXERCISE_MAP } from '@/data/exercises'
 import { ActiveExerciseCard } from './ActiveExerciseCard'
@@ -38,6 +41,8 @@ export function ActiveWorkoutView({
   const logSet = useWorkoutStore((s) => s.logSet)
   const completeExercise = useWorkoutStore((s) => s.completeExercise)
   const getProgressionAdvice = useWorkoutStore((s) => s.getProgressionAdvice)
+  const isFirstWorkout = useWorkoutStore((s) => s.recentLogs.length === 0)
+  const strings = t().workout
 
   // ── Refs ──
   const isMountedRef = useRef(true)
@@ -213,6 +218,18 @@ export function ActiveWorkoutView({
         onScroll={handleScroll}
         scrollEventThrottle={16}
       >
+        {isFirstWorkout && (
+          <View
+            style={styles.firstWorkoutBanner}
+            testID={testID ? `${testID}-first-banner` : undefined}
+          >
+            <View style={styles.bannerHeader}>
+              <Ionicons name="sparkles" size={20} color={colors.primary} />
+              <Text style={styles.bannerTitle}>{strings.firstWorkoutTitle}</Text>
+            </View>
+            <Text style={styles.bannerMessage}>{strings.firstWorkoutMessage}</Text>
+          </View>
+        )}
         {exercises.map((prescription, index) => {
           const exercise = EXERCISE_MAP.get(prescription.exerciseId)
           if (!exercise) return null
@@ -305,5 +322,28 @@ const styles = StyleSheet.create({
     paddingBottom: spacing.sm,
     borderTopWidth: 1,
     borderTopColor: colors.border,
+  },
+  firstWorkoutBanner: {
+    backgroundColor: colors.primaryTint,
+    borderRadius: borderRadius.lg,
+    padding: spacing.md,
+    gap: spacing.sm,
+    borderWidth: 1,
+    borderColor: `${colors.primary}30`,
+  },
+  bannerHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+  },
+  bannerTitle: {
+    fontSize: fontSize.lg,
+    fontWeight: fontWeight.bold,
+    color: colors.primary,
+  },
+  bannerMessage: {
+    fontSize: fontSize.sm,
+    color: colors.textSecondary,
+    lineHeight: fontSize.sm * 1.6,
   },
 })
