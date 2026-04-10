@@ -5,7 +5,7 @@ import * as rtlModule from '@/hooks/rtl'
 import { OptionSelector } from './OptionSelector'
 import { colors } from '@/theme/colors'
 
-const SELECTED_BG = colors.primary + '26'
+const SELECTED_BG = colors.primaryTint
 
 describe('OptionSelector', () => {
   const options = [
