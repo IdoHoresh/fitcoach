@@ -87,6 +87,7 @@ function handleLogFirstMeal() {
   const fakeEntry: FoodLogEntry = {
     id: `dev-log-${firstMeal.mealType}`,
     foodId: 'dev-food',
+    nameHe: 'ארוחת בדיקה',
     mealType: firstMeal.mealType,
     date: today,
     servingAmount: 1,
@@ -145,6 +146,7 @@ function handleMarkTodayDone() {
               const fakeLog: FoodLogEntry[] = todayDay.meals.map((meal) => ({
                 id: `dev-log-${meal.mealType}`,
                 foodId: 'dev-food',
+                nameHe: 'ארוחת בדיקה',
                 mealType: meal.mealType,
                 date: today,
                 servingAmount: 1,

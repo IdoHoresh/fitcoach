@@ -56,6 +56,7 @@ export function PortionPicker({
     const servingUnit: ServingUnit = 'grams'
     await logFood({
       foodId: food.id,
+      nameHe: food.nameHe,
       mealType,
       date,
       servingAmount: grams,

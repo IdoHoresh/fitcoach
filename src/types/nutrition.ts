@@ -74,6 +74,7 @@ export interface MealAdherence {
 export interface FoodLogEntry {
   readonly id: string
   readonly foodId: string
+  readonly nameHe: string // Denormalized at log time — survives food DB changes
   readonly mealType: MealType
   readonly date: string // ISO date
   readonly servingAmount: number // e.g., 1.5

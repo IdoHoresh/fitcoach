@@ -29,9 +29,9 @@ jest.mock('expo-crypto', () => ({
 
 // ── Task 2: Schema v10 ────────────────────────────────────────────────
 
-describe('schema v12 — remove Tzameret, supermarket only', () => {
-  it('SCHEMA_VERSION is 12', () => {
-    expect(SCHEMA_VERSION).toBe(12)
+describe('schema v13 — food_log name_he column', () => {
+  it('SCHEMA_VERSION is 13', () => {
+    expect(SCHEMA_VERSION).toBe(13)
   })
 })
 

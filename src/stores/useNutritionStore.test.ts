@@ -42,7 +42,13 @@ const mockAddMeasurement = jest.fn()
 const mockGetMeasurementsByDateRange = jest.fn()
 const mockGetWeeklyAverageWeight = jest.fn()
 
+// Food repository (for logSavedMeal)
+const mockGetById = jest.fn()
+
 jest.mock('../db', () => ({
+  foodRepository: {
+    getById: (...args: unknown[]) => mockGetById(...args),
+  },
   foodLogRepository: {
     addEntry: (...args: unknown[]) => mockAddEntry(...args),
     getEntriesByDate: (...args: unknown[]) => mockGetEntriesByDate(...args),
@@ -230,6 +236,7 @@ const MOCK_MEAL_PLAN: MealPlan = {
 const MOCK_FOOD_LOG_ENTRY: FoodLogEntry = {
   id: 'entry-1',
   foodId: 'food_002',
+  nameHe: 'חזה עוף בגריל',
   mealType: 'lunch',
   date: '2026-04-07',
   servingAmount: 1,
@@ -501,6 +508,7 @@ describe('logFood', () => {
   it('should add entry via repo, prepend to todaysLog, and refresh summary', async () => {
     const entryData: Omit<FoodLogEntry, 'id'> = {
       foodId: 'food_002',
+      nameHe: 'חזה עוף בגריל',
       mealType: 'lunch',
       date: '2026-04-07',
       servingAmount: 1,
@@ -529,6 +537,7 @@ describe('logFood', () => {
 
     await useNutritionStore.getState().logFood({
       foodId: 'food_002',
+      nameHe: 'חזה עוף בגריל',
       mealType: 'lunch',
       date: '2026-04-07',
       servingAmount: 1,
@@ -546,6 +555,7 @@ describe('logFood', () => {
   it('should reject invalid food log entry and set error', async () => {
     await useNutritionStore.getState().logFood({
       foodId: '',
+      nameHe: '',
       mealType: 'lunch',
       date: 'not-a-date',
       servingAmount: -5,
@@ -621,13 +631,46 @@ describe('saveMeal', () => {
 })
 
 describe('logSavedMeal', () => {
-  it('should compute macros from FOOD_MAP and log each item', async () => {
+  it('should compute macros from foodRepository and log each item', async () => {
     useNutritionStore.setState({ savedMeals: [MOCK_SAVED_MEAL] })
     mockAddEntry.mockImplementation(async (data: Omit<FoodLogEntry, 'id'>) => ({
       id: 'entry-' + Math.random().toString(36).slice(2, 6),
       ...data,
     }))
     mockGetDailySummary.mockResolvedValue(MOCK_DAILY_SUMMARY)
+    mockGetById.mockImplementation(async (id: string) => {
+      if (id === 'food_006') {
+        return {
+          id: 'food_006',
+          nameHe: 'ביצה',
+          nameEn: 'Egg',
+          caloriesPer100g: 155,
+          proteinPer100g: 13,
+          fatPer100g: 11,
+          carbsPer100g: 1,
+          fiberPer100g: 0,
+          category: 'protein',
+          isUserCreated: false,
+          servingSizes: [],
+        }
+      }
+      if (id === 'food_015') {
+        return {
+          id: 'food_015',
+          nameHe: 'סלט ישראלי',
+          nameEn: 'Israeli Salad',
+          caloriesPer100g: 60,
+          proteinPer100g: 1.5,
+          fatPer100g: 3,
+          carbsPer100g: 7,
+          fiberPer100g: 2,
+          category: 'vegetables',
+          isUserCreated: false,
+          servingSizes: [],
+        }
+      }
+      return null
+    })
 
     await useNutritionStore.getState().logSavedMeal('sm-1', 'breakfast', '2026-04-07')
 

@@ -11,7 +11,8 @@ import type { FoodLogEntry } from '@/types'
 const MOCK_ENTRIES: FoodLogEntry[] = [
   {
     id: 'entry_001',
-    foodId: 'חזה עוף',
+    foodId: 'food_001',
+    nameHe: 'חזה עוף',
     mealType: 'breakfast',
     date: '2026-04-10',
     servingAmount: 150,
