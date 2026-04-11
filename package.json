@@ -16,7 +16,6 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "prepare": "husky",
-    "import-tzameret": "tsx scripts/import-tzameret.ts",
     "scrape-shufersal": "tsx scripts/scrape-shufersal.ts",
     "build-supermarket-seed": "tsx scripts/build-supermarket-seed.ts"
   },
