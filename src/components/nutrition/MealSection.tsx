@@ -18,8 +18,6 @@ interface MealSectionProps {
   onAddFood: () => void
   onRemoveFood: (entryId: string) => void
   mealTarget?: MealMacroTargetByName
-  onGenerateMeal?: () => void
-  onRegenerateMeal?: () => void
   testID?: string
 }
 
@@ -29,8 +27,6 @@ export function MealSection({
   onAddFood,
   onRemoveFood,
   mealTarget,
-  onGenerateMeal,
-  onRegenerateMeal,
   testID,
 }: MealSectionProps) {
   const id = testID ?? `meal-section-${mealType}`
@@ -111,30 +107,15 @@ export function MealSection({
               testID={`${id}-food-${entry.id}`}
             />
           ))}
-          {onRegenerateMeal && (
-            <Pressable
-              style={styles.regenerateRow}
-              onPress={onRegenerateMeal}
-              testID={`${id}-regenerate`}
-            >
-              <Text style={styles.regenerateText}>{strings.regenerateMeal}</Text>
-            </Pressable>
-          )}
         </>
       )}
 
       {/* No-target empty state */}
       {isEmpty && !mealTarget && <MealEmptyState testID={`${id}-empty`} />}
 
-      {/* Bottom row — generate link left, "+" pinned to the right */}
+      {/* Bottom row — "+" pinned to the right */}
       <View style={styles.bottomRow}>
-        {isEmpty && onGenerateMeal ? (
-          <Pressable style={styles.generateLink} onPress={onGenerateMeal} testID={`${id}-generate`}>
-            <Text style={styles.generateLinkText}>{strings.generateMeal}</Text>
-          </Pressable>
-        ) : (
-          <View />
-        )}
+        <View />
         <Pressable style={styles.addButton} onPress={onAddFood} testID={`${id}-add`}>
           <Ionicons name="add" size={22} color={colors.textInverse} />
         </Pressable>
@@ -216,23 +197,5 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  generateLink: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  generateLinkText: {
-    fontSize: fontSize.xs,
-    color: colors.textMuted,
-  },
-  regenerateRow: {
-    alignItems: 'center',
-    paddingVertical: spacing.xs,
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
-  },
-  regenerateText: {
-    fontSize: fontSize.xs,
-    color: colors.textSecondary,
   },
 })

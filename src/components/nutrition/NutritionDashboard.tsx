@@ -30,9 +30,6 @@ export function NutritionDashboard() {
   const loadLogForDate = useNutritionStore((s) => s.loadLogForDate)
   const removeFood = useNutritionStore((s) => s.removeFood)
   const refreshMealTargets = useNutritionStore((s) => s.refreshMealTargets)
-  const generateMealForSlot = useNutritionStore((s) => s.generateMealForSlot)
-  const regenerateMealForSlot = useNutritionStore((s) => s.regenerateMealForSlot)
-  const lastGeneratedEntryIds = useNutritionStore((s) => s.lastGeneratedEntryIds)
   const redistributionToast = useNutritionStore((s) => s.redistributionToast)
   const clearRedistributionToast = useNutritionStore((s) => s.clearRedistributionToast)
 
@@ -114,12 +111,6 @@ export function NutritionDashboard() {
             onAddFood={() => setActiveMealSheet(mealType)}
             onRemoveFood={(entryId) => removeFood(entryId)}
             mealTarget={mealTargets?.[mealType]}
-            onGenerateMeal={() => generateMealForSlot(mealType, selectedDate)}
-            onRegenerateMeal={
-              lastGeneratedEntryIds[mealType]
-                ? () => regenerateMealForSlot(mealType, selectedDate)
-                : undefined
-            }
             testID={`meal-section-${mealType}`}
           />
         ))}

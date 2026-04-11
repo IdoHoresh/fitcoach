@@ -96,27 +96,6 @@ describe('MealSection', () => {
     expect(onRemoveFood).toHaveBeenCalledWith('entry_001')
   })
 
-  it('shows generate link on empty meal with target', () => {
-    const mealTarget = { calories: 500, protein: 40, fat: 15, carbs: 50 }
-    const { getByTestId } = render(
-      <MealSection {...defaultProps} mealTarget={mealTarget} onGenerateMeal={jest.fn()} />,
-    )
-    expect(getByTestId('meal-section-generate')).toBeTruthy()
-  })
-
-  it('does not show generate link on non-empty meal', () => {
-    const mealTarget = { calories: 500, protein: 40, fat: 15, carbs: 50 }
-    const { queryByTestId } = render(
-      <MealSection
-        {...defaultProps}
-        foods={MOCK_ENTRIES}
-        mealTarget={mealTarget}
-        onGenerateMeal={jest.fn()}
-      />,
-    )
-    expect(queryByTestId('meal-section-generate')).toBeNull()
-  })
-
   it('works for lunch meal type', () => {
     const { getByTestId } = render(
       <MealSection {...defaultProps} mealType="lunch" testID="lunch-section" />,
