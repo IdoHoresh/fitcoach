@@ -91,17 +91,51 @@ Before every commit, Claude MUST show verification for each checklist item:
 5. **Secrets scan** — run `git diff --cached`, actually scan for keys/tokens
 6. **Lint** — run `npm run lint`, show clean output
 7. **Typecheck** — run `npm run typecheck`, show clean output
-8. **Tests** — run `npm test`, show pass count
+8. **Tests** — run `npm test -- --silent 2>&1 | tail -5`, show pass count only
 9. **Size check** — run `git diff --cached --stat`, show line count
 
 After every PR merged:
 
 1. Wait for CI to pass before starting next task
 2. Update PR test plan checkbox once CI passes
-3. **Create Notion page** — beginner-friendly feature guide (see reference_notion_template.md)
+3. **Create Notion page** — new features only; skip for bug fixes and type-propagation changes
 4. **Update TASKS.md** — move completed items to Done, update test count
 
 **If ANY step is skipped, the task is NOT complete. No exceptions.**
+
+## Token Efficiency Rules
+
+These rules reduce context usage without lowering quality:
+
+### File reads — always targeted
+
+- Use `Grep` to find the exact function/section first
+- Then `Read` with `offset` + `limit` to pull only those lines
+- Never read a full file (200+ lines) just to find a 10-line section
+- Exception: first time reading a file you've never seen before
+
+### Test output — summary only
+
+- Always run: `npm test -- --silent 2>&1 | tail -5`
+- Never paste full suite output into conversation
+- Exception: when a specific test is failing and you need the error details
+
+### /review — features only
+
+- Run `/review` for: new features, algorithm changes, schema changes, security-sensitive code
+- Skip `/review` for: bug fixes where the change is mechanical (e.g. adding a field + propagating it), test-only changes, comment/doc changes
+- When skipping: state "Skipping /review — mechanical propagation change, no logic risk"
+
+### Notion pages — features only
+
+- Write a Notion page for: new features, architecture changes, anything Ido needs to understand later
+- Skip for: bug fixes, schema migrations that just add a column, test fixture updates
+
+### TASKS.md — read only what's needed
+
+- To update Done section: read only the last 60 lines (`offset: 430`)
+- To check Next Up: read only the last 10 lines
+- Never read the full file unless writing a session summary
 
 ## Security Rules (NEVER skip)
 

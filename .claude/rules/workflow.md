@@ -18,14 +18,14 @@ This applies to the ENTIRE flow — every single step from branch creation to TA
 
 ### Before Commit (show ALL verification in conversation)
 
-5. **Review** — run `/review`, fix ALL findings
+5. **Review** — run `/review` for features, algorithm changes, schema changes, security code. Skip for bug fixes (mechanical propagation, test fixtures, doc changes) — state reason when skipping.
 6. **Lessons** — read review findings, add to lessons.md or state WHY nothing applies
 7. **REVIEW.md** — check if review revealed new patterns, add or state WHY nothing applies
 8. **Branch check** — run `git branch --show-current`, show output
 9. **Secrets scan** — run `git diff --cached`, actually scan for keys/tokens, state "no secrets found"
 10. **Lint** — run `npm run lint`, show clean output
 11. **Typecheck** — run `npm run typecheck`, show clean output
-12. **Tests** — run `npm test`, show pass count
+12. **Tests** — run `npm test -- --silent 2>&1 | tail -5`, show pass count only
 13. **Size check** — run `git diff --cached --stat`, show line count, warn if >500
 14. **Commit** — only after ALL above steps verified and shown
 
@@ -41,7 +41,7 @@ This applies to the ENTIRE flow — every single step from branch creation to TA
 ### After PR Merged
 
 18. **Update CI checkbox** — mark CI item as checked in PR test plan
-19. **Create Notion page** — beginner-friendly guide following template in memory/reference_notion_template.md
+19. **Create Notion page** — for new features and architecture changes only. Skip for bug fixes, column-addition migrations, and test fixture updates. State reason when skipping.
 20. **Update TASKS.md** — move completed items to Done section, update test count
 
 ### MANDATORY POST-COMMIT BLOCK
