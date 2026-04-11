@@ -29,9 +29,9 @@ jest.mock('expo-crypto', () => ({
 
 // ── Task 2: Schema v10 ────────────────────────────────────────────────
 
-describe('schema v11 — supermarket foods', () => {
-  it('SCHEMA_VERSION is 11', () => {
-    expect(SCHEMA_VERSION).toBe(11)
+describe('schema v12 — remove Tzameret, supermarket only', () => {
+  it('SCHEMA_VERSION is 12', () => {
+    expect(SCHEMA_VERSION).toBe(12)
   })
 })
 
@@ -282,11 +282,11 @@ describe('FoodRepository', () => {
 
 // ── Smoke test: seed data integrity ──────────────────────────────────
 
-describe('tzameret-seed.json', () => {
-  const seed = require('../assets/tzameret-seed.json') as unknown[]
+describe('supermarket-seed.json', () => {
+  const seed = require('../assets/supermarket-seed.json') as unknown[]
 
-  it('has at least 4600 foods', () => {
-    expect(seed.length).toBeGreaterThanOrEqual(4600)
+  it('has at least 46 foods (protein yoghurt overrides)', () => {
+    expect(seed.length).toBeGreaterThanOrEqual(46)
   })
 
   it('every entry has required fields', () => {
@@ -296,5 +296,10 @@ describe('tzameret-seed.json', () => {
         expect(food[field]).toBeDefined()
       }
     }
+  })
+
+  it('contains no Tzameret foods (tz_ prefix)', () => {
+    const tzItems = (seed as { id: string }[]).filter((f) => f.id.startsWith('tz_'))
+    expect(tzItems).toHaveLength(0)
   })
 })

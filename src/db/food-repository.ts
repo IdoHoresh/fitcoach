@@ -66,14 +66,18 @@ export class FoodRepository extends BaseRepository<FoodItem> {
    */
   async search(query: string, limit = 50): Promise<FoodItem[]> {
     const db = getDatabase()
-    const q = query.trim().toLowerCase()
-    const pattern = `%${q}%`
+    const q = query.trim()
+    const containsPattern = `%${q}%`
+    const startsWithPattern = `${q}%`
 
     const rows = await db.getAllAsync<FoodRow>(
       `SELECT * FROM foods
-       WHERE LOWER(name_he) LIKE ? OR LOWER(name_en) LIKE ?
+       WHERE name_he LIKE ? OR name_en LIKE ?
+       ORDER BY
+         CASE WHEN name_he LIKE ? THEN 0 ELSE 1 END,
+         name_he ASC
        LIMIT ?`,
-      [pattern, pattern, limit],
+      [containsPattern, containsPattern, startsWithPattern, limit],
     )
 
     return rows.map(rowToFoodItem)
