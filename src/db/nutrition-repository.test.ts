@@ -30,6 +30,7 @@ jest.mock('expo-crypto', () => ({
 
 const MOCK_FOOD_LOG_ENTRY: Omit<FoodLogEntry, 'id'> = {
   foodId: 'food_002',
+  nameHe: 'חזה עוף בגריל',
   mealType: 'lunch',
   date: '2026-04-07',
   servingAmount: 1,
@@ -147,6 +148,7 @@ describe('FoodLogRepository', () => {
         {
           id: 'entry-1',
           food_id: 'food_002',
+          name_he: 'חזה עוף בגריל',
           meal_type: 'lunch',
           date: '2026-04-07',
           serving_amount: 1,

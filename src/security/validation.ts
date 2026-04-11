@@ -169,6 +169,7 @@ export const loggedExerciseSchema = z.object({
 /** Validates a food log entry */
 export const foodLogEntrySchema = z.object({
   foodId: z.string().min(1),
+  nameHe: z.string().min(1),
   mealType: mealTypeSchema,
   date: isoDateSchema,
   servingAmount: z.number().positive().max(5000),

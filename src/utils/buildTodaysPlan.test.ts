@@ -74,6 +74,7 @@ function makeLogEntry(mealType: MealType): FoodLogEntry {
   return {
     id: `log-${mealType}`,
     foodId: 'food-1',
+    nameHe: 'מוצר בדיקה',
     mealType,
     date: TODAY_ISO,
     servingAmount: 1,

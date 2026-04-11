@@ -244,6 +244,7 @@ describe('TodaysPlanList', () => {
           {
             id: 'log-1',
             foodId: 'food-1',
+            nameHe: 'מוצר בדיקה',
             mealType: 'breakfast',
             date: '2026-04-09',
             servingAmount: 1,
@@ -257,6 +258,7 @@ describe('TodaysPlanList', () => {
           {
             id: 'log-2',
             foodId: 'food-2',
+            nameHe: 'מוצר בדיקה 2',
             mealType: 'lunch',
             date: '2026-04-09',
             servingAmount: 1,

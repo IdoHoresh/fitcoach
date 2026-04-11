@@ -93,6 +93,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion < 12) {
       await migrateToV12(db)
     }
+    if (currentVersion < 13) {
+      await migrateToV13(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -239,6 +242,20 @@ async function migrateToV11(db: SQLite.SQLiteDatabase): Promise<void> {
 async function migrateToV12(db: SQLite.SQLiteDatabase): Promise<void> {
   await db.runAsync(`DELETE FROM foods WHERE id LIKE 'tz_%'`)
   console.log('[Database] v12: Removed Tzameret foods from database')
+}
+
+/**
+ * v13: Add name_he column to food_log.
+ * Denormalizes the Hebrew food name at log time so display doesn't require
+ * a foods table lookup (and survives food DB changes / Tzameret removal).
+ */
+async function migrateToV13(db: SQLite.SQLiteDatabase): Promise<void> {
+  const columns = await db.getAllAsync<{ name: string }>(`PRAGMA table_info(food_log)`)
+  const existing = new Set(columns.map((c) => c.name))
+
+  if (!existing.has('name_he')) {
+    await db.execAsync(`ALTER TABLE food_log ADD COLUMN name_he TEXT NOT NULL DEFAULT ''`)
+  }
 }
 
 /**
