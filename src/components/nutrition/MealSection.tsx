@@ -6,7 +6,6 @@ import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import type { FoodLogEntry, MealType } from '@/types'
-import { FOOD_MAP } from '@/data/foods'
 import type { MealMacroTargetByName } from '@/algorithms/meal-targets'
 import { FoodItemRow } from './FoodItemRow'
 import { MealEmptyState } from './MealEmptyState'
@@ -100,7 +99,7 @@ export function MealSection({
           {foods.map((entry) => (
             <FoodItemRow
               key={entry.id}
-              nameHe={FOOD_MAP.get(entry.foodId)?.nameHe ?? entry.foodId}
+              nameHe={entry.nameHe}
               grams={entry.gramsConsumed}
               calories={entry.calories}
               onRemove={() => onRemoveFood(entry.id)}

@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 12
+export const SCHEMA_VERSION = 13
 
 /**
  * All CREATE TABLE statements.
@@ -115,6 +115,7 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
   `CREATE TABLE IF NOT EXISTS food_log (
     id TEXT PRIMARY KEY,
     food_id TEXT NOT NULL,
+    name_he TEXT NOT NULL DEFAULT '',
     meal_type TEXT NOT NULL,
     date TEXT NOT NULL,
     serving_amount REAL NOT NULL,

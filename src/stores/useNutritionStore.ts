@@ -42,6 +42,7 @@ import type { ToastMacro } from '../algorithms/redistribute-deficit'
 import { FOOD_MAP } from '../data/foods'
 import {
   foodLogRepository,
+  foodRepository,
   mealAdherenceRepository,
   mealPlanRepository,
   savedMealRepository,
@@ -448,7 +449,7 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
       const skippedItems: string[] = []
 
       for (const item of meal.items) {
-        const food = FOOD_MAP.get(item.foodId)
+        const food = await foodRepository.getById(item.foodId)
         if (!food) {
           skippedItems.push(item.foodId)
           continue
@@ -458,6 +459,7 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
 
         await foodLogRepository.addEntry({
           foodId: item.foodId,
+          nameHe: food.nameHe,
           mealType,
           date,
           servingAmount: item.servingAmount,
@@ -703,6 +705,7 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
         const factor = item.grams / 100
         const entry = await foodLogRepository.addEntry({
           foodId: item.food.id,
+          nameHe: item.food.nameHe,
           mealType,
           date,
           servingAmount: item.grams,
@@ -759,6 +762,7 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
         const factor = item.grams / 100
         const entry = await foodLogRepository.addEntry({
           foodId: item.food.id,
+          nameHe: item.food.nameHe,
           mealType,
           date,
           servingAmount: item.grams,

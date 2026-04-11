@@ -29,6 +29,7 @@ import { getDatabase } from './database'
 interface FoodLogRow {
   id: string
   food_id: string
+  name_he: string
   meal_type: string
   date: string
   serving_amount: number
@@ -118,6 +119,7 @@ function rowToFoodLogEntry(row: FoodLogRow): FoodLogEntry {
   return {
     id: row.id,
     foodId: row.food_id,
+    nameHe: row.name_he,
     mealType: row.meal_type as MealType,
     date: row.date,
     servingAmount: row.serving_amount,
@@ -221,11 +223,12 @@ class FoodLogRepository extends BaseRepository<FoodLogRow> {
     const id = generateId()
 
     await db.runAsync(
-      `INSERT INTO food_log (id, food_id, meal_type, date, serving_amount, serving_unit, grams_consumed, calories, protein, fat, carbs)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO food_log (id, food_id, name_he, meal_type, date, serving_amount, serving_unit, grams_consumed, calories, protein, fat, carbs)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         id,
         data.foodId,
+        data.nameHe,
         data.mealType,
         data.date,
         data.servingAmount,

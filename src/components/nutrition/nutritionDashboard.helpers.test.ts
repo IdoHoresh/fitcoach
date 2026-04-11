@@ -15,6 +15,7 @@ const makeEntry = (
 ): FoodLogEntry => ({
   id,
   foodId: 'food_001',
+  nameHe: 'מוצר בדיקה',
   mealType,
   date: '2026-04-10',
   servingAmount: 100,
