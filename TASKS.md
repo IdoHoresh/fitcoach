@@ -479,3 +479,10 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Nutrition screen — full daily food log with meal tracking (PR #40) — 10 new components (DaySelector, NutritionCalorieArc, NutritionMacroPills, MealSection, FoodItemRow, MealEmptyState, AdherencePicker, FoodSearchSheet, PortionPicker + helpers), MealAdherence DB table + repository, date-aware store, 1,853 tests
 - [x] WorkoutTime field + DB column + onboarding screen (PR #41) — `WorkoutTime` type, SQLite v9 migration, workout-time onboarding screen after training-days, Zod validation, 1,856 tests
 - [x] `computeMealTargets()` + per-meal macro constants (PR #42) — pure algorithm maps daily macros + WorkoutTime + goal to per-meal `{calories, protein, fat, carbs}` for 4 named meals; `MEAL_CALORIE_SPLIT_BY_GOAL`, `FAT_CAP_PRE_WORKOUT`, `PROTEIN_BOOST_MULTIPLIER`, `MACRO_SATISFIED_THRESHOLD` constants with citations; 13 tests, 1,869 tests total
+- [x] Guided meal logging — macro tabs, per-meal targets, meal generation, redistribution (PR #43) — 1,885 tests
+- [x] Tzameret food database — 4,609 Israeli Ministry of Health foods seeded via SQLite v10 migration (PR #44) — 1,932 tests
+- [x] Shufersal scraper pipeline + 46 protein yoghurt SKUs + schema v11 (PR #45) — scrape-shufersal.ts, normalize-food.ts, deduplicate.ts, shufersal-overrides.ts (Danone PRO/Müller/Yoplait GO), build-supermarket-seed.ts orchestrator; 1,997 tests
+
+## Next Up
+
+- [ ] **Run Shufersal full scrape** — `npm run scrape-shufersal` then `npm run build-supermarket-seed` to add all Shufersal products to the food database. Currently supermarket-seed.json has only the 46 manual protein yoghurt SKUs. Full scrape expected to add ~15,000+ more foods.

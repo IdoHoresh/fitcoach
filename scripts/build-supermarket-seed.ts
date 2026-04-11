@@ -62,25 +62,28 @@ function filterDuplicatesOfManualOverrides(
 // ── Main ───────────────────────────────────────────────────────────────────
 
 function build(): void {
-  // 1. Read raw scrape output
+  // 1. Read raw scrape output (optional — if missing, build with manual overrides only)
+  let raw: RawShufersalProduct[] = []
   if (!fs.existsSync(RAW_INPUT)) {
-    console.error(`[build-supermarket-seed] Error: ${RAW_INPUT} not found.`)
-    console.error('  Run "npm run scrape-shufersal" first.')
-    process.exit(1)
-  }
-
-  let raw: RawShufersalProduct[]
-  try {
-    raw = JSON.parse(fs.readFileSync(RAW_INPUT, 'utf8')) as RawShufersalProduct[]
-  } catch (err) {
-    console.error(`[build-supermarket-seed] Error: Failed to parse ${RAW_INPUT}.`)
-    console.error(
-      '  The file may be corrupted (e.g. interrupted scrape). Delete it and re-run scrape-shufersal.',
+    console.log(
+      `[build-supermarket-seed] No raw scrape found — building with manual overrides only.`,
     )
-    console.error(`  Details: ${(err as Error).message}`)
-    process.exit(1)
+    console.log(
+      `  Run "npm run scrape-shufersal" then re-run this script to include all Shufersal products.`,
+    )
+  } else {
+    try {
+      raw = JSON.parse(fs.readFileSync(RAW_INPUT, 'utf8')) as RawShufersalProduct[]
+      console.log(`[build-supermarket-seed] Read ${raw.length} raw products from ${RAW_INPUT}`)
+    } catch (err) {
+      console.error(`[build-supermarket-seed] Error: Failed to parse ${RAW_INPUT}.`)
+      console.error(
+        '  The file may be corrupted (e.g. interrupted scrape). Delete it and re-run scrape-shufersal.',
+      )
+      console.error(`  Details: ${(err as Error).message}`)
+      process.exit(1)
+    }
   }
-  console.log(`[build-supermarket-seed] Read ${raw.length} raw products from ${RAW_INPUT}`)
 
   // 2. Normalize
   const normalizeResults = raw.map((r) => normalizeProduct(r))
