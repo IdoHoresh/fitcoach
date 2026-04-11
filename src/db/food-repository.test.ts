@@ -29,11 +29,13 @@ jest.mock('expo-crypto', () => ({
 
 // ── Task 2: Schema v10 ────────────────────────────────────────────────
 
-describe('schema v10 — foods table', () => {
-  it('SCHEMA_VERSION is 10', () => {
-    expect(SCHEMA_VERSION).toBe(10)
+describe('schema v11 — supermarket foods', () => {
+  it('SCHEMA_VERSION is 11', () => {
+    expect(SCHEMA_VERSION).toBe(11)
   })
+})
 
+describe('schema v10 — foods table', () => {
   it('CREATE_TABLE_STATEMENTS contains foods table', () => {
     const foodsStmt = CREATE_TABLE_STATEMENTS.find((s) =>
       s.includes('CREATE TABLE IF NOT EXISTS foods'),

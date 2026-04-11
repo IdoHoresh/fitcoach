@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 10
+export const SCHEMA_VERSION = 11
 
 /**
  * All CREATE TABLE statements.
