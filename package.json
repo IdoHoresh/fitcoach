@@ -15,7 +15,10 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
-    "prepare": "husky"
+    "prepare": "husky",
+    "import-tzameret": "tsx scripts/import-tzameret.ts",
+    "scrape-shufersal": "tsx scripts/scrape-shufersal.ts",
+    "build-supermarket-seed": "tsx scripts/build-supermarket-seed.ts"
   },
   "dependencies": {
     "@expo-google-fonts/dm-sans": "^0.4.2",
@@ -50,6 +53,8 @@
     "@types/jest": "29.5.14",
     "@types/react": "~19.1.0",
     "babel-preset-expo": "~54.0.10",
+    "cheerio": "^1.0.0",
+    "csv-parse": "^6.2.1",
     "eslint": "^9.39.4",
     "eslint-config-expo": "~10.0.0",
     "eslint-config-prettier": "^10.1.8",

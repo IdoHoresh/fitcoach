@@ -84,6 +84,12 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion > 0 && currentVersion < 9) {
       await migrateToV9(db)
     }
+    if (currentVersion < 10) {
+      await migrateToV10(db)
+    }
+    if (currentVersion < 11) {
+      await migrateToV11(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -156,6 +162,112 @@ async function migrateToV9(db: SQLite.SQLiteDatabase): Promise<void> {
       `ALTER TABLE user_profile ADD COLUMN workout_time TEXT NOT NULL DEFAULT 'flexible'`,
     )
   }
+}
+
+/**
+ * v10: Seed the foods table from the bundled Tzameret JSON asset.
+ * Runs only if the table is empty (idempotent — safe to call on every migration).
+ * Inserts in batches of 50 to stay within SQLite's parameter limit.
+ */
+async function migrateToV10(db: SQLite.SQLiteDatabase): Promise<void> {
+  const existing = await db.getFirstAsync<{ count: number }>('SELECT COUNT(*) as count FROM foods')
+  if ((existing?.count ?? 0) > 0) {
+    return // Already seeded
+  }
+
+  const seed = require('../assets/tzameret-seed.json') as {
+    id: string
+    nameHe: string
+    nameEn: string
+    category: string
+    caloriesPer100g: number
+    proteinPer100g: number
+    fatPer100g: number
+    carbsPer100g: number
+    fiberPer100g: number
+    isUserCreated: boolean
+    servingSizesJson: string
+  }[]
+
+  const BATCH_SIZE = 50
+  for (let i = 0; i < seed.length; i += BATCH_SIZE) {
+    const batch = seed.slice(i, i + BATCH_SIZE)
+    const placeholders = batch.map(() => '(?,?,?,?,?,?,?,?,?,?,?)').join(',')
+    const params = batch.flatMap((f) => [
+      f.id,
+      f.nameHe,
+      f.nameEn,
+      f.category,
+      f.caloriesPer100g,
+      f.proteinPer100g,
+      f.fatPer100g,
+      f.carbsPer100g,
+      f.fiberPer100g,
+      f.isUserCreated ? 1 : 0,
+      f.servingSizesJson,
+    ])
+    await db.runAsync(
+      `INSERT OR IGNORE INTO foods (id, name_he, name_en, category, calories_per_100g, protein_per_100g, fat_per_100g, carbs_per_100g, fiber_per_100g, is_user_created, serving_sizes_json) VALUES ${placeholders}`,
+      params,
+    )
+  }
+
+  console.log(`[Database] Seeded ${seed.length} foods from Tzameret dataset`)
+}
+
+/**
+ * v11: Seed the foods table with supermarket (Shufersal) products + protein yoghurt overrides.
+ * Safe to re-run — uses INSERT OR IGNORE so existing rows are preserved.
+ * If the asset file is missing (e.g. developer hasn't run scrape-shufersal yet),
+ * the migration is silently skipped — the app still works with Tzameret data only.
+ */
+async function migrateToV11(db: SQLite.SQLiteDatabase): Promise<void> {
+  let seed: {
+    id: string
+    nameHe: string
+    nameEn: string
+    category: string
+    caloriesPer100g: number
+    proteinPer100g: number
+    fatPer100g: number
+    carbsPer100g: number
+    fiberPer100g: number
+    isUserCreated: boolean
+    servingSizesJson: string
+  }[]
+
+  try {
+    seed = require('../assets/supermarket-seed.json')
+  } catch {
+    // Asset not yet generated — scraper hasn't been run. Skip silently.
+    console.log('[Database] supermarket-seed.json not found — skipping v11 seeding')
+    return
+  }
+
+  const BATCH_SIZE = 50
+  for (let i = 0; i < seed.length; i += BATCH_SIZE) {
+    const batch = seed.slice(i, i + BATCH_SIZE)
+    const placeholders = batch.map(() => '(?,?,?,?,?,?,?,?,?,?,?)').join(',')
+    const params = batch.flatMap((f) => [
+      f.id,
+      f.nameHe,
+      f.nameEn,
+      f.category,
+      f.caloriesPer100g,
+      f.proteinPer100g,
+      f.fatPer100g,
+      f.carbsPer100g,
+      f.fiberPer100g,
+      f.isUserCreated ? 1 : 0,
+      f.servingSizesJson,
+    ])
+    await db.runAsync(
+      `INSERT OR IGNORE INTO foods (id, name_he, name_en, category, calories_per_100g, protein_per_100g, fat_per_100g, carbs_per_100g, fiber_per_100g, is_user_created, serving_sizes_json) VALUES ${placeholders}`,
+      params,
+    )
+  }
+
+  console.log(`[Database] Seeded ${seed.length} foods from supermarket dataset`)
 }
 
 /**

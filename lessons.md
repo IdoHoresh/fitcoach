@@ -111,6 +111,20 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Store implementation vs interface placement after formatter runs.** When adding a new action with `Edit`, the formatter can reflow the file in a way that drops implementation code inside the TypeScript interface block instead of the store object — a syntax error that only surfaces at runtime. After any store edit, grep for the action name to confirm it appears exactly twice: once as a type signature in the interface, and once as an implementation in the `create(...)` object. (2026-04-11)
 - **`MealType` vs `MealName` when indexing a `Record<MealName, ...>`.** `MealType` is a superset (`'pre_workout' | 'post_workout'` extra values), so using a `MealType` variable to index `Record<MealName, T>` is a TypeScript error. Fix by declaring loop variables as `MealName[]` when you know the array only contains the 4 named meals, letting the type system narrow automatically. (2026-04-11)
 
+## SQLite Seeding / Food Database (2026-04-11)
+
+- **Jest hoisting + module-scoped mock variables.** `jest.mock()` is hoisted above all variable declarations by babel-jest. If you write `const mockFn = jest.fn()` before `jest.mock(...)`, `mockFn` is `undefined` inside the factory (the factory runs before your `const` line despite its position). Fix: create `jest.fn()` calls inside the factory, then access them via `import { thing } from '@/module'` + `const mockFn = thing as jest.Mock` after the factory. The import at the top of the file is fine — hoisted imports are resolved after all `jest.mock` factories run.
+- **Run `npm install` after adding any entry to `package.json`.** CI uses `npm ci` which requires exact lock file sync. Adding a dep to `package.json` without running `npm install` first leaves the lock file stale and fails CI with `Missing: <pkg> from lock file`.
+- **SQLite batch INSERT param limit.** SQLite's max bound parameters is 999. For multi-row inserts, calculate `rows × columns_per_row` and cap accordingly. Tzameret seed uses 50 rows × 11 columns = 550 params/batch — safely within the limit with headroom.
+- **Serving sizes as JSON column avoids N+1.** Storing `serving_sizes_json TEXT` instead of a `servings` join table means every `SELECT * FROM foods` query returns complete data in one query. Trade-off: no relational queries on serving attributes, but food search never needs them.
+
+## Supermarket Scraper / Multi-Source Seed (2026-04-11)
+
+- **Schema migration guard: seed vs schema.** ALTER TABLE migrations (v5–v9) use `currentVersion > 0 && currentVersion < N` because fresh installs get the latest schema from `CREATE TABLE IF NOT EXISTS` and don't need column additions. Seed migrations (v10, v11) use bare `currentVersion < N` so they also run on fresh installs (currentVersion=0) — fresh installs need the seed data too. Never apply the `> 0` guard to seed-only migrations.
+- **`unit: 'ml'` vs `unit: 'grams'` for liquid container servings.** The `ServingSize.unit` field drives UI rendering. Drinkable yoghurts and protein shakes stored in ml must use `unit: 'ml'` for the container serving — not `'grams'` even though the gram value is the same numerically. Reviewers will flag this as a data-correctness issue.
+- **Scraper dry-run output should be printed at page level, not inside the product loop.** An early `return` inside the per-product fetch loop bypasses outer loop cleanup and makes the control flow hard to follow. Instead, accumulate into `allProducts` normally and print `allProducts[0]` after the product loop completes, before the `if (DRY_RUN) break`.
+- **Parse error handling for pipeline input files.** If `tmp/shufersal-raw.json` is from an interrupted scrape it may be partial/corrupt. Wrap `JSON.parse(fs.readFileSync(...))` in try/catch with a clear message ("delete and re-run scrape-shufersal") so developers get an actionable error instead of a raw `SyntaxError` stack trace.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
