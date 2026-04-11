@@ -39,7 +39,7 @@ const CARB_CATS: ReadonlySet<FoodCategory> = new Set([
 
 const TAB_DEFS = [
   { id: 'protein' as MacroTabId, emoji: '🥩', label: 'בשר ודגים', subtitle: 'עוף, ביצים, דגים' },
-  { id: 'carbs' as MacroTabId, emoji: '🌾', label: 'דגנים', subtitle: 'אורז, לחם, פסטה' },
+  { id: 'carbs' as MacroTabId, emoji: '🥦', label: 'פחמימות', subtitle: 'דגנים, ירקות, פירות' },
   { id: 'fat' as MacroTabId, emoji: '🥑', label: 'שומן', subtitle: 'אבוקדו, שמן' },
   { id: 'all' as MacroTabId, emoji: '🔍', label: 'הכל', subtitle: undefined },
 ] as const
@@ -323,7 +323,7 @@ const styles = StyleSheet.create({
   },
   foodProtein: {
     fontSize: fontSize.xs,
-    color: colors.protein,
+    color: colors.textSecondary,
     textAlign: 'right',
   },
   customFoodButton: {
