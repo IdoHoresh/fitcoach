@@ -90,6 +90,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion < 11) {
       await migrateToV11(db)
     }
+    if (currentVersion < 12) {
+      await migrateToV12(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -165,54 +168,12 @@ async function migrateToV9(db: SQLite.SQLiteDatabase): Promise<void> {
 }
 
 /**
- * v10: Seed the foods table from the bundled Tzameret JSON asset.
- * Runs only if the table is empty (idempotent — safe to call on every migration).
- * Inserts in batches of 50 to stay within SQLite's parameter limit.
+ * v10: Previously seeded Tzameret foods. Now a no-op — Tzameret replaced by
+ * supermarket scraper pipeline (v11+). Kept to avoid re-running on existing
+ * databases that already passed this version gate.
  */
-async function migrateToV10(db: SQLite.SQLiteDatabase): Promise<void> {
-  const existing = await db.getFirstAsync<{ count: number }>('SELECT COUNT(*) as count FROM foods')
-  if ((existing?.count ?? 0) > 0) {
-    return // Already seeded
-  }
-
-  const seed = require('../assets/tzameret-seed.json') as {
-    id: string
-    nameHe: string
-    nameEn: string
-    category: string
-    caloriesPer100g: number
-    proteinPer100g: number
-    fatPer100g: number
-    carbsPer100g: number
-    fiberPer100g: number
-    isUserCreated: boolean
-    servingSizesJson: string
-  }[]
-
-  const BATCH_SIZE = 50
-  for (let i = 0; i < seed.length; i += BATCH_SIZE) {
-    const batch = seed.slice(i, i + BATCH_SIZE)
-    const placeholders = batch.map(() => '(?,?,?,?,?,?,?,?,?,?,?)').join(',')
-    const params = batch.flatMap((f) => [
-      f.id,
-      f.nameHe,
-      f.nameEn,
-      f.category,
-      f.caloriesPer100g,
-      f.proteinPer100g,
-      f.fatPer100g,
-      f.carbsPer100g,
-      f.fiberPer100g,
-      f.isUserCreated ? 1 : 0,
-      f.servingSizesJson,
-    ])
-    await db.runAsync(
-      `INSERT OR IGNORE INTO foods (id, name_he, name_en, category, calories_per_100g, protein_per_100g, fat_per_100g, carbs_per_100g, fiber_per_100g, is_user_created, serving_sizes_json) VALUES ${placeholders}`,
-      params,
-    )
-  }
-
-  console.log(`[Database] Seeded ${seed.length} foods from Tzameret dataset`)
+async function migrateToV10(_db: SQLite.SQLiteDatabase): Promise<void> {
+  // No-op. Tzameret seeding removed in v12.
 }
 
 /**
@@ -268,6 +229,16 @@ async function migrateToV11(db: SQLite.SQLiteDatabase): Promise<void> {
   }
 
   console.log(`[Database] Seeded ${seed.length} foods from supermarket dataset`)
+}
+
+/**
+ * v12: Remove all Tzameret foods (tz_ prefix) from existing installs.
+ * Tzameret replaced by supermarket scraper — data was too generic and
+ * unbranded for an Israeli food-logging app.
+ */
+async function migrateToV12(db: SQLite.SQLiteDatabase): Promise<void> {
+  await db.runAsync(`DELETE FROM foods WHERE id LIKE 'tz_%'`)
+  console.log('[Database] v12: Removed Tzameret foods from database')
 }
 
 /**
