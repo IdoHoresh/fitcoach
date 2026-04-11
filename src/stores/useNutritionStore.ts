@@ -34,6 +34,11 @@ import type {
 import { generateWeeklyMealPlan } from '../algorithms/meal-plan-generator'
 import { calculateNutritionTargets } from '../algorithms/macro-calculator'
 import { recalibrate } from '../algorithms/weekly-recalibration'
+import { computeMealTargets } from '../algorithms/meal-targets'
+import type { MealMacroTargetByName, MealName } from '../algorithms/meal-targets'
+import { generateMeal } from '../algorithms/generate-meal'
+import { computeRedistribution } from '../algorithms/redistribute-deficit'
+import type { ToastMacro } from '../algorithms/redistribute-deficit'
 import { FOOD_MAP } from '../data/foods'
 import {
   foodLogRepository,
@@ -66,6 +71,10 @@ interface NutritionStore {
   latestRecalibration: RecalibrationResult | null
   weightLog: BodyMeasurement[]
   dateAdherence: MealAdherence[] // adherence records for selectedDate
+  mealTargets: Record<MealName, MealMacroTargetByName> | null
+  lastGeneratedFoodIds: Partial<Record<MealType, ReadonlySet<string>>>
+  lastGeneratedEntryIds: Partial<Record<MealType, string[]>>
+  redistributionToast: { macro: NonNullable<ToastMacro>; amount: number; mealName: MealName } | null
   isLoading: boolean
   error: string | null
 
@@ -97,6 +106,14 @@ interface NutritionStore {
   // Weekly Check-In
   runWeeklyCheckIn: () => Promise<void>
   loadRecentCheckIns: () => Promise<void>
+
+  // Meal Targets
+  refreshMealTargets: () => void
+  clearRedistributionToast: () => void
+
+  // Meal Generation
+  generateMealForSlot: (mealType: MealType, date: string) => Promise<void>
+  regenerateMealForSlot: (mealType: MealType, date: string) => Promise<void>
 
   // Computed
   getRemainingMacros: () => {
@@ -155,6 +172,10 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
   latestRecalibration: null,
   weightLog: [],
   dateAdherence: [],
+  mealTargets: null,
+  lastGeneratedFoodIds: {},
+  lastGeneratedEntryIds: {},
+  redistributionToast: null,
   isLoading: false,
   error: null,
 
@@ -331,12 +352,54 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
     try {
       const adherence = await mealAdherenceRepository.saveAdherence({ date, mealType, level })
 
-      set((state) => ({
-        dateAdherence: [
+      set((state) => {
+        const newDateAdherence = [
           ...state.dateAdherence.filter((a) => !(a.date === date && a.mealType === mealType)),
           adherence,
-        ],
-      }))
+        ]
+
+        // Silent redistribution — only for named meal slots that have a target
+        const mealName = mealType as MealName
+        const target = state.mealTargets?.[mealName]
+        if (!target) return { dateAdherence: newDateAdherence }
+
+        // Compute logged macros for this meal from selectedDateLog
+        const mealEntries = state.selectedDateLog.filter((e) => e.mealType === mealType)
+        const logged = {
+          calories: mealEntries.reduce((s, e) => s + e.calories, 0),
+          protein: mealEntries.reduce((s, e) => s + e.protein, 0),
+          fat: mealEntries.reduce((s, e) => s + e.fat, 0),
+          carbs: mealEntries.reduce((s, e) => s + e.carbs, 0),
+        }
+
+        // Remaining meals = those without adherence in the new list
+        const MEAL_NAMES: MealName[] = ['breakfast', 'lunch', 'dinner', 'snack']
+        const remainingMeals = MEAL_NAMES.filter(
+          (m) => m !== mealName && !newDateAdherence.some((a) => a.mealType === m),
+        )
+
+        if (!state.mealTargets || remainingMeals.length === 0) {
+          return { dateAdherence: newDateAdherence }
+        }
+
+        const { updatedTargets, toastMacro, toastAmount, toastMealName } = computeRedistribution(
+          logged,
+          target,
+          remainingMeals,
+          state.mealTargets,
+        )
+
+        const toast =
+          toastMacro && toastMealName
+            ? { macro: toastMacro, amount: toastAmount, mealName: toastMealName }
+            : null
+
+        return {
+          dateAdherence: newDateAdherence,
+          mealTargets: updatedTargets,
+          redistributionToast: toast,
+        }
+      })
     } catch (err) {
       set({ error: err instanceof Error ? err.message : 'Failed to save adherence' })
     }
@@ -591,6 +654,141 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
       set({ recentCheckIns: checkIns })
     } catch (err) {
       set({ error: err instanceof Error ? err.message : 'Failed to load check-ins' })
+    }
+  },
+
+  // ── Meal Targets ─────────────────────────────────────────────
+
+  refreshMealTargets: () => {
+    const { profile, tdeeBreakdown } = useUserStore.getState()
+    if (!profile || !tdeeBreakdown) return
+
+    try {
+      const dailyTargets = calculateNutritionTargets(
+        tdeeBreakdown.bmr,
+        tdeeBreakdown.total,
+        profile.weightKg,
+        profile.heightCm,
+        profile.bodyFatPercent,
+        profile.goal,
+      )
+      const targets = computeMealTargets(
+        dailyTargets,
+        profile.workoutTime ?? 'flexible',
+        profile.goal,
+      )
+      set({ mealTargets: targets })
+    } catch {
+      // Profile not complete enough yet — skip silently
+    }
+  },
+
+  clearRedistributionToast: () => set({ redistributionToast: null }),
+
+  // ── Meal Generation ───────────────────────────────────────────
+
+  generateMealForSlot: async (mealType: MealType, date: string) => {
+    const { mealTargets } = get()
+    const target = mealTargets?.[mealType as MealName]
+    if (!target) return
+
+    set({ error: null })
+
+    try {
+      const items = generateMeal(target, FOOD_MAP)
+      const entryIds: string[] = []
+
+      for (const item of items) {
+        const factor = item.grams / 100
+        const entry = await foodLogRepository.addEntry({
+          foodId: item.food.id,
+          mealType,
+          date,
+          servingAmount: item.grams,
+          servingUnit: 'grams',
+          gramsConsumed: item.grams,
+          calories: Math.round(item.food.caloriesPer100g * factor),
+          protein: Math.round(item.food.proteinPer100g * factor),
+          fat: Math.round(item.food.fatPer100g * factor),
+          carbs: Math.round(item.food.carbsPer100g * factor),
+        })
+        entryIds.push(entry.id)
+      }
+
+      set((state) => ({
+        lastGeneratedFoodIds: {
+          ...state.lastGeneratedFoodIds,
+          [mealType]: new Set(items.map((i) => i.food.id)),
+        },
+        lastGeneratedEntryIds: {
+          ...state.lastGeneratedEntryIds,
+          [mealType]: entryIds,
+        },
+      }))
+
+      const [entries, summary] = await Promise.all([
+        foodLogRepository.getEntriesByDate(date),
+        foodLogRepository.getDailySummary(date),
+      ])
+      set({ selectedDateLog: entries, dailySummary: summary })
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to generate meal' })
+    }
+  },
+
+  regenerateMealForSlot: async (mealType: MealType, date: string) => {
+    const { mealTargets, lastGeneratedFoodIds, lastGeneratedEntryIds } = get()
+    const target = mealTargets?.[mealType as MealName]
+    if (!target) return
+
+    set({ error: null })
+
+    try {
+      // Remove previously generated entries for this meal
+      const prevEntryIds = lastGeneratedEntryIds[mealType] ?? []
+      for (const entryId of prevEntryIds) {
+        await foodLogRepository.deleteById(entryId)
+      }
+
+      const excludeIds = lastGeneratedFoodIds[mealType]
+      const items = generateMeal(target, FOOD_MAP, excludeIds)
+      const entryIds: string[] = []
+
+      for (const item of items) {
+        const factor = item.grams / 100
+        const entry = await foodLogRepository.addEntry({
+          foodId: item.food.id,
+          mealType,
+          date,
+          servingAmount: item.grams,
+          servingUnit: 'grams',
+          gramsConsumed: item.grams,
+          calories: Math.round(item.food.caloriesPer100g * factor),
+          protein: Math.round(item.food.proteinPer100g * factor),
+          fat: Math.round(item.food.fatPer100g * factor),
+          carbs: Math.round(item.food.carbsPer100g * factor),
+        })
+        entryIds.push(entry.id)
+      }
+
+      set((state) => ({
+        lastGeneratedFoodIds: {
+          ...state.lastGeneratedFoodIds,
+          [mealType]: new Set(items.map((i) => i.food.id)),
+        },
+        lastGeneratedEntryIds: {
+          ...state.lastGeneratedEntryIds,
+          [mealType]: entryIds,
+        },
+      }))
+
+      const [entries, summary] = await Promise.all([
+        foodLogRepository.getEntriesByDate(date),
+        foodLogRepository.getDailySummary(date),
+      ])
+      set({ selectedDateLog: entries, dailySummary: summary })
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to regenerate meal' })
     }
   },
 

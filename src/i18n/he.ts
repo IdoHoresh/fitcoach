@@ -375,6 +375,12 @@ export const he = {
     confirm: 'הוסף לתפריט היומי',
     servingSize: 'בחירה מהירה',
     customAmount: 'כמות מותאמת אישית',
+    generateMeal: '✨ הכן ארוחה',
+    regenerateMeal: '🔄 שנה ארוחה',
+    addFoodLabel: '+ הוסף מאכל',
+    missing: 'חסר',
+    redistributedToast: 'הועברו ל',
+    redistributedCalories: 'קלוריות',
     adherence: {
       title: 'איך הלכה הארוחה?',
       accurate: 'מדויק',

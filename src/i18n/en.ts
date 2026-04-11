@@ -371,6 +371,12 @@ export const en: TranslationKeys = {
     confirm: 'Add to daily plan',
     servingSize: 'Quick pick',
     customAmount: 'Custom amount',
+    generateMeal: '✨ Generate meal',
+    regenerateMeal: '🔄 Change meal',
+    addFoodLabel: '+ Add food',
+    missing: 'Missing',
+    redistributedToast: 'moved to',
+    redistributedCalories: 'kcal',
     adherence: {
       title: 'How did this meal go?',
       accurate: 'Accurate',

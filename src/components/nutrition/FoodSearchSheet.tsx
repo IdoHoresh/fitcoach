@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import {
   View,
   Text,
@@ -15,16 +15,48 @@ import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
-import type { FoodItem, MealType } from '@/types'
+import type { FoodItem, FoodCategory, MealType } from '@/types'
+import { MACRO_SATISFIED_THRESHOLD } from '@/data/constants'
 import { FOOD_MAP } from '@/data/foods'
+import type { MealMacroTargetByName } from '@/algorithms/meal-targets'
 import { searchFoods } from './foodSearch.helpers'
+import { MacroTab } from './MacroTab'
 import { PortionPicker } from './PortionPicker'
+
+// ── Tab types & constants ────────────────────────────────────────────
+
+type MacroTabId = 'protein' | 'fat' | 'carbs' | 'all'
+
+const PROTEIN_CATS: ReadonlySet<FoodCategory> = new Set(['protein', 'dairy'])
+const FAT_CATS: ReadonlySet<FoodCategory> = new Set(['fats'])
+const CARB_CATS: ReadonlySet<FoodCategory> = new Set([
+  'carbs',
+  'fruits',
+  'vegetables',
+  'traditional',
+  'snacks',
+])
+
+const TAB_DEFS = [
+  { id: 'protein' as MacroTabId, emoji: '🥩', label: 'חלבון', subtitle: 'עוף, ביצים' },
+  { id: 'fat' as MacroTabId, emoji: '🥑', label: 'שומן', subtitle: 'אבוקדו, שמן' },
+  { id: 'carbs' as MacroTabId, emoji: '🌾', label: 'פחמימות', subtitle: 'אורז, לחם' },
+  { id: 'all' as MacroTabId, emoji: '🔍', label: 'הכל', subtitle: undefined },
+] as const
+
+interface MealLogged {
+  protein: number
+  fat: number
+  carbs: number
+}
 
 interface FoodSearchSheetProps {
   visible: boolean
   mealType: MealType
   date: string
   onClose: () => void
+  mealTarget?: MealMacroTargetByName
+  mealLogged?: MealLogged
   testID?: string
 }
 
@@ -57,6 +89,8 @@ export function FoodSearchSheet({
   mealType,
   date,
   onClose,
+  mealTarget,
+  mealLogged,
   testID,
 }: FoodSearchSheetProps) {
   const strings = t().nutrition
@@ -64,8 +98,23 @@ export function FoodSearchSheet({
 
   const [query, setQuery] = useState('')
   const [selectedFood, setSelectedFood] = useState<FoodItem | null>(null)
+  const [activeTab, setActiveTab] = useState<MacroTabId>('all')
 
-  const results = useMemo(() => searchFoods(query, FOOD_MAP), [query])
+  // Auto-select tab with biggest deficit when sheet opens
+  useEffect(() => {
+    if (visible) {
+      setActiveTab(computeAutoTab(mealTarget, mealLogged))
+    }
+  }, [visible, mealTarget, mealLogged])
+
+  const allResults = useMemo(() => searchFoods(query, FOOD_MAP), [query])
+
+  // Filter results by active tab (search query still applies within tab)
+  const results = useMemo(() => {
+    if (activeTab === 'all') return allResults
+    const cats = activeTab === 'protein' ? PROTEIN_CATS : activeTab === 'fat' ? FAT_CATS : CARB_CATS
+    return allResults.filter((f) => cats.has(f.category))
+  }, [allResults, activeTab])
 
   function handleFoodPress(food: FoodItem) {
     setSelectedFood(food)
@@ -107,6 +156,24 @@ export function FoodSearchSheet({
           <Ionicons name="close" size={22} color={colors.textSecondary} />
         </Pressable>
 
+        {/* Macro tabs — only shown when mealTarget is provided */}
+        {mealTarget && (
+          <View style={styles.tabsRow} testID={`${id}-tabs`}>
+            {TAB_DEFS.map((tab) => (
+              <MacroTab
+                key={tab.id}
+                emoji={tab.emoji}
+                label={tab.label}
+                subtitle={tab.subtitle}
+                isSelected={activeTab === tab.id}
+                isMet={isTabMet(tab.id, mealTarget, mealLogged)}
+                onPress={() => setActiveTab(tab.id)}
+                testID={`${id}-tab-${tab.id}`}
+              />
+            ))}
+          </View>
+        )}
+
         {/* Search input */}
         <View style={styles.searchRow}>
           <Ionicons name="search-outline" size={18} color={colors.textMuted} />
@@ -145,11 +212,51 @@ export function FoodSearchSheet({
   )
 }
 
+// ── Helpers ──────────────────────────────────────────────────────────
+
+/** Returns which tab to auto-select based on the biggest remaining macro deficit. */
+function computeAutoTab(target?: MealMacroTargetByName, logged?: MealLogged): MacroTabId {
+  if (!target) return 'all'
+
+  const proteinRatio = (logged?.protein ?? 0) / Math.max(1, target.protein)
+  const fatRatio = (logged?.fat ?? 0) / Math.max(1, target.fat)
+  const carbsRatio = (logged?.carbs ?? 0) / Math.max(1, target.carbs)
+
+  // If all macros are satisfied, default to 'all'
+  if (
+    proteinRatio >= MACRO_SATISFIED_THRESHOLD &&
+    fatRatio >= MACRO_SATISFIED_THRESHOLD &&
+    carbsRatio >= MACRO_SATISFIED_THRESHOLD
+  ) {
+    return 'all'
+  }
+
+  // Select the tab with the biggest deficit (lowest ratio)
+  if (proteinRatio <= fatRatio && proteinRatio <= carbsRatio) return 'protein'
+  if (fatRatio <= proteinRatio && fatRatio <= carbsRatio) return 'fat'
+  return 'carbs'
+}
+
+/** Returns true when the macro for this tab is ≥ 90% met. */
+function isTabMet(tabId: MacroTabId, target: MealMacroTargetByName, logged?: MealLogged): boolean {
+  if (tabId === 'all') return false
+  const loggedVal = logged?.[tabId] ?? 0
+  const goalVal = target[tabId as keyof MealMacroTargetByName]
+  if (typeof goalVal !== 'number' || goalVal <= 0) return false
+  return loggedVal / goalVal >= MACRO_SATISFIED_THRESHOLD
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
     paddingTop: spacing.md,
+  },
+  tabsRow: {
+    flexDirection: 'row',
+    gap: spacing.xs,
+    paddingHorizontal: spacing.md,
+    marginBottom: spacing.sm,
   },
   handle: {
     width: 40,
