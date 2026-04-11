@@ -69,16 +69,21 @@ describe('generateMeal', () => {
     expect(['protein', 'dairy']).toContain(items[0].food.category)
   })
 
-  it('second_item_is_carb_food', () => {
+  it('second_item_is_proper_meal_carb_food', () => {
     const items = generateMeal(TARGET, FOOD_MAP)
-    const carbCategories: FoodItem['category'][] = [
-      'carbs',
-      'fruits',
-      'vegetables',
-      'traditional',
-      'snacks',
-    ]
-    expect(carbCategories).toContain(items[1].food.category)
+    const mealCarbCategories: FoodItem['category'][] = ['carbs', 'traditional']
+    expect(mealCarbCategories).toContain(items[1].food.category)
+  })
+
+  it('total_calories_do_not_exceed_target_by_more_than_15_percent', () => {
+    for (let i = 0; i < 30; i++) {
+      const items = generateMeal(TARGET, FOOD_MAP)
+      const totalCal = items.reduce(
+        (sum, item) => sum + (item.grams / 100) * item.food.caloriesPer100g,
+        0,
+      )
+      expect(totalCal).toBeLessThanOrEqual(TARGET.calories * 1.15)
+    }
   })
 
   it('grams_are_positive', () => {

@@ -1,13 +1,17 @@
 /**
  * Meal Generation Algorithm.
  *
- * Generates a 2-3 item meal that approximately hits a macro target by:
- *   1. Picking a protein food  → grams from target.protein
- *   2. Picking a carb food     → grams from remaining carbs
- *   3. Picking a fat food      → grams from remaining fat (only when > 5g left)
+ * Generates a 2-3 item meal that hits a macro target while staying within
+ * the calorie budget. Uses a calorie-aware budget approach:
  *
- * All picks are random; pass `excludeIds` to force different choices (regenerate).
- * Falls back to the full pool when all candidates are excluded.
+ *   1. Pick a protein food → calculate grams from protein target
+ *   2. Deduct those calories from budget
+ *   3. Pick a carb food → grams capped by both carb target AND remaining budget
+ *   4. Pick a fat food  → grams capped by both fat target AND remaining budget
+ *
+ * Carb sources are limited to real meal foods (rice, pasta, bread, traditional)
+ * — NOT vegetables, fruits, or snacks which shouldn't be a primary carb source
+ * in a generated meal.
  *
  * Pure function — no side effects, no state.
  */
@@ -22,28 +26,36 @@ export interface GeneratedMealItem {
   readonly grams: number
 }
 
-// ── Constants ────────────────────────────────────────────────────────
+// ── Category sets for meal generation ───────────────────────────────
+// These are NARROWER than the search tabs — only proper meal foods.
 
-const PROTEIN_CATEGORIES: ReadonlySet<FoodCategory> = new Set(['protein', 'dairy'])
-const CARB_CATEGORIES: ReadonlySet<FoodCategory> = new Set([
-  'carbs',
-  'fruits',
-  'vegetables',
-  'traditional',
-  'snacks',
-])
-const FAT_CATEGORIES: ReadonlySet<FoodCategory> = new Set(['fats'])
+/** Whole-food protein sources suitable as a main meal protein. */
+const MEAL_PROTEIN_CATS: ReadonlySet<FoodCategory> = new Set(['protein', 'dairy'])
 
-/** Minimum remaining fat (grams) to justify adding a dedicated fat food */
+/**
+ * Real meal carb sources: grains, breads, legumes, traditional foods.
+ * Excludes fruits, vegetables, and snacks — not suitable as primary
+ * carb sources in a generated meal (cucumber ≠ carb course).
+ */
+const MEAL_CARB_CATS: ReadonlySet<FoodCategory> = new Set(['carbs', 'traditional'])
+
+/** Healthy fat sources: avocado, olive oil, nuts, seeds. */
+const MEAL_FAT_CATS: ReadonlySet<FoodCategory> = new Set(['fats'])
+
+/** Minimum remaining fat (g) to justify adding a dedicated fat food. */
 const FAT_ITEM_THRESHOLD_G = 5
+
+/** Minimum grams for any food item (avoid 3g of rice). */
+const MIN_GRAMS = 10
 
 // ── Public function ──────────────────────────────────────────────────
 
 /**
- * Generate a meal from the food map that approximately hits the macro target.
+ * Generate a meal from the food map that approximately hits the macro target
+ * without exceeding the calorie budget.
  *
- * @param target    - Per-meal macro target (calories, protein, fat, carbs)
- * @param foodMap   - All available foods keyed by ID
+ * @param target     - Per-meal macro target (calories, protein, fat, carbs)
+ * @param foodMap    - All available foods keyed by ID
  * @param excludeIds - Food IDs to skip (used for regenerate to get different picks)
  * @returns 2 or 3 GeneratedMealItems
  */
@@ -54,33 +66,67 @@ export function generateMeal(
 ): GeneratedMealItem[] {
   const foods = [...foodMap.values()]
 
-  // Step 1: protein food → grams cover target.protein
+  // ── Step 1: Protein food ─────────────────────────────────────────────
   const proteinFood =
-    pickRandom(foods, PROTEIN_CATEGORIES, excludeIds) ?? pickRandom(foods, PROTEIN_CATEGORIES)
+    pickRandom(foods, MEAL_PROTEIN_CATS, excludeIds) ?? pickRandom(foods, MEAL_PROTEIN_CATS)
   if (!proteinFood) throw new RangeError('No protein foods available in food map')
-  const proteinGrams = gramsForMacro(target.protein, proteinFood.proteinPer100g)
+
+  // Cap protein grams at 60% of calorie budget — leaves room for carbs + fat.
+  // Without this cap, a low-density protein food (eggs: 13g/100g) would need
+  // 300+ grams to hit the protein target, consuming the entire budget alone.
+  const gramsByProtein = gramsForMacro(target.protein, proteinFood.proteinPer100g)
+  const maxGramsBy60Pct = Math.max(
+    MIN_GRAMS,
+    Math.round(((target.calories * 0.6) / proteinFood.caloriesPer100g) * 100),
+  )
+  const proteinGrams = Math.min(gramsByProtein, maxGramsBy60Pct)
+
+  const calFromProtein = (proteinGrams / 100) * proteinFood.caloriesPer100g
   const fatFromProtein = (proteinGrams / 100) * proteinFood.fatPer100g
   const carbsFromProtein = (proteinGrams / 100) * proteinFood.carbsPer100g
 
   const items: GeneratedMealItem[] = [{ food: proteinFood, grams: proteinGrams }]
 
-  // Step 2: carb food → grams cover remaining carbs
-  const remainingCarbs = Math.max(0, target.carbs - carbsFromProtein)
+  // Remaining budget after protein
+  let remainingCal = target.calories - calFromProtein
+  let remainingCarbs = Math.max(0, target.carbs - carbsFromProtein)
+  let remainingFat = Math.max(0, target.fat - fatFromProtein)
+
+  // ── Step 2: Carb food ────────────────────────────────────────────────
   const carbFood =
-    pickRandom(foods, CARB_CATEGORIES, excludeIds) ?? pickRandom(foods, CARB_CATEGORIES)
-  if (!carbFood) throw new RangeError('No carb foods available in food map')
-  const carbGrams = gramsForMacro(remainingCarbs, carbFood.carbsPer100g)
-  const fatFromCarbs = (carbGrams / 100) * carbFood.fatPer100g
+    pickRandom(foods, MEAL_CARB_CATS, excludeIds) ?? pickRandom(foods, MEAL_CARB_CATS)
 
-  items.push({ food: carbFood, grams: carbGrams })
+  if (carbFood && remainingCarbs > 5) {
+    // Reserve a minimum budget for a fat item before allocating to carbs
+    const fatReserve = FAT_ITEM_THRESHOLD_G * 9 // ~45 kcal minimum for a fat food
+    const calBudgetForCarbs = Math.max(0, remainingCal - fatReserve)
 
-  // Step 3: fat food → only when remaining fat > threshold
-  const remainingFat = target.fat - fatFromProtein - fatFromCarbs
-  if (remainingFat > FAT_ITEM_THRESHOLD_G) {
-    const fatFood =
-      pickRandom(foods, FAT_CATEGORIES, excludeIds) ?? pickRandom(foods, FAT_CATEGORIES)
+    const gramsByCarbs = gramsForMacro(remainingCarbs, carbFood.carbsPer100g)
+    const maxGramsByCal = Math.max(
+      MIN_GRAMS,
+      Math.round((calBudgetForCarbs / carbFood.caloriesPer100g) * 100),
+    )
+    const carbGrams = Math.min(gramsByCarbs, maxGramsByCal)
+
+    const calFromCarbs = (carbGrams / 100) * carbFood.caloriesPer100g
+    const fatFromCarbs = (carbGrams / 100) * carbFood.fatPer100g
+
+    items.push({ food: carbFood, grams: carbGrams })
+    remainingCal -= calFromCarbs
+    remainingFat = Math.max(0, remainingFat - fatFromCarbs)
+  }
+
+  // ── Step 3: Fat food ─────────────────────────────────────────────────
+  if (remainingFat > FAT_ITEM_THRESHOLD_G && remainingCal > 50) {
+    const fatFood = pickRandom(foods, MEAL_FAT_CATS, excludeIds) ?? pickRandom(foods, MEAL_FAT_CATS)
     if (fatFood) {
-      const fatGrams = gramsForMacro(remainingFat, fatFood.fatPer100g)
+      // Cap grams by BOTH the fat target and the remaining calorie budget
+      const gramsByFat = gramsForMacro(remainingFat, fatFood.fatPer100g)
+      const maxGramsByCal = Math.max(
+        MIN_GRAMS,
+        Math.round((remainingCal / fatFood.caloriesPer100g) * 100),
+      )
+      const fatGrams = Math.min(gramsByFat, maxGramsByCal)
       items.push({ food: fatFood, grams: fatGrams })
     }
   }
@@ -112,5 +158,5 @@ function pickRandom(
  */
 function gramsForMacro(targetMacroG: number, macroPer100g: number): number {
   if (macroPer100g <= 0) return 100
-  return Math.max(10, Math.round((targetMacroG / macroPer100g) * 100))
+  return Math.max(MIN_GRAMS, Math.round((targetMacroG / macroPer100g) * 100))
 }
