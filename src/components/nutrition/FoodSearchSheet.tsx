@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import React, { useState, useMemo, useEffect, useCallback } from 'react'
 import {
   View,
   Text,
@@ -17,9 +17,8 @@ import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import type { FoodItem, FoodCategory, MealType } from '@/types'
 import { MACRO_SATISFIED_THRESHOLD } from '@/data/constants'
-import { FOOD_MAP } from '@/data/foods'
+import { foodRepository } from '@/db/food-repository'
 import type { MealMacroTargetByName } from '@/algorithms/meal-targets'
-import { searchFoods } from './foodSearch.helpers'
 import { MacroTab } from './MacroTab'
 import { PortionPicker } from './PortionPicker'
 
@@ -105,6 +104,7 @@ export function FoodSearchSheet({
   const [query, setQuery] = useState('')
   const [selectedFood, setSelectedFood] = useState<FoodItem | null>(null)
   const [activeTab, setActiveTab] = useState<MacroTabId>('all')
+  const [searchResults, setSearchResults] = useState<FoodItem[]>([])
 
   // Reset to 'all' tab every time the sheet opens
   useEffect(() => {
@@ -113,14 +113,44 @@ export function FoodSearchSheet({
     }
   }, [visible])
 
-  const allResults = useMemo(() => searchFoods(query, FOOD_MAP), [query])
+  // Load results: recent foods when no query, search results when typing
+  const loadResults = useCallback(
+    (q: string) => {
+      if (!visible) return
+      let cancelled = false
 
-  // Filter results by active tab (search query still applies within tab)
+      const run = async () => {
+        const trimmed = q.trim()
+        let found: FoodItem[]
+        if (trimmed.length === 0) {
+          found = await foodRepository.getRecent(30)
+          if (found.length === 0) {
+            found = await foodRepository.search('', 50)
+          }
+        } else {
+          found = await foodRepository.search(trimmed, 50)
+        }
+        if (!cancelled) setSearchResults(found)
+      }
+
+      run()
+      return () => {
+        cancelled = true
+      }
+    },
+    [visible],
+  )
+
+  useEffect(() => {
+    return loadResults(query)
+  }, [query, loadResults])
+
+  // Filter results by active tab (client-side — results are already limited to 50)
   const results = useMemo(() => {
-    if (activeTab === 'all') return allResults
+    if (activeTab === 'all') return searchResults
     const cats = activeTab === 'protein' ? PROTEIN_CATS : activeTab === 'fat' ? FAT_CATS : CARB_CATS
-    return allResults.filter((f) => cats.has(f.category))
-  }, [allResults, activeTab])
+    return searchResults.filter((f) => cats.has(f.category))
+  }, [searchResults, activeTab])
 
   function handleFoodPress(food: FoodItem) {
     setSelectedFood(food)

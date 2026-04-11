@@ -8,6 +8,8 @@ import type { FoodItem } from '@/types'
 /**
  * Searches foods by Hebrew or English name (case-insensitive, partial match).
  * Returns empty array for empty/whitespace queries.
+ *
+ * @deprecated Use `foodRepository.search()` (SQLite, 4600+ foods) instead of this in-memory helper.
  */
 export function searchFoods(query: string, foods: ReadonlyMap<string, FoodItem>): FoodItem[] {
   const all = Array.from(foods.values())

@@ -1,11 +1,11 @@
 # Pre-Commit Checklist
 
-- [x] On a feature branch (NOT main) — feat/guided-meal-logging
-- [x] /review ran and findings fixed — docs-only change, no code review needed
-- [x] lessons.md checked — no new patterns
+- [x] On a feature branch (NOT main) — chore/post-pr43-tasks
+- [x] /review ran and findings fixed — docs-only (lessons.md), no code
+- [x] lessons.md checked — added npm lock file sync rule
 - [x] REVIEW.md checked — no new patterns
-- [x] git diff scanned for secrets/keys/tokens — no secrets found
-- [x] npm run lint passes — clean (no code changed)
-- [x] npm run typecheck passes — clean (no code changed)
-- [x] npm test passes — 1,885 tests passing (no code changed)
-- [x] Commit size checked — TASKS.md only, docs change
+- [x] git diff scanned for secrets/keys/tokens — no secrets in lessons.md
+- [x] npm run lint passes — clean
+- [x] npm run typecheck passes — clean
+- [x] npm test passes — 1,932 tests passing
+- [x] Commit size checked — 3 lines (lessons.md only)
