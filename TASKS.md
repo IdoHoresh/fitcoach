@@ -111,7 +111,7 @@
 - [x] Nutrition screen (daily macro targets, food log, meal tracking) — PR #40, 1,853 tests
 - [x] WorkoutTime field + onboarding screen — PR #41, 1,856 tests
 - [x] `computeMealTargets()` + per-meal macro constants — PR #42, 1,869 tests
-- [x] Guided meal logging — macro tabs, per-meal targets, meal generation, redistribution (spec: docs/specs/2026-04-11-guided-meal-logging.md)
+- [x] Guided meal logging — macro tabs, per-meal targets, meal generation, redistribution (spec: docs/specs/2026-04-11-guided-meal-logging.md) — PR #43, 1,885 tests
 
 ### Food Logging UX — Best-in-Class (researched Apr 2026)
 
