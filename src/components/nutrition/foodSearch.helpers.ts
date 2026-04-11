@@ -10,12 +10,11 @@ import type { FoodItem } from '@/types'
  * Returns empty array for empty/whitespace queries.
  */
 export function searchFoods(query: string, foods: ReadonlyMap<string, FoodItem>): FoodItem[] {
+  const all = Array.from(foods.values())
   const q = query.trim().toLowerCase()
-  if (!q) return []
+  if (!q) return all
 
-  return Array.from(foods.values()).filter(
-    (food) => food.nameHe.includes(q) || food.nameEn.toLowerCase().includes(q),
-  )
+  return all.filter((food) => food.nameHe.includes(q) || food.nameEn.toLowerCase().includes(q))
 }
 
 /**

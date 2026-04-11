@@ -5,22 +5,18 @@ import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
-import type { FoodLogEntry, MealType, AdherenceLevel } from '@/types'
-import { MACRO_SATISFIED_THRESHOLD } from '@/data/constants'
+import type { FoodLogEntry, MealType } from '@/types'
 import { FOOD_MAP } from '@/data/foods'
 import type { MealMacroTargetByName } from '@/algorithms/meal-targets'
 import { FoodItemRow } from './FoodItemRow'
 import { MealEmptyState } from './MealEmptyState'
-import { AdherencePicker } from './AdherencePicker'
 
 interface MealSectionProps {
   mealType: MealType
   date: string
   foods: FoodLogEntry[]
-  adherence: AdherenceLevel | null
   onAddFood: () => void
   onRemoveFood: (entryId: string) => void
-  onAdherenceChange: (level: AdherenceLevel) => void
   mealTarget?: MealMacroTargetByName
   onGenerateMeal?: () => void
   onRegenerateMeal?: () => void
@@ -30,10 +26,8 @@ interface MealSectionProps {
 export function MealSection({
   mealType,
   foods,
-  adherence,
   onAddFood,
   onRemoveFood,
-  onAdherenceChange,
   mealTarget,
   onGenerateMeal,
   onRegenerateMeal,
@@ -55,15 +49,9 @@ export function MealSection({
   const totalFat = foods.reduce((sum, f) => sum + f.fat, 0)
   const totalCarbs = foods.reduce((sum, f) => sum + f.carbs, 0)
 
-  // Progress bar fill — capped at 100%
   const calorieFillPct = mealTarget
     ? Math.min(1, totalCalories / Math.max(1, mealTarget.calories)) * 100
     : 0
-
-  // Most-needed macro hint — shown when at least one macro is below threshold
-  const macroHint = mealTarget
-    ? getMostNeededMacro(totalProtein, totalFat, totalCarbs, mealTarget, strings)
-    : null
 
   const isEmpty = foods.length === 0
 
@@ -86,107 +74,73 @@ export function MealSection({
         </View>
       )}
 
-      {/* Macro hint — most-needed macro in red */}
-      {macroHint && (
-        <Text style={styles.macroHint} testID={`${id}-hint`}>
-          {macroHint}
+      {/* Per-meal macro row — centered, color-coded */}
+      <View style={styles.macroRow} testID={`${id}-macros`}>
+        <Text style={styles.macroLabel}>{strings.macros.protein}</Text>
+        <Text style={[styles.macroValue, { color: colors.protein }]} testID={`${id}-protein`}>
+          {mealTarget
+            ? `${Math.round(totalProtein)}/${Math.round(mealTarget.protein)}g`
+            : `${Math.round(totalProtein)}g`}
         </Text>
-      )}
+        <Text style={styles.macroDivider}>·</Text>
+        <Text style={styles.macroLabel}>{strings.macros.carbs}</Text>
+        <Text style={[styles.macroValue, { color: colors.carbs }]} testID={`${id}-carbs`}>
+          {mealTarget
+            ? `${Math.round(totalCarbs)}/${Math.round(mealTarget.carbs)}g`
+            : `${Math.round(totalCarbs)}g`}
+        </Text>
+        <Text style={styles.macroDivider}>·</Text>
+        <Text style={styles.macroLabel}>{strings.macros.fat}</Text>
+        <Text style={[styles.macroValue, { color: colors.fat }]} testID={`${id}-fat`}>
+          {mealTarget
+            ? `${Math.round(totalFat)}/${Math.round(mealTarget.fat)}g`
+            : `${Math.round(totalFat)}g`}
+        </Text>
+      </View>
 
-      {/* Food rows or empty state */}
-      {isEmpty ? (
-        mealTarget ? (
-          <View style={styles.emptyWithButtons} testID={`${id}-empty`}>
-            <Pressable style={styles.addFoodButton} onPress={onAddFood} testID={`${id}-add-food`}>
-              <Text style={styles.addFoodButtonText}>{strings.addFoodLabel}</Text>
-            </Pressable>
+      {/* Food rows */}
+      {!isEmpty && (
+        <>
+          {foods.map((entry) => (
+            <FoodItemRow
+              key={entry.id}
+              nameHe={FOOD_MAP.get(entry.foodId)?.nameHe ?? entry.foodId}
+              grams={entry.gramsConsumed}
+              calories={entry.calories}
+              onRemove={() => onRemoveFood(entry.id)}
+              testID={`${id}-food-${entry.id}`}
+            />
+          ))}
+          {onRegenerateMeal && (
             <Pressable
-              style={styles.generateButton}
-              onPress={onGenerateMeal}
-              testID={`${id}-generate`}
+              style={styles.regenerateRow}
+              onPress={onRegenerateMeal}
+              testID={`${id}-regenerate`}
             >
-              <Text style={styles.generateButtonText}>{strings.generateMeal}</Text>
+              <Text style={styles.regenerateText}>{strings.regenerateMeal}</Text>
             </Pressable>
-          </View>
+          )}
+        </>
+      )}
+
+      {/* No-target empty state */}
+      {isEmpty && !mealTarget && <MealEmptyState testID={`${id}-empty`} />}
+
+      {/* Bottom row — generate link left, "+" pinned to the right */}
+      <View style={styles.bottomRow}>
+        {isEmpty && onGenerateMeal ? (
+          <Pressable style={styles.generateLink} onPress={onGenerateMeal} testID={`${id}-generate`}>
+            <Text style={styles.generateLinkText}>{strings.generateMeal}</Text>
+          </Pressable>
         ) : (
-          <MealEmptyState testID={`${id}-empty`} />
-        )
-      ) : (
-        foods.map((entry) => (
-          <FoodItemRow
-            key={entry.id}
-            nameHe={FOOD_MAP.get(entry.foodId)?.nameHe ?? entry.foodId}
-            grams={entry.gramsConsumed}
-            calories={entry.calories}
-            onRemove={() => onRemoveFood(entry.id)}
-            testID={`${id}-food-${entry.id}`}
-          />
-        ))
-      )}
-
-      {/* Regenerate button — shown when meal was auto-generated */}
-      {onRegenerateMeal && !isEmpty && (
-        <Pressable
-          style={styles.regenerateRow}
-          onPress={onRegenerateMeal}
-          testID={`${id}-regenerate`}
-        >
-          <Text style={styles.regenerateText}>{strings.regenerateMeal}</Text>
-        </Pressable>
-      )}
-
-      {/* Add + Adherence inline row */}
-      <View style={styles.actionsRow}>
-        <View style={styles.adherenceWrapper}>
-          <AdherencePicker
-            value={adherence}
-            onChange={onAdherenceChange}
-            testID={`${id}-adherence`}
-          />
-        </View>
+          <View />
+        )}
         <Pressable style={styles.addButton} onPress={onAddFood} testID={`${id}-add`}>
           <Ionicons name="add" size={22} color={colors.textInverse} />
         </Pressable>
       </View>
     </View>
   )
-}
-
-// ── Helpers ──────────────────────────────────────────────────────────
-
-type NutritionStrings = ReturnType<typeof t>['nutrition']
-
-/** Returns a localized hint string for the most-needed macro, or null if all are met. */
-function getMostNeededMacro(
-  loggedProtein: number,
-  loggedFat: number,
-  loggedCarbs: number,
-  target: MealMacroTargetByName,
-  strings: NutritionStrings,
-): string | null {
-  const ratios = [
-    { macro: strings.macros.protein, logged: loggedProtein, goal: target.protein },
-    { macro: strings.macros.fat, logged: loggedFat, goal: target.fat },
-    { macro: strings.macros.carbs, logged: loggedCarbs, goal: target.carbs },
-  ]
-
-  // Find the macro furthest from its target (lowest ratio)
-  let worstRatio = 1
-  let worstEntry: { macro: string; logged: number; goal: number } | null = null
-
-  for (const entry of ratios) {
-    if (entry.goal <= 0) continue
-    const ratio = entry.logged / entry.goal
-    if (ratio < MACRO_SATISFIED_THRESHOLD && ratio < worstRatio) {
-      worstRatio = ratio
-      worstEntry = entry
-    }
-  }
-
-  if (!worstEntry) return null
-
-  const missing = Math.max(0, Math.round(worstEntry.goal - worstEntry.logged))
-  return `${strings.missing}: ${missing}g ${worstEntry.macro}`
 }
 
 const styles = StyleSheet.create({
@@ -217,27 +171,6 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
     color: colors.primary,
   },
-  actionsRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.sm,
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
-    gap: spacing.sm,
-  },
-  adherenceWrapper: {
-    flex: 1,
-  },
-  addButton: {
-    width: 40,
-    height: 40,
-    borderRadius: borderRadius.full,
-    backgroundColor: colors.primary,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexShrink: 0,
-  },
   progressTrack: {
     height: 4,
     backgroundColor: colors.border,
@@ -247,43 +180,50 @@ const styles = StyleSheet.create({
     height: 4,
     backgroundColor: colors.primary,
   },
-  macroHint: {
-    fontSize: fontSize.xs,
-    color: colors.error,
-    textAlign: 'right',
-    paddingHorizontal: spacing.md,
-    paddingTop: spacing.xs,
-  },
-  emptyWithButtons: {
+  macroRow: {
     flexDirection: 'row',
-    gap: spacing.sm,
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.md,
-  },
-  addFoodButton: {
-    flex: 1,
-    paddingVertical: spacing.sm,
-    borderRadius: borderRadius.md,
-    borderWidth: 1,
-    borderColor: colors.primary,
     alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    gap: spacing.xs,
   },
-  addFoodButtonText: {
-    fontSize: fontSize.sm,
-    color: colors.primary,
+  macroLabel: {
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+  },
+  macroValue: {
+    fontSize: fontSize.xs,
     fontWeight: fontWeight.semibold,
   },
-  generateButton: {
-    flex: 1,
+  macroDivider: {
+    fontSize: fontSize.xs,
+    color: colors.border,
+  },
+  bottomRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
-    borderRadius: borderRadius.md,
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+  },
+  addButton: {
+    width: 40,
+    height: 40,
+    borderRadius: borderRadius.full,
     backgroundColor: colors.primary,
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  generateButtonText: {
-    fontSize: fontSize.sm,
-    color: colors.textInverse,
-    fontWeight: fontWeight.semibold,
+  generateLink: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  generateLinkText: {
+    fontSize: fontSize.xs,
+    color: colors.textMuted,
   },
   regenerateRow: {
     alignItems: 'center',

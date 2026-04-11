@@ -369,6 +369,7 @@ export const he = {
     addFromPlan: 'לחץ להוספת פריטים מהתפריט המתוכנן',
     searchPlaceholder: 'חפש מאכל...',
     recentlyUsed: 'נפוצים לאחרונה',
+    noResults: 'לא נמצאו תוצאות',
     grams: 'גרם',
     kcal: 'קק"ל',
     addCustomFood: 'הוסף מאכל אישי',

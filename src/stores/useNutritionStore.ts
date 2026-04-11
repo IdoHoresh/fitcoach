@@ -300,6 +300,7 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
 
       set((state) => ({
         todaysLog: state.todaysLog.filter((e) => e.id !== entryId),
+        selectedDateLog: state.selectedDateLog.filter((e) => e.id !== entryId),
       }))
 
       const summary = await foodLogRepository.getDailySummary(todayISO())

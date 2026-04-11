@@ -28,12 +28,12 @@ const MOCK_MAP: ReadonlyMap<string, FoodItem> = new Map([['food_test_001', MOCK_
 // ── searchFoods ───────────────────────────────────────────────────
 
 describe('searchFoods', () => {
-  it('returns empty array for empty query', () => {
-    expect(searchFoods('', MOCK_MAP)).toEqual([])
+  it('returns all foods for empty query', () => {
+    expect(searchFoods('', MOCK_MAP)).toEqual([MOCK_FOOD])
   })
 
-  it('returns empty array for whitespace-only query', () => {
-    expect(searchFoods('   ', MOCK_MAP)).toEqual([])
+  it('returns all foods for whitespace-only query', () => {
+    expect(searchFoods('   ', MOCK_MAP)).toEqual([MOCK_FOOD])
   })
 
   it('finds food by Hebrew name (partial match)', () => {

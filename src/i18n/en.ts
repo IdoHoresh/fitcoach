@@ -365,6 +365,7 @@ export const en: TranslationKeys = {
     addFromPlan: 'Tap to add items from your meal plan',
     searchPlaceholder: 'Search food...',
     recentlyUsed: 'Recently Used',
+    noResults: 'No results found',
     grams: 'g',
     kcal: 'kcal',
     addCustomFood: 'Add custom food',

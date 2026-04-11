@@ -28,10 +28,8 @@ const defaultProps = {
   mealType: 'breakfast' as const,
   date: '2026-04-10',
   foods: [],
-  adherence: null,
   onAddFood: jest.fn(),
   onRemoveFood: jest.fn(),
-  onAdherenceChange: jest.fn(),
   testID: 'meal-section',
 }
 
@@ -43,7 +41,7 @@ describe('MealSection', () => {
     expect(getByTestId('meal-section-title')).toHaveTextContent('ארוחת בוקר')
   })
 
-  it('shows empty state when no foods', () => {
+  it('shows empty state when no foods and no target', () => {
     const { getByTestId } = render(<MealSection {...defaultProps} />)
     expect(getByTestId('meal-section-empty')).toBeTruthy()
   })
@@ -68,9 +66,23 @@ describe('MealSection', () => {
     expect(getByTestId('meal-section-calories')).toHaveTextContent(/^0/)
   })
 
-  it('pressing add button calls onAddFood', () => {
+  it('+ button is always present', () => {
+    const { getByTestId } = render(<MealSection {...defaultProps} />)
+    expect(getByTestId('meal-section-add')).toBeTruthy()
+  })
+
+  it('pressing + calls onAddFood on empty meal', () => {
     const onAddFood = jest.fn()
     const { getByTestId } = render(<MealSection {...defaultProps} onAddFood={onAddFood} />)
+    fireEvent.press(getByTestId('meal-section-add'))
+    expect(onAddFood).toHaveBeenCalledTimes(1)
+  })
+
+  it('pressing + calls onAddFood on non-empty meal', () => {
+    const onAddFood = jest.fn()
+    const { getByTestId } = render(
+      <MealSection {...defaultProps} foods={MOCK_ENTRIES} onAddFood={onAddFood} />,
+    )
     fireEvent.press(getByTestId('meal-section-add'))
     expect(onAddFood).toHaveBeenCalledTimes(1)
   })
@@ -84,9 +96,25 @@ describe('MealSection', () => {
     expect(onRemoveFood).toHaveBeenCalledWith('entry_001')
   })
 
-  it('renders adherence picker', () => {
-    const { getByTestId } = render(<MealSection {...defaultProps} />)
-    expect(getByTestId('meal-section-adherence')).toBeTruthy()
+  it('shows generate link on empty meal with target', () => {
+    const mealTarget = { calories: 500, protein: 40, fat: 15, carbs: 50 }
+    const { getByTestId } = render(
+      <MealSection {...defaultProps} mealTarget={mealTarget} onGenerateMeal={jest.fn()} />,
+    )
+    expect(getByTestId('meal-section-generate')).toBeTruthy()
+  })
+
+  it('does not show generate link on non-empty meal', () => {
+    const mealTarget = { calories: 500, protein: 40, fat: 15, carbs: 50 }
+    const { queryByTestId } = render(
+      <MealSection
+        {...defaultProps}
+        foods={MOCK_ENTRIES}
+        mealTarget={mealTarget}
+        onGenerateMeal={jest.fn()}
+      />,
+    )
+    expect(queryByTestId('meal-section-generate')).toBeNull()
   })
 
   it('works for lunch meal type', () => {

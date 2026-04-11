@@ -171,7 +171,7 @@ export const foodLogEntrySchema = z.object({
   foodId: z.string().min(1),
   mealType: mealTypeSchema,
   date: isoDateSchema,
-  servingAmount: z.number().positive().max(100),
+  servingAmount: z.number().positive().max(5000),
   servingUnit: z.enum(['grams', 'ml', 'piece', 'tablespoon', 'teaspoon', 'cup', 'serving']),
 })
 

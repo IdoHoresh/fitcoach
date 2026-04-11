@@ -38,9 +38,9 @@ const CARB_CATS: ReadonlySet<FoodCategory> = new Set([
 ])
 
 const TAB_DEFS = [
-  { id: 'protein' as MacroTabId, emoji: '🥩', label: 'חלבון', subtitle: 'עוף, ביצים' },
+  { id: 'protein' as MacroTabId, emoji: '🥩', label: 'בשר ודגים', subtitle: 'עוף, ביצים, דגים' },
+  { id: 'carbs' as MacroTabId, emoji: '🌾', label: 'דגנים', subtitle: 'אורז, לחם, פסטה' },
   { id: 'fat' as MacroTabId, emoji: '🥑', label: 'שומן', subtitle: 'אבוקדו, שמן' },
-  { id: 'carbs' as MacroTabId, emoji: '🌾', label: 'פחמימות', subtitle: 'אורז, לחם' },
   { id: 'all' as MacroTabId, emoji: '🔍', label: 'הכל', subtitle: undefined },
 ] as const
 
@@ -67,6 +67,7 @@ interface FoodRowProps {
 }
 
 function FoodRow({ food, onPress, testID }: FoodRowProps) {
+  const strings = t().nutrition
   return (
     <Pressable style={styles.foodRow} onPress={() => onPress(food)} testID={testID}>
       <View style={styles.foodRowContent}>
@@ -77,9 +78,14 @@ function FoodRow({ food, onPress, testID }: FoodRowProps) {
           {food.nameEn}
         </Text>
       </View>
-      <Text style={styles.foodCalories}>
-        {Math.round(food.caloriesPer100g)} {t().nutrition.kcal}
-      </Text>
+      <View style={styles.foodMacros}>
+        <Text style={styles.foodCalories}>
+          {Math.round(food.caloriesPer100g)} {strings.kcal}
+        </Text>
+        <Text style={styles.foodProtein}>
+          {Math.round(food.proteinPer100g)}g {strings.macros.protein}
+        </Text>
+      </View>
     </Pressable>
   )
 }
@@ -100,12 +106,12 @@ export function FoodSearchSheet({
   const [selectedFood, setSelectedFood] = useState<FoodItem | null>(null)
   const [activeTab, setActiveTab] = useState<MacroTabId>('all')
 
-  // Auto-select tab with biggest deficit when sheet opens
+  // Reset to 'all' tab every time the sheet opens
   useEffect(() => {
     if (visible) {
-      setActiveTab(computeAutoTab(mealTarget, mealLogged))
+      setActiveTab('all')
     }
-  }, [visible, mealTarget, mealLogged])
+  }, [visible])
 
   const allResults = useMemo(() => searchFoods(query, FOOD_MAP), [query])
 
@@ -188,8 +194,10 @@ export function FoodSearchSheet({
           />
         </View>
 
-        {/* Section label */}
-        {!query && <Text style={styles.sectionLabel}>{strings.recentlyUsed}</Text>}
+        {/* Section label — show result count while searching */}
+        {query.trim().length > 0 && results.length === 0 && (
+          <Text style={styles.sectionLabel}>{strings.noResults ?? 'לא נמצאו תוצאות'}</Text>
+        )}
 
         {/* Results */}
         <FlatList
@@ -213,29 +221,6 @@ export function FoodSearchSheet({
 }
 
 // ── Helpers ──────────────────────────────────────────────────────────
-
-/** Returns which tab to auto-select based on the biggest remaining macro deficit. */
-function computeAutoTab(target?: MealMacroTargetByName, logged?: MealLogged): MacroTabId {
-  if (!target) return 'all'
-
-  const proteinRatio = (logged?.protein ?? 0) / Math.max(1, target.protein)
-  const fatRatio = (logged?.fat ?? 0) / Math.max(1, target.fat)
-  const carbsRatio = (logged?.carbs ?? 0) / Math.max(1, target.carbs)
-
-  // If all macros are satisfied, default to 'all'
-  if (
-    proteinRatio >= MACRO_SATISFIED_THRESHOLD &&
-    fatRatio >= MACRO_SATISFIED_THRESHOLD &&
-    carbsRatio >= MACRO_SATISFIED_THRESHOLD
-  ) {
-    return 'all'
-  }
-
-  // Select the tab with the biggest deficit (lowest ratio)
-  if (proteinRatio <= fatRatio && proteinRatio <= carbsRatio) return 'protein'
-  if (fatRatio <= proteinRatio && fatRatio <= carbsRatio) return 'fat'
-  return 'carbs'
-}
 
 /** Returns true when the macro for this tab is ≥ 90% met. */
 function isTabMet(tabId: MacroTabId, target: MealMacroTargetByName, logged?: MealLogged): boolean {
@@ -324,13 +309,22 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
     textAlign: 'right',
   },
+  foodMacros: {
+    alignItems: 'flex-end',
+    gap: 2,
+    marginStart: spacing.sm,
+    flexShrink: 0,
+  },
   foodCalories: {
     fontSize: fontSize.sm,
     fontWeight: fontWeight.bold,
     color: colors.primary,
-    marginLeft: spacing.md,
-    minWidth: 50,
-    textAlign: 'left',
+    textAlign: 'right',
+  },
+  foodProtein: {
+    fontSize: fontSize.xs,
+    color: colors.protein,
+    textAlign: 'right',
   },
   customFoodButton: {
     flexDirection: 'row',

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react'
+import React, { useState, useEffect, useMemo, useRef } from 'react'
 import { View, Text, ScrollView, StyleSheet, Animated } from 'react-native'
 import { useNutritionStore } from '@/stores/useNutritionStore'
 import { colors } from '@/theme/colors'
@@ -6,7 +6,7 @@ import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize } from '@/theme/typography'
 import { todayISO } from '@/db'
 import { t } from '@/i18n'
-import type { MealType, AdherenceLevel } from '@/types'
+import type { MealType } from '@/types'
 import type { MealName, ToastMacro } from '@/algorithms'
 import { DaySelector } from './DaySelector'
 import { NutritionCalorieArc } from './NutritionCalorieArc'
@@ -25,13 +25,10 @@ export function NutritionDashboard() {
   const [activeMealSheet, setActiveMealSheet] = useState<MealType | null>(null)
 
   const selectedDateLog = useNutritionStore((s) => s.selectedDateLog)
-  const dateAdherence = useNutritionStore((s) => s.dateAdherence)
   const activePlan = useNutritionStore((s) => s.activePlan)
   const mealTargets = useNutritionStore((s) => s.mealTargets)
   const loadLogForDate = useNutritionStore((s) => s.loadLogForDate)
-  const loadAdherenceForDate = useNutritionStore((s) => s.loadAdherenceForDate)
   const removeFood = useNutritionStore((s) => s.removeFood)
-  const setMealAdherence = useNutritionStore((s) => s.setMealAdherence)
   const refreshMealTargets = useNutritionStore((s) => s.refreshMealTargets)
   const generateMealForSlot = useNutritionStore((s) => s.generateMealForSlot)
   const regenerateMealForSlot = useNutritionStore((s) => s.regenerateMealForSlot)
@@ -70,8 +67,7 @@ export function NutritionDashboard() {
 
   useEffect(() => {
     loadLogForDate(selectedDate)
-    loadAdherenceForDate(selectedDate)
-  }, [selectedDate, loadLogForDate, loadAdherenceForDate])
+  }, [selectedDate, loadLogForDate])
 
   const totals = useMemo(() => computeDayTotals(selectedDateLog), [selectedDateLog])
   const mealGroups = useMemo(() => groupFoodsByMeal(selectedDateLog), [selectedDateLog])
@@ -80,19 +76,6 @@ export function NutritionDashboard() {
   const goalProtein = activePlan?.targetProtein ?? 150
   const goalCarbs = activePlan?.targetCarbs ?? 200
   const goalFat = activePlan?.targetFat ?? 65
-
-  const getAdherenceForMeal = useCallback(
-    (mealType: MealType): AdherenceLevel | null =>
-      dateAdherence.find((a) => a.mealType === mealType)?.level ?? null,
-    [dateAdherence],
-  )
-
-  const handleAdherenceChange = useCallback(
-    (mealType: MealType, level: AdherenceLevel) => {
-      setMealAdherence(selectedDate, mealType, level)
-    },
-    [selectedDate, setMealAdherence],
-  )
 
   return (
     <View style={styles.container}>
@@ -128,10 +111,8 @@ export function NutritionDashboard() {
             mealType={mealType}
             date={selectedDate}
             foods={mealGroups.get(mealType) ?? []}
-            adherence={getAdherenceForMeal(mealType)}
             onAddFood={() => setActiveMealSheet(mealType)}
             onRemoveFood={(entryId) => removeFood(entryId)}
-            onAdherenceChange={(level) => handleAdherenceChange(mealType, level)}
             mealTarget={mealTargets?.[mealType]}
             onGenerateMeal={() => generateMealForSlot(mealType, selectedDate)}
             onRegenerateMeal={
