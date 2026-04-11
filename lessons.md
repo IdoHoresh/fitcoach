@@ -108,6 +108,8 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 ## Nutrition Algorithm Patterns (cont.)
 
 - **`Math.ceil(cap) - 1` for strict integer thresholds.** When a constraint is `value < threshold` and values are integers after rounding, `Math.floor(threshold)` is wrong when `threshold` is exactly an integer (e.g. `600 × 0.15 / 9 = 10` — `Math.floor(10) = 10`, but `10 × 9 / 600 = 0.15` which fails a strict `< 0.15` test). Use `Math.ceil(threshold) - 1` instead — it gives the largest integer strictly less than the threshold in all cases. (2026-04-11)
+- **Store implementation vs interface placement after formatter runs.** When adding a new action with `Edit`, the formatter can reflow the file in a way that drops implementation code inside the TypeScript interface block instead of the store object — a syntax error that only surfaces at runtime. After any store edit, grep for the action name to confirm it appears exactly twice: once as a type signature in the interface, and once as an implementation in the `create(...)` object. (2026-04-11)
+- **`MealType` vs `MealName` when indexing a `Record<MealName, ...>`.** `MealType` is a superset (`'pre_workout' | 'post_workout'` extra values), so using a `MealType` variable to index `Record<MealName, T>` is a TypeScript error. Fix by declaring loop variables as `MealName[]` when you know the array only contains the 4 named meals, letting the type system narrow automatically. (2026-04-11)
 
 ## Open Questions
 

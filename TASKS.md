@@ -109,7 +109,18 @@
 - [x] Workout screen (daily workout display, exercise list with sets/reps)
 - [x] Active workout UI (guided session — current exercise, log sets, rest timer)
 - [x] Nutrition screen (daily macro targets, food log, meal tracking) — PR #40, 1,853 tests
-- [ ] Guided meal logging — macro tabs, per-meal targets, meal generation, redistribution (spec: docs/specs/2026-04-11-guided-meal-logging.md)
+- [x] WorkoutTime field + onboarding screen — PR #41, 1,856 tests
+- [x] `computeMealTargets()` + per-meal macro constants — PR #42, 1,869 tests
+- [x] Guided meal logging — macro tabs, per-meal targets, meal generation, redistribution (spec: docs/specs/2026-04-11-guided-meal-logging.md)
+
+### Food Logging UX — Best-in-Class (researched Apr 2026)
+
+- [ ] **Israeli food database** — Tzameret (2,500 MoH-verified foods) + Israeli brands (Tnuva, Osem, Strauss) + pre-built dishes (shakshuka, hummus, falafel, burekas, schnitzel). No competitor covers this. Biggest moat.
+- [ ] **Recent foods as default** — When food search opens, show last 10–15 logged foods before user types anything. 80% of logs are repeats. Zero-tap re-log of a known food.
+- [ ] **One-tap re-log previous meal** — "Same breakfast as yesterday" — one tap, entire meal re-logged. MacroFactor + MFP power-user favourite. Kills #1 dropout cause (effort).
+- [ ] **Streak with grace day** — Log streak shown on home screen. 1 grace day per week before streak resets. Avoids all-or-nothing abandonment after a single missed day.
+- [ ] **Free barcode scanning** — Israeli packaged foods via Open Food Facts. Must be free — every app that locked barcodes to premium lost users.
+
 - [ ] Progress screen (weight chart, volume trends, body measurements)
 - [ ] Settings screen (edit profile, equipment, language, app info)
 - [ ] "Data is stored locally" notice in Settings (users need to know — no cloud sync in v1.0)
@@ -466,3 +477,5 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Active workout UI (PR #35) — 7 new components (SetRow, ActiveExerciseCard, ActiveWorkoutView, FloatingRestBubble, FinishWorkoutBar, EndEarlyDialog, WorkoutTimer), guided session with set logging, auto-advance, inline rest timer + floating bubble, end early dialog, 1,754 tests
 - [x] Home dashboard Stitch redesign (PR #39) — converted Home Dashboard and Welcome screens to Stitch design system
 - [x] Nutrition screen — full daily food log with meal tracking (PR #40) — 10 new components (DaySelector, NutritionCalorieArc, NutritionMacroPills, MealSection, FoodItemRow, MealEmptyState, AdherencePicker, FoodSearchSheet, PortionPicker + helpers), MealAdherence DB table + repository, date-aware store, 1,853 tests
+- [x] WorkoutTime field + DB column + onboarding screen (PR #41) — `WorkoutTime` type, SQLite v9 migration, workout-time onboarding screen after training-days, Zod validation, 1,856 tests
+- [x] `computeMealTargets()` + per-meal macro constants (PR #42) — pure algorithm maps daily macros + WorkoutTime + goal to per-meal `{calories, protein, fat, carbs}` for 4 named meals; `MEAL_CALORIE_SPLIT_BY_GOAL`, `FAT_CAP_PRE_WORKOUT`, `PROTEIN_BOOST_MULTIPLIER`, `MACRO_SATISFIED_THRESHOLD` constants with citations; 13 tests, 1,869 tests total

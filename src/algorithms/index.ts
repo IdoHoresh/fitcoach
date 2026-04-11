@@ -66,6 +66,14 @@ export {
 export { computeMealTargets } from './meal-targets'
 export type { MealMacroTargetByName, MealName } from './meal-targets'
 
+// Meal generation
+export { generateMeal } from './generate-meal'
+export type { GeneratedMealItem } from './generate-meal'
+
+// Deficit redistribution
+export { computeRedistribution } from './redistribute-deficit'
+export type { RedistributionResult, LoggedMacros, ToastMacro } from './redistribute-deficit'
+
 // Streak calculation
 export { calculateStreak } from './streak'
 
