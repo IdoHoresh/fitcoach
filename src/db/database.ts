@@ -96,6 +96,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion < 13) {
       await migrateToV13(db)
     }
+    if (currentVersion < 14) {
+      await migrateToV14(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -256,6 +259,67 @@ async function migrateToV13(db: SQLite.SQLiteDatabase): Promise<void> {
   if (!existing.has('name_he')) {
     await db.execAsync(`ALTER TABLE food_log ADD COLUMN name_he TEXT NOT NULL DEFAULT ''`)
   }
+}
+
+/**
+ * v14: Replace the 46-product Shufersal proof-of-concept seed with the full
+ * 5,459-product catalog scraped from shufersal.co.il.
+ *
+ * Deletes all existing sh_ and manual_ rows first so stale products don't
+ * linger after deduplication or override changes between scrape runs.
+ * Uses INSERT OR IGNORE so user-created foods (no sh_/manual_ prefix) are safe.
+ *
+ * If the asset file is missing, silently skips — same pattern as v11.
+ */
+async function migrateToV14(db: SQLite.SQLiteDatabase): Promise<void> {
+  let seed: {
+    id: string
+    nameHe: string
+    nameEn: string
+    category: string
+    caloriesPer100g: number
+    proteinPer100g: number
+    fatPer100g: number
+    carbsPer100g: number
+    fiberPer100g: number
+    isUserCreated: boolean
+    servingSizesJson: string
+  }[]
+
+  try {
+    seed = require('../assets/supermarket-seed.json')
+  } catch {
+    console.log('[Database] supermarket-seed.json not found — skipping v14 seeding')
+    return
+  }
+
+  // Wipe previous scrape so stale products don't persist
+  await db.runAsync(`DELETE FROM foods WHERE id LIKE 'sh_%' OR id LIKE 'manual_%'`)
+
+  const BATCH_SIZE = 50
+  for (let i = 0; i < seed.length; i += BATCH_SIZE) {
+    const batch = seed.slice(i, i + BATCH_SIZE)
+    const placeholders = batch.map(() => '(?,?,?,?,?,?,?,?,?,?,?)').join(',')
+    const params = batch.flatMap((f) => [
+      f.id,
+      f.nameHe,
+      f.nameEn,
+      f.category,
+      f.caloriesPer100g,
+      f.proteinPer100g,
+      f.fatPer100g,
+      f.carbsPer100g,
+      f.fiberPer100g,
+      f.isUserCreated ? 1 : 0,
+      f.servingSizesJson,
+    ])
+    await db.runAsync(
+      `INSERT OR IGNORE INTO foods (id, name_he, name_en, category, calories_per_100g, protein_per_100g, fat_per_100g, carbs_per_100g, fiber_per_100g, is_user_created, serving_sizes_json) VALUES ${placeholders}`,
+      params,
+    )
+  }
+
+  console.log(`[Database] v14: Seeded ${seed.length} foods from full Shufersal catalog`)
 }
 
 /**
