@@ -17,7 +17,10 @@
     "test:coverage": "jest --coverage",
     "prepare": "husky",
     "scrape-shufersal": "tsx scripts/scrape-shufersal.ts",
-    "build-supermarket-seed": "tsx scripts/build-supermarket-seed.ts"
+    "build-supermarket-seed": "tsx scripts/build-supermarket-seed.ts",
+    "scrape-rl-ids": "tsx scripts/scrape-rl-ids.ts",
+    "fetch-rl-nutrition": "tsx scripts/fetch-rl-nutrition.ts",
+    "build-rami-levy-seed": "tsx scripts/build-rami-levy-seed.ts"
   },
   "dependencies": {
     "@expo-google-fonts/dm-sans": "^0.4.2",
