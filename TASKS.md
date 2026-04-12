@@ -479,3 +479,13 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Nutrition screen — full daily food log with meal tracking (PR #40) — 10 new components (DaySelector, NutritionCalorieArc, NutritionMacroPills, MealSection, FoodItemRow, MealEmptyState, AdherencePicker, FoodSearchSheet, PortionPicker + helpers), MealAdherence DB table + repository, date-aware store, 1,853 tests
 - [x] WorkoutTime field + DB column + onboarding screen (PR #41) — `WorkoutTime` type, SQLite v9 migration, workout-time onboarding screen after training-days, Zod validation, 1,856 tests
 - [x] `computeMealTargets()` + per-meal macro constants (PR #42) — pure algorithm maps daily macros + WorkoutTime + goal to per-meal `{calories, protein, fat, carbs}` for 4 named meals; `MEAL_CALORIE_SPLIT_BY_GOAL`, `FAT_CAP_PRE_WORKOUT`, `PROTEIN_BOOST_MULTIPLIER`, `MACRO_SATISFIED_THRESHOLD` constants with citations; 13 tests, 1,869 tests total
+- [x] Guided meal logging — macro tabs, per-meal targets, meal generation, redistribution (PR #43) — 1,885 tests
+- [x] Tzameret food database (PR #44) — 4,609 MoH foods seeded via v10 migration, 1,932 tests
+- [x] Shufersal scraper pipeline + 46 protein yoghurt SKUs + schema v11 (PR #45) — scrape-shufersal.ts, normalize-food.ts, deduplicate.ts, shufersal-overrides.ts, build-supermarket-seed.ts, 1,997 tests
+- [x] Supermarket-only food database: remove Tzameret, fix search relevance, schema v12 (PR #46) — deleted tzameret-seed.json (60K lines), migrateToV12 purges tz\_ rows, search now orders starts-with first, 1,998 tests
+- [x] Food log display name fix — schema v13 adds name_he to food_log, logged items now show Hebrew name instead of raw ID, logSavedMeal uses foodRepository instead of FOOD_MAP (PR #47) — 1,998 tests
+
+## Next Up
+
+- [ ] **Run Shufersal full scrape** — `npm run scrape-shufersal` then `npm run build-supermarket-seed` to add all Shufersal branded products (~15,000+). Currently only 46 manual protein yoghurt SKUs are in the database.
+- [ ] **Add more Israeli supermarkets** — Rami Levy, Tiv Taam, Victory, Yohananof, Am-Pm. Each needs a scraper module following the same pipeline pattern as Shufersal.
