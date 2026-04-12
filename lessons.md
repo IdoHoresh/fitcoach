@@ -125,6 +125,10 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Scraper dry-run output should be printed at page level, not inside the product loop.** An early `return` inside the per-product fetch loop bypasses outer loop cleanup and makes the control flow hard to follow. Instead, accumulate into `allProducts` normally and print `allProducts[0]` after the product loop completes, before the `if (DRY_RUN) break`.
 - **Parse error handling for pipeline input files.** If `tmp/shufersal-raw.json` is from an interrupted scrape it may be partial/corrupt. Wrap `JSON.parse(fs.readFileSync(...))` in try/catch with a clear message ("delete and re-run scrape-shufersal") so developers get an actionable error instead of a raw `SyntaxError` stack trace.
 
+## Git / Branch Workflow
+
+- **Always branch from `main`, not from another feature branch.** Branching off an unmerged branch means the new branch inherits commits that aren't in main yet. When both branches exist as PRs simultaneously, GitHub sees overlapping changes and flags conflicts. Exception: if feat B genuinely can't be built without unreleased code from feat A, explicitly rebase B onto A and note the dependency. In that case, merge A first, then rebase B onto main before merging. (2026-04-12)
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
