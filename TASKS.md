@@ -486,6 +486,7 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Food log display name fix — schema v13 adds name_he to food_log, logged items now show Hebrew name instead of raw ID, logSavedMeal uses foodRepository instead of FOOD_MAP (PR #47) — 1,998 tests
 
 - [x] Full Shufersal catalog — schema v14, 5,459 products (6,573 scraped, 1,160 deduped, 46 overrides), migrateToV14 wipes old sh\_ rows and reseeds (PR #50) — 2,000 tests
+- [x] Manual gram input in PortionPicker — TextInput replaces read-only gram display, live macro update, clamp on blur, stepper + chips stay in sync (PR #52) — 2,003 tests
 
 ## Next Up
 
