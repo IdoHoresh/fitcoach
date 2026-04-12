@@ -27,13 +27,35 @@ jest.mock('expo-crypto', () => ({
   randomUUID: () => 'mock-uuid-' + Math.random().toString(36).slice(2, 8),
 }))
 
-// ── Task 2: Schema v10 ────────────────────────────────────────────────
+// ── Schema version ────────────────────────────────────────────────────
 
-describe('schema v13 — food_log name_he column', () => {
-  it('SCHEMA_VERSION is 13', () => {
-    expect(SCHEMA_VERSION).toBe(13)
+describe('schema v14 — full Shufersal seed', () => {
+  it('SCHEMA_VERSION is 14', () => {
+    expect(SCHEMA_VERSION).toBe(14)
+  })
+
+  it('supermarket-seed.json has at least 5000 products', () => {
+    const seed = require('../assets/supermarket-seed.json') as unknown[]
+    expect(seed.length).toBeGreaterThanOrEqual(5000)
+  })
+
+  it('every seed product has valid id prefix, Hebrew name, and positive calories', () => {
+    const seed = require('../assets/supermarket-seed.json') as {
+      id: string
+      nameHe: string
+      caloriesPer100g: number
+    }[]
+    const invalid = seed.filter(
+      (f) =>
+        (!f.id.startsWith('sh_') && !f.id.startsWith('manual_')) ||
+        !f.nameHe ||
+        f.caloriesPer100g <= 0,
+    )
+    expect(invalid).toHaveLength(0)
   })
 })
+
+// ── Task 2: Schema v10 ────────────────────────────────────────────────
 
 describe('schema v10 — foods table', () => {
   it('CREATE_TABLE_STATEMENTS contains foods table', () => {
