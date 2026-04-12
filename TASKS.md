@@ -490,4 +490,10 @@ Apple reviews health/fitness apps more strictly. Key rules:
 
 ## Next Up
 
-- [ ] **Add more Israeli supermarkets** — Rami Levy, Tiv Taam, Victory, Yohananof, Am-Pm. Each needs a scraper module following the same pipeline pattern as Shufersal.
+- [ ] **Run Rami Levy pipeline + ship seed data** — PR #54 merged (scraper code), seed ships as `[]`. Run the 3-step pipeline to populate it:
+  1. `npm run scrape-rl-ids` (~49 requests, ~15s)
+  2. `npm run fetch-rl-nutrition` (~1-2 hours, resumable)
+  3. `npm run build-rami-levy-seed`
+     Then verify `rami-levy-seed.json` has ≥500 `rl_` entries, do app cold-start food search, commit + PR.
+
+- [ ] **Add more Israeli supermarkets** — Tiv Taam, Victory, Yohananof, Am-Pm. Each needs a scraper module following the same pipeline pattern as Shufersal.
