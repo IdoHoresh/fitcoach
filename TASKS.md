@@ -485,7 +485,8 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [x] Supermarket-only food database: remove Tzameret, fix search relevance, schema v12 (PR #46) — deleted tzameret-seed.json (60K lines), migrateToV12 purges tz\_ rows, search now orders starts-with first, 1,998 tests
 - [x] Food log display name fix — schema v13 adds name_he to food_log, logged items now show Hebrew name instead of raw ID, logSavedMeal uses foodRepository instead of FOOD_MAP (PR #47) — 1,998 tests
 
+- [x] Full Shufersal catalog — schema v14, 5,459 products (6,573 scraped, 1,160 deduped, 46 overrides), migrateToV14 wipes old sh\_ rows and reseeds (PR #50) — 2,000 tests
+
 ## Next Up
 
-- [ ] **Run Shufersal full scrape** — `npm run scrape-shufersal` then `npm run build-supermarket-seed` to add all Shufersal branded products (~15,000+). Currently only 46 manual protein yoghurt SKUs are in the database.
 - [ ] **Add more Israeli supermarkets** — Rami Levy, Tiv Taam, Victory, Yohananof, Am-Pm. Each needs a scraper module following the same pipeline pattern as Shufersal.
