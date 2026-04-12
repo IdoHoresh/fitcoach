@@ -31,6 +31,7 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
   - **Margins:** prefer `marginStart` / `marginEnd` / `paddingStart` / `paddingEnd` over `marginLeft` / `marginRight` — the logical props flip correctly in RTL without needing a conditional.
 - **`app.json` plugins array is for config plugins only.** Pure JS libraries like `expo-crypto`, `expo-haptics`, `expo-localization` do not ship config plugins and must NOT be listed. Listing them triggers a fallback import that loads the package's main export; on Node 24 this crashes because `expo-modules-core/src/index.ts` hits the `ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING` error. Verify with `test -f node_modules/<pkg>/app.plugin.js` before adding to plugins. (2026-04-09)
 - `@expo/vector-icons` breaks Jest because it transitively loads `expo-modules-core`, which crashes with "Cannot read properties of undefined (reading 'EventEmitter')". Mock the whole module in `jest.setup.ts` with a factory that returns `React.createElement(View)` per icon family. Do NOT call `View(...)` directly — Babel's class transform requires `new`/`React.createElement` (calling a React Native class component as a function throws `_classCallCheck`). (2026-04-09)
+- **`TextInput` value in RNTL tests: use `.props.value`, not `toHaveTextContent`.** `toHaveTextContent` works for `<Text>` but does not read the `value` prop of `<TextInput>`. Assert `expect(getByTestId('input').props.value).toBe('100')`. (2026-04-12)
 
 ## UI ↔ Algorithm Wiring
 

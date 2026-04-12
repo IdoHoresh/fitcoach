@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native'
+import { View, Text, TextInput, Pressable, ScrollView, StyleSheet } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { useNutritionStore } from '@/stores/useNutritionStore'
 import { colors } from '@/theme/colors'
@@ -31,6 +31,7 @@ export function PortionPicker({
 
   const defaultGrams = food.servingSizes[0]?.grams ?? 100
   const [grams, setGrams] = useState(defaultGrams)
+  const [inputValue, setInputValue] = useState(String(defaultGrams))
   const [selectedServingIndex, setSelectedServingIndex] = useState<number | null>(
     food.servingSizes.length > 0 ? 0 : null,
   )
@@ -38,17 +39,44 @@ export function PortionPicker({
   const macros = computeFoodMacros(food, grams)
 
   function handleServingSelect(index: number) {
+    const g = food.servingSizes[index].grams
     setSelectedServingIndex(index)
-    setGrams(food.servingSizes[index].grams)
+    setGrams(g)
+    setInputValue(String(g))
   }
 
   function handleDecrement() {
-    setGrams((prev) => Math.max(1, prev - 10))
+    setGrams((prev) => {
+      const next = Math.max(1, prev - 10)
+      setInputValue(String(next))
+      return next
+    })
     setSelectedServingIndex(null)
   }
 
   function handleIncrement() {
-    setGrams((prev) => prev + 10)
+    setGrams((prev) => {
+      const next = prev + 10
+      setInputValue(String(next))
+      return next
+    })
+    setSelectedServingIndex(null)
+  }
+
+  function handleInputChange(text: string) {
+    setInputValue(text)
+    const parsed = parseInt(text, 10)
+    if (!isNaN(parsed) && parsed >= 1) {
+      setGrams(parsed)
+      setSelectedServingIndex(null)
+    }
+  }
+
+  function handleInputBlur() {
+    const parsed = parseInt(inputValue, 10)
+    const clamped = isNaN(parsed) || parsed < 1 ? 1 : parsed
+    setGrams(clamped)
+    setInputValue(String(clamped))
     setSelectedServingIndex(null)
   }
 
@@ -122,9 +150,16 @@ export function PortionPicker({
             <Ionicons name="remove" size={22} color={colors.textPrimary} />
           </Pressable>
           <View style={styles.gramDisplay}>
-            <Text style={styles.gramValue} testID={testID ? `${testID}-grams` : undefined}>
-              {grams}
-            </Text>
+            <TextInput
+              style={styles.gramValue}
+              value={inputValue}
+              onChangeText={handleInputChange}
+              onBlur={handleInputBlur}
+              keyboardType="numeric"
+              textAlign="center"
+              selectTextOnFocus
+              testID={testID ? `${testID}-grams` : undefined}
+            />
             <Text style={styles.gramUnit}>{strings.grams}</Text>
           </View>
           <Pressable

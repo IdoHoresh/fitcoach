@@ -73,26 +73,26 @@ describe('PortionPicker', () => {
 
   it('defaults grams to first serving size', () => {
     const { getByTestId } = render(<PortionPicker {...defaultProps} />)
-    expect(getByTestId('portion-picker-grams')).toHaveTextContent('100')
+    expect(getByTestId('portion-picker-grams').props.value).toBe('100')
   })
 
   it('selecting a serving chip updates grams', () => {
     const { getByTestId } = render(<PortionPicker {...defaultProps} />)
     fireEvent.press(getByTestId('portion-picker-serving-1'))
-    expect(getByTestId('portion-picker-grams')).toHaveTextContent('200')
+    expect(getByTestId('portion-picker-grams').props.value).toBe('200')
   })
 
   it('increment button increases grams by 10', () => {
     const { getByTestId } = render(<PortionPicker {...defaultProps} />)
     fireEvent.press(getByTestId('portion-picker-increment'))
-    expect(getByTestId('portion-picker-grams')).toHaveTextContent('110')
+    expect(getByTestId('portion-picker-grams').props.value).toBe('110')
   })
 
   it('decrement button decreases grams by 10', () => {
     const { getByTestId } = render(<PortionPicker {...defaultProps} />)
     fireEvent.press(getByTestId('portion-picker-increment')) // 110
     fireEvent.press(getByTestId('portion-picker-decrement')) // 100
-    expect(getByTestId('portion-picker-grams')).toHaveTextContent('100')
+    expect(getByTestId('portion-picker-grams').props.value).toBe('100')
   })
 
   it('decrement does not go below 1', () => {
@@ -101,7 +101,7 @@ describe('PortionPicker', () => {
     for (let i = 0; i < 15; i++) {
       fireEvent.press(getByTestId('portion-picker-decrement'))
     }
-    expect(getByTestId('portion-picker-grams')).toHaveTextContent('1')
+    expect(getByTestId('portion-picker-grams').props.value).toBe('1')
   })
 
   it('macro preview shows calories for default grams', () => {
@@ -154,5 +154,30 @@ describe('PortionPicker', () => {
     const { getByTestId } = render(<PortionPicker {...defaultProps} onBack={onBack} />)
     fireEvent.press(getByTestId('portion-picker-back'))
     expect(onBack).toHaveBeenCalledTimes(1)
+  })
+
+  it('typing a custom gram value updates macros in real time', () => {
+    const { getByTestId } = render(<PortionPicker {...defaultProps} />)
+    const input = getByTestId('portion-picker-grams')
+    fireEvent.changeText(input, '250')
+    // 165 cal/100g × 250g = 412.5 → rounds to 413
+    expect(getByTestId('portion-picker-calories')).toHaveTextContent('413')
+  })
+
+  it('invalid input on blur clamps to 1', () => {
+    const { getByTestId } = render(<PortionPicker {...defaultProps} />)
+    const input = getByTestId('portion-picker-grams')
+    fireEvent.changeText(input, '')
+    fireEvent(input, 'blur')
+    expect(input.props.value).toBe('1')
+  })
+
+  it('stepper increment works after manual input', () => {
+    const { getByTestId } = render(<PortionPicker {...defaultProps} />)
+    const input = getByTestId('portion-picker-grams')
+    fireEvent.changeText(input, '200')
+    fireEvent(input, 'blur')
+    fireEvent.press(getByTestId('portion-picker-increment'))
+    expect(input.props.value).toBe('210')
   })
 })
