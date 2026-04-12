@@ -30,10 +30,6 @@ jest.mock('expo-crypto', () => ({
 // ── Schema version ────────────────────────────────────────────────────
 
 describe('schema v14 — full Shufersal seed', () => {
-  it('SCHEMA_VERSION is 14', () => {
-    expect(SCHEMA_VERSION).toBe(14)
-  })
-
   it('supermarket-seed.json has at least 5000 products', () => {
     const seed = require('../assets/supermarket-seed.json') as unknown[]
     expect(seed.length).toBeGreaterThanOrEqual(5000)
@@ -323,5 +319,46 @@ describe('supermarket-seed.json', () => {
   it('contains no Tzameret foods (tz_ prefix)', () => {
     const tzItems = (seed as { id: string }[]).filter((f) => f.id.startsWith('tz_'))
     expect(tzItems).toHaveLength(0)
+  })
+})
+
+// ── Schema v15 — Rami Levy seed ───────────────────────────────────────────
+
+describe('schema v15 — Rami Levy seed', () => {
+  it('SCHEMA_VERSION is 15', () => {
+    expect(SCHEMA_VERSION).toBe(15)
+  })
+
+  it('rami-levy-seed.json exists and is valid JSON array', () => {
+    const seed = require('../assets/rami-levy-seed.json') as unknown[]
+    expect(Array.isArray(seed)).toBe(true)
+  })
+
+  it('every rami-levy-seed entry has required fields and rl_ prefix', () => {
+    const seed = require('../assets/rami-levy-seed.json') as {
+      id: string
+      nameHe: string
+      caloriesPer100g: number
+      servingSizesJson: string
+    }[]
+    // File may be empty placeholder before scraper runs — skip structure check
+    if (seed.length === 0) return
+    const required = ['id', 'nameHe', 'nameEn', 'category', 'caloriesPer100g', 'servingSizesJson']
+    for (const food of seed as Record<string, unknown>[]) {
+      for (const field of required) {
+        expect(food[field]).toBeDefined()
+      }
+    }
+    const nonRl = seed.filter((f) => !f.id.startsWith('rl_'))
+    expect(nonRl).toHaveLength(0)
+  })
+
+  it('rami-levy-seed.json has no barcode overlap with supermarket-seed.json', () => {
+    const rlSeed = require('../assets/rami-levy-seed.json') as { id: string }[]
+    if (rlSeed.length === 0) return
+    const shSeed = require('../assets/supermarket-seed.json') as { id: string }[]
+    const shBarcodes = new Set(shSeed.map((f) => f.id.replace(/^sh_/, '')))
+    const overlaps = rlSeed.filter((f) => shBarcodes.has(f.id.replace(/^rl_/, '')))
+    expect(overlaps).toHaveLength(0)
   })
 })
