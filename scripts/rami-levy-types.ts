@@ -157,10 +157,22 @@ export const FOOD_DEPARTMENT_IDS = new Set<number>([
 
 /**
  * Hebrew search terms for full-catalog sweep.
- * "ה" (definite article) appears in ~90% of Hebrew product names.
- * "א" catches products with no "ה" (e.g. pure Latin brand names, numbers-only names).
+ *
+ * IMPORTANT: Single-char queries (e.g. "ה") return ≤100 results regardless of `size=`.
+ * The API appears to treat single-char queries as a special case. Use 2+ char terms.
+ *
+ * Chosen terms and expected totals (verified 2026-04-12):
+ *   'גב'  → ~7,400 total (גבינה, גביע, גב… — very broad)
+ *   'עם'  → ~4,243 total (עם / "with" — appears in most compound product names)
+ *   'לח'  → ~3,511 total (לחם, לחוץ… — covers bread + more)
+ *   'חל'  → ~3,105 total (חלב, חלה, חלפון… — covers dairy)
+ *   'קפ'  → ~2,318 total (קפה, קפוא… — covers coffee + frozen)
+ *   'שמ'  → ~2,608 total (שמן, שמנת, שמיר… — covers oils + cream)
+ *
+ * Together these 6 terms return >> 6,755 unique results.
+ * In-memory deduplication by product `id` eliminates all overlaps.
  */
-export const SWEEP_TERMS = ['ה', 'א'] as const
+export const SWEEP_TERMS = ['גב', 'עם', 'לח', 'חל', 'קפ', 'שמ'] as const
 
 /** Max results per page (Elasticsearch from + size must be ≤ 10,000) */
 export const SEARCH_PAGE_SIZE = 500

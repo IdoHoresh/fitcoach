@@ -94,8 +94,9 @@ async function sweep(): Promise<void> {
           }
         }
 
+        const pageSize = response.data.length
         console.log(
-          `  from=${from}: ${response.data.length} results, ${foodProducts.length} food, ${newCount} new (total unique: ${seen.size})`,
+          `  from=${from}: ${pageSize}/${response.total} results, ${foodProducts.length} food, ${newCount} new (total unique: ${seen.size})`,
         )
 
         if (DRY_RUN) {
@@ -107,14 +108,17 @@ async function sweep(): Promise<void> {
           return
         }
 
-        // Stop if we've received fewer results than a full page (last page)
-        if (response.data.length < SEARCH_PAGE_SIZE) break
+        // Stop if no results returned (empty page = end of results)
+        if (pageSize === 0) break
 
-        from += SEARCH_PAGE_SIZE
+        from += pageSize
 
-        // ES hard cap: from + size must stay ≤ 10,000
-        if (from + SEARCH_PAGE_SIZE > 10000) {
-          console.log(`  [warn] Approaching ES 10k limit at from=${from} — stopping this term`)
+        // Stop when we've fetched all available results
+        if (from >= response.total) break
+
+        // ES hard cap: from must stay < 10,000
+        if (from >= 10000) {
+          console.log(`  [warn] Reached ES 10k limit at from=${from} — stopping this term`)
           break
         }
 
