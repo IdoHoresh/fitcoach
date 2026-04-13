@@ -195,6 +195,21 @@ describe('FoodRepository', () => {
 
       expect(mockGetAllAsync).toHaveBeenCalledWith(expect.any(String), expect.arrayContaining([50]))
     })
+
+    it('orders results by source tier so raw_ wins tiebreakers', async () => {
+      mockGetAllAsync.mockResolvedValueOnce([])
+
+      await repo.search('חזה עוף')
+
+      const [sql] = mockGetAllAsync.mock.calls[0] as [string, unknown[]]
+      // Source tier: raw > manual > sh > rl
+      expect(sql).toMatch(/raw_%.*manual_%.*sh_%.*rl_%/s)
+      // Starts-with must still be the primary ORDER BY clause — tier is a tiebreaker
+      const startsWithIdx = sql.indexOf('name_he LIKE ?')
+      const tierIdx = sql.indexOf('raw_%')
+      expect(startsWithIdx).toBeGreaterThan(-1)
+      expect(tierIdx).toBeGreaterThan(startsWithIdx)
+    })
   })
 
   // ── getById ──────────────────────────────────────────────────────────
@@ -325,8 +340,8 @@ describe('supermarket-seed.json', () => {
 // ── Schema v15 — Rami Levy seed ───────────────────────────────────────────
 
 describe('schema v15 — Rami Levy seed', () => {
-  it('SCHEMA_VERSION is 15', () => {
-    expect(SCHEMA_VERSION).toBe(15)
+  it('SCHEMA_VERSION is 16', () => {
+    expect(SCHEMA_VERSION).toBe(16)
   })
 
   it('rami-levy-seed.json exists and is valid JSON array', () => {
@@ -360,5 +375,82 @@ describe('schema v15 — Rami Levy seed', () => {
     const shBarcodes = new Set(shSeed.map((f) => f.id.replace(/^sh_/, '')))
     const overlaps = rlSeed.filter((f) => shBarcodes.has(f.id.replace(/^rl_/, '')))
     expect(overlaps).toHaveLength(0)
+  })
+})
+
+// ── Schema v16 — Raw ingredients seed ─────────────────────────────────────
+
+describe('schema v16 — raw ingredients seed', () => {
+  const seed = require('../assets/raw-ingredients-seed.json') as {
+    id: string
+    nameHe: string
+    nameEn: string
+    category: string
+    caloriesPer100g: number
+    proteinPer100g: number
+    fatPer100g: number
+    carbsPer100g: number
+    fiberPer100g: number
+    isUserCreated: boolean
+    servingSizesJson: string
+  }[]
+
+  it('raw-ingredients-seed.json has at least 180 entries', () => {
+    expect(seed.length).toBeGreaterThanOrEqual(180)
+  })
+
+  it('every entry has a raw_ id prefix and required fields', () => {
+    const required = ['id', 'nameHe', 'nameEn', 'category', 'caloriesPer100g', 'servingSizesJson']
+    for (const food of seed as unknown as Record<string, unknown>[]) {
+      for (const field of required) {
+        expect(food[field]).toBeDefined()
+      }
+    }
+    const nonRaw = seed.filter((f) => !f.id.startsWith('raw_'))
+    expect(nonRaw).toHaveLength(0)
+  })
+
+  it('every entry has a valid FoodCategory after build-time mapping', () => {
+    const valid = new Set([
+      'protein',
+      'carbs',
+      'vegetables',
+      'fruits',
+      'dairy',
+      'fats',
+      'snacks',
+      'traditional',
+      'restaurant',
+      'custom',
+    ])
+    const invalid = seed.filter((f) => !valid.has(f.category))
+    expect(invalid).toHaveLength(0)
+  })
+
+  it('every entry has a 100g serving size', () => {
+    const missing = seed.filter((f) => {
+      try {
+        const sizes = JSON.parse(f.servingSizesJson) as { grams: number }[]
+        return !sizes.some((s) => s.grams === 100)
+      } catch {
+        return true
+      }
+    })
+    expect(missing).toHaveLength(0)
+  })
+
+  it('no id overlap with supermarket or rami-levy seeds', () => {
+    const rawIds = new Set(seed.map((f) => f.id))
+    const shSeed = require('../assets/supermarket-seed.json') as { id: string }[]
+    const rlSeed = require('../assets/rami-levy-seed.json') as { id: string }[]
+    const overlapsSh = shSeed.filter((f) => rawIds.has(f.id))
+    const overlapsRl = rlSeed.filter((f) => rawIds.has(f.id))
+    expect(overlapsSh).toHaveLength(0)
+    expect(overlapsRl).toHaveLength(0)
+  })
+
+  it('has ids unique within the raw seed', () => {
+    const ids = seed.map((f) => f.id)
+    expect(new Set(ids).size).toBe(ids.length)
   })
 })
