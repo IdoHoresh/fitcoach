@@ -1,6 +1,5 @@
 {
   "_comment": "Targets for fetch-usda.ts. Each entry: { slug, englishName, state, category, priority, fdcIdHint? }. slug is snake_case English used to build raw_<slug>_<state> ids in Task 3. englishName feeds USDA SR Legacy search. state is raw|cooked. priority P0 = ship first, P1 = expand, P2 = nice-to-have. fdcIdHint forces a specific FoodData Central ID when search top-hit is wrong.",
-
   "targets": [
     {
       "slug": "chicken_breast",
@@ -18,17 +17,19 @@
     },
     {
       "slug": "chicken_thigh",
-      "englishName": "Chicken thigh, boneless, skinless, raw",
+      "englishName": "Chicken, broilers or fryers, dark meat, thigh, meat only, raw",
       "state": "raw",
       "category": "poultry",
-      "priority": "P0"
+      "priority": "P0",
+      "fdcIdHint": 173627
     },
     {
       "slug": "chicken_thigh",
-      "englishName": "Chicken thigh, boneless, skinless, cooked, roasted",
+      "englishName": "Chicken, broilers or fryers, thigh, meat only, cooked, roasted",
       "state": "cooked",
       "category": "poultry",
-      "priority": "P0"
+      "priority": "P0",
+      "fdcIdHint": 172388
     },
     {
       "slug": "chicken_drumstick",
@@ -123,10 +124,11 @@
     },
     {
       "slug": "turkey_ground_93",
-      "englishName": "Turkey, ground, 93% lean, cooked",
+      "englishName": "Turkey, ground, 93% lean/ 7% fat, patties, broiled",
       "state": "cooked",
       "category": "poultry",
-      "priority": "P1"
+      "priority": "P1",
+      "fdcIdHint": 174492
     },
     {
       "slug": "duck_breast",
@@ -156,7 +158,6 @@
       "category": "eggs",
       "priority": "P1"
     },
-
     {
       "slug": "beef_ribeye",
       "englishName": "Beef, rib eye steak, boneless, lean and fat, raw",
@@ -173,10 +174,11 @@
     },
     {
       "slug": "beef_sirloin",
-      "englishName": "Beef, top sirloin, lean only, raw",
+      "englishName": "Beef, top sirloin, steak, separable lean only, trimmed to 1/8\" fat, all grades, raw",
       "state": "raw",
       "category": "meat",
-      "priority": "P0"
+      "priority": "P0",
+      "fdcIdHint": 174055
     },
     {
       "slug": "beef_sirloin",
@@ -187,14 +189,14 @@
     },
     {
       "slug": "beef_shoulder",
-      "englishName": "Beef, chuck, shoulder clod, lean, raw",
+      "englishName": "Beef, chuck, shoulder clod, top blade, separable lean only, raw",
       "state": "raw",
       "category": "meat",
       "priority": "P1"
     },
     {
       "slug": "beef_shoulder",
-      "englishName": "Beef, chuck, shoulder clod, lean, cooked, braised",
+      "englishName": "Beef, chuck, shoulder clod, top blade, separable lean only, cooked, braised",
       "state": "cooked",
       "category": "meat",
       "priority": "P1"
@@ -257,10 +259,11 @@
     },
     {
       "slug": "lamb_shoulder",
-      "englishName": "Lamb, shoulder, lean, cooked, braised",
+      "englishName": "Lamb, New Zealand, imported, shoulder, whole (arm and blade), separable lean only, cooked, braised",
       "state": "cooked",
       "category": "meat",
-      "priority": "P1"
+      "priority": "P1",
+      "fdcIdHint": 173814
     },
     {
       "slug": "lamb_leg",
@@ -283,7 +286,6 @@
       "category": "meat",
       "priority": "P2"
     },
-
     {
       "slug": "salmon_atlantic",
       "englishName": "Fish, salmon, Atlantic, farmed, raw",
@@ -307,17 +309,11 @@
     },
     {
       "slug": "tuna_canned_water",
-      "englishName": "Fish, tuna, light, canned in water, drained solids",
+      "englishName": "Fish, tuna, light, canned in water, without salt, drained solids",
       "state": "raw",
       "category": "fish",
-      "priority": "P0"
-    },
-    {
-      "slug": "sea_bream",
-      "englishName": "Fish, sea bass, mixed species, raw",
-      "state": "raw",
-      "category": "fish",
-      "priority": "P1"
+      "priority": "P0",
+      "fdcIdHint": 171986
     },
     {
       "slug": "tilapia",
@@ -375,17 +371,9 @@
       "category": "fish",
       "priority": "P1"
     },
-
     {
       "slug": "milk_1pct",
       "englishName": "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D",
-      "state": "raw",
-      "category": "dairy",
-      "priority": "P0"
-    },
-    {
-      "slug": "milk_3pct",
-      "englishName": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
       "state": "raw",
       "category": "dairy",
       "priority": "P0"
@@ -402,14 +390,16 @@
       "englishName": "Yogurt, plain, low fat, 12 grams protein per 8 ounce",
       "state": "raw",
       "category": "dairy",
-      "priority": "P0"
+      "priority": "P0",
+      "fdcIdHint": 170886
     },
     {
       "slug": "yogurt_plain_whole",
       "englishName": "Yogurt, plain, whole milk, 8 grams protein per 8 ounce",
       "state": "raw",
       "category": "dairy",
-      "priority": "P1"
+      "priority": "P1",
+      "fdcIdHint": 171284
     },
     {
       "slug": "yogurt_greek_nonfat",
@@ -426,34 +416,6 @@
       "priority": "P1"
     },
     {
-      "slug": "cottage_cheese_lowfat",
-      "englishName": "Cheese, cottage, lowfat, 1% milkfat",
-      "state": "raw",
-      "category": "dairy",
-      "priority": "P0"
-    },
-    {
-      "slug": "cottage_cheese_creamed",
-      "englishName": "Cheese, cottage, creamed, large or small curd",
-      "state": "raw",
-      "category": "dairy",
-      "priority": "P1"
-    },
-    {
-      "slug": "labneh",
-      "englishName": "Cheese, cream, fat free",
-      "state": "raw",
-      "category": "dairy",
-      "priority": "P1"
-    },
-    {
-      "slug": "white_cheese_5pct",
-      "englishName": "Cheese, ricotta, part skim milk",
-      "state": "raw",
-      "category": "dairy",
-      "priority": "P1"
-    },
-    {
       "slug": "feta",
       "englishName": "Cheese, feta",
       "state": "raw",
@@ -463,13 +425,6 @@
     {
       "slug": "mozzarella",
       "englishName": "Cheese, mozzarella, low moisture, part-skim",
-      "state": "raw",
-      "category": "dairy",
-      "priority": "P1"
-    },
-    {
-      "slug": "yellow_cheese",
-      "englishName": "Cheese, cheddar",
       "state": "raw",
       "category": "dairy",
       "priority": "P1"
@@ -495,7 +450,6 @@
       "category": "dairy",
       "priority": "P2"
     },
-
     {
       "slug": "lentils_dry",
       "englishName": "Lentils, raw",
@@ -573,7 +527,6 @@
       "category": "legumes",
       "priority": "P1"
     },
-
     {
       "slug": "rice_white_dry",
       "englishName": "Rice, white, long-grain, regular, raw, unenriched",
@@ -714,7 +667,6 @@
       "category": "grains",
       "priority": "P2"
     },
-
     {
       "slug": "tomato",
       "englishName": "Tomatoes, red, ripe, raw, year round average",
@@ -925,7 +877,6 @@
       "category": "vegetables",
       "priority": "P2"
     },
-
     {
       "slug": "apple",
       "englishName": "Apples, raw, with skin",
@@ -1101,7 +1052,6 @@
       "category": "fruits",
       "priority": "P2"
     },
-
     {
       "slug": "olive_oil",
       "englishName": "Oil, olive, salad or cooking",
@@ -1158,7 +1108,6 @@
       "category": "oils",
       "priority": "P2"
     },
-
     {
       "slug": "walnut",
       "englishName": "Nuts, walnuts, English",
@@ -1243,7 +1192,6 @@
       "category": "nuts",
       "priority": "P2"
     },
-
     {
       "slug": "sugar_white",
       "englishName": "Sugars, granulated",
@@ -1314,7 +1262,6 @@
       "category": "condiments",
       "priority": "P2"
     },
-
     {
       "slug": "cornflakes",
       "englishName": "Cereals ready-to-eat, KELLOGG, KELLOGG'S CORN FLAKES",
@@ -1386,7 +1333,6 @@
       "category": "dry_staples",
       "priority": "P2"
     },
-
     {
       "slug": "popcorn_air",
       "englishName": "Snacks, popcorn, air-popped",
@@ -1429,5 +1375,14 @@
       "category": "prepared",
       "priority": "P2"
     }
+  ],
+  "tzameretOnlySlugs": [
+    "cottage_cheese_creamed|raw",
+    "cottage_cheese_lowfat|raw",
+    "labneh|raw",
+    "milk_3pct|raw",
+    "sea_bream|raw",
+    "white_cheese_5pct|raw",
+    "yellow_cheese|raw"
   ]
 }

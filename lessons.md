@@ -135,6 +135,12 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Cross-seed dedup stays strict.** When merging Rami Levy into the Shufersal content-hash set, use strict content hashes, not fuzzy clustering. Fuzzy across stores risks collapsing genuinely different products with similar names in different supermarkets.
 - **Fetch failures that don't cache loop badly on re-run.** The Rami Levy nutrition fetch writes only successful responses to `tmp/rl-nutrition-cache/`. A 1–2 hour run with ~35% transient network errors recovers almost all of them on a second pass because cache hits skip and only the originally-failed IDs are re-fetched. Probe a few "failures" with `curl` before assuming they're genuine 404s — they usually aren't.
 
+## USDA Raw Ingredient Fetch (2026-04-13)
+
+- **USDA `/foods/search` top-hit is untrustworthy for common foods.** Querying SR Legacy with a descriptive English name (`Chicken thigh, boneless, skinless, raw`) frequently returned the wrong food as the first result: chicken thigh → "chicken skin", beef sirloin → "veal sirloin", yogurt plain → "yogurt fruit flavored". The search engine matches tokens, not intent. For accuracy-critical pulls, pin `fdcIdHint` after verifying the specific fdcId once via the detail endpoint (`/food/{fdcId}`), rather than trusting search ranking. Log the returned description on every fetch so mismatches surface in run output instead of hiding in the cache.
+- **USDA SR Legacy has gaps around regional cheese/dairy.** Several Israeli staples have no real equivalent in SR Legacy: labneh, Israeli white cheese 5%, Israeli cottage 5%/9% (USDA has 1%/2%/4%), Israeli milk 3% (USDA has 2%/whole), Emek-style yellow cheese (USDA has cheddar 402 kcal, much fattier than Emek ~340). Don't shoehorn these into closest-match USDA rows — the 5% accuracy threshold will be violated on almost every macro. Carve them out as a Tzameret-only list in the fetch config and populate directly from the Israeli MoH composition table during data entry.
+- **Surgical re-fetch beats full re-fetch.** When correcting a handful of bad pulls in a cached pipeline, a `--slugs <csv>` flag that bypasses cache for specific slugs keeps the rest of the cache intact and avoids hammering the rate limiter. Combined with deleting the stale cache files for updated slugs, any fetch mode (`--force`, plain, `--slugs`) ends up consistent.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
