@@ -1,12 +1,12 @@
 # Pre-Commit Checklist
 
-- [x] On a feature branch (NOT main) — fix/qa-sweep-apr13
-- [x] /review — skipped, mechanical changes (i18n extract, doc clarification, additive indices). No logic risk.
-- [x] lessons.md — nothing to add. QA sweep surfaced existing defects; no new patterns.
-- [x] REVIEW.md — nothing to add. Existing i18n + schema rules cover this.
-- [x] TASKS.md updated — Done entry added for QA sweep fixes (i18n + deload docs + FK indices schema v18).
-- [x] git diff scanned for secrets/keys/tokens — no matches (i18n strings + docs + schema only).
+- [x] On a feature branch (NOT main) — chore/task-7-raw-ingredients-verify
+- [x] /review — skipped, doc-only change (lessons.md + TASKS.md). No code or logic touched.
+- [x] lessons.md — 2 entries added under "Raw Ingredients End-to-End Verification (2026-04-13)"
+- [x] REVIEW.md — nothing to add. Existing migration + ranker patterns already covered.
+- [x] TASKS.md updated — Task 7 Done entry added, closes raw-ingredients epic; "Next Up" line removed.
+- [x] git diff scanned for secrets/keys/tokens — no matches (markdown only)
 - [x] npm run lint passes — clean
 - [x] npm run typecheck passes — clean
-- [x] npm test passes — 2,154 tests, all green (unchanged count; test update was SCHEMA_VERSION literal 17 → 18).
-- [x] Commit size checked — 8 files, 52 insertions / 11 deletions.
+- [x] npm test passes — 2,154 tests, all green (unchanged; no code touched)
+- [x] Commit size checked — 2 files, 7 insertions / 2 deletions
