@@ -188,20 +188,6 @@
       "priority": "P0"
     },
     {
-      "slug": "beef_shoulder",
-      "englishName": "Beef, chuck, shoulder clod, top blade, separable lean only, raw",
-      "state": "raw",
-      "category": "meat",
-      "priority": "P1"
-    },
-    {
-      "slug": "beef_shoulder",
-      "englishName": "Beef, chuck, shoulder clod, top blade, separable lean only, cooked, braised",
-      "state": "cooked",
-      "category": "meat",
-      "priority": "P1"
-    },
-    {
       "slug": "beef_brisket",
       "englishName": "Beef, brisket, flat half, lean, raw",
       "state": "raw",
@@ -1377,6 +1363,8 @@
     }
   ],
   "tzameretOnlySlugs": [
+    "beef_shoulder|cooked",
+    "beef_shoulder|raw",
     "cottage_cheese_creamed|raw",
     "cottage_cheese_lowfat|raw",
     "labneh|raw",
