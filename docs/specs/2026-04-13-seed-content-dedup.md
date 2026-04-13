@@ -1,242 +1,295 @@
-# Bug: Duplicate food search results from different barcodes
+# Bug: Duplicate food search results across seed sources
 
 **Date:** 2026-04-13
-**Status:** Root Cause Found
+**Status:** Approved — merged scope (v2), plan ready
 **GitHub Issue:** N/A
 
 ## Symptoms
 
-Food search for "גאודה" shows 4 visually identical rows: same name, same 352 kcal, same 25g protein. Noise pushes real variants off-screen. Same pattern exists for many other common products (גבינה לבנה 5%, etc.).
+Two reports, one root cause:
+
+1. **Identical-macro dupes.** Food search for `גאודה` shows 4 visually identical rows: same name, same 352 kcal, same 25g protein. Same pattern in `גבינה לבנה 5%`, etc.
+2. **Near-identical dupes with drifted macros.** Food search for `אורז` shows 3× `אורז פרסי` at 348 / 350 / 336 kcal — same product under 3 barcodes, Shufersal logged each with slightly different nutrition. One has `0g protein` (garbage row).
+3. **Raw-ingredient v16 surfaces correctly for narrow queries** (`אורז לבן` → `raw_rice_white_raw` ranks #1), but broader queries buried under duplicate sh\_% noise.
 
 ## Expected Behavior
 
-One row per distinct food. Rows that share name + full macro profile collapse into a single entry.
+One row per distinct food, regardless of source (raw v16 / Shufersal v14 / Rami Levy v15). Zero visible duplicates in search. Invariant: `SELECT name_norm, COUNT(*) FROM foods GROUP BY name_norm HAVING COUNT(*) > 1` returns an empty set post-cleanup.
 
-## Reproduction Steps
+## Root Cause
 
-1. Cold start app (seed v14 + v15 loaded)
-2. Open food search, type `גאודה`
-3. See 4× "גבינת גאודה פרוסה 28% שומן" at 352 kcal
+Three compounding gaps:
 
-## Investigation
+1. **No content-level dedup at build time.** `scripts/deduplicate.ts::deduplicateScraped` and `scripts/build-rami-levy-seed.ts` dedup by `id` only (= barcode). Same product under multiple EANs survives.
+2. **No cross-source dedup.** v14/v15/v16 migrations each `INSERT OR IGNORE`, which only catches PK (`id`) collisions. A raw ingredient and a Shufersal row with the same normalized name co-exist.
+3. **No runtime enforcement.** Schema has `id TEXT PRIMARY KEY` only (`src/db/schema.ts:261`). No `name_norm` column, no uniqueness guard, no cleanup pass.
 
-### Measurements
+### Measured dup counts (pre-fix)
 
-| Seed          | Rows  | Distinct (name+macros) | Redundant | Groups with 2+ |
-| ------------- | ----- | ---------------------- | --------- | -------------- |
-| Shufersal v14 | 5,459 | 5,312                  | 147       | 127            |
-| Rami Levy v15 | 7,180 | 7,136                  | 44        | 39             |
+| Seed          | Rows  | Distinct (name+macros) | Redundant | Groups ≥2 |
+| ------------- | ----- | ---------------------- | --------- | --------- |
+| Shufersal v14 | 5,459 | 5,312                  | 147       | 127       |
+| Rami Levy v15 | 7,180 | 7,136                  | 44        | 39        |
+| Cross-source  | —     | —                      | unknown   | unknown   |
 
-### Hypotheses
+## Design
 
-1. **Scraper double-ingested a category** — ruled out. `deduplicateScraped` catches exact `id` dupes; counts are 0.
-2. **Same product under multiple barcodes** — confirmed. Gouda example:
-   - `sh_7296073731832`, `sh_7296073731849`, `sh_7296073731856`, `sh_7296073731863` — 4 distinct EANs, identical `nameHe` + 352 kcal
-   - Rami Levy: `rl_7290120861022`, `rl_7290020036414`, `rl_7290019363392` — 3 distinct EANs, identical name + 340 kcal
-   - Cause: manufacturer assigns new EAN on relabel / package change / factory run; Shufersal and Rami Levy track each as a separate SKU.
+Defense in depth: dedup at build time (per-source + cross-source), then again at runtime (v17 migration) with tier-based winner selection. New `name_norm` column persists the normalization so search and future seeds stay consistent.
 
-### Root Cause
+### Normalization rule (`normalizeNameForDedup`)
 
-`scripts/deduplicate.ts::deduplicateScraped` and `scripts/build-rami-levy-seed.ts` both dedupe by `id` only. ID = `sh_<barcode>` or `rl_<barcode>`. Different barcode = different id, no collapse. Content-identical duplicates survive into the final seed and show up in search.
+Applied to every `name_he` before hashing or comparison:
 
-Cross-seed dedup (Rami Levy vs Shufersal) also runs only on barcode (`fetch-rl-nutrition.ts::loadShufersalBarcodes`). Same product under Rami Levy brand name with a different barcode passes through into v15.
+1. Trim, lowercase (no-op for Hebrew, applies to nameEn fallbacks)
+2. Strip nikud (U+0591..U+05C7)
+3. Strip size tokens with preceding digits: `גר|גרם|ג'|ק"ג|קג|מ"ל|מל|ליטר|ל'`
+4. Strip percentage tokens: `\d+%`
+5. Strip punctuation: `()[]"'״`,.-/`
+6. Collapse whitespace
+7. Tokenize; apply plural map (`פרוסות→פרוסה`, `מגורדות→מגורדת`, `טחונות→טחונה`, `קצוצות→קצוצה`, `פרוסים→פרוס`, `חתוכים→חתוך`, `טריים→טרי`)
+8. Drop trailing orphan modifiers if last token: `שומן`, `ביתית`, `מצונן`
 
-## Fix
+Narrow by design — Hebrew morphology is hard; aggressive stemming risks false merges.
 
-Add content-hash dedup alongside existing ID dedup. Apply in both seed builders and cross-seed.
+### Dedup strategy (three passes)
 
-### Dedup key
+**Pass 1 — within-source strict (build-time, per seed builder)**
+Key = `normalizeNameForDedup(name) | cals | protein | fat | carbs`. Collapses exact content dupes. First occurrence wins.
 
+**Pass 2 — within-source fuzzy (build-time, per seed builder)**
+Group survivors by `normalizeNameForDedup(name)`. Single-pass clustering within each group: a row collides with a kept row if all four macros are within window (`±15 kcal`, `±2g` protein/fat/carbs). First occurrence wins **unless** the kept row has a garbage marker (`kcal = 0`, or `protein = 0 AND kcal > 100`), in which case the new row replaces it. Tie-break on non-null field count, then lowest id.
+
+Handles `אורז פרסי 348/350/336` — all collapse; `336 kcal / 0g protein` replaced by richer `348 kcal / 6g protein`.
+
+**Pass 3 — cross-source tier cleanup (runtime, v17 migration)**
+After v14/v15/v16 have all loaded, delete rows where a higher-tier row with the same `name_norm` exists. Tier order: `raw_% = 0` (keep) > `manual_% = 1` > `sh_% = 2` > `rl_% = 3`. SQL:
+
+```sql
+DELETE FROM foods WHERE id IN (
+  SELECT f.id FROM foods f
+  WHERE EXISTS (
+    SELECT 1 FROM foods f2
+    WHERE f2.name_norm = f.name_norm
+      AND source_tier(f2.id) < source_tier(f.id)
+  )
+)
 ```
-normalizeName(nameHe) | calories | protein | fat | carbs
-```
 
-`normalizeName` strips:
+(`source_tier` inlined as `CASE WHEN id LIKE 'raw_%' THEN 0 ... END`.)
 
-- Size tokens: `גר`, `גרם`, `ג'`, `ק"ג`, `קג`, `מ"ל`, `מל`, `ליטר`, `ל'` (with preceding digits)
-- Percentage tokens: `NN%`
-- Punctuation: `' " , . - ( )`
-- Collapsed whitespace, lowercased
+### Schema change (v17)
 
-### Collision strategy
+| Column      | Type | Purpose                                                      |
+| ----------- | ---- | ------------------------------------------------------------ |
+| `name_norm` | TEXT | Normalized name for dedup + search. NOT NULL after backfill. |
 
-Keep the first occurrence. Existing seeds are category-ordered (Shufersal) or dept-ordered (Rami Levy) — earlier categories have higher data confidence. No merge of alternate barcodes (no barcode-scan feature yet; revisit when scanner ships).
+Non-unique index: `CREATE INDEX idx_foods_name_norm ON foods(name_norm)`.
 
-### Changes
+Migration steps:
 
-| File                                | Change                                                                                                                 |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `scripts/deduplicate.ts`            | Add `normalizeNameForDedup(name)` + `deduplicateByContent(foods)`; add content-set variant of `filterAgainstExisting`. |
-| `scripts/deduplicate.test.ts`       | Add tests: exact dupe, size-token variant, punctuation variant, distinct-macros no-collapse, first-wins.               |
-| `scripts/build-supermarket-seed.ts` | Call `deduplicateByContent` after existing ID dedup.                                                                   |
-| `scripts/build-rami-levy-seed.ts`   | Call `deduplicateByContent` after existing ID dedup; cross-filter against Shufersal content hashes.                    |
-| `src/assets/supermarket-seed.json`  | Regenerated (127 groups collapsed → ~147 fewer rows).                                                                  |
-| `src/assets/rami-levy-seed.json`    | Regenerated (39 groups collapsed + cross-seed trim).                                                                   |
+1. `ALTER TABLE foods ADD COLUMN name_norm TEXT`
+2. Backfill: `UPDATE foods SET name_norm = <computed>` — done in TypeScript loop since SQLite can't call JS normalization.
+3. Create index.
+4. Run Pass 3 cross-source cleanup.
+5. Re-log row counts.
 
-### Regression Test
+Not `UNIQUE` — tolerant of legitimate same-name distinct foods (e.g. two genuinely different brand variants that survive fuzzy clustering because their macros diverge >window).
 
-`scripts/deduplicate.test.ts`:
+### Search integration
 
-- `deduplicateByContent` with 3 entries, 2 identical after name-normalization → returns 2
-- Different calories with identical normalized name → both kept
-- First-occurrence wins (assert first id preserved)
-- Punctuation + size-token robustness (`400 גר` vs `400 ג'` collapse)
+`food-repository.ts::search` keeps current ranker (start-match → source tier → name_he ASC). No change needed — with dedup done, the existing tier tiebreak becomes mostly decorative but stays as belt-and-suspenders.
 
-## Lessons Learned
+Optional win: use `name_norm LIKE ?` as an additional OR match to catch queries with nikud / alternate punctuation. Deferred — not in scope unless retro-test shows misses.
 
-Add to `lessons.md`: "Barcode is not identity. Same product ships under multiple EANs — always dedupe seed data by content hash (normalized name + full macro tuple), not just by id."
+## Files to Create/Modify
+
+| File                                    | Action | Description                                                                                                                                                                              |
+| --------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `scripts/deduplicate.ts`                | Modify | Add `normalizeNameForDedup`, `deduplicateByContent`, `deduplicateFuzzy`, plural/orphan constants.                                                                                        |
+| `scripts/deduplicate.test.ts`           | Modify | Tests for normalization, strict content dedup, fuzzy window, garbage-row replacement, first-wins.                                                                                        |
+| `scripts/build-supermarket-seed.ts`     | Modify | Pipe through `deduplicateByContent` → `deduplicateFuzzy` after existing id dedup. Log collapse counts.                                                                                   |
+| `scripts/build-rami-levy-seed.ts`       | Modify | Same pipeline. Cross-seed strict-hash filter against Shufersal seed. Log all three counts.                                                                                               |
+| `scripts/build-raw-ingredients-seed.ts` | Modify | (If exists) also run the dedup pipeline for symmetry. Raw seed is curated so collapses should be zero.                                                                                   |
+| `src/assets/supermarket-seed.json`      | Modify | Regenerated.                                                                                                                                                                             |
+| `src/assets/rami-levy-seed.json`        | Modify | Regenerated.                                                                                                                                                                             |
+| `src/db/schema.ts`                      | Modify | Bump `CURRENT_SCHEMA_VERSION` to 17. Add `name_norm` column + index to CREATE TABLE.                                                                                                     |
+| `src/db/database.ts`                    | Modify | Add `migrateToV17` — ALTER TABLE, backfill, create index, run cross-source cleanup. Write Hebrew normalization helper in TS (shared with scripts via `src/shared/normalizeFoodName.ts`). |
+| `src/shared/normalizeFoodName.ts`       | Create | Single source of truth for `normalizeNameForDedup`. Imported by both scripts and db migration.                                                                                           |
+| `src/shared/normalizeFoodName.test.ts`  | Create | Unit tests for the shared helper.                                                                                                                                                        |
+| `src/db/food-repository.test.ts`        | Modify | Integration test: load real seeds, assert zero-dup invariant via `name_norm` group-by.                                                                                                   |
+| `lessons.md`                            | Modify | "Barcode is not identity; content hash is not identity either — plural/orphan/macro drift needs fuzzy window + runtime tier cleanup."                                                    |
+
+## Acceptance Criteria
+
+- [ ] `normalizeNameForDedup` unit tests pass: plural collapse, orphan drop, size-token strip, nikud strip, punctuation strip, whitespace collapse
+- [ ] `deduplicateByContent` collapses exact content dupes, first-wins
+- [ ] `deduplicateFuzzy` collapses `אורז פרסי 348/350/336` → 1 row; keeps `חלב 3% 62kcal` and `חלב 9% 100kcal` separate; garbage row (0g protein, >100kcal) replaced by richer row
+- [ ] `build-supermarket-seed` logs within-source dedup counts; regenerated JSON has zero strict-hash collisions
+- [ ] `build-rami-levy-seed` logs within-source + cross-seed counts; regenerated JSON has zero cross-Shufersal strict collisions
+- [ ] v17 migration runs on cold start, logs cross-source delete count
+- [ ] Integration test: load all 3 seeds + run v17, assert `SELECT name_norm, COUNT(*) FROM foods GROUP BY name_norm HAVING COUNT(*)>1` returns empty
+- [ ] Device verification (Task 7 re-scoped): cold-start app, search `חזה עוף`, `שמן זית`, `ביצה`, `תפוח`, `אורז לבן`, `גאודה` — each shows zero visible duplicates; top result for each raw-covered query is a `raw_%` row
+- [ ] Portion picker for chosen raw row shows natural unit + logs successfully
+- [ ] Lesson added to `lessons.md`
+
+## Task Breakdown
+
+1. [ ] **T1 — Shared normalization helper** (S). Create `src/shared/normalizeFoodName.ts` + tests. Covers rules 1-8 above.
+2. [ ] **T2 — `deduplicateByContent` strict hash** (S). `scripts/deduplicate.ts` + tests.
+3. [ ] **T3 — `deduplicateFuzzy` window + garbage replacement** (M). `scripts/deduplicate.ts` + tests. Covers garbage-row replace logic.
+4. [ ] **T4 — Wire Shufersal builder** (S). Regenerate `supermarket-seed.json`. Spot-check gouda + persian rice.
+5. [ ] **T5 — Wire Rami Levy builder + cross-seed filter** (M). Regenerate `rami-levy-seed.json`.
+6. [ ] **T6 — Wire raw-ingredients builder** (XS). Curated seed; expect 0 collapses but run pipeline for symmetry.
+7. [ ] **T7 — Schema v17 + name_norm column** (S). `schema.ts` bump, `database.ts` migrate helper skeleton.
+8. [ ] **T8 — v17 migration: backfill + cleanup** (M). Backfill loop (TS-side normalization), cross-source tier delete, index creation, logging.
+9. [ ] **T9 — Integration test: zero-dup invariant** (S). Load all 3 seeds in test env, run migration, assert.
+10. [ ] **T10 — Device cold-start verification** (S). Re-do Task 7 acceptance list with 6 search terms; screenshot each.
+11. [ ] **T11 — Lessons + TASKS.md update** (XS).
+
+Total: ~11 tasks. TDD mandatory for T1-T3 + T8 (business logic).
 
 ## Implementation Plan
 
-### Task 1: `normalizeNameForDedup` + `deduplicateByContent` (S)
+Dependency order locked: T1 → (T2, T3) → (T4, T5, T6) → T7 → T8 → T9 → T10 → T11. T4/T5/T6 independent once T2+T3 land. T7 can start in parallel with T4-T6 since it only touches schema.
 
-**Files:** `scripts/deduplicate.ts`, `scripts/deduplicate.test.ts`
-**What:** Pure utility functions. `normalizeNameForDedup(name: string): string` and `deduplicateByContent(foods: FoodSeed[]): FoodSeed[]`. Key format `${normName}|${cals}|${pro}|${fat}|${carbs}`.
-**Test first:**
+### Task 1: Shared normalization helper (S)
 
-- `normalizeNameForDedup('גבינה 400 גר')` === `normalizeNameForDedup("גבינה 400 ג'")`
-- `deduplicateByContent` with two entries sharing normalized name + macros → length 1, first id preserved
-- Different calories → no collapse
-- Case/punctuation/whitespace invariance
-  **Acceptance:** Tests pass, function is pure (no side effects).
+**Files:** `src/shared/normalizeFoodName.ts` (create), `src/shared/normalizeFoodName.test.ts` (create)
+**What:** Pure function `normalizeNameForDedup(name: string): string`. Rules 1-8 from Design. Export `PLURAL_MAP` and `ORPHAN_TRAILING_MODIFIERS` constants. Shared module so both scripts and the v17 db migration import the same implementation — avoids drift between build-time and runtime normalization.
+**Test first (RED):**
 
-### Task 2: Wire into Shufersal seed builder (S)
+- `normalize('אורז לבן יבש')` === `'אורז לבן יבש'` (no-op baseline)
+- Nikud: `normalize('חָלָב')` === `'חלב'`
+- Size tokens: `normalize('גבינה 400 גר')` === `normalize("גבינה 400 ג'")` === `'גבינה'`
+- Percent: `normalize('חלב 3%')` === `'חלב'` — **and assert this is intentional** (downstream fuzzy clustering uses macro window to re-separate 3% from 9%)
+- Punctuation: `normalize('גבינה (פרוסה)')` === `normalize('גבינה פרוסה')`
+- Plural: `normalize('גבינה פרוסות')` === `normalize('גבינה פרוסה')`
+- Orphan tail: `normalize('גבינת גאודה 28% שומן')` === `normalize('גבינת גאודה 28%')` === `'גבינת גאודה'`
+- Orphan NOT dropped mid-string: `normalize('חלב שומן מלא')` retains `שומן`
+- Whitespace: `normalize('  חלב   מלא  ')` === `'חלב מלא'`
+- Empty / whitespace-only → `''`
+  **Acceptance:** All tests green. Function is pure (no side effects, no I/O).
 
-**Files:** `scripts/build-supermarket-seed.ts`
-**What:** After existing `deduplicateScraped`, pipe through `deduplicateByContent`. Log count of content-collapsed rows in summary. Regenerate `src/assets/supermarket-seed.json`.
-**Test first:** N/A (orchestration script — relies on Task 1 unit tests).
-**Acceptance:** Run `npm run build-supermarket-seed`. Output shows ~147 fewer rows. Spot-check: `גבינת גאודה פרוסה 28% שומן` appears once.
+### Task 2: `deduplicateByContent` strict hash (S)
 
-### Task 3: Wire into Rami Levy seed builder + cross-seed content filter (M)
+**Files:** `scripts/deduplicate.ts` (modify), `scripts/deduplicate.test.ts` (modify)
+**What:** `deduplicateByContent(foods: FoodSeed[]): FoodSeed[]`. Key = `${normalizeNameForDedup(nameHe)}|${cals}|${pro}|${fat}|${carbs}`. First occurrence wins. Imports helper from `src/shared/normalizeFoodName.ts`.
+**Test first (RED):**
 
-**Files:** `scripts/build-rami-levy-seed.ts`
-**What:** After existing ID dedup, pipe through `deduplicateByContent`. Then load the Shufersal seed, build a content-hash `Set`, and drop any Rami Levy row whose hash already exists. Log both counts in summary. Regenerate `src/assets/rami-levy-seed.json`.
-**Test first:** N/A (orchestration). Cross-seed filter uses the same pure function as Task 1.
-**Acceptance:** Run `npm run build-rami-levy-seed`. Summary shows within-store content dupes + cross-seed content dupes. Final row count drops ~44 + cross-seed hits. `node -e "..."` spot-check: 0 groups with 2+ identical rows.
-
-### Task 4: Verification + app cold-start test (S)
-
-**Files:** none
-**What:** Uninstall app → `npx expo start -c` → reinstall → search `גאודה`, `גבינה לבנה`, `יוגורט` — each search shows no visually identical rows. Metro log: `v15: Seeded <N> foods from Rami Levy catalog`.
-**Acceptance:** Screenshots of each search show deduped results. No duplicate test plan item for PR.
-
-### Task 5: Update lessons.md (XS)
-
-**Files:** `lessons.md`
-**What:** Add the "barcode is not identity" lesson.
-**Acceptance:** Line added under the data-seeding section.
-
----
-
-Total new logic surface: one pure function, ~30 LOC. Two script wire-ups, ~20 LOC each. Tests: ~80 LOC. Regenerated JSON seeds are the bulk of the diff.
-
-## Phase 2 — Near-duplicate refinement
-
-### Symptoms (phase 2)
-
-After Phase 1 strict content dedup ships, residual duplicates remain:
-
-- `גבינת גאודה פרוסה 28% שומן` @ 352 kcal, 25g protein
-- `גבינת גאודה פרוסות 28%` @ 352 kcal, 25g protein (plural + missing trailing "שומן")
-- `גבינת גאודה פרוסות 28%` @ 341 kcal, 23g protein (same name, ~3% calorie drift)
-
-Same product. Strict hash fails because:
-
-1. `פרוסה` (singular) vs `פרוסות` (plural) → different normalized name
-2. Trailing orphan modifier `שומן` after `%` → different normalized name
-3. 352 vs 341 kcal → different hash even when name matches
-
-### Fix (phase 2)
-
-Three-layer tightening of the content-hash key:
-
-1. **Singular/plural whitelist** — a small map of known food-shape descriptors:
-   - `פרוסות` → `פרוסה`
-   - `מגורדות` → `מגורדת`
-   - `טחונות` → `טחונה`
-   - `קצוצות` → `קצוצה`
-   - `פרוסים` → `פרוס`
-   - `חתוכים` → `חתוך`
-   - `טריים` → `טרי`
-     Whitelist is intentionally narrow — Hebrew morphology is hard and general stemming risks false merges.
-
-2. **Trailing orphan modifier drop** — after `normalizeNameForDedup` strips size tokens and punctuation, if the last word is a known orphan modifier (`שומן`, `ביתית`, `מצונן`), drop it. Applied only at the tail — keeps `חלב 3% שומן` distinct from `חלב 9% שומן` because the % is preserved.
-
-3. **Macro bucketing** — round for the hash key only (original values preserved in the seed):
-   - calories: nearest 10 (so 341 and 352 → both bucket to `340/350`, still distinct; but 349 and 352 both bucket to `350`)
-   - protein, fat, carbs: nearest 1g
-   - Risk bound: 10-kcal buckets only collapse items within ~3% of each other. Real "light" vs "full" variants usually diverge by more than 10 kcal per 100g.
-
-For the problem case: after plural collapse + orphan drop, both rows normalize to `גבינת גאודה פרוסה 28` — identical. Then one buckets at 350 kcal, the other at 340 — **still distinct**. Acceptance criterion: bucketing must be to nearest 15 or based on a ±tolerance window to collapse 341↔352.
-
-**Refined bucketing:** window-based, not round-to-nearest. Two foods collide if `|a.calories − b.calories| ≤ 15` AND `|a.protein − b.protein| ≤ 2` AND `|a.fat − b.fat| ≤ 2` AND `|a.carbs − b.carbs| ≤ 2` AND normalized names match. Window-based means we need a different data structure than a `Set<string>` hash.
-
-### Implementation approach
-
-Switch from hash-set dedup to a grouped pass:
-
-```
-1. Group foods by normalized name (post plural + orphan collapse)
-2. Within each group, run single-pass clustering:
-   for each food, check if any kept item is within the macro window.
-   If yes, discard (keep first occurrence).
-   If no, add to kept.
-```
-
-O(n·k) where k is group size (typically ≤ 10).
-
-### Changes (phase 2)
-
-| File                                | Change                                                                                                                                                                             |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `scripts/deduplicate.ts`            | Add `PLURAL_MAP`, `ORPHAN_TRAILING_MODIFIERS`, extend `normalizeNameForDedup`; add `deduplicateFuzzy` (window-based clustering); keep strict `deduplicateByContent` as a sub-step. |
-| `scripts/deduplicate.test.ts`       | New tests: plural collapse, orphan drop, 352↔341 collision, 85↔100 no-collision (light vs full), cross-group isolation.                                                            |
-| `scripts/build-supermarket-seed.ts` | Replace `deduplicateByContent` call with `deduplicateFuzzy`.                                                                                                                       |
-| `scripts/build-rami-levy-seed.ts`   | Replace `deduplicateByContent` call with `deduplicateFuzzy`; cross-seed filter still uses strict content hash (cross-store fuzzy is riskier, deferred).                            |
-| `src/assets/supermarket-seed.json`  | Regenerated.                                                                                                                                                                       |
-| `src/assets/rami-levy-seed.json`    | Regenerated.                                                                                                                                                                       |
-
-## Implementation Plan — Phase 2
-
-### Task 6: Plural + orphan modifier normalization (S)
-
-**Files:** `scripts/deduplicate.ts`, `scripts/deduplicate.test.ts`
-**What:** Add `PLURAL_MAP` constant (7 entries above), add `ORPHAN_TRAILING_MODIFIERS` constant (`שומן`, `ביתית`, `מצונן`). Extend `normalizeNameForDedup`: after current cleanup, tokenize on whitespace, map each token via `PLURAL_MAP`, then drop the last token if it's in `ORPHAN_TRAILING_MODIFIERS`.
-**Test first:**
-
-- `normalizeNameForDedup('גבינת גאודה פרוסות 28%')` === `normalizeNameForDedup('גבינת גאודה פרוסה 28% שומן')`
-- Keeps non-trailing `שומן` intact (e.g. `חלב שומן מלא 3%` — `שומן` is not last)
-- Keeps distinct products distinct (`גבינה לבנה 5%` ≠ `גבינה צהובה 5%`)
-  **Acceptance:** Existing 32 tests still pass, 3+ new plural/orphan tests pass.
-
-### Task 7: Window-based fuzzy clustering (M)
-
-**Files:** `scripts/deduplicate.ts`, `scripts/deduplicate.test.ts`
-**What:** Add `deduplicateFuzzy(foods: FoodSeed[]): FoodSeed[]`. Step 1: group by normalized name. Step 2: within each group, single-pass clustering — keep a food if no already-kept food in the same group is within the macro window (±15 kcal, ±2g protein, ±2g fat, ±2g carbs). First occurrence wins.
-**Test first:**
-
-- Two rows same normalized name, calories 352 vs 341 → collapse to 1
-- Two rows same normalized name, calories 62 vs 85 (light vs full) → keep both
-- Two rows different normalized names, same macros → keep both
-- First occurrence preserved on collision
+- Two entries same name + identical macros → length 1, first id preserved
+- Two entries same name + different kcal → length 2 (strict hash keeps both)
 - Empty array → empty array
-- 100-row stress test with known dup pattern
-  **Acceptance:** Tests pass. Function is pure.
+- Single entry → unchanged
+- Order preserved for survivors
+- Null/missing macros treated consistently (spec: coerce `null → 0` for hash)
+  **Acceptance:** Tests green. Pure function.
 
-### Task 8: Wire `deduplicateFuzzy` into seed builders (S)
+### Task 3: `deduplicateFuzzy` window + garbage replacement (M)
 
-**Files:** `scripts/build-supermarket-seed.ts`, `scripts/build-rami-levy-seed.ts`
-**What:** Replace the current `deduplicateByContent` call with `deduplicateFuzzy`. Update log labels to `Fuzzy dedup`. Cross-seed step in Rami Levy builder continues to use strict `buildContentHash` (cross-store fuzzy is higher-risk, deferred).
-**Acceptance:** `npm run build-supermarket-seed` shows additional collapses vs Phase 1. `npm run build-rami-levy-seed` likewise. Spot-check: `גאודה` search in the merged seed shows no trivially-identical pairs.
+**Files:** `scripts/deduplicate.ts` (modify), `scripts/deduplicate.test.ts` (modify)
+**What:** `deduplicateFuzzy(foods: FoodSeed[]): FoodSeed[]`. Two-step:
 
-### Task 9: Verification (S)
+1. Group by normalized name.
+2. Within each group, single-pass: for each row, if any kept row is within window (`|Δkcal| ≤ 15 AND |Δp| ≤ 2 AND |Δf| ≤ 2 AND |Δc| ≤ 2`) → collision. On collision, the **richer** row wins (replace kept if new row has strictly more non-null fields OR `kept.isGarbage && !new.isGarbage`). `isGarbage(row) := kcal === 0 || (protein === 0 && kcal > 100)`. Tie-break: lowest id.
 
-**Files:** none
-**What:** Compile a list of 10 common search terms (גאודה, גבינה לבנה, יוגורט, לחם, חלב, שמנת, קוטג', חומוס, טונה, שוקולד). For each, run node one-liner that filters the merged seed and prints name + kcal + protein. Eyeball for residual near-dupes. Cold-start app, search each term, screenshot.
-**Acceptance:** No pair of rows in the same search result share a normalized name. Residual duplicates, if any, are documented as genuinely distinct (e.g., different brands with meaningfully different macros).
+**Test first (RED):**
 
-### Task 10: Update lessons.md + commit Phase 1+2 as one PR (S)
+- `אורז פרסי 348 / 350 / 336` all with valid macros → collapses to 1 (the one with most non-null fields)
+- `אורז פרסי 336 kcal, protein=0` + `אורז פרסי 348 kcal, protein=6` → garbage row dropped, richer row kept regardless of order
+- `חלב 3% 62kcal` + `חלב 9% 100kcal` → both kept (post-normalization same name, but Δkcal = 38 > 15)
+- Two different normalized names with identical macros → both kept
+- Three rows within window → collapse to 1, first-wins on tie
+- First occurrence preserved when all rows equally rich
+- Empty group → empty
+- Stress: 100 rows, 20 dup clusters → exactly 80 survivors
+  **Acceptance:** All tests green. Pure function. `אורז פרסי 348/350/336` case explicitly asserted.
 
-**Files:** `lessons.md`
-**What:** Extend the Phase 1 lesson: "Barcode is not identity — AND neither is a strict content hash when supermarket data has plural-form, trailing-modifier, and small-drift noise. Fuzzy dedup with singular/plural whitelist + macro window is needed for clean Hebrew product lists."
-**Acceptance:** Line added. Ship both phases in one PR — scope is still a single bugfix (duplicate food search).
+### Task 4: Wire Shufersal builder (S)
+
+**Files:** `scripts/build-supermarket-seed.ts` (modify), `src/assets/supermarket-seed.json` (regenerate)
+**What:** After existing `deduplicateScraped` (id dedup), pipe through `deduplicateByContent` → `deduplicateFuzzy`. Log three counts: `id-dedup dropped N`, `content-dedup dropped N`, `fuzzy-dedup dropped N`. Regenerate seed.
+**Test first:** N/A (orchestration script — Task 1-3 cover the pure logic).
+**Acceptance:** Run `npm run build-supermarket-seed` (or equivalent). Output shows collapse counts. Spot-check in node REPL: zero exact-hash collisions, `אורז פרסי` appears once, `גבינת גאודה פרוסה 28% שומן` appears once. Row count drops by ~147 + fuzzy-collapse delta.
+
+### Task 5: Wire Rami Levy builder + cross-seed strict filter (M)
+
+**Files:** `scripts/build-rami-levy-seed.ts` (modify), `src/assets/rami-levy-seed.json` (regenerate)
+**What:** Same pipeline as Task 4 for within-source. Then: load regenerated `supermarket-seed.json`, build a `Set<contentHash>` from it using the **strict** hash (not fuzzy — per existing lessons.md rule), drop any Rami Levy row whose content hash matches. Log three counts + cross-seed drop count.
+**Test first:** N/A (orchestration). Relies on T1-T3.
+**Acceptance:** Run builder. Output shows all four counts. Regenerated JSON has zero within-source strict-hash collisions AND zero Shufersal strict-hash overlaps.
+
+### Task 6: Wire raw-ingredients builder symmetry (XS)
+
+**Files:** `scripts/build-raw-ingredients-seed.ts` (modify if exists; else document why skipped), `src/assets/raw-ingredients-seed.json` (regenerate if changed)
+**What:** Run the same `deduplicateByContent → deduplicateFuzzy` pipeline for safety. Raw is curated; expect 0 collapses. If no builder exists (seed is hand-maintained), add a one-line test in `scripts/deduplicate.test.ts` that loads the current JSON and asserts `deduplicateFuzzy(raw).length === raw.length`.
+**Acceptance:** Either pipeline runs with 0 collapses, or test asserts raw seed is already clean.
+
+### Task 7: Schema v17 + name_norm column skeleton (S)
+
+**Files:** `src/db/schema.ts` (modify), `src/db/database.ts` (modify — add empty `migrateToV17` stub + version bump), `src/db/schema.test.ts` (modify if exists)
+**What:** Bump `CURRENT_SCHEMA_VERSION` to 17. Add `name_norm TEXT` to the `foods` CREATE TABLE definition (so fresh installs get it). Add the index DDL (`CREATE INDEX IF NOT EXISTS idx_foods_name_norm ON foods(name_norm)`). Add empty `migrateToV17(db)` function + wire into migration switch with the seed-guard pattern (`currentVersion < 17`, not `> 0 && < 17` — fresh installs must run cleanup too because they load all 3 seeds).
+**Test first (RED):** Update existing schema test to assert:
+
+- `CURRENT_SCHEMA_VERSION === 17`
+- `foods` CREATE statement contains `name_norm TEXT`
+- Index DDL exists in schema file
+  **Acceptance:** Tests green. v17 migration is a no-op stub; T8 fills it.
+
+### Task 8: v17 migration — backfill + tier cleanup + index (M)
+
+**Files:** `src/db/database.ts` (modify), `src/db/database.test.ts` (modify) or `src/db/food-repository.test.ts` (modify)
+**What:** Fill `migrateToV17`:
+
+1. `ALTER TABLE foods ADD COLUMN name_norm TEXT` (guarded — skip if column exists, since fresh installs already have it via T7 CREATE TABLE)
+2. Backfill loop: `SELECT id, name_he FROM foods WHERE name_norm IS NULL` → batch `UPDATE foods SET name_norm = ? WHERE id = ?` using `normalizeNameForDedup` from `src/shared/normalizeFoodName.ts`. Batch size ≤ 100 rows per transaction.
+3. `CREATE INDEX IF NOT EXISTS idx_foods_name_norm ON foods(name_norm)`
+4. Cross-source tier cleanup via inline CASE (`raw_% → 0`, `manual_% → 1`, `sh_% → 2`, `rl_% → 3`). DELETE rows where a same-`name_norm` row with lower tier number exists.
+5. Log: `[Database] v17: backfilled N name_norm, deleted M cross-source dups`
+
+**Test first (RED):**
+
+- Seed test DB with: `sh_test1 = 'אורז פרסי'`, `rl_test1 = 'אורז פרסי'`, `raw_rice_persian = 'אורז פרסי'`, all different kcal → after migration, only `raw_rice_persian` survives
+- Seed test DB with all rows having `name_norm = NULL` → after migration, all rows have non-null `name_norm`
+- Seed test DB with no cross-source collisions → delete count = 0
+- Seed test DB with two distinct raw rows same name → both survive (only cross-tier deletes, same-tier kept)
+- Fresh install (v0 → v17) runs migration successfully
+- Upgrade install (v16 → v17) runs migration successfully
+  **Acceptance:** All tests green. Migration is idempotent (re-running v17 on already-migrated DB is safe no-op).
+
+### Task 9: Integration test — zero-dup invariant (S)
+
+**Files:** `src/db/food-repository.test.ts` (modify) or new `src/db/dedup.integration.test.ts` (create)
+**What:** Load actual regenerated `raw-ingredients-seed.json`, `supermarket-seed.json`, `rami-levy-seed.json` via `require`. Seed a fresh in-memory SQLite db using the same code path as v14/v15/v16 migrations + v17. Query `SELECT name_norm, COUNT(*) FROM foods GROUP BY name_norm HAVING COUNT(*) > 1`. Assert zero rows.
+
+Also assert the raw-search invariant: `SELECT * FROM foods WHERE name_he LIKE '%אורז%' ORDER BY <full ranker>` returns a `raw_%` id as position 1.
+
+**Test first (RED):** This test IS the failing spec — it should fail on main today and pass after T1-T8 ship.
+**Acceptance:** Test green. Catches any future seed regression.
+
+### Task 10: Device cold-start verification (S)
+
+**Files:** none (manual)
+**What:** Uninstall Expo Go app on device. `npx expo start -c`. Reload. Metro log must show: `v14: Seeded ... v15: Seeded ... v16: Seeded ... v17: backfilled N name_norm, deleted M cross-source dups`. Then in-app search each term: `חזה עוף`, `שמן זית`, `ביצה`, `תפוח`, `אורז לבן`, `גאודה`. For each:
+
+- Screenshot top 5 results
+- Assert zero visually-identical rows
+- For `חזה עוף`, `שמן זית`, `ביצה`, `תפוח`, `אורז לבן`: assert top row has `raw_%` source (check via selecting + inspecting stored id in food log, or add temporary dev badge)
+  Then pick one raw result → portion picker → log it → check food log shows Hebrew name persisted.
+  **Acceptance:** All 6 searches dup-free. 5 raw-covered queries surface raw row at #1. Portion picker + log flow works end-to-end.
+
+### Task 11: Lessons + TASKS.md update (XS)
+
+**Files:** `lessons.md` (modify), `TASKS.md` (modify — mark Task 7 of raw-ingredients spec + this bugfix as done with date 2026-04-13)
+**What:** Extend the existing "Seed Dedup" lesson block:
+
+- Add: "Content hash is not identity either — plural/orphan-modifier/small-drift noise survives strict hashing. Fuzzy window (±15 kcal, ±2g macros) with garbage-row replacement catches the residual."
+- Add: "Defense in depth: build-time dedup can drift from runtime dedup if they diverge. Share one `normalizeNameForDedup` module between scripts and db migration."
+- Add: "Runtime migration enforcement (v17 cross-source tier cleanup) catches what seed builders miss — and catches future regressions from new sources."
+  **Acceptance:** Lines added. TASKS.md reflects state. Same commit as the feature per workflow.md.
+
+## Open Questions
+
+None blocking. Deferred for later:
+
+- Cross-seed _fuzzy_ dedup (currently only strict-hash across stores — risk of false merges higher when product names drift across chains). Revisit if users report cross-store visible dupes post-ship.
+- `name_norm` as search column (currently only dedup key). Add if users report nikud/punct search misses.

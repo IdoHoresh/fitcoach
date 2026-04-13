@@ -12,6 +12,7 @@
 
 import * as SQLite from 'expo-sqlite'
 import { CREATE_TABLE_STATEMENTS, SCHEMA_VERSION } from './schema'
+import { normalizeNameForDedup } from '../shared/normalizeFoodName'
 
 const DATABASE_NAME = 'fitcoach.db'
 
@@ -104,6 +105,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     }
     if (currentVersion < 16) {
       await migrateToV16(db)
+    }
+    if (currentVersion < 17) {
+      await migrateToV17(db)
     }
 
     // Update version
@@ -438,6 +442,83 @@ async function migrateToV16(db: SQLite.SQLiteDatabase): Promise<void> {
   }
 
   console.log(`[Database] v16: Seeded ${seed.length} foods from raw ingredient catalog`)
+}
+
+/**
+ * v17: Dedup food catalog across sources.
+ *
+ * 1. Ensures `name_norm` column exists (fresh installs already have it via
+ *    CREATE TABLE; upgrade installs need ALTER TABLE).
+ * 2. Backfills `name_norm` for every row using the shared normalization helper.
+ * 3. Cross-source tier cleanup: when two rows share a normalized name across
+ *    different sources, keep the highest-tier one and delete the rest.
+ *    Tier order: raw_% (0) > manual_% (1) > sh_% (2) > rl_% (3).
+ * 4. Ensures the index on `name_norm` exists.
+ *
+ * Idempotent: safe to re-run on already-migrated databases.
+ */
+async function migrateToV17(db: SQLite.SQLiteDatabase): Promise<void> {
+  // 1. Add column if missing (fresh installs already have it via CREATE TABLE)
+  const columns = await db.getAllAsync<{ name: string }>(`PRAGMA table_info(foods)`)
+  const hasNameNorm = columns.some((c) => c.name === 'name_norm')
+  if (!hasNameNorm) {
+    await db.execAsync(`ALTER TABLE foods ADD COLUMN name_norm TEXT`)
+  }
+
+  // 2. Backfill name_norm for rows where it's null (or empty, for safety)
+  const toBackfill = await db.getAllAsync<{ id: string; name_he: string }>(
+    `SELECT id, name_he FROM foods WHERE name_norm IS NULL OR name_norm = ''`,
+  )
+
+  const BACKFILL_BATCH = 100
+  for (let i = 0; i < toBackfill.length; i += BACKFILL_BATCH) {
+    const batch = toBackfill.slice(i, i + BACKFILL_BATCH)
+    for (const row of batch) {
+      await db.runAsync(`UPDATE foods SET name_norm = ? WHERE id = ?`, [
+        normalizeNameForDedup(row.name_he),
+        row.id,
+      ])
+    }
+  }
+
+  // 3. Ensure index exists
+  await db.execAsync(`CREATE INDEX IF NOT EXISTS idx_foods_name_norm ON foods(name_norm)`)
+
+  // 4. Cross-source tier cleanup: delete rows where a same-name_norm row with
+  //    lower tier number (= higher priority) exists.
+  //    Tier inline via CASE. Skip empty name_norm (defensive — shouldn't happen).
+  const deleteResult = await db.runAsync(
+    `DELETE FROM foods
+     WHERE name_norm IS NOT NULL
+       AND name_norm != ''
+       AND EXISTS (
+         SELECT 1 FROM foods f2
+         WHERE f2.name_norm = foods.name_norm
+           AND (
+             CASE
+               WHEN f2.id LIKE 'raw_%'    THEN 0
+               WHEN f2.id LIKE 'manual_%' THEN 1
+               WHEN f2.id LIKE 'sh_%'     THEN 2
+               WHEN f2.id LIKE 'rl_%'     THEN 3
+               ELSE 4
+             END
+           ) < (
+             CASE
+               WHEN foods.id LIKE 'raw_%'    THEN 0
+               WHEN foods.id LIKE 'manual_%' THEN 1
+               WHEN foods.id LIKE 'sh_%'     THEN 2
+               WHEN foods.id LIKE 'rl_%'     THEN 3
+               ELSE 4
+             END
+           )
+       )`,
+  )
+
+  const backfilled = toBackfill.length
+  const deleted = deleteResult?.changes ?? 0
+  console.log(
+    `[Database] v17: backfilled ${backfilled} name_norm, deleted ${deleted} cross-source dups`,
+  )
 }
 
 /**
