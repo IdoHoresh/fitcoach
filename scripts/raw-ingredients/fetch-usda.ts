@@ -13,6 +13,12 @@
  *   USDA_API_KEY=xxx npm run fetch-usda-raw             — fetch (resumable via cache)
  *   USDA_API_KEY=xxx npm run fetch-usda-raw -- --force  — clear cache and re-fetch
  *   USDA_API_KEY=xxx npm run fetch-usda-raw -- --dry-run — first 5 targets, print sample
+ *   USDA_API_KEY=xxx npm run fetch-usda-raw -- --slugs chicken_thigh,beef_sirloin
+ *                                                       — force re-fetch only listed slugs
+ *                                                         (all states); leaves other caches
+ *                                                         untouched. Used to surgically
+ *                                                         correct entries after pinning a
+ *                                                         better fdcIdHint in usda-targets.
  */
 
 import * as fs from 'fs'
@@ -41,6 +47,35 @@ const NUTRIENT_ID_FIBER = 1079
 const args = process.argv.slice(2)
 const FORCE = args.includes('--force')
 const DRY_RUN = args.includes('--dry-run')
+
+/**
+ * `--slugs chicken_thigh,beef_sirloin` — process only listed slugs (all their
+ * states) and bypass the cache for those. Other slugs are skipped entirely,
+ * their cache files are untouched. Lets us correct a handful of bad fetches
+ * without re-running the whole 200-item pull.
+ */
+function parseSlugsFlag(): Set<string> | null {
+  const idx = args.indexOf('--slugs')
+  if (idx === -1) return null
+  const csv = args[idx + 1]
+  if (!csv || csv.startsWith('--')) {
+    console.error(
+      '[USDA] Error: --slugs requires a comma-separated list, e.g. --slugs chicken_thigh,beef_sirloin',
+    )
+    process.exit(1)
+  }
+  const slugs = csv
+    .split(',')
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0)
+  if (slugs.length === 0) {
+    console.error('[USDA] Error: --slugs list is empty')
+    process.exit(1)
+  }
+  return new Set(slugs)
+}
+
+const SLUGS_FILTER = parseSlugsFlag()
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -192,8 +227,9 @@ async function fetchOne(
   apiKey: string,
 ): Promise<{ food: UsdaFood | null; networkCalls: number }> {
   const cached = cachePath(target.slug, target.state)
+  const slugForced = SLUGS_FILTER?.has(target.slug) ?? false
 
-  if (!FORCE && fs.existsSync(cached)) {
+  if (!FORCE && !slugForced && fs.existsSync(cached)) {
     try {
       const food = JSON.parse(fs.readFileSync(cached, 'utf8')) as UsdaFood
       return { food, networkCalls: 0 }
@@ -271,7 +307,17 @@ async function fetchUsda(): Promise<void> {
         continue
       }
 
-      results.push(normalize(food, target))
+      const entry = normalize(food, target)
+      results.push(entry)
+
+      // Log description for every network-fetched item so search mismatches
+      // (e.g. search for "chicken thigh" returning "chicken skin") are visible
+      // in the run output rather than hidden in the cache.
+      if (networkCalls > 0) {
+        console.log(
+          `  [ok  ] ${target.slug}/${target.state} fdcId=${entry.fdcId} ${entry.calories}kcal — ${entry.description}`,
+        )
+      }
 
       if (i % 25 === 0 && i > 0) {
         console.log(
