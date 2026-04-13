@@ -19,9 +19,16 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 ## Expo / React Native Gotchas
 
 - Always wrap `setState` calls inside `useAnimatedReaction` with `runOnJS(setter)(value)` — reanimated callbacks run on the UI thread. Direct `setState` works in Jest (mocked) but crashes on real devices. (2026-04-08)
-- RTL-sensitive CSS properties (`transformOrigin`, `textAlign`, directional padding/margin) must never be hardcoded — use `isRTL()` dynamically. Hardcoded `transformOrigin: 'left'` caused the ProgressBar to fill from the wrong direction in Hebrew. (2026-04-08)
+- `textAlign`, directional padding/margin, and icon positions must be wired through `isRTL()` — never hardcoded. Default RN text alignment is unreliable across component types. (2026-04-08)
 - Timer-based components (`setInterval`/`setTimeout` in long-press, polling, etc.) must clean up on unmount via `useEffect` return. Otherwise timers fire on unmounted components. (2026-04-08)
 - `I18nManager.forceRTL()` must be called at **module level** (outside components/effects), not inside `useEffect`. On Android, `forceRTL` requires an app restart — calling it inside `useEffect` is too late, the layout is already rendered LTR. Guard with `if (isRTL() && !I18nManager.isRTL)`. (2026-04-08)
+- **RTL direction rules (learned the hard way — 2026-04-09):**
+  - **Absolute positioning (`left` / `right`):** React Native auto-swaps these when `I18nManager.isRTL` is true. **Never** apply a manual `isRTL() ? 'right' : 'left'` — that double-flips. Always use `left: 0` and let RN handle RTL.
+  - **`flexDirection: 'row'` with `flexWrap`:** RN is supposed to auto-flip to `row-reverse` in RTL, but this is **unreliable in Expo Go on iOS**. Always use explicit `isRTL() ? 'row-reverse' : 'row'` for grid / wrap / directional rows. (Plain rows without wrap sometimes auto-flip, but belt-and-suspenders with explicit conditional is safer.)
+  - **`transformOrigin` on `Animated.View`:** not honored consistently by RN + Reanimated. Don't use it for direction-sensitive animation — use width animation + absolute positioning instead (e.g., pin fill to `left: 0` and animate `width`).
+  - **Module-level `StyleSheet.create`:** `isRTL()` resolves once at import time. For styles that need to react to language changes at runtime, compute them inside a render function instead of at module level.
+  - **Margins:** prefer `marginStart` / `marginEnd` / `paddingStart` / `paddingEnd` over `marginLeft` / `marginRight` — the logical props flip correctly in RTL without needing a conditional.
+- **`app.json` plugins array is for config plugins only.** Pure JS libraries like `expo-crypto`, `expo-haptics`, `expo-localization` do not ship config plugins and must NOT be listed. Listing them triggers a fallback import that loads the package's main export; on Node 24 this crashes because `expo-modules-core/src/index.ts` hits the `ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING` error. Verify with `test -f node_modules/<pkg>/app.plugin.js` before adding to plugins. (2026-04-09)
 - `@expo/vector-icons` breaks Jest because it transitively loads `expo-modules-core`, which crashes with "Cannot read properties of undefined (reading 'EventEmitter')". Mock the whole module in `jest.setup.ts` with a factory that returns `React.createElement(View)` per icon family. Do NOT call `View(...)` directly — Babel's class transform requires `new`/`React.createElement` (calling a React Native class component as a function throws `_classCallCheck`). (2026-04-09)
 
 ## UI ↔ Algorithm Wiring

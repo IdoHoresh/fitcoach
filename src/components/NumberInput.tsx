@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
   },
   valueContainer: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
     alignItems: 'baseline',
     justifyContent: 'center',
     gap: spacing.xs,
