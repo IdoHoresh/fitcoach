@@ -21,7 +21,8 @@
     "scrape-rl-ids": "tsx scripts/scrape-rl-ids.ts",
     "fetch-rl-nutrition": "tsx scripts/fetch-rl-nutrition.ts",
     "build-rami-levy-seed": "tsx scripts/build-rami-levy-seed.ts",
-    "fetch-usda-raw": "tsx scripts/raw-ingredients/fetch-usda.ts"
+    "fetch-usda-raw": "tsx scripts/raw-ingredients/fetch-usda.ts",
+    "build-raw-ingredients-seed": "tsx scripts/raw-ingredients/build-raw-ingredients-seed.ts"
   },
   "dependencies": {
     "@expo-google-fonts/dm-sans": "^0.4.2",

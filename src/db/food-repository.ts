@@ -75,6 +75,13 @@ export class FoodRepository extends BaseRepository<FoodItem> {
        WHERE name_he LIKE ? OR name_en LIKE ?
        ORDER BY
          CASE WHEN name_he LIKE ? THEN 0 ELSE 1 END,
+         CASE
+           WHEN id LIKE 'raw_%'    THEN 0
+           WHEN id LIKE 'manual_%' THEN 1
+           WHEN id LIKE 'sh_%'     THEN 2
+           WHEN id LIKE 'rl_%'     THEN 3
+           ELSE 4
+         END,
          name_he ASC
        LIMIT ?`,
       [containsPattern, containsPattern, startsWithPattern, limit],
