@@ -4,6 +4,9 @@
  */
 
 import type { FoodSeed } from './tzameret-overrides'
+import { normalizeNameForDedup } from '../src/shared/normalizeFoodName'
+
+export { normalizeNameForDedup }
 
 /**
  * Removes within-batch duplicates from a scraped product list.
@@ -31,63 +34,15 @@ export function filterAgainstExisting(products: FoodSeed[], existingIds: Set<str
   return products.filter((p) => !existingIds.has(p.id))
 }
 
-// ── Content-based dedup ───────────────────────────────────────────────────
+// ── Content hash (cross-seed strict filter) ───────────────────────────────
 //
-// Barcode is not identity. The same product can ship under multiple EANs
-// (relabels, package variants, factory runs). Content-based dedup collapses
-// rows that share a normalized name + full macro tuple.
-
-const SIZE_TOKEN_PATTERN = /\d+(?:\.\d+)?\s*(?:גרם|גר|ג'|ק"ג|קג|מ"ל|מל|ליטר|ל')/g
-const PUNCT_PATTERN = /['",.\-()\\/]+/g
-const WHITESPACE_PATTERN = /\s+/g
-
-// Known Hebrew food-shape descriptors: map plural → singular.
-// Intentionally narrow — general Hebrew stemming risks false merges.
-const PLURAL_MAP: Record<string, string> = {
-  פרוסות: 'פרוסה',
-  מגורדות: 'מגורדת',
-  טחונות: 'טחונה',
-  קצוצות: 'קצוצה',
-  פרוסים: 'פרוס',
-  חתוכים: 'חתוך',
-  טריים: 'טרי',
-}
-
-// Modifiers that are semantically empty when they appear as the final token
-// (e.g. `גבינה פרוסה 28% שומן` == `גבינה פרוסה 28%`).
-const ORPHAN_TRAILING_MODIFIERS = new Set<string>(['שומן', 'ביתית', 'מצונן'])
-
-/**
- * Normalizes a Hebrew product name into a dedup key.
- * Strips package-size tokens, punctuation, whitespace, and collapses
- * singular/plural forms of known food descriptors. Drops trailing orphan
- * modifiers that add no semantic information.
- * Percentage numbers (fat %) are preserved — they are semantic, not packaging.
- */
-export function normalizeNameForDedup(name: string): string {
-  const cleaned = name
-    .replace(SIZE_TOKEN_PATTERN, ' ')
-    .replace(PUNCT_PATTERN, ' ')
-    .replace(WHITESPACE_PATTERN, ' ')
-    .trim()
-    .toLowerCase()
-
-  if (cleaned === '') return ''
-
-  const tokens = cleaned.split(' ').map((t) => PLURAL_MAP[t] ?? t)
-
-  // Drop trailing orphan modifier (only at the tail — mid-name tokens preserved)
-  while (tokens.length > 1 && ORPHAN_TRAILING_MODIFIERS.has(tokens[tokens.length - 1])) {
-    tokens.pop()
-  }
-
-  return tokens.join(' ')
-}
+// Strict hash: normalized name + full macro tuple. Used ONLY for cross-store
+// filtering (Rami Levy against Shufersal) where collapsing near-matches is
+// riskier than within a single store.
 
 /**
  * Builds a content hash for a food seed. Two foods with the same hash are
- * considered the same product regardless of id/barcode.
- * Key = normalized name + calories + protein + fat + carbs (per 100g).
+ * byte-identical (same normalized name + same macros).
  */
 export function buildContentHash(food: FoodSeed): string {
   return [
@@ -107,49 +62,80 @@ export function filterAgainstContentHashes(foods: FoodSeed[], hashes: Set<string
   return foods.filter((f) => !hashes.has(buildContentHash(f)))
 }
 
-// ── Fuzzy (window-based) dedup ────────────────────────────────────────────
+// ── Within-source name-based dedup ────────────────────────────────────────
 //
-// Strict content hash misses near-duplicates: same product, slightly different
-// macros (measurement drift, factory variation). Fuzzy dedup groups by
-// normalized name, then within each group collapses rows whose macros fall
-// inside a small tolerance window.
+// Within a single supermarket catalog, the same product can be listed under
+// multiple barcodes with drifted macros (Shufersal had 3× "אורז פרסי" at
+// 348/350/336 kcal with protein 6/8.7/0 — all the same Persian rice, the
+// 0g-protein row is a garbage entry). Strict macro-window clustering misses
+// these because legitimate measurement drift exceeds any safe window.
+//
+// Aggressive name-only clustering is safer within a single store: if two rows
+// share the same normalized name (with percentage tokens preserved, so
+// "חלב 3%" stays distinct from "חלב 9%"), they are the same product. Pick the
+// best representative using garbage filter → richness score → first-occurrence.
 
-const CAL_WINDOW = 15
-const MACRO_WINDOW = 2
+function isGarbageRow(f: FoodSeed): boolean {
+  if (f.caloriesPer100g === 0) return true
+  if (f.proteinPer100g === 0 && f.caloriesPer100g > 100) return true
+  return false
+}
 
-function withinMacroWindow(a: FoodSeed, b: FoodSeed): boolean {
-  return (
-    Math.abs(a.caloriesPer100g - b.caloriesPer100g) <= CAL_WINDOW &&
-    Math.abs(a.proteinPer100g - b.proteinPer100g) <= MACRO_WINDOW &&
-    Math.abs(a.fatPer100g - b.fatPer100g) <= MACRO_WINDOW &&
-    Math.abs(a.carbsPer100g - b.carbsPer100g) <= MACRO_WINDOW
-  )
+function richnessScore(f: FoodSeed): number {
+  let score = 0
+  if (f.caloriesPer100g > 0) score++
+  if (f.proteinPer100g > 0) score++
+  if (f.fatPer100g > 0) score++
+  if (f.carbsPer100g > 0) score++
+  if ((f.fiberPer100g ?? 0) > 0) score++
+  return score
 }
 
 /**
- * Fuzzy deduplication: groups by normalized name, then clusters within each
- * group on a macro tolerance window. First occurrence wins. Preserves input
- * order for kept items.
+ * Name-based dedup within a single source. Groups rows by normalized name;
+ * within each group picks the best representative (prefer non-garbage, then
+ * highest richness, ties broken by first occurrence).
  *
- * Tolerance: ±15 kcal, ±2g protein/fat/carbs per 100g. Tight enough to keep
- * "light" vs "full" variants distinct; loose enough to absorb 3% measurement
- * drift between stores.
+ * Output preserves the relative order of first-seen groups.
  */
 export function deduplicateFuzzy(foods: FoodSeed[]): FoodSeed[] {
-  const keptByGroup = new Map<string, FoodSeed[]>()
-  const keptOrdered: FoodSeed[] = []
+  const groups = new Map<string, FoodSeed[]>()
+  const keyOrder: string[] = []
 
   for (const food of foods) {
-    const groupKey = normalizeNameForDedup(food.nameHe)
-    const kept = keptByGroup.get(groupKey) ?? []
-
-    const collides = kept.some((k) => withinMacroWindow(food, k))
-    if (collides) continue
-
-    kept.push(food)
-    keptByGroup.set(groupKey, kept)
-    keptOrdered.push(food)
+    const key = normalizeNameForDedup(food.nameHe)
+    const existing = groups.get(key)
+    if (existing) {
+      existing.push(food)
+    } else {
+      groups.set(key, [food])
+      keyOrder.push(key)
+    }
   }
 
-  return keptOrdered
+  const result: FoodSeed[] = []
+  for (const key of keyOrder) {
+    const group = groups.get(key)!
+    result.push(pickBestInGroup(group))
+  }
+  return result
+}
+
+function pickBestInGroup(group: FoodSeed[]): FoodSeed {
+  if (group.length === 1) return group[0]!
+
+  // Prefer non-garbage rows. If all are garbage, fall back to the full group.
+  const nonGarbage = group.filter((f) => !isGarbageRow(f))
+  const pool = nonGarbage.length > 0 ? nonGarbage : group
+
+  let best = pool[0]!
+  let bestScore = richnessScore(best)
+  for (let i = 1; i < pool.length; i++) {
+    const score = richnessScore(pool[i]!)
+    if (score > bestScore) {
+      best = pool[i]!
+      bestScore = score
+    }
+  }
+  return best
 }

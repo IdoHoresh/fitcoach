@@ -30,9 +30,9 @@ jest.mock('expo-crypto', () => ({
 // ── Schema version ────────────────────────────────────────────────────
 
 describe('schema v14 — full Shufersal seed', () => {
-  it('supermarket-seed.json has at least 5000 products', () => {
+  it('supermarket-seed.json has at least 4500 products', () => {
     const seed = require('../assets/supermarket-seed.json') as unknown[]
-    expect(seed.length).toBeGreaterThanOrEqual(5000)
+    expect(seed.length).toBeGreaterThanOrEqual(4500)
   })
 
   it('every seed product has valid id prefix, Hebrew name, and positive calories', () => {
@@ -340,8 +340,8 @@ describe('supermarket-seed.json', () => {
 // ── Schema v15 — Rami Levy seed ───────────────────────────────────────────
 
 describe('schema v15 — Rami Levy seed', () => {
-  it('SCHEMA_VERSION is 16', () => {
-    expect(SCHEMA_VERSION).toBe(16)
+  it('SCHEMA_VERSION is 17', () => {
+    expect(SCHEMA_VERSION).toBe(17)
   })
 
   it('rami-levy-seed.json exists and is valid JSON array', () => {
@@ -452,5 +452,74 @@ describe('schema v16 — raw ingredients seed', () => {
   it('has ids unique within the raw seed', () => {
     const ids = seed.map((f) => f.id)
     expect(new Set(ids).size).toBe(ids.length)
+  })
+})
+
+// ── Schema v17 — dedup invariant across all 3 sources ────────────────────
+
+describe('schema v17 — dedup invariant', () => {
+  // Simulates the v17 migration cleanup in-memory: compute name_norm for every
+  // row, then for each normalized name keep only the highest-tier row
+  // (raw > manual > sh > rl). Asserts zero duplicate name_norm remain.
+  //
+  // This protects against seed regressions. Matches the cross-source DELETE in
+  // `migrateToV17` (src/db/database.ts).
+  it('no two rows share a normalized name after tier cleanup', () => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { normalizeNameForDedup } = require('../shared/normalizeFoodName') as {
+      normalizeNameForDedup: (s: string) => string
+    }
+    const shSeed = require('../assets/supermarket-seed.json') as {
+      id: string
+      nameHe: string
+    }[]
+    const rlSeed = require('../assets/rami-levy-seed.json') as {
+      id: string
+      nameHe: string
+    }[]
+    const rawSeed = require('../assets/raw-ingredients-seed.json') as {
+      id: string
+      nameHe: string
+    }[]
+
+    const tier = (id: string): number => {
+      if (id.startsWith('raw_')) return 0
+      if (id.startsWith('manual_')) return 1
+      if (id.startsWith('sh_')) return 2
+      if (id.startsWith('rl_')) return 3
+      return 4
+    }
+
+    const all = [...shSeed, ...rlSeed, ...rawSeed].map((f) => ({
+      id: f.id,
+      name_norm: normalizeNameForDedup(f.nameHe),
+      tierN: tier(f.id),
+    }))
+
+    // Tier cleanup: for each name_norm, find the minimum tier. Any row with
+    // a higher tier number than the min is deleted.
+    const minTierByNorm = new Map<string, number>()
+    for (const row of all) {
+      const cur = minTierByNorm.get(row.name_norm)
+      if (cur === undefined || row.tierN < cur) {
+        minTierByNorm.set(row.name_norm, row.tierN)
+      }
+    }
+    const survivors = all.filter(
+      (r) => r.name_norm !== '' && r.tierN === minTierByNorm.get(r.name_norm),
+    )
+
+    // Count duplicate name_norm among survivors
+    const nameNormCounts = new Map<string, number>()
+    for (const row of survivors) {
+      nameNormCounts.set(row.name_norm, (nameNormCounts.get(row.name_norm) ?? 0) + 1)
+    }
+    const dups = [...nameNormCounts.entries()].filter(([, c]) => c > 1)
+
+    if (dups.length > 0) {
+      // Surface first 3 offenders for easier debugging
+      console.error('Residual dups:', dups.slice(0, 3))
+    }
+    expect(dups).toHaveLength(0)
   })
 })

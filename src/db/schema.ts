@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 16
+export const SCHEMA_VERSION = 17
 
 /**
  * All CREATE TABLE statements.
@@ -269,8 +269,11 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     carbs_per_100g REAL NOT NULL,
     fiber_per_100g REAL NOT NULL,
     is_user_created INTEGER NOT NULL DEFAULT 0,
-    serving_sizes_json TEXT NOT NULL DEFAULT '[]'
+    serving_sizes_json TEXT NOT NULL DEFAULT '[]',
+    name_norm TEXT
   )`,
   `CREATE INDEX IF NOT EXISTS idx_foods_category ON foods(category)`,
   `CREATE INDEX IF NOT EXISTS idx_foods_name_he ON foods(name_he)`,
+  // idx_foods_name_norm is created inside migrateToV17 after the ALTER TABLE
+  // so upgrade installs don't fail on a non-existent column.
 ]

@@ -832,17 +832,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
-    "id": "rl_7290003361939",
-    "nameHe": "גאודה עיזים 150 גר",
-    "nameEn": "גאודה עיזים 150 גר",
+    "id": "rl_7290102302253",
+    "nameHe": "גאודה עיזים 200 גר",
+    "nameEn": "גאודה עיזים 200 גר",
     "category": "protein",
-    "caloriesPer100g": 365,
-    "proteinPer100g": 22.3,
-    "fatPer100g": 30.6,
-    "carbsPer100g": 0,
+    "caloriesPer100g": 397,
+    "proteinPer100g": 24,
+    "fatPer100g": 34,
+    "carbsPer100g": 0.5,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":150}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
     "id": "rl_7290003361946",
@@ -1222,17 +1222,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":150}]"
   },
   {
-    "id": "rl_7290108505962",
-    "nameHe": "שזיפים מיובשים 400 גר",
-    "nameEn": "שזיפים מיובשים 400 גר",
+    "id": "rl_7290017389868",
+    "nameHe": "שזיפים מיובשים 300 גר",
+    "nameEn": "שזיפים מיובשים 300 גר",
     "category": "carbs",
-    "caloriesPer100g": 250,
-    "proteinPer100g": 2.5,
-    "fatPer100g": 0,
-    "carbsPer100g": 70,
+    "caloriesPer100g": 259,
+    "proteinPer100g": 2.3,
+    "fatPer100g": 0.4,
+    "carbsPer100g": 61.5,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":300}]"
   },
   {
     "id": "rl_7290108506914",
@@ -1391,17 +1391,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
-    "id": "rl_7290017297361",
-    "nameHe": "רוטב עגבניות 240 גר רמילוי",
-    "nameEn": "רוטב עגבניות 240 גר רמילוי",
+    "id": "rl_7290016609233",
+    "nameHe": "רוטב עגבניות 100 גר רמילוי",
+    "nameEn": "רוטב עגבניות 100 גר רמילוי",
     "category": "vegetables",
-    "caloriesPer100g": 63,
-    "proteinPer100g": 3.2,
-    "fatPer100g": 0,
-    "carbsPer100g": 10.6,
+    "caloriesPer100g": 60,
+    "proteinPer100g": 4,
+    "fatPer100g": 0.3,
+    "carbsPer100g": 8.5,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":240}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290015804998",
@@ -1415,19 +1415,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":600}]"
-  },
-  {
-    "id": "rl_7290016609233",
-    "nameHe": "רוטב עגבניות 100 גר רמילוי",
-    "nameEn": "רוטב עגבניות 100 גר רמילוי",
-    "category": "vegetables",
-    "caloriesPer100g": 60,
-    "proteinPer100g": 4,
-    "fatPer100g": 0.3,
-    "carbsPer100g": 8.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290000130125",
@@ -1963,17 +1950,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":350}]"
   },
   {
-    "id": "rl_7290119670451",
-    "nameHe": "בננה ציפס 200 גר בקופסא",
-    "nameEn": "בננה ציפס 200 גר בקופסא",
+    "id": "rl_7290018566961",
+    "nameHe": "בננה ציפס 250 גר בקופסא",
+    "nameEn": "בננה ציפס 250 גר בקופסא",
     "category": "fruits",
-    "caloriesPer100g": 510,
-    "proteinPer100g": 2,
-    "fatPer100g": 26,
-    "carbsPer100g": 0,
+    "caloriesPer100g": 441,
+    "proteinPer100g": 2.9,
+    "fatPer100g": 26.4,
+    "carbsPer100g": 47,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"קופסא\",\"nameEn\":\"Can\",\"unit\":\"grams\",\"grams\":200}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"קופסא\",\"nameEn\":\"Can\",\"unit\":\"grams\",\"grams\":250}]"
   },
   {
     "id": "rl_7290119670390",
@@ -2912,19 +2899,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":205.4}]"
   },
   {
-    "id": "rl_7290019870999",
-    "nameHe": "סביבון חנוכה צוקטה 273 גר",
-    "nameEn": "סביבון חנוכה צוקטה 273 גר",
-    "category": "carbs",
-    "caloriesPer100g": 430,
-    "proteinPer100g": 4.6,
-    "fatPer100g": 23.6,
-    "carbsPer100g": 48.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":273}]"
-  },
-  {
     "id": "rl_7290120871557",
     "nameHe": "פיצה מרגריטה קפואה 330 גר",
     "nameEn": "פיצה מרגריטה קפואה 330 גר",
@@ -3757,19 +3731,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":300}]"
   },
   {
-    "id": "rl_7290017389868",
-    "nameHe": "שזיפים מיובשים 300 גר",
-    "nameEn": "שזיפים מיובשים 300 גר",
-    "category": "carbs",
-    "caloriesPer100g": 259,
-    "proteinPer100g": 2.3,
-    "fatPer100g": 0.4,
-    "carbsPer100g": 61.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":300}]"
-  },
-  {
     "id": "rl_7290017389875",
     "nameHe": "צימוקים בהירים 300 גר",
     "nameEn": "צימוקים בהירים 300 גר",
@@ -4316,19 +4277,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":500}]"
   },
   {
-    "id": "rl_7290017894164",
-    "nameHe": "קמח שקדים 250 גר",
-    "nameEn": "קמח שקדים 250 גר",
-    "category": "fats",
-    "caloriesPer100g": 636,
-    "proteinPer100g": 19,
-    "fatPer100g": 54,
-    "carbsPer100g": 17,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":250}]"
-  },
-  {
     "id": "rl_7290112193407",
     "nameHe": "מקלות מלוחים 200 גר",
     "nameEn": "מקלות מלוחים 200 גר",
@@ -4350,19 +4298,6 @@
     "proteinPer100g": 16,
     "fatPer100g": 15,
     "carbsPer100g": 6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":280}]"
-  },
-  {
-    "id": "rl_7290005996160",
-    "nameHe": "נקניקיות צוריסו 280 גר",
-    "nameEn": "נקניקיות צוריסו 280 גר",
-    "category": "protein",
-    "caloriesPer100g": 227,
-    "proteinPer100g": 16,
-    "fatPer100g": 17,
-    "carbsPer100g": 2,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":280}]"
@@ -4457,19 +4392,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":700}]"
-  },
-  {
-    "id": "rl_7290012313554",
-    "nameHe": "עלי גפן 400 גר",
-    "nameEn": "עלי גפן 400 גר",
-    "category": "snacks",
-    "caloriesPer100g": 129,
-    "proteinPer100g": 2.3,
-    "fatPer100g": 6.2,
-    "carbsPer100g": 16,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7622210464729",
@@ -4641,19 +4563,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":90}]"
   },
   {
-    "id": "rl_7290013906939",
-    "nameHe": "קורנביף 120 גר",
-    "nameEn": "קורנביף 120 גר",
-    "category": "protein",
-    "caloriesPer100g": 128,
-    "proteinPer100g": 17,
-    "fatPer100g": 4,
-    "carbsPer100g": 6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":120}]"
-  },
-  {
     "id": "rl_7290011499341",
     "nameHe": "גבינת קשקבל מחלבות גד 210 גרם",
     "nameEn": "גבינת קשקבל מחלבות גד 210 גרם",
@@ -4717,19 +4626,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":300}]"
-  },
-  {
-    "id": "rl_7290114310567",
-    "nameHe": "לאבנה עיזים 200 גר",
-    "nameEn": "לאבנה עיזים 200 גר",
-    "category": "snacks",
-    "caloriesPer100g": 97,
-    "proteinPer100g": 6.1,
-    "fatPer100g": 5,
-    "carbsPer100g": 6.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
     "id": "rl_7290011499723",
@@ -5694,14 +5590,14 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
-    "id": "rl_7290018893043",
+    "id": "rl_7290019170501",
     "nameHe": "ממרח אגוזי לוז 350 גר רמילוי",
     "nameEn": "ממרח אגוזי לוז 350 גר רמילוי",
     "category": "fats",
-    "caloriesPer100g": 547,
-    "proteinPer100g": 5.4,
-    "fatPer100g": 33,
-    "carbsPer100g": 0,
+    "caloriesPer100g": 575,
+    "proteinPer100g": 4.7,
+    "fatPer100g": 35.9,
+    "carbsPer100g": 58.1,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":350}]"
@@ -5876,17 +5772,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":475}]"
   },
   {
-    "id": "rl_7290119671298",
-    "nameHe": "עדשים אדומות 800 גר רמי לוי",
-    "nameEn": "עדשים אדומות 800 גר רמי לוי",
+    "id": "rl_7290015994132",
+    "nameHe": "עדשים אדומות רמי לוי 1 ק\"ג",
+    "nameEn": "עדשים אדומות רמי לוי 1 ק\"ג",
     "category": "traditional",
-    "caloriesPer100g": 352,
-    "proteinPer100g": 25,
-    "fatPer100g": 1,
-    "carbsPer100g": 0,
+    "caloriesPer100g": 350,
+    "proteinPer100g": 25.3,
+    "fatPer100g": 1.7,
+    "carbsPer100g": 58.4,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":800}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290119671496",
@@ -7813,19 +7709,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
-    "id": "rl_7290001567920",
-    "nameHe": "סלמי תה 200 גר",
-    "nameEn": "סלמי תה 200 גר",
-    "category": "snacks",
-    "caloriesPer100g": 215,
-    "proteinPer100g": 15,
-    "fatPer100g": 15,
-    "carbsPer100g": 5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
     "id": "rl_7290002775058",
     "nameHe": "עלי טורטייה 300 גר",
     "nameEn": "עלי טורטייה 300 גר",
@@ -7956,14 +7839,14 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":160}]"
   },
   {
-    "id": "rl_7290019035251",
+    "id": "rl_7290019035244",
     "nameHe": "מיקס פירות 600 גר",
     "nameEn": "מיקס פירות 600 גר",
     "category": "snacks",
-    "caloriesPer100g": 66,
+    "caloriesPer100g": 72,
     "proteinPer100g": 1,
-    "fatPer100g": 0,
-    "carbsPer100g": 14.8,
+    "fatPer100g": 0.14,
+    "carbsPer100g": 13.4,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
@@ -8918,19 +8801,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
-    "id": "rl_7290102302253",
-    "nameHe": "גאודה עיזים 200 גר",
-    "nameEn": "גאודה עיזים 200 גר",
-    "category": "protein",
-    "caloriesPer100g": 397,
-    "proteinPer100g": 24,
-    "fatPer100g": 34,
-    "carbsPer100g": 0.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
     "id": "rl_7290102302246",
     "nameHe": "גאודה מיילד 200 גר",
     "nameEn": "גאודה מיילד 200 גר",
@@ -8981,19 +8851,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":70}]"
-  },
-  {
-    "id": "rl_7290108501506",
-    "nameHe": "גבינת חלומי 200 גר",
-    "nameEn": "גבינת חלומי 200 גר",
-    "category": "dairy",
-    "caloriesPer100g": 336,
-    "proteinPer100g": 25,
-    "fatPer100g": 35,
-    "carbsPer100g": 1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
     "id": "rl_7290008350495",
@@ -9646,17 +9503,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":220}]"
   },
   {
-    "id": "rl_8997206332016",
-    "nameHe": "סוכר קוקוס אורגני 454 גר",
-    "nameEn": "סוכר קוקוס אורגני 454 גר",
+    "id": "rl_7290013521873",
+    "nameHe": "סוכר קוקוס אורגני 300 גר",
+    "nameEn": "סוכר קוקוס אורגני 300 גר",
     "category": "carbs",
-    "caloriesPer100g": 376,
-    "proteinPer100g": 0,
+    "caloriesPer100g": 389,
+    "proteinPer100g": 1,
     "fatPer100g": 0,
-    "carbsPer100g": 94,
+    "carbsPer100g": 95.5,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":454}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":300}]"
   },
   {
     "id": "rl_8032804432000",
@@ -9774,19 +9631,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":150}]"
-  },
-  {
-    "id": "rl_7290017389523",
-    "nameHe": "גרעיני חמנייה קלויים 200 גר",
-    "nameEn": "גרעיני חמנייה קלויים 200 גר",
-    "category": "snacks",
-    "caloriesPer100g": 246,
-    "proteinPer100g": 11.6,
-    "fatPer100g": 20,
-    "carbsPer100g": 4.8,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
     "id": "rl_7290017389592",
@@ -10450,19 +10294,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
-  },
-  {
-    "id": "rl_7290102398478",
-    "nameHe": "לאבנה 9% 500 גר",
-    "nameEn": "לאבנה 9% 500 גר",
-    "category": "snacks",
-    "caloriesPer100g": 145,
-    "proteinPer100g": 8.1,
-    "fatPer100g": 9,
-    "carbsPer100g": 8,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290106577688",
@@ -12298,19 +12129,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":320}]"
   },
   {
-    "id": "rl_7290113190146",
-    "nameHe": "מיקס פירות יבשים 800 גר",
-    "nameEn": "מיקס פירות יבשים 800 גר",
-    "category": "carbs",
-    "caloriesPer100g": 299,
-    "proteinPer100g": 1.8,
-    "fatPer100g": 0,
-    "carbsPer100g": 75.2,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":800}]"
-  },
-  {
     "id": "rl_7290111351075",
     "nameHe": "סוכריות גומי פירות 800 גר",
     "nameEn": "סוכריות גומי פירות 800 גר",
@@ -12413,19 +12231,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":500}]"
-  },
-  {
-    "id": "rl_7290112191083",
-    "nameHe": "טורטיה מקמח חיטה 320 גר",
-    "nameEn": "טורטיה מקמח חיטה 320 גר",
-    "category": "carbs",
-    "caloriesPer100g": 344,
-    "proteinPer100g": 10.6,
-    "fatPer100g": 8.2,
-    "carbsPer100g": 57,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290015804950",
@@ -12896,19 +12701,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":350}]"
   },
   {
-    "id": "rl_3760033620855",
-    "nameHe": "עלי בצק פילו 500 גר",
-    "nameEn": "עלי בצק פילו 500 גר",
-    "category": "carbs",
-    "caloriesPer100g": 279,
-    "proteinPer100g": 9,
-    "fatPer100g": 1.1,
-    "carbsPer100g": 60,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":500}]"
-  },
-  {
     "id": "rl_7290019790075",
     "nameHe": "לאבנה בקר 5% 250 גר",
     "nameEn": "לאבנה בקר 5% 250 גר",
@@ -13299,19 +13091,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":500}]"
   },
   {
-    "id": "rl_7290010546565",
-    "nameHe": "גרנולה שוקולד 400 גר",
-    "nameEn": "גרנולה שוקולד 400 גר",
-    "category": "carbs",
-    "caloriesPer100g": 444,
-    "proteinPer100g": 9,
-    "fatPer100g": 20,
-    "carbsPer100g": 52,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
-  },
-  {
     "id": "rl_7290110557010",
     "nameHe": "ממרח שומשום 225 גר",
     "nameEn": "ממרח שומשום 225 גר",
@@ -13388,19 +13167,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":320}]"
-  },
-  {
-    "id": "rl_7290019035220",
-    "nameHe": "מיקס פירות 600 גר",
-    "nameEn": "מיקס פירות 600 גר",
-    "category": "snacks",
-    "caloriesPer100g": 44,
-    "proteinPer100g": 0.87,
-    "fatPer100g": 0,
-    "carbsPer100g": 7.84,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290110555603",
@@ -13843,19 +13609,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":320}]"
-  },
-  {
-    "id": "rl_7290016609073",
-    "nameHe": "לקט לקוסקוס 800 גר רמילוי",
-    "nameEn": "לקט לקוסקוס 800 גר רמילוי",
-    "category": "carbs",
-    "caloriesPer100g": 40,
-    "proteinPer100g": 2.5,
-    "fatPer100g": 0.5,
-    "carbsPer100g": 5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":800}]"
   },
   {
     "id": "rl_7290016609134",
@@ -15067,19 +14820,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290010561773",
-    "nameHe": "פתיתים אפויים קוסקוס 250 גר",
-    "nameEn": "פתיתים אפויים קוסקוס 250 גר",
-    "category": "carbs",
-    "caloriesPer100g": 281,
-    "proteinPer100g": 5.7,
-    "fatPer100g": 1.7,
-    "carbsPer100g": 62,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":250}]"
-  },
-  {
     "id": "rl_96086000874",
     "nameHe": "פירורי מאפה לל\"ג 300 גר",
     "nameEn": "פירורי מאפה לל\"ג 300 גר",
@@ -15353,19 +15093,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290018566961",
-    "nameHe": "בננה ציפס 250 גר בקופסא",
-    "nameEn": "בננה ציפס 250 גר בקופסא",
-    "category": "fruits",
-    "caloriesPer100g": 441,
-    "proteinPer100g": 2.9,
-    "fatPer100g": 26.4,
-    "carbsPer100g": 47,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"קופסא\",\"nameEn\":\"Can\",\"unit\":\"grams\",\"grams\":250}]"
-  },
-  {
     "id": "rl_3760033620121",
     "nameHe": "שערות קדאיף למאפים 500 גר",
     "nameEn": "שערות קדאיף למאפים 500 גר",
@@ -15429,19 +15156,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":140}]"
-  },
-  {
-    "id": "rl_5901588018782",
-    "nameHe": "ואדל שוקולד חלב 80 גר",
-    "nameEn": "ואדל שוקולד חלב 80 גר",
-    "category": "dairy",
-    "caloriesPer100g": 554,
-    "proteinPer100g": 6.9,
-    "fatPer100g": 34,
-    "carbsPer100g": 55,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":80}]"
   },
   {
     "id": "rl_7290020215208",
@@ -15988,19 +15702,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
-    "id": "rl_7290004033125",
-    "nameHe": "שמיניות מזונות 4 בשקית 360 גר",
-    "nameEn": "שמיניות מזונות 4 בשקית 360 גר",
-    "category": "carbs",
-    "caloriesPer100g": 276,
-    "proteinPer100g": 8.3,
-    "fatPer100g": 3.3,
-    "carbsPer100g": 51.7,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290119670062",
@@ -17420,19 +17121,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":460}]"
   },
   {
-    "id": "rl_7290016408126",
-    "nameHe": "טרליני כעכים 225 גר",
-    "nameEn": "טרליני כעכים 225 גר",
-    "category": "carbs",
-    "caloriesPer100g": 480,
-    "proteinPer100g": 8.1,
-    "fatPer100g": 19.2,
-    "carbsPer100g": 67.7,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":225}]"
-  },
-  {
     "id": "rl_8000380156009",
     "nameHe": "דולומיטים חלב 150 גר",
     "nameEn": "דולומיטים חלב 150 גר",
@@ -17706,17 +17394,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":500}]"
   },
   {
-    "id": "rl_7290112194527",
-    "nameHe": "טורטיה חיטה 560 גר רמי לוי",
-    "nameEn": "טורטיה חיטה 560 גר רמי לוי",
-    "category": "snacks",
-    "caloriesPer100g": 336,
-    "proteinPer100g": 11.8,
-    "fatPer100g": 9.3,
-    "carbsPer100g": 0,
+    "id": "rl_7290112194503",
+    "nameHe": "טורטיה חיטה 320 גר רמי לוי",
+    "nameEn": "טורטיה חיטה 320 גר רמי לוי",
+    "category": "carbs",
+    "caloriesPer100g": 353,
+    "proteinPer100g": 9.1,
+    "fatPer100g": 10,
+    "carbsPer100g": 54.3,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":560}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290017031286",
@@ -18460,19 +18148,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":140}]"
   },
   {
-    "id": "rl_7290002603481",
-    "nameHe": "פיצת השף מאיטליה שגב 220 גר",
-    "nameEn": "פיצת השף מאיטליה שגב 220 גר",
-    "category": "snacks",
-    "caloriesPer100g": 238,
-    "proteinPer100g": 9.8,
-    "fatPer100g": 7.6,
-    "carbsPer100g": 32.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":220}]"
-  },
-  {
     "id": "rl_7290015858212",
     "nameHe": "עללחם ממרח לימון כבוש 180 גר",
     "nameEn": "עללחם ממרח לימון כבוש 180 גר",
@@ -18484,19 +18159,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":180}]"
-  },
-  {
-    "id": "rl_7290112194503",
-    "nameHe": "טורטיה חיטה 320 גר רמי לוי",
-    "nameEn": "טורטיה חיטה 320 גר רמי לוי",
-    "category": "carbs",
-    "caloriesPer100g": 353,
-    "proteinPer100g": 9.1,
-    "fatPer100g": 10,
-    "carbsPer100g": 54.3,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290005996276",
@@ -18830,19 +18492,6 @@
     "category": "dairy",
     "caloriesPer100g": 103,
     "proteinPer100g": 11,
-    "fatPer100g": 5,
-    "carbsPer100g": 3.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
-    "id": "rl_7290012645181",
-    "nameHe": "לאבנה עיזים 5% 200 גר",
-    "nameEn": "לאבנה עיזים 5% 200 גר",
-    "category": "snacks",
-    "caloriesPer100g": 95,
-    "proteinPer100g": 9,
     "fatPer100g": 5,
     "carbsPer100g": 3.5,
     "fiberPer100g": 0,
@@ -19279,32 +18928,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":90}]"
   },
   {
-    "id": "rl_7290017031262",
-    "nameHe": "חטיף דגנים ואורז לל\"ג 140 גר",
-    "nameEn": "חטיף דגנים ואורז לל\"ג 140 גר",
-    "category": "protein",
-    "caloriesPer100g": 398,
-    "proteinPer100g": 10.4,
-    "fatPer100g": 19.6,
-    "carbsPer100g": 43.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290017031279",
-    "nameHe": "חטיף דגנים ואורז לל\"ג 140 גר",
-    "nameEn": "חטיף דגנים ואורז לל\"ג 140 גר",
-    "category": "protein",
-    "caloriesPer100g": 416,
-    "proteinPer100g": 9.7,
-    "fatPer100g": 14.7,
-    "carbsPer100g": 57.8,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_8000215202413",
     "nameHe": "מעדן אורז אורגני וניל 400 גר",
     "nameEn": "מעדן אורז אורגני וניל 400 גר",
@@ -19563,19 +19186,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":500}]"
-  },
-  {
-    "id": "rl_8410076620361",
-    "nameHe": "חטיף ממולא נאט קרים 152 גר",
-    "nameEn": "חטיף ממולא נאט קרים 152 גר",
-    "category": "fats",
-    "caloriesPer100g": 495,
-    "proteinPer100g": 8,
-    "fatPer100g": 25.2,
-    "carbsPer100g": 56,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":152}]"
   },
   {
     "id": "rl_7290002345183",
@@ -20254,19 +19864,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":165}]"
   },
   {
-    "id": "rl_7290019170501",
-    "nameHe": "ממרח אגוזי לוז 350 גר רמילוי",
-    "nameEn": "ממרח אגוזי לוז 350 גר רמילוי",
-    "category": "fats",
-    "caloriesPer100g": 575,
-    "proteinPer100g": 4.7,
-    "fatPer100g": 35.9,
-    "carbsPer100g": 58.1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":350}]"
-  },
-  {
     "id": "rl_25675301092",
     "nameHe": "פשקז חמצוצים מקלות צבעוני מיקס 50 גר",
     "nameEn": "פשקז חמצוצים מקלות צבעוני מיקס 50 גר",
@@ -20475,14 +20072,14 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":382}]"
   },
   {
-    "id": "rl_7290016609004",
-    "nameHe": "גזר גמדי 800 גר רמילוי",
-    "nameEn": "גזר גמדי 800 גר רמילוי",
+    "id": "rl_7290018564004",
+    "nameHe": "גזר גמדי רמילוי 800 גר",
+    "nameEn": "גזר גמדי רמילוי 800 גר",
     "category": "vegetables",
-    "caloriesPer100g": 23,
-    "proteinPer100g": 1,
-    "fatPer100g": 0,
-    "carbsPer100g": 3.8,
+    "caloriesPer100g": 35,
+    "proteinPer100g": 0.6,
+    "fatPer100g": 0.2,
+    "carbsPer100g": 6.1,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":800}]"
@@ -20603,19 +20200,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":170}]"
-  },
-  {
-    "id": "rl_7290018564004",
-    "nameHe": "גזר גמדי רמילוי 800 גר",
-    "nameEn": "גזר גמדי רמילוי 800 גר",
-    "category": "vegetables",
-    "caloriesPer100g": 35,
-    "proteinPer100g": 0.6,
-    "fatPer100g": 0.2,
-    "carbsPer100g": 6.1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":800}]"
   },
   {
     "id": "rl_7290112359711",
@@ -20891,32 +20475,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
-    "id": "rl_7290112192295",
-    "nameHe": "עוגיות סנדויץ ללא גלוטן 200 גר",
-    "nameEn": "עוגיות סנדויץ ללא גלוטן 200 גר",
-    "category": "carbs",
-    "caloriesPer100g": 426,
-    "proteinPer100g": 3.3,
-    "fatPer100g": 17.3,
-    "carbsPer100g": 63.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
-    "id": "rl_7290017031255",
-    "nameHe": "חטיף דגנים ואורז לל\"ג 140 גר",
-    "nameEn": "חטיף דגנים ואורז לל\"ג 140 גר",
-    "category": "protein",
-    "caloriesPer100g": 419,
-    "proteinPer100g": 8.1,
-    "fatPer100g": 14.1,
-    "carbsPer100g": 62.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290004685232",
     "nameHe": "לחם שיפון ללא שמרים 750 גר",
     "nameEn": "לחם שיפון ללא שמרים 750 גר",
@@ -21006,19 +20564,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":105}]"
-  },
-  {
-    "id": "rl_7290002603474",
-    "nameHe": "פיצת השף מאיטליה שגב 220 גר",
-    "nameEn": "פיצת השף מאיטליה שגב 220 גר",
-    "category": "snacks",
-    "caloriesPer100g": 270,
-    "proteinPer100g": 9.8,
-    "fatPer100g": 10.2,
-    "carbsPer100g": 33.8,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":220}]"
   },
   {
     "id": "rl_7290017390512",
@@ -21565,19 +21110,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":260}]"
-  },
-  {
-    "id": "rl_7290002603504",
-    "nameHe": "פיצת השף מאיטליה שגב 220 גר",
-    "nameEn": "פיצת השף מאיטליה שגב 220 גר",
-    "category": "snacks",
-    "caloriesPer100g": 215,
-    "proteinPer100g": 8,
-    "fatPer100g": 4.9,
-    "carbsPer100g": 33.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":220}]"
   },
   {
     "id": "rl_7290018564103",
@@ -23099,19 +22631,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290101551263",
-    "nameHe": "סילאן טבעי 700 גר",
-    "nameEn": "סילאן טבעי 700 גר",
-    "category": "carbs",
-    "caloriesPer100g": 304,
-    "proteinPer100g": 0,
-    "fatPer100g": 0,
-    "carbsPer100g": 76,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":700}]"
   },
   {
     "id": "rl_7290115202212",
@@ -24687,17 +24206,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
-    "id": "rl_7290108501834",
+    "id": "rl_7290108507713",
     "nameHe": "מאפה יווני במילוי קרם וניל 400 גר",
     "nameEn": "מאפה יווני במילוי קרם וניל 400 גר",
-    "category": "snacks",
-    "caloriesPer100g": 274,
-    "proteinPer100g": 7,
-    "fatPer100g": 0,
-    "carbsPer100g": 23.3,
+    "category": "carbs",
+    "caloriesPer100g": 286,
+    "proteinPer100g": 4.1,
+    "fatPer100g": 11.7,
+    "carbsPer100g": 41.2,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":450}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
     "id": "rl_7290107948012",
@@ -25688,19 +25207,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":600}]"
   },
   {
-    "id": "rl_7290019205067",
-    "nameHe": "מארז פסטרמה ברביקיו+מעושנת 350 גר",
-    "nameEn": "מארז פסטרמה ברביקיו+מעושנת 350 גר",
-    "category": "snacks",
-    "caloriesPer100g": 262,
-    "proteinPer100g": 14,
-    "fatPer100g": 21,
-    "carbsPer100g": 4,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":700}]"
-  },
-  {
     "id": "rl_7290019939436",
     "nameHe": "שוקולד ציפס מריר 48% 200 גר",
     "nameEn": "שוקולד ציפס מריר 48% 200 גר",
@@ -26375,19 +25881,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":65}]"
-  },
-  {
-    "id": "rl_7290018724026",
-    "nameHe": "תערובת להכנת פנקייק ללא גלוטן 300 גר",
-    "nameEn": "תערובת להכנת פנקייק ללא גלוטן 300 גר",
-    "category": "carbs",
-    "caloriesPer100g": 353,
-    "proteinPer100g": 2.6,
-    "fatPer100g": 1.08,
-    "carbsPer100g": 82,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":300}]"
   },
   {
     "id": "rl_7290017907277",
@@ -28119,19 +27612,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":250}]"
   },
   {
-    "id": "rl_7290122780338",
-    "nameHe": "טחינה אמיתית 225 גר",
-    "nameEn": "טחינה אמיתית 225 גר",
-    "category": "fats",
-    "caloriesPer100g": 287,
-    "proteinPer100g": 8.7,
-    "fatPer100g": 24.5,
-    "carbsPer100g": 8,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":225}]"
-  },
-  {
     "id": "rl_7290122781724",
     "nameHe": "במבה פירמידות 70 גר",
     "nameEn": "במבה פירמידות 70 גר",
@@ -29354,19 +28834,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290108507713",
-    "nameHe": "מאפה יווני במילוי קרם וניל 400 גר",
-    "nameEn": "מאפה יווני במילוי קרם וניל 400 גר",
-    "category": "carbs",
-    "caloriesPer100g": 286,
-    "proteinPer100g": 4.1,
-    "fatPer100g": 11.7,
-    "carbsPer100g": 41.2,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":400}]"
-  },
-  {
     "id": "rl_7290114603607",
     "nameHe": "פוף פליי טעם חמוץ חריף 40 גר",
     "nameEn": "פוף פליי טעם חמוץ חריף 40 גר",
@@ -29820,19 +29287,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":116}]"
-  },
-  {
-    "id": "rl_4000417328205",
-    "nameHe": "חטיפי שוקולד מיני ריטר 160 גר",
-    "nameEn": "חטיפי שוקולד מיני ריטר 160 גר",
-    "category": "fats",
-    "caloriesPer100g": 537,
-    "proteinPer100g": 7.1,
-    "fatPer100g": 31,
-    "carbsPer100g": 55,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":150}]"
   },
   {
     "id": "rl_7290112194909",
@@ -31031,19 +30485,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":310}]"
   },
   {
-    "id": "rl_7290003144921",
-    "nameHe": "עוגת שכבות עם ליקר 400 גר",
-    "nameEn": "עוגת שכבות עם ליקר 400 גר",
-    "category": "carbs",
-    "caloriesPer100g": 385,
-    "proteinPer100g": 4.7,
-    "fatPer100g": 17.2,
-    "carbsPer100g": 51.9,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
-  },
-  {
     "id": "rl_7290016733341",
     "nameHe": "פסטה פרפרלה 500 גר רמי לוי",
     "nameEn": "פסטה פרפרלה 500 גר רמי לוי",
@@ -31980,32 +31421,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":55}]"
   },
   {
-    "id": "rl_7290017129495",
-    "nameHe": "אגו מיקס כדורי תירס מצופים 55 גר",
-    "nameEn": "אגו מיקס כדורי תירס מצופים 55 גר",
-    "category": "fats",
-    "caloriesPer100g": 517,
-    "proteinPer100g": 6.4,
-    "fatPer100g": 28.1,
-    "carbsPer100g": 59.7,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":55}]"
-  },
-  {
-    "id": "rl_7290017129518",
-    "nameHe": "אגו מיקס כדורי תירס מצופים 55 גר",
-    "nameEn": "אגו מיקס כדורי תירס מצופים 55 גר",
-    "category": "fats",
-    "caloriesPer100g": 542,
-    "proteinPer100g": 5.5,
-    "fatPer100g": 31.7,
-    "carbsPer100g": 58.7,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":55}]"
-  },
-  {
     "id": "rl_7290017928432",
     "nameHe": "מאיר בייגל גריסיני קראנץ פרג 175 גר",
     "nameEn": "מאיר בייגל גריסיני קראנץ פרג 175 גר",
@@ -32656,19 +32071,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
-    "id": "rl_7290018333815",
-    "nameHe": "גו אצבעות וופל מצופה שוקולד רמילוי 130 גרם",
-    "nameEn": "גו אצבעות וופל מצופה שוקולד רמילוי 130 גרם",
-    "category": "fats",
-    "caloriesPer100g": 524,
-    "proteinPer100g": 6.2,
-    "fatPer100g": 27.4,
-    "carbsPer100g": 63.1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":130}]"
-  },
-  {
     "id": "rl_8410376064445",
     "nameHe": "גולון ללא סוכר פיינס שוקולד אוונה 150 גר",
     "nameEn": "גולון ללא סוכר פיינס שוקולד אוונה 150 גר",
@@ -32784,19 +32186,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":430}]"
-  },
-  {
-    "id": "rl_7290002043294",
-    "nameHe": "אקסטרה ציפס טקסס ברביקיו 25 גר",
-    "nameEn": "אקסטרה ציפס טקסס ברביקיו 25 גר",
-    "category": "carbs",
-    "caloriesPer100g": 496,
-    "proteinPer100g": 7.8,
-    "fatPer100g": 23,
-    "carbsPer100g": 64,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":25}]"
   },
   {
     "id": "rl_7290002043348",
@@ -33709,19 +33098,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":130}]"
   },
   {
-    "id": "rl_7290116530321",
-    "nameHe": "קליק שקית כריות בלאק לבן 65 גר",
-    "nameEn": "קליק שקית כריות בלאק לבן 65 גר",
-    "category": "fats",
-    "caloriesPer100g": 529,
-    "proteinPer100g": 6.2,
-    "fatPer100g": 28.4,
-    "carbsPer100g": 62.1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":65}]"
-  },
-  {
     "id": "rl_7290111357268",
     "nameHe": "מארז מיני ריטר ספורט זהב 155 גר",
     "nameEn": "מארז מיני ריטר ספורט זהב 155 גר",
@@ -33808,19 +33184,6 @@
     "proteinPer100g": 6.4,
     "fatPer100g": 33.4,
     "carbsPer100g": 54.7,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290018878088",
-    "nameHe": "שלשות שוקולד לל\"תס חלב 85 גר",
-    "nameEn": "שלשות שוקולד לל\"תס חלב 85 גר",
-    "category": "dairy",
-    "caloriesPer100g": 438,
-    "proteinPer100g": 5.1,
-    "fatPer100g": 30.9,
-    "carbsPer100g": 51.3,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
@@ -34242,19 +33605,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":70}]"
   },
   {
-    "id": "rl_7290112340221",
-    "nameHe": "גרעיני תירס מתוק 340 גר",
-    "nameEn": "גרעיני תירס מתוק 340 גר",
-    "category": "snacks",
-    "caloriesPer100g": 64,
-    "proteinPer100g": 2.4,
-    "fatPer100g": 0.9,
-    "carbsPer100g": 10,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":340}]"
-  },
-  {
     "id": "rl_7290109358567",
     "nameHe": "אסם ספגטי פלוס 400 גר",
     "nameEn": "אסם ספגטי פלוס 400 גר",
@@ -34526,19 +33876,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":60}]"
-  },
-  {
-    "id": "rl_7290019939849",
-    "nameHe": "קוביות אפיפית ללא גלוטן 200 גר קוביס",
-    "nameEn": "קוביות אפיפית ללא גלוטן 200 גר קוביס",
-    "category": "fats",
-    "caloriesPer100g": 555,
-    "proteinPer100g": 1.6,
-    "fatPer100g": 32.5,
-    "carbsPer100g": 64.4,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
     "id": "rl_7290116531564",
@@ -35659,19 +34996,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290018893241",
-    "nameHe": "ממרח אגוזי לוז 750 גר רמילוי",
-    "nameEn": "ממרח אגוזי לוז 750 גר רמילוי",
-    "category": "fats",
-    "caloriesPer100g": 547,
-    "proteinPer100g": 5.4,
-    "fatPer100g": 33,
-    "carbsPer100g": 56,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":750}]"
-  },
-  {
     "id": "rl_7290116535548",
     "nameHe": "שוגי שייק מרשמלו ותות 400 גר",
     "nameEn": "שוגי שייק מרשמלו ותות 400 גר",
@@ -35841,19 +35165,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
-    "id": "rl_7290012228629",
-    "nameHe": "נקניקיות עוף קהילות 800 גר",
-    "nameEn": "נקניקיות עוף קהילות 800 גר",
-    "category": "protein",
-    "caloriesPer100g": 204,
-    "proteinPer100g": 10,
-    "fatPer100g": 16,
-    "carbsPer100g": 5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":800}]"
-  },
-  {
     "id": "rl_8001060033191",
     "nameHe": "רוטב פסטו בזיליקום 190 גר",
     "nameEn": "רוטב פסטו בזיליקום 190 גר",
@@ -35956,19 +35267,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":400}]"
-  },
-  {
-    "id": "rl_7290115206708",
-    "nameHe": "במבה נוגט 130 גר",
-    "nameEn": "במבה נוגט 130 גר",
-    "category": "fats",
-    "caloriesPer100g": 520,
-    "proteinPer100g": 10.3,
-    "fatPer100g": 26.5,
-    "carbsPer100g": 60,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":130}]"
   },
   {
     "id": "rl_7290112343512",
@@ -37986,19 +37284,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":97}]"
   },
   {
-    "id": "rl_1230000116022",
-    "nameHe": "המבורגר ביונד מיט 2* 113 גר",
-    "nameEn": "המבורגר ביונד מיט 2* 113 גר",
-    "category": "protein",
-    "caloriesPer100g": 196,
-    "proteinPer100g": 16,
-    "fatPer100g": 12,
-    "carbsPer100g": 5.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":226}]"
-  },
-  {
     "id": "rl_7290114312516",
     "nameHe": "יוגורט מולר פרופ מוקצף פאי לימון 95 גר",
     "nameEn": "יוגורט מולר פרופ מוקצף פאי לימון 95 גר",
@@ -38049,19 +37334,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
-    "id": "rl_7290114310338",
-    "nameHe": "צפתית מעודנת 5% 225גר",
-    "nameEn": "צפתית מעודנת 5% 225גר",
-    "category": "snacks",
-    "caloriesPer100g": 111,
-    "proteinPer100g": 11.5,
-    "fatPer100g": 5,
-    "carbsPer100g": 4.9,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":225}]"
   },
   {
     "id": "rl_7290112969286",
@@ -38244,19 +37516,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
-    "id": "rl_7290003140237",
-    "nameHe": "ליימן-שליסל בע\"מ",
-    "nameEn": "ליימן-שליסל בע\"מ",
-    "category": "carbs",
-    "caloriesPer100g": 319,
-    "proteinPer100g": 0,
-    "fatPer100g": 0,
-    "carbsPer100g": 79,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":360}]"
   },
   {
     "id": "rl_7290004068172",
@@ -45266,19 +44525,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":225}]"
   },
   {
-    "id": "rl_7290003353941",
-    "nameHe": "בצק עוגיות 680 ג",
-    "nameEn": "בצק עוגיות 680 ג",
-    "category": "carbs",
-    "caloriesPer100g": 465,
-    "proteinPer100g": 4.9,
-    "fatPer100g": 24.5,
-    "carbsPer100g": 55,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":680}]"
-  },
-  {
     "id": "rl_7290015652292",
     "nameHe": "קבוקים עם שומשום 400גר",
     "nameEn": "קבוקים עם שומשום 400גר",
@@ -46410,19 +45656,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
-    "id": "rl_7290014435889",
-    "nameHe": "סלט הרינג עם מיונז 180גר",
-    "nameEn": "סלט הרינג עם מיונז 180גר",
-    "category": "snacks",
-    "caloriesPer100g": 272,
-    "proteinPer100g": 5.6,
-    "fatPer100g": 24.1,
-    "carbsPer100g": 8.1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
     "id": "rl_8008343201179",
     "nameHe": "פסטו ארטישוק עם גבינה גראנה",
     "nameEn": "פסטו ארטישוק עם גבינה גראנה",
@@ -47515,19 +46748,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":43}]"
   },
   {
-    "id": "rl_7290117260289",
-    "nameHe": "פיצה מרגריטה עם זיתים 125 גרם",
-    "nameEn": "פיצה מרגריטה עם זיתים 125 גרם",
-    "category": "fats",
-    "caloriesPer100g": 254,
-    "proteinPer100g": 8.8,
-    "fatPer100g": 12,
-    "carbsPer100g": 33,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":125}]"
-  },
-  {
     "id": "rl_7290117260296",
     "nameHe": "פיצה מרגריטה עם פטריות 130 גרם",
     "nameEn": "פיצה מרגריטה עם פטריות 130 גרם",
@@ -47970,19 +47190,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":180}]"
   },
   {
-    "id": "rl_7622201801809",
-    "nameHe": "שוקולד חלב מילקה עם אגוזים 100 גרם",
-    "nameEn": "שוקולד חלב מילקה עם אגוזים 100 גרם",
-    "category": "dairy",
-    "caloriesPer100g": 552,
-    "proteinPer100g": 7.2,
-    "fatPer100g": 34,
-    "carbsPer100g": 52,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290012803796",
     "nameHe": "טוסו שוקולד חלב עם אגוזים 100גרם",
     "nameEn": "טוסו שוקולד חלב עם אגוזים 100גרם",
@@ -48332,19 +47539,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":140}]"
-  },
-  {
-    "id": "rl_7290002775775",
-    "nameHe": "עוגת טורט ריבת חלב עם קוקוס 1קג",
-    "nameEn": "עוגת טורט ריבת חלב עם קוקוס 1קג",
-    "category": "dairy",
-    "caloriesPer100g": 303,
-    "proteinPer100g": 4.5,
-    "fatPer100g": 13.4,
-    "carbsPer100g": 41.1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290000305882",
@@ -52416,19 +51610,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":750}]"
   },
   {
-    "id": "rl_7290112354211",
-    "nameHe": "פיצה מרגריטה 400גרם",
-    "nameEn": "פיצה מרגריטה 400גרם",
-    "category": "snacks",
-    "caloriesPer100g": 240,
-    "proteinPer100g": 10.4,
-    "fatPer100g": 7.3,
-    "carbsPer100g": 32,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
-  },
-  {
     "id": "rl_7290003726752",
     "nameHe": "קציצות טופו ברוקולי זוקיני ואפונה",
     "nameEn": "קציצות טופו ברוקולי זוקיני ואפונה",
@@ -52489,19 +51670,6 @@
     "proteinPer100g": 6.5,
     "fatPer100g": 10,
     "carbsPer100g": 3.4,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":150}]"
-  },
-  {
-    "id": "rl_7290108507355",
-    "nameHe": "יאסו יוגורט יווני טעם טבעי רמילוי",
-    "nameEn": "יאסו יוגורט יווני טעם טבעי רמילוי",
-    "category": "dairy",
-    "caloriesPer100g": 71,
-    "proteinPer100g": 8.3,
-    "fatPer100g": 0,
-    "carbsPer100g": 4.3,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":150}]"
@@ -52658,32 +51826,6 @@
     "proteinPer100g": 9,
     "fatPer100g": 13.1,
     "carbsPer100g": 54.3,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290015339629",
-    "nameHe": "שוקולד חלב שברי אגוזים",
-    "nameEn": "שוקולד חלב שברי אגוזים",
-    "category": "dairy",
-    "caloriesPer100g": 582,
-    "proteinPer100g": 7.9,
-    "fatPer100g": 41,
-    "carbsPer100g": 45,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290016106213",
-    "nameHe": "שוקולד מריר שברי אגוזים",
-    "nameEn": "שוקולד מריר שברי אגוזים",
-    "category": "fats",
-    "caloriesPer100g": 554,
-    "proteinPer100g": 7,
-    "fatPer100g": 38,
-    "carbsPer100g": 42,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
@@ -56199,19 +55341,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"ml\",\"grams\":1000}]"
   },
   {
-    "id": "rl_7290117382899",
-    "nameHe": "מאסטר שף ממרח עגבניות מיובשות 190 גרם",
-    "nameEn": "מאסטר שף ממרח עגבניות מיובשות 190 גרם",
-    "category": "vegetables",
-    "caloriesPer100g": 264,
-    "proteinPer100g": 2.6,
-    "fatPer100g": 24.2,
-    "carbsPer100g": 6.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":190}]"
-  },
-  {
     "id": "rl_7290117382882",
     "nameHe": "מאסטר שף ממרח פסטו ירוק 190 גרם",
     "nameEn": "מאסטר שף ממרח פסטו ירוק 190 גרם",
@@ -56353,19 +55482,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":60}]"
-  },
-  {
-    "id": "rl_7290118421412",
-    "nameHe": "במבה במילוי קרם במבה מתוקה 150 גרם",
-    "nameEn": "במבה במילוי קרם במבה מתוקה 150 גרם",
-    "category": "fats",
-    "caloriesPer100g": 527,
-    "proteinPer100g": 0,
-    "fatPer100g": 28,
-    "carbsPer100g": 60,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":150}]"
   },
   {
     "id": "rl_7290107649780",
@@ -57070,19 +56186,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":160}]"
   },
   {
-    "id": "rl_7290015835763",
-    "nameHe": "שיבולת שועל עבה רמי לוי 500 גרם",
-    "nameEn": "שיבולת שועל עבה רמי לוי 500 גרם",
-    "category": "carbs",
-    "caloriesPer100g": 370,
-    "proteinPer100g": 12.1,
-    "fatPer100g": 8.4,
-    "carbsPer100g": 56.1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":500}]"
-  },
-  {
     "id": "rl_7290015681247",
     "nameHe": "פילה עוף אמיתי בציפוי שומשום רמי לוי 700 גרם",
     "nameEn": "פילה עוף אמיתי בציפוי שומשום רמי לוי 700 גרם",
@@ -57499,19 +56602,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":55}]"
   },
   {
-    "id": "rl_7290000319131",
-    "nameHe": "נקניקיות עוף יחיעם 400 גרם",
-    "nameEn": "נקניקיות עוף יחיעם 400 גרם",
-    "category": "protein",
-    "caloriesPer100g": 210,
-    "proteinPer100g": 13,
-    "fatPer100g": 14,
-    "carbsPer100g": 8,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
-  },
-  {
     "id": "rl_7290000552989",
     "nameHe": "בשר טחון טיבון ויל 500 גרם",
     "nameEn": "בשר טחון טיבון ויל 500 גרם",
@@ -57731,19 +56821,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":310}]"
-  },
-  {
-    "id": "rl_7290002715504",
-    "nameHe": "ארוחת נודלס בטעם עוף מג'יק 70 גרם",
-    "nameEn": "ארוחת נודלס בטעם עוף מג'יק 70 גרם",
-    "category": "protein",
-    "caloriesPer100g": 413,
-    "proteinPer100g": 9.2,
-    "fatPer100g": 17.3,
-    "carbsPer100g": 55,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":70}]"
   },
   {
     "id": "rl_7290000150765",
@@ -58227,19 +57304,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290005996351",
-    "nameHe": "נקניקיות עוף 450גר קהילות",
-    "nameEn": "נקניקיות עוף 450גר קהילות",
-    "category": "protein",
-    "caloriesPer100g": 207,
-    "proteinPer100g": 13,
-    "fatPer100g": 15,
-    "carbsPer100g": 5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":450}]"
-  },
-  {
     "id": "rl_7290000663104",
     "nameHe": "שווארמה פרגית",
     "nameEn": "שווארמה פרגית",
@@ -58292,19 +57356,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":700}]"
   },
   {
-    "id": "rl_7290018507216",
-    "nameHe": "נתחי חזה עוף בציפוי מיוחד 700גר",
-    "nameEn": "נתחי חזה עוף בציפוי מיוחד 700גר",
-    "category": "protein",
-    "caloriesPer100g": 218,
-    "proteinPer100g": 16,
-    "fatPer100g": 10,
-    "carbsPer100g": 16,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":700}]"
-  },
-  {
     "id": "rl_7290013675958",
     "nameHe": "רצועות שומשום מאמא עוף 500 גרם",
     "nameEn": "רצועות שומשום מאמא עוף 500 גרם",
@@ -58316,19 +57367,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":500}]"
-  },
-  {
-    "id": "rl_7290100704448",
-    "nameHe": "סוגת תבשיל נודלס אישי טעם עוף",
-    "nameEn": "סוגת תבשיל נודלס אישי טעם עוף",
-    "category": "protein",
-    "caloriesPer100g": 424,
-    "proteinPer100g": 11,
-    "fatPer100g": 20,
-    "carbsPer100g": 50,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":65}]"
   },
   {
     "id": "rl_7290012228780",
@@ -58903,19 +57941,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":340}]"
   },
   {
-    "id": "rl_7290119672561",
-    "nameHe": "שיבולת שועל עבה 1 ק\"ג רמי לוי",
-    "nameEn": "שיבולת שועל עבה 1 ק\"ג רמי לוי",
-    "category": "carbs",
-    "caloriesPer100g": 360,
-    "proteinPer100g": 0,
-    "fatPer100g": 6.37,
-    "carbsPer100g": 56.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290121228671",
     "nameHe": "עלי גפן ממולאים באורז 400 גרם רמי לוי wb",
     "nameEn": "עלי גפן ממולאים באורז 400 גרם רמי לוי wb",
@@ -58953,19 +57978,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290013906694",
-    "nameHe": "נקניקיות עוף 1.5 ק\"ג",
-    "nameEn": "נקניקיות עוף 1.5 ק\"ג",
-    "category": "protein",
-    "caloriesPer100g": 252,
-    "proteinPer100g": 10,
-    "fatPer100g": 20,
-    "carbsPer100g": 8,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":1500}]"
   },
   {
     "id": "rl_7290018507438",
@@ -59878,32 +58890,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":500}]"
   },
   {
-    "id": "rl_7290002319085",
-    "nameHe": "פירורי לחם 200 גרם",
-    "nameEn": "פירורי לחם 200 גרם",
-    "category": "carbs",
-    "caloriesPer100g": 386,
-    "proteinPer100g": 11,
-    "fatPer100g": 1.5,
-    "carbsPer100g": 82,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
-    "id": "rl_7290005684418",
-    "nameHe": "לחם כוסמין מלא 700 גרם",
-    "nameEn": "לחם כוסמין מלא 700 גרם",
-    "category": "carbs",
-    "caloriesPer100g": 228,
-    "proteinPer100g": 9.29,
-    "fatPer100g": 1.49,
-    "carbsPer100g": 47.2,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":700}]"
-  },
-  {
     "id": "rl_7290015347259",
     "nameHe": "פרורי לחם מוזהבים 400גר",
     "nameEn": "פרורי לחם מוזהבים 400גר",
@@ -59954,19 +58940,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":750}]"
-  },
-  {
-    "id": "rl_7290006582621",
-    "nameHe": "פירורי לחם מוזהבים 300 גרם",
-    "nameEn": "פירורי לחם מוזהבים 300 גרם",
-    "category": "carbs",
-    "caloriesPer100g": 347,
-    "proteinPer100g": 12.1,
-    "fatPer100g": 1.2,
-    "carbsPer100g": 72,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":300}]"
   },
   {
     "id": "rl_7290002079996",
@@ -60029,19 +59002,6 @@
     "proteinPer100g": 10.1,
     "fatPer100g": 1.9,
     "carbsPer100g": 38.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":750}]"
-  },
-  {
-    "id": "rl_7290006322838",
-    "nameHe": "לחם מקמח מלא 750 גרם",
-    "nameEn": "לחם מקמח מלא 750 גרם",
-    "category": "carbs",
-    "caloriesPer100g": 236,
-    "proteinPer100g": 12.81,
-    "fatPer100g": 3.1,
-    "carbsPer100g": 34.9,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":750}]"
@@ -60370,19 +59330,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290016277739",
-    "nameHe": "פירורי לחם מוזהבים 800 גרם",
-    "nameEn": "פירורי לחם מוזהבים 800 גרם",
-    "category": "carbs",
-    "caloriesPer100g": 384,
-    "proteinPer100g": 10.2,
-    "fatPer100g": 2.9,
-    "carbsPer100g": 79.2,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":800}]"
   },
   {
     "id": "rl_7290000497532",
@@ -60786,19 +59733,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
-    "id": "rl_7290015835237",
-    "nameHe": "פרורי לחם מוזהבים רמי לוי 400 גרם",
-    "nameEn": "פרורי לחם מוזהבים רמי לוי 400 גרם",
-    "category": "carbs",
-    "caloriesPer100g": 370,
-    "proteinPer100g": 10.8,
-    "fatPer100g": 1.1,
-    "carbsPer100g": 77.8,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
     "id": "rl_5410769100081",
@@ -62907,19 +61841,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_50000018741",
-    "nameHe": "פריסקיז דגים 2.85 ק\"ג",
-    "nameEn": "פריסקיז דגים 2.85 ק\"ג",
-    "category": "protein",
-    "caloriesPer100g": 3581,
-    "proteinPer100g": 30,
-    "fatPer100g": 11,
-    "carbsPer100g": 0,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290001247006",
     "nameHe": "קולה קריסטל 2 ליטר",
     "nameEn": "קולה קריסטל 2 ליטר",
@@ -62970,19 +61891,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290000062709",
-    "nameHe": "לחמית שיפון אסם 920 גרם",
-    "nameEn": "לחמית שיפון אסם 920 גרם",
-    "category": "carbs",
-    "caloriesPer100g": 406,
-    "proteinPer100g": 12.5,
-    "fatPer100g": 8.1,
-    "carbsPer100g": 66.3,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":920}]"
   },
   {
     "id": "rl_7290011570507",
@@ -66326,19 +65234,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290116533339",
-    "nameHe": "מאגדת חטיפי שוגי אקסטרה שוקולד לבן",
-    "nameEn": "מאגדת חטיפי שוגי אקסטרה שוקולד לבן",
-    "category": "carbs",
-    "caloriesPer100g": 512,
-    "proteinPer100g": 5.2,
-    "fatPer100g": 21.1,
-    "carbsPer100g": 75.3,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290119049202",
     "nameHe": "פונץ שחור ציפוי לבן זגיזג חום כשלפ",
     "nameEn": "פונץ שחור ציפוי לבן זגיזג חום כשלפ",
@@ -66636,19 +65531,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":300}]"
-  },
-  {
-    "id": "rl_7290110550219",
-    "nameHe": "מטבעות שוקולד לבן לאפיה 400גר",
-    "nameEn": "מטבעות שוקולד לבן לאפיה 400גר",
-    "category": "fats",
-    "caloriesPer100g": 585,
-    "proteinPer100g": 6.8,
-    "fatPer100g": 37,
-    "carbsPer100g": 56,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
     "id": "rl_7290110572129",
@@ -68341,19 +67223,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"ml\",\"grams\":1000}]"
   },
   {
-    "id": "rl_7290017079721",
-    "nameHe": "חמישיית שוקולד חלב כשלפ",
-    "nameEn": "חמישיית שוקולד חלב כשלפ",
-    "category": "dairy",
-    "caloriesPer100g": 530,
-    "proteinPer100g": 6.4,
-    "fatPer100g": 30,
-    "carbsPer100g": 57,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290018195338",
     "nameHe": "חמישיית שוקולד זהב חלב",
     "nameEn": "חמישיית שוקולד זהב חלב",
@@ -68716,19 +67585,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":680}]"
-  },
-  {
-    "id": "rl_7290110550202",
-    "nameHe": "מטבעות שוקולד חלב לאפיה 400גר",
-    "nameEn": "מטבעות שוקולד חלב לאפיה 400גר",
-    "category": "dairy",
-    "caloriesPer100g": 572,
-    "proteinPer100g": 7.3,
-    "fatPer100g": 36,
-    "carbsPer100g": 53,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
     "id": "rl_7290018893623",
@@ -70226,19 +69082,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":400}]"
   },
   {
-    "id": "rl_7290112342072",
-    "nameHe": "משקה חלב בלונדי 1 ליטר",
-    "nameEn": "משקה חלב בלונדי 1 ליטר",
-    "category": "dairy",
-    "caloriesPer100g": 76,
-    "proteinPer100g": 3.1,
-    "fatPer100g": 3,
-    "carbsPer100g": 9.2,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"ml\",\"grams\":1000}]"
-  },
-  {
     "id": "rl_7290110553319",
     "nameHe": "פריכיות מצופות שוקולד חלב וסוכריות 70ג",
     "nameEn": "פריכיות מצופות שוקולד חלב וסוכריות 70ג",
@@ -70572,19 +69415,6 @@
     "proteinPer100g": 6.7,
     "fatPer100g": 26,
     "carbsPer100g": 62,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":70}]"
-  },
-  {
-    "id": "rl_7290110553418",
-    "nameHe": "פריכיות אורז חום מלא מצופה שוקולד חלב 70 גרם",
-    "nameEn": "פריכיות אורז חום מלא מצופה שוקולד חלב 70 גרם",
-    "category": "dairy",
-    "caloriesPer100g": 486,
-    "proteinPer100g": 6.6,
-    "fatPer100g": 21,
-    "carbsPer100g": 66,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":70}]"
@@ -71175,17 +70005,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"ml\",\"grams\":1000}]"
   },
   {
-    "id": "rl_5411188115366",
-    "nameHe": "אלפרו משקה שיבולת שועל 1ליטר",
-    "nameEn": "אלפרו משקה שיבולת שועל 1ליטר",
+    "id": "rl_7290119383399",
+    "nameHe": "אלפרו משקה שיבולת שועל 750 מל",
+    "nameEn": "אלפרו משקה שיבולת שועל 750 מל",
     "category": "snacks",
-    "caloriesPer100g": 46,
-    "proteinPer100g": 0,
-    "fatPer100g": 1.5,
-    "carbsPer100g": 7.2,
+    "caloriesPer100g": 64,
+    "proteinPer100g": 0.5,
+    "fatPer100g": 2.7,
+    "carbsPer100g": 8.6,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"ml\",\"grams\":1000}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_5411188106159",
@@ -71303,19 +70133,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"ml\",\"grams\":1000}]"
-  },
-  {
-    "id": "rl_7290119383399",
-    "nameHe": "אלפרו משקה שיבולת שועל 750 מל",
-    "nameEn": "אלפרו משקה שיבולת שועל 750 מל",
-    "category": "snacks",
-    "caloriesPer100g": 64,
-    "proteinPer100g": 0.5,
-    "fatPer100g": 2.7,
-    "carbsPer100g": 8.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290015339650",
@@ -72592,19 +71409,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":125}]"
   },
   {
-    "id": "rl_8690504155591",
-    "nameHe": "שוקולד גודייבה גנאש",
-    "nameEn": "שוקולד גודייבה גנאש",
-    "category": "fats",
-    "caloriesPer100g": 576,
-    "proteinPer100g": 8,
-    "fatPer100g": 36.1,
-    "carbsPer100g": 53.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":88}]"
-  },
-  {
     "id": "rl_7290108508048",
     "nameHe": "גולדן פרוסות 1קג",
     "nameEn": "גולדן פרוסות 1קג",
@@ -72629,19 +71433,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"ml\",\"grams\":1350}]"
-  },
-  {
-    "id": "rl_77975093085",
-    "nameHe": "חטיף בייגלה סניידרס מצופה",
-    "nameEn": "חטיף בייגלה סניידרס מצופה",
-    "category": "carbs",
-    "caloriesPer100g": 518,
-    "proteinPer100g": 7.1,
-    "fatPer100g": 25,
-    "carbsPer100g": 64.3,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":141}]"
   },
   {
     "id": "rl_7290016505016",
@@ -73450,19 +72241,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290008461177",
-    "nameHe": "חלומי 200 גר",
-    "nameEn": "חלומי 200 גר",
-    "category": "protein",
-    "caloriesPer100g": 322,
-    "proteinPer100g": 22.9,
-    "fatPer100g": 24.6,
-    "carbsPer100g": 2.2,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
-  },
-  {
     "id": "rl_7290003029884",
     "nameHe": "מוקה שקיות יטבתה 6*225 מ\"ל",
     "nameEn": "מוקה שקיות יטבתה 6*225 מ\"ל",
@@ -73970,19 +72748,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290116531038",
-    "nameHe": "ורד הגליל",
-    "nameEn": "ורד הגליל",
-    "category": "fats",
-    "caloriesPer100g": 569,
-    "proteinPer100g": 8.2,
-    "fatPer100g": 36.6,
-    "carbsPer100g": 51.6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_40111216",
     "nameHe": "חטיף באונטי שוקולד קוקוס 57 גרם",
     "nameEn": "חטיף באונטי שוקולד קוקוס 57 גרם",
@@ -74160,19 +72925,6 @@
     "proteinPer100g": 2,
     "fatPer100g": 4.7,
     "carbsPer100g": 2.3,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_5411188121923",
-    "nameHe": "משקה סויה מועשר סידן אלפרו 3*250 מ\"ל",
-    "nameEn": "משקה סויה מועשר סידן אלפרו 3*250 מ\"ל",
-    "category": "snacks",
-    "caloriesPer100g": 39,
-    "proteinPer100g": 3,
-    "fatPer100g": 1.8,
-    "carbsPer100g": 2.5,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
@@ -75127,19 +73879,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":70}]"
   },
   {
-    "id": "rl_7290003727667",
-    "nameHe": "חומוס צבר 1 ק\"ג",
-    "nameEn": "חומוס צבר 1 ק\"ג",
-    "category": "traditional",
-    "caloriesPer100g": 185,
-    "proteinPer100g": 7.9,
-    "fatPer100g": 10.8,
-    "carbsPer100g": 14,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290119380428",
     "nameHe": "קפה טורקי טעם קקאו קינמון",
     "nameEn": "קפה טורקי טעם קקאו קינמון",
@@ -75593,19 +74332,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":70}]"
-  },
-  {
-    "id": "rl_7290002043010",
-    "nameHe": "אקסטרה פריכוני אורז בציפוי שוקולד לבן בלגי 90גר",
-    "nameEn": "אקסטרה פריכוני אורז בציפוי שוקולד לבן בלגי 90גר",
-    "category": "carbs",
-    "caloriesPer100g": 523,
-    "proteinPer100g": 6.5,
-    "fatPer100g": 25,
-    "carbsPer100g": 64,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":90}]"
   },
   {
     "id": "rl_7290018296813",
@@ -76830,14 +75556,14 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290119671748",
-    "nameHe": "חיטה 1 קג רמי לוי",
-    "nameEn": "חיטה 1 קג רמי לוי",
-    "category": "snacks",
-    "caloriesPer100g": 359,
-    "proteinPer100g": 12.5,
-    "fatPer100g": 2.1,
-    "carbsPer100g": 0,
+    "id": "rl_7290015994118",
+    "nameHe": "חיטה רמי לוי 1 ק\"ג",
+    "nameEn": "חיטה רמי לוי 1 ק\"ג",
+    "category": "carbs",
+    "caloriesPer100g": 367,
+    "proteinPer100g": 12.3,
+    "fatPer100g": 3.3,
+    "carbsPer100g": 72,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
@@ -77246,19 +75972,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":375}]"
   },
   {
-    "id": "rl_7290011473594",
-    "nameHe": "טחינה אורגנית 1 קג",
-    "nameEn": "טחינה אורגנית 1 קג",
-    "category": "fats",
-    "caloriesPer100g": 675,
-    "proteinPer100g": 24,
-    "fatPer100g": 59,
-    "carbsPer100g": 7,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":1000}]"
-  },
-  {
     "id": "rl_7290004030957",
     "nameHe": "משקה קל לימונדה בלדי פרי ניב 2 ליטר",
     "nameEn": "משקה קל לימונדה בלדי פרי ניב 2 ליטר",
@@ -77322,19 +76035,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"כיכר\",\"nameEn\":\"Loaf\",\"unit\":\"grams\",\"grams\":1000}]"
-  },
-  {
-    "id": "rl_7290110114282",
-    "nameHe": "משקה קל אשכוליות פריגת 1.5 ליטר",
-    "nameEn": "משקה קל אשכוליות פריגת 1.5 ליטר",
-    "category": "snacks",
-    "caloriesPer100g": 19,
-    "proteinPer100g": 0,
-    "fatPer100g": 0,
-    "carbsPer100g": 6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"ml\",\"grams\":1500}]"
   },
   {
     "id": "rl_7290003667369",
@@ -77452,19 +76152,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":120}]"
-  },
-  {
-    "id": "rl_7290011473624",
-    "nameHe": "טחינה מלאה אורגנית 1 קג",
-    "nameEn": "טחינה מלאה אורגנית 1 קג",
-    "category": "fats",
-    "caloriesPer100g": 667,
-    "proteinPer100g": 42,
-    "fatPer100g": 59,
-    "carbsPer100g": 3,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":1000}]"
   },
   {
     "id": "rl_7290018198056",
@@ -78208,19 +76895,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290110114275",
-    "nameHe": "משקה קל תפוזים פריגת 1.5 ליטר",
-    "nameEn": "משקה קל תפוזים פריגת 1.5 ליטר",
-    "category": "fruits",
-    "caloriesPer100g": 19,
-    "proteinPer100g": 0,
-    "fatPer100g": 0,
-    "carbsPer100g": 6,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"ml\",\"grams\":1500}]"
-  },
-  {
     "id": "rl_7290018198810",
     "nameHe": "תפוגן ציפס קריסיפי קראנצ' כפרי אגאדיר 1.25 קג",
     "nameEn": "תפוגן ציפס קריסיפי קראנצ' כפרי אגאדיר 1.25 קג",
@@ -78817,19 +77491,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290000130545",
-    "nameHe": "מצות 2.5 ק\"ג",
-    "nameEn": "מצות 2.5 ק\"ג",
-    "category": "carbs",
-    "caloriesPer100g": 369,
-    "proteinPer100g": 12,
-    "fatPer100g": 1,
-    "carbsPer100g": 77,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":2500}]"
   },
   {
     "id": "rl_96086001338",
@@ -80468,19 +79129,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":250}]"
-  },
-  {
-    "id": "rl_7290015994088",
-    "nameHe": "גריסי פנינה רמי לוי 1 ק\"ג",
-    "nameEn": "גריסי פנינה רמי לוי 1 ק\"ג",
-    "category": "carbs",
-    "caloriesPer100g": 324,
-    "proteinPer100g": 6.8,
-    "fatPer100g": 1.4,
-    "carbsPer100g": 79,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290000327372",
@@ -82420,32 +81068,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290015994781",
-    "nameHe": "עדשים ירוקות רמי לוי 1 ק\"ג",
-    "nameEn": "עדשים ירוקות רמי לוי 1 ק\"ג",
-    "category": "traditional",
-    "caloriesPer100g": 344,
-    "proteinPer100g": 22.2,
-    "fatPer100g": 1.5,
-    "carbsPer100g": 60.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290015994767",
-    "nameHe": "אפונה רמי לוי 1 ק\"ג",
-    "nameEn": "אפונה רמי לוי 1 ק\"ג",
-    "category": "protein",
-    "caloriesPer100g": 301,
-    "proteinPer100g": 22.5,
-    "fatPer100g": 1.8,
-    "carbsPer100g": 62.2,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290015835633",
     "nameHe": "וופל טעם שוקולד רמי לוי 1 ק\"ג",
     "nameEn": "וופל טעם שוקולד רמי לוי 1 ק\"ג",
@@ -82862,45 +81484,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290015994095",
-    "nameHe": "חומוס גדול רמי לוי 1 ק\"ג",
-    "nameEn": "חומוס גדול רמי לוי 1 ק\"ג",
-    "category": "traditional",
-    "caloriesPer100g": 380,
-    "proteinPer100g": 16.6,
-    "fatPer100g": 6.3,
-    "carbsPer100g": 64,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290015994118",
-    "nameHe": "חיטה רמי לוי 1 ק\"ג",
-    "nameEn": "חיטה רמי לוי 1 ק\"ג",
-    "category": "carbs",
-    "caloriesPer100g": 367,
-    "proteinPer100g": 12.3,
-    "fatPer100g": 3.3,
-    "carbsPer100g": 72,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290015994132",
-    "nameHe": "עדשים אדומות רמי לוי 1 ק\"ג",
-    "nameEn": "עדשים אדומות רמי לוי 1 ק\"ג",
-    "category": "traditional",
-    "caloriesPer100g": 350,
-    "proteinPer100g": 25.3,
-    "fatPer100g": 1.7,
-    "carbsPer100g": 58.4,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290015994163",
     "nameHe": "שעועית אדומה רמי לוי 1 ק\"ג",
     "nameEn": "שעועית אדומה רמי לוי 1 ק\"ג",
@@ -83187,19 +81770,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"שקית\",\"nameEn\":\"Bag\",\"unit\":\"grams\",\"grams\":1}]"
   },
   {
-    "id": "rl_7290019170808",
-    "nameHe": "דבש טהור 1 ק\"ג רמי לוי",
-    "nameEn": "דבש טהור 1 ק\"ג רמי לוי",
-    "category": "snacks",
-    "caloriesPer100g": 331,
-    "proteinPer100g": 0,
-    "fatPer100g": 0,
-    "carbsPer100g": 0,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290002686439",
     "nameHe": "נקנקיות וינר 1.5 ק\"ג רמי לוי wb",
     "nameEn": "נקנקיות וינר 1.5 ק\"ג רמי לוי wb",
@@ -83299,19 +81869,6 @@
     "proteinPer100g": 8,
     "fatPer100g": 1.2,
     "carbsPer100g": 0,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
-    "id": "rl_7290119672578",
-    "nameHe": "שיבולת שועל דקה 1 ק\"ג רמי לוי",
-    "nameEn": "שיבולת שועל דקה 1 ק\"ג רמי לוי",
-    "category": "carbs",
-    "caloriesPer100g": 360,
-    "proteinPer100g": 0,
-    "fatPer100g": 6.37,
-    "carbsPer100g": 56.5,
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
@@ -83889,19 +82446,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
-    "id": "rl_7290011474003",
-    "nameHe": "שמן קוקוס",
-    "nameEn": "שמן קוקוס",
-    "category": "fats",
-    "caloriesPer100g": 900,
-    "proteinPer100g": 0,
-    "fatPer100g": 100,
-    "carbsPer100g": 0,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":300}]"
-  },
-  {
     "id": "rl_8888757101506",
     "nameHe": "שמן שומשום 150 מ\"ל",
     "nameEn": "שמן שומשום 150 מ\"ל",
@@ -84383,17 +82927,17 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290114606592",
-    "nameHe": "מאסטר שף רוטב סויה 620 מל",
-    "nameEn": "מאסטר שף רוטב סויה 620 מל",
+    "id": "rl_7290117380154",
+    "nameHe": "מאסטר שף רוטב סויה 264 מל",
+    "nameEn": "מאסטר שף רוטב סויה 264 מל",
     "category": "snacks",
-    "caloriesPer100g": 20,
-    "proteinPer100g": 0,
-    "fatPer100g": 0,
-    "carbsPer100g": 5,
+    "caloriesPer100g": 199,
+    "proteinPer100g": 1.7,
+    "fatPer100g": 15,
+    "carbsPer100g": 14,
     "fiberPer100g": 0,
     "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
+    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":264}]"
   },
   {
     "id": "rl_7290013358509",
@@ -84981,19 +83525,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290117380154",
-    "nameHe": "מאסטר שף רוטב סויה 264 מל",
-    "nameEn": "מאסטר שף רוטב סויה 264 מל",
-    "category": "snacks",
-    "caloriesPer100g": 199,
-    "proteinPer100g": 1.7,
-    "fatPer100g": 15,
-    "carbsPer100g": 14,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"בקבוק\",\"nameEn\":\"Bottle\",\"unit\":\"grams\",\"grams\":264}]"
-  },
-  {
     "id": "rl_7290117385593",
     "nameHe": "מאסטר שף אטריות שעועית 300 גרם",
     "nameEn": "מאסטר שף אטריות שעועית 300 גרם",
@@ -85384,19 +83915,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":200}]"
   },
   {
-    "id": "rl_7290002133520",
-    "nameHe": "יוגורט של פעם 3% גבינות השומרון 400 גרם",
-    "nameEn": "יוגורט של פעם 3% גבינות השומרון 400 גרם",
-    "category": "dairy",
-    "caloriesPer100g": 61,
-    "proteinPer100g": 5.1,
-    "fatPer100g": 3,
-    "carbsPer100g": 3.5,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"גביע שלם\",\"nameEn\":\"Full container\",\"unit\":\"grams\",\"grams\":400}]"
-  },
-  {
     "id": "rl_7290119670147",
     "nameHe": "מיקס אנד שר לסלט 200גר בקופסא",
     "nameEn": "מיקס אנד שר לסלט 200גר בקופסא",
@@ -85501,19 +84019,6 @@
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
-    "id": "rl_7290018023617",
-    "nameHe": "שמן זית כתית מעולה רמי לוי 750 מ\"ל",
-    "nameEn": "שמן זית כתית מעולה רמי לוי 750 מ\"ל",
-    "category": "fats",
-    "caloriesPer100g": 828,
-    "proteinPer100g": 0,
-    "fatPer100g": 0,
-    "carbsPer100g": 0,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
-  },
-  {
     "id": "rl_7290117380147",
     "nameHe": "מאסטר שף רוטב חרדל ודבש לסלט 260 גרם",
     "nameEn": "מאסטר שף רוטב חרדל ודבש לסלט 260 גרם",
@@ -85590,19 +84095,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":180}]"
-  },
-  {
-    "id": "rl_7290119670864",
-    "nameHe": "שמן זית כתית מעולה ספרד 750 מ\"ל רמי לוי",
-    "nameEn": "שמן זית כתית מעולה ספרד 750 מ\"ל רמי לוי",
-    "category": "fats",
-    "caloriesPer100g": 900,
-    "proteinPer100g": 0,
-    "fatPer100g": 100,
-    "carbsPer100g": 0,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100}]"
   },
   {
     "id": "rl_7290000572673",
@@ -88606,19 +87098,6 @@
     "fiberPer100g": 0,
     "isUserCreated": false,
     "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":125}]"
-  },
-  {
-    "id": "rl_7290120871229",
-    "nameHe": "תות שדה קפוא 500גר",
-    "nameEn": "תות שדה קפוא 500גר",
-    "category": "fruits",
-    "caloriesPer100g": 35,
-    "proteinPer100g": 0,
-    "fatPer100g": 0,
-    "carbsPer100g": 9.1,
-    "fiberPer100g": 0,
-    "isUserCreated": false,
-    "servingSizesJson": "[{\"nameHe\":\"100 גרם\",\"nameEn\":\"100g\",\"unit\":\"grams\",\"grams\":100},{\"nameHe\":\"אריזה שלמה\",\"nameEn\":\"Full package\",\"unit\":\"grams\",\"grams\":500}]"
   },
   {
     "id": "rl_7290112870896",

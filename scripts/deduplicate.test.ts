@@ -260,15 +260,19 @@ describe('filterAgainstContentHashes', () => {
   })
 })
 
-// ── deduplicateFuzzy ──────────────────────────────────────────────────────
+// ── deduplicateFuzzy (name-based, garbage-aware) ──────────────────────────
 
 describe('deduplicateFuzzy', () => {
   it('returns empty array for empty input', () => {
     expect(deduplicateFuzzy([])).toEqual([])
   })
 
-  it('collapses 352 vs 341 kcal pair with same normalized name', () => {
-    // The real gouda case from phase 2
+  it('returns single entry unchanged', () => {
+    const products = [makeFood('sh_1', { nameHe: 'אורז' })]
+    expect(deduplicateFuzzy(products)).toEqual(products)
+  })
+
+  it('collapses plural/orphan variants to one row (gouda case)', () => {
     const products = [
       makeFood('sh_111', {
         nameHe: 'גבינת גאודה פרוסה 28% שומן',
@@ -287,72 +291,121 @@ describe('deduplicateFuzzy', () => {
     ]
     const result = deduplicateFuzzy(products)
     expect(result).toHaveLength(1)
+    // Both equally rich — first occurrence wins
     expect(result[0].id).toBe('sh_111')
   })
 
-  it('keeps distinct products when macro gap exceeds window', () => {
-    // Light vs full: 62 vs 85 kcal → gap > 15, kept
+  it('collapses אורז פרסי 348/350/336 and drops the 0g-protein garbage row', () => {
+    // The exact case user reported on device
     const products = [
-      makeFood('sh_111', {
-        nameHe: 'גבינה לבנה 5%',
-        caloriesPer100g: 62,
-        proteinPer100g: 10,
+      makeFood('sh_7296073705291', {
+        nameHe: 'אורז פרסי',
+        caloriesPer100g: 348,
+        proteinPer100g: 6,
+        fatPer100g: 1,
+        carbsPer100g: 78,
       }),
-      makeFood('sh_222', {
-        nameHe: 'גבינה לבנה 5%',
-        caloriesPer100g: 85,
-        proteinPer100g: 11,
+      makeFood('sh_7290108509700', {
+        nameHe: 'אורז פרסי',
+        caloriesPer100g: 350,
+        proteinPer100g: 8.7,
+        fatPer100g: 1.2,
+        carbsPer100g: 76,
       }),
+      makeFood('sh_7296073747000', {
+        nameHe: 'אורז פרסי',
+        caloriesPer100g: 336,
+        proteinPer100g: 0, // garbage: protein=0 with kcal>100
+        fatPer100g: 0,
+        carbsPer100g: 0,
+      }),
+    ]
+    const result = deduplicateFuzzy(products)
+    expect(result).toHaveLength(1)
+    // Garbage row dropped; among non-garbage, first occurrence wins on tie
+    expect(result[0].id).toBe('sh_7296073705291')
+  })
+
+  it('picks the non-garbage row even when garbage appears first', () => {
+    const products = [
+      makeFood('sh_garbage', {
+        nameHe: 'אורז',
+        caloriesPer100g: 300,
+        proteinPer100g: 0,
+        fatPer100g: 0,
+        carbsPer100g: 0,
+      }),
+      makeFood('sh_good', {
+        nameHe: 'אורז',
+        caloriesPer100g: 365,
+        proteinPer100g: 7,
+        fatPer100g: 1,
+        carbsPer100g: 80,
+      }),
+    ]
+    const result = deduplicateFuzzy(products)
+    expect(result).toHaveLength(1)
+    expect(result[0].id).toBe('sh_good')
+  })
+
+  it('picks the richer row (more non-null macros) on tie', () => {
+    const products = [
+      makeFood('sh_sparse', {
+        nameHe: 'טונה',
+        caloriesPer100g: 120,
+        proteinPer100g: 25,
+        fatPer100g: 0,
+        carbsPer100g: 0,
+      }),
+      makeFood('sh_rich', {
+        nameHe: 'טונה',
+        caloriesPer100g: 125,
+        proteinPer100g: 26,
+        fatPer100g: 2,
+        carbsPer100g: 1,
+      }),
+    ]
+    const result = deduplicateFuzzy(products)
+    expect(result).toHaveLength(1)
+    expect(result[0].id).toBe('sh_rich')
+  })
+
+  it('keeps "חלב 3%" and "חלב 9%" distinct (percentage is semantic)', () => {
+    const products = [
+      makeFood('sh_1', { nameHe: 'חלב 3%', caloriesPer100g: 62 }),
+      makeFood('sh_2', { nameHe: 'חלב 9%', caloriesPer100g: 100 }),
     ]
     expect(deduplicateFuzzy(products)).toHaveLength(2)
   })
 
   it('keeps distinct products when normalized names differ', () => {
-    // Same macros but different names → both kept
     const products = [
-      makeFood('sh_111', { nameHe: 'גבינה לבנה 5%', caloriesPer100g: 62 }),
-      makeFood('sh_222', { nameHe: 'יוגורט 5%', caloriesPer100g: 62 }),
+      makeFood('sh_1', { nameHe: 'גבינה לבנה 5%', caloriesPer100g: 62 }),
+      makeFood('sh_2', { nameHe: 'יוגורט 5%', caloriesPer100g: 62 }),
     ]
     expect(deduplicateFuzzy(products)).toHaveLength(2)
   })
 
-  it('preserves first occurrence on collision', () => {
+  it('preserves first occurrence on full tie', () => {
     const products = [
-      makeFood('sh_first', { nameHe: 'מוצר', caloriesPer100g: 100 }),
-      makeFood('sh_second', { nameHe: 'מוצר', caloriesPer100g: 108 }),
-      makeFood('sh_third', { nameHe: 'מוצר', caloriesPer100g: 95 }),
+      makeFood('sh_first', {
+        nameHe: 'מוצר',
+        caloriesPer100g: 100,
+        proteinPer100g: 5,
+        fatPer100g: 3,
+        carbsPer100g: 10,
+      }),
+      makeFood('sh_second', {
+        nameHe: 'מוצר',
+        caloriesPer100g: 108,
+        proteinPer100g: 5,
+        fatPer100g: 3,
+        carbsPer100g: 10,
+      }),
     ]
     const result = deduplicateFuzzy(products)
     expect(result).toHaveLength(1)
     expect(result[0].id).toBe('sh_first')
-  })
-
-  it('collapses within-window protein drift', () => {
-    const products = [
-      makeFood('sh_111', { nameHe: 'טונה', caloriesPer100g: 110, proteinPer100g: 25 }),
-      makeFood('sh_222', { nameHe: 'טונה', caloriesPer100g: 112, proteinPer100g: 26 }),
-    ]
-    expect(deduplicateFuzzy(products)).toHaveLength(1)
-  })
-
-  it('keeps rows when protein drift exceeds 2g', () => {
-    const products = [
-      makeFood('sh_111', { nameHe: 'טונה', caloriesPer100g: 110, proteinPer100g: 22 }),
-      makeFood('sh_222', { nameHe: 'טונה', caloriesPer100g: 112, proteinPer100g: 26 }),
-    ]
-    expect(deduplicateFuzzy(products)).toHaveLength(2)
-  })
-
-  it('handles 3-way cluster where all pair-wise within window', () => {
-    const products = [
-      makeFood('sh_1', { nameHe: 'מוצר', caloriesPer100g: 100 }),
-      makeFood('sh_2', { nameHe: 'מוצר', caloriesPer100g: 108 }),
-      makeFood('sh_3', { nameHe: 'מוצר', caloriesPer100g: 114 }),
-    ]
-    // All three within ±15 of sh_1 → first wins, others dropped
-    const result = deduplicateFuzzy(products)
-    expect(result).toHaveLength(1)
-    expect(result[0].id).toBe('sh_1')
   })
 
   it('preserves cross-group order', () => {
@@ -362,5 +415,27 @@ describe('deduplicateFuzzy', () => {
       makeFood('sh_c', { nameHe: 'גימל' }),
     ]
     expect(deduplicateFuzzy(products).map((p) => p.id)).toEqual(['sh_a', 'sh_b', 'sh_c'])
+  })
+
+  it('falls back to group when all rows are garbage', () => {
+    const products = [
+      makeFood('sh_1', {
+        nameHe: 'מוצר',
+        caloriesPer100g: 0,
+        proteinPer100g: 0,
+        fatPer100g: 0,
+        carbsPer100g: 0,
+      }),
+      makeFood('sh_2', {
+        nameHe: 'מוצר',
+        caloriesPer100g: 0,
+        proteinPer100g: 0,
+        fatPer100g: 0,
+        carbsPer100g: 0,
+      }),
+    ]
+    const result = deduplicateFuzzy(products)
+    expect(result).toHaveLength(1)
+    expect(result[0].id).toBe('sh_1')
   })
 })
