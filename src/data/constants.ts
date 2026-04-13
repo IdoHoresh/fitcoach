@@ -303,7 +303,13 @@ export const MESOCYCLE = {
   DEFAULT_WEEKS: 6,
   MIN_WEEKS: 4,
   MAX_WEEKS: 8,
-  DELOAD_VOLUME_REDUCTION: 0.5, // Cut volume by 50% during deload
+  /**
+   * Deload volume multiplier applied on top of MV.
+   * Target sets during deload = MV + round(MV × this) = 1.5 × MV.
+   * Partial step-down from peak toward maintenance — preserves stimulus
+   * while dropping fatigue. See volume-manager.ts calculateWeeklyVolume.
+   */
+  DELOAD_VOLUME_REDUCTION: 0.5,
   DELOAD_WEIGHT_REDUCTION: 0.1, // Reduce weight by 10% during deload
   /** Number of consecutive declining sessions before auto-deload trigger */
   DECLINE_THRESHOLD: 2,
