@@ -487,13 +487,8 @@ Apple reviews health/fitness apps more strictly. Key rules:
 
 - [x] Full Shufersal catalog — schema v14, 5,459 products (6,573 scraped, 1,160 deduped, 46 overrides), migrateToV14 wipes old sh\_ rows and reseeds (PR #50) — 2,000 tests
 - [x] Manual gram input in PortionPicker — TextInput replaces read-only gram display, live macro update, clamp on blur, stepper + chips stay in sync (PR #52) — 2,003 tests
+- [x] Rami Levy pipeline run + seed shipped + content/fuzzy dedup (PR #56) — ran scrape-rl-ids → fetch-rl-nutrition (2 passes, ~35% transient errors recovered) → build-rami-levy-seed (6,916 rl\_ rows). Added `normalizeNameForDedup`, `buildContentHash`, `deduplicateFuzzy`, `filterAgainstContentHashes` to scripts/deduplicate.ts. Strict content hash + window-based fuzzy clustering (±15 kcal, ±2g macros). Shufersal 5,459 → 5,193; Rami Levy 0 → 6,916 (44 cross-seed dupes vs Shufersal removed). Gouda 17 → 7; גבינה לבנה 5% 4 → 1. Also dropped Notion step from workflow. 2,070 tests.
 
 ## Next Up
-
-- [ ] **Run Rami Levy pipeline + ship seed data** — PR #54 merged (scraper code), seed ships as `[]`. Run the 3-step pipeline to populate it:
-  1. `npm run scrape-rl-ids` (~49 requests, ~15s)
-  2. `npm run fetch-rl-nutrition` (~1-2 hours, resumable)
-  3. `npm run build-rami-levy-seed`
-     Then verify `rami-levy-seed.json` has ≥500 `rl_` entries, do app cold-start food search, commit + PR.
 
 - [ ] **Add more Israeli supermarkets** — Tiv Taam, Victory, Yohananof, Am-Pm. Each needs a scraper module following the same pipeline pattern as Shufersal.
