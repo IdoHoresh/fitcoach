@@ -128,6 +128,13 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Rate-limit all network calls, not just successful ones.** In a scraper fetch loop, sleeping only after valid responses leaves 404s and null responses unthrottled — consecutive failures hit the API as fast as the event loop allows. Gate the sleep on whether a network call was made (`!isCached`), not on whether it returned data. Move `fetched++` and `await sleep(ms)` before the null check so every real HTTP request is rate-limited regardless of its outcome.
 - **Elasticsearch single-char queries are API-limited.** Rami Levy's search endpoint (`/api/search?q=`) returns ≤100 results for single-char queries regardless of `size=`. Use 2+ char terms instead. Also, pagination must advance by actual page size (`response.data.length`), not the requested page size — some ES endpoints return variable page sizes. Stop condition: `from >= response.total`, not `data.length < SEARCH_PAGE_SIZE`.
 
+## Seed Dedup (2026-04-13)
+
+- **Barcode is not identity.** The same product ships under multiple EANs (relabels, package variants, factory runs, store-brand swaps). ID-based dedup on `sh_<barcode>` / `rl_<barcode>` leaves 100s of visual duplicates in the final seed. Always content-hash seed rows before shipping: `normalizedName + calories + protein + fat + carbs`.
+- **Strict content hash is not enough for Hebrew product data.** Three more noise sources beat a strict hash: (1) singular/plural descriptor variation (`פרוסה` vs `פרוסות`), (2) trailing orphan modifiers after the `%` token (e.g. dangling `שומן`), (3) measurement drift of ~3% between SKUs. Fuzzy dedup needs a plural whitelist + trailing-modifier drop + a tolerance window (±15 kcal, ±2g protein/fat/carbs) applied within each normalized-name group. First occurrence wins — supermarket seeds are already category-ordered.
+- **Cross-seed dedup stays strict.** When merging Rami Levy into the Shufersal content-hash set, use strict content hashes, not fuzzy clustering. Fuzzy across stores risks collapsing genuinely different products with similar names in different supermarkets.
+- **Fetch failures that don't cache loop badly on re-run.** The Rami Levy nutrition fetch writes only successful responses to `tmp/rl-nutrition-cache/`. A 1–2 hour run with ~35% transient network errors recovers almost all of them on a second pass because cache hits skip and only the originally-failed IDs are re-fetched. Probe a few "failures" with `curl` before assuming they're genuine 404s — they usually aren't.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
