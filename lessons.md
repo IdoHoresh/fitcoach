@@ -147,6 +147,11 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Schema validators encode physical reality, not data-quality heuristics.** `caloriesPer100g: z.number().positive()` was written to catch "author forgot to fill in calories", but it rejected water, salt, plain brewed coffee/tea — all legitimately 0 kcal. The correct floor is `.min(0)`: non-negative numbers ARE physically valid, and missing values still fail the outer `z.number()` check as `undefined`. Encode what's physically possible; catch "forgot to fill in" via the base type, not an over-tight bound.
 - **Hebrew "נא" (raw) vs "נאה" (pretty) is a silent typo trap.** `בטטה נאה` passed lint, typecheck, and tests but means "pretty sweet potato". When adding a raw-state Hebrew name, prefer matching the existing raw-veg pattern (drop the state word entirely — `עגבנייה`, `בטטה`) rather than hand-writing `נא`, which is easy to fat-finger into `נאה`.
 
+## Raw Ingredients End-to-End Verification (2026-04-13)
+
+- **Fresh-install migration chain replays cleanly v0→v18.** Cold start on wiped device ran v10 supermarket seed → v12 Tzameret purge → v14 Shufersal full (4,964) → v15 Rami Levy (6,799) → v16 raw ingredients (191) → v17 `name_norm` backfill (11,954 rows) + cross-source dedup (152 deletes) → v18 FK indices, no errors. Confirms the v17 ALTER-then-backfill pattern works on fresh installs, not just upgrades. The index-inside-migration rule (not in `CREATE_TABLE_STATEMENTS`) held: no "no such column" crash.
+- **Tier tiebreaker + cross-source cleanup both fire.** Device search for `חזה עוף`, `אורז לבן`, `תפוח`, `ביצה`, `שמן זית` all surfaced `raw_%` row first. Task 6's SQL `ORDER BY` tiebreaker (`raw > manual > sh > rl`) plus Task (v17) cross-source dup cleanup are redundant by design — defense in depth. Either alone would have been enough for these queries, but both together make the ranking robust against future seed sources drifting into overlap territory.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
