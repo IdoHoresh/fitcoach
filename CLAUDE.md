@@ -88,17 +88,18 @@ Before every commit, Claude MUST show verification for each checklist item:
 2. **Review ran** — only after actually running `/review` and fixing ALL findings
 3. **lessons.md** — state what was added, or explain why nothing applies
 4. **REVIEW.md** — state what was added, or explain why nothing applies
-5. **Secrets scan** — run `git diff --cached`, actually scan for keys/tokens
-6. **Lint** — run `npm run lint`, show clean output
-7. **Typecheck** — run `npm run typecheck`, show clean output
-8. **Tests** — run `npm test -- --silent 2>&1 | tail -5`, show pass count only
-9. **Size check** — run `git diff --cached --stat`, show line count
+5. **TASKS.md** — mark the item done with today's date in the same commit as the feature. No PR number needed — `git log --grep` recovers it. Avoids post-merge housekeeping PRs.
+6. **Secrets scan** — run `git diff --cached`, actually scan for keys/tokens
+7. **Lint** — run `npm run lint`, show clean output
+8. **Typecheck** — run `npm run typecheck`, show clean output
+9. **Tests** — run `npm test -- --silent 2>&1 | tail -5`, show pass count only
+10. **Size check** — run `git diff --cached --stat`, show line count
 
 After every PR merged:
 
 1. Wait for CI to pass before starting next task
 2. Update PR test plan checkbox once CI passes
-3. **Update TASKS.md** — move completed items to Done, update test count
+3. Pull `main` to sync local
 
 **If ANY step is skipped, the task is NOT complete. No exceptions.**
 
