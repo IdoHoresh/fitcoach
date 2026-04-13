@@ -21,7 +21,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { normalizeProduct } from './normalize-food'
-import { deduplicateScraped, filterAgainstExisting } from './deduplicate'
+import { deduplicateScraped, deduplicateFuzzy, filterAgainstExisting } from './deduplicate'
 import { PROTEIN_YOGHURT_OVERRIDES } from './shufersal-overrides'
 import type { RawShufersalProduct } from './shufersal-types'
 import type { FoodSeed } from './tzameret-overrides'
@@ -38,7 +38,7 @@ const OUTPUT = path.join(process.cwd(), 'src', 'assets', 'supermarket-seed.json'
  * Strips whitespace, punctuation, and common suffixes so that
  * "דנונה פרו 25 גרם חלבון" and "דנונה פרו 25g" compare as similar.
  */
-function normalizeNameForDedup(name: string): string {
+function normalizeNameForOverrideMatch(name: string): string {
   return name
     .replace(/[\u0591-\u05C7]/g, '') // strip Hebrew diacritics
     .replace(/['"״׳]/g, '') // strip quotation marks
@@ -55,8 +55,8 @@ function filterDuplicatesOfManualOverrides(
   scraped: FoodSeed[],
   manualOverrides: FoodSeed[],
 ): FoodSeed[] {
-  const manualNames = new Set(manualOverrides.map((f) => normalizeNameForDedup(f.nameHe)))
-  return scraped.filter((f) => !manualNames.has(normalizeNameForDedup(f.nameHe)))
+  const manualNames = new Set(manualOverrides.map((f) => normalizeNameForOverrideMatch(f.nameHe)))
+  return scraped.filter((f) => !manualNames.has(normalizeNameForOverrideMatch(f.nameHe)))
 }
 
 // ── Main ───────────────────────────────────────────────────────────────────
@@ -96,14 +96,22 @@ function build(): void {
   const dupCount = normalized.length - deduplicated.length
   console.log(`[build-supermarket-seed] Deduplicated: removed ${dupCount} within-store duplicates`)
 
+  // 3b. Fuzzy content dedup: collapse same-product rows across barcode,
+  // singular/plural, trailing-modifier, and small macro drift variation.
+  const contentDeduped = deduplicateFuzzy(deduplicated)
+  const contentDupCount = deduplicated.length - contentDeduped.length
+  console.log(
+    `[build-supermarket-seed] Fuzzy dedup: removed ${contentDupCount} near-duplicate rows`,
+  )
+
   // 4. Filter scraped items that overlap with manual overrides (manual wins)
   const manualIds = new Set(PROTEIN_YOGHURT_OVERRIDES.map((f) => f.id))
-  const withoutManualIdConflicts = filterAgainstExisting(deduplicated, manualIds)
+  const withoutManualIdConflicts = filterAgainstExisting(contentDeduped, manualIds)
   const withoutNameConflicts = filterDuplicatesOfManualOverrides(
     withoutManualIdConflicts,
     PROTEIN_YOGHURT_OVERRIDES,
   )
-  const overrideFilterCount = deduplicated.length - withoutNameConflicts.length
+  const overrideFilterCount = contentDeduped.length - withoutNameConflicts.length
   console.log(
     `[build-supermarket-seed] Override filter: removed ${overrideFilterCount} scraped items superseded by manual overrides`,
   )
@@ -132,6 +140,7 @@ function build(): void {
   console.log(`  Raw scraped         : ${raw.length}`)
   console.log(`  Nulls filtered      : ${nullCount}`)
   console.log(`  Within-store dups   : ${dupCount}`)
+  console.log(`  Fuzzy dups          : ${contentDupCount}`)
   console.log(`  Override conflicts  : ${overrideFilterCount}`)
   console.log(`  Manual overrides    : ${PROTEIN_YOGHURT_OVERRIDES.length}`)
   console.log(`  ──────────────────────────────────────`)

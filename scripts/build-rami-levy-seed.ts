@@ -18,6 +18,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { normalizeRLProduct } from './normalize-rl-product'
+import { buildContentHash, deduplicateFuzzy, filterAgainstContentHashes } from './deduplicate'
 import type { RLProductDetail } from './rami-levy-types'
 import type { FoodSeed } from './tzameret-overrides'
 
@@ -25,6 +26,7 @@ import type { FoodSeed } from './tzameret-overrides'
 
 const RAW_INPUT = path.join(process.cwd(), 'tmp', 'rami-levy-raw.json')
 const OUTPUT = path.join(process.cwd(), 'src', 'assets', 'rami-levy-seed.json')
+const SHUFERSAL_SEED = path.join(process.cwd(), 'src', 'assets', 'supermarket-seed.json')
 
 // ── Main ───────────────────────────────────────────────────────────────────
 
@@ -62,18 +64,31 @@ function build(): void {
 
   // 3. Deduplicate within Rami Levy (same barcode in multiple departments)
   const seen = new Set<string>()
-  const deduplicated: FoodSeed[] = []
+  const idDeduped: FoodSeed[] = []
   for (const food of normalized) {
     if (!seen.has(food.id)) {
       seen.add(food.id)
-      deduplicated.push(food)
+      idDeduped.push(food)
     }
   }
-  const dupCount = normalized.length - deduplicated.length
+  const dupCount = normalized.length - idDeduped.length
   console.log(`[build-rami-levy-seed] Deduplicated: removed ${dupCount} within-store duplicates`)
 
+  // 3b. Fuzzy dedup (same product across barcode, plural, modifier, macro drift)
+  const contentDeduped = deduplicateFuzzy(idDeduped)
+  const contentDupCount = idDeduped.length - contentDeduped.length
+  console.log(`[build-rami-levy-seed] Fuzzy dedup: removed ${contentDupCount} near-duplicate rows`)
+
+  // 3c. Cross-seed content dedup against Shufersal (skip RL rows that duplicate sh_ rows)
+  const shufersalHashes = loadShufersalContentHashes()
+  const crossDeduped = filterAgainstContentHashes(contentDeduped, shufersalHashes)
+  const crossDupCount = contentDeduped.length - crossDeduped.length
+  console.log(
+    `[build-rami-levy-seed] Cross-seed dedup: removed ${crossDupCount} rows duplicating Shufersal seed`,
+  )
+
   // 4. Final duplicate ID sanity check
-  const ids = deduplicated.map((f) => f.id)
+  const ids = crossDeduped.map((f) => f.id)
   const uniqueIds = new Set(ids)
   if (uniqueIds.size !== ids.length) {
     console.error(
@@ -84,15 +99,41 @@ function build(): void {
 
   // 5. Write output
   fs.mkdirSync(path.dirname(OUTPUT), { recursive: true })
-  fs.writeFileSync(OUTPUT, JSON.stringify(deduplicated, null, 2), 'utf8')
+  fs.writeFileSync(OUTPUT, JSON.stringify(crossDeduped, null, 2), 'utf8')
 
   console.log(`\n[build-rami-levy-seed] ── Summary ──`)
   console.log(`  Raw products        : ${raw.length}`)
   console.log(`  Nulls filtered      : ${nullCount}`)
   console.log(`  Within-store dups   : ${dupCount}`)
+  console.log(`  Fuzzy dups          : ${contentDupCount}`)
+  console.log(`  Cross-seed dups     : ${crossDupCount}`)
   console.log(`  ──────────────────────────────────────`)
-  console.log(`  Total in output     : ${deduplicated.length}`)
+  console.log(`  Total in output     : ${crossDeduped.length}`)
   console.log(`  Output              : ${OUTPUT}`)
+}
+
+/**
+ * Loads the Shufersal seed and returns a Set of content hashes for every row.
+ * Used to drop Rami Levy rows that duplicate an existing Shufersal product.
+ * Returns empty set if the Shufersal seed is missing (first-time build).
+ */
+function loadShufersalContentHashes(): Set<string> {
+  if (!fs.existsSync(SHUFERSAL_SEED)) {
+    console.warn(
+      `[build-rami-levy-seed] Warning: ${SHUFERSAL_SEED} not found — skipping cross-seed dedup`,
+    )
+    return new Set()
+  }
+
+  try {
+    const seed = JSON.parse(fs.readFileSync(SHUFERSAL_SEED, 'utf8')) as FoodSeed[]
+    return new Set(seed.map((f) => buildContentHash(f)))
+  } catch (err) {
+    console.warn(
+      `[build-rami-levy-seed] Warning: Failed to parse Shufersal seed — ${(err as Error).message}`,
+    )
+    return new Set()
+  }
 }
 
 build()

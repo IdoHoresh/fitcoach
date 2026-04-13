@@ -98,8 +98,7 @@ After every PR merged:
 
 1. Wait for CI to pass before starting next task
 2. Update PR test plan checkbox once CI passes
-3. **Create Notion page** — new features only; skip for bug fixes and type-propagation changes
-4. **Update TASKS.md** — move completed items to Done, update test count
+3. **Update TASKS.md** — move completed items to Done, update test count
 
 **If ANY step is skipped, the task is NOT complete. No exceptions.**
 
@@ -125,11 +124,6 @@ These rules reduce context usage without lowering quality:
 - Run `/review` for: new features, algorithm changes, schema changes, security-sensitive code
 - Skip `/review` for: bug fixes where the change is mechanical (e.g. adding a field + propagating it), test-only changes, comment/doc changes
 - When skipping: state "Skipping /review — mechanical propagation change, no logic risk"
-
-### Notion pages — features only
-
-- Write a Notion page for: new features, architecture changes, anything Ido needs to understand later
-- Skip for: bug fixes, schema migrations that just add a column, test fixture updates
 
 ### TASKS.md — read only what's needed
 

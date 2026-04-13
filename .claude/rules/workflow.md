@@ -41,8 +41,7 @@ This applies to the ENTIRE flow — every single step from branch creation to TA
 ### After PR Merged
 
 18. **Update CI checkbox** — mark CI item as checked in PR test plan
-19. **Create Notion page** — for new features and architecture changes only. Skip for bug fixes, column-addition migrations, and test fixture updates. State reason when skipping.
-20. **Update TASKS.md** — move completed items to Done section, update test count
+19. **Update TASKS.md** — move completed items to Done section, update test count
 
 ### MANDATORY POST-COMMIT BLOCK
 
@@ -54,7 +53,6 @@ POST-COMMIT VERIFICATION:
 □ Wait for CI
 □ CI passed → verify each test plan item with output shown → check boxes
 □ PR merged → pull main
-□ Notion page created
 □ TASKS.md updated
 ```
 
