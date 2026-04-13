@@ -2,9 +2,9 @@
 
 **NEVER skip, auto-check, or rubber-stamp ANY step. NOT ONE. EVER.**
 
-This applies to the ENTIRE flow — every single step from branch creation to TASKS.md update. Missing even one step is a failure.
+This applies to the ENTIRE flow — every single step from branch creation to post-merge sync. Missing even one step is a failure.
 
-## The Complete Flow (ALL 16 steps, EVERY time)
+## The Complete Flow (ALL 20 steps, EVERY time)
 
 ### Before Code
 
@@ -21,27 +21,28 @@ This applies to the ENTIRE flow — every single step from branch creation to TA
 5. **Review** — run `/review` for features, algorithm changes, schema changes, security code. Skip for bug fixes (mechanical propagation, test fixtures, doc changes) — state reason when skipping.
 6. **Lessons** — read review findings, add to lessons.md or state WHY nothing applies
 7. **REVIEW.md** — check if review revealed new patterns, add or state WHY nothing applies
-8. **Branch check** — run `git branch --show-current`, show output
-9. **Secrets scan** — run `git diff --cached`, actually scan for keys/tokens, state "no secrets found"
-10. **Lint** — run `npm run lint`, show clean output
-11. **Typecheck** — run `npm run typecheck`, show clean output
-12. **Tests** — run `npm test -- --silent 2>&1 | tail -5`, show pass count only
-13. **Size check** — run `git diff --cached --stat`, show line count, warn if >500
-14. **Commit** — only after ALL above steps verified and shown
+8. **TASKS.md** — mark the item done with today's date in the SAME commit as the feature. No PR number needed — `git log --grep` recovers it later. This replaces the post-merge housekeeping PRs that were pure overhead.
+9. **Branch check** — run `git branch --show-current`, show output
+10. **Secrets scan** — run `git diff --cached`, actually scan for keys/tokens, state "no secrets found"
+11. **Lint** — run `npm run lint`, show clean output
+12. **Typecheck** — run `npm run typecheck`, show clean output
+13. **Tests** — run `npm test -- --silent 2>&1 | tail -5`, show pass count only
+14. **Size check** — run `git diff --cached --stat`, show line count, warn if >500
+15. **Commit** — only after ALL above steps verified and shown
 
 ### After Commit
 
-15. **Push + PR** — with complete test plan
-16. **Wait for CI** — never start next task until CI passes
+16. **Push + PR** — with complete test plan
+17. **Wait for CI** — never start next task until CI passes
 
 ### After CI Passes (BEFORE merging)
 
-17. **Verify EVERY test plan item individually** — run each command, show output, THEN check the box. NEVER batch-check items. If a test plan says "verify X", run the specific test or command that proves X and show the result. Checking a box without showing proof is rubber-stamping and is FORBIDDEN.
+18. **Verify EVERY test plan item individually** — run each command, show output, THEN check the box. NEVER batch-check items. If a test plan says "verify X", run the specific test or command that proves X and show the result. Checking a box without showing proof is rubber-stamping and is FORBIDDEN.
 
 ### After PR Merged
 
-18. **Update CI checkbox** — mark CI item as checked in PR test plan
-19. **Update TASKS.md** — move completed items to Done section, update test count
+19. **Update CI checkbox** — mark CI item as checked in PR test plan
+20. **Pull `main`** to sync local — TASKS.md was already updated in the feature commit, so no post-merge chore PR.
 
 ### MANDATORY POST-COMMIT BLOCK
 
@@ -53,7 +54,6 @@ POST-COMMIT VERIFICATION:
 □ Wait for CI
 □ CI passed → verify each test plan item with output shown → check boxes
 □ PR merged → pull main
-□ TASKS.md updated
 ```
 
 **Do NOT move to the next task until ALL boxes are checked.**
