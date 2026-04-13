@@ -49,7 +49,7 @@ export const RawIngredientSchema = z.object({
   nameHe: z.string().min(1),
   nameEn: z.string().min(1),
   category: z.string().min(1),
-  caloriesPer100g: z.number().positive(),
+  caloriesPer100g: z.number().min(0),
   proteinPer100g: z.number().min(0),
   fatPer100g: z.number().min(0),
   carbsPer100g: z.number().min(0),

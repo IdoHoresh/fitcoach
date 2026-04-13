@@ -38,8 +38,12 @@ describe('RawIngredientSchema', () => {
     expect(() => RawIngredientSchema.parse({ ...validEntry, nameEn: '' })).toThrow()
   })
 
-  it('rejects zero calories', () => {
-    expect(() => RawIngredientSchema.parse({ ...validEntry, caloriesPer100g: 0 })).toThrow()
+  it('accepts zero calories (water, salt, plain tea/coffee)', () => {
+    expect(() => RawIngredientSchema.parse({ ...validEntry, caloriesPer100g: 0 })).not.toThrow()
+  })
+
+  it('rejects negative calories', () => {
+    expect(() => RawIngredientSchema.parse({ ...validEntry, caloriesPer100g: -1 })).toThrow()
   })
 
   it('rejects negative protein', () => {

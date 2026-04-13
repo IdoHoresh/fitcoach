@@ -592,17 +592,19 @@
     },
     {
       "slug": "oats_dry",
-      "englishName": "Oats",
+      "englishName": "Cereals, oats, regular and quick, not fortified, dry",
       "state": "raw",
       "category": "grains",
-      "priority": "P0"
+      "priority": "P0",
+      "fdcIdHint": 173904
     },
     {
       "slug": "oatmeal_cooked",
-      "englishName": "Oats, regular and quick, not fortified, dry",
+      "englishName": "Cereals, oats, regular and quick, unenriched, cooked with water",
       "state": "cooked",
       "category": "grains",
-      "priority": "P0"
+      "priority": "P0",
+      "fdcIdHint": 173905
     },
     {
       "slug": "barley_cooked",
@@ -651,7 +653,8 @@
       "englishName": "Tortillas, ready-to-bake or -fry, flour, refrigerated",
       "state": "raw",
       "category": "grains",
-      "priority": "P2"
+      "priority": "P2",
+      "fdcIdHint": 175037
     },
     {
       "slug": "tomato",
@@ -777,7 +780,8 @@
       "englishName": "Sweet potato, raw, unprepared",
       "state": "raw",
       "category": "vegetables",
-      "priority": "P0"
+      "priority": "P0",
+      "fdcIdHint": 168482
     },
     {
       "slug": "sweet_potato_baked",
@@ -1239,7 +1243,48 @@
       "englishName": "Salt, table",
       "state": "raw",
       "category": "condiments",
-      "priority": "P2"
+      "priority": "P2",
+      "fdcIdHint": 173468
+    },
+    {
+      "slug": "water",
+      "englishName": "Beverages, water, tap, drinking",
+      "state": "raw",
+      "category": "beverages",
+      "priority": "P0",
+      "fdcIdHint": 173647
+    },
+    {
+      "slug": "coffee_brewed",
+      "englishName": "Beverages, coffee, brewed, prepared with tap water",
+      "state": "raw",
+      "category": "beverages",
+      "priority": "P0",
+      "fdcIdHint": 171890
+    },
+    {
+      "slug": "tea_black_brewed",
+      "englishName": "Beverages, tea, black, brewed, prepared with tap water",
+      "state": "raw",
+      "category": "beverages",
+      "priority": "P0",
+      "fdcIdHint": 173227
+    },
+    {
+      "slug": "orange_juice",
+      "englishName": "Orange juice, raw",
+      "state": "raw",
+      "category": "beverages",
+      "priority": "P1",
+      "fdcIdHint": 169098
+    },
+    {
+      "slug": "apple_juice",
+      "englishName": "Apple juice, canned or bottled, unsweetened, without added ascorbic acid",
+      "state": "raw",
+      "category": "beverages",
+      "priority": "P1",
+      "fdcIdHint": 173933
     },
     {
       "slug": "brown_sugar",
