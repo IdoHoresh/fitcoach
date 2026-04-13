@@ -340,8 +340,8 @@ describe('supermarket-seed.json', () => {
 // ── Schema v15 — Rami Levy seed ───────────────────────────────────────────
 
 describe('schema v15 — Rami Levy seed', () => {
-  it('SCHEMA_VERSION is 17', () => {
-    expect(SCHEMA_VERSION).toBe(17)
+  it('SCHEMA_VERSION is 18', () => {
+    expect(SCHEMA_VERSION).toBe(18)
   })
 
   it('rami-levy-seed.json exists and is valid JSON array', () => {

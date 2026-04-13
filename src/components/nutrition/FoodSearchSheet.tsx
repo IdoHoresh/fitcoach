@@ -36,11 +36,11 @@ const CARB_CATS: ReadonlySet<FoodCategory> = new Set([
   'snacks',
 ])
 
-const TAB_DEFS = [
-  { id: 'protein' as MacroTabId, emoji: '🥩', label: 'בשר ודגים', subtitle: 'עוף, ביצים, דגים' },
-  { id: 'carbs' as MacroTabId, emoji: '🥦', label: 'פחמימות', subtitle: 'דגנים, ירקות, פירות' },
-  { id: 'fat' as MacroTabId, emoji: '🥑', label: 'שומן', subtitle: 'אבוקדו, שמן' },
-  { id: 'all' as MacroTabId, emoji: '🔍', label: 'הכל', subtitle: undefined },
+const TAB_ORDER: readonly { id: MacroTabId; emoji: string }[] = [
+  { id: 'protein', emoji: '🥩' },
+  { id: 'carbs', emoji: '🥦' },
+  { id: 'fat', emoji: '🥑' },
+  { id: 'all', emoji: '🔍' },
 ] as const
 
 interface MealLogged {
@@ -100,6 +100,20 @@ export function FoodSearchSheet({
 }: FoodSearchSheetProps) {
   const strings = t().nutrition
   const id = testID ?? 'food-search-sheet'
+
+  const tabDefs = useMemo(
+    () =>
+      TAB_ORDER.map(({ id: tabId, emoji }) => {
+        const localized = strings.foodCategoryTabs[tabId]
+        return {
+          id: tabId,
+          emoji,
+          label: localized.label,
+          subtitle: localized.subtitle || undefined,
+        }
+      }),
+    [strings],
+  )
 
   const [query, setQuery] = useState('')
   const [selectedFood, setSelectedFood] = useState<FoodItem | null>(null)
@@ -195,7 +209,7 @@ export function FoodSearchSheet({
         {/* Macro tabs — only shown when mealTarget is provided */}
         {mealTarget && (
           <View style={styles.tabsRow} testID={`${id}-tabs`}>
-            {TAB_DEFS.map((tab) => (
+            {tabDefs.map((tab) => (
               <MacroTab
                 key={tab.id}
                 emoji={tab.emoji}

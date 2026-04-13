@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 17
+export const SCHEMA_VERSION = 18
 
 /**
  * All CREATE TABLE statements.
@@ -245,6 +245,12 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
   `CREATE INDEX IF NOT EXISTS idx_meal_plan_status ON meal_plan(status)`,
   `CREATE INDEX IF NOT EXISTS idx_planned_meal_plan ON planned_meal(plan_id)`,
   `CREATE INDEX IF NOT EXISTS idx_weekly_checkin_date ON weekly_checkin(week_start_date)`,
+
+  // ── FK lookup indices (v18) ──
+  `CREATE INDEX IF NOT EXISTS idx_workout_plan_user ON workout_plan(user_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_workout_template_plan ON workout_template(plan_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_exercise_prescription_template ON exercise_prescription(template_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_saved_meal_item_meal ON saved_meal_item(saved_meal_id)`,
 
   // ── Meal Adherence (user's self-reported compliance per meal) ──
   `CREATE TABLE IF NOT EXISTS meal_adherence (

@@ -397,6 +397,12 @@ export const he = {
       fri: 'ו׳',
       sat: 'ש׳',
     },
+    foodCategoryTabs: {
+      protein: { label: 'בשר ודגים', subtitle: 'עוף, ביצים, דגים' },
+      carbs: { label: 'פחמימות', subtitle: 'דגנים, ירקות, פירות' },
+      fat: { label: 'שומן', subtitle: 'אבוקדו, שמן' },
+      all: { label: 'הכל', subtitle: '' },
+    },
   },
 
   // ── Progress ──

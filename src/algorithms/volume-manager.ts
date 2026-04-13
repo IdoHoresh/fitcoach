@@ -27,7 +27,9 @@ export interface WeeklyVolumeTarget {
  *   Week 1: MEV + small buffer (introductory)
  *   Week 2-3: Linear ramp toward MAV low
  *   Week 4-5: MAV mid to high
- *   Week 6 (deload): MV (maintenance only)
+ *   Week 6 (deload): MV + round(MV × DELOAD_VOLUME_REDUCTION) — a partial step
+ *     down from the peak toward maintenance. Ends above MV so fiber stimulation
+ *     is preserved while fatigue dissipates. Still well below MEV/MAV peak.
  *
  * @param muscleGroup - The muscle to calculate volume for
  * @param weekNumber - Current week in the mesocycle (1-based)

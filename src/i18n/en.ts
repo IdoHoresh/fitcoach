@@ -393,6 +393,12 @@ export const en: TranslationKeys = {
       fri: 'F',
       sat: 'S',
     },
+    foodCategoryTabs: {
+      protein: { label: 'Meat & Fish', subtitle: 'Chicken, eggs, fish' },
+      carbs: { label: 'Carbs', subtitle: 'Grains, veggies, fruits' },
+      fat: { label: 'Fats', subtitle: 'Avocado, oil' },
+      all: { label: 'All', subtitle: '' },
+    },
   },
 
   progress: {
