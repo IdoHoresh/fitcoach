@@ -54,6 +54,9 @@ yarn-error.*
 # Testing
 coverage/
 
+# Scratch / build artifacts from scraping and fetching scripts
+tmp/
+
 # Screenshots (debug/test)
 screenshots/
 

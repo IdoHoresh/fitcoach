@@ -1,0 +1,1433 @@
+{
+  "_comment": "Targets for fetch-usda.ts. Each entry: { slug, englishName, state, category, priority, fdcIdHint? }. slug is snake_case English used to build raw_<slug>_<state> ids in Task 3. englishName feeds USDA SR Legacy search. state is raw|cooked. priority P0 = ship first, P1 = expand, P2 = nice-to-have. fdcIdHint forces a specific FoodData Central ID when search top-hit is wrong.",
+
+  "targets": [
+    {
+      "slug": "chicken_breast",
+      "englishName": "Chicken breast, boneless, skinless, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P0"
+    },
+    {
+      "slug": "chicken_breast",
+      "englishName": "Chicken breast, boneless, skinless, cooked, roasted",
+      "state": "cooked",
+      "category": "poultry",
+      "priority": "P0"
+    },
+    {
+      "slug": "chicken_thigh",
+      "englishName": "Chicken thigh, boneless, skinless, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P0"
+    },
+    {
+      "slug": "chicken_thigh",
+      "englishName": "Chicken thigh, boneless, skinless, cooked, roasted",
+      "state": "cooked",
+      "category": "poultry",
+      "priority": "P0"
+    },
+    {
+      "slug": "chicken_drumstick",
+      "englishName": "Chicken drumstick, meat only, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "chicken_drumstick",
+      "englishName": "Chicken drumstick, meat only, cooked, roasted",
+      "state": "cooked",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "chicken_wing",
+      "englishName": "Chicken wing, meat and skin, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "chicken_wing",
+      "englishName": "Chicken wing, meat and skin, cooked, roasted",
+      "state": "cooked",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "chicken_whole",
+      "englishName": "Chicken, broiler, whole, meat and skin, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "chicken_ground",
+      "englishName": "Chicken, ground, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "chicken_ground",
+      "englishName": "Chicken, ground, cooked",
+      "state": "cooked",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "chicken_liver",
+      "englishName": "Chicken liver, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P2"
+    },
+    {
+      "slug": "chicken_liver",
+      "englishName": "Chicken liver, cooked, pan-fried",
+      "state": "cooked",
+      "category": "poultry",
+      "priority": "P2"
+    },
+    {
+      "slug": "turkey_breast",
+      "englishName": "Turkey breast, meat only, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P0"
+    },
+    {
+      "slug": "turkey_breast",
+      "englishName": "Turkey breast, meat only, cooked, roasted",
+      "state": "cooked",
+      "category": "poultry",
+      "priority": "P0"
+    },
+    {
+      "slug": "turkey_thigh",
+      "englishName": "Turkey thigh, meat only, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "turkey_ground_93",
+      "englishName": "Turkey, ground, 93% lean, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "turkey_ground_93",
+      "englishName": "Turkey, ground, 93% lean, cooked",
+      "state": "cooked",
+      "category": "poultry",
+      "priority": "P1"
+    },
+    {
+      "slug": "duck_breast",
+      "englishName": "Duck breast, meat only, raw",
+      "state": "raw",
+      "category": "poultry",
+      "priority": "P2"
+    },
+    {
+      "slug": "egg_whole",
+      "englishName": "Egg, whole, raw, fresh",
+      "state": "raw",
+      "category": "eggs",
+      "priority": "P0"
+    },
+    {
+      "slug": "egg_white",
+      "englishName": "Egg white, raw, fresh",
+      "state": "raw",
+      "category": "eggs",
+      "priority": "P0"
+    },
+    {
+      "slug": "egg_yolk",
+      "englishName": "Egg yolk, raw, fresh",
+      "state": "raw",
+      "category": "eggs",
+      "priority": "P1"
+    },
+
+    {
+      "slug": "beef_ribeye",
+      "englishName": "Beef, rib eye steak, boneless, lean and fat, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P0"
+    },
+    {
+      "slug": "beef_ribeye",
+      "englishName": "Beef, rib eye steak, boneless, lean and fat, cooked, grilled",
+      "state": "cooked",
+      "category": "meat",
+      "priority": "P0"
+    },
+    {
+      "slug": "beef_sirloin",
+      "englishName": "Beef, top sirloin, lean only, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P0"
+    },
+    {
+      "slug": "beef_sirloin",
+      "englishName": "Beef, top sirloin, lean only, cooked, broiled",
+      "state": "cooked",
+      "category": "meat",
+      "priority": "P0"
+    },
+    {
+      "slug": "beef_shoulder",
+      "englishName": "Beef, chuck, shoulder clod, lean, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P1"
+    },
+    {
+      "slug": "beef_shoulder",
+      "englishName": "Beef, chuck, shoulder clod, lean, cooked, braised",
+      "state": "cooked",
+      "category": "meat",
+      "priority": "P1"
+    },
+    {
+      "slug": "beef_brisket",
+      "englishName": "Beef, brisket, flat half, lean, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P1"
+    },
+    {
+      "slug": "beef_brisket",
+      "englishName": "Beef, brisket, flat half, lean, cooked, braised",
+      "state": "cooked",
+      "category": "meat",
+      "priority": "P1"
+    },
+    {
+      "slug": "beef_ground_95",
+      "englishName": "Beef, ground, 95% lean meat 5% fat, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P0"
+    },
+    {
+      "slug": "beef_ground_95",
+      "englishName": "Beef, ground, 95% lean meat 5% fat, cooked, pan-broiled",
+      "state": "cooked",
+      "category": "meat",
+      "priority": "P0"
+    },
+    {
+      "slug": "beef_ground_80",
+      "englishName": "Beef, ground, 80% lean meat 20% fat, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P0"
+    },
+    {
+      "slug": "beef_ground_80",
+      "englishName": "Beef, ground, 80% lean meat 20% fat, cooked, pan-broiled",
+      "state": "cooked",
+      "category": "meat",
+      "priority": "P0"
+    },
+    {
+      "slug": "beef_liver",
+      "englishName": "Beef, liver, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P2"
+    },
+    {
+      "slug": "lamb_shoulder",
+      "englishName": "Lamb, shoulder, lean, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P1"
+    },
+    {
+      "slug": "lamb_shoulder",
+      "englishName": "Lamb, shoulder, lean, cooked, braised",
+      "state": "cooked",
+      "category": "meat",
+      "priority": "P1"
+    },
+    {
+      "slug": "lamb_leg",
+      "englishName": "Lamb, leg, lean, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P1"
+    },
+    {
+      "slug": "lamb_ground",
+      "englishName": "Lamb, ground, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P2"
+    },
+    {
+      "slug": "veal_cutlet",
+      "englishName": "Veal, leg, top round, lean, raw",
+      "state": "raw",
+      "category": "meat",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "salmon_atlantic",
+      "englishName": "Fish, salmon, Atlantic, farmed, raw",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P0"
+    },
+    {
+      "slug": "salmon_atlantic",
+      "englishName": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+      "state": "cooked",
+      "category": "fish",
+      "priority": "P0"
+    },
+    {
+      "slug": "tuna_yellowfin",
+      "englishName": "Fish, tuna, fresh, yellowfin, raw",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P0"
+    },
+    {
+      "slug": "tuna_canned_water",
+      "englishName": "Fish, tuna, light, canned in water, drained solids",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P0"
+    },
+    {
+      "slug": "sea_bream",
+      "englishName": "Fish, sea bass, mixed species, raw",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P1"
+    },
+    {
+      "slug": "tilapia",
+      "englishName": "Fish, tilapia, raw",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P1"
+    },
+    {
+      "slug": "tilapia",
+      "englishName": "Fish, tilapia, cooked, dry heat",
+      "state": "cooked",
+      "category": "fish",
+      "priority": "P1"
+    },
+    {
+      "slug": "sardine_canned_oil",
+      "englishName": "Fish, sardine, Atlantic, canned in oil, drained solids with bone",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P1"
+    },
+    {
+      "slug": "mackerel",
+      "englishName": "Fish, mackerel, Atlantic, raw",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P2"
+    },
+    {
+      "slug": "cod",
+      "englishName": "Fish, cod, Atlantic, raw",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P2"
+    },
+    {
+      "slug": "shrimp",
+      "englishName": "Crustaceans, shrimp, raw",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P2"
+    },
+    {
+      "slug": "trout",
+      "englishName": "Fish, trout, rainbow, farmed, raw",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P2"
+    },
+    {
+      "slug": "salmon_smoked",
+      "englishName": "Fish, salmon, chinook, smoked",
+      "state": "raw",
+      "category": "fish",
+      "priority": "P1"
+    },
+
+    {
+      "slug": "milk_1pct",
+      "englishName": "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P0"
+    },
+    {
+      "slug": "milk_3pct",
+      "englishName": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P0"
+    },
+    {
+      "slug": "milk_whole",
+      "englishName": "Milk, whole, 3.25% milkfat, with added vitamin D",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P0"
+    },
+    {
+      "slug": "yogurt_plain_lowfat",
+      "englishName": "Yogurt, plain, low fat, 12 grams protein per 8 ounce",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P0"
+    },
+    {
+      "slug": "yogurt_plain_whole",
+      "englishName": "Yogurt, plain, whole milk, 8 grams protein per 8 ounce",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "yogurt_greek_nonfat",
+      "englishName": "Yogurt, Greek, plain, nonfat",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P0"
+    },
+    {
+      "slug": "yogurt_greek_whole",
+      "englishName": "Yogurt, Greek, plain, whole milk",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "cottage_cheese_lowfat",
+      "englishName": "Cheese, cottage, lowfat, 1% milkfat",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P0"
+    },
+    {
+      "slug": "cottage_cheese_creamed",
+      "englishName": "Cheese, cottage, creamed, large or small curd",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "labneh",
+      "englishName": "Cheese, cream, fat free",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "white_cheese_5pct",
+      "englishName": "Cheese, ricotta, part skim milk",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "feta",
+      "englishName": "Cheese, feta",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "mozzarella",
+      "englishName": "Cheese, mozzarella, low moisture, part-skim",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "yellow_cheese",
+      "englishName": "Cheese, cheddar",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "butter",
+      "englishName": "Butter, without salt",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "cream_cheese_full",
+      "englishName": "Cheese, cream",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P1"
+    },
+    {
+      "slug": "sour_cream",
+      "englishName": "Cream, sour, cultured",
+      "state": "raw",
+      "category": "dairy",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "lentils_dry",
+      "englishName": "Lentils, raw",
+      "state": "raw",
+      "category": "legumes",
+      "priority": "P0"
+    },
+    {
+      "slug": "lentils_cooked",
+      "englishName": "Lentils, mature seeds, cooked, boiled, without salt",
+      "state": "cooked",
+      "category": "legumes",
+      "priority": "P0"
+    },
+    {
+      "slug": "chickpeas_dry",
+      "englishName": "Chickpeas garbanzo beans mature seeds raw",
+      "state": "raw",
+      "category": "legumes",
+      "priority": "P0"
+    },
+    {
+      "slug": "chickpeas_cooked",
+      "englishName": "Chickpeas garbanzo beans mature seeds cooked boiled",
+      "state": "cooked",
+      "category": "legumes",
+      "priority": "P0"
+    },
+    {
+      "slug": "white_beans_dry",
+      "englishName": "Beans, white, mature seeds, raw",
+      "state": "raw",
+      "category": "legumes",
+      "priority": "P1"
+    },
+    {
+      "slug": "white_beans_cooked",
+      "englishName": "Beans, white, mature seeds, cooked, boiled, without salt",
+      "state": "cooked",
+      "category": "legumes",
+      "priority": "P1"
+    },
+    {
+      "slug": "black_beans_cooked",
+      "englishName": "Beans, black, mature seeds, cooked, boiled, without salt",
+      "state": "cooked",
+      "category": "legumes",
+      "priority": "P1"
+    },
+    {
+      "slug": "kidney_beans_cooked",
+      "englishName": "Beans, kidney, all types, mature seeds, cooked, boiled, without salt",
+      "state": "cooked",
+      "category": "legumes",
+      "priority": "P1"
+    },
+    {
+      "slug": "fava_beans_cooked",
+      "englishName": "Broadbeans (fava beans), mature seeds, cooked, boiled, without salt",
+      "state": "cooked",
+      "category": "legumes",
+      "priority": "P2"
+    },
+    {
+      "slug": "mung_beans_cooked",
+      "englishName": "Mung beans, mature seeds, cooked, boiled, without salt",
+      "state": "cooked",
+      "category": "legumes",
+      "priority": "P2"
+    },
+    {
+      "slug": "tofu_firm",
+      "englishName": "Tofu, raw, firm, prepared with calcium sulfate",
+      "state": "raw",
+      "category": "legumes",
+      "priority": "P1"
+    },
+
+    {
+      "slug": "rice_white_dry",
+      "englishName": "Rice, white, long-grain, regular, raw, unenriched",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "rice_white_cooked",
+      "englishName": "Rice, white, long-grain, regular, cooked, unenriched, without salt",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "rice_basmati_cooked",
+      "englishName": "Rice, white, long-grain, parboiled, enriched, cooked",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P1"
+    },
+    {
+      "slug": "rice_brown_cooked",
+      "englishName": "Rice, brown, long-grain, cooked",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P1"
+    },
+    {
+      "slug": "pasta_dry",
+      "englishName": "Pasta, dry, unenriched",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "pasta_cooked",
+      "englishName": "Pasta, cooked, unenriched, without added salt",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "pasta_whole_wheat_cooked",
+      "englishName": "Pasta, whole-wheat, cooked",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P1"
+    },
+    {
+      "slug": "quinoa_dry",
+      "englishName": "Quinoa, uncooked",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P1"
+    },
+    {
+      "slug": "quinoa_cooked",
+      "englishName": "Quinoa, cooked",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P1"
+    },
+    {
+      "slug": "bulgur_cooked",
+      "englishName": "Bulgur, cooked",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P1"
+    },
+    {
+      "slug": "couscous_cooked",
+      "englishName": "Couscous, cooked",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P1"
+    },
+    {
+      "slug": "oats_dry",
+      "englishName": "Oats",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "oatmeal_cooked",
+      "englishName": "Oats, regular and quick, not fortified, dry",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "barley_cooked",
+      "englishName": "Barley, pearled, cooked",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P2"
+    },
+    {
+      "slug": "buckwheat_cooked",
+      "englishName": "Buckwheat groats, roasted, cooked",
+      "state": "cooked",
+      "category": "grains",
+      "priority": "P2"
+    },
+    {
+      "slug": "bread_white",
+      "englishName": "Bread, white, commercially prepared",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "bread_whole_wheat",
+      "englishName": "Bread, whole-wheat, commercially prepared",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "bread_pita_white",
+      "englishName": "Bread, pita, white, enriched",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P0"
+    },
+    {
+      "slug": "bread_pita_whole_wheat",
+      "englishName": "Bread, pita, whole-wheat",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P1"
+    },
+    {
+      "slug": "tortilla_flour",
+      "englishName": "Tortillas, ready-to-bake or -fry, flour, refrigerated",
+      "state": "raw",
+      "category": "grains",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "tomato",
+      "englishName": "Tomatoes, red, ripe, raw, year round average",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "cherry_tomato",
+      "englishName": "Tomatoes, red, ripe, raw, year round average",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "cucumber",
+      "englishName": "Cucumber, with peel, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "bell_pepper_red",
+      "englishName": "Peppers, sweet, red, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "bell_pepper_green",
+      "englishName": "Peppers, sweet, green, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "bell_pepper_yellow",
+      "englishName": "Peppers, sweet, yellow, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "eggplant",
+      "englishName": "Eggplant, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "zucchini",
+      "englishName": "Squash, summer, zucchini, includes skin, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "broccoli",
+      "englishName": "Broccoli, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "cauliflower",
+      "englishName": "Cauliflower, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "spinach",
+      "englishName": "Spinach, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "carrot",
+      "englishName": "Carrots, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "onion",
+      "englishName": "Onions, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "onion_red",
+      "englishName": "Onions, red, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "garlic",
+      "englishName": "Garlic, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "potato",
+      "englishName": "Potatoes, raw, skin",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "potato_cooked",
+      "englishName": "Potatoes, boiled, cooked in skin, flesh, without salt",
+      "state": "cooked",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "sweet_potato",
+      "englishName": "Sweet potato, raw, unprepared",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "sweet_potato_baked",
+      "englishName": "Sweet potato, cooked, baked in skin, flesh, without salt",
+      "state": "cooked",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "lettuce_romaine",
+      "englishName": "Lettuce, cos or romaine, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "cabbage_white",
+      "englishName": "Cabbage, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "cabbage_red",
+      "englishName": "Cabbage, red, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "kale",
+      "englishName": "Kale, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "mushroom_white",
+      "englishName": "Mushrooms, white, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P0"
+    },
+    {
+      "slug": "corn_kernels",
+      "englishName": "Corn, sweet, yellow, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "green_beans",
+      "englishName": "Beans, snap, green, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "peas",
+      "englishName": "Peas, green, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "celery",
+      "englishName": "Celery, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P1"
+    },
+    {
+      "slug": "radish",
+      "englishName": "Radishes, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P2"
+    },
+    {
+      "slug": "beet",
+      "englishName": "Beets, raw",
+      "state": "raw",
+      "category": "vegetables",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "apple",
+      "englishName": "Apples, raw, with skin",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P0"
+    },
+    {
+      "slug": "banana",
+      "englishName": "Bananas, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P0"
+    },
+    {
+      "slug": "orange",
+      "englishName": "Oranges, raw, all commercial varieties",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P0"
+    },
+    {
+      "slug": "clementine",
+      "englishName": "Tangerines, (mandarin oranges), raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "pear",
+      "englishName": "Pears, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "watermelon",
+      "englishName": "Watermelon, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P0"
+    },
+    {
+      "slug": "melon_cantaloupe",
+      "englishName": "Melons, cantaloupe, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "grapes",
+      "englishName": "Grapes, red or green, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P0"
+    },
+    {
+      "slug": "strawberry",
+      "englishName": "Strawberries, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P0"
+    },
+    {
+      "slug": "blueberry",
+      "englishName": "Blueberries, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "mango",
+      "englishName": "Mangos, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "avocado",
+      "englishName": "Avocados, raw, all commercial varieties",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P0"
+    },
+    {
+      "slug": "pineapple",
+      "englishName": "Pineapple, raw, all varieties",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "kiwi",
+      "englishName": "Kiwifruit, green, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "peach",
+      "englishName": "Peaches, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "nectarine",
+      "englishName": "Nectarines, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P2"
+    },
+    {
+      "slug": "plum",
+      "englishName": "Plums, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P2"
+    },
+    {
+      "slug": "apricot",
+      "englishName": "Apricots, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P2"
+    },
+    {
+      "slug": "cherry",
+      "englishName": "Cherries, sweet, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P2"
+    },
+    {
+      "slug": "fig_fresh",
+      "englishName": "Figs, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P2"
+    },
+    {
+      "slug": "date_medjool",
+      "englishName": "Dates, medjool",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P0"
+    },
+    {
+      "slug": "raisin",
+      "englishName": "Raisins, seedless",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "lemon",
+      "englishName": "Lemons, raw, without peel",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "pomegranate",
+      "englishName": "Pomegranates, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P1"
+    },
+    {
+      "slug": "persimmon",
+      "englishName": "Persimmons, japanese, raw",
+      "state": "raw",
+      "category": "fruits",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "olive_oil",
+      "englishName": "Oil, olive, salad or cooking",
+      "state": "raw",
+      "category": "oils",
+      "priority": "P0"
+    },
+    {
+      "slug": "sunflower_oil",
+      "englishName": "Oil, sunflower, linoleic",
+      "state": "raw",
+      "category": "oils",
+      "priority": "P1"
+    },
+    {
+      "slug": "canola_oil",
+      "englishName": "Oil, canola",
+      "state": "raw",
+      "category": "oils",
+      "priority": "P1"
+    },
+    {
+      "slug": "tahini_raw",
+      "englishName": "Seeds, sesame butter, tahini, from raw and stone ground kernels",
+      "state": "raw",
+      "category": "oils",
+      "priority": "P0"
+    },
+    {
+      "slug": "mayonnaise",
+      "englishName": "Salad dressing, mayonnaise, regular",
+      "state": "raw",
+      "category": "oils",
+      "priority": "P1"
+    },
+    {
+      "slug": "peanut_butter",
+      "englishName": "Peanut butter, smooth style, without salt",
+      "state": "raw",
+      "category": "oils",
+      "priority": "P0"
+    },
+    {
+      "slug": "almond_butter",
+      "englishName": "Nuts, almond butter, plain, without salt added",
+      "state": "raw",
+      "category": "oils",
+      "priority": "P2"
+    },
+    {
+      "slug": "coconut_oil",
+      "englishName": "Oil, coconut",
+      "state": "raw",
+      "category": "oils",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "walnut",
+      "englishName": "Nuts, walnuts, English",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P0"
+    },
+    {
+      "slug": "almond",
+      "englishName": "Nuts, almonds",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P0"
+    },
+    {
+      "slug": "peanut",
+      "englishName": "Peanuts, all types, raw",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P0"
+    },
+    {
+      "slug": "cashew",
+      "englishName": "Nuts, cashew nuts, raw",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P1"
+    },
+    {
+      "slug": "pistachio",
+      "englishName": "Nuts, pistachio nuts, raw",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P1"
+    },
+    {
+      "slug": "pecan",
+      "englishName": "Nuts, pecans",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P2"
+    },
+    {
+      "slug": "hazelnut",
+      "englishName": "Nuts, hazelnuts or filberts",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P2"
+    },
+    {
+      "slug": "brazil_nut",
+      "englishName": "Nuts, brazilnuts, dried, unblanched",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P2"
+    },
+    {
+      "slug": "sunflower_seeds",
+      "englishName": "Seeds, sunflower seed kernels, dried",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P1"
+    },
+    {
+      "slug": "pumpkin_seeds",
+      "englishName": "Seeds, pumpkin and squash seed kernels, dried",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P1"
+    },
+    {
+      "slug": "chia_seeds",
+      "englishName": "Seeds, chia seeds, dried",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P2"
+    },
+    {
+      "slug": "flax_seeds",
+      "englishName": "Seeds, flaxseed",
+      "state": "raw",
+      "category": "nuts",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "sugar_white",
+      "englishName": "Sugars, granulated",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P0"
+    },
+    {
+      "slug": "honey",
+      "englishName": "Honey",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P0"
+    },
+    {
+      "slug": "silan_date_syrup",
+      "englishName": "Syrups, table blends, pancake",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P1"
+    },
+    {
+      "slug": "vinegar",
+      "englishName": "Vinegar, distilled",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P2"
+    },
+    {
+      "slug": "soy_sauce",
+      "englishName": "Soy sauce made from soy and wheat (shoyu)",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P1"
+    },
+    {
+      "slug": "tomato_sauce",
+      "englishName": "Tomato products, canned, sauce",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P1"
+    },
+    {
+      "slug": "ketchup",
+      "englishName": "Catsup",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P1"
+    },
+    {
+      "slug": "mustard",
+      "englishName": "Mustard, prepared, yellow",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P2"
+    },
+    {
+      "slug": "salt",
+      "englishName": "Salt, table",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P2"
+    },
+    {
+      "slug": "brown_sugar",
+      "englishName": "Sugars, brown",
+      "state": "raw",
+      "category": "condiments",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "cornflakes",
+      "englishName": "Cereals ready-to-eat, KELLOGG, KELLOGG'S CORN FLAKES",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P1"
+    },
+    {
+      "slug": "granola",
+      "englishName": "Cereals ready-to-eat, granola, homemade",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P1"
+    },
+    {
+      "slug": "ptitim",
+      "englishName": "Pasta, dry, unenriched",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P1",
+      "fdcIdHint": null
+    },
+    {
+      "slug": "corn_canned",
+      "englishName": "Corn, sweet, yellow, canned, whole kernel, drained solids",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P2"
+    },
+    {
+      "slug": "tuna_canned_oil",
+      "englishName": "Fish, tuna, light, canned in oil, drained solids",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P1"
+    },
+    {
+      "slug": "olives_green",
+      "englishName": "Olives, pickled, canned or bottled, green",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P1"
+    },
+    {
+      "slug": "olives_black",
+      "englishName": "Olives, ripe, canned, small-extra large",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P1"
+    },
+    {
+      "slug": "pickles",
+      "englishName": "Pickles, cucumber, dill or kosher dill",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P2"
+    },
+    {
+      "slug": "tomato_paste",
+      "englishName": "Tomato products, canned, paste, without salt added",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P1"
+    },
+    {
+      "slug": "coconut_milk",
+      "englishName": "Nuts, coconut milk, canned (liquid expressed from grated meat and water)",
+      "state": "raw",
+      "category": "dry_staples",
+      "priority": "P2"
+    },
+
+    {
+      "slug": "popcorn_air",
+      "englishName": "Snacks, popcorn, air-popped",
+      "state": "raw",
+      "category": "prepared",
+      "priority": "P2"
+    },
+    {
+      "slug": "rice_cake",
+      "englishName": "Snacks, rice cakes, brown rice, plain",
+      "state": "raw",
+      "category": "prepared",
+      "priority": "P2"
+    },
+    {
+      "slug": "crackers_water",
+      "englishName": "Crackers, saltines, includes oyster soda soup",
+      "state": "raw",
+      "category": "prepared",
+      "priority": "P2"
+    },
+    {
+      "slug": "tortilla_chip",
+      "englishName": "Snacks, tortilla chips, plain, white corn",
+      "state": "raw",
+      "category": "prepared",
+      "priority": "P2"
+    },
+    {
+      "slug": "bread_crumbs",
+      "englishName": "Bread crumbs, dry, grated, plain",
+      "state": "raw",
+      "category": "prepared",
+      "priority": "P2"
+    },
+    {
+      "slug": "pasta_sauce_marinara",
+      "englishName": "Sauce, pasta, spaghetti, marinara, ready-to-serve",
+      "state": "raw",
+      "category": "prepared",
+      "priority": "P2"
+    }
+  ]
+}
