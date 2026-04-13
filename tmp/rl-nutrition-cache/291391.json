@@ -1,0 +1,246 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [180],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 291391,
+  "multiplication": 1,
+  "barcode": 7290105474063,
+  "brand": 1095,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290105474063/small.jpg",
+    "original": "/product/7290105474063/large.jpg",
+    "trim": "/product/7290105474063/trim.jpg",
+    "transparent": "/product/7290105474063/transparent.png",
+    "gallery": []
+  },
+  "department_id": 59,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "עוף, כבד עוף, מים, גואר גאם, עמילן טפיוקה, שמן סויה, קרגינן. ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "198 גרם", "value": "198" },
+      "Net_Weight": { "UOM": "גרם", "text": "155 גרם", "value": "155" },
+      "Product_Height": { "UOM": "סמ", "text": "4.5 סמ", "value": "4.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ביופט",
+    "Product_Description_English": "La Cat Liver Mousse 155 gr.",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290105474063",
+      "לה קט",
+      "בונזו",
+      "להקט",
+      "אוכל חתולים",
+      "חתולים",
+      "שימורי כלבים",
+      "שימורי חתולים",
+      "",
+      "ביופט",
+      "בון זו",
+      "חול",
+      "מזון כלבים",
+      "מזון חתולים",
+      "כלבים",
+      "מארז",
+      "מולטיפק",
+      "מזון לח",
+      "אוכל לחתולים",
+      "אוכל לחתול",
+      "להקט",
+      "מעדנים לחתול",
+      "שימורים לחתולים",
+      "שימורים לחתול",
+      "מזון רטוב לחתול"
+    ],
+    "internal_product_description": "לה קט מוס כבד 155 גרם",
+    "Color": null,
+    "Diet_Information": [5514],
+    "Nutritional_Values": [
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "8 גרם",
+            "value": "8",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "380 מג",
+            "value": "380",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "10 גרם",
+            "value": "10",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "סידן (מג) ל-100 גרם",
+            "text": "10 מג",
+            "value": "10",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79018",
+        "label": "זרחן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5867",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "זרחן (מג) ל-100 גרם",
+            "text": "80 מג",
+            "value": "80",
+            "field_name": "Phosphorus_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79035",
+        "label": "אפר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6023",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "אפר ל-100 גרם",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Ash_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79038",
+        "label": "תאית",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6019",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "תאית ל-100 גרם",
+            "text": "0.05 גרם",
+            "value": "0.05",
+            "field_name": "Cellulose_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79065",
+        "label": "רטיבות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6021",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "רטיבות ל-100 גרם",
+            "text": "77 גרם",
+            "value": "77",
+            "field_name": "Humidity_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "להגיש בטמפרטורת החדר\nיש לערבב את עם לה קט יבש או להגיש כתוספת בין הארוחות\nיש לדאוג למים טריים לצד המזון",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "לה קט מוס כבד 155 גרם",
+    "Hazard_Precautionary_Statement": "לא למאכל אדם",
+    "short_name": "לה קט מוס כבד",
+    "Consumer_Storage_Instructions": "יש לשמור בקירור לאחר הפתיחה ולהגיש עד 48 שעות לאחר הפתיחה",
+    "Net_Content": { "UOM": "גרם", "text": "155 גרם", "value": "155" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 250,
+  "name": "לה קט מוס כבד 155 גר",
+  "site_id": 1,
+  "sub_group_id": 143,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

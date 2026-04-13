@@ -1,0 +1,92 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 374570,
+  "multiplication": 1,
+  "barcode": 7290018571088,
+  "brand": 430,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290018571088/small.jpg",
+    "original": "/product/7290018571088/large.jpg",
+    "trim": "/product/7290018571088/trim.jpg",
+    "transparent": "/product/7290018571088/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "550 גרם", "value": "550" },
+      "Product_Height": { "UOM": "סמ", "text": "20 סמ", "value": "20" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "20 סמ", "value": "20" },
+      "Product_Depth": { "UOM": "סמ", "text": "3 סמ", "value": "3" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מיה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "TR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" },
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290018571088", ""],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "טופי בטעמי פירות חמוץ מוץ",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "טופי בטעמי פירות חמוץמוץ",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "540 גרם", "value": "540" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 301,
+  "name": "טופי חמצמץ 540 גר כשלפ",
+  "site_id": 1,
+  "sub_group_id": 395,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

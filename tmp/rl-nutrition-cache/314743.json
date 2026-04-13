@@ -1,0 +1,231 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71132],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [181],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1652, "status": 2 },
+  "id": 314743,
+  "multiplication": 1,
+  "barcode": 7290014046023,
+  "brand": 3543,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290014046023/small.jpg",
+    "original": "/product/7290014046023/large.jpg",
+    "trim": "/product/7290014046023/trim.jpg",
+    "transparent": "/product/7290014046023/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "כבד עוף (30%), בשר עוף, מים, שומן אווז, פטריות (8%), חלבון סויה,  ביצים , עמילן תפו\"א למאכל, מלח שולחן, מייצבים (פוספטים מהסוגים: E450,E452,), סוכר, תבלינים, חומרי טעם וריח, , מעכב חמצון (סודיום אריתורבט), חומר משמר (סודיום ניטריט) . ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "152 גרם", "value": "152" },
+      "Net_Weight": { "UOM": "גרם", "text": "140 גרם", "value": "140" },
+      "Product_Height": { "UOM": "סמ", "text": "9.5 סמ", "value": "9.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "14 סמ", "value": "14" },
+      "Product_Depth": { "UOM": "סמ", "text": "3.5 סמ", "value": "3.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "יחיעם",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6820, 6823],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6808, 6821],
+    "Color_Number": null,
+    "Search_Tags": ["7290014046023", "יחיעם", "מוס", "כבד", "עוף", "פטריות", "140 גרם"],
+    "internal_product_description": "יחיעם מוס כבד עוף עם פטריות 140 גרם",
+    "Color": null,
+    "Diet_Information": [5538, 5528],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "218 קלוריות",
+            "value": "218",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "18 גרם",
+            "value": "18",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "170 מג",
+            "value": "170",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "750 מג",
+            "value": "750",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "13 גרם",
+            "value": "13",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "יחיעם מוס כבד עוף עם פטריות 140 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מוס כבד עוף עם פטריות ",
+    "Consumer_Storage_Instructions": "לשמור בקירור 0-4 מעלות צלזיוס. לאחר הפתיחה מומלץ להשתמש תוך יומיים שלושה או להקפיא את המוצר.",
+    "Net_Content": { "UOM": "גרם", "text": "140 גרם", "value": "140" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 204,
+  "name": "יחיעם מוס כבדעוף ופטריות 140 ג",
+  "site_id": 1,
+  "sub_group_id": 283,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

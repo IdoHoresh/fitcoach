@@ -1,0 +1,308 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67011, 67155],
+    "Israel_Milk": [6902],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 334937,
+  "multiplication": 1,
+  "barcode": 77975092491,
+  "brand": 3093,
+  "recipes": [],
+  "images": {
+    "small": "/product/077975092491/small.jpg",
+    "original": "/product/077975092491/large.jpg",
+    "trim": "/product/077975092491/trim.jpg",
+    "transparent": "/product/077975092491/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח חיטה מועשר (75%) (קמח חיטה (מכיל גלוטן), ויטמין B3, ברזל, ויטמין B1, ויטמין B2, חומצה פולית), קמח חיטה מלאה (15%), קמח שיבולת שועל (10%), לתת (סירופ טפיוקה, תמצית לתת שעורה (מכיל גלוטן)),  קמח סורגום, שמן קנולה מזוכך, קמח דוחן, מלח, סוכר קנים, גלוטן חיטה (מכיל גלוטן), קמח כוסמת, שמרים, מתפיח (סודיום הידרוגן קרבונט)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+      "Net_Weight": { "UOM": "גרם", "text": "340.2 גרם", "value": "340.2" },
+      "Product_Height": { "UOM": "סמ", "text": "28 סמ", "value": "28" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "13.5 סמ", "value": "13.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "4 סמ", "value": "4" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "סניידרס",
+    "Product_Description_English": "SNYDERS OF HANOVER BRAIDED TWISTS ANCIENT GRAIN CHIA & QUINOA",
+    "Country_of_Origin": "US",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR2", "value": "נתרן בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6809],
+    "Color_Number": null,
+    "Search_Tags": ["77975092491", "סניידרס", "חטיף", "מקלוני חיטה", "צ'יה", "קינואה"],
+    "internal_product_description": "סניידרס חטיף מקלוני חיטה בתוספת צ'יה וקינואה 340.2 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "406 קלוריות",
+            "value": "406",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.1 גרם",
+            "value": "7.1",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.7 גרם",
+            "value": "0.7",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "857 מג",
+            "value": "857",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "71.4 גרם",
+            "value": "71.4",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7 גרם",
+            "value": "7",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "10.7 גרם",
+            "value": "10.7",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79021",
+        "label": "ויטמין‎ B1 (תיאמין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5844",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Vitamin_B1_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79022",
+        "label": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5846",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Vitamin_B2_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79015",
+        "label": "חומצה פולית (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5854",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מקג",
+            "value": "0",
+            "field_name": "Folic_Acid_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79016",
+        "label": "ברזל (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5869",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "5.7 מג",
+            "value": "5.7",
+            "field_name": "Iron_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79063",
+        "label": "ויטמין B3 (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5848",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Vitamin_B3_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "סניידרס חטיף מקלוני חיטה ושיבולת שועל",
+    "Hazard_Precautionary_Statement": "צריכת החטיף על ידי ילדים קטנים מומלצת בהשגחת מבוגר.",
+    "short_name": "חטיף מקלוני חיטה",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר,יבש ומוגן משמש.",
+    "Net_Content": { "UOM": "גרם", "text": "340.2 גרם", "value": "340.2" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 236,
+  "name": "מקלוני חיטה סניידרס צ'יה וקינואה 340 גר",
+  "site_id": 1,
+  "sub_group_id": 63,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

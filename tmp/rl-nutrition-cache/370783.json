@@ -1,0 +1,220 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6405],
+    "Rabbinate": [67163],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 370783,
+  "multiplication": 1,
+  "barcode": 7290111353123,
+  "brand": 3080,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290111353123/small.jpg",
+    "original": "/product/7290111353123/large.jpg",
+    "trim": "/product/7290111353123/trim.jpg",
+    "transparent": "/product/7290111353123/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סירופ גלוקוז, סוכר, מים, ג'לטין דגים, עמילן תירס, מווסת חומציות (חומצת לימון, חומצה פומרית), חומרי טעם וריח, צבעי מאכל (ברילינט בלו, טרטזין, אדום אלורה, סנסט ילו)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "204 גרם", "value": "204" },
+      "Net_Weight": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+      "Product_Height": { "UOM": "ממ", "text": "210 ממ", "value": "210" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "160 ממ", "value": "160" },
+      "Product_Depth": { "UOM": "ממ", "text": "25 ממ", "value": "25" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "יוגטה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "TR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6942],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6854],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290111353123",
+      "יוגטה",
+      "סוכריות",
+      "גומי",
+      "בטעמי פירות",
+      "בצורת נחש מסוכר",
+      "200 גרם"
+    ],
+    "internal_product_description": "סוכריות גומי מסוכרות בטעמי פירות בצורת נחש 200 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "336 קלוריות",
+            "value": "336",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "28 מג",
+            "value": "28",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "78 גרם",
+            "value": "78",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "61 גרם",
+            "value": "61",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "15.25",
+            "value": "15.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.7 גרם",
+            "value": "5.7",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79048",
+        "label": "סוכרים: לקטוז",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5965",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "51 גרם",
+            "value": "51",
+            "field_name": "Lactose_from_Sugars_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "סוכריות גומי מסוכרות בטעמי פירות בצורת נחש 200 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "סוכריות גומי נחשים מסוכרים",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש, הרחק מקרינת שמש ישירה.",
+    "Net_Content": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 235,
+  "name": "גומי נחשים מסוכר חמוץ חדש 200 גרם",
+  "site_id": 1,
+  "sub_group_id": 769,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

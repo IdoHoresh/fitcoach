@@ -1,0 +1,370 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71038],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085, 67255],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 10.9 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 204, "status": 2 },
+  "id": 360779,
+  "multiplication": 1,
+  "barcode": 7290112494153,
+  "brand": 2530,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112494153/small.jpg",
+    "original": "/product/7290112494153/large.jpg",
+    "trim": "/product/7290112494153/trim.jpg",
+    "transparent": "/product/7290112494153/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 21],
+  "available_in": [179, 306, 331, 411, 412, 1214, 1220, 1306, 1314, 1323, 1329, 1330, 1332],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "שמן צמחי ושמן צמחי מוקשה, מחזקי טעם (מונוסודיום גלוטמט, E635), מלח, ירקות מיובשים [עגבניות, בצל, פטריות (2.1%)], מלטודקסטרין, סוכר, שמרים, סוכר שרוף, תבלינים, הידרוליזט חלבון צמחי (מכיל סויה), מייצב (E412), חומרי טעם וריח, קמח חיטה (מכיל גלוטן), חומצת מאכל (חומצת לימון).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.083 קג", "value": "0.083" },
+      "Net_Weight": { "UOM": "קג", "text": "0.072 קג", "value": "0.072" },
+      "Product_Height": { "UOM": "ממ", "text": "101 ממ", "value": "101" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "61 ממ", "value": "61" },
+      "Product_Depth": { "UOM": "ממ", "text": "16 ממ", "value": "16" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קנור",
+    "Product_Description_English": "KNORR 72 GR X 144",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6823, 6808],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6821, 6810],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112494153",
+      "אבקת תיבול",
+      "בישול בצלי",
+      "בישול צלי",
+      "טיבול",
+      "טעם צלי",
+      "קוביות תיבול",
+      "רוטב צלי",
+      "רטבים לבישול",
+      "תבוליות",
+      "תיבול",
+      "תיבול לארוחות",
+      "תיבולית",
+      "תיבולית צלי",
+      "תיבולית קנור"
+    ],
+    "internal_product_description": "קנור תיבוליות ניחוח צלי 72 גרם",
+    "Color": null,
+    "Diet_Information": [5527, 5513, 5517],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "497 קלוריות",
+            "value": "497",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "45 קלוריות",
+            "value": "45",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "32.5 גרם",
+            "value": "32.5",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "2.9 גרם",
+            "value": "2.9",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "23.6 גרם",
+            "value": "23.6",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "2.1 גרם",
+            "value": "2.1",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "7011 מג",
+            "value": "7011",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "631 מג",
+            "value": "631",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "39.5 גרם",
+            "value": "39.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "3.6 גרם",
+            "value": "3.6",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "12.2 גרם",
+            "value": "12.2",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "1.1 גרם",
+            "value": "1.1",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "3",
+            "value": "3",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "0.25",
+            "value": "0.25",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "11.7 גרם",
+            "value": "11.7",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "1.1 גרם",
+            "value": "1.1",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "רק קוביה אחת ל-1/2 ק\"ג תפוחי אדמה",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "תיבוליות ניחוח צלי",
+    "Hazard_Precautionary_Statement": " ",
+    "short_name": "תיבוליות ניחוח צלי",
+    "Consumer_Storage_Instructions": "לאחסן במקום מוצל ויבש. יש לשמור בקירור לאחר הפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "72 גרם", "value": "72" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 229,
+  "name": "תיבולית ניחוח צלי 72 גר",
+  "site_id": 1,
+  "sub_group_id": 206,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

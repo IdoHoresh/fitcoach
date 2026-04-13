@@ -1,0 +1,221 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71115],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67016],
+    "Israel_Milk": [6901],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 13.6 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 321588,
+  "multiplication": 1,
+  "barcode": 7290012645020,
+  "brand": 3416,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290012645020/small.jpg",
+    "original": "/product/7290012645020/large.jpg",
+    "trim": "/product/7290012645020/trim.jpg",
+    "transparent": "/product/7290012645020/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [15],
+  "available_in": [82, 290, 331, 1314, 1329, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב עיזים מפוסטר,תרבית חיידקי יוגורט",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "540 גרם", "value": "540" },
+      "Net_Weight": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+      "Product_Height": { "UOM": "סמ", "text": "20 סמ", "value": "20" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6.6 סמ", "value": "6.6" },
+      "Product_Depth": { "UOM": "סמ", "text": "19.8 סמ", "value": "19.8" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "חלב הארץ",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": "2.8%",
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6880],
+    "Color_Number": null,
+    "Search_Tags": ["7290012645020", "חלב הארץ", "יוגורט עיזים", "לשתיה", "2.8%"],
+    "internal_product_description": "חלב ישראל יוגורט עיזים טבעי בבקבוק 500 גרם",
+    "Color": null,
+    "Diet_Information": [5514],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "62 קלוריות",
+            "value": "62",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם\n",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "3.5 גרם\n",
+            "value": "3.5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "10 מג",
+            "value": "10",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "4.0 גרם",
+            "value": "4.0",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "3.6 גרם",
+            "value": "3.6",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "סידן (מג) ל-100 גרם",
+            "text": "125 מג",
+            "value": "125",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "יש לנער לפני השימוש",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "חלב הארץ, יוגורט עיזים טבעי בבקבוק 500 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "יוגורט עיזים לשתיה לפחות 2.8% שומן",
+    "Consumer_Storage_Instructions": "לשמור בקירור טמפ' מומלצת 4 מעלות \nמומלץ לצרוך עד 5 ימים מיום הפתיחה",
+    "Net_Content": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 203,
+  "name": "יוגורט עיזים טבעי 500 מל",
+  "site_id": 1,
+  "sub_group_id": 374,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

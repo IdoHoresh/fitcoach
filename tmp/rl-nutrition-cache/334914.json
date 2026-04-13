@@ -1,0 +1,259 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67163, 67169, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 334914,
+  "multiplication": 1,
+  "barcode": 7290107646918,
+  "brand": 396,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290107646918/small.jpg",
+    "original": "/product/7290107646918/large.jpg",
+    "trim": "/product/7290107646918/trim.jpg",
+    "transparent": "/product/7290107646918/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10, 16, 21],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "עגבניות חתוכות ומחית עגבניות (60%), מים, פלפל אדום (9%), תרכיז עגבניות (5%), שמן צמחי, תבלינים, ירקות מיובשים (בצל, פטרוזיליה), סוכר, מלח, מגביר חוזק (קלציום כלוריד), חומצת מאכל (חומצת לימון).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.637 קג", "value": "0.637" },
+      "Net_Weight": { "UOM": "גרם", "text": "415 גרם", "value": "415" },
+      "Product_Height": { "UOM": "ממ", "text": "76 ממ", "value": "76" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "76 ממ", "value": "76" },
+      "Product_Depth": { "UOM": "ממ", "text": "147 ממ", "value": "147" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קנור",
+    "Product_Description_English": "Knorr",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290107646918",
+      "שקשוקה",
+      "רוטב עגבניות",
+      "רוטב מתובל",
+      "רוטב מוכן",
+      "תיבול",
+      "ארוחה מהירה",
+      "knorr"
+    ],
+    "internal_product_description": "שקשוקה- רוטב עגבניות מרוכז ומתובל",
+    "Color": null,
+    "Diet_Information": [5513, 5527, 5528],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "62 קלוריות",
+            "value": "62",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.1 גרם",
+            "value": "3.1",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.4 גרם",
+            "value": "0.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "440 מג",
+            "value": "440",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7 גרם",
+            "value": "7",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "1.5",
+            "value": "1.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "לחמם כף שמן במחבת, להוסיף צנצנת שלמה של רוטב שקשוקה, להביא לרתיחה ולהוסיף 4-5 ביצים. לכסות את המחבת ולהמשיך לבשל על אש בינונית כ-4 דקות או עד לבישול מלא של ביצים",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רוטב לשקשוקה ",
+    "Hazard_Precautionary_Statement": "אין לקנות או להשתמש במוצר זה כאשר המכסה אינו שקוע כלפי מטה או אם לא נשמע צליל \"קליק\" בעת הפתיחה הראשונית.",
+    "short_name": "רוטב לשקשוקה",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש\nלאחר הפתיחה יש לשמור במקרר - עד 5 ימים",
+    "Net_Content": { "UOM": "גרם", "text": "415 גרם", "value": "415" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 226,
+  "name": "קנור רוטב עגבניות לשקשוקה 415 גר",
+  "site_id": 1,
+  "sub_group_id": 388,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

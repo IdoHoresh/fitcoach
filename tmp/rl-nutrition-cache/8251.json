@@ -1,0 +1,117 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71005],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085, 67086],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 8.9 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 340, "status": 2 },
+  "id": 8251,
+  "multiplication": 1,
+  "barcode": 7290000518114,
+  "brand": 3625,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000518114/small.jpg",
+    "original": "/product/7290000518114/large.jpg",
+    "trim": "/product/7290000518114/trim.jpg",
+    "transparent": "/product/7290000518114/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [82, 179, 290, 331, 411, 412, 1314, 1329, 1389],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "דקסטרוזה 97%, סכרין 3%",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "240 גרם", "value": "240" },
+      "Net_Weight": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+      "Product_Height": { "UOM": "סמ", "text": "10 סמ", "value": "10" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "5 סמ", "value": "5" },
+      "Product_Depth": { "UOM": "סמ", "text": "5 סמ", "value": "5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מתוק וקל",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "לכפית 4",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290000518114", "ממתיק", "על", "בסיס", "סכרין", "אבקה", "200 גרם"],
+    "internal_product_description": "ממתיק על בסיס סכרין אבקה 200 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "388 קלוריות",
+            "value": "388",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "97 גרם",
+            "value": "97",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "ממתיק על בסיס סכרין אבקה 200 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "ממתיק על בסיס סכרין אבקה",
+    "Consumer_Storage_Instructions": "לשמור מקום מוצל , קריר ויבש.",
+    "Net_Content": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 274,
+  "name": "מתוק וקל אבקה 200 גרם",
+  "site_id": 1,
+  "sub_group_id": 412,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

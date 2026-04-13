@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
-import { fontSize, fontWeight } from '@/theme/typography'
+import { fontSize, fontFamily } from '@/theme/typography'
 import { isRTL } from '@/hooks/rtl'
 
 interface TextInputProps {
@@ -65,12 +65,13 @@ const styles = StyleSheet.create({
   label: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
-    fontWeight: fontWeight.medium,
+    fontFamily: fontFamily.medium,
   },
   input: {
     backgroundColor: colors.surface,
     color: colors.textPrimary,
     fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
     paddingVertical: spacing.ms,
     paddingHorizontal: spacing.md,
     borderRadius: borderRadius.md,
@@ -85,5 +86,6 @@ const styles = StyleSheet.create({
   error: {
     color: colors.error,
     fontSize: fontSize.xs,
+    fontFamily: fontFamily.regular,
   },
 })

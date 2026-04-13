@@ -1,0 +1,253 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67113],
+    "Israel_Milk": [6902],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 241064,
+  "multiplication": 1,
+  "barcode": 7614500035788,
+  "brand": 5773,
+  "recipes": [],
+  "images": {
+    "small": "/product/7614500035788/small.jpg",
+    "original": "/product/7614500035788/large.jpg",
+    "trim": "/product/7614500035788/trim.jpg",
+    "transparent": "/product/7614500035788/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 26],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סוכר, אבקת חלב מלא, חמאת קקאו, עיסת קקאו, דבש 3%, שומן חלב, שקדים (1.6%), חומר מתחלב (לציטין סויה E322), חלבון ביצה, חומר טעם וריח (ונילין), שוקולד חלב מכיל 28% מוצקי קקאו לפחות. מוצקי חלב 14% לפחות.",
+    "Product_Dimensions": {
+      "Net_Weight": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+      "Product_Height": { "UOM": "סמ", "text": "5 סמ", "value": "5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "20 סמ", "value": "20" },
+      "Product_Depth": { "UOM": "סמ", "text": "4 סמ", "value": "4" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מונדליז",
+    "Product_Description_English": "Toblerone Milk     200gr",
+    "Country_of_Origin": "CH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6808, 6818, 6821, 6840],
+    "Color_Number": null,
+    "Search_Tags": ["7614500035788", ""],
+    "internal_product_description": "טובלרון שוקולד שווצרי מולא בנוגט שקדים (10%) ודבש 200 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "525 קלוריות",
+            "value": "525",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "29 גרם",
+            "value": "29",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "17.5 גרם",
+            "value": "17.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "10 מג",
+            "value": "10",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "60 מג",
+            "value": "60",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "60 גרם",
+            "value": "60",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "59 גרם",
+            "value": "59",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "2.2 גרם",
+            "value": "2.2",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "5.4 גרם",
+            "value": "5.4",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "טובלרון שוקולד חלב 200 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "טובלרון 200 גרם",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 235,
+  "name": "שוקולד חלב טובלרון 200 גרם",
+  "site_id": 1,
+  "sub_group_id": 431,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

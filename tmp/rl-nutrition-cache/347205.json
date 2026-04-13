@@ -1,0 +1,258 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67051],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 20.4 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 347205,
+  "multiplication": 1,
+  "barcode": 7290014748651,
+  "brand": 1170,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290014748651/small.jpg",
+    "original": "/product/7290014748651/large.jpg",
+    "trim": "/product/7290014748651/trim.jpg",
+    "transparent": "/product/7290014748651/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [19],
+  "available_in": [
+    82, 179, 279, 306, 331, 411, 1197, 1214, 1220, 1221, 1226, 1307, 1314, 1323, 1329, 1330, 1333,
+    1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "פילה אמנון (70%), קמח חיטה, שמן צמחי, מים, מלח, עמילן וחלבון צמחי, מייצבים (פוספטים, קרגינן, קסנטן גאם), תבלינים וחומרי טעם, גלוטן, עמילן מעובד (E1404), מסמיך (גואר גאם/ E466), סוכרים, צבע מאכל (תמצית פפריקה). אפוי ומטוגן.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "450 גרם", "value": "450" },
+      "Net_Weight": { "UOM": "גרם", "text": "360 גרם", "value": "360" },
+      "Product_Height": { "UOM": "ממ", "text": "60.000 ממ", "value": "60.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "150.000 ממ", "value": "150.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "280.000 ממ", "value": "280.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "דג טוב",
+    "Product_Description_English": "DAG Tov Breaded TilapiaFillet8x360gIL",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": "7.5%",
+    "Allergen_Type_Code_and_Containment_May_Contain": [6820, 6823],
+    "pH": null,
+    "Serving_Size_Description": "מנה 120",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6809, 6882, 6821, 6836],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290014748651",
+      "עוף טוב",
+      "דג טוב",
+      "דגים",
+      "אמנון",
+      "נתחי אמנון",
+      "נתח שלם",
+      "פילה אמיתי",
+      "פילה"
+    ],
+    "internal_product_description": "דג טוב פילה אמנון מצפ.נתח שלם אמת.8*360ג",
+    "Color": null,
+    "Diet_Information": [5534],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "187.5 קלוריות",
+            "value": "187.5",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.5 גרם",
+            "value": "7.5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "40 מג",
+            "value": "40",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "470 מג",
+            "value": "470",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "16 גרם",
+            "value": "16",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "14 גרם",
+            "value": "14",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79070",
+        "label": "מתוך הפחמימות לקטוז (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6087",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Lactose_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "בטוסטר/ תנור 15-20 דקות בחום 180-200 מעלות\nבמיקרוגל 2 דקות ליחידה\nבטיגון עדין במשך 3 דקות. רצוי להפשיר קודם ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "דג טוב פילה אמנון מצפ.נתח שלם אמת.8*360ג",
+    "Hazard_Precautionary_Statement": "במוצר זה נעשו מאמצים רבים להרחקת עצמות\nאף על פי כן נוכחותן אפשרית",
+    "short_name": "פילה אמנון מצופה",
+    "Consumer_Storage_Instructions": "לשמור בהקפאה -18 מעלות\nאין להפשיר ולהקפיא שנית",
+    "Net_Content": { "UOM": "גרם", "text": "360 גרם", "value": "360" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 221,
+  "name": "דג טוב פילה אמנון מצופה 360 גר",
+  "site_id": 1,
+  "sub_group_id": 612,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

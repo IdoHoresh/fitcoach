@@ -1,0 +1,258 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67079],
+    "Israel_Milk": [6902],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 12.8 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 378, "status": 2 },
+  "id": 408346,
+  "multiplication": 1,
+  "barcode": 5902379385830,
+  "brand": 270,
+  "recipes": [],
+  "images": {
+    "small": "/product/5902379385830/small.jpg",
+    "original": "/product/5902379385830/large.jpg",
+    "trim": "/product/5902379385830/trim.jpg",
+    "transparent": null,
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": " ציפוי בטעם שוקולד לבן 27% [ממתיק (E965), שמן צמחי (דקל, גלעיני דקל), אבקת חלב מלא, אבקת חלב חזה, מתחלב (לציטין סויה), חומר טעם ורח], קרם בטעם וניל 25% ממתיק (965), - שמן צמחי (דקל, גלעיני דקל, לפתית), נר אבקת מי גבינה ממותקת, אבקת חלב רזה, חומרי טעם ורח], קמח חיטה (מכיל גלוטן - חיטה), שמן צמחי (קוקוס, לפתית), ממתיק (E965), קקאו חזה, שבר ביסקוויט 2% [קמח חיטה, שמן צמחי (קוקוס, לפתית), ממתיק (E965)‏ קקאו חזה, חומר התפחה (E500), מלח",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "172 גרם", "value": "172" },
+      "Net_Weight": { "UOM": "גרם", "text": "128 גרם", "value": "128" },
+      "Product_Height": { "UOM": "סמ", "text": "3 סמ", "value": "3" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "24 סמ", "value": "24" },
+      "Product_Depth": { "UOM": "סמ", "text": "9 סמ", "value": "9" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "Bergen ",
+    "Product_Description_English": "",
+    "Country_of_Origin": "PL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6824, 6833, 6835],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6807, 6810, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "5902379385830",
+      "Bergen עוגיות בטעם שוקולד במילוי בטעם וניל ללא תוספת סוכר עם ממתיק 128גר"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "524 קלוריות",
+            "value": "524",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "31 גרם",
+            "value": "31",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "19 גרם",
+            "value": "19",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 מג",
+            "value": "L 0.5",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "312 מג",
+            "value": "312",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "54 גרם",
+            "value": "54",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "6.7 גרם",
+            "value": "6.7",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79005",
+        "label": "רב כהלים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6058",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "רב כהלים (גרם) ל-100 גרם",
+            "text": "35 גרם",
+            "value": "35",
+            "field_name": "Sugar_Alcohols_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "5.2 גרם",
+            "value": "5.2",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "Bergen עוגיות בטעם שוקולד במילוי בטעם וניל ללא תוספת סוכר עם ממתיק 128גר",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "עוגיות בטעם שוקולד במילוי בטעם וניל ללא תוספת סוכר ",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "128 גרם", "value": "128" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 274,
+  "name": "עוגיות ברגן קוקיס אנד קרים לל\"ס 115 גר",
+  "site_id": 1,
+  "sub_group_id": 771,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

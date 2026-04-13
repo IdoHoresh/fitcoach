@@ -1,0 +1,277 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "ללא חשש קטניות",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67061, 67232],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 32.9 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 362325,
+  "multiplication": 1,
+  "barcode": 7290017617046,
+  "brand": 1116,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290017617046/small.jpg",
+    "original": "/product/7290017617046/large.jpg",
+    "trim": "/product/7290017617046/trim.jpg",
+    "transparent": "/product/7290017617046/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6, 21],
+  "available_in": [82, 290, 331, 412, 1225, 1307, 1314, 1329, 1330, 1389, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "טונה בהירה (70%), שמן זית (29.5%), מלח",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "420 גרם", "value": "420" },
+      "Net_Weight": { "UOM": "גרם", "text": "294 גרם", "value": "294" },
+      "Product_Height": { "UOM": "ממ", "text": "70 ממ", "value": "70" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "170 ממ", "value": "170" },
+      "Product_Depth": { "UOM": "ממ", "text": "85 ממ", "value": "85" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "סטארקיסט",
+    "Product_Description_English": "Starkist Chunk light tuna in olive oil 4 units*140 gr",
+    "Country_of_Origin": "TR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290017617046",
+      "טארקיסט",
+      "סטאקיסט",
+      "סטארכיסט",
+      "סטאקיס",
+      "סטארקיס",
+      "סטארכיס",
+      "סטאכיס",
+      "סטאכיסט",
+      "טונה",
+      "שימורים",
+      "שימורי",
+      "משומר",
+      "פילה",
+      "תונה",
+      "בשמן",
+      "כתית מעולה",
+      "שמן זית כתית מעולה",
+      "שמן צמחי",
+      "בשמן צמחי",
+      "דגים",
+      "דג",
+      "טונה בהירה",
+      "בשמן קנולה",
+      "קנולה",
+      "זית",
+      "בשמן זית",
+      "טונה בשמן זית",
+      "טונה בשמן."
+    ],
+    "internal_product_description": "סטארקיסט טונה בשמן זית 4*140גר'",
+    "Color": null,
+    "Diet_Information": [5534],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "213 קלוריות",
+            "value": "213",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "13 גרם",
+            "value": "13",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "2.3 גרם",
+            "value": "2.3",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "400 מג",
+            "value": "400",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "24 גרם",
+            "value": "24",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "סטארקיסט רביעיות טונה בשמן זית 140 גרם ליחידה",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "טונה סטארקיסט  בשמן זית",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "560 גרם", "value": "560" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910364346,
+      "sw_kefel": 1,
+      "k_cmt": null,
+      "deleted_by": "RL",
+      "k_acz_dis": 8,
+      "active": 1,
+      "created_at": "2025-08-10T12:52:00.000000Z",
+      "cmt": 1,
+      "label": "5% הנחה על מגוון מוצרים\n1 ב NaN ₪",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "is_personal": 1,
+      "updated_at": "2026-01-08T08:58:53.000000Z",
+      "approved_at": "2026-01-08 10:58:53",
+      "name": "8% הנחה על מגוון מוצרים",
+      "k_scm": null,
+      "from": "2025-08-10 00:00:00",
+      "id": 723012,
+      "to": "2026-06-26 23:59:59",
+      "scm": null,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 225,
+  "name": "טונה סטארקיסט בשמן זית",
+  "site_id": 1,
+  "sub_group_id": 76,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": true
+}

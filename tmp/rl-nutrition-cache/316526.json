@@ -1,0 +1,232 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71067],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 4 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 316526,
+  "multiplication": 1,
+  "barcode": 7290016272154,
+  "brand": 2,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290016272154/small.jpg",
+    "original": "/product/7290016272154/large.jpg",
+    "trim": "/product/7290016272154/trim.jpg",
+    "transparent": "/product/7290016272154/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [
+    82, 279, 306, 1197, 1214, 1220, 1221, 1225, 1307, 1314, 1323, 1330, 1332, 1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח חיטה (מכיל גלוטן), סוכרים (סוכר לבן, סוכר אינוורטי), שומן צמחי, עמילן תירס, מתפיחים (סודיום ביקרבונט, אמוניום ביקרבונט), מלח, מתחלב (לציטין סויה), מטפל קמח (סודיום מטאביסולפיט), חומרי טעם וריח, מעכב חמצון טבעי (תמצית רוזמרין)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+      "Net_Weight": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+      "Product_Height": { "UOM": "סמ", "text": "15 סמ", "value": "15" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "10 סמ", "value": "10" },
+      "Product_Depth": { "UOM": "סמ", "text": "7 סמ", "value": "7" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "רמי לוי שיווק השקמה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6807, 6808, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6809, 6810, 6821, 6822],
+    "Color_Number": null,
+    "Search_Tags": ["7290016272154", "רמי לוי", "זולו", "ביסקויטים", "וניל", "צורת חיות", "פתיבר"],
+    "internal_product_description": "רמי לוי זולו ביסקויטים בטעם וניל בצורת חיות 200 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "434 קלוריות",
+            "value": "434",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "4.8 גרם",
+            "value": "4.8",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "256 מג",
+            "value": "256",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "22 גרם",
+            "value": "22",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "5.5",
+            "value": "5.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "6.8 גרם",
+            "value": "6.8",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "ספארי - מיני ביסקויטים בטעם וניל",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מיני ביסקויטים בטעם וניל",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר, מוצל ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 299,
+  "name": "ביסקויט מתוק גן חיות רמי לוי 200 גרם",
+  "site_id": 1,
+  "sub_group_id": 301,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

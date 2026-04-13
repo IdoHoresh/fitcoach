@@ -1,0 +1,111 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67267, 67016, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 417408,
+  "multiplication": 1,
+  "barcode": 7290019398202,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290019398202/small.jpg",
+    "original": "/product/7290019398202/large.jpg",
+    "trim": "/product/7290019398202/trim.jpg",
+    "transparent": null,
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 15],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "משמרים (דו-תחמוצת הגופרית).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.246 קג", "value": "1.246" },
+      "Product_Height": { "UOM": "סמ", "text": "30 סמ", "value": "30" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7.3 סמ", "value": "7.3" },
+      "Product_Depth": { "UOM": "סמ", "text": "7.3 סמ", "value": "7.3" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": "11%",
+    "BrandName": "יקבי כרמל",
+    "Product_Description_English": "Carmel Appellation",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6822],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290019398202",
+      "יקבי כרמל",
+      "הסדרה האזורית",
+      "סוביניון",
+      "בלאן",
+      "גליל",
+      "יין",
+      "לבן",
+      "יבש",
+      "2023"
+    ],
+    "internal_product_description": "סוביניון בלאן גליל יין לבן יבש 2023",
+    "Color": null,
+    "Diet_Information": [5521],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "100 קלוריות",
+            "value": "100",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "סוביניון בלאן גליל יין לבן יבש 2023",
+    "Hazard_Precautionary_Statement": "מכיל אלכוהול - מומלץ להמנע משתייה מופרזת.",
+    "short_name": "סוביניון בלאן גליל יין לבן יבש ",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר ואפל.",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 239,
+  "name": "סוביניון בלאן גליל עליון",
+  "site_id": 1,
+  "sub_group_id": 34,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

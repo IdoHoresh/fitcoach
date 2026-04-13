@@ -1,0 +1,275 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71095],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 17.8 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 4730, "status": 2 },
+  "id": 5553,
+  "multiplication": 1,
+  "barcode": 7290002331421,
+  "brand": 1391,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290002331421/small.jpg",
+    "original": "/product/7290002331421/large.jpg",
+    "trim": "/product/7290002331421/trim.jpg",
+    "transparent": "/product/7290002331421/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [411, 412, 1198, 1214, 1221, 1225, 1306, 1314, 1323, 1329, 1332, 1333, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "דו פחמות, סידן, כלורידים, מגנזיום, סיליקאטים, נתרן, גפרות, אשלגן, פלואוריד, ערך הגבה.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "4.752 קג", "value": "4.752" },
+      "Net_Weight": { "UOM": "קג", "text": "0.755 קג", "value": "0.755" },
+      "Product_Height": { "UOM": "סמ", "text": "24.225 סמ", "value": "24.225" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "14.8 סמ", "value": "14.8" },
+      "Product_Depth": { "UOM": "סמ", "text": "22.2 סמ", "value": "22.2" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "נביעות",
+    "Product_Description_English": "Neviot 755ml 4x6",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": "7.8 מג",
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290002331421",
+      "שישית נביעות 755 מ\"ל \nבקבוקי מים לבית הספר \nבקבוקי מיים לבית הספר \nשישיית בקבוקי פקק ספורט \nבקבוק עם פקק ספורט TOGO\nנביעות מים מינרליים \nמים עם מגנזיום \nמים מינרליים עם מגנזיום"
+    ],
+    "internal_product_description": "נביעות 6 755 מ\"ל",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "נתרן (מג) לליטר",
+            "text": "8 מג",
+            "value": "8",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "סידן (מג) לליטר",
+            "text": "58 מג",
+            "value": "58",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79050",
+        "label": "מגנזיום (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "5986",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "מגנזיום (מג) לליטר",
+            "text": "23 מג",
+            "value": "23",
+            "field_name": "Magnesium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79058",
+        "label": "אשלגן (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "5993",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "אשלגן (מג) לליטר",
+            "text": "0.8 מג",
+            "value": "0.8",
+            "field_name": "Potassium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79039",
+        "label": "כלור (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6001",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "כלור (מג) לליטר",
+            "text": "16 מג",
+            "value": "16",
+            "field_name": "Chloride_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79073",
+        "label": "גפרות (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6093",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "גפרות (מג) לליטר",
+            "text": "6 מג",
+            "value": "6",
+            "field_name": "Sulfate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79072",
+        "label": "דו פחמות (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6096",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "דו פחמות (מג) לליטר",
+            "text": "260 מג",
+            "value": "260",
+            "field_name": "Bicarbonate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79071",
+        "label": "חנקות (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6099",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "חנקות (מג) לליטר",
+            "text": "14 מג",
+            "value": "14",
+            "field_name": "Nitrate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79080",
+        "label": "סילקה (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6117",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "סילקה (מג) לליטר",
+            "text": "9 מג",
+            "value": "9",
+            "field_name": "Silica_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79084",
+        "label": "פלואור (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6129",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "פלואור (מג) לליטר",
+            "text": "0.22 מג",
+            "value": "0.22",
+            "field_name": "Fluorine_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79094",
+        "label": "כלוריד (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6165",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "כלוריד (מג) לליטר",
+            "text": "16 מג",
+            "value": "16",
+            "field_name": "Chloride_2_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "לאחסן במקום מוצל ויבש.\n",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "שישיה מים מינרליים 755 מ\"ל TOGO",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "שישיה מים מינרליים TOGO",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש, לשמור בקירור לאחר הפתיחה.",
+    "Net_Content": { "UOM": "מל", "text": "4530 מל", "value": "4530" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 591,
+  "name": "מים מינרלים נביעות 6*755 מ\"ל",
+  "site_id": 1,
+  "sub_group_id": 1216,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

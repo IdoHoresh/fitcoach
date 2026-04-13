@@ -1,0 +1,233 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [180],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 45.7 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 3, "status": 2 },
+  "id": 3249,
+  "multiplication": 1,
+  "barcode": 7290005111761,
+  "brand": 1051,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290005111761/small.jpg",
+    "original": "/product/7290005111761/large.jpg",
+    "trim": "/product/7290005111761/trim.jpg",
+    "transparent": "/product/7290005111761/transparent.png",
+    "gallery": []
+  },
+  "department_id": 59,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [411, 412, 1198, 1226, 1306, 1314, 1323, 1329, 1330, 1378, 1389],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חיטה, עוף מיובש, שומן מן החי, סובין חיטה, סובין תירס, הידרוליזט חלבון מן החי, פולפת סלק, ויטמינים ומינרלים, זרעי פשתן, אנטיאוקסידנטים.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "3.154 קג", "value": "3.154" },
+      "Net_Weight": { "UOM": "קג", "text": "3 קג", "value": "3" },
+      "Product_Height": { "UOM": "סמ", "text": "44 סמ", "value": "44" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "19.5 סמ", "value": "19.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "12.2 סמ", "value": "12.2" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ביופט",
+    "Product_Description_English": "bonzo meat 3 kg",
+    "Country_of_Origin": "FR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290005111761",
+      "ביופט",
+      "בונזו",
+      "מזון",
+      "יבש",
+      "לכלב",
+      "מינרלים",
+      "ויטמינים",
+      "כלב",
+      "בשר",
+      "בוגר"
+    ],
+    "internal_product_description": "בונזו בשר 3 ק\"ג",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "15 גרם",
+            "value": "15",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "22 גרם",
+            "value": "22",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79016",
+        "label": "ברזל (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5869",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ברזל (מג) ל-100 גרם",
+            "text": "10 מג",
+            "value": "10",
+            "field_name": "Iron_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79032",
+        "label": "אבץ (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5871",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "אבץ (מג) ל-100 גרם",
+            "text": "12.5 מג",
+            "value": "12.5",
+            "field_name": "Zinc_per_100_g"
+          }
+        ]
+      },
+      {
+        "code": "79035",
+        "label": "אפר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6023",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "אפר ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Ash_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79038",
+        "label": "תאית",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6019",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "תאית ל-100 גרם",
+            "text": "2.5 גרם",
+            "value": "2.5",
+            "field_name": "Cellulose_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79041",
+        "label": "נחושת (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5996",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נחושת (מג או מקג) ל-100 גרם",
+            "text": "1 מג",
+            "value": "1",
+            "field_name": "Copper_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79065",
+        "label": "רטיבות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6021",
+            "col_field_id": "6066",
+            "UOM": "גרם(מקס')",
+            "col_label": "ל-100 גרם",
+            "name": "רטיבות ל-100 גרם",
+            "text": "10 גרם(מקס')",
+            "value": "10",
+            "field_name": "Humidity_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "מומלץ להגיש יבש או להרטיב במים, מספר פעמים ביום, על פי טבלת ההזנה, לא לפני פעילות גופנית מאומצת\nהחלפת מזון אחר בבונזו בשר יש לעשות בהדרגה במשך שבוע ימים\nחשוב לדאוג לקערה עם מים טריים ונקיים במשך כל שעות היממה, לצד המזון היבש",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "בונזו בשר 3 קג",
+    "Hazard_Precautionary_Statement": "לא למאכל אדם",
+    "short_name": "בונזו בשר 3 ק\"ג",
+    "Consumer_Storage_Instructions": "מומלץ לאחסן את האריזה סגורה במקום קריר ויבש",
+    "Net_Content": { "UOM": "קג", "text": "3 קג", "value": "3" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 250,
+  "name": "מזון לכלבים בונזו מזון כלבים בשר 3 ק\"ג",
+  "site_id": 1,
+  "sub_group_id": 143,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

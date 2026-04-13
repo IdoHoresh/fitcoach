@@ -1,0 +1,250 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71012],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 15.1 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 358431,
+  "multiplication": 1,
+  "barcode": 7290111531439,
+  "brand": 2,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290111531439/small.jpg",
+    "original": "/product/7290111531439/large.jpg",
+    "trim": "/product/7290111531439/trim.jpg",
+    "transparent": "/product/7290111531439/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח חיטה לבן (50%) (מכיל גלוטן), שומן דקלים, אבקת סוכר, מים, סוכר וניל, ביצים מפוסטרות, מלח, חומרי טעם וריח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Net_Weight": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+      "Product_Height": { "UOM": "סמ", "text": "5 סמ", "value": "5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "20 סמ", "value": "20" },
+      "Product_Depth": { "UOM": "סמ", "text": "17.7 סמ", "value": "17.7" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "רמי לוי שיווק השקמה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [
+      6842, 6806, 6821, 6825, 6836, 6837, 6838, 6840
+    ],
+    "pH": null,
+    "Serving_Size_Description": "חומצות שומן",
+    "litzman": false,
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6808, 6810, 6822],
+    "Color_Number": null,
+    "Search_Tags": ["7290111531439", "עוגיות לקפה", "רמי לוי עוגיות לקפה"],
+    "internal_product_description": "רמי לוי עוגיות לקפה 350 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "499 קלוריות",
+            "value": "499",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "25.6 גרם",
+            "value": "25.6",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "12.6 גרם",
+            "value": "12.6",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "43 מג",
+            "value": "43",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "61.3 גרם",
+            "value": "61.3",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "21.1 גרם",
+            "value": "21.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.3 גרם",
+            "value": "1.3",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.1 גרם",
+            "value": "5.1",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רמי לוי עוגיות לקפה 350 גרם",
+    "Hazard_Precautionary_Statement": "סכנת חנק לילדים מתחת לגיל 5",
+    "short_name": "עוגיות לקפה",
+    "Consumer_Storage_Instructions": "לשמור במקום מוצל ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 302,
+  "name": "עוגיות לקפה 350 גר רמי לוי",
+  "site_id": 1,
+  "sub_group_id": 309,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

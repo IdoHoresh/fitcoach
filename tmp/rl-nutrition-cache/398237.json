@@ -1,0 +1,217 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71125],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67159],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 14.8 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 2045, "status": 2 },
+  "id": 398237,
+  "multiplication": 1,
+  "barcode": 7290110116484,
+  "brand": 1409,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290110116484/small.jpg",
+    "original": "/product/7290110116484/large.jpg",
+    "trim": "/product/7290110116484/trim.jpg",
+    "transparent": "/product/7290110116484/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [11],
+  "available_in": [179, 279, 306, 412, 1214, 1221, 1306, 1314, 1323, 1330, 1332, 1333, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, מיץ תפוחים מרכז (28%), מחית בננה (19%), סוכר, מחית תות (3.5%), רכז גזר שחור לצביעה, מייצב: פקטין, מווסת חומציות: חומצה ציטרית, חומרי טעם וריח\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.09 קג", "value": "1.09" },
+      "Net_Weight": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Height": { "UOM": "סמ", "text": "25 סמ", "value": "25" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7.22 סמ", "value": "7.22" },
+      "Product_Depth": { "UOM": "סמ", "text": "9.65 סמ", "value": "9.65" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "פריגת ",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290110116484",
+      "תות",
+      "בננה",
+      "1 ליטר",
+      "פריגת",
+      "MIX\nפריגת מיקס \nמיקס \nפריגת סחוט"
+    ],
+    "internal_product_description": "פריגת MIX תות בננה 1 ליטר\n",
+    "Color": null,
+    "Diet_Information": [5573],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "50 קלוריות",
+            "value": "50",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "11.7 גרם",
+            "value": "11.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "11.2 גרם",
+            "value": "11.2",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "2.75",
+            "value": "2.75",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": "50%",
+    "Serving_Suggestion": "יש לנער לפני המזיגה.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פריגת MIX תות בננה 1 ליטר",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "MIX תות בננה\n",
+    "Consumer_Storage_Instructions": "יש לנער לפני המזיגה. לשמור במקרר.\nמומלץ לצריכה עד 5 ימים לאחר הפתיחה",
+    "Net_Content": { "UOM": "מל", "text": "1000 מל", "value": "1000" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "פריגת מיקס תות בננה 1 ל'",
+  "site_id": 1,
+  "sub_group_id": 437,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

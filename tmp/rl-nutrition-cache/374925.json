@@ -1,0 +1,294 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67093],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 11.7 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 374925,
+  "multiplication": 1,
+  "barcode": 7290114604857,
+  "brand": 3500,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290114604857/small.jpg",
+    "original": "/product/7290114604857/large.jpg",
+    "trim": "/product/7290114604857/trim.jpg",
+    "transparent": "/product/7290114604857/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6],
+  "available_in": [82, 279, 290, 331, 412, 1198, 1221, 1307, 1314, 1323, 1329, 1389, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח אורז לבן (50%), קמח טפיוקה (49.5%), מלח שולחן.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "416 גרם", "value": "416" },
+      "Net_Weight": { "UOM": "גרם", "text": "300 גרם", "value": "300" },
+      "Product_Height": { "UOM": "סמ", "text": "4.200 סמ", "value": "4.200" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "23.900 סמ", "value": "23.900" },
+      "Product_Depth": { "UOM": "סמ", "text": "23.800 סמ", "value": "23.800" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מנה-מאסטר שף",
+    "Product_Description_English": "MASTER CHEF ROUND RICE PAPER 22 CM",
+    "Country_of_Origin": "VN",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290114604857",
+      "אסייאתי",
+      "דפים לאגרול",
+      "דפים לגלגול",
+      "מאסטר שף",
+      "דפי אורז"
+    ],
+    "internal_product_description": "מאסטר שף דפי אורז 22 סמ",
+    "Color": null,
+    "Diet_Information": [5521],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "340 קלוריות",
+            "value": "340",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78022",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוכן",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוכן",
+            "text": "202 קלוריות",
+            "value": "202",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78022",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוכן",
+            "name": "שומנים (גרם) ל-100 גרם מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "390 מג",
+            "value": "390",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78022",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוכן",
+            "name": "נתרן (מג) ל-100 גרם מוכן",
+            "text": "232 מג",
+            "value": "232",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "81 גרם",
+            "value": "81",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78022",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוכן",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוכן",
+            "text": "48.1 גרם",
+            "value": "48.1",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78022",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוכן",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78022",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוכן",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם מוכן",
+            "text": "0.2 גרם",
+            "value": "0.2",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "3.8 גרם",
+            "value": "3.8",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78022",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוכן",
+            "name": "חלבונים (גרם) ל-100 גרם מוכן",
+            "text": "2.3 גרם",
+            "value": "2.3",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "משרים דף אורז בתבנית עגולה עם מים פושרים עד לריכוך (10 שניות בערך). מניחים על מגבת נקייה לספיגת המים המיותרים.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מאסטר שף דפי אורז 22 סמ",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "דפי אורז 22 ס\"מ",
+    "Consumer_Storage_Instructions": "יש לשמור במקום יבש והרחק ממקור חום.",
+    "Net_Content": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 306,
+  "name": "מאסטר שף דפי אורז 22 קוטר 400 גר",
+  "site_id": 1,
+  "sub_group_id": 360,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

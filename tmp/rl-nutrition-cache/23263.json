@@ -1,0 +1,240 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71100],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6407],
+    "Rabbinate": [67016],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 4 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 23263,
+  "multiplication": 1,
+  "barcode": 7290006644527,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290006644527/small.jpg",
+    "original": "/product/7290006644527/large.jpg",
+    "trim": "/product/7290006644527/trim.jpg",
+    "transparent": "/product/7290006644527/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [15],
+  "available_in": [
+    82, 279, 306, 331, 412, 1198, 1214, 1221, 1307, 1314, 1323, 1329, 1330, 1332, 1333, 1378, 1389,
+    1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, מיץ תפוחים*(4.5%), מחית בננה (4%), מיץ תפוזים* (3%), מחזק טעם (אריתריטול), מחית תות שדה* (1.5%), סוכר פירות (פרוקטוז), סוכר לבן, מיץ אסרולה* (1%), רכז גזר סגול, חומרי טעם וריח, מווסת חומציות (חומצה ציטרית), מייצב (E418), ממתיק (סוכרלוז). *עשוי מרכז",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "550 גרם", "value": "550" },
+      "Net_Weight": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+      "Product_Height": { "UOM": "סמ", "text": "19.6 סמ", "value": "19.6" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6.6 סמ", "value": "6.6" },
+      "Product_Depth": { "UOM": "סמ", "text": "6.6 סמ", "value": "6.6" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תפוזינה",
+    "Product_Description_English": "Tapuzina strawberry banana flavored 500 ml",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290006644527",
+      "תפוזינה",
+      "מיץ",
+      "משקה",
+      "משקה קל",
+      "שתיה",
+      "שתייה",
+      "משקאות",
+      "תות",
+      "בננה",
+      "תות בננה",
+      "חצי ליטר",
+      "אישי'",
+      "משקה בטעם",
+      "תות ובננה"
+    ],
+    "internal_product_description": "תפוזינה תות בננה 0.5 ל'",
+    "Color": null,
+    "Diet_Information": [5538, 5514, 5513, 5504],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "20 קלוריות",
+            "value": "20",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "שומנים (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "נתרן (מג) ל-100 מל",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "6.3 גרם",
+            "value": "6.3",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל",
+            "text": "4.5 גרם",
+            "value": "4.5",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 מל",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 מל",
+            "text": "1",
+            "value": "1",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79005",
+        "label": "רב כהלים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "6058",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "רב כהלים (גרם) ל-100 מל",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Sugar_Alcohols_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "להגיש צונן",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "תפוזינה משקה בטעם תות ובננה 500 מ\"ל",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "תפוזינה תות ובננה 500 מל",
+    "Consumer_Storage_Instructions": "לאחסן במקום מוצל, קריר ויבש.להגיש צונן.לשמור בקירור לאחר הפתיחה. מומלץ לשימוש עד 5 ימים לאחר הפתיחה.",
+    "Net_Content": { "UOM": "מל", "text": "500 מל", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "תפוזינה בטעם תות בננה 0.5 ליטר",
+  "site_id": 1,
+  "sub_group_id": 1148,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,193 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71152],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67110],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 5.9 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 386996,
+  "multiplication": 1,
+  "barcode": 7290018925140,
+  "brand": 1125,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290018925140/small.jpg",
+    "original": "/product/7290018925140/large.jpg",
+    "trim": "/product/7290018925140/trim.jpg",
+    "transparent": "/product/7290018925140/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10],
+  "available_in": [82, 279, 411, 1197, 1214, 1306, 1314, 1323, 1330, 1378, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, סוכר לבן, מיץ אשכוליות מרוכז 15%* (מכיל 10% או יותר רכיבי פרי), חומצת מאכל (חומצת לימון), מייצבים (גואר גאם- לא במוצר כשר בפסח, פקטין, ארביק גאם, אסטר גאם), מווסת חומציות (אשלגן, ציטראט), מעכב חמצון (חומצה אסקורבית), חומרי טעם וריח. *עשוי מרכז",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "1500 גרם", "value": "1500" },
+      "Net_Weight": { "UOM": "גרם", "text": "1500 גרם", "value": "1500" },
+      "Product_Height": { "UOM": "סמ", "text": "32.79 סמ", "value": "32.79" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8.9 סמ", "value": "8.9" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.9 סמ", "value": "8.9" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "פרימור",
+    "Product_Description_English": "grapefruit soft drink 1.5l",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6942],
+    "pH": null,
+    "Serving_Size_Description": "לנער היטב",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6942],
+    "Color_Number": null,
+    "Search_Tags": ["7290018925140", "פרימור", "משקה קל", "אשכולית", "‏5‏.‏1‏ ליטר"],
+    "internal_product_description": "פרימור משקה קל אשכולית ‏5‏.‏1‏ ליטר\n",
+    "Color": null,
+    "Diet_Information": [5514],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "40 קלוריות",
+            "value": "40",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "שומנים (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "נתרן (מג) ל-100 מל",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "9.5 גרם",
+            "value": "9.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79027",
+        "label": "ויטמין C (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5859",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "ויטמין C (מג) ל-100 מל",
+            "text": "30 מג",
+            "value": "30",
+            "field_name": "Vitamin_C_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פרימור משקה קל אשכולית ‏5‏.‏1‏ ליטר",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "משקה קל אשכולית ‏5‏.‏1‏ ליטר",
+    "Consumer_Storage_Instructions": "*לשמור במקום קריר ויבש לשמירת איכות המוצר\n*לאחר הפתיחה יש לשמור במקרר ומומלץ לצרוך תוך 5 ימים",
+    "Net_Content": { "UOM": "ליטר", "text": "1.5 ליטר", "value": "1.5" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "פרימור משקה קל בטעם אשכולית 1.5ליטר",
+  "site_id": 1,
+  "sub_group_id": 435,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

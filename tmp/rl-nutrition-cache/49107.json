@@ -1,0 +1,267 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "בד\"ץ ימות שנה ופסח",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67001],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 7.8 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 298, "status": 2 },
+  "id": 49107,
+  "multiplication": 1,
+  "barcode": 7290004126872,
+  "brand": 5243,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290004126872/small.jpg",
+    "original": "/product/7290004126872/large.jpg",
+    "trim": "/product/7290004126872/trim.jpg",
+    "transparent": "/product/7290004126872/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 19, 21, 10, 49],
+  "available_in": [290, 1197, 1221, 1225, 1226, 1314, 1330, 1333],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב דל לקטוז (87.8%), מים, קקאו (0.86%), סיבים תזונתיים (אינולין), סוכר, תוסף תזונה: סידן (טרי קלציום ציטרט, 0.075%),  מיץ מרוכז מפרי המונק, חומרי טעם וריח, מתחלב (E471),  מייצבים ( E466, E407),\nויטמין D (1 מק\"ג ל-100 מ\"ל). - ויטמין באותה שורה עם הרכיבים.\n* דל לקטוז - עד 0.5% לקטוז (שולחן עגול 5.9.2023).  ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "290 גרם", "value": "290" },
+      "Net_Weight": { "UOM": "גרם\n", "text": "250 גרם\n", "value": "250" },
+      "Product_Height": { "UOM": "סמ", "text": "15.5 סמ", "value": "15.5" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6.85 סמ", "value": "6.85" },
+      "Product_Depth": { "UOM": "סמ", "text": "6.85 סמ", "value": "6.85" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תנובה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": "1.9%",
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290004126872",
+      "תנובה",
+      "שוקו",
+      "2%",
+      "משקה חלב",
+      "קקאו",
+      "גיבורי על",
+      "בקבוק",
+      "בקבוק 250 מל",
+      "שוקו 250 מל",
+      "שוקו בקבוק 250 מל"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5538, 5514],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "52 קלוריות",
+            "value": "52",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "שומנים (גרם) ל-100 מל",
+            "text": "1.9 גרם",
+            "value": "1.9",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "נתרן (מג) ל-100 מל",
+            "text": "42 מג",
+            "value": "42",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 מל",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 מל",
+            "text": "1.25",
+            "value": "1.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סיבים תזונתיים (גרם) ל-100 מל",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (גרם) ל-100 מל",
+            "text": "3.1 גרם",
+            "value": "3.1",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג\n",
+            "col_label": "ל-100 מל",
+            "name": "סידן (מג) ל-100 מל",
+            "text": "160 מג\n",
+            "value": "160",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79028",
+        "label": "ויטמין D (מקג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5842",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 מל",
+            "name": "ויטמין D (מקג) ל-100 מל",
+            "text": "1 מקג",
+            "value": "1",
+            "field_name": "Vitamin_D_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "לנער לפני השימוש\n",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "משקה שוקו 250 מ\"ל",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "בקבוק שוקו תנובה 1.8%",
+    "Consumer_Storage_Instructions": "לשמור במקרר, 4 מעלות צלזיוס.",
+    "Net_Content": { "UOM": "מל", "text": "250 מל", "value": "250" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 198,
+  "name": "שוקו תנובה 2% שומן 250 מ\"ל בקבוק",
+  "site_id": 1,
+  "sub_group_id": 364,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

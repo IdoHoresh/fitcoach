@@ -1,0 +1,296 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71012],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 11.5 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 434, "status": 2 },
+  "id": 274044,
+  "multiplication": 1,
+  "barcode": 7290010328451,
+  "brand": 5494,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290010328451/small.jpg",
+    "original": "/product/7290010328451/large.jpg",
+    "trim": "/product/7290010328451/trim.jpg",
+    "transparent": "/product/7290010328451/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "שומשום (50%),סירופ גלוקוזה,סוכר,פולי קקאו (7%),שומן צמחי מוקשה (דקל),אבקת קקאו (1%), חומר מקציף (תמצית שורש ספונריה), מתחלבים (לציטין סויה, E471),מווסת חומציות(חומצת לימון),חומרי טעם וריח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "434 גרם", "value": "434" },
+      "Net_Weight": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Product_Height": { "UOM": "סמ", "text": "4 סמ", "value": "4" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "18 סמ", "value": "18" },
+      "Product_Depth": { "UOM": "סמ", "text": "13 סמ", "value": "13" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "אחוה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6802, 6842, 6804, 6865, 6841, 6840],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6821, 6836],
+    "Color_Number": null,
+    "Search_Tags": ["7290010328451", "אחוה", "חלוה", "פולי קקאו", "טבעוני", "שומשום"],
+    "internal_product_description": "אחוה חלוה עם פולי קקאו 400 גרם",
+    "Color": null,
+    "Diet_Information": [5521],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "557 קלוריות",
+            "value": "557",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "37 גרם",
+            "value": "37",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "9 גרם",
+            "value": "9",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "22 מג",
+            "value": "22",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "39 גרם",
+            "value": "39",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "24 גרם",
+            "value": "24",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "6",
+            "value": "6",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "8 גרם",
+            "value": "8",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "13 גרם",
+            "value": "13",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "80 מג",
+            "value": "80",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79016",
+        "label": "ברזל (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5869",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "3 מג",
+            "value": "3",
+            "field_name": "Iron_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "אחוה חלוה עם פולי קקאו 400 גרם",
+    "Hazard_Precautionary_Statement": "סכנת חנק לילדים מתחת לגיל 5\nעלול להכיל גושי סוכר קשים",
+    "short_name": "חלווה קקאו",
+    "Consumer_Storage_Instructions": "יש לשמור במקום קריר ויבש. לאחר פתיחת האריזה יש לסגור את החלוה היטב.",
+    "Net_Content": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 264,
+  "name": "אחוה חלוה עם פולי קקאו 400 גרם במגש",
+  "site_id": 1,
+  "sub_group_id": 404,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

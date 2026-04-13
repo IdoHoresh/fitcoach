@@ -1,0 +1,183 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67163, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 9.8 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 367647,
+  "multiplication": 1,
+  "barcode": 8934878081866,
+  "brand": 3397,
+  "recipes": [],
+  "images": {
+    "small": "/product/8934878081866/small.jpg",
+    "original": "/product/8934878081866/large.jpg",
+    "trim": "/product/8934878081866/trim.jpg",
+    "transparent": "/product/8934878081866/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10, 16],
+  "available_in": [
+    82, 411, 1197, 1220, 1225, 1226, 1306, 1314, 1323, 1329, 1332, 1333, 1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח טפיוקה (74%), קמח אורז (15%), מים, מלח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "416 גרם", "value": "416" },
+      "Net_Weight": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Product_Height": { "UOM": "סמ", "text": "27 סמ", "value": "27" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "23 סמ", "value": "23" },
+      "Product_Depth": { "UOM": "סמ", "text": "2 סמ", "value": "2" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מזרח ומערב",
+    "Product_Description_English": "Rice Paper ",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["8934878081866", "מזרח ומערב", "דפי אורז", "400 גרם"],
+    "internal_product_description": "מזרח ומערב דפי אורז 400 גרם",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "text": "343 קלוריות",
+            "value": "343",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "text": "0.12 גרם",
+            "value": "0.12",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "text": "263 מג",
+            "value": "263",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "text": "85 גרם",
+            "value": "85",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "text": "0.58 גרם",
+            "value": "0.58",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מזרח ומערב דפי אורז 400 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": " דפי אורז",
+    "Consumer_Storage_Instructions": "יש לשמור במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 306,
+  "name": "דפי אורז מרובעים 440 גר לל\"ג",
+  "site_id": 1,
+  "sub_group_id": 360,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": false
+}

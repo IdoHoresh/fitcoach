@@ -1,0 +1,196 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67096, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 282425,
+  "multiplication": 1,
+  "barcode": 8001003100218,
+  "brand": 3080,
+  "recipes": [],
+  "images": {
+    "small": "/product/8001003100218/small.jpg",
+    "original": "/product/8001003100218/large.jpg",
+    "trim": "/product/8001003100218/trim.jpg",
+    "transparent": "/product/8001003100218/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סירופ גלוקוזה, סוכר, מים, מקריש (פקטין), מיץ לימון 6%, ציפת תפוח 2%, חומצה: חומצת לימון, מיצוי סמסוסק, חומרי טעם וריח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "808 גרם", "value": "808" },
+      "Net_Weight": { "UOM": "גרם", "text": "800 גרם", "value": "800" },
+      "Product_Height": { "UOM": "סמ", "text": "30 סמ", "value": "30" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "23 סמ", "value": "23" },
+      "Product_Depth": { "UOM": "סמ", "text": "4 סמ", "value": "4" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "יוגטה",
+    "Product_Description_English": "fruit flavored jelly candies",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6827],
+    "pH": null,
+    "Serving_Size_Description": "18 גרם",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6945],
+    "Color_Number": null,
+    "Search_Tags": ["8001003100218", "יוגטה", "סוכריות", "ג'לי", "טעמי פירות", "800 גרם"],
+    "internal_product_description": "יוגטה סוכריות ג'לי בטעמי פירות, 800 גרם",
+    "Color": null,
+    "Diet_Information": [5513],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "362 קלוריות",
+            "value": "362",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "90.5 גרם",
+            "value": "90.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "81.1 גרם",
+            "value": "81.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "20.25",
+            "value": "20.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "סוכריות ג'לי בטעמי פירות 800 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "סוכריות ג'לי בטעמי פירות",
+    "Consumer_Storage_Instructions": "אחסן במקום קריר ויבש, המנע מחשיפה ישירה למקור חום.",
+    "Net_Content": { "UOM": "גרם", "text": "800 גרם", "value": "800" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 301,
+  "name": "סוכריות ג'לי פירות 800 גר",
+  "site_id": 1,
+  "sub_group_id": 395,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

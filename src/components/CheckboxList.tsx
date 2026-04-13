@@ -3,7 +3,7 @@ import { View, Text, Pressable, StyleSheet } from 'react-native'
 import Animated from 'react-native-reanimated'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
-import { fontSize, fontWeight } from '@/theme/typography'
+import { fontSize, fontFamily } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 import { triggerHaptic } from '@/hooks/useHaptics'
 import { t } from '@/i18n'
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   selectAllLabel: {
     color: colors.primary,
     fontSize: fontSize.sm,
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
   },
   row: {
     backgroundColor: colors.surface,
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   label: {
     color: colors.textPrimary,
     fontSize: fontSize.md,
-    fontWeight: fontWeight.medium,
+    fontFamily: fontFamily.medium,
   },
   spacer: {
     flex: 1,
@@ -174,6 +174,6 @@ const styles = StyleSheet.create({
   checkmarkText: {
     color: colors.textPrimary,
     fontSize: fontSize.sm,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
   },
 })

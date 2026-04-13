@@ -1,0 +1,101 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71128],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67173, 67194, 67113],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 40.8 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1282, "status": 2 },
+  "id": 313436,
+  "multiplication": 1,
+  "barcode": 7290014501232,
+  "brand": 1592,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290014501232/small.jpg",
+    "original": "/product/7290014501232/large.jpg",
+    "trim": "/product/7290014501232/trim.jpg",
+    "transparent": "/product/7290014501232/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [19, 26],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מכיל: גופרית דו חמצנית",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.32 קג", "value": "1.32" },
+      "Net_Weight": { "UOM": "גרם", "text": "750 גרם", "value": "750" },
+      "Product_Height": { "UOM": "ממ", "text": "318 ממ", "value": "318" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "72 ממ", "value": "72" },
+      "Product_Depth": { "UOM": "ממ", "text": "72 ממ", "value": "72" }
+    },
+    "Contains_Sulfur_Dioxide": true,
+    "Alcohol_Percentage_in_Product": "14%",
+    "BrandName": "יקב הרי גליל\n",
+    "Product_Description_English": "Galil Mountain White 2019\n",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290014501232", "יין", "לבן", "יבש", "הרי גליל"],
+    "internal_product_description": "הרי גליל לבן 2018- יין לבן יבש",
+    "Color": null,
+    "Diet_Information": [5521],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "82 קלוריות",
+            "value": "82",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "בר הרי גליל לבן 2019, יין לבן יבש, 750 מל",
+    "Hazard_Precautionary_Statement": "אזהרה:מכיל אלכוהול-מומלץ להימנע משתייה מופרזת",
+    "short_name": "יין לבן יבש",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 239,
+  "name": "הרי גליל לבן 750 מ\"ל",
+  "site_id": 1,
+  "sub_group_id": 48,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

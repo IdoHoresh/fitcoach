@@ -1,0 +1,244 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71111],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [181],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 22.3 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 992, "status": 2 },
+  "id": 5355,
+  "multiplication": 1,
+  "barcode": 7290000364858,
+  "brand": 5267,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000364858/small.jpg",
+    "original": "/product/7290000364858/large.jpg",
+    "trim": "/product/7290000364858/trim.jpg",
+    "transparent": "/product/7290000364858/transparent.png",
+    "gallery": []
+  },
+  "department_id": 51,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16],
+  "available_in": [
+    82, 125, 279, 331, 412, 1198, 1220, 1221, 1225, 1226, 1306, 1307, 1314, 1323, 1329, 1330, 1332,
+    1378, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "בשר עוף (65%), שומן עוף, מים, עמילן (תפו\"א, טפיוקה), חלבון מהצומח (סויה) (0.8%)– (רכיב זה אינו כלול בכשרות לפסח), סוכרים,  מלטודקסטרין,  עמילן מעובד (E-1420), תערובת תיבול, מחזקי טעם: מונוסודיום גלוטמט, מלח שולחן, מייצבים (E-450,  E-452), צבעי מאכל: (אבקת סלק, פפריקה), מעכב חמצון:  E-316(בכשרות לפסח:E-300 ), משמר: E-250.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "1020 גרם", "value": "1020" },
+      "Net_Weight": { "UOM": "גרם", "text": "1000 גרם", "value": "1000" },
+      "Product_Height": { "UOM": "סמ", "text": "4 סמ", "value": "4" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "18.5 סמ", "value": "18.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "30 סמ", "value": "30" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "טיב טירת צבי",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6832],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6821],
+    "Color_Number": null,
+    "Search_Tags": ["7290000364858", "נקניקיות עוף", "טירת צבי", "תנובה"],
+    "internal_product_description": "טירת צבי - נקניקיות עוף 1 ק\"ג",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "252 קלוריות",
+            "value": "252",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "20 גרם",
+            "value": "20",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "70 מג",
+            "value": "70",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "750 מג",
+            "value": "750",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "8 גרם",
+            "value": "8",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "10 גרם",
+            "value": "10",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "הוראות הכנה: הנקניקיה מוכנה לאכילה ויש לחממה בלבד.\nחימום במים: כ-10 דקות במים, לאחר הרתיחה.\nבתנור: כ-10 דקות ב180 מעלות צלזיוס\nבמיקרוגל: כ-40 שניות ל-3 נקניקיות.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "נקניקיות עוף 1 ק\"ג",
+    "Hazard_Precautionary_Statement": "לתשומת לב לילדים מתחת לגיל 5 יש לחתוך לרצועות דקות (ולא לטבעות)",
+    "short_name": "נקניקיות עוף 1 ק\"ג",
+    "Consumer_Storage_Instructions": "לאחסן בקירור עד 4 מעלות צלזיוס",
+    "Net_Content": { "UOM": "גרם", "text": "1000 גרם", "value": "1000" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 210,
+  "name": "נקניקיות עוף טירת צבי 1 ק\"ג",
+  "site_id": 1,
+  "sub_group_id": 229,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

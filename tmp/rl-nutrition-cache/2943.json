@@ -1,0 +1,227 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71126],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67001],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 5.5 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 152, "status": 2 },
+  "id": 2943,
+  "multiplication": 1,
+  "barcode": 7290004121488,
+  "brand": 5237,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290004121488/small.jpg",
+    "original": "/product/7290004121488/large.jpg",
+    "trim": "/product/7290004121488/trim.jpg",
+    "transparent": "/product/7290004121488/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [19, 49],
+  "available_in": [82, 306, 411, 412, 1198, 1214, 1221, 1226, 1306, 1314, 1330, 1333, 1378, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב, רכיבי חלב, אפרסק  מבושל (6%), מים , מייצבים {סיבים תזונתיים (אינולין), פקטין }, אבקת חלב ,  עמילן מעובד (E1442), תוסף תזונה:(סידן-טריקלציום ציטרט),  ממתיקים (אספרטיים, אססולפאם קיי), חומרי טעם וריח.   בתוספת חיידקי ביפידוס. עד 0.5% לקטוז, דל לקטוז. ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.1554 קג", "value": "0.1554" },
+      "Net_Weight": { "UOM": "קג", "text": "0.15 קג", "value": "0.15" },
+      "Product_Height": { "UOM": "ממ", "text": "67 ממ", "value": "67" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "65 ממ", "value": "65" },
+      "Product_Depth": { "UOM": "ממ", "text": "65 ממ", "value": "65" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "יופלה",
+    "Product_Description_English": "Yoplauit Diet peach 0% 150 gr",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "מנה- גביע",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290004121488",
+      "יוגורט",
+      "יופלה",
+      "אפרסק",
+      "פרי",
+      "דיאט",
+      "0%",
+      "לייט",
+      "יוגורט דיאט אפרסק",
+      "יוגורט אפרסק 0%",
+      "יופלה אפרסק לייט 0%",
+      "אפרסק",
+      "יוגרוט"
+    ],
+    "internal_product_description": "יופלה יוגורט עם אפרסק 0% שומן 150 גרם",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "39 קלוריות",
+            "value": "39",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "55 מג",
+            "value": "55",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "4.7 גרם",
+            "value": "4.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "1",
+            "value": "1",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "4.3 גרם",
+            "value": "4.3",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "160 מג",
+            "value": "160",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": "6%",
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "יוגורט דיאט אפרסק 0%",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "יוגורט דיאט אפרסק 0% יופלה",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "150 גרם", "value": "150" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 203,
+  "name": "יוגורט דיאט 0% יופלה שומן אפרסק 150 גרם",
+  "site_id": 1,
+  "sub_group_id": 94,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,331 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71065],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [181],
+    "Kosher_for_Passover": [6405],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 10.2 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 430, "status": 2 },
+  "id": 1484,
+  "multiplication": 1,
+  "barcode": 7290000537566,
+  "brand": 1997,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000537566/small.jpg",
+    "original": "/product/7290000537566/large.jpg",
+    "trim": "/product/7290000537566/trim.jpg",
+    "transparent": "/product/7290000537566/transparent.png",
+    "gallery": []
+  },
+  "department_id": 51,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [58],
+  "available_in": [
+    82, 179, 279, 290, 306, 331, 411, 412, 1197, 1198, 1214, 1220, 1221, 1225, 1226, 1306, 1314,
+    1323, 1329, 1330, 1378
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "בשר ושומן הודו ועוף (78%), מים, חלבון מן הצומח (סויה 2.5%), עמילן, סוכרים, מווסתי חומציות (אשלגן לקטט, נתרן דיאצטט, נתרן ציטרט), מלח, מייצבים (פוספטים, קראגינן, טרה גאם, גואר גאם), מלטודקסטרין, חומרי טעם וריח, עמילן מעובד (E1414), תבלינים, סיבים תזונתיים, מעכבי חימצון (נתרן אריתורבט, חומצה אסקורבית), חומר משמר (ניטריט הנתרן), צבעי מאכל (קנתקסנתין, ליקופן, רכז סלק, תמצית פפריקה)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.406 קג", "value": "0.406" },
+      "Net_Weight": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Product_Height": { "UOM": "סמ", "text": "3.3 סמ", "value": "3.3" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "14.3 סמ", "value": "14.3" },
+      "Product_Depth": { "UOM": "סמ", "text": "28.6 סמ", "value": "28.6" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "זוגלובק",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6823, 6820],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" },
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290000537566",
+      "נקניקיות",
+      "נקנקיות",
+      "נקניקיות עוף",
+      "נקניקיות טירת צבי",
+      "טירת צבי",
+      "נקניקיות עוף טירת צבי",
+      "נקניקות",
+      "נקנקיות עוף",
+      "עוף",
+      "נקנקיות טירת צבי",
+      "נקניקיות טירת",
+      "נקנ",
+      "נקניות",
+      "נקניקיות טבעול",
+      "נקניות עוף",
+      "נקניקיוטת",
+      "זוגלובק",
+      "זוגלבג",
+      "נקניקיות זוגלובק",
+      "נקנקיות זוגלובק",
+      "ג'מבו",
+      "גמבו",
+      "מארז נקניקיות",
+      "נקניקיות פרגית",
+      "נקניקיות פרגיות",
+      "נקנקיות בקר",
+      "נקניקיות ריינהולדס",
+      "נקניקיות ריינהלוד'ס",
+      "נקניקיות וינר",
+      "וינר",
+      "קנקרס",
+      "נקניקיות קנקרס",
+      "קנקרז",
+      "נקניקיות קנקרז",
+      "נקניקיות חריפות",
+      "נקניקיות מחפוד",
+      "נקניקייה אמריקאית",
+      "נקניקיות מהדרין",
+      "נקניקיות גלאט",
+      "נקניקיות פרימיום",
+      "ללא גלוטן"
+    ],
+    "internal_product_description": "זוגלובק נקניקיות עוף 400 גרם",
+    "Color": null,
+    "Diet_Information": [5538, 5528],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "200 קלוריות",
+            "value": "200",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "15 גרם",
+            "value": "15",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "75 מג",
+            "value": "75",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "750 מג",
+            "value": "750",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "בישול: להרתיח מים, לכבות את האש ולהכניס את הנקניקיות ל 5 דקות.\nטוסטר אובן: 8-10 דקות.\nמיקרוגל: 40-50 שניות ל 3 נקניקיות (תלוי בעוצמת המיקרוגל).\nמנגל: 5-8 דקות, לסובב מדי פעם עד להשחמה.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "נקניקיות עוף",
+    "Hazard_Precautionary_Statement": "לתשומת לב: לילדים מתחת לגיל 5 יש לחתוך לאורך לרצועות דקות (לא לטבעות)",
+    "short_name": "נקניקיות עוף",
+    "Consumer_Storage_Instructions": "יש לשמור בקירור 0-4°C. אין להקפיא ולהפשיר שנית. יש לצרוך תוך 5 ימים מהפתיחה או להקפיא.",
+    "Net_Content": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910368423,
+      "sw_kefel": 0,
+      "k_cmt": null,
+      "deleted_by": null,
+      "k_acz_dis": null,
+      "active": 1,
+      "created_at": "2026-03-17T11:52:11.000000Z",
+      "cmt": 2,
+      "label": "נקניקיות זוגלובק 400 גרם 2 יח' ב-16 ש\"ח",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "max_in_doc": 0,
+      "is_personal": 0,
+      "updated_at": "2026-03-17T11:52:11.000000Z",
+      "approved_at": null,
+      "name": "נקניקיות זוגלובק 400 גרם 2 יח' ב-16 ש\"ח",
+      "k_scm": null,
+      "from": "2026-03-15 00:00:00",
+      "id": 780369,
+      "to": "2026-05-02 23:59:59",
+      "scm": 16,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 210,
+  "name": "נקניקיות עוף זוגלובק 400 גרם",
+  "site_id": 1,
+  "sub_group_id": 229,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

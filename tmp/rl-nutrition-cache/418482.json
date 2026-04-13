@@ -1,0 +1,220 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71112],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67016],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 418482,
+  "multiplication": 1,
+  "barcode": 7290119772292,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290119772292/small.jpg",
+    "original": "/product/7290119772292/large.jpg",
+    "trim": "/product/7290119772292/trim.jpg",
+    "transparent": null,
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים מינרליים טבעיים",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "550 גרם", "value": "550" },
+      "Net_Weight": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+      "Product_Height": { "UOM": "סמ", "text": "22.1 סמ", "value": "22.1" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6.1 סמ", "value": "6.1" },
+      "Product_Depth": { "UOM": "סמ", "text": "6.1 סמ", "value": "6.1" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "עין גדי",
+    "Product_Description_English": "Ein Gedi mineral water 500 ml",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": "7.9",
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290119772292", "עין גדי", "מים", "מינרליים", "טבעיים"],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5538, 5514, 5513],
+    "Nutritional_Values": [
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "סידן (מג) ל-100 גרם",
+            "text": "57 מג",
+            "value": "57",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79050",
+        "label": "מגנזיום (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5986",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "מגנזיום (מג) ל-100 גרם",
+            "text": "28 מג",
+            "value": "28",
+            "field_name": "Magnesium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79058",
+        "label": "אשלגן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5993",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "אשלגן (מג) ל-100 גרם",
+            "text": "3.0 מג",
+            "value": "3.0",
+            "field_name": "Potassium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79073",
+        "label": "גפרות (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6093",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "גפרות (מג) ל-100 גרם",
+            "text": "36 מג",
+            "value": "36",
+            "field_name": "Sulfate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79072",
+        "label": "דו פחמות (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6096",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "דו פחמות (מג) ל-100 גרם",
+            "text": "220 מג",
+            "value": "220",
+            "field_name": "Bicarbonate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79071",
+        "label": "חנקות (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6099",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "חנקות (מג) ל-100 גרם",
+            "text": "32 מג",
+            "value": "32",
+            "field_name": "Nitrate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79094",
+        "label": "כלוריד (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6165",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כלוריד (מג) ל-100 גרם",
+            "text": "84 מג",
+            "value": "84",
+            "field_name": "Chloride_2_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מים מינרליים עין גדי 0.5 ל'",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מים עין גדי 0.5",
+    "Consumer_Storage_Instructions": "לאחסן במקום מוצל, קריר ויבש.להגיש צונן.לשמור בקירור לאחר הפתיחה. מומלץ לשימוש עד 5 ימים לאחר הפתיחה.",
+    "Net_Content": { "UOM": "מל", "text": "500 מל", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "עין גדי מים מינרלים 500מל",
+  "site_id": 1,
+  "sub_group_id": 298,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": false
+}

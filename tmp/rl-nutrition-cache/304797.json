@@ -1,0 +1,197 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67026],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 15.1 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 304797,
+  "multiplication": 1,
+  "barcode": 7290005684418,
+  "brand": 1811,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290005684418/small.jpg",
+    "original": "/product/7290005684418/large.jpg",
+    "trim": "/product/7290005684418/trim.jpg",
+    "transparent": "/product/7290005684418/transparent.png",
+    "gallery": []
+  },
+  "department_id": 61,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [14],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח כוסמין מלא אורגני (99% קמח כוסמין מלא אורגני מסה\"כ הקמחים, מהווה 60% ממשקל המוצר) (מכיל גלוטן), מים, שמרים לחים, מלח שולחן, לתת ממקור שעורה (מכיל גלוטן), קמח סויה, מעכב חמצון (חומצה אסכורבית), אנזימים, גלוטן.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "715 גרם", "value": "715" },
+      "Net_Weight": { "UOM": "גרם", "text": "700 גרם", "value": "700" },
+      "Product_Height": { "UOM": "סמ", "text": "26 סמ", "value": "26" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "15 סמ", "value": "15" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "לחם אדמה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6824, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810, 6813, 6811, 6821],
+    "Color_Number": null,
+    "Search_Tags": ["7290005684418", "לחם", "קמח כוסמין מלא", "מלא פרוס", "לחם אדמה"],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5514, 5513, 5529],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "228 קלוריות",
+            "value": "228",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.49 גרם",
+            "value": "1.49",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-25 מג",
+            "value": "L 25",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "345 מג",
+            "value": "345",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "47.2 גרם",
+            "value": "47.2",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "9.29 גרם",
+            "value": "9.29",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "לחם מקמח כוסמין מלא פרוס 700 גר",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "לחם כוסמין",
+    "Consumer_Storage_Instructions": "לקרור או להקפאה ללא חומרים משמרים",
+    "Net_Content": { "UOM": "גרם", "text": "700 גרם", "value": "700" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 195,
+  "name": "לחם כוסמין מלא 700 גרם",
+  "site_id": 1,
+  "sub_group_id": 18,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

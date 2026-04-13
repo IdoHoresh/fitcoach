@@ -1,0 +1,113 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71070],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67245],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 4 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 387071,
+  "multiplication": 1,
+  "barcode": 7290000136325,
+  "brand": 2285,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000136325/small.jpg",
+    "original": "/product/7290000136325/large.jpg",
+    "trim": "/product/7290000136325/trim.jpg",
+    "transparent": null,
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, פחמן דו חמצני, חומרי טעם וריח, סודיום ביקרבונט, חומצת מאכל (חומצת לימון)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.546 קג", "value": "1.546" },
+      "Net_Weight": { "UOM": "קג", "text": "1.5 קג", "value": "1.5" },
+      "Product_Height": { "UOM": "סמ", "text": "32 סמ", "value": "32" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "9 סמ", "value": "9" },
+      "Product_Depth": { "UOM": "סמ", "text": "9 סמ", "value": "9" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "טמפו",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290000136325",
+      "סודה",
+      "סודה בנגיעות טעם",
+      "סודה בטעמים",
+      "מארז רביעייה",
+      "סודה 1.5",
+      "סודה אפרסק",
+      "אפרסק",
+      "גזוז בטעם",
+      "גזוז בטעם אפרסק",
+      "רביעייה"
+    ],
+    "internal_product_description": "סודה בנגיעות טעם אפרסק, 1.5 ליטר",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "15 מג",
+            "value": "15",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": "0%",
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "סודה בנגיעות טעם אפרסק, 1.5 ליטר",
+    "Hazard_Precautionary_Statement": "להחזיק במקום קריר ומוצל",
+    "short_name": "סודה בנגיעות טעם אפרסק, 1.5 ליטר",
+    "Consumer_Storage_Instructions": "להגיש צונן.\nלשמור בקירור לאחר הפתיחה.\n",
+    "Net_Content": { "UOM": "ליטר", "text": "6 ליטר", "value": "6" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "סודה אפרסק 1.5 לי",
+  "site_id": 1,
+  "sub_group_id": 298,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,240 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67093, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 374681,
+  "multiplication": 1,
+  "barcode": 8857106430512,
+  "brand": 3364,
+  "recipes": [],
+  "images": {
+    "small": "/product/8857106430512/small.jpg",
+    "original": "/product/8857106430512/large.jpg",
+    "trim": "/product/8857106430512/trim.jpg",
+    "transparent": "/product/8857106430512/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6, 16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "אורז לבן (49.6%), אורז חום (43.76%), עמילן מעובד(E1420)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "260 גרם", "value": "260" },
+      "Net_Weight": { "UOM": "גרם", "text": "250 גרם", "value": "250" },
+      "Product_Height": { "UOM": "סמ", "text": "29 סמ", "value": "29" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "4 סמ", "value": "4" },
+      "Product_Depth": { "UOM": "סמ", "text": "2 סמ", "value": "2" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מזרח ומערב",
+    "Product_Description_English": "Brown Jasmin Rice Noodle Gluten Free 250g* 48/ctn",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["8857106430512", "אטריות אורז חום", "מזרח ומערב", "ללא גלוטן"],
+    "internal_product_description": "אטריות אורז עם אורז חום ל.ג 250 ג (Thai Asia)",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "356 קלוריות",
+            "value": "356",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "text": "194 קלוריות",
+            "value": "194",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "7.89 מג",
+            "value": "7.89",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "78.3 גרם",
+            "value": "78.3",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "text": "43.2 גרם",
+            "value": "43.2",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.37 גרם",
+            "value": "0.37",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.5 גרם",
+            "value": "7.5",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "text": "3.9 גרם",
+            "value": "3.9",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "לשים את אטריות האורז בקערה ולהשרות אותן במים, בטמפרטורת החדר כ-30 דקות עד לריכוך או במים רותחים כ- 5 דקות. כשאר האטריות מוכנות לסנן אותן. ניתן להכנה במרק או להקפצה.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "אטריות אורז עם אורז חום ל.ג 250 ג (Thai Asia)",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "אטריות אורז עם אורז חום",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "250 גרם", "value": "250" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 306,
+  "name": "אטריות אורז עם אורז חום",
+  "site_id": 1,
+  "sub_group_id": 360,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

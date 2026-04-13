@@ -1,0 +1,279 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6405],
+    "Rabbinate": [67093, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 363795,
+  "multiplication": 1,
+  "barcode": 7290112495471,
+  "brand": 2583,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112495471/small.jpg",
+    "original": "/product/7290112495471/large.jpg",
+    "trim": "/product/7290112495471/trim.jpg",
+    "transparent": "/product/7290112495471/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח תירס (89%), סוכר, מלח, שמן צמחי, צבע מאכל (תמצית פפריקה).\nמיוצר בקו שהוכשר כהלכתו למוצרי פרווה",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.6 קג", "value": "0.6" },
+      "Net_Weight": { "UOM": "קג", "text": "0.5 קג", "value": "0.5" },
+      "Product_Height": { "UOM": "ממ", "text": "276 ממ", "value": "276" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "78 ממ", "value": "78" },
+      "Product_Depth": { "UOM": "ממ", "text": "193 ממ", "value": "193" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תלמה",
+    "Product_Description_English": "telma cornflakes ",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6802, 6842, 6818, 6821, 6840],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112495471",
+      "קורנפלקס כשלפ",
+      "קורנפלקס כשר לפסח",
+      "תלמה דגני בוקר כשר לפסח",
+      "דגנים",
+      "קורנפלקס ללא גלוטן",
+      "ללא גלוטן",
+      "לפסח",
+      "cereal",
+      "ארוחת בוקר",
+      "ארוחת בוקר בריאה",
+      "קורנפלקס תלמה"
+    ],
+    "internal_product_description": "TELMA דגני משפחה 500 GR",
+    "Color": null,
+    "Diet_Information": [5538, 5548, 5527],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78005",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-30 גרם",
+            "text": "110 קלוריות",
+            "value": "110",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "367 קלוריות",
+            "value": "367",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78005",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-30 גרם",
+            "text": "0.4 גרם",
+            "value": "0.4",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78005",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-30 גרם",
+            "text": "135 מג",
+            "value": "135",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "450 מג",
+            "value": "450",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78005",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-30 גרם",
+            "text": "24.8 גרם",
+            "value": "24.8",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "82.6 גרם",
+            "value": "82.6",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78005",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-30 גרם",
+            "text": "2.1 גרם",
+            "value": "2.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6.9 גרם",
+            "value": "6.9",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78005",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-30 גרם",
+            "text": "0.5",
+            "value": "0.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "1.75",
+            "value": "1.75",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78005",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-30 גרם",
+            "text": "1.8 גרם",
+            "value": "1.8",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "קורנפלקס כשר לפסח ללא גלוטן דגני בוקר",
+    "Hazard_Precautionary_Statement": "המוצר אינו מכיל צבעי מאכל מלאכותיים, אך בעל גוון ייחודי המותאם לדרישות הרבנות לחג הפסח",
+    "short_name": "קורנפלקס כשר לפסח דגני",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר ויבש ולאחסן בנפרד מקטניות, סוכר וקמח. לשמירת הפריכות יש לשמור את השקית הפנימית סגורה לאחר הפתיחה באמצעות סוגר מתאים. יש לצרוך עד שלושה שבועות מרגע הפתיחה",
+    "Net_Content": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 234,
+  "name": "קורנפלקס תלמה 500 גר כשלפ חסום",
+  "site_id": 1,
+  "sub_group_id": 350,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

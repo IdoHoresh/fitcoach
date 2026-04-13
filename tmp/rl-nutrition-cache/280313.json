@@ -1,0 +1,101 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67163, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1550, "status": 2 },
+  "id": 280313,
+  "multiplication": 1,
+  "barcode": 8411277063049,
+  "brand": 1561,
+  "recipes": [],
+  "images": {
+    "small": "/product/8411277063049/small.jpg",
+    "original": "/product/8411277063049/large.jpg",
+    "trim": "/product/8411277063049/trim.jpg",
+    "transparent": "/product/8411277063049/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10, 16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.58 קג", "value": "1.58" },
+      "Net_Weight": { "UOM": "גרם", "text": "750 גרם", "value": "750" },
+      "Product_Height": { "UOM": "סמ", "text": "31 סמ", "value": "31" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8 סמ", "value": "8" },
+      "Product_Depth": { "UOM": "סמ", "text": "8 סמ", "value": "8" }
+    },
+    "Contains_Sulfur_Dioxide": true,
+    "Alcohol_Percentage_in_Product": "11.50%",
+    "BrandName": "ג'ום סרה",
+    "Product_Description_English": "KOSHER CAVA JAUME SERRA SPARKLING BRUT NATURE",
+    "Country_of_Origin": "ES",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["8411277063049", "קאווה", "ג'אום סרה", "יין מבעבע", "לבן יבש"],
+    "internal_product_description": "קאווה ג'אום סרה יין מבעבע לבן יבש 750 מל",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "64 קלוריות",
+            "value": "64",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "קאווה ג'אום סרה יין מבעבע לבן יבש 750 מל",
+    "Hazard_Precautionary_Statement": "מכיל אלכוהול מומלץ להימנע משתייה מופרזת!",
+    "short_name": "יין מבעבע לבן יבש",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 290,
+  "name": "קווה ג'ום סרה ברוט מבעבע",
+  "site_id": 1,
+  "sub_group_id": 156,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

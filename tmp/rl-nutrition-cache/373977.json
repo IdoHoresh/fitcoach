@@ -1,0 +1,252 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [181],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67212],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 206, "status": 2 },
+  "id": 373977,
+  "multiplication": 1,
+  "barcode": 7290018400814,
+  "brand": 6198,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290018400814/small.jpg",
+    "original": "/product/7290018400814/large.jpg",
+    "trim": "/product/7290018400814/trim.jpg",
+    "transparent": "/product/7290018400814/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [21],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "פירה משוחזר (56%) {מים, אבקת פירה (35%) [תפוחי אדמה מיובשים (69%), דקסטרוז, שמן צמחי, מלטודקסטרין, מלח שולחן, מחזקי טעם (מונוסודיום גלוטמט, E627, E631), עמילן מעובד (E1450), מתחלב (E471), מתפיח (E450i), צבע מאכל (בטא-קרוטן), מעכב חמצון [ E223 (מכיל סולפיט)] , תבלינים, מווסת חומציות (חומצת לימון), חומר טעם וריח]}, נתחוני שווארמה אפויים (27%){חזה הודו (90%), מים, עמילן תפוא, חלבון  אפונה, סוכרים, תבלינים, מלח שולחן, מיצוי שמרים, שמרים יבשים, תמצית פטריות, הידרוליזט חלבון  סויה, מחזקי טעם (E627, E631), שמני תבלין, חומרי טעם וריח, מלח שולחן , פלפל נמס [סוכרים, שמני תבלין, אמולספייר (E433)], קמח אורז}, בצל מטוגן (17%) {בצל (81%), שמן צמחי (שמן קנולה), תבלינים, מלח שולחן}.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "365 גרם", "value": "365" },
+      "Net_Weight": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+      "Product_Height": { "UOM": "סמ", "text": "4 סמ", "value": "4" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "13 סמ", "value": "13" },
+      "Product_Depth": { "UOM": "סמ", "text": "17.3 סמ", "value": "17.3" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תנובה שף",
+    "Product_Description_English": "Shawarma with mashed potatoes and onions",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [
+      6803, 6805, 6804, 6806, 6807, 6882, 6820, 6823, 6851, 6841, 6836, 6840
+    ],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR2", "value": "נתרן בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6821, 6822],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290018400814",
+      "שוורמה",
+      "שווארמה",
+      "שוארמה",
+      "שוארמה הודו",
+      "שוורמה הודו",
+      "שווארמה הודו",
+      "פירה",
+      "בצל",
+      "פירה ובצל",
+      "פירה עם בצל",
+      "שוורמה הודו עם פירה",
+      "שוארמה הודו עם פירה",
+      "שווארמה הודו עם פירה",
+      "שוורמה הודו עם פירה ובצל",
+      "שווארמה הודו עם פירה ובצל",
+      "שוארמה הודו עם פירה ובצל",
+      "שוורמה עם פירה ובצל",
+      "שוארמה עם פירה ובצל",
+      "שווארמה עם פירה ובצל",
+      ""
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "171 קלוריות",
+            "value": "171",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.5 גרם",
+            "value": "7.5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.3 גרם",
+            "value": "1.3",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "19 מג",
+            "value": "19",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "462 מג",
+            "value": "462",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "15.8 גרם",
+            "value": "15.8",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.7 גרם",
+            "value": "0.7",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "9.7 גרם",
+            "value": "9.7",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "שווארמה הודו עם פירה ובצל",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "פירה עם נתחי שווארמה הודו ובצל מטוגן",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 221,
+  "name": "שווארמה הודו עם פירה ובצל 350 גר",
+  "site_id": 1,
+  "sub_group_id": 462,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,152 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71019],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 7.8 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 356405,
+  "multiplication": 1,
+  "barcode": 7290016144031,
+  "brand": 6535,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290016144031/small.jpg",
+    "original": "/product/7290016144031/large.jpg",
+    "trim": "/product/7290016144031/trim.jpg",
+    "transparent": "/product/7290016144031/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [
+    82, 179, 279, 290, 306, 411, 412, 1197, 1198, 1214, 1220, 1221, 1225, 1226, 1306, 1307, 1314,
+    1323, 1329, 1330, 1332, 1333, 1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח חיטה",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.016 קג", "value": "1.016" },
+      "Net_Weight": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Height": { "UOM": "סמ", "text": "25 סמ", "value": "25" },
+      "Price_Comparison_Content": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Width": { "UOM": "סמ", "text": "16 סמ", "value": "16" },
+      "Product_Depth": { "UOM": "סמ", "text": "7 סמ", "value": "7" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "נפלאות",
+    "Product_Description_English": "All puurpose flour",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6942],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6809],
+    "Color_Number": null,
+    "Search_Tags": ["7290016144031", "נפלאות", "קמח לבן", "קמח מנופה", "ללא ניפוי"],
+    "internal_product_description": "קמח חיטה לבן",
+    "Color": null,
+    "Diet_Information": [5509],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "338 קלוריות",
+            "value": "338",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.7 גרם",
+            "value": "0.7",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "72 גרם",
+            "value": "72",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "מתכון לחלות נפלאות: (4 חלות בינוניות)\nהמצרכים:\n1 קילו קמח לבן נפלאות\n2 כפות שמרים יבשים\n3/4 כוס סוכר\nכ-3 כוסות מים פושרים (כוס = 180 מ\"ל)\n1/2 כוס שמן\n1 כף מלח\nאופן ההכנה:\n1. מניחים בקערה את הקמח, השמרים, הסוכר והמים.\n2. לשים את הבצק כ-2 דקות.\n3. מוסיפים שמן ומלח, וממשיכים ללוש עוד 5 דקות.\n * טיפ לתפיחה מושלמת: מכסים את הקערה ומניחים את הבצק לתפיחה. כעבור שעה טופחים מעט על הבצק  ומניחים אותו לתפיחה שנייה, עד שהבצק מכפיל את נפחו.\n4. מכינים את החלות: מחלקים את הבצק לכמות החלות הרצויה, מרדדים וקולעים. במקרה שהבצק דביק, מומלץ לשמן או לקמח את הידיים / משטח העבודה.\n5. מושחים את הבצק בביצה טרופה, וזורים מעל שומשום או פרג לפי הטעם.\n6 אופים כ-45 דקות בתנור מחומם ל-180 מעלות.\nבתיאבון!",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "קמח נפלאות חיטה לבן מנופה",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "קמח חיטה לבן מנופה",
+    "Consumer_Storage_Instructions": "לאחסן במקום מוצל ויבש. לאחר הפתיחה יש לשמור בקירור.",
+    "Net_Content": { "UOM": "קג", "text": "1 קג", "value": "1" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 305,
+  "name": "קמח חיטה לבן מנופה 1 ק\"ג נפלאות",
+  "site_id": 1,
+  "sub_group_id": 358,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

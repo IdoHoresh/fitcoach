@@ -1,0 +1,254 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [180],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 353709,
+  "multiplication": 1,
+  "barcode": 7290105479013,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290105479013/small.jpg",
+    "original": "/product/7290105479013/large.jpg",
+    "trim": "/product/7290105479013/trim.jpg",
+    "transparent": "/product/7290105479013/transparent.png",
+    "gallery": []
+  },
+  "department_id": 59,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "עור בקר מיובש, עמילן, עוף, גליצרין, פוטסיום סורבאט",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "3.192 קג", "value": "3.192" },
+      "Net_Weight": { "UOM": "קג", "text": "3 קג", "value": "3" },
+      "Product_Height": { "UOM": "סמ", "text": "44 סמ", "value": "44" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "19 סמ", "value": "19" },
+      "Product_Depth": { "UOM": "סמ", "text": "12.2 סמ", "value": "12.2" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ביופט",
+    "Product_Description_English": "BONZO CHOCKEN CHIP SNACK",
+    "Country_of_Origin": "CN",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290105479013", "בונזו", "חטיף", "צ'יפס"],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5514, 5513],
+    "Nutritional_Values": [
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "40 גרם",
+            "value": "40",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79019",
+        "label": "ויטמין A (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5840",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין A (מקג) ל-100 גרם",
+            "text": "360 מקג",
+            "value": "360",
+            "field_name": "Vitamin_A_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79028",
+        "label": "ויטמין D (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5842",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין D (מקג) ל-100 גרם",
+            "text": "3 מקג",
+            "value": "3",
+            "field_name": "Vitamin_D_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79029",
+        "label": "ויטמין E (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5861",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין E (מג) ל-100 גרם",
+            "text": "4.697 מג",
+            "value": "4.697",
+            "field_name": "Vitamin_E_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79035",
+        "label": "אפר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6023",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "אפר ל-100 גרם",
+            "text": "3.5 גרם",
+            "value": "3.5",
+            "field_name": "Ash_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79038",
+        "label": "תאית",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6019",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "תאית ל-100 גרם",
+            "text": "3.5 גרם",
+            "value": "3.5",
+            "field_name": "Cellulose_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79054",
+        "label": "לחות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6017",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "לחות ל-100 גרם",
+            "text": "16 גרם",
+            "value": "16",
+            "field_name": "Moisture_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79065",
+        "label": "רטיבות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6021",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "רטיבות ל-100 גרם",
+            "text": "10 גרם",
+            "value": "10",
+            "field_name": "Humidity_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "מומלץ לתת בין הארוחות או כפרס. יש לדאוג למים טריים לצד המזון.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "בונזו חטיף צ'יפס עם עוף",
+    "Hazard_Precautionary_Statement": "כמו בכל חטיף לעיסה בליעת חלקים לא לעוסים עלולה לגרום לנזק בריאותי.\n\nלא למאכל אדם",
+    "short_name": "חטיף צ'יפס עם עוף",
+    "Consumer_Storage_Instructions": "יש לאחסן את האריזה סגורה, במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "85 גרם", "value": "85" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 250,
+  "name": "בונזו חטיף צ'יפס עם עוף",
+  "site_id": 1,
+  "sub_group_id": 848,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

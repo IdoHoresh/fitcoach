@@ -3,7 +3,7 @@ import { View, Text, Pressable, StyleSheet, type ViewStyle } from 'react-native'
 import Animated from 'react-native-reanimated'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
-import { fontSize, fontWeight } from '@/theme/typography'
+import { fontSize, fontFamily } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 import { triggerHaptic } from '@/hooks/useHaptics'
 
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   label: {
     color: colors.textPrimary,
     fontSize: fontSize.md,
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
     textAlign: 'center',
   },
   labelSelected: {
@@ -150,6 +150,7 @@ const styles = StyleSheet.create({
   description: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
+    fontFamily: fontFamily.regular,
     textAlign: 'center',
   },
 })

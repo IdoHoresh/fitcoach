@@ -4,7 +4,7 @@ import { useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
-import { fontSize, fontWeight } from '@/theme/typography'
+import { fontSize, fontFamily } from '@/theme/typography'
 import { t } from '@/i18n'
 import { getGreetingKey, getRandomMotivation } from '@/utils/greeting'
 
@@ -62,11 +62,12 @@ const styles = StyleSheet.create({
   greeting: {
     color: colors.textPrimary,
     fontSize: fontSize.xl,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
   },
   motivation: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
+    fontFamily: fontFamily.regular,
   },
   avatar: {
     width: AVATAR_SIZE,
@@ -80,6 +81,6 @@ const styles = StyleSheet.create({
   avatarText: {
     color: colors.textPrimary,
     fontSize: fontSize.sm,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
   },
 })

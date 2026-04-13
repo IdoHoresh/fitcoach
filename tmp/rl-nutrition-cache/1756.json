@@ -1,0 +1,210 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [180],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 20.2 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1376, "status": 2 },
+  "id": 1756,
+  "multiplication": 1,
+  "barcode": 7290001265642,
+  "brand": 1095,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290001265642/small.jpg",
+    "original": "/product/7290001265642/large.jpg",
+    "trim": "/product/7290001265642/trim.jpg",
+    "transparent": "/product/7290001265642/transparent.png",
+    "gallery": []
+  },
+  "department_id": 59,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [1226, 1314, 1329, 1330],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מיקס בשר (עוף וכבד) -\nבשר ומוצרי לוואי מבשר (מתוכם 4% עוף, 4% כבד), דגים ומוצרי לוואי מדגים, חיטה, מינרלים, גלוטן חיטה, חומרים מייצבים, ויטמינים, טאורין\nסלמון ופורל -\nבשר ומוצרי לוואי מבשר, דגים ומוצרי לוואי מדגים (מתוכם 4% סלמון, 4% פורל), חיטה, מינרלים, גלוטן חיטה, חומרים מייצבים, ויטמינים, טאורין\nעוף -\nבשר ומוצרי לוואי מבשר (מתוכם 4% עוף), דגים ומוצרי לוואי מדגים, חיטה, מינרלים, גלוטן חיטה, חומרים מייצבים, ויטמינים, טאורין",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.964 קג", "value": "1.964" },
+      "Net_Weight": { "UOM": "קג", "text": "1.2 קג", "value": "1.2" },
+      "Product_Height": { "UOM": "סמ", "text": "11 סמ", "value": "11" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ\n", "text": "7.5 סמ\n", "value": "7.5" },
+      "Product_Depth": { "UOM": "סמ\n", "text": "3 סמ\n", "value": "3" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ביופט",
+    "Product_Description_English": "LaCat MULTI_PECK 3* 400g",
+    "Country_of_Origin": "FR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290001265642",
+      "לה קט",
+      "בונזו",
+      "להקט",
+      "אוכל חתולים",
+      "חתולים",
+      "שימורי כלבים",
+      "שימורי חתולים",
+      "",
+      "ביופט",
+      "בון זו",
+      "חול",
+      "מזון כלבים",
+      "מזון חתולים",
+      "כלבים",
+      "מארז",
+      "מולטיפק",
+      "מזון לח",
+      "אוכל לחתולים",
+      "אוכל לחתול",
+      "להקט",
+      "מזון רטוב לחתול"
+    ],
+    "internal_product_description": "לה קט מולטיפק מעדני פטה 3*400 גרם",
+    "Color": null,
+    "Diet_Information": [5513],
+    "Nutritional_Values": [
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "9.5 גרם",
+            "value": "9.5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79035",
+        "label": "אפר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6023",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "אפר ל-100 גרם",
+            "text": "2.5 גרם",
+            "value": "2.5",
+            "field_name": "Ash_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79038",
+        "label": "תאית",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6019",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "תאית ל-100 גרם",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Cellulose_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79065",
+        "label": "רטיבות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6021",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "רטיבות ל-100 גרם",
+            "text": "80 גרם",
+            "value": "80",
+            "field_name": "Humidity_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79060",
+        "label": "מלח",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6029",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "מלח ל-100 גרם",
+            "text": "0.11 גרם",
+            "value": "0.11",
+            "field_name": "Salt_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "להגיש בטמפרטורת החדר\nיש לערבב את עם לה קט יבש או להגיש כתוספת בין הארוחות\nיש לדאוג למים טריים לצד המזון",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "לה קט מולטיפק מעדני פטה 3*400 גרם",
+    "Hazard_Precautionary_Statement": "לא למאכל אדם",
+    "short_name": "לה קט מולטיפק פטה",
+    "Consumer_Storage_Instructions": "יש לשמור בקירור לאחר הפתיחה ולהגיש עד 48 שעות לאחר הפתיחה",
+    "Net_Content": { "UOM": "יחידות,", "text": "3 יחידות,", "value": "3" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 250,
+  "name": "שלישיית מעדני לה-קט פטה 3*400 גר",
+  "site_id": 1,
+  "sub_group_id": 847,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,238 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71019],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67056],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 16.2 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 12, "status": 2 },
+  "id": 338072,
+  "multiplication": 1,
+  "barcode": 7290002603696,
+  "brand": 3762,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290002603696/small.jpg",
+    "original": "/product/7290002603696/large.jpg",
+    "trim": "/product/7290002603696/trim.jpg",
+    "transparent": "/product/7290002603696/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [14],
+  "available_in": [279, 306, 331, 1214, 1220, 1306, 1314, 1330, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח חיטה לבן בהיר (28%) (מכיל גלוטן ממקור חיטה), מים, גבינה לבנה 5% שומן (20%), אבקת ביצים, מסמיך (עמילן מעובד E1414), שמן סויה מזוכך, תפוחי אדמה מיובשים, מלח שולחן דק, סוכר לבן, חומר לטיפול בקמח (E920), עמילן תירס, חומר משמר: פוטסיום סורבט.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "490 גרם", "value": "490" },
+      "Net_Weight": { "UOM": "גרם", "text": "450 גרם", "value": "450" },
+      "Product_Height": { "UOM": "סמ", "text": "26 סמ", "value": "26" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "19 סמ", "value": "19" },
+      "Product_Depth": { "UOM": "סמ", "text": "3 סמ", "value": "3" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "שף שגב",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6807, 6882, 6900, 6870, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6808, 6810, 6818, 6922],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290002603696",
+      "שגב",
+      "שף שגב",
+      "מקלות XL בורקס פילו גבינה",
+      "בורקס פילו גבינה",
+      "מאפה במילוי גבינה",
+      "מקלות XL",
+      "מקלות אקסטרה לארג'"
+    ],
+    "internal_product_description": "שגב מקלות XL בורקס פילו גבינה, מאפה במלית גבינה קפוא 450 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "281 קלוריות",
+            "value": "281",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "13.2 גרם",
+            "value": "13.2",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.6 גרם",
+            "value": "2.6",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "4 מג",
+            "value": "4",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "394 מג",
+            "value": "394",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "33.9 גרם",
+            "value": "33.9",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.9 גרם",
+            "value": "0.9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.9 גרם",
+            "value": "5.9",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "אין צורך להפשיר את המוצר לפני השימוש.\nלחמם מראש תנור או טוסטר אובן לחום בינוני של 180 מעלות צלזיוס. להניח את המאפים על גבי תבנית אפייה. להבריש את המאפים בתערובת של שמן וביצה טרופה ולפזר שומשום לפי הטעם. להכניס לתנור ולאפות כ-20 דקות עד לקבלת בצק זהוב וקריספי. זמני האפייה עשויים להשתנות בהתאם לסוג ועוצמת התנור. לכן מומלץ לבדוק במהלך האפייה את פריכות וצבע הבצק, לשנות את זמן האפייה ולהפוך את המוצר במידת הצורך.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "שגב מקלות XL בורקס פילו גבינה, מאפה במלית גבינה קפוא 450 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מקלות XL בורקס פילו גבינה 450 גרם",
+    "Consumer_Storage_Instructions": "לשמור בהקפאה (מינוס 18 מעלות צלזיוס). אין להפשיר ולהקפיא שנית.",
+    "Net_Content": { "UOM": "גרם,", "text": "450 גרם,", "value": "450" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 223,
+  "name": "מקלות פילו גדול גבינה שגב 450 גרם",
+  "site_id": 1,
+  "sub_group_id": 291,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

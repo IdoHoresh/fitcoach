@@ -1,0 +1,251 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67093, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 11.9 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 373096,
+  "multiplication": 1,
+  "barcode": 7290108508178,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290108508178/small.jpg",
+    "original": "/product/7290108508178/large.jpg",
+    "trim": "/product/7290108508178/trim.jpg",
+    "transparent": "/product/7290108508178/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6, 16],
+  "available_in": [279, 306, 1214, 1314, 1378, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח תירס 65% (קמח תירס לבן וצהוב ) קמח אורז 34.5% ,חומר מתחלב E471",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Net_Weight": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Product_Height": { "UOM": "סמ", "text": "23.5 סמ", "value": "23.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Product_Width": { "UOM": "סמ", "text": "15 סמ", "value": "15" },
+      "Product_Depth": { "UOM": "סמ", "text": "6 סמ", "value": "6" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "Pasta italian",
+    "Product_Description_English": "pasta pro+ Fusilli",
+    "Country_of_Origin": "TR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6808, 6818, 6874],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6808, 6818, 6874],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290108508178",
+      "וילי פוד",
+      "פסטה",
+      "פוזילי",
+      "pasta",
+      "Pro",
+      "חלבון",
+      "חיטת דורום",
+      "קנדית"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "358 קלוריות",
+            "value": "358",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "214 קלוריות",
+            "value": "214",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "8 מג",
+            "value": "8",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "2.4 מג",
+            "value": "2.4",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "78.2 גרם",
+            "value": "78.2",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "",
+            "value": "",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "10.2 גרם",
+            "value": "10.2",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פסטה פנה  ללא גלוטן 400 גרם ",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "פסטה 400 גרם",
+    "Consumer_Storage_Instructions": "יש לשמור במקום קריר ויבש \nולהימנע מחשיפה ישירה לשמש",
+    "Net_Content": null,
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 282,
+  "name": "פסטה פנה ללא גלוטן 400 גר",
+  "site_id": 1,
+  "sub_group_id": 507,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

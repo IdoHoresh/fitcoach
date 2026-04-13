@@ -1,0 +1,481 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67029, 67011, 67155],
+    "Israel_Milk": [6902],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 26.9 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 328741,
+  "multiplication": 1,
+  "barcode": 7290111350092,
+  "brand": 3081,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290111350092/small.jpg",
+    "original": "/product/7290111350092/large.jpg",
+    "trim": "/product/7290111350092/trim.jpg",
+    "transparent": "/product/7290111350092/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 45],
+  "available_in": [82, 306, 331, 411, 412, 1197, 1220, 1225, 1306, 1314, 1330, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "גרדנה לבן- חטיף וופל במילוי קרם אגוזי לוז (55%) בציפוי שוקולד לבן (29%)- יח' 12.5 גרם \nרכיבים: שוקולד לבן (29%) (סוכר, חמאת קקאו, אבקת חלב, אבקת חלב דל שומן, מתחלב (לציטין סויה)), קמח חיטה (מכיל גלוטן), שמן קוקוס מזוכך, סירופ גלוקוז, סוכר, אגוזי לוז (5%), אבקת מי גבינה, קמח סויה, אבקת חלב דל שומן, אבקת קקאו דל שומן, דקסטרוז, תמצית לתת שעורה (מכיל גלוטן), מתפיחים (סודיום הידרוגן קרבונט, דיסודיום דיפוספט), מלח, מתחלב (לציטין סויה), תרמילי ווניל בורבון, תבלינים.\n\nגרדנה חלב- חטיף וופל במילוי קרם בטעם שוקולד (55%) בציפוי שוקולד חלב (29%)- יח' 12.5 גרם\nרכיבים: שוקולד חלב (29%) (סוכר, חמאת קקאו, אבקת חלב, עיסת קקאו, מתחלב (לציטין סויה)), שמן קוקוס מזוכך, קמח חיטה (מכיל גלוטן), סירופ גלוקוז, סוכר, אבקת קקאו דל שומן, דקסטרוז, אבקת מי גבינה, שוקולד (3%) (סוכר, עיסת קקאו), קמח סויה, אבקת חלב דל שומן, תמצית לתת שעורה (מכיל גלוטן), אגוזי לוז טחונים, מתפיחים (סודיום הידרוגן קרבונט, דיסודיום דיפוספט), מלח, מתחלב (לציטין סויה), תרמילי ווניל בורבון, תבלינים.\n\nגרדנה אגוז- חטיף וופל במילוי קרם אגוזי לוז (55%) בציפוי שוקולד חלב (29%)- יח' 12.5 גרם\nרכיבים: שוקולד חלב (29%) (סוכר, עיסת קקאו, חמאת קקאו, אבקת חלב, אבקת חלב דל שומן, מתחלב (לציטין סויה)), קמח חיטה (מכיל גלוטן), שמן קוקוס מזוכך, סירופ גלוקוז, סוכר, אגוזי לוז (5%), אבקת מי גבינה, קמח סויה, אבקת חלב דל שומן, אבקת קקאו דל שומן, דקסטרוז, תמצית לתת שעורה(מכיל גלוטן), מתפיחים (סודיום הידרוגן קרבונט, דיסודיום דיפוספט), מלח, מתחלב (לציטין סויה), תרמילי ווניל בורבון, תבלינים.\n\nגרנד פטיסרי אגוז- וופל במילוי קרם אגוזי לוז (47%) בציפוי שוקולד חלב (35%) ואגוזי לוז קצוצים (13%)- יח' 8.3 גרם\nרכיבים: שוקולד חלב (35%) (סוכר, אבקת חלב, חמאת קקאו, עיסת קקאו, אבקת חלב דל שומן, מתחלב (לציטין סויה)), שמן קוקוס מזוכך, אגוזי לוז (13%), סירופ גלוקוז, קמח חיטה (מכיל גלוטן), סוכר, אבקת מי גבינה,  אבקת חלב דל שומן, קמח סויה, אבקת קקאו דל שומן, דקסטרוז, תמצית לתת שעורה (מכיל גלוטן), מתפיחים (סודיום הידרוגן קרבונט, דיסודיום דיפוספט), מלח, מתחלב (לציטין סויה), תרמילי ווניל בורבון, תבלינים. \n\nמיני שוקולד אגוז- שוקולד חלב (68%) במילוי קרם אגוזי לוז (25%) אגוזי לוז קצוצים (3%) ועלי וופל פריכים (4%) -יח' 9.3 גרם. רכיבים: סוכר, עיסת קקאו, חמאת קקאו, אבקת חלב, אבקת חלב דל שומן, שמן קוקוס מזוכך, סירופ גלוקוז, אגוזי לוז טחונים וקצוצים (6%), קמח חיטה (מכיל גלוטן), אבקת מי גבינה, קמח סויה, אבקת קקאו דל שומן, דקסטרוז, מיצוי לתת שעורה (מכיל גלוטן), מתחלב (לציטין סויה), מתפיחים (סודיום הידרוגן קרבונט, דיסודיום דיפוספט), מלח, תרמילי וניל בורבון, תבלינים. מינימום מוצקי קקאו בשוקולד חלב 38%.\n\nטורטינה- שוקולד חלב (44%) ממולא קרם אוזי לוז (50%) עם עלי וופל פריך (6%)- יח' 9 גרם.\nרכיבים: שוקולד חלב (44%) (חלב, סויה), אגוזי לוז טחונים (12%), סוכר, שמן קוקוס מזוכך, קמח חיטה (מכיל גלוטן), אבקת מי גבינה, אבקת חלב דל שומן, מיצוי לתת שעורה, אבקת שמנת, אבקת קקאו דל שומן, מתחלב (לציטין סויה), מתפיחים (סודיום הידרוגן קרבונט, דיסודיום דיפוספט), מלח, קמח סויה, תרמילי ווניל ברבון, תבלינים. כלל מוצקי הקקאו בשוקולד חלב מינימום 38%.\n\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "295 גרם", "value": "295" },
+      "Net_Weight": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+      "Product_Height": { "UOM": "סמ", "text": "4.8 סמ", "value": "4.8" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7.5 סמ", "value": "7.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "1 סמ", "value": "1" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "לואקר",
+    "Product_Description_English": "loacker - thr best of chocolate",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6807, 6840],
+    "pH": null,
+    "Serving_Size_Description": "גרדנה שוקולד",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6802, 6842, 6806, 6810, 6811, 6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290111350092",
+      "גרדנה",
+      "חטיף וופל",
+      "שוקולד חלב",
+      "שוקולד מריר",
+      "שוקולד לבן"
+    ],
+    "internal_product_description": "Loacker - מארז חטיפי וופל",
+    "Color": null,
+    "Diet_Information": [5514, 5513],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "534 קלוריות",
+            "value": "534",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "528 קלוריות",
+            "value": "528",
+            "field_name": "Energy_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "529 קלוריות",
+            "value": "529",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "29.8 גרם",
+            "value": "29.8",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "29.5 גרם",
+            "value": "29.5",
+            "field_name": "Fats_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "29.6 גרם",
+            "value": "29.6",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "20.7 גרם",
+            "value": "20.7",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "22.4 גרם",
+            "value": "22.4",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5928",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "20.3 גרם",
+            "value": "20.3",
+            "field_name": "Saturated_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5929",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "5 מג",
+            "value": "5",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "7 מג",
+            "value": "7",
+            "field_name": "Cholesterol_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5930",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "5 מג",
+            "value": "5",
+            "field_name": "Cholesterol"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "117 מג",
+            "value": "117",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "107 מג",
+            "value": "107",
+            "field_name": "Sodium_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5921",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "111 מג",
+            "value": "111",
+            "field_name": "Sodium_Natran"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "57.4 גרם",
+            "value": "57.4",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "56.5 גרם",
+            "value": "56.5",
+            "field_name": "Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5902",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "55.2 גרם",
+            "value": "55.2",
+            "field_name": "Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "35.3 גרם",
+            "value": "35.3",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "35.6 גרם",
+            "value": "35.6",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5926",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "32.6 גרם",
+            "value": "32.6",
+            "field_name": "Sugars_from_Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.5 גרם",
+            "value": "2.5",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.5 גרם",
+            "value": "3.5",
+            "field_name": "Dietary_Fibers_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5927",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.5 גרם",
+            "value": "3.5",
+            "field_name": "Dietary_Fibers"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.8 גרם",
+            "value": "7.8",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.3 גרם",
+            "value": "7.3",
+            "field_name": "Proteins_per_Serving"
+          },
+          {
+            "col_code": "78001",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "8.7 גרם",
+            "value": "8.7",
+            "field_name": "Proteins"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "בונבוניירת המיטב של לואקר 200 גרם\n",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "בונבוניירת המיטב של לואקר ",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910364346,
+      "sw_kefel": 1,
+      "k_cmt": null,
+      "deleted_by": "RL",
+      "k_acz_dis": 8,
+      "active": 1,
+      "created_at": "2025-08-10T12:52:00.000000Z",
+      "cmt": 1,
+      "label": "5% הנחה על מגוון מוצרים\n1 ב NaN ₪",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "is_personal": 1,
+      "updated_at": "2026-01-08T08:58:53.000000Z",
+      "approved_at": "2026-01-08 10:58:53",
+      "name": "8% הנחה על מגוון מוצרים",
+      "k_scm": null,
+      "from": "2025-08-10 00:00:00",
+      "id": 723012,
+      "to": "2026-06-26 23:59:59",
+      "scm": null,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 299,
+  "name": "מארז חטיפי לואקר המיטב 200 גר",
+  "site_id": 1,
+  "sub_group_id": 303,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": true
+}

@@ -1,0 +1,102 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67104, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 54.3 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1214, "status": 2 },
+  "id": 154938,
+  "multiplication": 1,
+  "barcode": 7290003208593,
+  "brand": 3192,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290003208593/small.jpg",
+    "original": "/product/7290003208593/large.jpg",
+    "trim": "/product/7290003208593/trim.jpg",
+    "transparent": "/product/7290003208593/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 45],
+  "available_in": [125, 1220, 1226, 1306, 1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "יין לבן מבושל, כוהל סוכר חומרי טעם וריח",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.24 קג", "value": "1.24" },
+      "Net_Weight": { "UOM": "גרם", "text": "750 גרם", "value": "750" },
+      "Product_Height": { "UOM": "סמ", "text": "30 סמ", "value": "30" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8 סמ", "value": "8" },
+      "Product_Depth": { "UOM": "סמ", "text": "5 סמ", "value": "5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": "18%",
+    "BrandName": "וורמוט",
+    "Product_Description_English": "MARTINI EXTRA DRY 75CL",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290003208593", "וורמונט לבן יבש", "מרטיני טורינו ביאנקו", "איטליה"],
+    "internal_product_description": "מרטיני אקסטרא דריי 750 מ\"ל",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "110 קלוריות",
+            "value": "110",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "מרטיני אקסטרא דריי 750 מ\"ל",
+    "Hazard_Precautionary_Statement": "מכיל אלכוהול - מומלץ להימנע משתייה מופרזת",
+    "short_name": "מרטיני אקסטרא דריי 750 מ\"ל",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 290,
+  "name": "מרטיני דריי 750 מל",
+  "site_id": 1,
+  "sub_group_id": 156,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

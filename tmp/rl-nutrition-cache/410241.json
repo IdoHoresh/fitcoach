@@ -1,0 +1,398 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71014],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67016],
+    "Israel_Milk": [6901],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 7.5 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 184, "status": 2 },
+  "id": 410241,
+  "multiplication": 1,
+  "barcode": 7290019167099,
+  "brand": 5237,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290019167099/small.jpg",
+    "original": "/product/7290019167099/large.jpg",
+    "trim": "/product/7290019167099/trim.jpg",
+    "transparent": "/product/7290019167099/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "ממרח טבעוני(מים, שמנים צמחיים (שמן קוקוס מזוכך ושמן חמניות מזוכך), מייצבים(1442E,1450E ,333E), סיבים תזונתיים (אינולין), מלח, חומרי טעם וריח , משמר(202(E),מים,ביסקוויט פתי בר(18%)(קמח חיטה (מכיל גלוטן), סוכר, שמן צמחי מזוכך (סויה), שומן צמחי (דקל), חומרי תפיחה (E500ii, E503ii) מלח, מתחלב (לציטין סויה), חומרי טעם וריח),קצפת צמחית (16%)(מים, שומן צמחי מוקשה מגלעיני דקלים, סוכר, גלוקוזה )מכיל חומר משמר:(סולפיט)),מתחלבים(435E,471E,475E,481E,לציטין),מייצבים(466E,464E,410 E(iii)331E),מלח,חומרי טעם וריח,צבע מאכל:בטא קרוטן), סוכר, קקאו,קפה(1%),עמילן תפוח אדמה,חומרי טעם וריח,משמר(202E).\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "96 גרם", "value": "96" },
+      "Net_Weight": { "UOM": "גרם", "text": "86 גרם", "value": "86" },
+      "Product_Height": { "UOM": "ממ", "text": "45 ממ", "value": "45" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "95 ממ", "value": "95" },
+      "Product_Depth": { "UOM": "ממ", "text": "95 ממ", "value": "95" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "עדן קינוחים",
+    "Product_Description_English": "tiramisu",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [
+      6864, 6868, 6916, 6912, 6861, 6863, 6867, 6832
+    ],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6810, 6821, 6822, 6561],
+    "Color_Number": null,
+    "Search_Tags": ["7290019167099", ""],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5573, 5561],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "250 קלוריות",
+            "value": "250",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "name": "אנרגיה (קלוריות) למנה",
+            "text": "216 קלוריות",
+            "value": "216",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "13 גרם",
+            "value": "13",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "שומנים (גרם) למנה",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים למנה",
+            "text": "9 גרם",
+            "value": "9",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים למנה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "5 מג",
+            "value": "5",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים למנה",
+            "text": "4 מג",
+            "value": "4",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "120 מג",
+            "value": "120",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "נתרן (מג) למנה",
+            "text": "103 מג",
+            "value": "103",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "32 גרם",
+            "value": "32",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "סך הפחמימות (גרם) למנה",
+            "text": "28 גרם",
+            "value": "28",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "20 גרם",
+            "value": "20",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "סוכרים מתוך פחמימות (גרם) למנה",
+            "text": "17 גרם",
+            "value": "17",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "5",
+            "value": "5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "כפיות סוכר מתוך סך הפחמימות למנה",
+            "text": "4.25",
+            "value": "4.25",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "סיבים תזונתיים (גרם) למנה",
+            "text": "0.86 גרם",
+            "value": "0.86",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חלבונים (גרם) למנה",
+            "text": "1.2 גרם",
+            "value": "1.2",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "קרם קצפת  טבעוני על מצע של עוגיות וסירופ קפה וקקאו מעל.",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "טירמיסו טבעוני",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "86 גרם", "value": "86" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 214,
+  "name": "קינוחי עדן טירמיסו טבעוני 86 ג'",
+  "site_id": 1,
+  "sub_group_id": 581,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,286 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71075],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085, 67168],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 618, "status": 2 },
+  "id": 376114,
+  "multiplication": 1,
+  "barcode": 7290112496331,
+  "brand": 2583,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112496331/small.jpg",
+    "original": "/product/7290112496331/large.jpg",
+    "trim": "/product/7290112496331/trim.jpg",
+    "transparent": "/product/7290112496331/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח תירס (79%), סוכר, תמצית לתת שעורה (מכיל גלוטן), מלח, מתחלב (E471), חומרי טעם וריח, תערובת ויטמינים ומינרלים.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.548 קג", "value": "0.548" },
+      "Net_Weight": { "UOM": "קג", "text": "0.448 קג", "value": "0.448" },
+      "Product_Height": { "UOM": "ממ", "text": "289 ממ", "value": "289" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "60 ממ", "value": "60" },
+      "Product_Depth": { "UOM": "ממ", "text": "207 ממ", "value": "207" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תלמה",
+    "Product_Description_English": "TELMA 448 GR X 12",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6840, 6821, 6805, 6802],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6811],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112496331",
+      "eurbpkex",
+      "דגני בוקר",
+      "דגני בוקר תלמה",
+      "דגני תלמה",
+      "דגנים",
+      "טלמה",
+      "קונפלקס",
+      "קורנפלקס",
+      "קורנפלקס אלופים",
+      "קורנפלקס של אלופים",
+      "קורנפלקס תלמה",
+      "קורפלקס"
+    ],
+    "internal_product_description": "תלמה קורנפלקס  בננה דגני בוקר 448 גרם",
+    "Color": null,
+    "Diet_Information": [5527, 5542],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "384 קלוריות",
+            "value": "384",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "115 קלוריות",
+            "value": "115",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.2 גרם",
+            "value": "0.2",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "322 מג",
+            "value": "322",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "97 מג",
+            "value": "97",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "87.3 גרם",
+            "value": "87.3",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "26.2 גרם",
+            "value": "26.2",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "18.5 גרם",
+            "value": "18.5",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "5.6 גרם",
+            "value": "5.6",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "4.5",
+            "value": "4.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "1.5",
+            "value": "1.5",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6.8 גרם",
+            "value": "6.8",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": " ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "קורנפלקס בננה דגני בוקר",
+    "Hazard_Precautionary_Statement": " ",
+    "short_name": "קורנפלקס בננה דגני בוקר",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר ויבש, בנפרד מקטניות, מסוכר ומקמח. לשמירת הפריכות - אחרי הפתיחה יש לשמור את השקית הפנימית סגורה  באמצעות סוגר מתאים. יש לצרוך עד שלושה שבועות מרגע הפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "448 גרם", "value": "448" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 234,
+  "name": "קורנפלקס בננה תלמה 448 גרם",
+  "site_id": 1,
+  "sub_group_id": 432,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

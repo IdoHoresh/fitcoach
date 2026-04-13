@@ -1,0 +1,339 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [0],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67180],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 381179,
+  "multiplication": 1,
+  "barcode": 8683130008355,
+  "brand": 2542,
+  "recipes": [],
+  "images": {
+    "small": "/product/8683130008355/small.jpg",
+    "original": "/product/8683130008355/large.jpg",
+    "trim": "/product/8683130008355/trim.jpg",
+    "transparent": "/product/8683130008355/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [32],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "שמן צמחי, מים, חלמון ביצה מעובד, שום מיובש (2.2%), סוכר, מלח, חומץ, מיץ לימון מרוכז, חומרי טעם וריח, חומר משמר (E200), עמילן מעובד (E1422), חומצת מאכל (חומצה לקטית), מעכב חמצון (E385).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.442 קג", "value": "0.442" },
+      "Net_Weight": { "UOM": "קג", "text": "0.4 קג", "value": "0.4" },
+      "Product_Height": { "UOM": "ממ", "text": "192 ממ", "value": "192" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "54 ממ", "value": "54" },
+      "Product_Depth": { "UOM": "ממ", "text": "85 ממ", "value": "85" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "הלמנס",
+    "Product_Description_English": "HELLMANNS 400 GR X 8",
+    "Country_of_Origin": "TR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6823, 6820],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6808],
+    "Color_Number": null,
+    "Search_Tags": [
+      "8683130008355",
+      "איולי",
+      "הלמנז",
+      "הלמנס",
+      "חרדל",
+      "חרדל גרגירים",
+      "חרדל דיזון",
+      "חרדל דיז'ון",
+      "מיונז",
+      "מיונז אמיתי",
+      "מיונז בבקבוק לחיץ",
+      "מיונז בטעמים",
+      "מיונז דל קלוריות",
+      "מיונז הלמנס",
+      "מיונז שום",
+      "מיוקל",
+      "ממרח",
+      "ממרח מיונז",
+      "ממרחים",
+      "מתבל"
+    ],
+    "internal_product_description": "הלמנס מיונז עם שום 400 גרם",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "648 קלוריות",
+            "value": "648",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "97 קלוריות",
+            "value": "97",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "70 גרם",
+            "value": "70",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "10.5 גרם",
+            "value": "10.5",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.5 גרם",
+            "value": "5.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.7 גרם",
+            "value": "0.7",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.1 גרם",
+            "value": "0.1",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "55 מג",
+            "value": "55",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "8 מג",
+            "value": "8",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "395 מג",
+            "value": "395",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "59 מג",
+            "value": "59",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.5 גרם",
+            "value": "3.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.9 גרם",
+            "value": "1.9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.2 גרם",
+            "value": "0.2",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": " ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מיונז עם שום",
+    "Hazard_Precautionary_Statement": " ",
+    "short_name": "מיונז עם שום",
+    "Consumer_Storage_Instructions": "לשמור במקור קריר ומוצל. לשמור בקירור לאחר הפתיחה",
+    "Net_Content": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 226,
+  "name": "הלמנס לחיץ מיונז עם שום 400 גר",
+  "site_id": 1,
+  "sub_group_id": 621,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

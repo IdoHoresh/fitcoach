@@ -1,0 +1,108 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71138],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 30.4 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 27321,
+  "multiplication": 1,
+  "barcode": 7290000023847,
+  "brand": 2261,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000023847/small.jpg",
+    "original": "/product/7290000023847/large.jpg",
+    "trim": "/product/7290000023847/trim.jpg",
+    "transparent": "/product/7290000023847/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [82, 279, 331, 411, 412, 1197, 1220, 1314, 1323, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "תוספות: גפרית דו חמצנית.\nadditives: sulphur dioxide",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.142 קג", "value": "1.142" },
+      "Net_Weight": { "UOM": "גרם", "text": "750 גרם", "value": "750" },
+      "Product_Height": { "UOM": "סמ", "text": "28 סמ", "value": "28" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7.5 סמ", "value": "7.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "7.5 סמ", "value": "7.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": "13.5%",
+    "BrandName": "ברקן",
+    "Product_Description_English": "Barkan classic chardonnay",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "טמפרטורת הגשה",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290000023847", "שרדונה", "יין לבן יבש", "ברקן", "קלאסיק", ""],
+    "internal_product_description": " ברקן קלאסיק שרדונה 750 מל יין לבן יבש",
+    "Color": null,
+    "Diet_Information": [5521],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "77 קלוריות",
+            "value": "77",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": " ברקן ,קלאסיק שרדונה, 750 מל",
+    "Hazard_Precautionary_Statement": "אזהרה: מכיל אלכוהול - מומלץ להימנע משתייה מופרזת",
+    "short_name": "ברקן ,קלאסיק ,שרדונה",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 239,
+  "name": "קלאסיק שרדונה",
+  "site_id": 1,
+  "sub_group_id": 34,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

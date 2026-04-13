@@ -1,0 +1,239 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [181],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67212],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 206, "status": 2 },
+  "id": 373973,
+  "multiplication": 1,
+  "barcode": 7290018400623,
+  "brand": 5237,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290018400623/small.jpg",
+    "original": "/product/7290018400623/large.jpg",
+    "trim": "/product/7290018400623/trim.jpg",
+    "transparent": "/product/7290018400623/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [21],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "פסטה מבושלת (57%) {מים, פסטה פוזילי (49%) (מכיל גלוטן), שמן צמחי (שמן קנולה), מלח שולחן, תערובת שום כתוש [שום (63%), מים, שמן צמחי (שמן קנולה), מלח שולחן]}, רוטב בולונז (43%) {בשר בקר טחון (40%), תרכיז עגבניות (27%), עגבניות (10%), בצל (7%), גזר (6%), סלרי (4%), מים, פטרוזיליה, מלח שולחן, תבלינים, בזיליקום, תערובת שום כתוש [שום (63%), מים, שמן צמחי (שמן קנולה), מלח שולחן], שמן צמחי (שמן קנולה), סוכר, מייצב (קסנטן גאם)}.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "365 גרם", "value": "365" },
+      "Net_Weight": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+      "Product_Height": { "UOM": "סמ", "text": "4 סמ", "value": "4" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "13 סמ", "value": "13" },
+      "Product_Depth": { "UOM": "סמ", "text": "17.3 סמ", "value": "17.3" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תנובה שף",
+    "Product_Description_English": "Pasta Bolognese",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [
+      6803, 6805, 6804, 6806, 6807, 6808, 6882, 6820, 6821, 6851, 6841, 6836, 6840
+    ],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810, 6823],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290018400623",
+      "פסטה",
+      "בולונז",
+      "רוטב",
+      "רוטב בולונז",
+      "פסטה ברוטב",
+      "פסטה בולונז",
+      "פסטה ברוטב בולונז"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "199 קלוריות",
+            "value": "199",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.5 גרם",
+            "value": "3.5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "21 מג",
+            "value": "21",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "395 מג",
+            "value": "395",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "29.5 גרם",
+            "value": "29.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.1 גרם",
+            "value": "1.1",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "11.9 גרם",
+            "value": "11.9",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פסטה בולונז",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "פסטה ברוטב עגבניות עם בשר טחון",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 221,
+  "name": "פסטה בולונז 350 גר",
+  "site_id": 1,
+  "sub_group_id": 463,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

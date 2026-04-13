@@ -1,0 +1,186 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67096, 67193, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 13.7 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1222, "status": 2 },
+  "id": 284736,
+  "multiplication": 1,
+  "barcode": 8888111030053,
+  "brand": 4899,
+  "recipes": [],
+  "images": {
+    "small": "/product/8888111030053/small.jpg",
+    "original": "/product/8888111030053/large.jpg",
+    "trim": "/product/8888111030053/trim.jpg",
+    "transparent": "/product/8888111030053/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 16, 23],
+  "available_in": [82, 279, 290, 306, 411, 412, 1307, 1314, 1323, 1329, 1330, 1332],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מיץ אננס טיבעי,מעכב חימצון(E300),",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "1184 גרם", "value": "1184" },
+      "Product_Height": { "UOM": "סמ", "text": "13.5 סמ", "value": "13.5" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "10.5 סמ", "value": "10.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "10.5 סמ", "value": "10.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מוצרי S&W",
+    "Product_Description_English": "BLU ENERGY DRINK",
+    "Country_of_Origin": "PH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["8888111030053", "בלו", "משקה אנרגיה מוגז", "קפאין וטאורין", "BLU"],
+    "internal_product_description": "רביעייה מיץ אננס",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "56 קלוריות",
+            "value": "56",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "שומנים (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79059",
+        "label": "חלבונים (אלבומין|קזאין‎ 40|60)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5959",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (אלבומין|קזאין‎ 40|60) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_Whey_Casein_60_40_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": "100%",
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רביעייה מיץ אננס 100% 240 מ\"ל S&W -רביעייה",
+    "Hazard_Precautionary_Statement": "יש לנער היטב לפני ההגשה להגיש מצונן.",
+    "short_name": "מיץ אננס 100% ללא סוכר\n",
+    "Consumer_Storage_Instructions": "יש לשמור במקרום קריר ויבש",
+    "Net_Content": { "UOM": "מל", "text": "960 מל", "value": "960" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 591,
+  "name": "מיץ אננס רביעייה 4*240 מ''ל",
+  "site_id": 1,
+  "sub_group_id": 1214,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

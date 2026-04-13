@@ -1,0 +1,111 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67042, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 42.7 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 2340, "status": 2 },
+  "id": 133814,
+  "multiplication": 1,
+  "barcode": 7290011132552,
+  "brand": 2322,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290011132552/small.jpg",
+    "original": "/product/7290011132552/large.jpg",
+    "trim": "/product/7290011132552/trim.jpg",
+    "transparent": "/product/7290011132552/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 45],
+  "available_in": [82, 125, 1214, 1314, 1330, 1389, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים,לתת חיטה (מכיל גלוטן), לתת שעורה (מכיל גלוטן), שמרים, כשות.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "2.34 קג", "value": "2.34" },
+      "Net_Weight": { "UOM": "קג", "text": "1.32 קג", "value": "1.32" },
+      "Product_Height": { "UOM": "סמ", "text": "24 סמ", "value": "24" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "12 סמ", "value": "12" },
+      "Product_Depth": { "UOM": "סמ", "text": "12 סמ", "value": "12" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": "5.5%",
+    "BrandName": "פאולנר",
+    "Product_Description_English": "Paulaner",
+    "Country_of_Origin": "DE",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6809, 6817],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290011132552",
+      "בירה",
+      "פאולנר",
+      "בירת פאולנר",
+      "בירת חיטה",
+      "לא מסוננת",
+      "מעוננת",
+      "רביעייה."
+    ],
+    "internal_product_description": "בירה פאולנר, בירת חיטה מעוננת, מארז רביעייה, בקבוק 330 מל\n",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "47 קלוריות",
+            "value": "47",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "איך מוזגים פאולנר?\nשטוף את הכוס במים קרים,החזק בשיפוע של 45 ומזוג לאט 3/4 מהבקבוק,נער בעדינות בתנועה סיבובית של הבקבוק,יישר את הכוס ומזוג את הבירה שנותרה בבקבוק להשלמת הצבע וראש הקצף.\nתהנה מהפאולנר שלך.",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "בירה פאולנר, בירת חיטה מעוננת, מארז רביעייה, בקבוק 330 מל\n",
+    "Hazard_Precautionary_Statement": "שתו באחריות.\nאזהרה:מכיל אלכוהול -מומלץ להימנע משתיייה מופרזת.",
+    "short_name": "בירה פאולנר, בירת חיטה מעוננת, בקבוק 330 מל\n",
+    "Consumer_Storage_Instructions": "יש לשמור במקום מוצל וקריר",
+    "Net_Content": { "UOM": "יחידות,", "text": "4 יחידות,", "value": "4" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 290,
+  "name": "פאולנר 330 בקבוק רביעייה",
+  "site_id": 1,
+  "sub_group_id": 129,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

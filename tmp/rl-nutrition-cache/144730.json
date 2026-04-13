@@ -1,0 +1,257 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71030],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67011],
+    "Israel_Milk": [6902],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 588, "status": 2 },
+  "id": 144730,
+  "multiplication": 1,
+  "barcode": 7290013117236,
+  "brand": 5270,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290013117236/small.jpg",
+    "original": "/product/7290013117236/large.jpg",
+    "trim": "/product/7290013117236/trim.jpg",
+    "transparent": "/product/7290013117236/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח חיטה (מכיל גלוטן חיטה), מים, שמן ושומן צמחי, תרכיז עגבניות, גבינה חצי קשה 22% שומן (מכיל: צבע מאכל אנאטו, חומר משמר E-202), מחית עגבניות, זיתים ירוקים חתוכים, עמילנים מעובדים (E-1420, E-1422), מלטודקסטרין, תערובת תיבול לפיצה, בצל מטוגן יבש, מלח, חלבוני חלב, סוכר, חומר משמר (E-202), מלחים מתחלבים (E-340, E-331, E-452), מווסת חומציות (חומצת לימון), חומר לטיפול בקמח (E-920), מונע התגיישות (תאית).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "650 גרם", "value": "650" },
+      "Net_Weight": { "UOM": "גרם", "text": "600 גרם", "value": "600" },
+      "Product_Height": { "UOM": "ממ", "text": "40 ממ", "value": "40" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "215 ממ", "value": "215" },
+      "Product_Depth": { "UOM": "ממ", "text": "260 ממ", "value": "260" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מעדנות",
+    "Product_Description_English": "Phyllo Dough Pizza Burekas",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6806, 6808, 6820, 6823, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810, 6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290013117236",
+      "לא בשלנים",
+      "בורקס פילו פיצה",
+      "מעדנות",
+      "מעדנות פילו",
+      "פילו מעדנות",
+      "פילו מעדנות פיצה",
+      "פיצה פילו מעדנות",
+      "בורקס פיצה מעדנות",
+      "מעדנות בורקס פיצה",
+      "בורקס פילו פיצה מעדנות",
+      "מעדנות בורקס פילו פיצה"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "273 קלוריות",
+            "value": "273",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "13.2 גרם",
+            "value": "13.2",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.4 גרם",
+            "value": "2.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "4.2 מג",
+            "value": "4.2",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "358 מג",
+            "value": "358",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "31.9 גרם",
+            "value": "31.9",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7 גרם",
+            "value": "7",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "1.75",
+            "value": "1.75",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6.6 גרם",
+            "value": "6.6",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "בורקס פילו פיצה מעדנות",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מאפה פילו במילוי רוטב פיצה וגבינה, מוקפא",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "600 גרם", "value": "600" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 223,
+  "name": "בורקס פילו פיצה מעדנות 600 גרם",
+  "site_id": 1,
+  "sub_group_id": 291,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

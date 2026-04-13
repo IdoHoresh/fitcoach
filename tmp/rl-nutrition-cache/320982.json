@@ -1,0 +1,216 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71116],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6407],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 11.9 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 320982,
+  "multiplication": 1,
+  "barcode": 7290016272031,
+  "brand": 2,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290016272031/small.jpg",
+    "original": "/product/7290016272031/large.jpg",
+    "trim": "/product/7290016272031/trim.jpg",
+    "transparent": "/product/7290016272031/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [
+    82, 179, 279, 290, 306, 331, 411, 1197, 1198, 1214, 1220, 1221, 1225, 1226, 1307, 1314, 1323,
+    1329, 1330, 1332, 1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "זיתים ירוקים ,מים,מלח,חומצות (חומצת לימון E330,חומצה אצטית E260),חומרי טעם וריח ,תבלינים.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "620 גרם", "value": "620" },
+      "Net_Weight": { "UOM": "גרם", "text": "275 גרם", "value": "275" },
+      "Product_Height": { "UOM": "סמ", "text": "11.5 סמ", "value": "11.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "רמי לוי שיווק השקמה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290016272031", "רמי לוי", "זיתים", "זיתים ירוקים", "נטולי גלעין"],
+    "internal_product_description": "רמי לוי זיתים ירוקים נטולי גלעין 560 גרם",
+    "Color": null,
+    "Diet_Information": [5514, 5513],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "text": "195 קלוריות",
+            "value": "195",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "text": "19 גרם",
+            "value": "19",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "text": "2.4 גרם",
+            "value": "2.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "text": "1440 מג",
+            "value": "1440",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "text": "3.6 גרם",
+            "value": "3.6",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "text": "2.4 גרם",
+            "value": "2.4",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רמי לוי זיתים ירוקים נטולי גלעין ",
+    "Hazard_Precautionary_Statement": "זיתים אלו חורצנו במכונה,ייתכנו זיתיים עם גלעינים ושאריות גלעינים.\nזהירות שוליים חדים בפתיחה ",
+    "short_name": "זיתים ירוקים נטולי גלעין",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "275 גרם", "value": "275" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 225,
+  "name": "חרוזית ירוק ללא גלעין 275 גר רמי לוי",
+  "site_id": 1,
+  "sub_group_id": 171,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

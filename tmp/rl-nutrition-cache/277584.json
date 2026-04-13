@@ -1,0 +1,204 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67155],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 277584,
+  "multiplication": 1,
+  "barcode": 70970471254,
+  "brand": 5463,
+  "recipes": [],
+  "images": {
+    "small": "/product/070970471254/small.jpg",
+    "original": "/product/070970471254/large.jpg",
+    "trim": "/product/070970471254/trim.jpg",
+    "transparent": "/product/070970471254/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סוכר, סירופ תירס, עמילן מעובד (E-1404), מווסתי חומציות (E-296, E-297, E-330, E-331), חומרי טעם וריח, דקסטרין, חומרי הזגה, (E-903, E-904), טריגליצרידים, צבעי מאכל סינתטיים: (E-133, אדום אלורה (E-129), טרטרזין (E-102), סנט ילו (E-110)).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "163 גרם", "value": "163" },
+      "Net_Weight": { "UOM": "גרם", "text": "141 גרם", "value": "141" },
+      "Product_Height": { "UOM": "סמ", "text": "8.2 סמ", "value": "8.2" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "15.3 סמ", "value": "15.3" },
+      "Product_Depth": { "UOM": "סמ", "text": "1.9 סמ", "value": "1.9" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "Mike and Ike",
+    "Product_Description_English": "Mike and Ike Original Fruits",
+    "Country_of_Origin": "US",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "70970471254",
+      "סוכריות' ג'לי 'בטעמים פירות",
+      "דובדבן",
+      "לימון",
+      "תות - שדה",
+      "ליים",
+      "תפוז"
+    ],
+    "internal_product_description": "מבחר סוכריות ג'לי בטעמי פירות 141 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "367 קלוריות",
+            "value": "367",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "34 מג",
+            "value": "34",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "87 גרם",
+            "value": "87",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "60 גרם",
+            "value": "60",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "15",
+            "value": "15",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מבחר סוכריות ג'לי בטעמי פירות 141 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מייק ואייק פירות",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "141 גרם", "value": "141" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 301,
+  "name": "סוכריות מייק אייק אייס ירוק 141 גרם",
+  "site_id": 1,
+  "sub_group_id": 395,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

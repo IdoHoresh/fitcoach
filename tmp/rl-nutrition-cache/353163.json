@@ -1,0 +1,372 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71107],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67108, 67159],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 353163,
+  "multiplication": 1,
+  "barcode": 7290112962652,
+  "brand": 142,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112962652/small.jpg",
+    "original": "/product/7290112962652/large.jpg",
+    "trim": "/product/7290112962652/trim.jpg",
+    "transparent": "/product/7290112962652/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [21, 10],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סוכרים, מלח, עמילנים (טפיוקה, תפו\"א), מחזק טעם (מונוסודיום גלוטמט), שמן דקלים, תבלינים (אבקת בצל, שום), ירקות מיובשים (סלרי, פטרוזיליה), תמציות שמרים, חומרי טעם וריח, חומצת מאכל (חומצת לימון), מיצוי תבלינים, מעכב חמצון (מיצוי רוזמרין).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "850 גרם", "value": "850" },
+      "Net_Weight": { "UOM": "גרם", "text": "800 גרם", "value": "800" },
+      "Product_Height": { "UOM": "ממ", "text": "300.000 ממ", "value": "300.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "175.000 ממ", "value": "175.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "40.000 ממ", "value": "40.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "אסם",
+    "Product_Description_English": "OSEM Soup Chicken Flavor Kpsv10x800gIL",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "מנה 6.6",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR2", "value": "נתרן בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6823],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112962652",
+      "מרק בטעם עוף כל\"פ",
+      "מרק בטעם עוף כשל\"פ",
+      "מרק בטעם עוף",
+      "מרק",
+      "כשל\"פ",
+      "כל\"פ"
+    ],
+    "internal_product_description": "אסם אבקת מרק טעם עוף כלפ10*800גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "281 קלוריות",
+            "value": "281",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל מוכן",
+            "name": "אנרגיה (קלוריות) ל-100 מל מוכן",
+            "text": "9 קלוריות",
+            "value": "9",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "4.5 גרם",
+            "value": "4.5",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "שומנים (גרם) ל-100 מל מוכן",
+            "text": "0.1 גרם",
+            "value": "0.1",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "2.9 גרם",
+            "value": "2.9",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5928",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 מל מוכן",
+            "text": "פחות מ-0.1 גרם",
+            "value": "L 0.1",
+            "field_name": "Saturated_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5929",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 מל מוכן",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5930",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 מל מוכן",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "12000 מג",
+            "value": "12000",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5921",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "נתרן (מג) ל-100 מל מוכן",
+            "text": "396 מג",
+            "value": "396",
+            "field_name": "Sodium_Natran"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "50 גרם",
+            "value": "50",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5902",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "סך הפחמימות (גרם) ל-100 מל מוכן",
+            "text": "1.7 גרם",
+            "value": "1.7",
+            "field_name": "Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "28 גרם",
+            "value": "28",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5926",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל מוכן",
+            "text": "0.9 גרם",
+            "value": "0.9",
+            "field_name": "Sugars_from_Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "7",
+            "value": "7",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6185",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 מל מוכן",
+            "text": "0.25",
+            "value": "0.25",
+            "field_name": "Sugar_Spoon"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "",
+            "value": "",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חלבונים (גרם) ל-100 מל מוכן",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Proteins"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "הוראות הכנה ל- 1 ליטר מרק:\nלהוסיף 3 כפות אבקת מרק ל- 1 ליטר מים רותחים. להביא לרתיחה תוך בחישה ולבשל על אש קטנה למשך 3 דקות.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "אסם אבקת מרק טעם עוף כלפ10*800גרם",
+    "Hazard_Precautionary_Statement": "<br />\n<br />\n<br />\n",
+    "short_name": "מרק בטעם עוף כלפ 800 גרם",
+    "Consumer_Storage_Instructions": "לשמירה אופטימלית לאורך זמן, מומלץ לשמור בקירור!",
+    "Net_Content": { "UOM": "גרם", "text": "800 גרם", "value": "800" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 229,
+  "name": "אסם מרק טעם עוף כשלפ 800 ג",
+  "site_id": 1,
+  "sub_group_id": 206,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

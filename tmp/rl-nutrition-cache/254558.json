@@ -1,0 +1,102 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67163, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 33.1 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 254558,
+  "multiplication": 1,
+  "barcode": 8410644611203,
+  "brand": 2241,
+  "recipes": [],
+  "images": {
+    "small": "/product/8410644611203/small.jpg",
+    "original": "/product/8410644611203/large.jpg",
+    "trim": "/product/8410644611203/trim.jpg",
+    "transparent": "/product/8410644611203/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10, 16],
+  "available_in": [412, 1307, 1314, 1389, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "תוספות: גפרית דו חמצנית",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.59 קג", "value": "1.59" },
+      "Net_Weight": { "UOM": "גרם", "text": "750 גרם", "value": "750" },
+      "Product_Height": { "UOM": "סמ", "text": "32 סמ", "value": "32" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": "11.5%",
+    "BrandName": "קאווה",
+    "Product_Description_English": "Cava Iberica Fermented in the Bottle",
+    "Country_of_Origin": "ES",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": ["8410644611203", "יין", "לבן", "יבש", "מבעבע", "קאווה"],
+    "internal_product_description": "קאווה איבריקה לבן יבש 750 מ\"ל",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "64 קלוריות",
+            "value": "64",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "קאווה איבריקה  יבש 750 מל ",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "קאווה איבריקה יבש ",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 239,
+  "name": "קאווה איבריקה לבן יבש 750 מ\"ל",
+  "site_id": 1,
+  "sub_group_id": 421,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

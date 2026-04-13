@@ -1,0 +1,315 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71007],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67016],
+    "Israel_Milk": [6901],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 270, "status": 2 },
+  "id": 394009,
+  "multiplication": 1,
+  "barcode": 7290112355386,
+  "brand": 4913,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112355386/small.jpg",
+    "original": "/product/7290112355386/large.jpg",
+    "trim": "/product/7290112355386/trim.jpg",
+    "transparent": "/product/7290112355386/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [15],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "שמנת (86%), סוכר חום, סוכר, סיבים תזונתיים, עמילן תירס מעובד (E-1442), מלח, חומרי טעם וריח, קרמל.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "272.000 גרם", "value": "272.000" },
+      "Net_Weight": { "UOM": "גרם", "text": "260.000 גרם", "value": "260.000" },
+      "Product_Height": { "UOM": "ממ", "text": "113.000 ממ", "value": "113.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "54.000 ממ", "value": "54.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "51.000 ממ", "value": "51.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "יטבתה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112355386",
+      "רוטב שמנת",
+      "רוטב",
+      "רוטב לפנקייק",
+      "פנקייק",
+      "רוטב מתוק",
+      "קרמל",
+      "קרמל מלוח",
+      "רוטב קרמל מלוח",
+      "בייגלה מלוח",
+      "רוטב טעים",
+      "סוכר חום",
+      "יטבתה",
+      "hyc",
+      "v",
+      "רוטב שמנת דל שומן",
+      "רוטב מתוק דל שומן",
+      "רוטב מפנק",
+      "שדרוג קינוח"
+    ],
+    "internal_product_description": "רוטב שמנת בטעם קרמל מלוח",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "157 קלוריות",
+            "value": "157",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "9.0 גרם",
+            "value": "9.0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.4 גרם",
+            "value": "5.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "27 מג",
+            "value": "27",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "186 מג",
+            "value": "186",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "16.0 גרם",
+            "value": "16.0",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "15.3 גרם",
+            "value": "15.3",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "3.75",
+            "value": "3.75",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.7 גרם",
+            "value": "2.7",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "87 מג",
+            "value": "87",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79086",
+        "label": "מתוכם סוכר מוסף (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6136",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "11.5 גרם",
+            "value": "11.5",
+            "field_name": "Added_Sugar_from_Sugars_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79048",
+        "label": "סוכרים: לקטוז",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5965",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.8 גרם",
+            "value": "3.8",
+            "field_name": "Lactose_from_Sugars_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רוטב שמנת בטעם קרמל מלוח יטבתה, 9% שומן, 260 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "רוטב שמנת בטעם קרמל מלוח, 9%",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "260 גרם", "value": "260" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 201,
+  "name": "רוטב שמנת טעם קרמל מלוח 9%  250 מ\"ל",
+  "site_id": 1,
+  "sub_group_id": 242,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

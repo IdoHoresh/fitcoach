@@ -1,0 +1,377 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67011, 67182],
+    "Israel_Milk": [6902],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 172, "status": 2 },
+  "id": 289400,
+  "multiplication": 1,
+  "barcode": 4011800637514,
+  "brand": 1283,
+  "recipes": [],
+  "images": {
+    "small": "/product/4011800637514/small.jpg",
+    "original": "/product/4011800637514/large.jpg",
+    "trim": "/product/4011800637514/trim.jpg",
+    "transparent": "/product/4011800637514/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 37],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "47.5% סירופ מלטיטול כממתיק, 12% פתיתי דגנים מלאים וקלויים (שעורה וחיטה-מכילים גלוטן), 12%פתיתי חיטה מלאה (קמח חיטה מלא-מכיל גלוטן, גלוטן חיטה, לתת שעורה - מכיל גלוטן), 10.5%פתיתי חיטה מלאה וקקאו (קמח חיטה מלא-מכיל גלוטן, אבקת קקאו מופחתת שומן, גלוטן חיטה, אבקת חלב מלא) 9% שוקולד לבן מומתק ע\"י ממתיק (מלטיטול כממתיק, חמאת קקאו, אבקת חלב מלא, לציטין חמניות כחומר מתחלב), 8% פתיתי תירס (תירס, מלח, תמצית לתת שעורה - מכיל גלוטן), בוטנים קלויים, שומן קוקוס, גליצרול כחומר מייצב, מלח, לציטים חמניות כחומר מתחלב, חומרי טעם וריח טבעיים.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.1588 קג", "value": "0.1588" },
+      "Net_Weight": { "UOM": "גרם", "text": "120 גרם", "value": "120" },
+      "Product_Height": { "UOM": "סמ", "text": "15.5 סמ", "value": "15.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "15 סמ", "value": "15" },
+      "Product_Depth": { "UOM": "סמ", "text": "37 סמ", "value": "37" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קורני",
+    "Product_Description_English": "CORNY free",
+    "Country_of_Origin": "DE",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6815, 6864, 6840],
+    "pH": null,
+    "Serving_Size_Description": "חטיף=20 גרם",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6842, 6807, 6810, 6811, 6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "4011800637514",
+      "קורני",
+      "CORNY FREE",
+      "חטיף דגנים",
+      "שוקולד לבן",
+      "ללא תוספת סוכר"
+    ],
+    "internal_product_description": "קורני פריי חטיף דגנים עם שוקולד לבן ללא תוספת סוכר 6 יח'",
+    "Color": null,
+    "Diet_Information": [5529],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "335 קלוריות",
+            "value": "335",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "לחטיף",
+            "text": "67 קלוריות",
+            "value": "67",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.4 גרם",
+            "value": "7.4",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "67.4 גרם",
+            "value": "67.4",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "13.5 גרם",
+            "value": "13.5",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.0 גרם",
+            "value": "2.0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "0.4 גרם",
+            "value": "0.4",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79005",
+        "label": "רב כהלים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6058",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "39.7 גרם",
+            "value": "39.7",
+            "field_name": "Sugar_Alcohols_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "6059",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "7.9 גרם",
+            "value": "7.9",
+            "field_name": "Sugar_Alcohols_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.1 גרם",
+            "value": "5.1",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "9.9 גרם",
+            "value": "9.9",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "1.2 גרם",
+            "value": "1.2",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "170 מג",
+            "value": "170",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "30 מג",
+            "value": "30",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "קורני פרי עם שוקולד לבן -1X6ל.ס",
+    "Hazard_Precautionary_Statement": "צריכה מרובה עלולה לגרום לאפקט לקסיטיבי.",
+    "short_name": "קורני",
+    "Consumer_Storage_Instructions": "יש להרחיק ממקור חום. יש לאחסן במקום קריר ויבש.",
+    "Net_Content": { "UOM": "גרם", "text": "120 גרם", "value": "120" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 234,
+  "name": "קורני \"פרי \"עם שוקולד לבן -1X6ל.ס",
+  "site_id": 1,
+  "sub_group_id": 433,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

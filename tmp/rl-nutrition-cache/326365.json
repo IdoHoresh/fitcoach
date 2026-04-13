@@ -1,0 +1,148 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67093],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 326365,
+  "multiplication": 1,
+  "barcode": 7290107976725,
+  "brand": 3500,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290107976725/small.jpg",
+    "original": "/product/7290107976725/large.jpg",
+    "trim": "/product/7290107976725/trim.jpg",
+    "transparent": "/product/7290107976725/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, 40% פולי סויה יפאניים, מלח שולחן, סוכר לבן, חיטה(מכיל גלוטן), צבע מאכל(קרמל), מייצב(קסנטן גם), חומרים משמרים(סודיום בנזואט, פוטסיום סורבאט)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "684 גרם", "value": "684" },
+      "Net_Weight": { "UOM": "גרם", "text": "620 גרם", "value": "620" },
+      "Product_Height": { "UOM": "ממ", "text": "231 ממ", "value": "231" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "296 ממ", "value": "296" },
+      "Product_Depth": { "UOM": "ממ", "text": "69 ממ", "value": "69" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מאסטר שף",
+    "Product_Description_English": "MASTER CHEF LOW SODIUM SOYA SAUCE 620 GR",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6810],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR2", "value": "נתרן בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6821],
+    "Color_Number": null,
+    "Search_Tags": ["7290107976725", "מאסטר שף", "רוטב", "סויה", "מופחת נתרן"],
+    "internal_product_description": "מאסטר שף רוטב סויה מופחת נתרן 620 מל",
+    "Color": null,
+    "Diet_Information": [5526],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "12 קלוריות",
+            "value": "12",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "1660 מג",
+            "value": "1660",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מאסטר שף סויה מסורתית דל נתרן 620 גר",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מאסטר שף סויה מס",
+    "Consumer_Storage_Instructions": "יש לשמור במקום קריר ויבש\nלאחר הפתיחה יש לשמור בקירור",
+    "Net_Content": { "UOM": "קג", "text": "0.62 קג", "value": "0.62" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 226,
+  "name": "מאסטר שף רוטב סויה דל נתרן 620 מל",
+  "site_id": 1,
+  "sub_group_id": 209,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

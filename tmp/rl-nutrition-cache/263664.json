@@ -1,0 +1,276 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71095],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67163],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 6.7 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 506, "status": 2 },
+  "id": 263664,
+  "multiplication": 1,
+  "barcode": 7290003143146,
+  "brand": 3111,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290003143146/small.jpg",
+    "original": "/product/7290003143146/large.jpg",
+    "trim": "/product/7290003143146/trim.jpg",
+    "transparent": "/product/7290003143146/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10],
+  "available_in": [
+    179, 279, 290, 306, 331, 411, 412, 1197, 1198, 1214, 1220, 1221, 1225, 1226, 1306, 1307, 1314,
+    1323, 1329, 1330, 1332, 1333, 1378, 1389
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "תמרים(%‎ (65, סוכר, חומר מווסת חומציות חומצת לימון ,חומר משמר פוטסיום סורבט",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "502 גרם", "value": "502" },
+      "Net_Weight": { "UOM": "קג", "text": "0.45 קג", "value": "0.45" },
+      "Product_Height": { "UOM": "סמ", "text": "10 סמ", "value": "10" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קליית גת",
+    "Product_Description_English": "DATE SPRESD",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": ["7290003143146", "קליית גת", "ממרח תמרים", ""],
+    "internal_product_description": "ממרח תמרים קלית גת 450 גר&#039;",
+    "Color": null,
+    "Diet_Information": [5513],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "283 קלוריות",
+            "value": "283",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "8 מג",
+            "value": "8",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "67 גרם",
+            "value": "67",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "60 גרם",
+            "value": "60",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "15",
+            "value": "15",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "5.3 גרם",
+            "value": "5.3",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "ממרח תמרים קלית גת 450 ג'",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "ממרח תמרים 450 ג",
+    "Consumer_Storage_Instructions": "יש לשמור בטמפ&#039; החדר באזור מוצל, עד 28 מעלות",
+    "Net_Content": { "UOM": "גרם", "text": "450 גרם", "value": "450" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910364346,
+      "sw_kefel": 1,
+      "k_cmt": null,
+      "deleted_by": "RL",
+      "k_acz_dis": 8,
+      "active": 1,
+      "created_at": "2025-08-10T12:52:00.000000Z",
+      "cmt": 1,
+      "label": "5% הנחה על מגוון מוצרים\n1 ב NaN ₪",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "is_personal": 1,
+      "updated_at": "2026-01-08T08:58:53.000000Z",
+      "approved_at": "2026-01-08 10:58:53",
+      "name": "8% הנחה על מגוון מוצרים",
+      "k_scm": null,
+      "from": "2025-08-10 00:00:00",
+      "id": 723012,
+      "to": "2026-06-26 23:59:59",
+      "scm": null,
+      "pending_approval": 0,
+      "is_club": 0
+    },
+    {
+      "code": 910367982,
+      "sw_kefel": 1,
+      "k_cmt": null,
+      "deleted_by": null,
+      "k_acz_dis": 20,
+      "active": 1,
+      "created_at": "2026-02-28T22:51:46.000000Z",
+      "cmt": 1,
+      "label": "ממרח תמרים ב-20% הנחה ארנק",
+      "type": 1,
+      "is_wallet": 1,
+      "deleted_at": null,
+      "max_in_doc": 0,
+      "is_personal": 0,
+      "updated_at": "2026-02-28T22:51:46.000000Z",
+      "approved_at": null,
+      "name": "ממרח תמרים ב-20% הנחה ארנק",
+      "k_scm": null,
+      "from": "2026-03-01 00:00:00",
+      "id": 772166,
+      "to": "2026-04-30 23:59:59",
+      "scm": null,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 264,
+  "name": "ממרח תמרים קלית גת 450 גר'",
+  "site_id": 1,
+  "sub_group_id": 855,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": true
+}

@@ -1,0 +1,460 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71065],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67016],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 2.9 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 425002,
+  "multiplication": 1,
+  "barcode": 7290119375264,
+  "brand": 858,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290119375264/small.jpg",
+    "original": "/product/7290119375264/large.jpg",
+    "trim": "/product/7290119375264/trim.jpg",
+    "transparent": null,
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [15],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב מפוסטר (71%), סוכר לבן, מים, שמנת, אבקת חלב, עמילן מעובד (E-1442), צבעי מאכל (קרמל, בטא קרוטן), מייצבים (סודיום פוספאט, פוליפוספאט, קרגינאן), מלח, חומרי טעם וריח, רכז גזר שחור.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "131.000 גרם", "value": "131.000" },
+      "Net_Weight": { "UOM": "גרם", "text": "125.000 גרם", "value": "125.000" },
+      "Product_Height": { "UOM": "ממ", "text": "65.000 ממ", "value": "65.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "65.000 ממ", "value": "65.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "69.000 ממ", "value": "69.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "שטראוס",
+    "Product_Description_English": "maadan hagolan toffee caramel",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290119375264",
+      "מעדן הגולן",
+      "מעדן",
+      "גולן",
+      "מעדן שטראוס",
+      "טופי קרמל",
+      "טופי",
+      "קרמל",
+      "בטעם טופי",
+      "בטעם קרמל",
+      "מעדן ילדים"
+    ],
+    "internal_product_description": "מעדן הגולן בטעם טופי קרמל",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "130 קלוריות",
+            "value": "130",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "name": "אנרגיה (קלוריות) למנה",
+            "text": "162 קלוריות",
+            "value": "162",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "3.9 גרם",
+            "value": "3.9",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "שומנים (גרם) למנה",
+            "text": "4.9 גרם",
+            "value": "4.9",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "2.3 גרם",
+            "value": "2.3",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים למנה",
+            "text": "2.9 גרם",
+            "value": "2.9",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים למנה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "11.7 מג",
+            "value": "11.7",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים למנה",
+            "text": "14.6 מג",
+            "value": "14.6",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "299 מג",
+            "value": "299",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "נתרן (מג) למנה",
+            "text": "374 מג",
+            "value": "374",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "19.9 גרם",
+            "value": "19.9",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "סך הפחמימות (גרם) למנה",
+            "text": "25 גרם",
+            "value": "25",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "15.7 גרם",
+            "value": "15.7",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "סוכרים מתוך פחמימות (גרם) למנה",
+            "text": "19.7 גרם",
+            "value": "19.7",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "4",
+            "value": "4",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "כפיות סוכר מתוך סך הפחמימות למנה",
+            "text": "5",
+            "value": "5",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "3.8 גרם",
+            "value": "3.8",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חלבונים (גרם) למנה",
+            "text": "4.8 גרם",
+            "value": "4.8",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "סידן (מג) ל-100 גרם",
+            "text": "135 מג",
+            "value": "135",
+            "field_name": "Calcium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5866",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "סידן (מג) למנה",
+            "text": "169 מג",
+            "value": "169",
+            "field_name": "Calcium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79048",
+        "label": "סוכרים: לקטוז",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5965",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים: לקטוז ל-100 גרם",
+            "text": "5.7 גרם",
+            "value": "5.7",
+            "field_name": "Lactose_from_Sugars_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5964",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "סוכרים: לקטוז למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Lactose_from_Sugars_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מעדן הגולן בטעם טופי קרמל",
+    "Hazard_Precautionary_Statement": "לשמור בקירור.",
+    "short_name": "מעדן הגולן טופי קרמל",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "125 גרם", "value": "125" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910368669,
+      "sw_kefel": 0,
+      "k_cmt": null,
+      "deleted_by": null,
+      "k_acz_dis": null,
+      "active": 1,
+      "created_at": "2026-04-13T08:51:56.000000Z",
+      "cmt": 4,
+      "label": "מעדן הגולן 4 יח' ב-12 ש\"ח",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "max_in_doc": 0,
+      "is_personal": 0,
+      "updated_at": "2026-04-13T08:51:56.000000Z",
+      "approved_at": null,
+      "name": "מעדן הגולן 4 יח' ב-12 ש\"ח",
+      "k_scm": null,
+      "from": "2026-04-13 00:00:00",
+      "id": 784869,
+      "to": "2026-04-30 23:59:59",
+      "scm": 12,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 203,
+  "name": "מעדן הגולן טעם טופי קרמל 125 גר",
+  "site_id": 1,
+  "sub_group_id": 467,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

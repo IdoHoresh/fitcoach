@@ -1,0 +1,186 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71069],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 1365,
+  "multiplication": 1,
+  "barcode": 7290000474014,
+  "brand": 1380,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000474014/small.jpg",
+    "original": "/product/7290000474014/large.jpg",
+    "trim": "/product/7290000474014/trim.jpg",
+    "transparent": "/product/7290000474014/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב מפוסטר, ויטמים A, ויטמין D",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.128 קג", "value": "1.128" },
+      "Net_Weight": { "UOM": "גרם", "text": "1000 גרם", "value": "1000" },
+      "Product_Height": { "UOM": "סמ", "text": "5 סמ", "value": "5" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "14 סמ", "value": "14" },
+      "Product_Depth": { "UOM": "סמ", "text": "23 סמ", "value": "23" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "טרה",
+    "Product_Description_English": "Milk bag, 1% fat, 1 liter, Badatz",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": ["7290000474014", "1%\nחלב\nדגני בוקר"],
+    "internal_product_description": "חלב בשקית 1%-1 ליטר בד\"צ",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "42 קלוריות",
+            "value": "42",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.4 גרם",
+            "value": "3.4",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "100 מג",
+            "value": "100",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "חלב בשקית 1%-1 ליטר בד\"צ",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "חלב1%שק1ל בדצ",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "1000 מל", "value": "1000" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 198,
+  "name": "חלב בשקית 1% טרה 1 ליטר",
+  "site_id": 1,
+  "sub_group_id": 22,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9d844a7a-ebe5-4c45-ba45-33df4a3f4bc5.png",
+      "name": "מוצרים בפיקוח",
+      "id": 15
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

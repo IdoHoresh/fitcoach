@@ -1,0 +1,177 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71070],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085, 67155],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 6.6 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1608, "status": 2 },
+  "id": 424354,
+  "multiplication": 1,
+  "barcode": 7290000336299,
+  "brand": 2263,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000336299/small.jpg",
+    "original": "/product/7290000336299/large.jpg",
+    "trim": "/product/7290000336299/trim.jpg",
+    "transparent": "/product/7290000336299/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "רכיבים: מים , מיץ לימון מרכז (7.5%), מיץ תפוח עץ מרכז  (6.5%), סוכר , רכיבי תפוזים  (0.98%), (מכיל 10% או יותר רכיבי פרי) , מווסת חומציות (טרי פוטסיום ציטראט , חומצת לימון , טרי סודיום ציטראט)  , מייצב (E445 , גאם ערביק , גואר גאם , פקטין)  , צבע מאכל (גזר שחור מרכז)  , חומרי טעם וריח , ויטמין C (חומצה אסקורבית)  , חומר משמר (פוטסיום סורבט , סולפיט (E224))  , ממתיק (אססולפם K , סוכרלוז)  .\n\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.550 קג", "value": "1.550" },
+      "Net_Weight": { "UOM": "קג", "text": "1.5 קג", "value": "1.5" },
+      "Product_Height": { "UOM": "סמ", "text": "32.1 סמ", "value": "32.1" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "9.1 סמ", "value": "9.1" },
+      "Product_Depth": { "UOM": "סמ", "text": "9.1 סמ", "value": "9.1" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ג&#039;אמפ",
+    "Product_Description_English": "Jump Pomegranate Lemon FL 1.5 L \n\n",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290000336299",
+      "ג'אמפ",
+      "רימונדה",
+      "משקה קל רימונדה",
+      "רימונדה",
+      "ג'אמפ רימונדה 1.5"
+    ],
+    "internal_product_description": " ג'אמפ רימונדה  1.5\n",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "20 קלוריות",
+            "value": "20",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "נתרן (מג) ל-100 מל",
+            "text": "4.7 מג",
+            "value": "4.7",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל",
+            "text": "4.5 גרם",
+            "value": "4.5",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 מל",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 מל",
+            "text": "1",
+            "value": "1",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": "10%",
+    "Serving_Suggestion": "לנער היטב",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": " ג'אמפ רימונדה  1.5",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": " ג'אמפ רימונדה  1.5",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ומוצל . יש לאחסן בקירור לאחר הפתיחה",
+    "Net_Content": { "UOM": "ליטר", "text": "1.5 ליטר", "value": "1.5" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "משקה קל רימונדה ג'אמפ 1.5 ליטר",
+  "site_id": 1,
+  "sub_group_id": 435,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": false
+}

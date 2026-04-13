@@ -1,0 +1,195 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [180],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 359683,
+  "multiplication": 1,
+  "barcode": 7290113300149,
+  "brand": 1051,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290113300149/small.jpg",
+    "original": "/product/7290113300149/large.jpg",
+    "trim": "/product/7290113300149/trim.jpg",
+    "transparent": "/product/7290113300149/transparent.png",
+    "gallery": []
+  },
+  "department_id": 59,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "בשר עוף ותוצריו, בשר כבש ותוצריו, קמח חיטה, גליצרין, חלבון מן הצומח, סורביטול, ג'לטין, נתרן אצטט, אורז שמרים אדום. ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "58 גרם", "value": "58" },
+      "Net_Weight": { "UOM": "גרם", "text": "50 גרם", "value": "50" },
+      "Product_Height": { "UOM": "ממ", "text": "220 ממ", "value": "220" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "80 ממ", "value": "80" },
+      "Product_Depth": { "UOM": "ממ", "text": "10 ממ", "value": "10" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ביופט",
+    "Product_Description_English": "Bonzo Lamb sticks",
+    "Country_of_Origin": "CN",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290113300149",
+      "לה קט",
+      "בונזו",
+      "להקט",
+      "פריסקיז",
+      "אוכל חתולים",
+      "חתולים",
+      "שימורי כלבים",
+      "שימורי חתולים",
+      "דוגלי",
+      "ביופט",
+      "בון זו",
+      "חול",
+      "מזון כלבים",
+      "מזון חתולים",
+      "כלבים",
+      "חטיפים לכלבים",
+      "חטיפים לכלב",
+      "עצמות לכלבים",
+      "עצם",
+      "עצם לכלב",
+      "עצם עם עוף",
+      "בונזו ג'וי",
+      "בונזו גוי",
+      "JOY"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "23 גרם",
+            "value": "23",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79035",
+        "label": "אפר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6023",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "אפר ל-100 גרם",
+            "text": "5%",
+            "value": "5%",
+            "field_name": "Ash_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79038",
+        "label": "תאית",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6019",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "תאית ל-100 גרם",
+            "text": "1.5%",
+            "value": "1.5%",
+            "field_name": "Cellulose_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79054",
+        "label": "לחות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6017",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "לחות ל-100 גרם",
+            "text": "18%",
+            "value": "18%",
+            "field_name": "Moisture_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "בונזו חטיף מקלות כבש 50 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "חטיף בונזו מקלות כבש",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "50 גרם", "value": "50" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 250,
+  "name": "בונזו מקלות כבש 50 גרם",
+  "site_id": 1,
+  "sub_group_id": 143,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": false
+}

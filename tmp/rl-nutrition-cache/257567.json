@@ -1,0 +1,843 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67011, 67259],
+    "Israel_Milk": [6903],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 18.2 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 424, "status": 2 },
+  "id": 257567,
+  "multiplication": 1,
+  "barcode": 7613033548192,
+  "brand": 799,
+  "recipes": [],
+  "images": {
+    "small": "/product/7613033548192/small.jpg",
+    "original": "/product/7613033548192/large.jpg",
+    "trim": "/product/7613033548192/trim.jpg",
+    "transparent": "/product/7613033548192/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 45],
+  "available_in": [
+    82, 179, 279, 306, 411, 412, 1197, 1198, 1214, 1220, 1221, 1306, 1307, 1314, 1323, 1332, 1378,
+    1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חיטה מלאה (50.6%) (מכיל גלוטן), אורז (28.6%), שוקולד מריר (17.4%) (מכיל שומן חלב, חומר מתחלב (לציטין סויה)), סוכר, פרוקטו-אוליגוסכרידים, סירופ סוכר אינברטי, מינרלים (סידן (קלציום קרבונט), ברזל), תמצית לתת שעורה (מכיל גלוטן), מלח, שמן צמחי, חומרי הזגה (גאם-ארביק, פולידקסטרוז), מולסה, סירופ גלוקוז, חומרי טעם וריח, מעכב חמצון (טוקופרולים), ויטמינים ( ויטמין B5 (חומצה פנטותנית), ויטמין B3 (ניאצין), ויטמין B2 (ריבופלאבין), חומצה פולית, ויטמין B6).\nסך הדגנים במוצר: 79.2%\n63.8% מסך הדגנים במוצר הינם דגנים מלאים.\nמוצקי קקאו בשוקולד – 43% לפחות",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "423.000 גרם", "value": "423.000" },
+      "Net_Weight": { "UOM": "גרם", "text": "375 גרם", "value": "375" },
+      "Product_Height": { "UOM": "ממ", "text": "259.000 ממ", "value": "259.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "192.000 ממ", "value": "192.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "46.000 ממ", "value": "46.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "נסטלה",
+    "Product_Description_English": "FITNESS DKCHOC Cer 16x375g N0 IL",
+    "Country_of_Origin": "FR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6806, 6840],
+    "pH": null,
+    "Serving_Size_Description": "30 ג'",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6810, 6811, 6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7613033548192",
+      "פיטנס",
+      "דגנים",
+      "דגני בוקר",
+      "שוקולד",
+      "שוקולד מריר",
+      "נסטלה",
+      "ארוחת בוקר",
+      "פיטנס שוקולד",
+      "דגני מבוגרים",
+      "פיטנס שוקולד מריר",
+      "דגני בוקר פיטנס",
+      "119 קלוריות"
+    ],
+    "internal_product_description": "פיטנס שוקולד מריר 16*375גרם 2017",
+    "Color": null,
+    "Diet_Information": [5514, 5513, 5532, 5531],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "395 קלוריות",
+            "value": "395",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "name": "אנרגיה (קלוריות) למנה",
+            "text": "118 קלוריות",
+            "value": "118",
+            "field_name": "Energy_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל מוכן",
+            "name": "אנרגיה (קלוריות) ל-100 מל מוכן",
+            "text": "119 קלוריות",
+            "value": "119",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "7.5 גרם",
+            "value": "7.5",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "שומנים (גרם) למנה",
+            "text": "2.3 גרם",
+            "value": "2.3",
+            "field_name": "Fats_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "שומנים (גרם) ל-100 מל מוכן",
+            "text": "2.2",
+            "value": "2.2",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "4 גרם",
+            "value": "4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים למנה",
+            "text": "1.2 גרם",
+            "value": "1.2",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5928",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 מל מוכן",
+            "text": "1.2 גרם",
+            "value": "1.2",
+            "field_name": "Saturated_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים למנה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5929",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 מל מוכן",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים למנה",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5930",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 מל מוכן",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "186 מג",
+            "value": "186",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "נתרן (מג) למנה",
+            "text": "56 מג",
+            "value": "56",
+            "field_name": "Sodium_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5921",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "נתרן (מג) ל-100 מל מוכן",
+            "text": "89 מג",
+            "value": "89",
+            "field_name": "Sodium_Natran"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "67.7 גרם",
+            "value": "67.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "סך הפחמימות (גרם) למנה",
+            "text": "20.3 גרם",
+            "value": "20.3",
+            "field_name": "Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5902",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "סך הפחמימות (גרם) ל-100 מל מוכן",
+            "text": "20.9",
+            "value": "20.9",
+            "field_name": "Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "14.1 גרם",
+            "value": "14.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "סוכרים מתוך פחמימות (גרם) למנה",
+            "text": "4.2 גרם",
+            "value": "4.2",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5926",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל מוכן",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Sugars_from_Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "3.5",
+            "value": "3.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "כפיות סוכר מתוך סך הפחמימות למנה",
+            "text": "1",
+            "value": "1",
+            "field_name": "Sugar_Spoon_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6185",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 מל מוכן",
+            "text": "1.25",
+            "value": "1.25",
+            "field_name": "Sugar_Spoon"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "10.3 גרם",
+            "value": "10.3",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "סיבים תזונתיים (גרם) למנה",
+            "text": "3.1 גרם",
+            "value": "3.1",
+            "field_name": "Dietary_Fibers_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5927",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "סיבים תזונתיים (גרם) ל-100 מל מוכן",
+            "text": "2.4 גרם",
+            "value": "2.4",
+            "field_name": "Dietary_Fibers"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "9.0 גרם",
+            "value": "9.0",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "חלבונים (גרם) למנה",
+            "text": "2.7 גרם",
+            "value": "2.7",
+            "field_name": "Proteins_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חלבונים (גרם) ל-100 מל מוכן",
+            "text": "2.7",
+            "value": "2.7",
+            "field_name": "Proteins"
+          }
+        ]
+      },
+      {
+        "code": "79022",
+        "label": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5846",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג) ל-100 גרם",
+            "text": "1.0 מג",
+            "value": "1.0",
+            "field_name": "Vitamin_B2_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5847",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג) למנה",
+            "text": "0.29 מג",
+            "value": "0.29",
+            "field_name": "Vitamin_B2_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5938",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג) ל-100 מל מוכן",
+            "text": "0.32 מג",
+            "value": "0.32",
+            "field_name": "Vitamin_B2"
+          }
+        ]
+      },
+      {
+        "code": "79023",
+        "label": "ויטמין‎ B3 (ניאצין) (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5978",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B3 (ניאצין) (מג) ל-100 גרם",
+            "text": "",
+            "value": "",
+            "field_name": "Vitamin_B3_Niacin_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5977",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "ויטמין‎ B3 (ניאצין) (מג) למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Vitamin_B3_Niacin_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5976",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "ויטמין‎ B3 (ניאצין) (מג) ל-100 מל מוכן",
+            "text": "2 מג",
+            "value": "2",
+            "field_name": "Vitamin_B3_Niacin"
+          }
+        ]
+      },
+      {
+        "code": "79026",
+        "label": "ויטמין‎ B6 (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5852",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B6 (מג) ל-100 גרם",
+            "text": "0.7 מג",
+            "value": "0.7",
+            "field_name": "Vitamin_B6_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5853",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "ויטמין‎ B6 (מג) למנה",
+            "text": "0.21 מג",
+            "value": "0.21",
+            "field_name": "Vitamin_B6_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5941",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "ויטמין‎ B6 (מג) ל-100 מל מוכן",
+            "text": "0.3 מג",
+            "value": "0.3",
+            "field_name": "Vitamin_B6"
+          }
+        ]
+      },
+      {
+        "code": "79015",
+        "label": "חומצה פולית (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5854",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "name": "חומצה פולית (מקג) ל-100 גרם",
+            "text": "102 מקג",
+            "value": "102",
+            "field_name": "Folic_Acid_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5855",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "למנה",
+            "name": "חומצה פולית (מקג) למנה",
+            "text": "30.6 מקג",
+            "value": "30.6",
+            "field_name": "Folic_Acid_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5933",
+            "col_field_id": "6068",
+            "UOM": "מקג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חומצה פולית (מקג) ל-100 מל מוכן",
+            "text": "39 מקג",
+            "value": "39",
+            "field_name": "Folic_Acid"
+          }
+        ]
+      },
+      {
+        "code": "79025",
+        "label": "ויטמין‎ B5 (חומצה פנטותנית) (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5850",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B5 (חומצה פנטותנית) (מג) ל-100 גרם",
+            "text": "3.8 מג",
+            "value": "3.8",
+            "field_name": "Vitamin_B5_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5851",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "ויטמין‎ B5 (חומצה פנטותנית) (מג) למנה",
+            "text": "1.1 מג",
+            "value": "1.1",
+            "field_name": "Vitamin_B5_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5940",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "ויטמין‎ B5 (חומצה פנטותנית) (מג) ל-100 מל מוכן",
+            "text": "1.28 מג",
+            "value": "1.28",
+            "field_name": "Vitamin_B5"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "סידן (מג) ל-100 גרם",
+            "text": "351 מג",
+            "value": "351",
+            "field_name": "Calcium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5866",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "סידן (מג) למנה",
+            "text": "105 מג",
+            "value": "105",
+            "field_name": "Calcium_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5904",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "סידן (מג) ל-100 מל מוכן",
+            "text": "169",
+            "value": "169",
+            "field_name": "Calcium"
+          }
+        ]
+      },
+      {
+        "code": "79016",
+        "label": "ברזל (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5869",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ברזל (מג) ל-100 גרם",
+            "text": "8.5 מג",
+            "value": "8.5",
+            "field_name": "Iron_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5870",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "ברזל (מג) למנה",
+            "text": "2.55 מג",
+            "value": "2.55",
+            "field_name": "Iron_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5934",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "ברזל (מג) ל-100 מל מוכן",
+            "text": "3.7 מג",
+            "value": "3.7",
+            "field_name": "Iron"
+          }
+        ]
+      },
+      {
+        "code": "79063",
+        "label": "ויטמין B3 (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5848",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין B3 (מג) ל-100 גרם",
+            "text": "7 מג",
+            "value": "7",
+            "field_name": "Vitamin_B3_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5849",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "name": "ויטמין B3 (מג) למנה",
+            "text": "2 מג",
+            "value": "2",
+            "field_name": "Vitamin_B3_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5939",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "ויטמין B3 (מג) ל-100 מל מוכן",
+            "text": "3.2 מג",
+            "value": "3.2",
+            "field_name": "Vitamin_B3"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פיטנס שוקולד מריר- 119 קלוריות למנה!",
+    "Hazard_Precautionary_Statement": "<br />\n<br />\n<br />\n",
+    "short_name": "פיטנס שוקולד מריר",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "375 גרם", "value": "375" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 234,
+  "name": "דגני בוקר פיטנס עם שוקולד מריר נסטלה 375 גרם",
+  "site_id": 1,
+  "sub_group_id": 432,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

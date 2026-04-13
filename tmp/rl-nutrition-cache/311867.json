@@ -1,0 +1,238 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71070],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 311867,
+  "multiplication": 1,
+  "barcode": 7290016162202,
+  "brand": 743,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290016162202/small.jpg",
+    "original": "/product/7290016162202/large.jpg",
+    "trim": "/product/7290016162202/trim.jpg",
+    "transparent": "/product/7290016162202/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קצפת צמחית (48%) (מים, סוכר, שומן מוקשה מדקלים, מלח, תמצית וניל, מייצבים (E407,E410,E461,E466), לציטין סויה (E322), חומרים מתחלבים E435, E471), צבע מאכל טבעי (E160)), מים, ביצים מפוסטרות, קמח חיטה לבן (מכיל גלוטן), סוכרים, שמן קנולה, עמילן מעובד (1412), מייצבים (E415,E412), מווסתי חומציות (E331iii, E327), צמקאו חום, כהל (09%), חומצת מאכל (E330), חומרי טעם וריח, מלח, חומר משמר (E202).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "330 גרם", "value": "330" },
+      "Net_Weight": { "UOM": "גרם", "text": "280 גרם", "value": "280" },
+      "Product_Height": { "UOM": "ממ", "text": "275 ממ", "value": "275" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "115 ממ", "value": "115" },
+      "Product_Depth": { "UOM": "ממ", "text": "75 ממ", "value": "75" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קפולסקי",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6876, 6838],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": null,
+    "Allergen_Type_Code_and_Containment": [6808, 6810, 6821, 6822],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290016162202",
+      "קפולסקי",
+      "אקלר",
+      "מצופה",
+      "שוקולד",
+      "מילוי",
+      "קרם",
+      "וניל",
+      "280 גרם"
+    ],
+    "internal_product_description": "קפולסקי אקלר מצופה שוקולד במילוי קרם בטעם וניל, 280 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "367.8 קלוריות",
+            "value": "367.8",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.4 גרם",
+            "value": "5.4",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "33.4 גרם",
+            "value": "33.4",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "27.9 גרם",
+            "value": "27.9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "24.3 גרם",
+            "value": "24.3",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "15.5 גרם",
+            "value": "15.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "92.3 מג",
+            "value": "92.3",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "246 מג",
+            "value": "246",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "קפולסקי אקלר מצופה שוקולד במילוי קרם בטעם וניל",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "קפולסקי אקלרים שוקולד",
+    "Consumer_Storage_Instructions": "מוצר בהקפאה: יש לשמור ב 18-, לאחר ההפשקה אין להקפיא בשנית. מוצר בצינון: יש לשמור ב-4 מעלות צלזיוס אין להקפיא בשנית.",
+    "Net_Content": { "UOM": "גרם", "text": "280 גרם", "value": "280" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 302,
+  "name": "אקלרים שוקולד פרווה 280 גר",
+  "site_id": 1,
+  "sub_group_id": 306,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

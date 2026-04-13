@@ -1,0 +1,211 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71114],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67245],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 2.4 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 108, "status": 2 },
+  "id": 1973,
+  "multiplication": 1,
+  "barcode": 7290002019794,
+  "brand": 3751,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290002019794/small.jpg",
+    "original": "/product/7290002019794/large.jpg",
+    "trim": "/product/7290002019794/trim.jpg",
+    "transparent": "/product/7290002019794/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [
+    82, 179, 279, 290, 306, 331, 411, 412, 1197, 1198, 1214, 1220, 1221, 1225, 1226, 1306, 1307,
+    1314, 1323, 1329, 1330, 1332, 1333, 1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "עגבניות (93%), סוכר לבן, מווסת חומציות (חומצה ציטרית).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "102 גרם", "value": "102" },
+      "Net_Weight": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Height": { "UOM": "סמ", "text": "6.5 סמ", "value": "6.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6.5 סמ", "value": "6.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "5 סמ", "value": "5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "פריניר",
+    "Product_Description_English": "Tomato Paste 22Bx 100 g",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290002019794", "פריניר", "רוטב עגבניות", "22BX"],
+    "internal_product_description": "פריניר רוטב עגבניות 22BX",
+    "Color": null,
+    "Diet_Information": [5514],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "83 קלוריות",
+            "value": "83",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "49 מג",
+            "value": "49",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "16.6 גרם",
+            "value": "16.6",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "13 גרם",
+            "value": "13",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.2 גרם",
+            "value": "3.2",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פריניר רוטב עגבניות 22BX",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "רוטב עגבניות מרוכז",
+    "Consumer_Storage_Instructions": "לשמור בקירור עד 5 ימים לאחר הפתיחה",
+    "Net_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910368235,
+      "sw_kefel": 0,
+      "k_cmt": null,
+      "deleted_by": null,
+      "k_acz_dis": null,
+      "active": 1,
+      "created_at": "2026-03-07T22:52:04.000000Z",
+      "cmt": 8,
+      "label": "רוטב עגבניות 8 יח' ב-14.90 ש\"ח",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "max_in_doc": 0,
+      "is_personal": 0,
+      "updated_at": "2026-03-07T22:52:04.000000Z",
+      "approved_at": null,
+      "name": "רוטב עגבניות 8 יח' ב-14.90 ש\"ח",
+      "k_scm": null,
+      "from": "2026-03-08 00:00:00",
+      "id": 777076,
+      "to": "2026-05-02 23:59:59",
+      "scm": 14.9,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 225,
+  "name": "פריניר רוטב עגבניות 100 גר 22BX",
+  "site_id": 1,
+  "sub_group_id": 148,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,111 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71062],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6407],
+    "Rabbinate": [67093, 67085, 67073, 67155],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 19.9 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 114036,
+  "multiplication": 1,
+  "barcode": 7290005168284,
+  "brand": 2900,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290005168284/small.jpg",
+    "original": "/product/7290005168284/large.jpg",
+    "trim": "/product/7290005168284/trim.jpg",
+    "transparent": "/product/7290005168284/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 6],
+  "available_in": [279, 290, 306, 412, 1197, 1314, 1329, 1330, 1332, 1333, 1378],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "תוספת גופרית דו חמצנית, סוכר, קרמל, כהל מולסה, פוטסיום סורבט.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.26 קג", "value": "1.26" },
+      "Product_Height": { "UOM": "ממ", "text": "294 ממ", "value": "294" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "76.6 ממ", "value": "76.6" },
+      "Product_Depth": { "UOM": "ממ", "text": "76.6 ממ", "value": "76.6" }
+    },
+    "Contains_Sulfur_Dioxide": true,
+    "Alcohol_Percentage_in_Product": "12%",
+    "BrandName": "יקב ציון",
+    "Product_Description_English": " Zion Winery, Gan Eden, Kiddush sweet red wine\n",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6943],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290005168284",
+      "יקב ציון",
+      "אדום לקידוש",
+      "אדום מתוק",
+      "קידוש",
+      "יין אדום",
+      "יין קידוש",
+      "יין ציון",
+      "גן עדן"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "188 קלוריות",
+            "value": "188",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "יקב ציון גן עדן יין אדום לקידוש\n",
+    "Hazard_Precautionary_Statement": "מכיל אלכוהול - מומלץ להימנע משתייה מופרזת.",
+    "short_name": " גן עדן יין אדום לקידוש\n",
+    "Consumer_Storage_Instructions": "לשימור איכותו, מומלץ לאחסן את היין בשכיבה במקום חשוך וקריר.",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 239,
+  "name": "גן עדן 750 מ\"ל",
+  "site_id": 1,
+  "sub_group_id": 48,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

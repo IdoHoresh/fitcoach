@@ -1,0 +1,102 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67076, 67093, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 49.5 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 420888,
+  "multiplication": 1,
+  "barcode": 5601996208811,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/5601996208811/small.jpg",
+    "original": "/product/5601996208811/large.jpg",
+    "trim": "/product/5601996208811/trim.jpg",
+    "transparent": "/product/5601996208811/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6],
+  "available_in": [82, 279, 331, 1197, 1214, 1221, 1225, 1307, 1314, 1330],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.031 קג", "value": "1.031" },
+      "Net_Weight": { "UOM": "גרם", "text": "750 גרם", "value": "750" },
+      "Product_Height": { "UOM": "סמ", "text": "32 סמ", "value": "32" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7 סמ", "value": "7" },
+      "Product_Depth": { "UOM": "סמ", "text": "7 סמ", "value": "7" }
+    },
+    "Contains_Sulfur_Dioxide": true,
+    "Alcohol_Percentage_in_Product": "11%",
+    "BrandName": "פורטה 6",
+    "Product_Description_English": "BLUE NUN QUALITASWEIN RHERNHSSEN",
+    "Country_of_Origin": "PT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["5601996208811", "בלו נאן", "יין לבן חצי מתוק"],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "62 קלוריות",
+            "value": "62",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "פורטה 6 אדום כשר",
+    "Hazard_Precautionary_Statement": "מכיל אלכוהול-מומלץ להימנע משתייה מופרזת!",
+    "short_name": "פורטה 6 אדום כשר",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 239,
+  "name": "יין פורטה 6 אדום 750מל",
+  "site_id": 1,
+  "sub_group_id": 48,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

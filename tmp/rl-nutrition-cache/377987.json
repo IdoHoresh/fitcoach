@@ -1,0 +1,267 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67076, 67093, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 18.9 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1010, "status": 2 },
+  "id": 377987,
+  "multiplication": 1,
+  "barcode": 5011157730271,
+  "brand": 5072,
+  "recipes": [],
+  "images": {
+    "small": "/product/5011157730271/small.jpg",
+    "original": "/product/5011157730271/large.jpg",
+    "trim": "/product/5011157730271/trim.jpg",
+    "transparent": "/product/5011157730271/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6, 55],
+  "available_in": [
+    82, 279, 290, 331, 411, 412, 1197, 1214, 1221, 1226, 1306, 1314, 1323, 1329, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "אורז לבן ארוך יסמין (100%)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.008 קג", "value": "1.008" },
+      "Net_Weight": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Height": { "UOM": "סמ", "text": "18.5 סמ", "value": "18.5" },
+      "Price_Comparison_Content": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Width": { "UOM": "סמ", "text": "10 סמ", "value": "10" },
+      "Product_Depth": { "UOM": "סמ", "text": "6.5 סמ", "value": "6.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "Tilda ",
+    "Product_Description_English": "TILDA JASMINE RICE 1 KG",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6942],
+    "pH": null,
+    "Serving_Size_Description": "180 גרם",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6942],
+    "Color_Number": null,
+    "Search_Tags": ["5011157730271", "שסטוביץ", "טילדה", "אורז", "יסמין"],
+    "internal_product_description": "אורז יסמין טילדה 1 קג",
+    "Color": null,
+    "Diet_Information": [5539, 5514, 5513],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "354 קלוריות",
+            "value": "354",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "0.95 גרם",
+            "value": "0.95",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "0.39 גרם",
+            "value": "0.39",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "79.2 גרם",
+            "value": "79.2",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "0.72 גרם",
+            "value": "0.72",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "7.1 גרם",
+            "value": "7.1",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "לכל כוס אחת של אורז לא מבושל הוסיפו 2 כוסות מים\nלהשגת התוצאות הטובות ביותר אנו ממליצים להשרות את האורז במים קרים למשך 30 דקות ואז לשטוף אותו דרך מסננת במים קרים\n\n1. הוסיפו 2 כוסות מים גרים על כל כוס אורז בסמטי\n2. הביאו לרתיחה הקטינו את האש כסו ובשלו למשך 10-12 דקות עד שהמים יספגו הימנעו מפתיחת המכנה ומערבוב האורז\n3. הגמר הבישול השאירו את הסיר עם מכסה סכור למשך 5 דקות\n4. ערבבו את הגרגירים בעדינות עם מזלג לפני ההגשה\n\nלחלופין, הוסיפו את האורז לסיר גדול של מים רותחים ובשלו בחום בינוני למשך 10-12 דקות סננו את המים היטב והעמידו בצד עם מכסה סגור למשך 3 דקות ערבבו את הגרגירים בעדינות עם מזלג לפני ההגשה",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "Tilda - אורז יסמין טילדה",
+    "Hazard_Precautionary_Statement": "יש לברור לפני השימוש",
+    "short_name": "אורז יסמין טילדה",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש",
+    "Net_Content": { "UOM": "קג", "text": "1 קג", "value": "1" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910368117,
+      "sw_kefel": 0,
+      "k_cmt": null,
+      "deleted_by": null,
+      "k_acz_dis": null,
+      "active": 1,
+      "created_at": "2026-03-07T22:52:04.000000Z",
+      "cmt": 1,
+      "label": "אורז יסמין טילדה ב-13.90 ש\"ח",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "max_in_doc": 0,
+      "is_personal": 0,
+      "updated_at": "2026-03-07T22:52:04.000000Z",
+      "approved_at": null,
+      "name": "אורז יסמין טילדה ב-13.90 ש\"ח",
+      "k_scm": null,
+      "from": "2026-03-08 00:00:00",
+      "id": 775696,
+      "to": "2026-05-02 23:59:59",
+      "scm": 13.9,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 303,
+  "name": "טילדה אורז יסמין 1 ק\"ג",
+  "site_id": 1,
+  "sub_group_id": 202,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

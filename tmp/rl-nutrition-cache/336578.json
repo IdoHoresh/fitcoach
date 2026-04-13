@@ -1,0 +1,358 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71080],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 336578,
+  "multiplication": 1,
+  "barcode": 7290107648080,
+  "brand": 853,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290107648080/small.jpg",
+    "original": "/product/7290107648080/large.jpg",
+    "trim": "/product/7290107648080/trim.jpg",
+    "transparent": "/product/7290107648080/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קרם נוגט (36%), (סוכר,אגוזי לוז (11.9%), שמן צמחי, אבקת חלב רזה, אבקת קקאו, מתחלב (לציטין מסויה), חומר טעם וריח),סוכר, חמאת קקאו, עיסת קקאו, אבקות חלב (מלא, רזה), מתחלב (לציטין מסויה), חומר טעם וריח. \nמינימום מוצקי קקאו בשוקולד: 29%.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.04 קג", "value": "0.04" },
+      "Net_Weight": { "UOM": "גרם", "text": "38 גרם", "value": "38" },
+      "Product_Height": { "UOM": "ממ", "text": "10 ממ", "value": "10" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "45 ממ", "value": "45" },
+      "Product_Depth": { "UOM": "ממ", "text": "135 ממ", "value": "135" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קליק",
+    "Product_Description_English": "KLIK milk chocolate filled with nugat cream",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6805, 6842, 6804, 6807, 6809, 6836, 6840],
+    "pH": null,
+    "Serving_Size_Description": "חטיף =",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6802, 6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290107648080",
+      "בר",
+      "שוקולד",
+      "קרם חלב",
+      "ממתק",
+      "שוקולד לבן",
+      "שוקולד חלב",
+      "קליק נוגט",
+      "שקולד",
+      "שוקלד"
+    ],
+    "internal_product_description": "קליק שוקולד חלב במילוי קרם נוגט 38 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "538 קלוריות",
+            "value": "538",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "לחטיף",
+            "text": "205 קלוריות",
+            "value": "205",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "31.0 גרם",
+            "value": "31.0",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "11.8 גרם",
+            "value": "11.8",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "14.2 גרם",
+            "value": "14.2",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "5.4 גרם",
+            "value": "5.4",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "8 מג",
+            "value": "8",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "3 מג",
+            "value": "3",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "71 מג",
+            "value": "71",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "27 מג",
+            "value": "27",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "56.8 גרם",
+            "value": "56.8",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "21.6 גרם",
+            "value": "21.6",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "54.4 גרם",
+            "value": "54.4",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "20.7 גרם",
+            "value": "20.7",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "13.5",
+            "value": "13.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "לחטיף",
+            "text": "5.25",
+            "value": "5.25",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.9 גרם",
+            "value": "7.9",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "חטיף שוקולד קרם נוגט",
+    "Hazard_Precautionary_Statement": "שינויי טמפ' ולחות עלולים לגרום להלבנת השוקולד. הלבנת השוקולד אינה מעידה על קלקול המוצר.",
+    "short_name": "חטיף שוקולד קרם נוגט",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש (לא במקרר) הרחק מקטניות וממוצרים עתירי ריח. ",
+    "Net_Content": { "UOM": "גרם", "text": "38 גרם", "value": "38" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 300,
+  "name": "קליק חטיף בארים קרם נוגט 38ג*",
+  "site_id": 1,
+  "sub_group_id": 430,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

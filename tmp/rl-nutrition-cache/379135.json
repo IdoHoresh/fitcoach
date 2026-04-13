@@ -1,0 +1,347 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "כשר לפסח ייצור מיוחד",
+    "Board_of_Supervision": [71014],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67093],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 379135,
+  "multiplication": 1,
+  "barcode": 7290006855428,
+  "brand": 2130,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290006855428/small.jpg",
+    "original": "/product/7290006855428/large.jpg",
+    "trim": "/product/7290006855428/trim.jpg",
+    "transparent": "/product/7290006855428/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מחית תמרים מזן מג'הול  54%, גרעיני חמנייה, צימוקים, אגוזי לוז גרוסים 7.5%, אגוזי קשיו גרוסים 7.5%,  שברי פולי קקאו 7%, אבקת קקאו, שקדים טחונים, שמן שומשום בכבישה קרה, חומרי טעם וריח טבעיים.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "57 גרם", "value": "57" },
+      "Net_Weight": { "UOM": "גרם", "text": "55 גרם", "value": "55" },
+      "Product_Height": { "UOM": "ממ", "text": "125 ממ", "value": "125" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "80 ממ", "value": "80" },
+      "Product_Depth": { "UOM": "ממ", "text": "40 ממ", "value": "40" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ברבריא",
+    "Product_Description_English": "BARBARY BITES  Dates, hazelnut cashew cacao Bites",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6802, 6803, 6805, 6842, 6806, 6807, 6841],
+    "pH": null,
+    "Serving_Size_Description": "8 יח'",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6802, 6804, 6836, 6840],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290006855428",
+      "ברבריא\nבר בריא\nבר\nאגוז\nאגוזים\nחטיף\nחטיף תמרים\nחטיף דגנים\nחטיף בריאות\nתמר\nתמרים\nדגנים\nקקאו\nכדורי תמרים\nטראפלס\nויגן פרנדלי\nללא גלוטן"
+    ],
+    "internal_product_description": "פרי חטיף דגנים תמרים וקינמון, 5 חטיפים, 110 גרם",
+    "Color": null,
+    "Diet_Information": [5514, 5513, 5502, 5503],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "413 קלוריות",
+            "value": "413",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "83 קלוריות",
+            "value": "83",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "19.5 גרם",
+            "value": "19.5",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "3.9 גרם",
+            "value": "3.9",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.9 גרם",
+            "value": "3.9",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג\n",
+            "col_label": "למנה",
+            "text": "0 מג\n",
+            "value": "0",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "4 מג",
+            "value": "4",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "0.8 מג",
+            "value": "0.8",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "47.7 גרם",
+            "value": "47.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "9.5 גרם",
+            "value": "9.5",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "38.9 גרם",
+            "value": "38.9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "7.8 גרם",
+            "value": "7.8",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "8.1 גרם",
+            "value": "8.1",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם\n",
+            "col_label": "למנה",
+            "text": "1.6 גרם\n",
+            "value": "1.6",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.6 גרם",
+            "value": "7.6",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "ברבריא BITES לוז קשיו ושברי פולי קקאו",
+    "Hazard_Precautionary_Statement": "סכנת חנק לילדים מתחת לגיל 5.\n\nעלול להכיל חרצני תמרים.",
+    "short_name": "BITES אגוזים קקאו",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "55 גרם", "value": "55" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 234,
+  "name": "ברבריא בייטס תמר לוז קשיו 55 גר",
+  "site_id": 1,
+  "sub_group_id": 433,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

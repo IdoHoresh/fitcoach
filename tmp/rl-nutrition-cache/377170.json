@@ -1,0 +1,286 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71075],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085, 67168],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 377170,
+  "multiplication": 1,
+  "barcode": 7290116530260,
+  "brand": 2596,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290116530260/small.jpg",
+    "original": "/product/7290116530260/large.jpg",
+    "trim": "/product/7290116530260/trim.jpg",
+    "transparent": "/product/7290116530260/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח תירס (79%), סוכר (14%), אבקת קקאו (8%), תמצית לתת שעורה (מכיל גלוטן), מלח, מתחלב (E471), חומרי טעם וריח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.5 קג", "value": "0.5" },
+      "Net_Weight": { "UOM": "קג", "text": "0.4 קג", "value": "0.4" },
+      "Product_Height": { "UOM": "ממ", "text": "289 ממ", "value": "289" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "60 ממ", "value": "60" },
+      "Product_Depth": { "UOM": "ממ", "text": "207 ממ", "value": "207" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תלמה",
+    "Product_Description_English": "TELMA 400 GR X 12",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6805, 6821, 6840, 6802],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6811],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290116530260",
+      "eurbpkex",
+      "דגני בוקר",
+      "דגני תלמה",
+      "דגנים",
+      "דגנים לילדים",
+      "טלמה",
+      "עוגי",
+      "עוגי תלמה",
+      "קוקומן",
+      "קוקומן תלמה",
+      "קורנפלקס",
+      "קורנפלקס תלמה",
+      "שוגי",
+      "שוגי חום",
+      "שוגי פיצי",
+      "שוגי שוקו",
+      "שוגי שוקולד",
+      "שוגי תלמה"
+    ],
+    "internal_product_description": "תלמה דגני בוקר שוגי קקאו 400 גרם",
+    "Color": null,
+    "Diet_Information": [5527, 5513, 5573],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "382 קלוריות",
+            "value": "382",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "115 קלוריות",
+            "value": "115",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "317 מג",
+            "value": "317",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "95 מג",
+            "value": "95",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "85.9 גרם",
+            "value": "85.9",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "25.8 גרם",
+            "value": "25.8",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "16.8 גרם",
+            "value": "16.8",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "4.25",
+            "value": "4.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "1.25",
+            "value": "1.25",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "1.8 גרם",
+            "value": "1.8",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": " ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "דגני בוקר שוגי קקאו",
+    "Hazard_Precautionary_Statement": " ",
+    "short_name": "דגני בוקר שוגי קקאו",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר ויבש, בנפרד מקטניות, מסוכר ומקמח. לשמירת הפריכות - אחרי הפתיחה יש לשמור את השקית הפנימית סגורה  באמצעות סוגר מתאים. יש לצרוך עד שלושה שבועות מרגע הפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 234,
+  "name": "שוגי קקאו 400 גר",
+  "site_id": 1,
+  "sub_group_id": 350,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

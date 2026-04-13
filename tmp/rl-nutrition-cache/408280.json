@@ -1,0 +1,402 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "בד\"צ בית יוסף, ייצור מיוחד",
+    "Board_of_Supervision": [71062],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6404],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 14.7 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 408280,
+  "multiplication": 1,
+  "barcode": 7290018724026,
+  "brand": 3466,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290018724026/small.jpg",
+    "original": "/product/7290018724026/large.jpg",
+    "trim": "/product/7290018724026/trim.jpg",
+    "transparent": "/product/7290018724026/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [82, 179, 279, 306, 1220, 1221, 1314, 1330, 1333, 1389],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "עמילנים טבעיים למאכל (תירס תפוח אדמה),קמח אורז סוכר,\nעמילן טפיוקה מעובד (E1442) , מייצבים,חלבון אפונה , חומרי התפחה,סיבי אינולין ,חומרי טעם וריח ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "310 גרם", "value": "310" },
+      "Net_Weight": { "UOM": "גרם", "text": "300 גרם", "value": "300" },
+      "Product_Height": { "UOM": "סמ", "text": "20.5 סמ", "value": "20.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "11.5 סמ", "value": "11.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "5 סמ", "value": "5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תמי",
+    "Product_Description_English": "Gluten Free Pancake Mix",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" },
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": ["7290018724026", "פנקייק", "ללא גלוטן", "תערובות להכנה מהירה", "קמח תמי"],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5576, 5538, 5523, 5515, 5513, 5527, 5502, 5501],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "אנרגיה (קלוריות) ל-100 גרם תערובת יבשה",
+            "text": "353 קלוריות",
+            "value": "353",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר מבושל",
+            "text": "230 קלוריות",
+            "value": "230",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "שומנים (גרם) ל-100 גרם תערובת יבשה",
+            "text": "1.08 גרם",
+            "value": "1.08",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "שומנים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "10.8 גרם",
+            "value": "10.8",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם תערובת יבשה",
+            "text": "0.9 גרם",
+            "value": "0.9",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם מוצר מבושל",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם תערובת יבשה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם מוצר מבושל",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם תערובת יבשה",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם מוצר מבושל",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "נתרן (מג) ל-100 גרם תערובת יבשה",
+            "text": "780 מג",
+            "value": "780",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "נתרן (מג) ל-100 גרם מוצר מבושל",
+            "text": "306 מג",
+            "value": "306",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "סך הפחמימות (גרם) ל-100 גרם תערובת יבשה",
+            "text": "82 גרם",
+            "value": "82",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "30 גרם",
+            "value": "30",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם תערובת יבשה",
+            "text": "18.1 גרם",
+            "value": "18.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "6.6 גרם",
+            "value": "6.6",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם תערובת יבשה",
+            "text": "4.5",
+            "value": "4.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם מוצר מבושל",
+            "text": "1.75",
+            "value": "1.75",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם תערובת יבשה",
+            "text": "1.8 גרם",
+            "value": "1.8",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78036",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם תערובת יבשה",
+            "name": "חלבונים (גרם) ל-100 גרם תערובת יבשה",
+            "text": "2.6 גרם",
+            "value": "2.6",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "מתכון פנקייק בגב האריזה",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "תערובת להכנת פנקייק ללא גלוטן 300 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "תערובת להכנת פנקייק",
+    "Consumer_Storage_Instructions": "יש לשמור במקום קריר, מוצל ויבש. מיועד למאכל לאחר אפיה, טיגון או בישול בלבד",
+    "Net_Content": { "UOM": "גרם", "text": "300 גרם", "value": "300" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 282,
+  "name": "תערובת להכנת פנקייק ללא גלוטן 300 גר",
+  "site_id": 1,
+  "sub_group_id": 507,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": false
+}

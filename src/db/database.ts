@@ -13,7 +13,7 @@
 import * as SQLite from 'expo-sqlite'
 import { CREATE_TABLE_STATEMENTS, SCHEMA_VERSION } from './schema'
 
-const DATABASE_NAME = 'fitcoach.db'
+const DATABASE_NAME = 'gibor.db'
 
 let dbInstance: SQLite.SQLiteDatabase | null = null
 

@@ -1,0 +1,180 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71014],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67056],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1632, "status": 2 },
+  "id": 386535,
+  "multiplication": 1,
+  "barcode": 7290110114978,
+  "brand": 1409,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290110114978/small.jpg",
+    "original": "/product/7290110114978/large.jpg",
+    "trim": "/product/7290110114978/trim.jpg",
+    "transparent": "/product/7290110114978/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "רכיבים: מים, רכיבי תפוזים (מיץ עשוי מרכז, רכיבי פרי ותאי פרי)(15%), סוכר, מווסתי חומציות: אשלגן ציטראט, חומצת לימון ונתרן ציטראט, מייצבים: גואר גאם, פקטין ואקצ'יה גאם, מעכב חמצון: חומצה אסקורבית, צבע מאכל: בטא-קארוטן, חומרי טעם וריח טבעיים, ממתיק: סוכרלוז. מכיל 10% או יותר רכיבי פרי. המשקה מכיל סוכר.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.552 קג", "value": "1.552" },
+      "Net_Weight": { "UOM": "קג", "text": "1.500 קג", "value": "1.500" },
+      "Product_Height": { "UOM": "סמ", "text": "32 סמ", "value": "32" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "פריגת",
+    "Product_Description_English": "Prigat Low Calorie Orange Flavour 1.5L",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290110114978", "מיץ תפוזים\nמשקה קל\nדל קלוריות\nללא סוכר\n לייט\nדיאט"],
+    "internal_product_description": "פריגת תפוזים, light",
+    "Color": null,
+    "Diet_Information": [5512, 5514, 5548, 5570, 5516],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "100 קלוריות",
+            "value": "100",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "10 מג",
+            "value": "10",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.5 גרם",
+            "value": "2.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79027",
+        "label": "ויטמין C (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5859",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "6 מג",
+            "value": "6",
+            "field_name": "Vitamin_C_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "להגיש צונן",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פריגת משקה דל קלוריות תפוזים",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "פריגת לייט תפוזים",
+    "Consumer_Storage_Instructions": "לשמור בקירור לאחר הפתיחה. מומלץ לצריכה עד 5 ימים לאחר הפתיחה.",
+    "Net_Content": { "UOM": "ליטר", "text": "1.5 ליטר", "value": "1.5" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "משקה קל לייט תפוזים פריגת 1.5 ליטר",
+  "site_id": 1,
+  "sub_group_id": 435,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

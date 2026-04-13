@@ -1,0 +1,338 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1064, "status": 2 },
+  "id": 155,
+  "multiplication": 1,
+  "barcode": 7290000042442,
+  "brand": 5228,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000042442/small.jpg",
+    "original": "/product/7290000042442/large.jpg",
+    "trim": "/product/7290000042442/trim.jpg",
+    "transparent": "/product/7290000042442/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [21],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.066 קג", "value": "1.066" },
+      "Net_Weight": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Height": { "UOM": "סמ", "text": "25 סמ", "value": "25" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7 סמ", "value": "7" },
+      "Product_Depth": { "UOM": "סמ", "text": "7 סמ", "value": "7" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "חלב ותוצרת החלב",
+    "Product_Description_English": "Milk 3% 1 Lt carton",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": "3%",
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "כוס -",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290000042442",
+      "תנובה",
+      "חלב",
+      "טרי",
+      "קרטון",
+      "פקק",
+      "בקרטון",
+      "חלב בקרטון",
+      "חלב תנובה",
+      "חלב טרי",
+      "חלב טרי תנובה",
+      "3%",
+      "חלב 3%"
+    ],
+    "internal_product_description": "תנובה חלב טרי 3% שומן",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "text": "60 קלוריות",
+            "value": "60",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "לכוס",
+            "text": "120 קלוריות",
+            "value": "120",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0.49 גרם",
+            "value": "0.49",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "text": "3.6 גרם",
+            "value": "3.6",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0.49 גרם",
+            "value": "0.49",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "text": "9 מג",
+            "value": "9",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לכוס",
+            "text": "18 מג",
+            "value": "18",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לכוס",
+            "text": "100 מג",
+            "value": "100",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "4.94 גרם",
+            "value": "4.94",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "text": "9.9 גרם",
+            "value": "9.9",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "3.3 גרם",
+            "value": "3.3",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "text": "6.6 גרם",
+            "value": "6.6",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "text": "100 מג",
+            "value": "100",
+            "field_name": "Calcium_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5866",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לכוס",
+            "text": "200 מג",
+            "value": "200",
+            "field_name": "Calcium_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "חלב תנובה 3% שומן קרטון 1 ליטר",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "הומוגני  3%",
+    "Consumer_Storage_Instructions": "לשמור במקרר, 4 מעלות צלזיוס. ",
+    "Net_Content": { "UOM": "קג", "text": "1 קג", "value": "1" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 198,
+  "name": "חלב תנובה טרי קרט+פקק 1ל %3",
+  "site_id": 1,
+  "sub_group_id": 22,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9d844a7a-ebe5-4c45-ba45-33df4a3f4bc5.png",
+      "name": "מוצרים בפיקוח",
+      "id": 15
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

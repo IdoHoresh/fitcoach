@@ -1,0 +1,253 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67093, 67072, 67011],
+    "Israel_Milk": [6901],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 20 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1100, "status": 2 },
+  "id": 368753,
+  "multiplication": 1,
+  "barcode": 7290002627975,
+  "brand": 2,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290002627975/small.jpg",
+    "original": "/product/7290002627975/large.jpg",
+    "trim": "/product/7290002627975/trim.jpg",
+    "transparent": "/product/7290002627975/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [48],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "בצק ( 59 % ) רכיבי הבצק : קמח חיטה לבן ( מכיל גלוטן ) , מים , קמח חיטת דורום ( מכיל גלוטן ) , מלח , שמן חמניות מזוכך , שמרים , קמח לתת חיטה , סיבים תזונתיים , גבינה חצי קשה מוצרלה 22 % שומן ( 21 % ) ( חלב , מלח , תרביות לקטיות ) . רוטב פיצה ( 20 % ) רכיבי הרוטב : עגבניות מרוסקות ( 9 % ) , רסק עגבניות 9 % , מ d , שמן זית כתית מעולה , סוכר , מלח , תבלינים",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "360 גרם", "value": "360" },
+      "Net_Weight": { "UOM": "גרם", "text": "320 גרם", "value": "320" },
+      "Product_Height": { "UOM": "סמ", "text": "27 סמ", "value": "27" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "27 סמ", "value": "27" },
+      "Product_Depth": { "UOM": "סמ", "text": "3.5 סמ", "value": "3.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "רמי לוי שיווק השקמה",
+    "Product_Description_English": "Pizza italiana",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6803, 6808, 6821],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR2", "value": "נתרן בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6810, 6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290002627975",
+      "פיצה איטלקית",
+      "פיצה",
+      "פיצה איטלקית דקה",
+      "פיצה עבה",
+      "עם מוצרלה",
+      "פיצה זיתים"
+    ],
+    "internal_product_description": "פיצה איטלקית עבה  עם 100% גבינת מוצרלה 452 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "224 קלוריות",
+            "value": "224",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6.9 גרם",
+            "value": "6.9",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.1 גרם",
+            "value": "3.1",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "11 מג",
+            "value": "11",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "460 מג",
+            "value": "460",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "30.5 גרם",
+            "value": "30.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.7 גרם",
+            "value": "5.7",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "1.5",
+            "value": "1.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "10 גרם",
+            "value": "10",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "להפשיר את המוצר 5 דקות לפני האפייה. \nלחמם תנור לחום גבוה 230 מעלות צלזיוס בגוף חימום עליון ותחתון, לפני הכנסת הפיצה. להסיר את הניילון העוטף את הפיצה. להניח את הפיצה על תבנית או רשת  התנור ולמקם בחלק התחתון של התנור. לאפות במשך כ-8 דקות עד שהגבינה מבעבעת והבצק מזהיב (כדאי להימנע מאפיית יתר הפוגעת בטעם ומרקם של הפיצה). להמתין 1-2 דקות ולהגיש חם. יתכנו הבדלים בזמני החימום הנובעים מהשוני בין מכשירי החימום",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פיצה איטלקית עבה  עם 100% גבינת מוצרלה 452 גרם",
+    "Hazard_Precautionary_Statement": "עלול להכיל שאריות חרצני זיתים",
+    "short_name": "פיצה איטלקית עבה  עם 100% גבינת מוצרלה ",
+    "Consumer_Storage_Instructions": "לשמור בהקפאה מינוס 18 מעלות, אין להקפיא בשנית",
+    "Net_Content": { "UOM": "גרם", "text": "425 גרם", "value": "425" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 223,
+  "name": "פיצה עבה",
+  "site_id": 1,
+  "sub_group_id": 333,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

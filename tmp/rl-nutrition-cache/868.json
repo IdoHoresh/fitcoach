@@ -1,0 +1,268 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71126],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6404],
+    "Rabbinate": [67093],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 8.3 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 638, "status": 2 },
+  "id": 868,
+  "multiplication": 1,
+  "barcode": 7290000208114,
+  "brand": 2015,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000208114/small.jpg",
+    "original": "/product/7290000208114/large.jpg",
+    "trim": "/product/7290000208114/trim.jpg",
+    "transparent": "/product/7290000208114/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6],
+  "available_in": [
+    82, 179, 279, 290, 306, 331, 411, 412, 1197, 1214, 1220, 1221, 1225, 1226, 1306, 1307, 1314,
+    1323, 1330, 1333, 1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "גזר טרי (34%),,אפונת גינה (23%), מים, מלח",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.645 קג", "value": "0.645" },
+      "Net_Weight": { "UOM": "גרם", "text": "550 גרם", "value": "550" },
+      "Product_Height": { "UOM": "ממ", "text": "111 ממ", "value": "111" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "83 ממ", "value": "83" },
+      "Product_Depth": { "UOM": "ממ", "text": "83 ממ", "value": "83" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "יכין",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR5", "value": "סמל ירוק" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290000208114",
+      "יכין",
+      "אפונת גינה",
+      "גזר",
+      "בלי חומר משמר",
+      "בלי צבעי מאכל",
+      "מקור לסיבים תזונתיים",
+      "ללא שומן",
+      "מופחת מלח."
+    ],
+    "internal_product_description": "יכין אפונת גינה וגזר 550 גרם",
+    "Color": null,
+    "Diet_Information": [5514, 5513, 5546],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר לאחר סינון",
+            "text": "49 קלוריות",
+            "value": "49",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "שומנים (גרם) ל-100 גרם מוצר לאחר סינון",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "נתרן (מג) ל-100 גרם מוצר לאחר סינון",
+            "text": "188 מג",
+            "value": "188",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר לאחר סינון",
+            "text": "8 גרם",
+            "value": "8",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר לאחר סינון",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם מוצר לאחר סינון",
+            "text": "3/4",
+            "value": "3/4",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם מוצר לאחר סינון",
+            "text": "3.3 גרם",
+            "value": "3.3",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר לאחר סינון",
+            "text": "2.5 גרם",
+            "value": "2.5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79074",
+        "label": "ויטמין A שווי רטינול (מקג)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "6102",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "ויטמין A שווי רטינול (מקג) ל-100 גרם מוצר לאחר סינון",
+            "text": "343 מקג",
+            "value": "343",
+            "field_name": "Vitamin_A_Retinol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79019",
+        "label": "ויטמין A (מקג, יבל)",
+        "fields": [
+          {
+            "col_code": "78038",
+            "field_id": "5840",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם מוצר לאחר סינון",
+            "name": "ויטמין A (מקג, יבל) ל-100 גרם מוצר לאחר סינון",
+            "text": "398 מקג",
+            "value": "398",
+            "field_name": "Vitamin_A_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "אפונת גינה וגזר  550 ג' A2",
+    "Hazard_Precautionary_Statement": "ראוי לבדוק לפני השימוש",
+    "short_name": "אפונת גינה וגזר",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש.\nאחרי הפתיחה:לשמור במקרר ומומלץ לצרוך תוך מספר ימים.",
+    "Net_Content": { "UOM": "גרם", "text": "550 גרם", "value": "550" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 225,
+  "name": "אפונת גינה וגזר 314 גרם A2 יכין",
+  "site_id": 1,
+  "sub_group_id": 231,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

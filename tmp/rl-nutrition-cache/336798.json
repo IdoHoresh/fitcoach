@@ -1,0 +1,287 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67179, 67110, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 9.1 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 336798,
+  "multiplication": 1,
+  "barcode": 8008343200660,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/8008343200660/small.jpg",
+    "original": "/product/8008343200660/large.jpg",
+    "trim": "/product/8008343200660/trim.jpg",
+    "transparent": "/product/8008343200660/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [
+    82, 179, 279, 290, 306, 331, 411, 412, 1197, 1198, 1214, 1220, 1221, 1226, 1307, 1314, 1323,
+    1329, 1330, 1332, 1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח מחיטת דורום  סמולינה (מכיל גלוטן)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "512 גרם", "value": "512" },
+      "Net_Weight": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+      "Product_Height": { "UOM": "סמ", "text": "11.4 סמ", "value": "11.4" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "5.6 סמ", "value": "5.6" },
+      "Product_Depth": { "UOM": "סמ", "text": "17.8 סמ", "value": "17.8" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "רומו",
+    "Product_Description_English": "Penne Rigate LL Rummo 500g",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6821],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810],
+    "Color_Number": null,
+    "Search_Tags": [
+      "8008343200660",
+      "פסטה",
+      "רומו",
+      "רוומו",
+      "ניוקי",
+      "איטליה",
+      "שבועות",
+      "ברילה",
+      "ספגטי",
+      "בצקיות",
+      "קמח דורום",
+      "רוטב פסטה",
+      "איטליה",
+      "איטלקית",
+      "לזניה",
+      "עלי לזניה",
+      "דפי לזניה",
+      "פנה",
+      "מסולסל",
+      "מסולסלים",
+      "פסאה אסם",
+      "פרפקטו",
+      "ספגטיני",
+      "פסטה מספר 8",
+      "פרימיום פסטה",
+      "פסטה ללא גלוטן",
+      "פסטה מחיטה מלאה",
+      "פנה ריגטה",
+      "פנה רגטה",
+      "חיטה דורום"
+    ],
+    "internal_product_description": "רומו, פנה ריגטה, פסטה מחיטת דורום, 500 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "356 קלוריות",
+            "value": "356",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר מבושל",
+            "text": "182 קלוריות",
+            "value": "182",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "שומנים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "נתרן (מג) ל-100 גרם מוצר מבושל",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "69.5 גרם",
+            "value": "69.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "35.6 גרם",
+            "value": "35.6",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "3.1 גרם",
+            "value": "3.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "14.5 גרם",
+            "value": "14.5",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "7.4 גרם",
+            "value": "7.4",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "הוראות הכנה: לכל 100 גרם פסטה יבשה\n1. להרתיח 1 ליטר מים (מומלץ להוסיף 2 כפיות מלח- 10 גרם)\n2. כשהמים רותחים- להוסיף את הפסטה \n3. לבחוש בזמן ההכנה עם כף עץ בלבד.\n\nזמן בישול מומלץ ל-'דרגת אל דנטה'- 11 דקות לקבלת פסטה רכה יותר ניתן לבשל עוד כ-2-3 דקות",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פנה ריגטה רומו  500 גרם\n",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "פנה ריגטה רומו\n",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 230,
+  "name": "רומו פסטה פנה 500 גר",
+  "site_id": 1,
+  "sub_group_id": 190,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

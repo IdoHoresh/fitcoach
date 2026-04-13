@@ -1,0 +1,480 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67011, 67143],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 250, "status": 2 },
+  "id": 309910,
+  "multiplication": 1,
+  "barcode": 7613033174728,
+  "brand": 4512,
+  "recipes": [],
+  "images": {
+    "small": "/product/7613033174728/small.jpg",
+    "original": "/product/7613033174728/large.jpg",
+    "trim": "/product/7613033174728/trim.jpg",
+    "transparent": "/product/7613033174728/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 45],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "אבקת חלב מלא (74%), קפה נמס (24%), מייצבים (E331, E340), מתחלב (לציטין סויה). הקפסולות נארזו באווירה מבוקרת לשמירה על איכות המוצר (חנקן).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "250 גרם", "value": "250" },
+      "Net_Weight": { "UOM": "גרם", "text": "160 גרם", "value": "160" },
+      "Product_Height": { "UOM": "ממ", "text": "120.000 ממ", "value": "120.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "120.000 ממ", "value": "120.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "120.000 ממ", "value": "120.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "נסקפה",
+    "Product_Description_English": "NESC DLC GST CafeAuLait 16Cap3x160g IL",
+    "Country_of_Origin": "ES",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "ספל 180",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": ["7613033174728", "נסקפה דולצ'ה גוסטו\nקפה או לה\nדולצ'ה גוסטו\nקפסולות"],
+    "internal_product_description": "נסקפה ד.גוסטו קפהאולאיט 16קפס 3*160גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "399 קלוריות",
+            "value": "399",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "40 קלוריות",
+            "value": "40",
+            "field_name": "Energy_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל מוכן",
+            "text": "22 קלוריות",
+            "value": "22",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "20 גרם",
+            "value": "20",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Fats_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "12.5 גרם",
+            "value": "12.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "1.3 גרם",
+            "value": "1.3",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5928",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "0.7 גרם",
+            "value": "0.7",
+            "field_name": "Saturated_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.1 גרם",
+            "value": "1.1",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.1 גרם",
+            "value": "0.1",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5929",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "0.06 גרם",
+            "value": "0.06",
+            "field_name": "Trans_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "100 מג",
+            "value": "100",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "10 מג",
+            "value": "10",
+            "field_name": "Cholesterol_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5930",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "text": "6 מג",
+            "value": "6",
+            "field_name": "Cholesterol"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "409 מג",
+            "value": "409",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "41 מג",
+            "value": "41",
+            "field_name": "Sodium_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5921",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Sodium_Natran"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "29.4 גרם",
+            "value": "29.4",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "2.9 גרם",
+            "value": "2.9",
+            "field_name": "Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5902",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "29.1 גרם",
+            "value": "29.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "2.9 גרם",
+            "value": "2.9",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5926",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Sugars_from_Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "7.25",
+            "value": "7.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "0.75",
+            "value": "0.75",
+            "field_name": "Sugar_Spoon_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6185",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Sugar_Spoon"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "8.2 גרם",
+            "value": "8.2",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Dietary_Fibers_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5927",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Dietary_Fibers"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "21.2 גרם",
+            "value": "21.2",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "2.1 גרם",
+            "value": "2.1",
+            "field_name": "Proteins_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Proteins"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "נסקפה ד.גוסטו קפהאולאיט 16קפס 3*160גרם",
+    "Hazard_Precautionary_Statement": "<br />\n<br />\n<br />\n",
+    "short_name": "נסקפה דולצ'ה גוסטו קפה או לה 16 קפסולות 160 גרם",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "160 גרם", "value": "160" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 238,
+  "name": "קפסולות דולצ'ה גוסטו קפהאולאיט",
+  "site_id": 1,
+  "sub_group_id": 420,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

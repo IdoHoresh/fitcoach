@@ -9,7 +9,7 @@ import Animated, {
 } from 'react-native-reanimated'
 import { Ionicons } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
-import { colors, spacing, fontSize, fontWeight } from '@/theme'
+import { colors, spacing, fontSize, fontFamily } from '@/theme'
 import { t } from '@/i18n'
 import { Button } from '@/components'
 
@@ -63,12 +63,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: fontSize.xxl,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     color: colors.textPrimary,
     textAlign: 'center',
   },
   subtitle: {
     fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
     color: colors.textSecondary,
     textAlign: 'center',
   },

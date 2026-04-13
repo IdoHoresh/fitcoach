@@ -1,0 +1,256 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "יבול שישית",
+    "Board_of_Supervision": [71126],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6406],
+    "Rabbinate": [67093],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 10.8 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 389819,
+  "multiplication": 1,
+  "barcode": 7290018359860,
+  "brand": 2015,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290018359860/small.jpg",
+    "original": "/product/7290018359860/large.jpg",
+    "trim": "/product/7290018359860/trim.jpg",
+    "transparent": null,
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6],
+  "available_in": [82, 179, 279, 290, 306, 331, 411, 412, 1214, 1220, 1306, 1307, 1314, 1389, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "עגבניות (100%)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Product_Height": { "UOM": "סמ", "text": "7 סמ", "value": "7" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "13.5 סמ", "value": "13.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "7 סמ", "value": "7" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "יכין",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR5", "value": "סמל ירוק" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290018359860",
+      "רסק",
+      "עגבניות",
+      "ליקופן",
+      "טבעי",
+      "טרי",
+      "שדה",
+      "22%",
+      "28%"
+    ],
+    "internal_product_description": "רסק עגבניות ליקופן טבעית יכין 200*2גרם",
+    "Color": null,
+    "Diet_Information": [5527, 5543, 5529],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "79 קלוריות",
+            "value": "79",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "00 גרם",
+            "value": "00",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "14 גרם",
+            "value": "14",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "3.5 גרם",
+            "value": "3.5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79017",
+        "label": "ליקופן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5838",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ליקופן (מג) ל-100 גרם",
+            "text": "60 מג",
+            "value": "60",
+            "field_name": "Lycopene_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רסק עגבניות ליקופן יכין 200*2 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "רסק עגבנהיות ליקופן ",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש. אחרי הפתיחה: לשמור במקרר ומומלץ לצרוך תוך מספר ימים",
+    "Net_Content": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910364346,
+      "sw_kefel": 1,
+      "k_cmt": null,
+      "deleted_by": "RL",
+      "k_acz_dis": 8,
+      "active": 1,
+      "created_at": "2025-08-10T12:52:00.000000Z",
+      "cmt": 1,
+      "label": "5% הנחה על מגוון מוצרים\n1 ב NaN ₪",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "is_personal": 1,
+      "updated_at": "2026-01-08T08:58:53.000000Z",
+      "approved_at": "2026-01-08 10:58:53",
+      "name": "8% הנחה על מגוון מוצרים",
+      "k_scm": null,
+      "from": "2025-08-10 00:00:00",
+      "id": 723012,
+      "to": "2026-06-26 23:59:59",
+      "scm": null,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 225,
+  "name": "רסק עגבניות ליקופן 2* 200 גרם יכין",
+  "site_id": 1,
+  "sub_group_id": 148,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": true
+}

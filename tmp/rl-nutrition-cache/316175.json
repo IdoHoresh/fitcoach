@@ -1,0 +1,264 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67184, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 50, "status": 2 },
+  "id": 316175,
+  "multiplication": 1,
+  "barcode": 40000494805,
+  "brand": 3904,
+  "recipes": [],
+  "images": {
+    "small": "/product/040000494805/small.jpg",
+    "original": "/product/040000494805/large.jpg",
+    "trim": "/product/40000494805/trim.jpg",
+    "transparent": "/product/40000494805/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "שוקולד חלב (62.4%) סוכר, מסת קקאו, חלב רזה, חמאת קקאו, לקטוז, שומן חלב, מתחלבים (E476, לציטין סויה, מלח חומרי עם וריח, סוכר, אורז פריך 11.6%, קמח אורז, סוכר, לתת שעורה, (מכיל גלוטן), מלח, דקסטרוז, מעכב חמצון, תערובת טוקופרוליס, עמילן תירס, סירופ תירס, דקסטרין, צבעי מאכל (ביליאנט בלו, אדום אלורה, סנסט יילו, אינדיגוטין, טרטזין), מסמיך אקאצ'ה גאם)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "38.3 גרם", "value": "38.3" },
+      "Product_Height": { "UOM": "ממ", "text": "73 ממ", "value": "73" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "159 ממ", "value": "159" },
+      "Product_Depth": { "UOM": "ממ", "text": "16 ממ", "value": "16" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "M&M",
+    "Product_Description_English": "",
+    "Country_of_Origin": "US",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6807, 6810],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6809, 6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "40000494805",
+      "M&MS",
+      "אמ אנד אמס",
+      "שוקולד חלב",
+      "קריספי",
+      "קרספי",
+      "MARS",
+      "מ&מ",
+      "מ&מ'ס",
+      "מנמ",
+      "אם נ אם",
+      "M&M's",
+      "m&m",
+      "m&m's",
+      "crispy",
+      "crispi",
+      "38 gram"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "469 קלוריות",
+            "value": "469",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "17.3 גרם ",
+            "value": "17.3",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "10.5 גרם ",
+            "value": "10.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם ",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "7 מג",
+            "value": "7",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "147 מג",
+            "value": "147",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "73 גרם ",
+            "value": "73",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "57.4 גרם",
+            "value": "57.4",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "14.25",
+            "value": "14.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": " M&M's קריספי אריזה אישית ",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": " M&M's קריספי אריזה אישית ",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "38.3 גרם", "value": "38.3" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 300,
+  "name": "אמ אנד אם קריספי 48 גרם",
+  "site_id": 1,
+  "sub_group_id": 590,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

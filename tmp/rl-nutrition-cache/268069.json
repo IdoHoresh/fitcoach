@@ -1,0 +1,667 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67011],
+    "Israel_Milk": [6902],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 11.8 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 110, "status": 2 },
+  "id": 268069,
+  "multiplication": 1,
+  "barcode": 8423207206501,
+  "brand": 682,
+  "recipes": [],
+  "images": {
+    "small": "/product/8423207206501/small.jpg",
+    "original": "/product/8423207206501/large.jpg",
+    "trim": "/product/8423207206501/trim.jpg",
+    "transparent": "/product/8423207206501/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16],
+  "available_in": [82, 279, 412, 1197, 1225, 1226, 1306, 1314, 1323, 1329, 1378, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "שוקולד חלב 60%: סוכר, חמאת קקאו, מסת קקאו, אבקת חלב רזה, חמאה נטולת מים, מתחלב: לציטין סויה, חומרי טעם(, דגנים ) 32% ( )סובין חיטה, קמח חיטה )מכילגלוטן(, קמח אורז, קמח תירס, סיבי שיבולת שועל , קמח מאלט(, עמילן, סיבים תזונתיים (אינולין, סיב במבוק), סוכר, דק续ª甲耀סוכר, קמח חיטה (מכיל גלוטן), שמן צמחי (דקלים, חמניות), עיסת קקאו, חמאת קקאו, אבקת חלב מלא, סירופ גלוקוזה-פרוקטוזה, אבקת קקאו מופחת שומן, חומרי תפיחה (E450,E500), אבקת חלב רזה, מלח, מתחלב : לציטין סויה, אבקת חלבון ביצה, צבע מאכל קרמל, חומר טעם טבעי.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "110 גרם", "value": "110" },
+      "Net_Weight": { "UOM": "גרם", "text": "78 גרם", "value": "78" },
+      "Product_Height": { "UOM": "ממ", "text": "150 ממ", "value": "150" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "38 ממ", "value": "38" },
+      "Product_Depth": { "UOM": "ממ", "text": "121 ממ", "value": "121" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מרבה",
+    "Product_Description_English": "MERBA HALF COATED SLIM DELIS NEW",
+    "Country_of_Origin": "ES",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6806],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6810, 6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "8423207206501",
+      "SLIMDELIS",
+      "סלים דליס",
+      "חטיף רב דגנים",
+      "שוקולד חלב",
+      "ויטמינים."
+    ],
+    "internal_product_description": "סלים דליס חטיף רב דגנים עם שוקולד חלב 78 גרם",
+    "Color": null,
+    "Diet_Information": [5552, 5559, 5535],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "452 קלוריות",
+            "value": "452",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "לחטיף",
+            "text": "59 קלוריות",
+            "value": "59",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "20 גרם",
+            "value": "20",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "2.6 גרם",
+            "value": "2.6",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "10 מג",
+            "value": "10",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "290 מג",
+            "value": "290",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "36.4 מג",
+            "value": "36.4",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "57 גרם",
+            "value": "57",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "7.4 גרם",
+            "value": "7.4",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "35 גרם",
+            "value": "35",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "4.4 גרם",
+            "value": "4.4",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "8.75",
+            "value": "8.75",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "לחטיף",
+            "text": "",
+            "value": "",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "12 גרם",
+            "value": "12",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לחטיף",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79021",
+        "label": "ויטמין‎ B1 (תיאמין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5844",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0.42 מג",
+            "value": "0.42",
+            "field_name": "Vitamin_B1_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5845",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "0.055 מג",
+            "value": "0.055",
+            "field_name": "Vitamin_B1_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79022",
+        "label": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5846",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0.51 מג",
+            "value": "0.51",
+            "field_name": "Vitamin_B2_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5847",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "0.066 מג",
+            "value": "0.066",
+            "field_name": "Vitamin_B2_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79026",
+        "label": "ויטמין‎ B6 (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5852",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0.75 מג",
+            "value": "0.75",
+            "field_name": "Vitamin_B6_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5853",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "0.10 מג",
+            "value": "0.10",
+            "field_name": "Vitamin_B6_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79015",
+        "label": "חומצה פולית (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5854",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "55.5 מקג",
+            "value": "55.5",
+            "field_name": "Folic_Acid_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5855",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "לחטיף",
+            "text": "7.22 מקג",
+            "value": "7.22",
+            "field_name": "Folic_Acid_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79020",
+        "label": "ויטמין‎ B12 (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5856",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "0.65 מקג",
+            "value": "0.65",
+            "field_name": "Vitamin_B12_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5858",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "לחטיף",
+            "text": "0.085 מקג",
+            "value": "0.085",
+            "field_name": "Vitamin_B12_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79013",
+        "label": "ביוטין (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5863",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "37 מקג",
+            "value": "37",
+            "field_name": "Biotin_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5864",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "לחטיף",
+            "text": "4.8 מקג",
+            "value": "4.8",
+            "field_name": "Biotin_per_serving"
+          }
+        ]
+      },
+      {
+        "code": "79025",
+        "label": "ויטמין‎ B5 (חומצה פנטותנית) (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5850",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "1.7 מג",
+            "value": "1.7",
+            "field_name": "Vitamin_B5_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5851",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "0.22 מג",
+            "value": "0.22",
+            "field_name": "Vitamin_B5_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79019",
+        "label": "ויטמין A (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5840",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "265 מקג",
+            "value": "265",
+            "field_name": "Vitamin_A_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5841",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "לחטיף",
+            "text": "34.5 מקג",
+            "value": "34.5",
+            "field_name": "Vitamin_A_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79063",
+        "label": "ויטמין B3 (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5848",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "5.4 מג",
+            "value": "5.4",
+            "field_name": "Vitamin_B3_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5849",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "0.70 מג",
+            "value": "0.70",
+            "field_name": "Vitamin_B3_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79028",
+        "label": "ויטמין D (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5842",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "1.7 מקג",
+            "value": "1.7",
+            "field_name": "Vitamin_D_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5843",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "לחטיף",
+            "text": "0.22 מקג",
+            "value": "0.22",
+            "field_name": "Vitamin_D_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79029",
+        "label": "ויטמין E (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5861",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "4.0 מג",
+            "value": "4.0",
+            "field_name": "Vitamin_E_per_100_grams"
+          },
+          {
+            "col_code": "78013",
+            "field_id": "5862",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לחטיף",
+            "text": "0.52 מג",
+            "value": "0.52",
+            "field_name": "Vitamin_E_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "חטיף דגנים מרבה סלים דליס עם שוקולד חלב",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "חטיף דגנים סלים דליס עם שוקולד חלב",
+    "Consumer_Storage_Instructions": "לשמור במקום קר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "78 גרם", "value": "78" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 234,
+  "name": "סלים דליס חטיף דגנים עם שוקולד חלב מרבה 6*13 גרם",
+  "site_id": 1,
+  "sub_group_id": 433,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

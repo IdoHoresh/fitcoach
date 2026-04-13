@@ -1,0 +1,205 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71070],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67075],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 367071,
+  "multiplication": 1,
+  "barcode": 7290000135250,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000135250/small.jpg",
+    "original": "/product/7290000135250/large.jpg",
+    "trim": "/product/7290000135250/trim.jpg",
+    "transparent": "/product/7290000135250/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, פחמן דו חמצני, צבע מאכל (קרמל)  E150d, חומצת מאכל (חומצת לימון, חומצה זרחתית), חומרי טעם וריח, ממתיק (אספרטיים, אססולפם K), מווסת חומציות (סודיום ציטראט), קפאין\n\n\n\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "6.35 קג", "value": "6.35" },
+      "Net_Weight": { "UOM": "קג", "text": "6 קג", "value": "6" },
+      "Product_Height": { "UOM": "סמ", "text": "35 סמ", "value": "35" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "19 סמ", "value": "19" },
+      "Product_Depth": { "UOM": "סמ", "text": "19 סמ", "value": "19" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "פפסי מקס",
+    "Product_Description_English": "Low Calorie Cola- Lime Drink Pack of 4 1.5L Bottles\n",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6846],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290000135250",
+      "טמפו",
+      "פפסי מקס",
+      "פפסי מקס ליים",
+      "ליים",
+      "מקס",
+      "פפסי",
+      "רביעייה"
+    ],
+    "internal_product_description": "פפסי מקס ליים 1.5 ליטר ",
+    "Color": null,
+    "Diet_Information": [5514, 5503],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "text": "1 קלוריות",
+            "value": "1",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "text": "19 מג",
+            "value": "19",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79059",
+        "label": "חלבונים (אלבומין|קזאין‎ 40|60)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5959",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_Whey_Casein_60_40_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": false,
+    "name": "פפסי מקס ליים – משקה קולה מוגז דל קלוריות בטעם ליים במארז רביעייה 1.5 ל'\n",
+    "Hazard_Precautionary_Statement": "לא לאפיה ולא לבישול",
+    "short_name": "פפסי מקס ליים 1.5 ל'",
+    "Consumer_Storage_Instructions": "להחזיק במקום קריר ומוצל",
+    "Net_Content": { "UOM": "ליטר", "text": "6 ליטר", "value": "6" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "פפסי מקס ליים רביעייה 1.5 לי",
+  "site_id": 1,
+  "sub_group_id": 438,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

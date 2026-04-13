@@ -1,0 +1,208 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67112, 67115],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 316617,
+  "multiplication": 1,
+  "barcode": 4009900512350,
+  "brand": 3586,
+  "recipes": [],
+  "images": {
+    "small": "/product/4009900512350/small.jpg",
+    "original": "/product/4009900512350/large.jpg",
+    "trim": "/product/4009900512350/trim.jpg",
+    "transparent": "/product/4009900512350/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 21, 24],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "ממתיקים (קסיליטול, מניטול, אספרטיים, סורביטול, סוכרלוז ,אססולפם K)\nבסיס גומי, חומר מסמיך E414, חומרי טעם וריח, חומצה (חומצה מלית), לציטין סויה כחומר מתחלב, חומצה(חומצה ציטרית), חומר הלחה E422, חומר הזגה E903, צבע מאכל E171,  חומר מעכב חמצון ביוטילייטד הידרוקסיאניסול E320, צבע מאכל E172.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "92 גרם", "value": "92" },
+      "Net_Weight": { "UOM": "גרם", "text": "69 גרם", "value": "69" },
+      "Product_Height": { "UOM": "סמ", "text": "6.5 סמ", "value": "6.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "5 סמ", "value": "5" },
+      "Product_Depth": { "UOM": "סמ", "text": "5 סמ", "value": "5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "פייב",
+    "Product_Description_English": "",
+    "Country_of_Origin": "RU",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6845, 6846],
+    "Color_Number": null,
+    "Search_Tags": [
+      "4009900512350",
+      "מסטיק",
+      "גומי לעיסה",
+      "פייב",
+      "אבטיח",
+      "בקבוקון",
+      "פייב בקבוקון",
+      "5",
+      "five",
+      "five box",
+      "watermelon"
+    ],
+    "internal_product_description": "מסטיק פייב אבטיח בקבוקון",
+    "Color": null,
+    "Diet_Information": [5571],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "165 קלוריות",
+            "value": "165",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג\n",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג\n",
+            "value": "0",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "67.7 גרם",
+            "value": "67.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79005",
+        "label": "רב כהלים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6058",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "67.7 גרם",
+            "value": "67.7",
+            "field_name": "Sugar_Alcohols_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מסטיק פייב בטעם אבטיח ללא סוכר ",
+    "Hazard_Precautionary_Statement": "מכיל פניאלאלנין. לא לאפייה ולא לבישול.",
+    "short_name": "מסטיק פייב בטעם אבטיח ללא סוכר ",
+    "Consumer_Storage_Instructions": "שמור במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "69 גרם", "value": "69" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 301,
+  "name": "מסטיק פייב בוקס אבטיח 69 גר",
+  "site_id": 1,
+  "sub_group_id": 596,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

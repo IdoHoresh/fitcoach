@@ -1,0 +1,296 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [180],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 61 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 355863,
+  "multiplication": 1,
+  "barcode": 7613034146656,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7613034146656/small.jpg",
+    "original": "/product/7613034146656/large.jpg",
+    "trim": "/product/7613034146656/trim.jpg",
+    "transparent": "/product/7613034146656/transparent.png",
+    "gallery": []
+  },
+  "department_id": 59,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [1314, 1389],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלבוני עוף והודו מיובשים, חיטה ( 17.5% ), תירס ( 16.5% ), חלקי פנים בקר (14%),  שומן מן החי, אורז( 4.0%),  מצוי מן החי, קמח סויה, עיסת סלק מיובשת ( 3%),  גליצרול, מינרלים, גריסי תירס. תוספים: יחב\"ל/ק\"ג: ויטמין A: 36,000 ; ויטמין 3D: 1,100 ; ויטמין E: 500 ; מ\"ג/ק\"ג: ויטמין C: 140,  ברזל סולפאט מונוהידרט: (ברזל: 130 ); סידן יודאט אנהידרז: (יוד: 2.1 ); נחושת סולפאט פנטהידרט: (נחושת: 14 ); מנגן סולפאט מונוהידרט: (מנגן: 50 ); אבץ סולפאט מונוהידרט: (אבץ : 120 ); נתרן סלניט: (סלניום : 0.15 ). נוגדי חימצון .                                                                                                               r\nr\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.530 קג", "value": "1.530" },
+      "Net_Weight": { "UOM": "קג", "text": "1.5 קג", "value": "1.5" },
+      "Product_Height": { "UOM": "ממ", "text": "292.000 ממ", "value": "292.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "96.000 ממ", "value": "96.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "272.000 ממ", "value": "272.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "פורינה",
+    "Product_Description_English": "ONE MINI Dog Adult Beef&Rice 6x1.5kg IL",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": "17%",
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7613034146656",
+      "ONE",
+      "מזון לכלבים",
+      "גזע קטן",
+      "מזון פרימיום",
+      "עוף",
+      "אוכל לכלבים",
+      "כלב",
+      "פורינה",
+      "שלושה שבועות",
+      "תוצאות נראות לעין",
+      "Dogs Food",
+      "Pets Food",
+      "Dogs",
+      "Purina One."
+    ],
+    "internal_product_description": "פורינה ONE מיני בוגר בקר 6*1.5קג",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "386 קלוריות",
+            "value": "386",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "אנרגיה (קלוריות) למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Energy_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "אנרגיה (קלוריות) ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "17 גרם",
+            "value": "17",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "שומנים (גרם) למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Fats_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "שומנים (גרם) ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "27 גרם",
+            "value": "27",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "חלבונים (גרם) למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Proteins_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חלבונים (גרם) ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Proteins"
+          }
+        ]
+      },
+      {
+        "code": "79038",
+        "label": "תאית",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6019",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "תאית ל-100 גרם",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Cellulose_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6018",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "name": "תאית למנה",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Cellulose_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5899",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "תאית ל-100 מל מוכן",
+            "text": "2",
+            "value": "2",
+            "field_name": "Cellulose"
+          }
+        ]
+      },
+      {
+        "code": "79054",
+        "label": "לחות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6017",
+            "col_field_id": "6066",
+            "UOM": "%",
+            "col_label": "ל-100 גרם",
+            "name": "לחות ל-100 גרם",
+            "text": "9 %",
+            "value": "9",
+            "field_name": "Moisture_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6016",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "name": "לחות למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Moisture_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5901",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "לחות ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Humidity"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "פורינה ONE מזון לכלב בוגר מגזע קטן - בקר",
+    "Hazard_Precautionary_Statement": "לא למאכל אדם",
+    "short_name": "מזון לכלב בוגר וקטן- בקר",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "קג", "text": "1.5 קג", "value": "1.5" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 250,
+  "name": "ONE מיני אקטיב בקר 1.5קג",
+  "site_id": 1,
+  "sub_group_id": 143,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

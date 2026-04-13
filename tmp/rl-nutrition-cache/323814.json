@@ -1,0 +1,187 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71119],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6404],
+    "Rabbinate": [67093, 67019],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 19.7 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 323814,
+  "multiplication": 1,
+  "barcode": 7290016866445,
+  "brand": 573,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290016866445/small.jpg",
+    "original": "/product/7290016866445/large.jpg",
+    "trim": "/product/7290016866445/trim.jpg",
+    "transparent": "/product/7290016866445/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [14],
+  "available_in": [82, 279, 306, 331, 411, 412, 1198, 1220, 1226, 1306, 1314, 1323, 1389, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח אורז, עמילנים, עמילן מעובד (E1442), חלבון אפונה, מסמיך (אבקת צלולוז), מייצבים (קסנטן גאם, E466), חומרי תפיחה (E450i,E500ii), מלח, סיבים תזונתיים (אינולין), מלטודקסטרין, מתחלב (E471).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "511 גרם", "value": "511" },
+      "Net_Weight": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+      "Product_Height": { "UOM": "סמ", "text": "6 סמ", "value": "6" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "9 סמ", "value": "9" },
+      "Product_Depth": { "UOM": "סמ", "text": "20 סמ", "value": "20" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "GFREE",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6821],
+    "Color_Number": null,
+    "Search_Tags": ["7290016866445", "קמח", "קמחים", "תופח", "עמילן", "עמילנים", "ללא גלוטן"],
+    "internal_product_description": "תערובת קמח תופח 500 גרם GFREE",
+    "Color": null,
+    "Diet_Information": [5538, 5514, 5515, 5513, 5524],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "262 קלוריות",
+            "value": "262",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "502 מג",
+            "value": "502",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "60.7 גרם",
+            "value": "60.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.8 גרם",
+            "value": "2.8",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.4 גרם",
+            "value": "5.4",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "ללא צורך בניפוי",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "תערובת קמח תופח 500 גרם GFREE",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "תערובת קמח תופח",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום מוצל ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 282,
+  "name": "תערובת קמח תופח 500 גר",
+  "site_id": 1,
+  "sub_group_id": 507,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

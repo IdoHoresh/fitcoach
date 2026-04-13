@@ -1,0 +1,371 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71080],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 800, "status": 2 },
+  "id": 355657,
+  "multiplication": 1,
+  "barcode": 7290112493163,
+  "brand": 853,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112493163/small.jpg",
+    "original": "/product/7290112493163/large.jpg",
+    "trim": "/product/7290112493163/trim.jpg",
+    "transparent": "/product/7290112493163/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "שוקולד לבן ( 27.5% ) (מכיל חלב, לציטין סויה), שוקולד\nחלב ( 26.5% ), דגנים פריכים במילוי קרם בטעם וניל ( 23% ) [קרם בטעם וניל ( 11% ) (סוכר, שמן צמחי, שקדים, אגוזי לוז,מלטודקסטרין, שמן צמחי מוקשה, מתחלב (לציטין סויה), חומרי טעם וריח), רכיבי דגנים ( 9% ) (קמח חיטה (מכיל גלוטן), קמח תירס, סובין חיטה), סוכר, אבקת קקאו, מלטודקסטרין, שמן צמחי, מלח, חומר מונע התגיישות (מגנזיום קרבונט), מתחלב גליליות במילוי קרם בטעם אגוזי לוז ( 22% ) [סוכר, ,[(E471) שמנים ושומנים מהצומח, קמח חיטה, קמח סויה, דקסטרוזה,\nמלח, חומרי ,(E150a) מתחלב (לציטין), אבקת קקאו, צבע מאכל טעם וריח, מעכב חמצון (תמצית רוזמרין)], מים, מייצב (אקציה גאם), סוכר.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.068 קג", "value": "0.068" },
+      "Net_Weight": { "UOM": "קג", "text": "0.065 קג", "value": "0.065" },
+      "Product_Height": { "UOM": "ממ", "text": "150 ממ", "value": "150" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "45 ממ", "value": "45" },
+      "Product_Depth": { "UOM": "ממ", "text": "70 ממ", "value": "70" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קליק",
+    "Product_Description_English": "Klik 65 GR X 16",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6836, 6804, 6807, 6803, 6805, 6842],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6821, 6840, 6802, 6810, 6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112493163",
+      "חטיף",
+      "חטיף ילדים",
+      "חטיף מתוק",
+      "חטיף שוקולד",
+      "חטיפי שוקולד",
+      "טבלת שוקולד",
+      "ממתק",
+      "קינוח",
+      "קינוחים",
+      "קליק",
+      "קליק שוקולד",
+      "שוקולד",
+      "שוקולד חלב",
+      "שוקולד קליק",
+      "שוקלד",
+      "שקולד",
+      "שקלד",
+      "קליק מיקס",
+      "קליק כריות",
+      "קליק גליליות שוקולד קליק",
+      "כריות",
+      "מיקס קליק"
+    ],
+    "internal_product_description": "קליק קליק מיקס כריות וגליליות 65 גרם",
+    "Color": null,
+    "Diet_Information": [0],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "518 קלוריות",
+            "value": "518",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "לשקית",
+            "text": "337 קלוריות",
+            "value": "337",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "26.7 גרם",
+            "value": "26.7",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "text": "17.4 גרם",
+            "value": "17.4",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "13.7 גרם",
+            "value": "13.7",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "text": "8.9 גרם",
+            "value": "8.9",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "13 מג",
+            "value": "13",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לשקית",
+            "text": "8 מג",
+            "value": "8",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "98 מג",
+            "value": "98",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לשקית",
+            "text": "64 מג",
+            "value": "64",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "64.1 גרם",
+            "value": "64.1",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "text": "41.7 גרם",
+            "value": "41.7",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "51.4 גרם",
+            "value": "51.4",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "text": "33.4 גרם",
+            "value": "33.4",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "12.75",
+            "value": "12.75",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "לשקית",
+            "text": "8.25",
+            "value": "8.25",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.3 גרם",
+            "value": "5.3",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "text": "3.4 גרם",
+            "value": "3.4",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": " ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "קליק מיקס כריות וגליליות",
+    "Hazard_Precautionary_Statement": "שינוי טמפ' ולחות עלולים לגרום להלבנת שוקולד. הלבנת שוקולד אינה מעידה על קלקול המוצר.\nצריכת המוצר על ידי ילדים מומלצת בהשגחת מבוגר.",
+    "short_name": "קליק מיקס כריות וגליליות",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש, לא במקרר. הרחק מקטניות וממוצרים עתירי ריח",
+    "Net_Content": { "UOM": "גרם", "text": "65 גרם", "value": "65" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 300,
+  "name": "קליק שקית מיקס כריות בגליליות 65 גר'",
+  "site_id": 1,
+  "sub_group_id": 590,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,224 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67001],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1082, "status": 2 },
+  "id": 26508,
+  "multiplication": 1,
+  "barcode": 7290004131531,
+  "brand": 5243,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290004131531/small.jpg",
+    "original": "/product/7290004131531/large.jpg",
+    "trim": "/product/7290004131531/trim.jpg",
+    "transparent": "/product/7290004131531/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 10, 21, 49],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב דל לקטוז (87.4%), מים, קקאו (0.86%), סיבים תזונתיים (אינולין), סוכר, חלבוני מי גבינה, תוסף תזונה: סידן (טרי קלציום ציטרט, 0.075%),  מיץ מרוכז מפרי המונק, חומרי טעם וריח, מתחלב (E471),  מייצבים ( E466, E407),  וויטמיןD (1 מק\"ג ל 100 מ\"ל).  \nעד 1% לקטוז",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.087 קג", "value": "1.087" },
+      "Net_Weight": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Height": { "UOM": "סמ", "text": "26 סמ", "value": "26" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8.32 סמ", "value": "8.32" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.32 סמ", "value": "8.32" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תנובה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": "1.9%",
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290004131531",
+      "תנובה",
+      "שוקו",
+      "2%",
+      "משקה חלב",
+      "קקאו",
+      "גיבורי על",
+      "בקבוק",
+      "בקבוק 250 מל",
+      "שוקו 1 ליטר",
+      "שוקו בקבוק 1 ליטר"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "52 קלוריות",
+            "value": "52",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.9 גרם",
+            "value": "1.9",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "42 מג",
+            "value": "42",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.1 גרם",
+            "value": "3.1",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "160 מג",
+            "value": "160",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79028",
+        "label": "ויטמין D (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5842",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "1 מקג",
+            "value": "1",
+            "field_name": "Vitamin_D_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "לנער לפני השימוש",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "משקה שוקו 1 ליטר",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "שוקו תנובה",
+    "Consumer_Storage_Instructions": "לשמור במקרר, 4 מעלות צלזיוס.",
+    "Net_Content": { "UOM": "ליטר", "text": "1 ליטר", "value": "1" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 198,
+  "name": "שוקו תנובה בקבוק 1 ליטר",
+  "site_id": 1,
+  "sub_group_id": 364,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

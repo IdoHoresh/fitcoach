@@ -1,0 +1,220 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "כשר לפסח לאוכלי קטניות בלבד בהשגחת הרבנות שדרות ובד\"צ בית יוסף.",
+    "Board_of_Supervision": [71107],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6405],
+    "Rabbinate": [67096, 67093],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 411.111, "status": 2 },
+  "id": 406145,
+  "multiplication": 1,
+  "barcode": 7290111354939,
+  "brand": 5306,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290111354939/small.jpg",
+    "original": "/product/7290111354939/large.jpg",
+    "trim": "/product/7290111354939/trim.jpg",
+    "transparent": "/product/7290111354939/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6, 10],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סירופ גלוקוז, סוכר, מים, ג'לטין דגים, מווסת חומציות (חומצה מאלית, חומצת לימון), מקריש (פקטין), חומרי טעם וריח, צבע מאכל (אדום אלורה, טרטרזין, טיטניום דיאוקסיד, בריליאנט בלו), חומר הזגה (שעוות קרנובה). \n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "187 גרם", "value": "187" },
+      "Net_Weight": { "UOM": "גרם", "text": "180 גרם", "value": "180" },
+      "Product_Height": { "UOM": "סמ", "text": "19.5 סמ", "value": "19.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "15 סמ", "value": "15" },
+      "Product_Depth": { "UOM": "סמ", "text": "3 סמ", "value": "3" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "יוגטה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6970],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6854],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290111354939",
+      "יוגטה",
+      "סוכריות",
+      "גומי",
+      "בטעמי פירות",
+      "בצורת דובי",
+      "180 גרם"
+    ],
+    "internal_product_description": "סוכריות כשל\"פ גומי דובונים 180 גרם\n",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "352 קלוריות",
+            "value": "352",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "43 מג",
+            "value": "43",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "82 גרם",
+            "value": "82",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "52 גרם",
+            "value": "52",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "13",
+            "value": "13",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79048",
+        "label": "סוכרים: לקטוז",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5965",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "51 גרם",
+            "value": "51",
+            "field_name": "Lactose_from_Sugars_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "יוגטה סוכריות כשל\"פ גומי דובונים 180 גרם\n",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "סוכריות גומי דובונים\n",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש, הרחק מקרינת שמש ישירה.",
+    "Net_Content": { "UOM": "גרם", "text": "180 גרם", "value": "180" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 235,
+  "name": "סוכריות גומי מסוכרות דובונים 180 גר",
+  "site_id": 1,
+  "sub_group_id": 769,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,267 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67093, 67072, 67011],
+    "Israel_Milk": [6901],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 20.2 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 335034,
+  "multiplication": 1,
+  "barcode": 7290002129455,
+  "brand": 3764,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290002129455/small.jpg",
+    "original": "/product/7290002129455/large.jpg",
+    "trim": "/product/7290002129455/trim.jpg",
+    "transparent": "/product/7290002129455/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 6, 16],
+  "available_in": [279, 412, 1214, 1306, 1307, 1314, 1333, 1378, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "בצק (59%) מכיל: קמח חיטה לבן בהיר (מכיל גלוטן), מים, קמח חיטה דורום, שמן צמחי חמניות, מלח, שמן זית כתית מעולה, שמרים, סיבים תזונתיים, לתת קמח חיטה. \nגבינה חצי קשה מוצרלה 22% שומן (22%) (חלב מפוסטר, מלח, תרביות לקטיות). \nרוטב פיצה (19%) מכיל: רסק עגבניות (14%), מים, שמן זית כתית מעולה, סוכר, מלח, תבלינים",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "560 גרם", "value": "560" },
+      "Net_Weight": { "UOM": "גרם", "text": "450 גרם", "value": "450" },
+      "Product_Height": { "UOM": "סמ", "text": "3 סמ", "value": "3" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "30 סמ", "value": "30" },
+      "Product_Depth": { "UOM": "סמ", "text": "30 סמ", "value": "30" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "שלושת האופים",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6803, 6808, 6821],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR2", "value": "נתרן בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6810, 6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290002129455",
+      "שלושת האופים",
+      "פיצה",
+      "פיצה איטלקית",
+      "פיצה איטלקית משפחתית גדולה",
+      "פיצה משפחתית",
+      "פיצה איטלקית XL",
+      "בצק אפוי בתנור לבנים",
+      "פיצה משפחתית קפואה",
+      "פיצה קפואה",
+      "מוצרלה"
+    ],
+    "internal_product_description": "שלושת האופים נפוליטנה פיצה איטלקית משפחתית גדולה XL 450 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "248 קלוריות",
+            "value": "248",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "7.33 גרם",
+            "value": "7.33",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "3.5 גרם",
+            "value": "3.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "3.8 מג",
+            "value": "3.8",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "500 מג",
+            "value": "500",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "33.2  גרם",
+            "value": "33.2",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "4.4 גרם",
+            "value": "4.4",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "1",
+            "value": "1",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "11.4 גרם",
+            "value": "11.4",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "אין צורך להפשיר את המוצר לפני האפיה. \nלחמם תנור לחום גבוה 230 מעלות צלזיוס בגוף חימום עליון ותחתון, לפני הכנסת הפיצה. להסיר את הניילון העוטף את הפיצה. להניח את הפיצה על תבנית או רשת התנור ולמקם בחלק התחתון של התנור. לאפות במשך כ-9 דקות עד שהגבינה מבעבעת והבצק מזהיב (כדאי להימנע מאפיית יתר הפוגעת בטעם ובמרקם של הפיצה). להמתין 1-2 דקות ולהגיש חם. יתכנו הבדלים בזמני החימום הנובעים מהשוני בין מכשירי החימום",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "שלושת האופים נפוליטנה פיצה איטלקית משפחתית גדולה XL 450 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "פיצה איטלקית משפחתית גדולה XL",
+    "Consumer_Storage_Instructions": "לשמור בהקפאה (מינוס 18 מעלות) אין להפשיר ולהקפיא שנית",
+    "Net_Content": { "UOM": "גרם", "text": "450 גרם", "value": "450" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 223,
+  "name": "פיצה איטלקית גדולה 450 גר",
+  "site_id": 1,
+  "sub_group_id": 333,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

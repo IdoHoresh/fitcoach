@@ -1,0 +1,231 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71038],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 351246,
+  "multiplication": 1,
+  "barcode": 7290100704134,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290100704134/small.jpg",
+    "original": "/product/7290100704134/large.jpg",
+    "trim": "/product/7290100704134/trim.jpg",
+    "transparent": "/product/7290100704134/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סוכר, קמח חיטה(מכיל גלוטן), אבקת קקאו, אבקת שוקולד, עמילן תירס, גלוקוזה, מתחלבים(E-471), קפה\nנמס, מלח, מייצב (E-415), חומרי טעם וריח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "570 גרם", "value": "570" },
+      "Net_Weight": { "UOM": "גרם", "text": "560 גרם", "value": "560" },
+      "Product_Height": { "UOM": "סמ", "text": "18.5 סמ", "value": "18.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "5.5 סמ", "value": "5.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "10 סמ", "value": "10" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "סוגת",
+    "Product_Description_English": "Brownies Mix 560 grams",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6810],
+    "Color_Number": null,
+    "Search_Tags": ["7290100704134", "בראוניז", "תערובת", "תערובת לבראוניז", "סוגת"],
+    "internal_product_description": "תערובת לבראוניז",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "391 קלוריות",
+            "value": "391",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.9 גרם",
+            "value": "2.9",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.9 גרם",
+            "value": "1.9",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "146 מג",
+            "value": "146",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "86.2 גרם",
+            "value": "86.2",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "56.9 גרם",
+            "value": "56.9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "תערובת להכנת בראוניז\nלתבנית בגודל 20X30 ס\"מ\n\nמחממים תנור ל-170 מעלות ומשמנים את התבנית. \nטורפים בקערה 3 ביצים במשך כחצי דקה, מוסיפים 200 גרם חמאה רכה או 3/4 כוס שמן צמחי ומאחדים לקרם חלק.\nמוסיפים את תוכן השקית ומערבבים עד לקבלת תערובת אחידה. \nיוצקים את התערובת לתבנית, מפזרים חופן נדיב של אגוזי פקאן, מלך או לוז (לא חובה) ואופים כ-18 דקות עד שנוצר קרום פריך אך הפנים עדיין לח.\nמוציאים מהתנור, מניחים להתקרר מעט וזוללים\n",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "תערובת להכנת בראוניז 560 גרם",
+    "Hazard_Precautionary_Statement": "יש לנפות/ לברור לפני השימוש כאשר האריזה אינה אטומה\nהמוצר אינו מיועד למאכל אדם ללא טיפול תרמי (אפייה או בישול)",
+    "short_name": "תערובת לבראוניז",
+    "Consumer_Storage_Instructions": "יש לשמור במקום קריר, יבש ומוצל",
+    "Net_Content": { "UOM": "גרם", "text": "560 גרם", "value": "560" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 275,
+  "name": "תערובת להכנת בראוניז 560 גר",
+  "site_id": 1,
+  "sub_group_id": 105,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": false
+}

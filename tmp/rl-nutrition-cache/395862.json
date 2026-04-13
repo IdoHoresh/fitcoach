@@ -1,0 +1,214 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71100],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67016],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 395862,
+  "multiplication": 1,
+  "barcode": 7290019153375,
+  "brand": 2763,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290019153375/small.jpg",
+    "original": "/product/7290019153375/large.jpg",
+    "trim": "/product/7290019153375/trim.jpg",
+    "transparent": "/product/7290019153375/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [15],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, סוכר לבן, מיץ אגסים* (7%), מיץ לימון* (3.5%), מיץ ליים* (1.5%),  חומרי טעם וריח, מווסתי חומציות (חומצה ציטרית,  E-332ii), מייצבים ( ,E414  E412 בפסח פקטין,E414 ), מיצוי נענע (0.01%), רכז קורטם. *עשוי מרכז",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.570 קג", "value": "1.570" },
+      "Net_Weight": { "UOM": "קג", "text": "1.5 קג", "value": "1.5" },
+      "Product_Height": { "UOM": "סמ", "text": "30.1 סמ", "value": "30.1" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "9.00 סמ", "value": "9.00" },
+      "Product_Depth": { "UOM": "סמ", "text": "9.00 סמ", "value": "9.00" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תפוזינה",
+    "Product_Description_English": "Tapuzina mojito 1.5 liter",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "להגיש צונן",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290019153375",
+      "תפוזינה",
+      "מיץ",
+      "משקה",
+      "משקה קל",
+      "שתיה",
+      "שתייה קלה",
+      "משקאות",
+      "מוחיטו",
+      "מוקטיילס"
+    ],
+    "internal_product_description": "תפוזינה מוחיטו 1.5 ל'",
+    "Color": null,
+    "Diet_Information": [5514],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "39 קלוריות",
+            "value": "39",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "שומנים (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "נתרן (מג) ל-100 מל",
+            "text": "9 מג",
+            "value": "9",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "9.8 גרם",
+            "value": "9.8",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל",
+            "text": "9 גרם",
+            "value": "9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 מל",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 מל",
+            "text": "2.25",
+            "value": "2.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (גרם) ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": "10%",
+    "Serving_Suggestion": "להגיש צונן",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "תפוזינה מוחיטו 1.5 ל'",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "תפוזינה מוחיטו 1.5",
+    "Consumer_Storage_Instructions": "לאחסן במקום מוצל, קריר ויבש.להגיש צונן.לשמור בקירור לאחר הפתיחה. מומלץ לשימוש עד 5 ימים לאחר הפתיחה.",
+    "Net_Content": { "UOM": "ליטר", "text": "1.5 ליטר", "value": "1.5" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "תפוזינה מוחיטו 1.5לי",
+  "site_id": 1,
+  "sub_group_id": 435,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,113 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67016, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 17.3 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1240, "status": 2 },
+  "id": 4227,
+  "multiplication": 1,
+  "barcode": 7290008801546,
+  "brand": 2893,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290008801546/small.jpg",
+    "original": "/product/7290008801546/large.jpg",
+    "trim": "/product/7290008801546/trim.jpg",
+    "transparent": "/product/7290008801546/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [15, 16],
+  "available_in": [
+    82, 279, 331, 411, 412, 1197, 1198, 1214, 1220, 1226, 1306, 1314, 1329, 1330, 1333, 1378, 1389,
+    1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "תוספות: סוכר, כוהל מלס, חומצה סורבית וגופרית דו חמצנית.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.250 קג", "value": "1.250" },
+      "Net_Weight": { "UOM": "גרם", "text": "750 גרם", "value": "750" },
+      "Product_Height": { "UOM": "סמ", "text": "29.5 סמ", "value": "29.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7.7 סמ", "value": "7.7" },
+      "Product_Depth": { "UOM": "סמ", "text": "7.7 סמ", "value": "7.7" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": "10.5%",
+    "BrandName": "יקבי כרמל",
+    "Product_Description_English": "KING DAVID MUSCAT 750ML",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6858],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290008801546",
+      "יקבי כרמל",
+      "קינג דויד",
+      "מוסקט",
+      "יין",
+      "יין לבן",
+      "יין לבן ממותק",
+      "750 מל"
+    ],
+    "internal_product_description": "כרמל קינג דויד מוסקט - יין לבן ממותק 750 מל",
+    "Color": null,
+    "Diet_Information": [5521],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "text": "135 קלוריות",
+            "value": "135",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "יין קינג דויד מוסקט יקבי כרמל",
+    "Hazard_Precautionary_Statement": "מכיל אלכוהול- מומלץ להמנע משתיה מופרזת",
+    "short_name": "יין קינג דויד מוסקט יקבי כרמל",
+    "Consumer_Storage_Instructions": "יש לאחסן את היין במקום קריר ואפל.\nלאחר הפתיחה יש לשמור בקרור בטמפרטורה מתחת ל 4 מעלות צלזיוס",
+    "Net_Content": { "UOM": "מל", "text": "750 מל", "value": "750" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 239,
+  "name": "יין מוסקט מתוק קינג דיוויד יקבי כרמל",
+  "site_id": 1,
+  "sub_group_id": 34,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

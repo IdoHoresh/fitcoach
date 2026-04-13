@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Text, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
-import { colors, fontSize, fontWeight, spacing } from '@/theme'
+import { colors, fontSize, fontFamily, spacing } from '@/theme'
 import { t } from '@/i18n'
 import { useUserStore } from '@/stores/useUserStore'
 import { VALIDATION } from '@/data/constants'
@@ -76,13 +76,14 @@ export default function BodyFatScreen() {
 const styles = StyleSheet.create({
   title: {
     fontSize: fontSize.xxl,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     color: colors.textPrimary,
     textAlign: 'center',
     marginBottom: spacing.md,
   },
   helpText: {
     fontSize: fontSize.sm,
+    fontFamily: fontFamily.regular,
     color: colors.textSecondary,
     textAlign: 'center',
     marginBottom: spacing.xl,

@@ -1,0 +1,220 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [0],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67163],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 384, "status": 2 },
+  "id": 376113,
+  "multiplication": 1,
+  "barcode": 7290112497031,
+  "brand": 396,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112497031/small.jpg",
+    "original": "/product/7290112497031/large.jpg",
+    "trim": "/product/7290112497031/trim.jpg",
+    "transparent": "/product/7290112497031/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "עגבניות מרוסקות (78.8%), מים, ירקות (גזר, סלרי, שום), תרכיז עגבניות (5%), מלח, תבלינים, ירקות מיובשים (בצל, פטרוזיליה), שמן צמחי, חומצת מאכל (חומצת לימון).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.637 קג", "value": "0.637" },
+      "Net_Weight": { "UOM": "קג", "text": "0.415 קג", "value": "0.415" },
+      "Product_Height": { "UOM": "ממ", "text": "145 ממ", "value": "145" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "76 ממ", "value": "76" },
+      "Product_Depth": { "UOM": "ממ", "text": "76 ממ", "value": "76" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קנור",
+    "Product_Description_English": "KNORR 415 GR X 6",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [0],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6823],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112497031",
+      "רוטב",
+      "רוטב ארביאטה",
+      "רוטב לדגים",
+      "רוטב לחריימה",
+      "רוטב לפיצה",
+      "רוטב לפסטה",
+      "רוטב לשקשוקה",
+      "רוטב מהיר לפסטה",
+      "רוטב נפוליטנה",
+      "רוטב עגבניות",
+      "רוטב עגבניות איטלקי",
+      "רוטב עגבניות לפסטה",
+      "רוטב עגבניות פיקנטי",
+      "רוטב עם בזיליקום",
+      "רוטב פומודורו"
+    ],
+    "internal_product_description": "קנור רוטב עגבניות לקציצות ותבשילים 415 גרם",
+    "Color": null,
+    "Diet_Information": [5573, 5527, 5528, 5513, 5529],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "31 קלוריות",
+            "value": "31",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "354 מג",
+            "value": "354",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "6.1 גרם",
+            "value": "6.1",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "3.8 גרם",
+            "value": "3.8",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "1",
+            "value": "1",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "1.6 גרם",
+            "value": "1.6",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "עבור 10-12 קציצות בנוניות, מומלץ להשתמש בצנצנת רוטב שלמה ולהוסיף חצי צנצנת מים. יש להביא את הרוטב עם המים לרתיחה, להוסיף קציצות ולבשל בסיר מכוסה על אש בינונית כ-10 דקות. להסיר את המכסה ולבשל עד לבישול מלא של הקציצות והגעה למרקם הרצוי. למגוון תבשילים נוספים יש להשתמש בצנצנת רוטב שלמה ולהוסיף חצי צנצנת מים.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רוטב עגבניות לקציצות ותבשילים ",
+    "Hazard_Precautionary_Statement": "אין לקנות או להשתמש במוצר זה כאשר המכסה אינו שקוע כלפי מטה או אם לא נשמע צליל \"קליק\" בעת הפתיחה הראשונית.",
+    "short_name": "רוטב עגבניות לקציצות",
+    "Consumer_Storage_Instructions": " ",
+    "Net_Content": { "UOM": "גרם", "text": "415 גרם", "value": "415" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 226,
+  "name": "קנור רוטב עגבניות לקציצות415מ\"ל",
+  "site_id": 1,
+  "sub_group_id": 388,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

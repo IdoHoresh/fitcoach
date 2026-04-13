@@ -1,0 +1,325 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67096, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 360469,
+  "multiplication": 1,
+  "barcode": 7290102398799,
+  "brand": 1389,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290102398799/small.jpg",
+    "original": "/product/7290102398799/large.jpg",
+    "trim": "/product/7290102398799/trim.jpg",
+    "transparent": "/product/7290102398799/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מיצוי פולי סויה (מים, פולי סויה 6.8% ), סוכר, סידן (קלציום קרבונט),  מווסתי חומציות (E-340,E-452,E-500ii) ,חומרי טעם וריח, מלח, מייצב (ג'לן גאם), ויטמינים (B2,B12, D2)\n\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.06 קג", "value": "1.06" },
+      "Net_Weight": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Height": { "UOM": "סמ", "text": "20.7 סמ", "value": "20.7" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7 סמ", "value": "7" },
+      "Product_Depth": { "UOM": "סמ", "text": "7.2 סמ", "value": "7.2" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ואל סויה",
+    "Product_Description_English": "soya drink",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290102398799",
+      "משקה סויה\nסויה\nxuhv \nסויה מופחת סוכר \nסויה סוכר \nסויה במתיקות מופחתת \nחלב סויה דיאט \nחלב סויה מופחת \nחלב סויה מופחת סוכר \nחלב סויה לייט \nחלב סויה במתיקות מופחתת \nחלב סויה במתיקות מעודנת \nחלב סויה \nסויה דיאט \nסויה לייט \nסויה אלטרנטיב \nסויה אלפרו\nסויה משק\nסויה משק צוריאל \nסויה צוריאל \nחלב סויה משק צוריאל\nחלב סויה משק \nחלב סויה אלפרו \nחלב סויה אלטרנטיב \nחלב סויה ויטאריז \nמשקה סויה לייט \nמשקה סויה משק צוריאל\nמשקה סויה לייט משק צוריאל \nמשקה סויה במתיקות מעודנת \nמשקה סויה במתיקות מופחתת \nמשקה סויה אלפרו \nמשקה סויה ויטאריז \nמשקה סויה אלטרנטיב במתיקות מופחתת  \nתחליפי חלב \nתחלי\nתחלי\nתחליפ\nתחליף \nתחליף חלב \nאלטרנטיב \nסויה\nלייט אלטרנטיב \nטבעוני \nצוריאל"
+    ],
+    "internal_product_description": "משקה סויה במתיקות מופחתת \n",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "40 קלוריות",
+            "value": "40",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "שומנים (גרם) ל-100 מל",
+            "text": "1.7 גרם",
+            "value": "1.7",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 מל",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 מל",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 מל",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "נתרן (מג) ל-100 מל",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל",
+            "text": "2.6 גרם",
+            "value": "2.6",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סיבים תזונתיים (גרם) ל-100 מל",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (גרם) ל-100 מל",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79022",
+        "label": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5846",
+            "col_field_id": "6066",
+            "UOM": "מג\n",
+            "col_label": "ל-100 מל",
+            "name": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג) ל-100 מל",
+            "text": "0.21 מג\n",
+            "value": "0.21",
+            "field_name": "Vitamin_B2_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79020",
+        "label": "ויטמין‎ B12 (מקג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5856",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 מל",
+            "name": "ויטמין‎ B12 (מקג) ל-100 מל",
+            "text": "0.38 מקג",
+            "value": "0.38",
+            "field_name": "Vitamin_B12_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "סידן (מג) ל-100 מל",
+            "text": "120 מג",
+            "value": "120",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79028",
+        "label": "ויטמין D (מקג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5842",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 מל",
+            "name": "ויטמין D (מקג) ל-100 מל",
+            "text": "1.5 מקג",
+            "value": "1.5",
+            "field_name": "Vitamin_D_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "משקה סויה במתיקות מופחתת \n\n",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "משקה סויה במתיקות מופחתת \n",
+    "Consumer_Storage_Instructions": "לאחר הפתיחה לשמור בקירור (מקסימיום 7 מעלות צלזיוס).\nלצריכה עד 5 ימים לאחר הפתיחה.",
+    "Net_Content": { "UOM": "מל", "text": "1000 מל", "value": "1000" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 198,
+  "name": "משקה סויה במתיקות מופחתת 1 ליטר",
+  "site_id": 1,
+  "sub_group_id": 317,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

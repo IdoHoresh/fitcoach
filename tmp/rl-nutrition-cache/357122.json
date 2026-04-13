@@ -1,0 +1,241 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71080],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 357122,
+  "multiplication": 1,
+  "barcode": 7290112493194,
+  "brand": 853,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112493194/small.jpg",
+    "original": "/product/7290112493194/large.jpg",
+    "trim": "/product/7290112493194/trim.jpg",
+    "transparent": "/product/7290112493194/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סוכר, חמאת קקאו, עיסת קקאו, אבקת חלב מלא, אבקת חלב רזה, בוטנים מלוחים מקורמלים (12%) (בוטנים (6%), סוכר, מלח), פצפוצי דגנים (4%) (דגנים 2.8%) (קמח אורז, קמח חיטה (מכיל גלוטן), קמח שיבולת שועל (מכיל גלוטן), תמצית לתת שעורה (מכיל גלוטן)),סוכר, עמילן חיטה, סיבים (אינולין), שמן צמחי, מלח), מלח, מתחלבים (לציטין מסויה, E476), ונילין. מינימום מוצקי קקאו בשוקולד: 29%",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.088 קג", "value": "0.088" },
+      "Net_Weight": { "UOM": "גרם", "text": "85 גרם", "value": "85" },
+      "Product_Height": { "UOM": "ממ", "text": "100 ממ", "value": "100" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "80 ממ", "value": "80" },
+      "Product_Depth": { "UOM": "ממ", "text": "180 ממ", "value": "180" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קליק",
+    "Product_Description_English": "Milk Chocolate Peanuts ttttttttttttttttttttttt\n",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6802, 6803, 6805, 6842, 6804, 6836, 6840],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6807, 6810, 6815, 6811, 6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112493194",
+      "שוקולד חלב",
+      "קליק בוטנים",
+      "קרמל",
+      "שוקולד",
+      "סוכריות קופצות",
+      "קראנץ",
+      "פצפוצים",
+      "בוטנים מלוחים",
+      "קורנפלקס",
+      "בוטנים מלוח",
+      ""
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "522 קלוריות",
+            "value": "522",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "26.8 גרם",
+            "value": "26.8",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "15.3 גרם",
+            "value": "15.3",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "8 מג",
+            "value": "8",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "237 מג",
+            "value": "237",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "61.3 גרם",
+            "value": "61.3",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "54.9 גרם",
+            "value": "54.9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "8.9 גרם",
+            "value": "8.9",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "טבלת שוקולד חלב בוטנים מלוחים ופצפוצים",
+    "Hazard_Precautionary_Statement": "שינויי טמפרטורה ולחות עלולים לגרום להלבנת שוקולד. הלבנת שוקולד אינה מעידה על קלקול המוצר.",
+    "short_name": "שוקולד חלב בוטנים מלוחים",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש (לא במקרר). הרחק מקטניות וממוצרים עתירי ריח.",
+    "Net_Content": { "UOM": "גרם", "text": "85 גרם", "value": "85" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 235,
+  "name": "קליק טבלת בוטנים מלוחים שוקולד",
+  "site_id": 1,
+  "sub_group_id": 347,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": false
+}

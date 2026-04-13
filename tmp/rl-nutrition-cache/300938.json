@@ -1,0 +1,261 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71057],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 13.6 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 300938,
+  "multiplication": 1,
+  "barcode": 7290013994547,
+  "brand": 1170,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290013994547/small.jpg",
+    "original": "/product/7290013994547/large.jpg",
+    "trim": "/product/7290013994547/trim.jpg",
+    "transparent": "/product/7290013994547/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [1314, 1329],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "אורז בסמטי חום אורגני",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "514 גרם", "value": "514" },
+      "Net_Weight": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+      "Product_Height": { "UOM": "סמ", "text": "17 סמ", "value": "17" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "9 סמ", "value": "9" },
+      "Product_Depth": { "UOM": "סמ", "text": "5.5 סמ", "value": "5.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "הרדוף",
+    "Product_Description_English": "ORGANIC BROWN BASMATI RICE",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6803, 6807, 6810, 6815, 6812, 6811, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290013994547", "הרדוף", "אטרז בסמטי", "חום", "אורגני"],
+    "internal_product_description": "הרדוף אורז בסמטי חום אורגני 500 גרם",
+    "Color": null,
+    "Diet_Information": [5510],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר לפני בישול",
+            "text": "375 קלוריות",
+            "value": "375",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "שומנים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם מוצר לפני בישול",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם מוצר לפני בישול",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם מוצר לפני בישול",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "נתרן (מג) ל-100 גרם מוצר לפני בישול",
+            "text": "7 מג",
+            "value": "7",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "77 גרם",
+            "value": "77",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "8 גרם",
+            "value": "8",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79068",
+        "label": "מתוכם סיבים מסיסים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "6081",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "מתוכם סיבים מסיסים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "4 גרם",
+            "value": "4",
+            "field_name": "Soluble_Fiber_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "לכל כוס אורז להוסיף 2 כוסות מים, מלח ופלפל לפי הטעם ולהרתיח. לבשל על אש קטנה כ- 45 דקות או עד שהמים נספגים. להשאיר את המכסה סגור 5-10 דקות לאחר גמר הבישול.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "הרדוף אורז בסמטי חום אורגני 500 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "אורז בסמטי חום אורגני ",
+    "Consumer_Storage_Instructions": "מומלץ לאחסן במקום מוצל, קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 282,
+  "name": "אורז בסמטי מלא 500 גר",
+  "site_id": 1,
+  "sub_group_id": 507,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,375 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67159],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 392103,
+  "multiplication": 1,
+  "barcode": 7290115206937,
+  "brand": 4511,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290115206937/small.jpg",
+    "original": "/product/7290115206937/large.jpg",
+    "trim": "/product/7290115206937/trim.jpg",
+    "transparent": "/product/7290115206937/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "נודלס אורז (82%) (קמח אורז, עמילן  טפיוקה מעובד ( E1414), עמילן טפיוקה), מחזק טעם (מונוסודיום גלוטמט), סוכר, מלח, ירקות מיובשים (גזר, סלרי, פטרוזיליה), שמן דקלים, אבקת בצל, תמצית שמרים, מיצוי תבלינים, צבע מאכל (תמצית כורכום), חומרי טעם וריח",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "78 גרם", "value": "78" },
+      "Net_Weight": { "UOM": "גרם", "text": "55 גרם", "value": "55" },
+      "Product_Height": { "UOM": "ממ", "text": "100.000 ממ", "value": "100.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "70.000 ממ", "value": "70.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "95.000 ממ", "value": "95.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "אסם",
+    "Product_Description_English": "MNCM RiceNoodleChknStirfryKpsv12x55IL",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6823],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290115206937",
+      "מנה חמה רייס נודלס\nרייס נודלס\nRIce Noodles\nRice\nאורז נודלס\nאורז\nMana Hama Rice Noodles\nכשל\"פ\nמנה חמה כשר לפסח\nכשר לפסח\nמנה חמה רייס נודלס כשר לפסח\nמנה חמה\nאסם\nתבשיל אישי\nתבשיל משפחתי\nנודלס\nמנה חמה שחורה\nמנה חמה נודלס\nמנה חמה נודלס בטעם בקר\nבקר",
+      "אסייתי",
+      "אטריות",
+      "ארוחה מוכנה ברגע",
+      "מוכן ברגע",
+      "אינסטנט",
+      "חטיף",
+      "ארוחות מוכנות",
+      "ארוחה מוכנה",
+      "אינסטנט נודלסמנה חמה\nאסם\nתבשיל אישי\nתבשיל משפחתי\nנודלס\nמנה חמה שחורה\nמנה חמה נודלס\nמנה חמה נודלס בטעם בקר\nבקר",
+      "אסייתי",
+      "אטריות",
+      "ארוחה מוכנה ברגע",
+      "מוכן ברגע",
+      "אינסטנט",
+      "חטיף",
+      "ארוחות מוכנות",
+      "ארוחה מוכנה",
+      "אינסטנט נודלסמנה חמה\nאסם\nתבשיל אישי\nתבשיל משפחתי\nנודלס\nמנה חמה שחורה\nמנה חמה נודלס\nמנה חמה נודלס בטעם בקר\nבקר",
+      "אסייתי",
+      "אטריות",
+      "ארוחה מוכנה ברגע",
+      "מוכן ברגע",
+      "אינסטנט",
+      "חטיף",
+      "ארוחות מוכנות",
+      "ארוחה מוכנה",
+      "אינסטנט נודלסמנה חמה\nאסם\nתבשיל אישי\nתבשיל משפחתי\nנודלס\nמנה חמה שחורה\nמנה חמה נודלס\nמנה חמה נודלס בטעם בקר\nבקר",
+      "אסייתי",
+      "אטריות",
+      "ארוחה מוכנה ברגע",
+      "מוכן ברגע",
+      "אינסטנט",
+      "חטיף",
+      "ארוחות מוכנות",
+      "ארוחה מוכנה",
+      "אינסטנט נודלס"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "343 קלוריות",
+            "value": "343",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "189 קלוריות",
+            "value": "189",
+            "field_name": "Energy_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל מוכן",
+            "text": "54 קלוריות",
+            "value": "54",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.1 גרם",
+            "value": "1.1",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Fats_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "0.2 גרם",
+            "value": "0.2",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "1475 מג",
+            "value": "1475",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "811 מג",
+            "value": "811",
+            "field_name": "Sodium_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5921",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "text": "229 מג",
+            "value": "229",
+            "field_name": "Sodium_Natran"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "76 גרם",
+            "value": "76",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "42 גרם",
+            "value": "42",
+            "field_name": "Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5902",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "12 גרם",
+            "value": "12",
+            "field_name": "Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "8.4 גרם",
+            "value": "8.4",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "4.6 גרם",
+            "value": "4.6",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5926",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "1.3 גרם",
+            "value": "1.3",
+            "field_name": "Sugars_from_Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "2",
+            "value": "2",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "1.25",
+            "value": "1.25",
+            "field_name": "Sugar_Spoon_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6185",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "text": "0.25",
+            "value": "0.25",
+            "field_name": "Sugar_Spoon"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.3 גרם",
+            "value": "7.3",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "4 גרם",
+            "value": "4",
+            "field_name": "Proteins_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "1.1 גרם",
+            "value": "1.1",
+            "field_name": "Proteins"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מנה חמה רייס נודלס מוקפץ עוף כלפ12*55גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מנה חמה רייס נודלס מוקפץ עוף כל\"פ",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "55 גרם", "value": "55" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 229,
+  "name": "מנה חמה רייס נודלס מוקפץ עוף כלפ 55גר",
+  "site_id": 1,
+  "sub_group_id": 277,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

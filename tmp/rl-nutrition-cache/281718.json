@@ -1,0 +1,100 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67180, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 782, "status": 2 },
+  "id": 281718,
+  "multiplication": 1,
+  "barcode": 4052197000017,
+  "brand": 2424,
+  "recipes": [],
+  "images": {
+    "small": "/product/4052197000017/small.jpg",
+    "original": "/product/4052197000017/large.jpg",
+    "trim": "/product/4052197000017/trim.jpg",
+    "transparent": "/product/4052197000017/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 32],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, כוהל, לתת שעורה, חיטה, כשות ושמרים (מכיל גלוטן)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "794 גרם", "value": "794" },
+      "Net_Weight": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+      "Product_Height": { "UOM": "סמ", "text": "24.5 סמ", "value": "24.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6 סמ", "value": "6" },
+      "Product_Depth": { "UOM": "סמ", "text": "6 סמ", "value": "6" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": "5.4%",
+    "BrandName": "בנדיקטינר",
+    "Product_Description_English": "bendiktiner",
+    "Country_of_Origin": "DE",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6942],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6809],
+    "Color_Number": null,
+    "Search_Tags": ["4052197000017", "בנדיקטינר", "בירה", "משקה", "אלכוהול", "500 מל"],
+    "internal_product_description": "בנדיקטינר בירה 500 מל",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "45 קלוריות",
+            "value": "45",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "בנדיקטינר בירה 500 מל",
+    "Hazard_Precautionary_Statement": "מכיל אלכוהול- מומלץ להימנע משתייה מופרזת",
+    "short_name": "בירה בנדיקטינר",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "500 מל", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 290,
+  "name": "בירה בנדיקטר 0.5 ל'",
+  "site_id": 1,
+  "sub_group_id": 129,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

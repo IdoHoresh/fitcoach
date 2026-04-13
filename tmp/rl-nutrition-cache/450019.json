@@ -1,0 +1,322 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67256, 67011],
+    "Israel_Milk": [6903],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 25.9 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 450019,
+  "multiplication": 1,
+  "barcode": 5900951314865,
+  "brand": 3904,
+  "recipes": [],
+  "images": {
+    "small": "/product/5900951314865/small.jpg",
+    "original": "/product/5900951314865/large.jpg",
+    "trim": "/product/5900951314865/trim.jpg",
+    "transparent": "/product/5900951314865/transparent.png",
+    "gallery": []
+  },
+  "department_id": 56,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16],
+  "available_in": [
+    82, 279, 290, 306, 331, 412, 1197, 1198, 1214, 1221, 1225, 1226, 1306, 1307, 1314, 1323, 1329,
+    1330, 1332, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סוכר, מסת קקאו, אבקת חלב רזה, חמאת קקאו, אבקת רכיבים ממתק בטעם שוקולד חלב (72%) בציפוי דרג'ה\n לקטוז מרכז מי גבינה, שומן חלב, עמילן תפוחי אדמה, שומן\n דקלים, שומן שיאה, סירופ גלוקוז, עמילן אורז, דקסטרין, מתחלב (E160a ,E133 ,E100 ,E170 ,E162) מאכל צבעי ,מלח ,)סויה לציטין (חומר הזגה (903E(, שמן גלעיני דקלים, חומרי טעם וריח.\n מכיל: חלב, סויה. עלול להכיל: בוטנים",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "229 גרם", "value": "229" },
+      "Net_Weight": { "UOM": "גרם", "text": "225 גרם", "value": "225" },
+      "Product_Height": { "UOM": "ממ", "text": "165 ממ", "value": "165" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "125 ממ", "value": "125" },
+      "Product_Depth": { "UOM": "ממ", "text": "45 ממ", "value": "45" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "M&M",
+    "Product_Description_English": "M&M milk choclate sharing size",
+    "Country_of_Origin": "PL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6807, 6818, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "5900951314865",
+      "M&MS",
+      "אמ אנד אמס",
+      "שוקולד חלב",
+      "מצופה דרג'ה",
+      "MARS",
+      "שוקולד",
+      "מ&מ",
+      "מ&מ'ס",
+      "מנמ",
+      "אם נ אם",
+      "M&M's",
+      "m&m",
+      "m&m's",
+      "chocolate",
+      "300gram"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "490 קלוריות",
+            "value": "490",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "20.3 גרם",
+            "value": "20.3",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "12.5 גרם",
+            "value": "12.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "8.6 מג",
+            "value": "8.6",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "96 מג",
+            "value": "96",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "69.6 גרם",
+            "value": "69.6",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "65.5 גרם",
+            "value": "65.5",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "16.5",
+            "value": "16.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "5.5 גרם",
+            "value": "5.5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79086",
+        "label": "מתוכם סוכר מוסף (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6136",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "מתוכם סוכר מוסף (גרם) ל-100 גרם",
+            "text": "16 גרם",
+            "value": "16",
+            "field_name": "Added_Sugar_from_Sugars_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": " M&M אם אנד אם Minis שוקולד 225 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": " M&M אם אנד אם Minis שוקולד 225 גרם",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "225 גרם", "value": "225" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910368268,
+      "sw_kefel": 0,
+      "k_cmt": null,
+      "deleted_by": null,
+      "k_acz_dis": null,
+      "active": 1,
+      "created_at": "2026-03-07T22:52:04.000000Z",
+      "cmt": 1,
+      "label": "אם אנד אם ב-21.90 ש\"ח",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "max_in_doc": 0,
+      "is_personal": 0,
+      "updated_at": "2026-03-07T22:52:04.000000Z",
+      "approved_at": null,
+      "name": "אם אנד אם ב-21.90 ש\"ח",
+      "k_scm": null,
+      "from": "2026-03-08 00:00:00",
+      "id": 777109,
+      "to": "2026-05-02 23:59:59",
+      "scm": 21.9,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 300,
+  "name": "אמ אנד אמ שוקולד 225 גר",
+  "site_id": 1,
+  "sub_group_id": 590,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 0,
+  "has_coupon": false
+}

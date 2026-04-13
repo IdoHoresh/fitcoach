@@ -1,0 +1,263 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67001],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 154, "status": 2 },
+  "id": 142545,
+  "multiplication": 1,
+  "barcode": 7290000051772,
+  "brand": 5241,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000051772/small.jpg",
+    "original": "/product/7290000051772/large.jpg",
+    "trim": "/product/7290000051772/trim.jpg",
+    "transparent": "/product/7290000051772/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [49],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב (70%), מים, חומרי המתקה (אריתריטול, אססולפם קיי, סוכרלוז), עמילן מעובד ( E-1442), קקאו, מייצבים (קרגינן, E-466), תוסף תזונה: (סידן - טרי קלציום פוספט), מווסת חומציות (E-450iii), מלח, חומרי טעם וריח.\nלא מכיל שוקולד וקוקוס.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "156.68 גרם", "value": "156.68" },
+      "Net_Weight": { "UOM": "קג", "text": "0.15 קג", "value": "0.15" },
+      "Product_Height": { "UOM": "סמ", "text": "7 סמ", "value": "7" },
+      "Price_Comparison_Content": { "UOM": "קג", "text": "0.15 קג", "value": "0.15" },
+      "Product_Width": { "UOM": "סמ", "text": "7.1 סמ", "value": "7.1" },
+      "Product_Depth": { "UOM": "סמ", "text": "7.1 סמ", "value": "7.1" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תנובה",
+    "Product_Description_English": "MA'ADAN TNUVA MILK CHCOCOLATE COCONUT 0% 150",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6821],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290000051772",
+      "מעדן",
+      "חלב",
+      "שוקולד",
+      "וניל",
+      "קרלו",
+      "כרלו",
+      "karlo",
+      "carlo",
+      "תנובה",
+      "באדי",
+      "שוקולד",
+      "שוקולדים",
+      "יוגורטים",
+      "מעדנים",
+      "ילדים",
+      "יוגורט",
+      "שוקו",
+      "מתוק",
+      "שוקולדי",
+      "שוקולטה",
+      "קוקוס"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "40 קלוריות",
+            "value": "40",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ליחידה",
+            "text": "60 קלוריות",
+            "value": "60",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "103 מג",
+            "value": "103",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ליחידה",
+            "text": "155 מג",
+            "value": "155",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "12 גרם",
+            "value": "12",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "18 גרם",
+            "value": "18",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.8 גרם",
+            "value": "2.8",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "4.2 גרם",
+            "value": "4.2",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "142 מג",
+            "value": "142",
+            "field_name": "Calcium_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5866",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ליחידה",
+            "text": "213 מג",
+            "value": "213",
+            "field_name": "Calcium_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מעדן  תנובה שוקולד קוקוס",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מעדן תנובה שוקולד קוקוס 0%",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "קג", "text": "0.15 קג", "value": "0.15" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 203,
+  "name": "מעדן תנובה שוקולד קוקוס 0% 150מל",
+  "site_id": 1,
+  "sub_group_id": 467,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

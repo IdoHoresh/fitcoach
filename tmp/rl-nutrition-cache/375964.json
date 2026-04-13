@@ -1,0 +1,254 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71126],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67001],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 158, "status": 2 },
+  "id": 375964,
+  "multiplication": 1,
+  "barcode": 7290110327521,
+  "brand": 5237,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290110327521/small.jpg",
+    "original": "/product/7290110327521/large.jpg",
+    "trim": "/product/7290110327521/trim.jpg",
+    "transparent": "/product/7290110327521/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [49],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מיצוי פולי סויה (80%) (מים, פולי סויה 11%), תות שדה מבושל (9%), סוכר, מים, סירופ גלוקוזה, חלבון סויה (1.1%), עמילן מעובד E-1422, מלטודקסטרין, תוסף תזונה: (סידן - טריקלציום פוספאט (מתוכו 0.1% סידן)), צבע מאכל: רכז גזר שחור, מייצבים: (פקטין, מייצב מזרעי חרובים), חומרי טעם וריח, מלח, חומר משמר: (פוטסיום סורבט), מווסתי חומציות: (טריסודיום ציטרט, חומצה ציטרית), מתחלב: לציטין סויה, ויטמינים: B12 ,*D  (0.75-D מק\"ג, B12-0.4 מק\"ג ל-100 גרם). בתוספת חיידקי יוגורט וחיידקי ביפידוס. *בפסח המוצר אינו מכיל ויטמין D.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.179 קג", "value": "0.179" },
+      "Net_Weight": { "UOM": "קג", "text": "0.170 קג", "value": "0.170" },
+      "Product_Height": { "UOM": "ממ", "text": "60 ממ", "value": "60" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "80 ממ", "value": "80" },
+      "Product_Depth": { "UOM": "ממ", "text": "87 ממ", "value": "87" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "אלטרנטיב",
+    "Product_Description_English": "BIO soya yogurt with 10 g protein Strawberry flavor",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6806, 6840],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290110327521",
+      "מעדן",
+      "סויה",
+      "חלבון",
+      "מעדן סויה",
+      "מעדן חלבון",
+      "מעדן סויה חלבון",
+      "מעדן חלבון סויה",
+      "תות",
+      "מעדן תות",
+      "מעדן סויה תות",
+      "סויה תות",
+      "מעדן סויה חלבון תות",
+      "מעדן סויה תות",
+      "מעדן חלבון תות",
+      "מעדן חלבון סויה תות",
+      "פרי",
+      "פירות",
+      "מעדן פרי",
+      "מעדן פירות",
+      "מעדן בטעם פרי",
+      "מעדן עם פרי",
+      "מעדן חלבון עם פרי",
+      "מעדן חלבון עם פירות",
+      "מעדן חלבון סויה בטעם",
+      "מעדן חלבון סויה פירות",
+      "מעדן גו",
+      "מעדן סויה גו",
+      "גו",
+      "מעדן ביו",
+      "מעדן BIO",
+      "מעדן סויה ביו",
+      "מעדן סויה BIO",
+      "סויה ביו",
+      "סויה BIO",
+      "סויה ביו תות",
+      "סויה BIO תות",
+      "מעדן ביו תות",
+      "מעדן BIO תות",
+      "מעדן סויה ביו בטעם תות",
+      "מעדן סויה BIO בטעם תות"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5521, 5515],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "85 קלוריות",
+            "value": "85",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.5 גרם",
+            "value": "2.5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.4 גרם",
+            "value": "0.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "43 מג",
+            "value": "43",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "9 גרם",
+            "value": "9",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.3 גרם",
+            "value": "1.3",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.9 גרם",
+            "value": "5.9",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מעדן סויה חלבון תות",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "מעדן סויה BIO עם 10 גרם חלבון בטעם תות",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "170 גרם", "value": "170" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 214,
+  "name": "יוגורט סויה ביו 10% חלבון תות 170 גר",
+  "site_id": 1,
+  "sub_group_id": 581,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

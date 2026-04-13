@@ -1,0 +1,274 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67079],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 336818,
+  "multiplication": 1,
+  "barcode": 8001060033184,
+  "brand": 3729,
+  "recipes": [],
+  "images": {
+    "small": "/product/8001060033184/small.jpg",
+    "original": "/product/8001060033184/large.jpg",
+    "trim": "/product/8001060033184/trim.jpg",
+    "transparent": "/product/8001060033184/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 32],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מחית עגבניות (37%), פלפל אדום במי מלח (29%), (מים, מלח, מעכב חמצון: דו תחמוצת הגופרית), שמן חמניות, פטרוזיליה, אגוזי קשיו, מלח, שום, שבבי צ'ילי מיובש (0.5%), מווסת חומציות (חומצה לקטית), פלפל שחור, אבקת טימין, אבקת זרעי אניס.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "322 גרם", "value": "322" },
+      "Net_Weight": { "UOM": "גרם", "text": "190 גרם", "value": "190" },
+      "Product_Height": { "UOM": "סמ", "text": "9.9 סמ", "value": "9.9" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6 סמ", "value": "6" },
+      "Product_Depth": { "UOM": "סמ", "text": "6 סמ", "value": "6" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "סאקלה",
+    "Product_Description_English": "(pesto chili 190 g (not dairy",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6852],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6804, 6931],
+    "Color_Number": null,
+    "Search_Tags": [
+      "8001060033184",
+      "רוטב פסטו",
+      "פסטו",
+      "ממרח פסטו",
+      "אוליביה",
+      "פסטו קלאסי",
+      "פסטו עגבניות",
+      "פסטו פרוה",
+      "פסטו פרווה",
+      "אחלה",
+      "סקלה",
+      "סאקלה",
+      "מאסטר שף",
+      "ממרח פסטו איטלקי",
+      "רוטב פסטו ביתי",
+      "מוטי שף",
+      "דורות",
+      "פרסקו",
+      "פסטו בזיליקום",
+      "פסטו חלבי",
+      "פסטו עגבניות",
+      "פסטו גבינה",
+      "פסטו עם גבינה",
+      "פסטו גבינה גאנו פדאנו",
+      "גרנו פדנו",
+      "גראנו פדנו",
+      "צ'ילי",
+      "פסטו צ'ילי",
+      "פסטו אמיתי"
+    ],
+    "internal_product_description": "סאקלה רוטב פסטו פלפלים עם צ'ילי 190 גרם",
+    "Color": null,
+    "Diet_Information": [5521],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "273 קלוריות",
+            "value": "273",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "26 גרם",
+            "value": "26",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.2 גרם",
+            "value": "3.2",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם\n",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "800 מג",
+            "value": "800",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.4 גרם",
+            "value": "7.4",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.7 גרם",
+            "value": "3.7",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.7 גרם",
+            "value": "0.7",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "סאקלה פסטו פלפלים עם צ'ילי 190 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": " פסטו פלפלים עם צ'ילי ",
+    "Consumer_Storage_Instructions": "לאחר הפתיחה לשמור במקרר, עדיף לצרוך בתוך שבועיים מהפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "190 גרם", "value": "190" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 204,
+  "name": "רוטב פסטו צ'ילי פרווה 190 גר",
+  "site_id": 1,
+  "sub_group_id": 578,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,277 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67079],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 364445,
+  "multiplication": 1,
+  "barcode": 7290112495501,
+  "brand": 5697,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112495501/small.jpg",
+    "original": "/product/7290112495501/large.jpg",
+    "trim": "/product/7290112495501/trim.jpg",
+    "transparent": "/product/7290112495501/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [32],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "קמח תירס (80.9%), סוכר (19%), מלח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.4 קג", "value": "0.4" },
+      "Net_Weight": { "UOM": "קג", "text": "0.375 קג", "value": "0.375" },
+      "Product_Height": { "UOM": "ממ", "text": "276 ממ", "value": "276" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "78 ממ", "value": "78" },
+      "Product_Depth": { "UOM": "ממ", "text": "193 ממ", "value": "193" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תלמה",
+    "Product_Description_English": "Shugi Gluten Free",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6802, 6842, 6818, 6821, 6840],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112495501",
+      "ארוחת בוקר",
+      "קורנפלס",
+      "קונפלקס",
+      "קורנפלקס",
+      "דגנים",
+      "שןגי",
+      "קורנפלקס תלמה",
+      "ללג",
+      "גלןטן"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5538, 5513, 5527],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "397 קלוריות",
+            "value": "397",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78005",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-30 גרם",
+            "text": "119 קלוריות",
+            "value": "119",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78005",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-30 גרם",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78005",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-30 גרם",
+            "text": "15 מג",
+            "value": "15",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "90.7 גרם",
+            "value": "90.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78005",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-30 גרם",
+            "text": "27.2 גרם",
+            "value": "27.2",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "19.1 גרם",
+            "value": "19.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78005",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-30 גרם",
+            "text": "5.7 גרם",
+            "value": "5.7",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "4.75",
+            "value": "4.75",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78005",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-30 גרם",
+            "text": "1.5",
+            "value": "1.5",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6.2 גרם",
+            "value": "6.2",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78005",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-30 גרם",
+            "text": "1.9 גרם",
+            "value": "1.9",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "שוגי דגני בוקר ללא גלוטן",
+    "Hazard_Precautionary_Statement": "מיוצר בקו שהוכשר כהלכתו לפרווה",
+    "short_name": "שוגי ללא גלוטן",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר ויבש ולאחסן בנפרד מקטניות, סוכר וקמח. לשמירת הפריכות יש לשמור את השקית הפנימית סגורה לאחר הפתיחה באמצעות סוגר מתאים. יש לצרוך עד שלושה שבועות מרגע הפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "375 גרם", "value": "375" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 282,
+  "name": "תלמה שוגי ללא גלוטן 375 גר",
+  "site_id": 1,
+  "sub_group_id": 507,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,282 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71013],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 5 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 360, "status": 2 },
+  "id": 278605,
+  "multiplication": 1,
+  "barcode": 7290100702277,
+  "brand": 868,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290100702277/small.jpg",
+    "original": "/product/7290100702277/large.jpg",
+    "trim": "/product/7290100702277/trim.jpg",
+    "transparent": "/product/7290100702277/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [
+    82, 179, 279, 290, 306, 331, 411, 412, 1197, 1198, 1221, 1226, 1306, 1307, 1314, 1323, 1329,
+    1332, 1333, 1378, 1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "סולת חיטה - מכיל גלוטן ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "358 גרם", "value": "358" },
+      "Net_Weight": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+      "Product_Height": { "UOM": "סמ", "text": "17.5 סמ", "value": "17.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "12.2 סמ", "value": "12.2" },
+      "Product_Depth": { "UOM": "סמ", "text": "12 סמ", "value": "12" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "סוגת",
+    "Product_Description_English": "Instant Couscous Thick 350 grams",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810],
+    "Color_Number": null,
+    "Search_Tags": ["7290100702277", "קוסקוס", "עבה", "סוגת", "הכנה מהירה", "350 גרם"],
+    "internal_product_description": "קוסקוס עבה 350 גרם",
+    "Color": null,
+    "Diet_Information": [5514, 5513],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר לפני בישול",
+            "text": "370 קלוריות",
+            "value": "370",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר מבושל",
+            "text": "185 קלוריות",
+            "value": "185",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "שומנים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "1.1 גרם",
+            "value": "1.1",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "שומנים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "נתרן (מג) ל-100 גרם מוצר לפני בישול",
+            "text": "10 מג",
+            "value": "10",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "נתרן (מג) ל-100 גרם מוצר מבושל",
+            "text": "5 מג",
+            "value": "5",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "80 גרם",
+            "value": "80",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "40 גרם",
+            "value": "40",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "10 גרם",
+            "value": "10",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "הוראות הכנה- ( תכולת השקית מתאימה ל‎-5 מנות) בישול מהיר-  יש לרוקן את תכולת השקית לקערה/סיר. (ניתן להוסיף 3 כפות שמן, מלח ותבלינים לפי הטעם) להוסיף 2 כוסות מים רותחים (400 מל) ולערבב.\nלכסות( מומלץ בניילון נצמד) ולהמתין כ–5 דק'. לפורר היטב עם מזלג ולהמתין 5‎ דקות. לפורר היטב עם מזלג ולהמתין 5 דקות נוספות ללא המכסה.\nהכנה במיקרוגל-  יש לרוקן את תכולת השקית לקערה מתאימה למיקרוגל, להוסיף 2 כפות שמן עדיף שמן זית. מלח ותבלינים לפי הטעם ולערבב. להוסיף 2 כוסות מים רותחים (400 מ\"ל ) ולערבב. לבשל במיקרוגל כ–2 דק' בעוצמה מרבית כשהקערה מכוסה. להוציא מהמיקרוגל , לפורר היטב עם מזלג, ולהחזיר למיקרוגל ל‎–3 דק' נוספות. לפורר שוב עם מזלג ולהגיש.\nהכנה באידוי-  יש לרוקן את תכולת השקית לקערה רחבה, להוסיף 1 כוס מים ( 200 מ\"ל) , 2 כפות שמן ומלח לפי הטעם לערבב היטב, לכסות ולהמתין כ–5‎–6 דק' . להעביר את גרגירי הקוסקוס למסננת או לסיר עם תחתית  מחוררת ולהניח על סיר שבו מתבשל המרק (או כל תבשיל אחר.) לבשל על להבה נמוכה כ–20 דקות",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "קוסקוס עבה להכנה מהירה סוגת 350 גרם",
+    "Hazard_Precautionary_Statement": "ראוי לבדוק לפני השימוש",
+    "short_name": "קוסקוס עבה 350 גרם",
+    "Consumer_Storage_Instructions": "יש לשמור במקום קריר ויבש, עדיף לא ליד ירקות, פירות קמחים וקטניות",
+    "Net_Content": { "UOM": "גרם", "text": "350 גרם", "value": "350" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910364346,
+      "sw_kefel": 1,
+      "k_cmt": null,
+      "deleted_by": "RL",
+      "k_acz_dis": 8,
+      "active": 1,
+      "created_at": "2025-08-10T12:52:00.000000Z",
+      "cmt": 1,
+      "label": "5% הנחה על מגוון מוצרים\n1 ב NaN ₪",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "is_personal": 1,
+      "updated_at": "2026-01-08T08:58:53.000000Z",
+      "approved_at": "2026-01-08 10:58:53",
+      "name": "8% הנחה על מגוון מוצרים",
+      "k_scm": null,
+      "from": "2025-08-10 00:00:00",
+      "id": 723012,
+      "to": "2026-06-26 23:59:59",
+      "scm": null,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 230,
+  "name": "קוסקוס עבה 350 גרם סוגת",
+  "site_id": 1,
+  "sub_group_id": 611,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": true
+}

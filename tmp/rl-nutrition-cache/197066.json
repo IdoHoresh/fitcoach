@@ -1,0 +1,214 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71038],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67245, 67255],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 550, "status": 2 },
+  "id": 197066,
+  "multiplication": 1,
+  "barcode": 7290100249598,
+  "brand": 396,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290100249598/small.jpg",
+    "original": "/product/7290100249598/large.jpg",
+    "trim": "/product/7290100249598/trim.jpg",
+    "transparent": "/product/7290100249598/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 21],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, סוכר, שום משוחזר (14%), סירופ גלוקוזה, חומץ ,רכז עגבניות,  דבש (5%), מלח, ירקות מיובשים (פלפל אדום, בצל), מולסה, עמילן מעובד (E1442), עמילן מעובד (E1442), תבלינים, שמרים, חומרי טעם וריח, מייצב (E415), חומר משמר (E202)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.541 קג", "value": "0.541" },
+      "Net_Weight": { "UOM": "גרם", "text": "320 גרם", "value": "320" },
+      "Product_Height": { "UOM": "ממ", "text": "131 ממ", "value": "131" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "67 ממ", "value": "67" },
+      "Product_Depth": { "UOM": "ממ", "text": "67 ממ", "value": "67" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קנור",
+    "Product_Description_English": "\n",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6808, 6820, 6821, 6823, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" },
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290100249598",
+      "עוף בגריל",
+      "תבלין לעוף",
+      "עוף מתובל",
+      "כנפי עוף",
+      "כרעיים",
+      "תפוחי אדמה",
+      "מרינדה",
+      "לצליית עוף",
+      "בישול",
+      "רוטב עוף",
+      "רוטב שום",
+      "תיבול לעוף",
+      ""
+    ],
+    "internal_product_description": "רוטב לעוף שום ודבש קנור",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "197 קלוריות",
+            "value": "197",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "950 מג",
+            "value": "950",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "47.7 גרם",
+            "value": "47.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "43 גרם",
+            "value": "43",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "10.75",
+            "value": "10.75",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "מסדרים 8 שוקי עוף בתבנית אפיה בגודל 20X30 סמ. יוצקים את צנצנת הרטוב על חלקי העוף ומכסים ברדיד אלומיניום. אופים בתנור בטמפרטורה 180 מעלות צלזיוס במשך שעה. מסירים את הכיסוי ומחזירים לתנור ל-10 דקות נוספות, עד שהעוף משחים. מגישים עם פירה בטטה או תפוחי אדמה אפויים. ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רוטב שום ודבש ",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "רוטב שום ודבש",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום מוצל ויבש .יש לשמור בקירור לאחר הפתיחה",
+    "Net_Content": { "UOM": "גרם", "text": "320 גרם", "value": "320" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 226,
+  "name": "קנור רוטב שום ודבש לעוף 310 גרם",
+  "site_id": 1,
+  "sub_group_id": 406,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

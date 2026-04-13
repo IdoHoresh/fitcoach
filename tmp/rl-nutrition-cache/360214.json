@@ -1,0 +1,390 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71038],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67255],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 10.7 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 360214,
+  "multiplication": 1,
+  "barcode": 7290000112503,
+  "brand": 396,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290000112503/small.jpg",
+    "original": "/product/7290000112503/large.jpg",
+    "trim": "/product/7290000112503/trim.jpg",
+    "transparent": "/product/7290000112503/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [21],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "ירקות מיובשים (54%) (גזר, כרוב, סלרי, קישוא, אפונה, בצל, תפו\"א, פטרוזיליה), מלטודקסטרין, עמילנים, מלח, סוכר, שמרים, שמן צמחי, חומרי טעם וריח, תבלינים (אבקת שום, פלפל שחור).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.068 קג", "value": "0.068" },
+      "Net_Weight": { "UOM": "קג", "text": "0.061 קג", "value": "0.061" },
+      "Product_Height": { "UOM": "ממ", "text": "200 ממ", "value": "200" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "18 ממ", "value": "18" },
+      "Product_Depth": { "UOM": "ממ", "text": "150 ממ", "value": "150" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קנור",
+    "Product_Description_English": "KNORR 61 G X 60",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6821, 6808, 6810],
+    "pH": null,
+    "Serving_Size_Description": "100 מל",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6823],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290000112503",
+      "אבקת מרק",
+      "אבקת מרק פטריות",
+      "ארוחה מהירה",
+      "מרק",
+      "מרק אפונה",
+      "מרק היום",
+      "מרק ירקות",
+      "מרק מהיר",
+      "מרק עגבניות",
+      "מרק עדשים",
+      "מרק עוף",
+      "מרק עוף בשרי",
+      "מרק עם ירקות",
+      "מרק עשיר",
+      "מרק פטריות",
+      "מרק פרווה",
+      "מרק רכיבים טבעיים"
+    ],
+    "internal_product_description": "קנור מרק היום ירקות 61 גרם",
+    "Color": null,
+    "Diet_Information": [5528, 5513, 5527],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "348 קלוריות",
+            "value": "348",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "text": "27 קלוריות",
+            "value": "27",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2.5 גרם",
+            "value": "2.5",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0.2 גרם",
+            "value": "0.2",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "5928",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0.1 גרם",
+            "value": "0.1",
+            "field_name": "Saturated_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "5929",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "5930",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "3384 מג",
+            "value": "3384",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "5921",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "text": "258 מג",
+            "value": "258",
+            "field_name": "Sodium_Natran"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "71.1 גרם",
+            "value": "71.1",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "5902",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "5.4 גרם",
+            "value": "5.4",
+            "field_name": "Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "17.8 גרם",
+            "value": "17.8",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "5926",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Sugars_from_Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "4.5",
+            "value": "4.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "6185",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל",
+            "text": "0.25",
+            "value": "0.25",
+            "field_name": "Sugar_Spoon"
+          }
+        ]
+      },
+      {
+        "code": "79005",
+        "label": "רב כהלים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6058",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.8 גרם",
+            "value": "1.8",
+            "field_name": "Sugar_Alcohols_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "6057",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0.1 גרם",
+            "value": "0.1",
+            "field_name": "Sugar_Alcohols"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "10.9 גרם",
+            "value": "10.9",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78003",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Proteins"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "להוסיף את תוכן השקית ל-4 כוסות (800 מ\"ל) מים תוך כדי בחישה. לבחוש היטב ולהביא לרתיחה. לכסות את הסיר באופן חלקי ולבשל על אש קטנה תוך כדי בחישה במשך 5 דקות. לערבב היטב לפני ההגשה.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מרק היום ירקות",
+    "Hazard_Precautionary_Statement": " ",
+    "short_name": "מרק היום ירקות",
+    "Consumer_Storage_Instructions": "לאחסן במקום מוצל ויבש.",
+    "Net_Content": { "UOM": "גרם", "text": "61 גרם", "value": "61" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 229,
+  "name": "מרק ירקות עשיר קנור 61 גרם",
+  "site_id": 1,
+  "sub_group_id": 370,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

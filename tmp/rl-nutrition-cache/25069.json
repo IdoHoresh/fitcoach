@@ -1,0 +1,249 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71095],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [181],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67133],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 700, "status": 2 },
+  "id": 25069,
+  "multiplication": 1,
+  "barcode": 7290008409407,
+  "brand": 5269,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290008409407/small.jpg",
+    "original": "/product/7290008409407/large.jpg",
+    "trim": "/product/7290008409407/trim.jpg",
+    "transparent": "/product/7290008409407/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [41],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חזה עוף (48%), פירורי לחם (15%) [קמח חיטה (מכיל גלוטן חיטה), גלוטן, סוכר, שמרים, שמן צמחי, מלח, לתת, צבעי מאכל טבעיים: תמציות כורכום ופפריקה], שבבי תפו\"א (11%),  שמן צמחי, קמח חיטה, ממרח חרדל, מלח, תערובת תיבול. אפוי ומטוגן בשמן צמחי.\nttt\n\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "715 גרם", "value": "715" },
+      "Net_Weight": { "UOM": "גרם", "text": "700 גרם", "value": "700" },
+      "Product_Height": { "UOM": "ממ", "text": "340 ממ", "value": "340" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "295 ממ", "value": "295" },
+      "Product_Depth": { "UOM": "ממ", "text": "20 ממ", "value": "20" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מאמא עוף",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6808, 6889, 6823, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810, 6820],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290008409407",
+      "מאמא עוף",
+      "שניצל",
+      "שניצל מאמא עוף",
+      "שניצל דק",
+      "שניצל דק מאמא עוף",
+      "שניצל דק דק",
+      "שניצל דק דק מאמא עוף",
+      "שניצל דקדק",
+      "שניצל דקדק מאמא עוף",
+      "שניצל פריך",
+      "שניצל דקדק פריך",
+      "שניצל דק פריך",
+      "שניצל דק דק פריך",
+      "שניצל דק בציפוי ציפס",
+      "שניצל דק בציפוי צ'יפס",
+      "מאמא עוף שניצל דק בציפוי ציפס",
+      "מאמא עוף שניצל דק בציפוי צ'יפס מאמא עוף",
+      "שניצל דק בציפוי ציפס מאמא עוף",
+      "שניצל דק בציפוי צ'יפס מאמא עוף"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "284 קלוריות",
+            "value": "284",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "15.5 גרם",
+            "value": "15.5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "28 מג",
+            "value": "28",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "400 מג",
+            "value": "400",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "22 גרם",
+            "value": "22",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.1 גרם",
+            "value": "1.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "14 גרם",
+            "value": "14",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "שניצל דק בציפוי צ'יפס",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "שניצל דק דק צ'יפס",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "גרם", "text": "700 גרם", "value": "700" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 221,
+  "name": "מאמא עוף שניצל דק ציפס 700 גרם",
+  "site_id": 1,
+  "sub_group_id": 258,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

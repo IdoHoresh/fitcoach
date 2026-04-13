@@ -1,0 +1,341 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71043],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [6903],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 15.3 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 225, "status": 2 },
+  "id": 47361,
+  "multiplication": 1,
+  "barcode": 7290003189267,
+  "brand": 4397,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290003189267/small.jpg",
+    "original": "/product/7290003189267/large.jpg",
+    "trim": "/product/7290003189267/trim.jpg",
+    "transparent": "/product/7290003189267/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "רכיבי חלב (חלבון חלב 24% וחלב רזה), מים,שמן קנולה 5%, עמילן תירס, סיבים תזונתיים, רכז פירות וירקות, מלח שולחן,חומר מתחלב : E331ii, חומצת לימון, חומר משמר E202, ויטמינים B12, B1, B2, B3,B6.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "220 גרם", "value": "220" },
+      "Net_Weight": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+      "Product_Height": { "UOM": "ממ", "text": "160 ממ", "value": "160" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "120 ממ", "value": "120" },
+      "Product_Depth": { "UOM": "ממ", "text": "30 ממ", "value": "30" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "כפיר",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": ["7290003189267", "כפיר", "חלבון מהחלב", "שמן קנולה", "קלאסית", "דל כולסטרול"],
+    "internal_product_description": "כפיר צהובה טובה 5% קלאסית 200 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "185 קלוריות",
+            "value": "185",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5 גרם",
+            "value": "5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "6 מג",
+            "value": "6",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "395 מג",
+            "value": "395",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "24 גרם",
+            "value": "24",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79021",
+        "label": "ויטמין‎ B1 (תיאמין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5844",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0.45 מג",
+            "value": "0.45",
+            "field_name": "Vitamin_B1_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79022",
+        "label": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5846",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0.51 מג",
+            "value": "0.51",
+            "field_name": "Vitamin_B2_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79026",
+        "label": "ויטמין‎ B6 (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5852",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0.6 מג",
+            "value": "0.6",
+            "field_name": "Vitamin_B6_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79020",
+        "label": "ויטמין‎ B12 (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5856",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "0.56 מקג",
+            "value": "0.56",
+            "field_name": "Vitamin_B12_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79025",
+        "label": "ויטמין‎ B5 (חומצה פנטותנית) (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5850",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "2.3 מג",
+            "value": "2.3",
+            "field_name": "Vitamin_B5_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "1000 מג",
+            "value": "1000",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79063",
+        "label": "ויטמין B3 (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5848",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "5.7 מג",
+            "value": "5.7",
+            "field_name": "Vitamin_B3_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "כפיר צהובה טובה 5% קלאסית 200 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "צהובה טובה 5% קלאסית 200 גרם",
+    "Consumer_Storage_Instructions": "לשמור במקרר,מומלץ לצרוך תוך 7 ימים מהפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "200 גרם", "value": "200" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 542,
+  "name": "הצהובה הטובה לייט קלאסית 5% כפיר 200 גרם",
+  "site_id": 1,
+  "sub_group_id": 1021,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

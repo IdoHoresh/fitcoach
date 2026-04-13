@@ -1,0 +1,275 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67056],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1608, "status": 2 },
+  "id": 372630,
+  "multiplication": 1,
+  "barcode": 7290110113933,
+  "brand": 1398,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290110113933/small.jpg",
+    "original": "/product/7290110113933/large.jpg",
+    "trim": "/product/7290110113933/trim.jpg",
+    "transparent": "/product/7290110113933/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [14],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ותלת-נתרן ציטראט (מלח לימון), צבע מאכל טבעי: בטא-קרוטן, מייצבים: אקאציה גאם , E444 ו- E445, מעכב חמצון: חומצה אסקורבית (ויטמין C), ממתיקים: אססולפאם-קיי, אספרטיים, סוכרלוז. חומרי טעם וריח טבעיים.\n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.557 קג", "value": "1.557" },
+      "Net_Weight": { "UOM": "קג", "text": "1.5 קג", "value": "1.5" },
+      "Product_Height": { "UOM": "סמ", "text": "32.6 סמ", "value": "32.6" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "9.35 סמ", "value": "9.35" },
+      "Product_Depth": { "UOM": "סמ", "text": "9.35 סמ", "value": "9.35" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "פאנטה",
+    "Product_Description_English": " Fanta ZERO Orange 1.5L",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6846],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290110113933",
+      "פאנטה",
+      "ZERO",
+      "תפוז",
+      "גזוז",
+      "דל קלוריות",
+      "משקה",
+      "אורנג'"
+    ],
+    "internal_product_description": " פאנטה ZERO אורנג' 1.5 ליטר",
+    "Color": null,
+    "Diet_Information": [5545, 5514, 5569, 5544, 5516],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "text": "1 קלוריות",
+            "value": "1",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "text": "6.6 מג",
+            "value": "6.6",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "1.0 גרם",
+            "value": "1.0",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79078",
+        "label": "ויטמין C חומצה אסקורבית (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "6114",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "text": "6 מג",
+            "value": "6",
+            "field_name": "Vitamin_C_Ascorbic_Acid_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6115",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Vitamin_C_Ascorbic_Acid_per_serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "להגיש קר",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": " פאנטה ZERO אורנג' 1.5 ליטר",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "פאנטה ZERO אורנג'",
+    "Consumer_Storage_Instructions": "להחזיק במקום קריר ומוצל",
+    "Net_Content": { "UOM": "מל", "text": "1500 מל", "value": "1500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 237,
+  "name": "פאנטה זירו טעם אורנג' 1.5 לי",
+  "site_id": 1,
+  "sub_group_id": 436,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

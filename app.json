@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "FitCoach",
-    "slug": "fitcoach",
+    "name": "Gibor",
+    "slug": "gibor",
     "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
-    "scheme": "fitcoach",
+    "scheme": "gibor",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -15,10 +15,11 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.fitcoach.app",
+      "bundleIdentifier": "com.gibor.app",
       "infoPlist": {
-        "NSCameraUsageDescription": "FitCoach uses the camera for progress photos",
-        "NSPhotoLibraryUsageDescription": "FitCoach uses your photo library for progress photos"
+        "NSCameraUsageDescription": "Gibor uses the camera for progress photos",
+        "NSPhotoLibraryUsageDescription": "Gibor uses your photo library for progress photos",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -26,18 +27,19 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#4F46E5"
       },
-      "package": "com.fitcoach.app",
+      "package": "com.gibor.app",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-router", "expo-sqlite", "expo-secure-store", "expo-crypto", "expo-haptics"],
+    "plugins": ["expo-router", "expo-sqlite", "expo-secure-store"],
     "extra": {
       "eas": {
-        "projectId": ""
-      }
+        "projectId": "3457690d-f693-4be7-b686-546c24f4be38"
+      },
+      "router": {}
     }
   }
 }

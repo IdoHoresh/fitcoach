@@ -1,0 +1,354 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011, 67079],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 5.1 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 426868,
+  "multiplication": 1,
+  "barcode": 5999571055739,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/5999571055739/small.jpg",
+    "original": "/product/5999571055739/large.jpg",
+    "trim": "/product/5999571055739/trim.jpg",
+    "transparent": "/product/5999571055739/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [82, 279, 290, 331, 411, 1214, 1221, 1314, 1330, 1378, 1389, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, סוכר, חומצת מאכל (חומצת לימון), פחמן דו חמצני (מינימום 0.3%), מווסת חומציות (סודיום ציטראט), חומרי טעם וריח, קפאין (0.04%), צבע מאכל (קרמל אמוניה), ויטמינים (ניאצין - ויטמין B3 (ניקוטינאמיד), חומצה פנטותנית - ויטמין B5 (סידן D- פנטותנט), ויטמין B6 (פירידוקסין הידרוכלוריד), ויטמין B2 (ריבופלאבין), ויטמין B12 (ציאנוקובלאמין)), גלוקורונולקטון, אינוזיטול (0.002%). ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "270 גרם", "value": "270" },
+      "Net_Weight": { "UOM": "גרם", "text": "250 גרם", "value": "250" },
+      "Product_Height": { "UOM": "ממ", "text": "130 ממ", "value": "130" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "50 ממ", "value": "50" },
+      "Product_Depth": { "UOM": "ממ", "text": "50 ממ", "value": "50" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "הל",
+    "Product_Description_English": "",
+    "Country_of_Origin": "HU",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "5999571055739",
+      "משקה אנרגיה",
+      "הל",
+      "HELL",
+      "משקה קר",
+      "משקאות אנרגיה",
+      "משקאות קרים",
+      "מוגז",
+      "משקה מוגז",
+      "ללא אלכוהול",
+      "וודקה",
+      "אלכוהול",
+      "ויטמינים"
+    ],
+    "internal_product_description": "משקה אנרגיה הל בטעם תפוח, מוגז ומכיל קפאין, עם תוספת ויטמינים, סוכר וממתיקים.",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "46 קלוריות",
+            "value": "46",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 מג",
+            "value": "L 0.5",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "80 מג",
+            "value": "80",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 גרם",
+            "text": "2.75",
+            "value": "2.75",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79022",
+        "label": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5846",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג) ל-100 גרם",
+            "text": "0.6 מג",
+            "value": "0.6",
+            "field_name": "Vitamin_B2_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79023",
+        "label": "ויטמין‎ B3 (ניאצין) (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5978",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B3 (ניאצין) (מג) ל-100 גרם",
+            "text": "8.0 מג",
+            "value": "8.0",
+            "field_name": "Vitamin_B3_Niacin_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79026",
+        "label": "ויטמין‎ B6 (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5852",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B6 (מג) ל-100 גרם",
+            "text": "0.8 מג",
+            "value": "0.8",
+            "field_name": "Vitamin_B6_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79020",
+        "label": "ויטמין‎ B12 (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5856",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B12 (מקג) ל-100 גרם",
+            "text": "0.2 מקג",
+            "value": "0.2",
+            "field_name": "Vitamin_B12_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79025",
+        "label": "ויטמין‎ B5 (חומצה פנטותנית) (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5850",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין‎ B5 (חומצה פנטותנית) (מג) ל-100 גרם",
+            "text": "2.0 מג",
+            "value": "2.0",
+            "field_name": "Vitamin_B5_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "הל משקה אנרגיה תפוח 250 מל",
+    "Hazard_Precautionary_Statement": "כמות קפאין גבוהה (38.4 מ\"ג / 100 מ\"ל). לא מומלץ לנשים בהריון או מניקות ולילדים מתחת לגיל 12. ",
+    "short_name": "הל משקה אנרגיה תפוח 250 מל",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר ויבש.",
+    "Net_Content": { "UOM": "מל", "text": "250 מל", "value": "250" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 290,
+  "name": "משקה אנרגיה הל תפוח 250",
+  "site_id": 1,
+  "sub_group_id": 530,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

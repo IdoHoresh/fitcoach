@@ -1,0 +1,108 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 365968,
+  "multiplication": 1,
+  "barcode": 4740098090649,
+  "brand": 2705,
+  "recipes": [],
+  "images": {
+    "small": "/product/4740098090649/small.jpg",
+    "original": "/product/4740098090649/large.jpg",
+    "trim": "/product/4740098090649/trim.jpg",
+    "transparent": "/product/4740098090649/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, ין, תפוחים, רכז מיץ לימון E330, מייצב E414 ,  ביטר, חומרי טעם וריח,חומרים משמרים,  אשלגן מטאביסולפט E224, צבעי מאכל E104, E131 ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "606 גרם", "value": "606" },
+      "Product_Height": { "UOM": "סמ", "text": "24 סמ", "value": "24" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6 סמ", "value": "6" },
+      "Product_Depth": { "UOM": "סמ", "text": "6 סמ", "value": "6" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": "4.7%",
+    "BrandName": "לה קוק",
+    "Product_Description_English": "",
+    "Country_of_Origin": "EE",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "4740098090649",
+      "קוקטייל",
+      "מוחיטו",
+      "מרגריטה",
+      "אה לי קוק",
+      "לה קוק",
+      "שיכר",
+      "בריזר"
+    ],
+    "internal_product_description": "קוקטייל מוחיטו 330 מל",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78023",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל מוכן",
+            "text": "58 קלוריות",
+            "value": "58",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": true,
+    "name": "קוקטייל מוחיטו 330 מל",
+    "Hazard_Precautionary_Statement": "מכיל אלכוהול ממלץ להמנע משתיה מופרזת",
+    "short_name": "קוקטייל מוחיטו 330 מל",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "מל", "text": "330 מל", "value": "330" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 290,
+  "name": "קוקטייל מוחיטו",
+  "site_id": 1,
+  "sub_group_id": 129,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

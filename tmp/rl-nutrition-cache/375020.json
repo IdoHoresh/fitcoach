@@ -1,0 +1,303 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71038],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67245, 67255],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 422, "status": 2 },
+  "id": 375020,
+  "multiplication": 1,
+  "barcode": 7290112498441,
+  "brand": 396,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112498441/small.jpg",
+    "original": "/product/7290112498441/large.jpg",
+    "trim": "/product/7290112498441/trim.jpg",
+    "transparent": "/product/7290112498441/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 21, 61],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, סוכר, סירופ גלוקוז, הידרוליזט חלבון צמחי (8%) (מכיל סויה), מלח, ירקות מיובשים (בצל, פטריות), חומץ, מחזק טעם (מונוסודיום גלוטמט), מלטודקסטרין, תבלינים, חומצת מאכל (חומצת לקטית) צבע מאכל (E150d) (מכיל סולפיט), מייצבים (E466, E415), חומרי טעם וריח, חומרים משמרים (E202, E211), שמן צמחי.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.43 קג", "value": "0.43" },
+      "Net_Weight": { "UOM": "קג", "text": "0.37 קג", "value": "0.37" },
+      "Product_Height": { "UOM": "ממ", "text": "218 ממ", "value": "218" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "48 ממ", "value": "48" },
+      "Product_Depth": { "UOM": "ממ", "text": "62 ממ", "value": "62" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קנור",
+    "Product_Description_English": "KNORR 370 GR X 12",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6823, 6836, 6820, 6808],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [
+      { "code": "FSR3", "value": "סוכר בכמות גבוהה" },
+      { "code": "FSR2", "value": "נתרן בכמות גבוהה" }
+    ],
+    "Allergen_Type_Code_and_Containment": [6821, 6822],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112498441",
+      "KNORR",
+      "סויה",
+      "עשבי תיבול",
+      "קנור",
+      "רוטב",
+      "רוטב אסייתי",
+      "רוטב טריאקי",
+      "רוטב לבישול",
+      "רוטב לדגים",
+      "רוטב להקפצה",
+      "רוטב למוקפץ",
+      "רוטב לעוף",
+      "רוטב לפסטה",
+      "רוטב סויה",
+      "רוטב סויה דל נתרן",
+      "רוטב עשבי תיבול",
+      "רוטב פטריות",
+      "רוטב צילי",
+      "רוטב צילי מתוק",
+      "רוטב קנור",
+      "רוטב שום",
+      "רוטב שום ודבש",
+      "רוטב שזיפים",
+      "רוטבים",
+      "רטבים",
+      "תיבול"
+    ],
+    "internal_product_description": "קנור טעמים מהמזרח רוטב רוטב אסייתי למוקפץ 370 גרם",
+    "Color": null,
+    "Diet_Information": [5573],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "170 קלוריות",
+            "value": "170",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "29 קלוריות",
+            "value": "29",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "2600 מג",
+            "value": "2600",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "442 מג",
+            "value": "442",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "39.5 גרם",
+            "value": "39.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "6.7 גרם",
+            "value": "6.7",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "33.1 גרם",
+            "value": "33.1",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "5.6 גרם",
+            "value": "5.6",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "8.25",
+            "value": "8.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "1.5",
+            "value": "1.5",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.1 גרם",
+            "value": "3.1",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": " ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "טעמים מהמזרח רוטב רוטב אסייתי למוקפץ",
+    "Hazard_Precautionary_Statement": " ",
+    "short_name": "רוטב אסייתי למוקפץ",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש. לשמור בקירור לאחר הפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "370 גרם", "value": "370" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 226,
+  "name": "קנור רוטב אסיאתי למוקפץ 300 מ\"ל בד\"ץ",
+  "site_id": 1,
+  "sub_group_id": 406,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

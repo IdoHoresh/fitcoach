@@ -1,0 +1,221 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71038],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67255],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": [0]
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 364446,
+  "multiplication": 1,
+  "barcode": 7290112493064,
+  "brand": 5697,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112493064/small.jpg",
+    "original": "/product/7290112493064/large.jpg",
+    "trim": "/product/7290112493064/trim.jpg",
+    "transparent": "/product/7290112493064/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מים, שזיפים (26%), סוכר, סירופ גלוקוזה, חומץ, עמילן מעובד (E1422), שום משוחזר (מים, שום מיובש), מלח, פלפל אדום משוחזר (מים, פלפל אדום מיובש), שמרים, צבע מאכל (E150d) (מכיל סולפיט), תבלינים (אבקת שום, פפריקה חריפה), מייצב (קסנטן גאם), חומצת מאכל (חומצת לימון), חומר משמר (E202), חומרי טעם וריח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.543 קג", "value": "0.543" },
+      "Net_Weight": { "UOM": "קג", "text": "0.32 קג", "value": "0.32" },
+      "Product_Height": { "UOM": "ממ", "text": "131 ממ", "value": "131" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "67 ממ", "value": "67" },
+      "Product_Depth": { "UOM": "ממ", "text": "67 ממ", "value": "67" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קנור",
+    "Product_Description_English": "KNORR 320 GR X 8",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6821, 6808, 6823, 6820, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR3", "value": "סוכר בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6822],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290112493064",
+      "סויה",
+      "עשבי תיבול",
+      "רוטב",
+      "רוטב אסייתי",
+      "רוטב טריאקי",
+      "רוטב לדגים",
+      "רוטב להקפצה",
+      "רוטב למוקפץ",
+      "רוטב לעוף",
+      "רוטב לפסטה",
+      "רוטב סויה",
+      "רוטב סויה דל נתרן",
+      "רוטב עשבי תיבול",
+      "רוטב פטריות",
+      "רוטב צילי",
+      "רוטב צילי מתוק",
+      "רוטב קנור",
+      "רוטב שום",
+      "רוטב שום ודבש",
+      "רוטב שזיפים",
+      "רוטבים",
+      "רטבים",
+      "תיבול"
+    ],
+    "internal_product_description": "קנור רוטב שזיפים 320 גרם",
+    "Color": null,
+    "Diet_Information": [5573, 5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "156 קלוריות",
+            "value": "156",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "386 מג",
+            "value": "386",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "38.4 גרם",
+            "value": "38.4",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "28.7 גרם",
+            "value": "28.7",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "7.25",
+            "value": "7.25",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": " ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רוטב שזיפים",
+    "Hazard_Precautionary_Statement": " ",
+    "short_name": "רוטב שזיפים",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר ויבש. יש לשמור בקירור לאחר הפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "320 גרם", "value": "320" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 226,
+  "name": "רוטב שזיפים קנור 320 גר",
+  "site_id": 1,
+  "sub_group_id": 406,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,337 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67163, 67011, 67155],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 15.1 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 490, "status": 2 },
+  "id": 114330,
+  "multiplication": 1,
+  "barcode": 55369902564,
+  "brand": 5526,
+  "recipes": [],
+  "images": {
+    "small": "/product/055369902564/small.jpg",
+    "original": "/product/055369902564/large.jpg",
+    "trim": "/product/055369902564/trim.jpg",
+    "transparent": "/product/055369902564/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 10],
+  "available_in": [411, 1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "תפוחי עץ (95%), מים, ויטמין C (חומצה אסקורבית).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "482 גרם", "value": "482" },
+      "Net_Weight": { "UOM": "גרם", "text": "452 גרם", "value": "452" },
+      "Product_Height": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "14.5 סמ", "value": "14.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "5.5 סמ", "value": "5.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "Applesnax",
+    "Product_Description_English": "UNSWEETENED APPLESAUCE",
+    "Country_of_Origin": "CA",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "מומלץ להגיש",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["55369902564", "אפלסנקס רסק", "תפוחי עץ", "לא ממותק", "452 גרם"],
+    "internal_product_description": "אפלסנקס רסק תפוחי עץ ללא תוספת סוכר, 452 גרם",
+    "Color": null,
+    "Diet_Information": [5514],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "45 קלוריות",
+            "value": "45",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ליחידה",
+            "name": "אנרגיה (קלוריות) ליחידה",
+            "text": "50 קלוריות",
+            "value": "50",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "name": "שומנים (גרם) ליחידה",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ליחידה",
+            "name": "נתרן (מג) ליחידה",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "name": "סך הפחמימות (גרם) ליחידה",
+            "text": "12.5 גרם",
+            "value": "12.5",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "9 גרם",
+            "value": "9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "name": "סוכרים מתוך פחמימות (גרם) ליחידה",
+            "text": "10 גרם",
+            "value": "10",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "name": "סיבים תזונתיים (גרם) ליחידה",
+            "text": "1.2 גרם",
+            "value": "1.2",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "name": "חלבונים (גרם) ליחידה",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79058",
+        "label": "אשלגן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5993",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "אשלגן (מג) ל-100 גרם",
+            "text": "40 מג",
+            "value": "40",
+            "field_name": "Potassium_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5992",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ליחידה",
+            "name": "אשלגן (מג) ליחידה",
+            "text": "",
+            "value": "",
+            "field_name": "Potassium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79027",
+        "label": "ויטמין C (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5859",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "ויטמין C (מג) ל-100 גרם",
+            "text": "18 מג",
+            "value": "18",
+            "field_name": "Vitamin_C_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5860",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ליחידה",
+            "name": "ויטמין C (מג) ליחידה",
+            "text": "21 מג",
+            "value": "21",
+            "field_name": "Vitamin_C_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "אפלסנקס רסק תפוחי עץ, ללא תוספת סוכר, 452 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "רסק תפוחי עץ ללת\"ס",
+    "Consumer_Storage_Instructions": "לאחר הפתיחה לשמור בקירור\n",
+    "Net_Content": { "UOM": "גרם", "text": "452 גרם", "value": "452" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 225,
+  "name": "רסק תפוחי עץ ללא תוספת סוכר אפלסנקס 4 * 113 גרם",
+  "site_id": 1,
+  "sub_group_id": 131,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

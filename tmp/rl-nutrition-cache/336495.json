@@ -1,0 +1,489 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71132],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 336495,
+  "multiplication": 1,
+  "barcode": 7290111565601,
+  "brand": 4497,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290111565601/small.jpg",
+    "original": "/product/7290111565601/large.jpg",
+    "trim": "/product/7290111565601/trim.jpg",
+    "transparent": "/product/7290111565601/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [48],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלבונים מורטבים מהצומח (55%) (מים, חלבון חיטה (12%) (מכיל גלוטן), חלבון סויה (6.6%)), מים, שמן קנולה, חלבון ביצה, מלח, תבלינים, חומרי טעם וריח, עמילן תירס מפורק חלקית, דקסטרוז, חלבונים מפורקים חלקית (סויה, חיטה), חומץ, עמילן תפוח אדמה, מייצבים (גואר גאם, קסנתן גאם), צבע מאכל (ברזל אוקסיד), ברזל, ויטמין B12.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.83 קג", "value": "1.83" },
+      "Net_Weight": { "UOM": "קג", "text": "1.75 קג", "value": "1.75" },
+      "Product_Height": { "UOM": "ממ", "text": "75.000 ממ", "value": "75.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "340.000 ממ", "value": "340.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "270.000 ממ", "value": "270.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "טבעול",
+    "Product_Description_English": "TIVALL Veg Susg Ada Haredi5x1.75kgIL",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6820, 6823, 6836],
+    "pH": null,
+    "Serving_Size_Description": "מנה 66",
+    "litzman": false,
+    "Food_Symbol_Red": null,
+    "Allergen_Type_Code_and_Containment": [6808, 6809, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290111565601",
+      "מזון מן הצומח",
+      "צמחוני",
+      "טבעול",
+      "נקניקיות",
+      "נקניקיות מן הצומח",
+      "נקניקיות בד\"צ",
+      "בד\"צ"
+    ],
+    "internal_product_description": "טבעול נקנ.מן הצומח עדה חרדית 5*1.75קג",
+    "Color": null,
+    "Diet_Information": [5501, 5514],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "214 קלוריות",
+            "value": "214",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ליחידה",
+            "text": "142 קלוריות",
+            "value": "142",
+            "field_name": "Energy_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "71 קלוריות",
+            "value": "71",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "15 גרם",
+            "value": "15",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "9.8 גרם",
+            "value": "9.8",
+            "field_name": "Fats_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5928",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "0.5 גרם",
+            "value": "0.5",
+            "field_name": "Saturated_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5929",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ליחידה",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5930",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "520 מג",
+            "value": "520",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ליחידה",
+            "text": "344 מג",
+            "value": "344",
+            "field_name": "Sodium_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5921",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Sodium_Natran"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.3 גרם",
+            "value": "1.3",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5902",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "4.3 גרם",
+            "value": "4.3",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "2.8 גרם",
+            "value": "2.8",
+            "field_name": "Dietary_Fibers_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5927",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Dietary_Fibers"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "19.1 גרם",
+            "value": "19.1",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ליחידה",
+            "text": "12.6 גרם",
+            "value": "12.6",
+            "field_name": "Proteins_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "",
+            "value": "",
+            "field_name": "Proteins"
+          }
+        ]
+      },
+      {
+        "code": "79020",
+        "label": "ויטמין‎ B12 (מקג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5856",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 גרם",
+            "text": "0.54 מקג",
+            "value": "0.54",
+            "field_name": "Vitamin_B12_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5858",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "ליחידה",
+            "text": "0.36 מקג",
+            "value": "0.36",
+            "field_name": "Vitamin_B12_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5936",
+            "col_field_id": "6068",
+            "UOM": "מקג",
+            "col_label": "למנה",
+            "text": "0.18 מקג",
+            "value": "0.18",
+            "field_name": "Vitamin_B12"
+          }
+        ]
+      },
+      {
+        "code": "79016",
+        "label": "ברזל (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5869",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "4.1 מג",
+            "value": "4.1",
+            "field_name": "Iron_per_100_grams"
+          },
+          {
+            "col_code": "78021",
+            "field_id": "5870",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "ליחידה",
+            "text": "2.8 מג",
+            "value": "2.8",
+            "field_name": "Iron_per_Serving"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5934",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "1.4 מג",
+            "value": "1.4",
+            "field_name": "Iron"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "נקניקיות מן הצומח עדה חרדית 1.75 ק\"ג",
+    "Hazard_Precautionary_Statement": "<br />\n<br />\n<br />\n",
+    "short_name": "נקניקיות מן הצומח בד\"צ",
+    "Consumer_Storage_Instructions": "לפני ואחרי הפתיחה, לשמור בהקפאה (18°c-) עד השימוש",
+    "Net_Content": { "UOM": "קג", "text": "1.75 קג", "value": "1.75" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 304,
+  "name": "נקנ' מהצומח טבעול 1.75 קג",
+  "site_id": 1,
+  "sub_group_id": 613,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

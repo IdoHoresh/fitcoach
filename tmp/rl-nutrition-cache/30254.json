@@ -1,0 +1,497 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71126],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6405],
+    "Rabbinate": [67068],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 11.7 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1046, "status": 2 },
+  "id": 30254,
+  "multiplication": 1,
+  "barcode": 7290004132552,
+  "brand": 6533,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290004132552/small.jpg",
+    "original": "/product/7290004132552/large.jpg",
+    "trim": "/product/7290004132552/trim.jpg",
+    "transparent": "/product/7290004132552/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מיצוי פולי סויה (94%) (מים, פולי סויה מלאים 6.4%), תוסף תזונה: סידן קרבונט(מתוכו סידן 0.1%), מווסתי חומציות:[(E-450 (v),E-452(i),E-500(i)],חומרי טעם, מלח, מייצב: גילן גאם,  ,ויטמין B12,B2 ו- D (B2-0.24 מ\"ג, B12-0.4 מק\"ג,D-0.75 מק\"ג ל100 גרם), סוכרלוז. \n",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "1056 גרם", "value": "1056" },
+      "Net_Weight": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Height": { "UOM": "סמ", "text": "23.4 סמ", "value": "23.4" },
+      "Price_Comparison_Content": { "UOM": "ליטר", "text": "1 ליטר", "value": "1" },
+      "Product_Width": { "UOM": "סמ", "text": "7 סמ", "value": "7" },
+      "Product_Depth": { "UOM": "סמ", "text": "7.4 סמ", "value": "7.4" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "תנובה אלטרנטיב",
+    "Product_Description_English": "Soya drink light 1 Lt",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6804, 6807, 6840],
+    "pH": null,
+    "Serving_Size_Description": "כוס- 200",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290004132552",
+      "חלב סויה תנובה",
+      "טבעי",
+      "טרי",
+      "סויה",
+      "חלב",
+      "חלב סויה",
+      "אלטרנטיב",
+      "ALTERNATIVE",
+      "תנובה אלטרנטיב",
+      "לייט",
+      "דיאט",
+      "משקה סויה לייט",
+      "משקה סויה דיאט",
+      "משקה סויה מופחת קלוריות",
+      "משקה סויה לייט תנובה",
+      "משקה סויה לייט אלטרנטיב",
+      "חלב סויה לייט",
+      "חלב סויה לייט תנובה",
+      "חלב סויה לייט אלטרנטיב"
+    ],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [5521, 5538, 5515],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "32 קלוריות",
+            "value": "32",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "לכוס",
+            "name": "אנרגיה (קלוריות) לכוס",
+            "text": "63 קלוריות",
+            "value": "63",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "שומנים (גרם) ל-100 מל",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "name": "שומנים (גרם) לכוס",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 מל",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים לכוס",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 מל",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים לכוס",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 מל",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לכוס",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים לכוס",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "נתרן (מג) ל-100 מל",
+            "text": "50 מג",
+            "value": "50",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לכוס",
+            "name": "נתרן (מג) לכוס",
+            "text": "100 מג",
+            "value": "100",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "0.7 גרם",
+            "value": "0.7",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "name": "סך הפחמימות (גרם) לכוס",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סיבים תזונתיים (גרם) ל-100 מל",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "name": "סיבים תזונתיים (גרם) לכוס",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (גרם) ל-100 מל",
+            "text": "3.3 גרם",
+            "value": "3.3",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לכוס",
+            "name": "חלבונים (גרם) לכוס",
+            "text": "6.6 גרם",
+            "value": "6.6",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79022",
+        "label": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5846",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג) ל-100 מל",
+            "text": "0.24 מג",
+            "value": "0.24",
+            "field_name": "Vitamin_B2_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5847",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לכוס",
+            "name": "ויטמין‎ B2 (ריבופלאבין) (מג או מקג) לכוס",
+            "text": "0.48 מג",
+            "value": "0.48",
+            "field_name": "Vitamin_B2_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79020",
+        "label": "ויטמין‎ B12 (מקג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5856",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 מל",
+            "name": "ויטמין‎ B12 (מקג) ל-100 מל",
+            "text": "0.4 מקג",
+            "value": "0.4",
+            "field_name": "Vitamin_B12_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5858",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "לכוס",
+            "name": "ויטמין‎ B12 (מקג) לכוס",
+            "text": "0.8 מקג",
+            "value": "0.8",
+            "field_name": "Vitamin_B12_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "סידן (מג) ל-100 מל",
+            "text": "120 מג",
+            "value": "120",
+            "field_name": "Calcium_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5866",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לכוס",
+            "name": "סידן (מג) לכוס",
+            "text": "240 מג",
+            "value": "240",
+            "field_name": "Calcium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79028",
+        "label": "ויטמין D (מקג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5842",
+            "col_field_id": "6066",
+            "UOM": "מקג",
+            "col_label": "ל-100 מל",
+            "name": "ויטמין D (מקג) ל-100 מל",
+            "text": "0.75 מקג",
+            "value": "0.75",
+            "field_name": "Vitamin_D_per_100_grams"
+          },
+          {
+            "col_code": "78014",
+            "field_id": "5843",
+            "col_field_id": "6067",
+            "UOM": "מקג",
+            "col_label": "לכוס",
+            "name": "ויטמין D (מקג) לכוס",
+            "text": "1.5 מקג",
+            "value": "1.5",
+            "field_name": "Vitamin_D_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "משקה סויה לייט 1 ליטר אלטרנטיב",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "משקה סויה לייט 1 ליטר אלטרנטיב",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "ליטר", "text": "1 ליטר", "value": "1" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910368363,
+      "sw_kefel": 0,
+      "k_cmt": null,
+      "deleted_by": null,
+      "k_acz_dis": null,
+      "active": 1,
+      "created_at": "2026-03-11T07:53:18.000000Z",
+      "cmt": 2,
+      "label": "משקאות אלטרנטיב 2 יח' ב-18 ש\"ח",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "max_in_doc": 0,
+      "is_personal": 0,
+      "updated_at": "2026-03-11T07:53:18.000000Z",
+      "approved_at": null,
+      "name": "משקאות אלטרנטיב 2 יח' ב-18 ש\"ח",
+      "k_scm": null,
+      "from": "2026-02-02 00:00:00",
+      "id": 779281,
+      "to": "2026-05-02 23:59:59",
+      "scm": 18,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 198,
+  "name": "משקה סויה לייט בטעם טבעי טרי 1 ליטר",
+  "site_id": 1,
+  "sub_group_id": 1171,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

@@ -1,0 +1,317 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71074],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [182],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67001],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 130, "status": 2 },
+  "id": 2933,
+  "multiplication": 1,
+  "barcode": 7290004119928,
+  "brand": 5257,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290004119928/small.jpg",
+    "original": "/product/7290004119928/large.jpg",
+    "trim": "/product/7290004119928/trim.jpg",
+    "transparent": "/product/7290004119928/transparent.png",
+    "gallery": []
+  },
+  "department_id": 50,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1, 10, 19, 21, 49],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלב (91%), סוכר, עמילן מעובד (E-1442), חומרי טעם וריח, תוסף תזונה סידן (טרי קלציום פוספט), מייצב (קרגינאן), מווסת חומציות (E450iii), צבע מאכל (בטא קרוטן).",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "539.02 גרם", "value": "539.02" },
+      "Net_Weight": { "UOM": "קג", "text": "0.125 קג", "value": "0.125" },
+      "Product_Height": { "UOM": "סמ", "text": "6.2 סמ", "value": "6.2" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "14.4 סמ", "value": "14.4" },
+      "Product_Depth": { "UOM": "סמ", "text": "14.4 סמ", "value": "14.4" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "קרלו",
+    "Product_Description_English": "KARLO VANILLA 125gr 1.5%",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6818],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290004119928",
+      "קרלו",
+      "חלב",
+      "וניל",
+      "כרלו",
+      "karlo",
+      "carlo",
+      "תנובה",
+      "באדי",
+      "יוגורטים",
+      "מעדנים",
+      "ילדים",
+      "יוגורט",
+      "ונילה",
+      "מתוק",
+      "מעדן",
+      "ונילה",
+      "מארז רביעייה",
+      "מהרז רביעייה",
+      "מארז קרלו וניל 1.5%",
+      "מהרז קרלו וניל 1.5%",
+      "1.5%",
+      "קרלו 1.5%",
+      "125 גרם"
+    ],
+    "internal_product_description": "קרלו מעדן וניל רביעיות גביע 125  1.5%",
+    "Color": null,
+    "Diet_Information": [5538],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "77 קלוריות",
+            "value": "77",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "למנה",
+            "text": "96 קלוריות",
+            "value": "96",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם\n",
+            "col_label": "ל-100 גרם",
+            "text": "1.5 גרם\n",
+            "value": "1.5",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "1.9 גרם",
+            "value": "1.9",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "85 מג",
+            "value": "85",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "106 מג",
+            "value": "106",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "12.8 גרם",
+            "value": "12.8",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "16 גרם",
+            "value": "16",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "9.9 גרם",
+            "value": "9.9",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "12.4 גרם",
+            "value": "12.4",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "2.5",
+            "value": "2.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "6187",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "למנה",
+            "text": "3",
+            "value": "3",
+            "field_name": "Sugar_Spoon_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.1 גרם",
+            "value": "3.1",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "למנה",
+            "text": "3.9 גרם",
+            "value": "3.9",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "165 מג",
+            "value": "165",
+            "field_name": "Calcium_per_100_grams"
+          },
+          {
+            "col_code": "78002",
+            "field_id": "5866",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "למנה",
+            "text": "206 מג",
+            "value": "206",
+            "field_name": "Calcium_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מעדן קרלו בטעם וניל רביעיות",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "קרלו מעדן בטעם וניל רביעיות גביע 125  1.5%",
+    "Consumer_Storage_Instructions": "",
+    "Net_Content": { "UOM": "קג", "text": "0.125 קג", "value": "0.125" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 203,
+  "name": "קרלו מעדן וניל גביע 125 1.5%",
+  "site_id": 1,
+  "sub_group_id": 466,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

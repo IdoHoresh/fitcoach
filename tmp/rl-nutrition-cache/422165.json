@@ -1,0 +1,340 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67033, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 8.4 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 422165,
+  "multiplication": 1,
+  "barcode": 7290120871311,
+  "brand": 2,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290120871311/small.jpg",
+    "original": "/product/7290120871311/large.jpg",
+    "trim": "/product/7290120871311/trim.jpg",
+    "transparent": null,
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [
+    82, 179, 279, 290, 306, 331, 411, 412, 1197, 1198, 1226, 1306, 1307, 1314, 1323, 1329, 1330,
+    1332, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "תפוחי אדמה משוחזרים 70% (מים, שבבי תפוחי אדמה מיובשים), קמח חיטה, עמילן תפוחי אדמה, עגבניות 3%, קמח אורז, מלח, מווסת חומציות (חומצה לקטית), חומר משמר (חומצה סורבית)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "510 גרם", "value": "510" },
+      "Net_Weight": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+      "Product_Height": { "UOM": "סמ", "text": "19 סמ", "value": "19" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "13 סמ", "value": "13" },
+      "Product_Depth": { "UOM": "סמ", "text": "4.5 סמ", "value": "4.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "רמי לוי שיווק השקמה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IT",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6915, 6877],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810],
+    "Color_Number": null,
+    "Search_Tags": ["7290120871311", "רמי לוי", "ניוקי", "תפוחי אדמה"],
+    "internal_product_description": "",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר לפני בישול",
+            "text": "160 קלוריות",
+            "value": "160",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "שומנים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "שומנים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם מוצר לפני בישול",
+            "text": "0.2 גרם",
+            "value": "0.2",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "נתרן (מג) ל-100 גרם מוצר לפני בישול",
+            "text": "400 מג",
+            "value": "400",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "נתרן (מג) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "33 גרם",
+            "value": "33",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "2.2 גרם",
+            "value": "2.2",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סיבים תזונתיים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "3.6 גרם",
+            "value": "3.6",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79086",
+        "label": "מתוכם סוכר מוסף (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "6136",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "מתוכם סוכר מוסף (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Added_Sugar_from_Sugars_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "6137",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "מתוכם סוכר מוסף (גרם) ל-100 גרם מוצר מבושל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Added_Sugar_from_Sugars_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "הביאו לרתיחה בסיר מים מומלחים קלות. בשלו את הניוקי עד שהם צפים. המתינו 2 דקות, סננו והגישו עם רוטב.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רמי לוי ניוקי תפוחי אדמה עם עגבניות 500 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "ניוקי תפוחי אדמה עם עגבניות",
+    "Consumer_Storage_Instructions": "יש לשמור במקום מוצל, קריר ויבש",
+    "Net_Content": { "UOM": "גרם", "text": "500 גרם", "value": "500" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 230,
+  "name": "ניוקי תפוא עם עגבניות 500 גרם",
+  "site_id": 1,
+  "sub_group_id": 610,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

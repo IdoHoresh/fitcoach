@@ -1,0 +1,209 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [180],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 100, "status": 2 },
+  "id": 60471,
+  "multiplication": 1,
+  "barcode": 7290010791545,
+  "brand": 1095,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290010791545/small.jpg",
+    "original": "/product/7290010791545/large.jpg",
+    "trim": "/product/7290010791545/trim.jpg",
+    "transparent": "/product/7290010791545/transparent.png",
+    "gallery": []
+  },
+  "department_id": 59,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "בשר דג טונה, כבד עוף, ציר בשר עוף, ציר דגים, קרגינן, גואר גאם.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "90 גרם", "value": "90" },
+      "Net_Weight": { "UOM": "גרם", "text": "85 גרם", "value": "85" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ביופט",
+    "Product_Description_English": "LA CAT DELICATESS CHICKEN&#039;S LIVER PATE",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290010791545",
+      "לה קט",
+      "בונזו",
+      "להקט",
+      "אוכל חתולים",
+      "חתולים",
+      "שימורי כלבים",
+      "שימורי חתולים",
+      "",
+      "ביופט",
+      "בון זו",
+      "חול",
+      "מזון כלבים",
+      "מזון חתולים",
+      "כלבים",
+      "מארז",
+      "מולטיפק",
+      "מזון לח",
+      "אוכל לחתולים",
+      "אוכל לחתול",
+      "להקט",
+      "מעדנים לחתול",
+      "שימורים לחתולים",
+      "שימורים לחתול",
+      "מזון רטוב לחתול"
+    ],
+    "internal_product_description": "לה קט דליקטס פטה כבד עוף 85גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "1.8 גרם",
+            "value": "1.8",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "15 גרם",
+            "value": "15",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79035",
+        "label": "אפר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6023",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "אפר ל-100 גרם",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Ash_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79038",
+        "label": "תאית",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6019",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "תאית ל-100 גרם",
+            "text": "0.1 גרם",
+            "value": "0.1",
+            "field_name": "Cellulose_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79065",
+        "label": "רטיבות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6021",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "רטיבות ל-100 גרם",
+            "text": "82 גרם",
+            "value": "82",
+            "field_name": "Humidity_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79060",
+        "label": "מלח",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6029",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "מלח ל-100 גרם",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Salt_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "לה-קט פטה כבד עוף 85 גרם",
+    "Hazard_Precautionary_Statement": "לא למאכל אדם",
+    "short_name": "לה קט פטה כבד עוף",
+    "Consumer_Storage_Instructions": "לשמור בקירור לאחר הפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "85 גרם", "value": "85" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 250,
+  "name": "מזון חתולים לה קט דליקטס פטה כבד עוף 85 גרם",
+  "site_id": 1,
+  "sub_group_id": 143,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

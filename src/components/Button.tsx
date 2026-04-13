@@ -10,7 +10,7 @@ import {
 import Animated from 'react-native-reanimated'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
-import { fontSize, fontWeight } from '@/theme/typography'
+import { fontFamily, fontSize } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 
 const DISABLED_OPACITY = 0.5
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.md,
   },
   label: {
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
     textAlign: 'center',
   },
   disabled: {

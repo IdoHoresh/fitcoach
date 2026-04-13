@@ -1,0 +1,337 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71088],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67068, 67170],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 8.9 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 1006, "status": 2 },
+  "id": 46783,
+  "multiplication": 1,
+  "barcode": 7290100700006,
+  "brand": 868,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290100700006/small.jpg",
+    "original": "/product/7290100700006/large.jpg",
+    "trim": "/product/7290100700006/trim.jpg",
+    "transparent": "/product/7290100700006/transparent.png",
+    "gallery": []
+  },
+  "department_id": 55,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [1306, 1314],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חיטה (מכיל גלוטן)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "1.013 קג", "value": "1.013" },
+      "Net_Weight": { "UOM": "קג", "text": "1 קג", "value": "1" },
+      "Product_Height": { "UOM": "סמ", "text": "17 סמ", "value": "17" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "10 סמ", "value": "10" },
+      "Product_Depth": { "UOM": "סמ", "text": "7.8 סמ", "value": "7.8" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "סוגת",
+    "Product_Description_English": "Wheat 1 kg",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6811],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810],
+    "Color_Number": null,
+    "Search_Tags": ["7290100700006", "חיטה", "סוגת"],
+    "internal_product_description": "חיטה 1 ק\"ג",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר לפני בישול",
+            "text": "359 קלוריות",
+            "value": "359",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "אנרגיה (קלוריות) ל-100 גרם מוצר מבושל",
+            "text": "163 קלוריות",
+            "value": "163",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "שומנים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "2.1 גרם",
+            "value": "2.1",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "שומנים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם מוצר לפני בישול",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם מוצר לפני בישול",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם מוצר לפני בישול",
+            "text": "פחות מ-2.5 מג",
+            "value": "L 2.5",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "נתרן (מג) ל-100 גרם מוצר לפני בישול",
+            "text": "5 מג",
+            "value": "5",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "נתרן (מג) ל-100 גרם מוצר מבושל",
+            "text": "",
+            "value": "",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "72.6 גרם",
+            "value": "72.6",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סך הפחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "33.0 גרם",
+            "value": "33.0",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "0.6 גרם",
+            "value": "0.6",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם מוצר מבושל",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78040",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר לפני בישול",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר לפני בישול",
+            "text": "12.5 גרם",
+            "value": "12.5",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78041",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם מוצר מבושל",
+            "name": "חלבונים (גרם) ל-100 גרם מוצר מבושל",
+            "text": "5.7 גרם",
+            "value": "5.7",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "‎30 דקות זמן השריה\n 60–40 זמן בישול",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "חיטה סוגת 1 ק\"ג",
+    "Hazard_Precautionary_Statement": "יש לברור לפני השימוש",
+    "short_name": "חיטה",
+    "Consumer_Storage_Instructions": "יש לשמור במקום מוצל, קריר ויבש",
+    "Net_Content": { "UOM": "קג", "text": "1 קג", "value": "1" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 303,
+  "name": "חיטה סוגת 1 ק\"ג",
+  "site_id": 1,
+  "sub_group_id": 323,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

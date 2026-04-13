@@ -1,0 +1,370 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71098],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 357266,
+  "multiplication": 1,
+  "barcode": 7290112194183,
+  "brand": 2,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290112194183/small.jpg",
+    "original": "/product/7290112194183/large.jpg",
+    "trim": "/product/7290112194183/trim.jpg",
+    "transparent": "/product/7290112194183/transparent.png",
+    "gallery": []
+  },
+  "department_id": 61,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "פתיתי דגנים (קמח תירס מלא, קמח אורז, קמח שיבולת שועל (מכיל גלוטן), סוכר, מלח, חומר תפיחה (סודיום ביקרבונט)), שמן קנולה, תערובת תיבול בטעם תפוח עץ וקינמון (4%)(סוכרים, עמין תירס, תבלינים, מווסת חומציות (חומצה מאלית)), מתחלב (לציטין סויה), תמצית תה. סך הדגנים במוצר 84%. מכיל 61% דגנים מלאים. מכיל 0.3% קינמון",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "55 גרם", "value": "55" },
+      "Net_Weight": { "UOM": "גרם", "text": "50 גרם", "value": "50" },
+      "Product_Height": { "UOM": "סמ", "text": "22 סמ", "value": "22" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "18 סמ", "value": "18" },
+      "Product_Depth": { "UOM": "סמ", "text": "6 סמ", "value": "6" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "רמי לוי שיווק השקמה",
+    "Product_Description_English": "",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6820, 6823, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6809, 6821],
+    "Color_Number": null,
+    "Search_Tags": ["7290112194183", "פריכיות דגנים", "תפוח עץ קינמון"],
+    "internal_product_description": "פריכיות דגנים בטעם תפוח עץ וקינמון",
+    "Color": null,
+    "Diet_Information": [5514, 5565, 5513],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "424 קלוריות",
+            "value": "424",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "לאריזה",
+            "text": "212 קלוריות",
+            "value": "212",
+            "field_name": "Energy_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "7.5 גרם",
+            "value": "7.5",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לאריזה",
+            "text": "3.8 גרם",
+            "value": "3.8",
+            "field_name": "Proteins_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "71 גרם",
+            "value": "71",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לאריזה",
+            "text": "35.5 גרם",
+            "value": "35.5",
+            "field_name": "Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "6 גרם",
+            "value": "6",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לאריזה",
+            "text": "3 גרם",
+            "value": "3",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79086",
+        "label": "מתוכם סוכר מוסף (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6136",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Added_Sugar_from_Sugars_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "6137",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לאריזה",
+            "text": "0.75 גרם",
+            "value": "0.75",
+            "field_name": "Added_Sugar_from_Sugars_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "5.7 גרם",
+            "value": "5.7",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5825",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לאריזה",
+            "text": "2.8 גרם",
+            "value": "2.8",
+            "field_name": "Dietary_Fibers_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "11 גרם",
+            "value": "11",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לאריזה",
+            "text": "5.5 גרם",
+            "value": "5.5",
+            "field_name": "Fats_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.4 גרם",
+            "value": "1.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5829",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לאריזה",
+            "text": "0.7 גרם",
+            "value": "0.7",
+            "field_name": "Saturated_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5831",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לאריזה",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5833",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לאריזה",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_Serving"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "430 מג",
+            "value": "430",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78032",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לאריזה",
+            "text": "215 מג",
+            "value": "215",
+            "field_name": "Sodium_per_Serving"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "רמי לוי פריכיות דגנים בטעם תפוח עץ וקינמון 50 גרם",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "פריכיות אורז",
+    "Consumer_Storage_Instructions": "יש לשמר במקום מוצל קריר ויבש, לשמירת הטריות יש לסגור את השקית לאחר הפתיחה.",
+    "Net_Content": { "UOM": "גרם", "text": "50 גרם", "value": "50" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 272,
+  "name": "פריכיות דגנים תפוח וקינמון 50ג רמילוי",
+  "site_id": 1,
+  "sub_group_id": 311,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

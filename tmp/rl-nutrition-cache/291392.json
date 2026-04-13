@@ -1,0 +1,235 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [180],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 291392,
+  "multiplication": 1,
+  "barcode": 7290105474131,
+  "brand": 1051,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290105474131/small.jpg",
+    "original": "/product/7290105474131/large.jpg",
+    "trim": "/product/7290105474131/trim.jpg",
+    "transparent": "/product/7290105474131/transparent.png",
+    "gallery": []
+  },
+  "department_id": 59,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "טונה, אורז, ג'לי ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "216 גרם", "value": "216" },
+      "Net_Weight": { "UOM": "גרם", "text": "170 גרם", "value": "170" },
+      "Product_Height": { "UOM": "סמ", "text": "4.5 סמ", "value": "4.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "8.5 סמ", "value": "8.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "בונזו",
+    "Product_Description_English": "BONZO GOURMET 170gr' Tuna&Rice\n",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6843],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290105474131",
+      "לה קט",
+      "בונזו",
+      "להקט",
+      "פריסקיז",
+      "אוכל חתולים",
+      "חתולים",
+      "שימורי כלבים",
+      "שימורי חתולים",
+      "דוגלי",
+      "ביופט",
+      "בון זו",
+      "חול",
+      "מזון כלבים",
+      "מזון חתולים",
+      "כלבים",
+      "מזון לח לכלבים",
+      "מזון רטוב לכלבים",
+      "מעדן גורמה לכלב",
+      "גורמה לכלב",
+      "מזון איכותי לכלב",
+      "אוכל איכותי לכלב"
+    ],
+    "internal_product_description": "מעדן בונזו גורמה טונה ואורז 170גרם\n",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "30 מג",
+            "value": "30",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "14.5 גרם",
+            "value": "14.5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "20 מג",
+            "value": "20",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79018",
+        "label": "זרחן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5867",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "140 מג",
+            "value": "140",
+            "field_name": "Phosphorus_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79035",
+        "label": "אפר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6023",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.95 גרם",
+            "value": "0.95",
+            "field_name": "Ash_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79038",
+        "label": "תאית",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6019",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.01 גרם",
+            "value": "0.01",
+            "field_name": "Cellulose_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79065",
+        "label": "רטיבות",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6021",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "82 גרם",
+            "value": "82",
+            "field_name": "Humidity_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "להגיש בטמפרטורת החדר\nיש לערבב את השימור עם מזון יבש או להגיש כתוספת בין הארוחות\nיש לדאוג למים טריים לצד המזון",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מעדן בונזו גורמה טונה ואורז 170גרם\n",
+    "Hazard_Precautionary_Statement": "לא למאכל אדם",
+    "short_name": "מעדן בונזו גורמה טונה ואורז \n",
+    "Consumer_Storage_Instructions": "יש לאחסן את האריזה סגורה, במקום קריר ויבש\nיש לשמור בקירור לאחר הפתיחה",
+    "Net_Content": { "UOM": "גרם", "text": "170 גרם", "value": "170" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 250,
+  "name": "מזון לכלבים בונזו מעדן גורמה טונה ואורז 170 גרם",
+  "site_id": 1,
+  "sub_group_id": 143,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

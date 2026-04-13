@@ -1,0 +1,233 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67093],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 7.8 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 300953,
+  "multiplication": 1,
+  "barcode": 7290013358493,
+  "brand": 3500,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290013358493/small.jpg",
+    "original": "/product/7290013358493/large.jpg",
+    "trim": "/product/7290013358493/trim.jpg",
+    "transparent": "/product/7290013358493/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6],
+  "available_in": [82, 179, 279, 290, 306, 1198, 1226, 1306, 1307, 1314, 1330, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "מיצוי קוקוס (מים + חלקי פרי) 75%, מים, מייצבים (E412, E471, E466, E415), מתחלב (E435), מעכב חמצון (סולפיט). 17%-18% שומן.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "470 גרם", "value": "470" },
+      "Net_Weight": { "UOM": "גרם", "text": "400 גרם", "value": "400" },
+      "Product_Height": { "UOM": "סמ", "text": "11.200 סמ", "value": "11.200" },
+      "Price_Comparison_Content": { "UOM": "מל", "text": "100 מל", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "7.300 סמ", "value": "7.300" },
+      "Product_Depth": { "UOM": "סמ", "text": "7.400 סמ", "value": "7.400" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "מנה-מאסטר שף",
+    "Product_Description_English": "MASTER CHEF COCONUT CREAM 400 ML",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6843],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR4", "value": "שומן רווי בכמות גבוהה" }],
+    "Allergen_Type_Code_and_Containment": [6842, 6822],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290013358493",
+      "מוקפצים",
+      "בישול הודי",
+      "אפיה",
+      "אפייה",
+      "ללא חלב",
+      "חלב קוקוס",
+      "לבישול",
+      "טבעוני",
+      "מאסטר שף",
+      "קרם קוקוס"
+    ],
+    "internal_product_description": "מאסטר שף אסייאתי קרם קוקוס פחית 400 מל",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל",
+            "name": "אנרגיה (קלוריות) ל-100 מל",
+            "text": "177 קלוריות",
+            "value": "177",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "שומנים (גרם) ל-100 מל",
+            "text": "18 גרם",
+            "value": "18",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 מל",
+            "text": "15.4 גרם",
+            "value": "15.4",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל",
+            "name": "נתרן (מג) ל-100 מל",
+            "text": "23 מג",
+            "value": "23",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סך הפחמימות (גרם) ל-100 מל",
+            "text": "2.5 גרם",
+            "value": "2.5",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל",
+            "text": "2.4 גרם",
+            "value": "2.4",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "כפיות סוכר מתוך סך הפחמימות",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 מל",
+            "name": "כפיות סוכר מתוך סך הפחמימות ל-100 מל",
+            "text": "0.5",
+            "value": "0.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78003",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל",
+            "name": "חלבונים (גרם) ל-100 מל",
+            "text": "0.9 גרם",
+            "value": "0.9",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": "75%",
+    "Serving_Suggestion": "טמפרטורה קרה עלולה לגרום להתמצקות המוצר. במידה וזה קרה, מומלץ להעמיד את הפחית בקערה עם מים חמים ולאחר מכן לערבב היטב. גם מוצר אשר התמצק, ראוי לשימוש ואיכותו נשמרת.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מאסטר שף אסייאתי קרם קוקוס פחית 400 מל",
+    "Hazard_Precautionary_Statement": "יש לחמם ולנער לפני השימוש, בהתאם להוראות השימוש.",
+    "short_name": "קרם קוקוס",
+    "Consumer_Storage_Instructions": "כאשר המיכל סגור ניתן לאחסן ללא קירור. לאחר הפתיחה מומלץ לשמור בקירור ולצרוך בתוך 3 ימים.",
+    "Net_Content": { "UOM": "מל", "text": "400 מל", "value": "400" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 226,
+  "name": "מאסטר שף קרם קוקוס בפחית 400 מ\"ל",
+  "site_id": 1,
+  "sub_group_id": 406,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

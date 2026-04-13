@@ -1,0 +1,311 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67079, 67180, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 339491,
+  "multiplication": 1,
+  "barcode": 7290012226816,
+  "brand": null,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290012226816/small.jpg",
+    "original": "/product/7290012226816/large.jpg",
+    "trim": "/product/7290012226816/trim.jpg",
+    "transparent": "/product/7290012226816/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [16, 32],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "חלבון סויה מורטב (61%), קמח חיטה (מכיל גלוטן), חלבון חיטה (מכיל גלוטן), שמן צמחי, חומרי טעם וריח, תבלינים, סוכר, מייצב (מתיל צלולוז), סיבים תזונתיים, מיץ לימון, תמצית שמרים, מלח.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.55 קג", "value": "0.55" },
+      "Net_Weight": { "UOM": "גרם", "text": "540 גרם", "value": "540" },
+      "Product_Height": { "UOM": "סמ", "text": "19 סמ", "value": "19" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "6 סמ", "value": "6" },
+      "Product_Depth": { "UOM": "סמ", "text": "17 סמ", "value": "17" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ZOGLOS",
+    "Product_Description_English": "",
+    "Country_of_Origin": "NL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6818, 6836],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6810, 6821],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290012226816",
+      "זוגלובק",
+      "זוגלובג",
+      "זוגלובק טבע",
+      "טבעול",
+      "טבעןל",
+      "שניצל",
+      "שניצל תירס",
+      "שניצל סויה",
+      "סויה",
+      "טבעול שניצל",
+      "טבעול תירס",
+      "טבעוול",
+      "שניצל טבעול",
+      "שניצל תירס טבעול",
+      "שניצלים",
+      "שניצל דק",
+      "צמחוני",
+      "צימחוני",
+      "טבעוני",
+      "טיבעוני",
+      "שניצל מן הצומח",
+      "שניצל צמחוני",
+      "שניצל",
+      "שניתל תירס",
+      "שניצל תרס",
+      "סויה",
+      "שניצל סויה",
+      "טבעול דק",
+      "שניצל דק טבעול",
+      "שניצל טבעול דק",
+      "שניצל טבעול דק טעם ביתי",
+      "שניצל דק צמחוני",
+      "שניצל צמחי",
+      "מהצומח",
+      "שניצל דק בטעם ביתי",
+      "טבעוול",
+      "שניצל דק מהצומח",
+      "שניצל ביתי טבעול",
+      "טבעולך",
+      "שניצל טבעול רגיל",
+      "שניצל דק מן הצומח",
+      "הסדרה הקלסית טבעול",
+      "טבעול חלבון",
+      "טבעול שניצל דק",
+      "פרווה",
+      "טבעול שניצל צמחוני",
+      "שניצל טבעול",
+      "שניצל דק טבעוני",
+      "שניצל  טבעול"
+    ],
+    "internal_product_description": "zoglos שניצל דק 540 גרם",
+    "Color": null,
+    "Diet_Information": [5573, 5521],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "text": "269 קלוריות",
+            "value": "269",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "12.5 גרם",
+            "value": "12.5",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "0 מג",
+            "value": "0",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "400 מג",
+            "value": "400",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "24 גרם",
+            "value": "24",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "1.5 גרם",
+            "value": "1.5",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79096",
+        "label": "מתוכן כפיות סוכר",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6186",
+            "col_field_id": "6066",
+            "UOM": "",
+            "col_label": "ל-100 גרם",
+            "text": "1.5",
+            "value": "1.5",
+            "field_name": "Sugar_Spoon_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79006",
+        "label": "סיבים תזונתיים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5824",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "2 גרם",
+            "value": "2",
+            "field_name": "Dietary_Fibers_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "14 גרם",
+            "value": "14",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "שמור במצב קפוא. אין צורך להפשיר את השניצלים לפני הכנתם. בכל צורות ההכנה המנע מחריכת יתר. לקבלת מוצר מושלם מומלץ להשתמש באופני הכנה השונים על פני מיקרוגל.\nבמחבת: tחמם מעט שמן על אש קטנה. לאחר שהשמן חם, טגן את השניצלים על אש נמוכה במשך כ 5 דקות מכל צד.\nטיגון עמוק: חמם שמן על אש גבוהה. לאחר שהשמן חם, הוסף את השניצלים לטיגון במשך כ-3 דקות.\nתנור / טוסטר אובןt: חמם תנור לטמפ' בינונית כ 180 מע\"צ. אפה את השניצלים למשך כ 14 דקות, רצוי להפוך לאחר 7 דקות. זמן החימום עשוי להשתנות כתלות בעוצמת המכשיר.\nמיקרוגל: tחמם במשך כ 90 שניות בעוצמה מלאה. מומלץ רק להגשה בלחמניה או ברוטב.",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "שניצל דק 540 גר' zoglo's",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "שניצל דק 540 גר' zoglo's",
+    "Consumer_Storage_Instructions": "לשמור בהקפאה -18°C. אין להפשיר ולהקפיא שנית.",
+    "Net_Content": { "UOM": "קג", "text": "0.54 קג", "value": "0.54" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 221,
+  "name": "שניצל דק דק עשיר חלבון 540 גר",
+  "site_id": 1,
+  "sub_group_id": 614,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

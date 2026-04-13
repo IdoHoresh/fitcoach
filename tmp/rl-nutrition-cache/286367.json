@@ -1,0 +1,285 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71095],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6402],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 16.5 },
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 2135, "status": 2 },
+  "id": 286367,
+  "multiplication": 1,
+  "barcode": 7290002331483,
+  "brand": 1391,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290002331483/small.jpg",
+    "original": "/product/7290002331483/large.jpg",
+    "trim": "/product/7290002331483/trim.jpg",
+    "transparent": "/product/7290002331483/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [],
+  "available_in": [1314, 1329, 1389, 1401],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "דו פחמות, סידן, כלורידים, מגנזיום, סיליקאטים, נתרן, גפרות, אשלגן, פלואוריד, ערך הגבה",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "2.110 קג", "value": "2.110" },
+      "Net_Weight": { "UOM": "קג", "text": "1.920 קג", "value": "1.920" },
+      "Product_Height": { "UOM": "סמ", "text": "15.5 סמ", "value": "15.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ", "text": "15 סמ", "value": "15" },
+      "Product_Depth": { "UOM": "סמ", "text": "8 סמ", "value": "8" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "נביעות",
+    "Product_Description_English": "Neviot baby 320ml",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": "7.8 מג",
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290002331483",
+      "נביעות בייבי \nשישיית מים מינרליים \nנביעות בייבי 320 מ\"ל \nבקבוקי נביעות אישיים \nבקבוק ידידותי \nמים מינרליים נביעות \nמיים מינרליים נביעות \nמים עם מגנזיום \nמים מינרליים עם מגנזיום"
+    ],
+    "internal_product_description": "נביעות בייבי מים מינרליים טבעיים 1.92 ליטר",
+    "Color": null,
+    "Diet_Information": [5514],
+    "Nutritional_Values": [
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "נתרן (מג) לליטר",
+            "text": "8 מג",
+            "value": "8",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "סידן (מג) לליטר",
+            "text": "58 מג",
+            "value": "58",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79050",
+        "label": "מגנזיום (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "5986",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "מגנזיום (מג) לליטר",
+            "text": "23 מג",
+            "value": "23",
+            "field_name": "Magnesium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79058",
+        "label": "אשלגן (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "5993",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "אשלגן (מג) לליטר",
+            "text": "0.8 מג",
+            "value": "0.8",
+            "field_name": "Potassium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79073",
+        "label": "גפרות (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6093",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "גפרות (מג) לליטר",
+            "text": "6 מג",
+            "value": "6",
+            "field_name": "Sulfate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79072",
+        "label": "דו פחמות (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6096",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "דו פחמות (מג) לליטר",
+            "text": "260 מג",
+            "value": "260",
+            "field_name": "Bicarbonate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79071",
+        "label": "חנקות (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6099",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "חנקות (מג) לליטר",
+            "text": "14 מג",
+            "value": "14",
+            "field_name": "Nitrate_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79080",
+        "label": "סילקה (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6117",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "סילקה (מג) לליטר",
+            "text": "9 מג",
+            "value": "9",
+            "field_name": "Silica_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79084",
+        "label": "פלואור (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6129",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "פלואור (מג) לליטר",
+            "text": "0.22 מג",
+            "value": "0.22",
+            "field_name": "Fluorine_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79094",
+        "label": "כלוריד (מג)",
+        "fields": [
+          {
+            "col_code": "78025",
+            "field_id": "6165",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "לליטר",
+            "name": "כלוריד (מג) לליטר",
+            "text": "16 מג",
+            "value": "16",
+            "field_name": "Chloride_2_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "מים מינרליים נביעות בייבי",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "נביעות בייבי",
+    "Consumer_Storage_Instructions": "לאחסן במקום מוצל ויבש",
+    "Net_Content": { "UOM": "ליטר", "text": "1.92 ליטר", "value": "1.92" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [
+    {
+      "code": 910368469,
+      "sw_kefel": 0,
+      "k_cmt": null,
+      "deleted_by": null,
+      "k_acz_dis": null,
+      "active": 1,
+      "created_at": "2026-03-19T10:53:11.000000Z",
+      "cmt": 2,
+      "label": "מים מינרלים בייבי 2 יח' ב-29.90 ש\"ח\n2 ב 29.9 ₪",
+      "type": 1,
+      "is_wallet": 0,
+      "deleted_at": null,
+      "max_in_doc": 0,
+      "is_personal": 0,
+      "updated_at": "2026-03-19T10:53:11.000000Z",
+      "approved_at": null,
+      "name": "מים מינרלים בייבי 2 יח' ב-29.90 ש\"ח",
+      "k_scm": null,
+      "from": "2026-03-19 00:00:00",
+      "id": 781021,
+      "to": "2026-05-02 23:59:59",
+      "scm": 29.9,
+      "pending_approval": 0,
+      "is_club": 0
+    }
+  ],
+  "mainImage": 1,
+  "group_id": 591,
+  "name": "מים מינרלים נביעות 6*320 מ\"ל",
+  "site_id": 1,
+  "sub_group_id": 1216,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

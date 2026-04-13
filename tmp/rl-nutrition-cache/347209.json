@@ -1,0 +1,244 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6401],
+    "Rabbinate": [67051],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 347209,
+  "multiplication": 1,
+  "barcode": 7290014748590,
+  "brand": 1170,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290014748590/small.jpg",
+    "original": "/product/7290014748590/large.jpg",
+    "trim": "/product/7290014748590/trim.jpg",
+    "transparent": "/product/7290014748590/transparent.png",
+    "gallery": []
+  },
+  "department_id": 53,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [19],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "דגים (הייק, נסיכה) (32%), קמח חיטה, מים, שמן צמחי, חלבון צמחי, שבבי צ'ילי (2.3%), מווסתי חומציות (נתרן לימוני, חומצת לימון), סיבים תזונתיים, מלח, תבלינים וחומרי טעם, סוכרים, עמילן מעובד (E1404), מסמיך (גואר גאם/ E466), צבע מאכל (תמצית פפריקה). אפוי ומטוגן.",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "653.333 גרם", "value": "653.333" },
+      "Net_Weight": { "UOM": "גרם", "text": "600 גרם", "value": "600" },
+      "Product_Height": { "UOM": "ממ", "text": "50.000 ממ", "value": "50.000" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "272.000 ממ", "value": "272.000" },
+      "Product_Depth": { "UOM": "ממ", "text": "300.000 ממ", "value": "300.000" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "דג טוב",
+    "Product_Description_English": "DAG TOV Chili Breaded Stick 12x600gIL",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": "8%",
+    "Allergen_Type_Code_and_Containment_May_Contain": [6820, 6823],
+    "pH": null,
+    "Serving_Size_Description": "מנה 90",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6809, 6882, 6821, 6836],
+    "Color_Number": null,
+    "Search_Tags": [
+      "7290014748590",
+      "עוף טוב",
+      "דג טוב",
+      "מקלוני דגים",
+      "צ'ילי",
+      "דגים ציפוי צ'ילי"
+    ],
+    "internal_product_description": "דג טוב מקלונים בציפוי צילי 12*600גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "203 קלוריות",
+            "value": "203",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "8 גרם",
+            "value": "8",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן רוויות (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "1.3 גרם",
+            "value": "1.3",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חומצות שומן טראנס (גרם) מתוך סך השומנים ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מ”ג) מתוך סך השומנים",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "כולסטרול (מ”ג) מתוך סך השומנים ל-100 גרם",
+            "text": "29 מג",
+            "value": "29",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "450 מג",
+            "value": "450",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "20 גרם",
+            "value": "20",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "1.2 גרם",
+            "value": "1.2",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "12.5 גרם",
+            "value": "12.5",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "בטוסטר/ תנור 10-15 דקות בחום 180-200 מעלות\nבמיקרוגל 2 דקות ל-3 יחידות\nבטיגון עדין במשך 3 דקות. רצוי להפשיר קודם",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "דג טוב מקלונים בציפוי צילי 12*600גרם",
+    "Hazard_Precautionary_Statement": "<br />\nבמוצר זה נעשו מאמצים רבים להרחקת עצמות<br />\nאף על פי כן נוכחותן אפשרית<br />\n<br />\n",
+    "short_name": "מקלוני דג בציפוי צ'ילי",
+    "Consumer_Storage_Instructions": "לשמור בהקפאה -18 מעלות\nאין להפשיר ולהקפיא שנית",
+    "Net_Content": { "UOM": "גרם", "text": "600 גרם", "value": "600" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 221,
+  "name": "מקלוני דגים בציפוי צ'ילי 600 גר",
+  "site_id": 1,
+  "sub_group_id": 612,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

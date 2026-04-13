@@ -1,0 +1,181 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71021],
+    "Cooking_Israel": [0],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67226, 67011, 67163],
+    "Israel_Milk": [0],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 72, "status": 2 },
+  "id": 123174,
+  "multiplication": 1,
+  "barcode": 8690637073373,
+  "brand": 2552,
+  "recipes": [],
+  "images": {
+    "small": "/product/8690637073373/small.jpg",
+    "original": "/product/8690637073373/large.jpg",
+    "trim": "/product/8690637073373/trim.jpg",
+    "transparent": "/product/8690637073373/transparent.png",
+    "gallery": []
+  },
+  "department_id": 57,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [10, 16, 33],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "תה שחור , חומרי טעם וריח מלאכותיים (ברגמוט)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "קג", "text": "0.094 קג", "value": "0.094" },
+      "Net_Weight": { "UOM": "קג", "text": "0.05 קג", "value": "0.05" },
+      "Product_Height": { "UOM": "ממ", "text": "67 ממ", "value": "67" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "ממ", "text": "60 ממ", "value": "60" },
+      "Product_Depth": { "UOM": "ממ", "text": "141 ממ", "value": "141" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ליפטון",
+    "Product_Description_English": "LIPTON 50 G X 12",
+    "Country_of_Origin": "TR",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [0],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": true,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [0],
+    "Color_Number": null,
+    "Search_Tags": [
+      "8690637073373",
+      "חליטת צמחים",
+      "חליטת תה",
+      "ליפטון",
+      "צמחים לחליטה",
+      "תה ירוק",
+      "תה ליפטון",
+      "תה צמחים",
+      "תה קלאסי",
+      "תה קר",
+      "תה שחור",
+      "תמציות תה",
+      "תמצית תה",
+      "לפטון",
+      "ארל גריי",
+      "תה ארל גריי"
+    ],
+    "internal_product_description": "תה ליפטון תה שחור ארל גריי 2 גרם, 25 יחידות",
+    "Color": null,
+    "Diet_Information": [0],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78023",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 מל מוכן",
+            "text": "2 קלוריות",
+            "value": "2",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78023",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "0.1 גרם",
+            "value": "0.1",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78023",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "0.3 גרם",
+            "value": "0.3",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78023",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78023",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "text": "3 מג",
+            "value": "3",
+            "field_name": "Sodium_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "הוראות להכנת 200 מל משקה:\n1)להניח את השקיק בכוס, למזוג מים רותחים.\n2)להמתין 1-2 דקות לשחרור הטעם ולהוציא את השקיק.\n3)ניתן להוסיף סוכר, חלב או לימון לפי הטעם",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "תה שחור ארל גריי ",
+    "Hazard_Precautionary_Statement": " ",
+    "short_name": "תה שחור ארל גריי",
+    "Consumer_Storage_Instructions": "לאחסן במקום קריר, יבש ונטול ריחות",
+    "Net_Content": { "UOM": "גרם,", "text": "2 גרם,", "value": "2" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 238,
+  "name": "ליפטון תה ארל גריי 25 יחידות",
+  "site_id": 1,
+  "sub_group_id": 777,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

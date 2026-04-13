@@ -1,0 +1,367 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [71097],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [6403],
+    "Rabbinate": [67085],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "price": { "price": 19.2 },
+  "prop": { "unit": 0, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 397629,
+  "multiplication": 1,
+  "barcode": 7290017599250,
+  "brand": 4928,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290017599250/small.jpg",
+    "original": "/product/7290017599250/large.jpg",
+    "trim": "/product/7290017599250/trim.jpg",
+    "transparent": "/product/7290017599250/transparent.png",
+    "gallery": []
+  },
+  "department_id": 52,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [1],
+  "available_in": [
+    82, 179, 279, 306, 412, 1214, 1220, 1221, 1225, 1226, 1306, 1314, 1323, 1329, 1330, 1333, 1378,
+    1389, 1401
+  ],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "אריתריטול, ממתיק (סודיום סכרין 3.5%)",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "166 גרם", "value": "166" },
+      "Net_Weight": { "UOM": "גרם", "text": "120 גרם", "value": "120" },
+      "Product_Height": { "UOM": "סמ", "text": "14.5 סמ", "value": "14.5" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "100 גרם", "value": "100" },
+      "Product_Width": { "UOM": "סמ\n", "text": "12 סמ\n", "value": "12" },
+      "Product_Depth": { "UOM": "סמ", "text": "6.5 סמ", "value": "6.5" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "סוכרזית",
+    "Product_Description_English": "sucarzit classic",
+    "Country_of_Origin": "IL",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": "",
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [],
+    "Color_Number": null,
+    "Search_Tags": ["7290017599250", "ממתיק", "סוכרזית", "סוכר", "קלאסי"],
+    "internal_product_description": "סוכרזית קלאסי, ממתיק בטעם הקלאסי 120 שקיות",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות",
+            "col_label": "ל-100 גרם",
+            "name": "אנרגיה (קלוריות) ל-100 גרם",
+            "text": "0 קלוריות",
+            "value": "0",
+            "field_name": "Energy_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5817",
+            "col_field_id": "6067",
+            "UOM": "קלוריות",
+            "col_label": "לשקית",
+            "name": "אנרגיה (קלוריות) לשקית",
+            "text": "0 קלוריות",
+            "value": "0",
+            "field_name": "Energy_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6072",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "אנרגיה (קלוריות) ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "energy"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "שומנים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Fats_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5827",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "name": "שומנים (גרם) לשקית",
+            "text": "0.0 גרם",
+            "value": "0.0",
+            "field_name": "Fats_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5898",
+            "col_field_id": "6068",
+            "UOM": "",
+            "col_label": "ל-100 מל מוכן",
+            "name": "שומנים (גרם) ל-100 מל מוכן",
+            "text": "",
+            "value": "",
+            "field_name": "Fats"
+          }
+        ]
+      },
+      {
+        "code": "79011",
+        "label": "נתרן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5836",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "name": "נתרן (מג) ל-100 גרם",
+            "text": "333 מג",
+            "value": "333",
+            "field_name": "Sodium_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5837",
+            "col_field_id": "6067",
+            "UOM": "מג",
+            "col_label": "לשקית",
+            "name": "נתרן (מג) לשקית",
+            "text": "3 מג",
+            "value": "3",
+            "field_name": "Sodium_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5921",
+            "col_field_id": "6068",
+            "UOM": "מג",
+            "col_label": "ל-100 מל מוכן",
+            "name": "נתרן (מג) ל-100 מל מוכן",
+            "text": "3 מג",
+            "value": "3",
+            "field_name": "Sodium_Natran"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סך הפחמימות (גרם) ל-100 גרם",
+            "text": "96 גרם",
+            "value": "96",
+            "field_name": "Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5821",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "name": "סך הפחמימות (גרם) לשקית",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5902",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "סך הפחמימות (גרם) ל-100 מל מוכן",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79004",
+        "label": "סוכרים מתוך פחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5822",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5823",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "name": "סוכרים מתוך פחמימות (גרם) לשקית",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5926",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "סוכרים מתוך פחמימות (גרם) ל-100 מל מוכן",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Sugars_from_Carbohydrates"
+          }
+        ]
+      },
+      {
+        "code": "79005",
+        "label": "רב כהלים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "6058",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "רב כהלים (גרם) ל-100 גרם",
+            "text": "96 גרם",
+            "value": "96",
+            "field_name": "Sugar_Alcohols_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "6059",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "name": "רב כהלים (גרם) לשקית",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Sugar_Alcohols_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "6057",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "רב כהלים (גרם) ל-100 מל מוכן",
+            "text": "1 גרם",
+            "value": "1",
+            "field_name": "Sugar_Alcohols"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "name": "חלבונים (גרם) ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins_per_100_grams"
+          },
+          {
+            "col_code": "78033",
+            "field_id": "5819",
+            "col_field_id": "6067",
+            "UOM": "גרם",
+            "col_label": "לשקית",
+            "name": "חלבונים (גרם) לשקית",
+            "text": "0.0 גרם",
+            "value": "0.0",
+            "field_name": "Proteins_per_Serving"
+          },
+          {
+            "col_code": "78023",
+            "field_id": "5897",
+            "col_field_id": "6068",
+            "UOM": "גרם",
+            "col_label": "ל-100 מל מוכן",
+            "name": "חלבונים (גרם) ל-100 מל מוכן",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Proteins"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "יש למזוג מין חמים לכוס ולהוסיף 1 שקית ממתיק, ניתן להוסיף קפה או תה ע\"פ טעמך. ",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "סוכרזית קלאסי, ממתיק בטעם הקלאסי 120 שקיות",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "ממתיק  בטעם הקלאסי ",
+    "Consumer_Storage_Instructions": "יש לאחסן במקום קריר, מוצל ויבש",
+    "Net_Content": { "UOM": "גרם,", "text": "120 גרם,", "value": "120" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 274,
+  "name": "סוכרזית קלאסי 120 שק",
+  "site_id": 1,
+  "sub_group_id": 412,
+  "short_desc": "",
+  "lables": [
+    {
+      "image": "https://img.rami-levy.co.il/public/banners/9db13835-2ef0-4875-8006-b78e69f2cb6e.svg",
+      "name": "ויגן פרנדלי",
+      "id": 23
+    }
+  ],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}

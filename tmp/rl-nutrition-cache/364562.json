@@ -1,0 +1,212 @@
+{
+  "kashrut": {
+    "Kosher_for_Passover_Remark": "",
+    "Board_of_Supervision": [],
+    "Cooking_Israel": [],
+    "Kosher_Supervision_Type": [183],
+    "Kosher_for_Passover": [],
+    "Rabbinate": [67093, 67011],
+    "Israel_Milk": [],
+    "Sheviit_Orlah_Tevel": []
+  },
+  "full_desc": "",
+  "kosher_type": null,
+  "features": [],
+  "prop": { "unit": null, "sw_shakil": 0, "by_kilo": 0, "by_kilo_content": 0, "status": 2 },
+  "id": 364562,
+  "multiplication": 1,
+  "barcode": 7290108505955,
+  "brand": 3588,
+  "recipes": [],
+  "images": {
+    "small": "/product/7290108505955/small.jpg",
+    "original": "/product/7290108505955/large.jpg",
+    "trim": "/product/7290108505955/trim.jpg",
+    "transparent": "/product/7290108505955/transparent.png",
+    "gallery": []
+  },
+  "department_id": 54,
+  "exceptionDays": [],
+  "preference": [],
+  "kashruts": [6, 16],
+  "available_in": [],
+  "gs": {
+    "Ingredient_Sequence_and_Name": "נתחי טונה בהירה (70%) ,שמן סויה ,מלח ",
+    "Product_Dimensions": {
+      "Product_Gross_Weight": { "UOM": "גרם", "text": "160 גרם", "value": "160" },
+      "Net_Weight": { "UOM": "גרם", "text": "112 גרם", "value": "112" },
+      "Product_Height": { "UOM": "סמ\n", "text": "7 סמ\n", "value": "7" },
+      "Price_Comparison_Content": { "UOM": "גרם", "text": "160 גרם", "value": "160" },
+      "Product_Width": { "UOM": "סמ", "text": "17.5 סמ", "value": "17.5" },
+      "Product_Depth": { "UOM": "סמ", "text": "8 סמ", "value": "8" }
+    },
+    "Contains_Sulfur_Dioxide": null,
+    "Alcohol_Percentage_in_Product": null,
+    "BrandName": "ג. ויליפוד",
+    "Product_Description_English": "chunk light tuna in vegetable oil",
+    "Country_of_Origin": "TH",
+    "Fat_Percentage_in_Product": null,
+    "Allergen_Type_Code_and_Containment_May_Contain": [6942],
+    "pH": null,
+    "Serving_Size_Description": "",
+    "litzman": false,
+    "Food_Symbol_Red": [{ "code": "FSR1", "value": "ללא סימון" }],
+    "Allergen_Type_Code_and_Containment": [6882, 6821],
+    "Color_Number": null,
+    "Search_Tags": ["7290108505955", "וילי פוד", "רביעיה", "נתחי טונה", "שמן צמחי", "640 גרם"],
+    "internal_product_description": "וילי פוד רביעית נתחי טונה בשמן צמחי 640 גרם",
+    "Color": null,
+    "Diet_Information": [],
+    "Nutritional_Values": [
+      {
+        "code": "79001",
+        "label": "אנרגיה (קלוריות)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5816",
+            "col_field_id": "6066",
+            "UOM": "קלוריות\n",
+            "col_label": "ל-100 גרם",
+            "text": "145 קלוריות\n",
+            "value": "145",
+            "field_name": "Energy_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79007",
+        "label": "שומנים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5826",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "3.7 גרם",
+            "value": "3.7",
+            "field_name": "Fats_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79008",
+        "label": "חומצות שומן רוויות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5828",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0.8 גרם",
+            "value": "0.8",
+            "field_name": "Saturated_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79009",
+        "label": "חומצות שומן טראנס (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5830",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "פחות מ-0.5 גרם",
+            "value": "L 0.5",
+            "field_name": "Trans_Fatty_Acids_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79010",
+        "label": "כולסטרול (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5832",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "44 מג",
+            "value": "44",
+            "field_name": "Cholesterol_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79003",
+        "label": "סך הפחמימות (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5820",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "0 גרם",
+            "value": "0",
+            "field_name": "Carbohydrates_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79002",
+        "label": "חלבונים (גרם)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5818",
+            "col_field_id": "6066",
+            "UOM": "גרם",
+            "col_label": "ל-100 גרם",
+            "text": "28 גרם",
+            "value": "28",
+            "field_name": "Proteins_per_100_grams"
+          }
+        ]
+      },
+      {
+        "code": "79014",
+        "label": "סידן (מג)",
+        "fields": [
+          {
+            "col_code": "78001",
+            "field_id": "5865",
+            "col_field_id": "6066",
+            "UOM": "מג",
+            "col_label": "ל-100 גרם",
+            "text": "182 מג",
+            "value": "182",
+            "field_name": "Calcium_per_100_grams"
+          }
+        ]
+      }
+    ],
+    "Fruit_Percentage_in_Product": null,
+    "Serving_Suggestion": "",
+    "Forbidden_Under_the_Age_of_18": null,
+    "name": "וילי פוד רביעית נתחי טונה בשמן 160 גרם עדה חרדית ",
+    "Hazard_Precautionary_Statement": "",
+    "short_name": "רביעית נתחי טונה בשמן צמחי",
+    "Consumer_Storage_Instructions": "לשמור במקום קריר ויבש. יש להעביר לכלי מתאים, לשמור בקירור ולצרוך תוך  24 שעות",
+    "Net_Content": { "UOM": "גרם,", "text": "640 גרם,", "value": "640" },
+    "Healthy_Product": "",
+    "Cream_Percentage_in_Product": null
+  },
+  "sale": [],
+  "mainImage": 1,
+  "group_id": 225,
+  "name": "רביעיית נתחי טונה בשמן 160 גר",
+  "site_id": 1,
+  "sub_group_id": 76,
+  "short_desc": "",
+  "lables": [],
+  "properties": [],
+  "is360": 1,
+  "has_coupon": false
+}
