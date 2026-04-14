@@ -49,6 +49,49 @@ npm run test:watch    # Jest watch mode
 npm run test:coverage # Jest with coverage report
 ```
 
+## Running & Testing the App (Mac — iOS Simulator)
+
+**ALWAYS use these aliases when the user wants to run, test, or manually verify the app. Do NOT instruct them to `cd` + `npx expo start` manually.**
+
+Shell functions live in `~/.zshrc`:
+
+```bash
+dev        # manual testing: opens Simulator + expo start --ios (one command)
+dev-test   # TDD: same as `dev` PLUS jest watch in a new iTerm tab
+```
+
+### When to use which
+
+| Situation                                                                         | Command                                                |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| User says "test the app" / "try it" / "run it" / "see the app" / "open simulator" | `dev`                                                  |
+| User starts TDD on business logic (algorithms, stores, DB, repositories)          | `dev-test`                                             |
+| User wants only the test suite (no simulator)                                     | `npm run test:watch` or alias `gtt` (one-shot summary) |
+| Pre-commit verification                                                           | `gtt` (alias → `npm test -- --silent 2>&1 \| tail -5`) |
+| Manual PR test plan item                                                          | `dev` (one command per item, no re-setup)              |
+
+### Native rebuild (rare)
+
+Only when app.json / native deps / SDK changes:
+
+```bash
+npx expo run:ios    # 5–15 min, full xcodebuild
+```
+
+After that, return to `dev` for all subsequent sessions.
+
+### Reset when things weird
+
+```bash
+npx expo start --clear                    # clear Metro cache
+# Simulator → Device → Erase All Content  # reset SQLite / AsyncStorage
+npx expo run:ios                          # nuclear rebuild
+```
+
+### Shortcuts inside Simulator
+
+`Cmd+D` dev menu · `Cmd+R` reload · `Cmd+Ctrl+Z` shake · `Cmd+K` keyboard · `Cmd+Shift+H` home · `Cmd+Shift+A` dark mode toggle
+
 ## Conventions
 
 - Path aliases: `@/algorithms`, `@/types`, `@/db`, `@/theme`, `@/i18n`, `@/security`
