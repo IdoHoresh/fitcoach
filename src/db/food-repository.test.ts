@@ -290,6 +290,101 @@ describe('FoodRepository', () => {
     })
   })
 
+  // ── getByBarcode ──────────────────────────────────────────────────────
+
+  describe('getByBarcode()', () => {
+    it('queries all four tier prefixes for the given EAN', async () => {
+      mockGetFirstAsync.mockResolvedValueOnce(null)
+
+      await repo.getByBarcode('7290000066318')
+
+      const [sql, params] = mockGetFirstAsync.mock.calls[0] as [string, unknown[]]
+      expect(params).toContain('raw_7290000066318')
+      expect(params).toContain('manual_7290000066318')
+      expect(params).toContain('sh_7290000066318')
+      expect(params).toContain('rl_7290000066318')
+      // Must order by tier so raw_ wins over sh_ / rl_
+      expect(sql).toMatch(/raw_%.*manual_%.*sh_%/s)
+    })
+
+    it('returns the matched food mapped to FoodItem', async () => {
+      mockGetFirstAsync.mockResolvedValueOnce(MOCK_FOOD_ROW)
+
+      const result = await repo.getByBarcode('12345')
+
+      expect(result).toEqual(EXPECTED_FOOD_ITEM)
+    })
+
+    it('returns null when no tier has the EAN', async () => {
+      mockGetFirstAsync.mockResolvedValueOnce(null)
+
+      const result = await repo.getByBarcode('0000000000000')
+
+      expect(result).toBeNull()
+    })
+  })
+
+  // ── insertFood ────────────────────────────────────────────────────────
+
+  describe('insertFood()', () => {
+    const FOOD_TO_INSERT: FoodItem = {
+      id: 'manual_7290000066318',
+      nameHe: 'עוגיות שוקולד',
+      nameEn: 'Chocolate Cookies',
+      category: 'snacks',
+      caloriesPer100g: 480,
+      proteinPer100g: 6,
+      fatPer100g: 22,
+      carbsPer100g: 64,
+      fiberPer100g: 2,
+      isUserCreated: false,
+      servingSizes: [{ nameHe: '100 גרם', nameEn: '100g', unit: 'grams', grams: 100 }],
+    }
+
+    it('executes INSERT OR REPLACE with all 12 food columns', async () => {
+      mockRunAsync.mockResolvedValueOnce({ changes: 1 })
+
+      await repo.insertFood(FOOD_TO_INSERT)
+
+      expect(mockRunAsync).toHaveBeenCalledTimes(1)
+      const [sql, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
+      expect(sql).toMatch(/INSERT OR REPLACE INTO foods/i)
+      expect(params).toContain('manual_7290000066318')
+      expect(params).toContain('עוגיות שוקולד')
+      expect(params).toContain('Chocolate Cookies')
+      expect(params).toContain('snacks')
+      expect(params).toContain(480)
+    })
+
+    it('stores serving_sizes_json as a JSON string', async () => {
+      mockRunAsync.mockResolvedValueOnce({ changes: 1 })
+
+      await repo.insertFood(FOOD_TO_INSERT)
+
+      const [, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
+      const servingJson = params.find((p) => typeof p === 'string' && p.startsWith('[')) as string
+      expect(() => JSON.parse(servingJson)).not.toThrow()
+    })
+
+    it('sets is_user_created=0 for non-user foods', async () => {
+      mockRunAsync.mockResolvedValueOnce({ changes: 1 })
+
+      await repo.insertFood(FOOD_TO_INSERT)
+
+      const [, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
+      expect(params).toContain(0)
+    })
+
+    it('sets is_user_created=1 for user-created foods', async () => {
+      mockRunAsync.mockResolvedValueOnce({ changes: 1 })
+
+      await repo.insertFood({ ...FOOD_TO_INSERT, isUserCreated: true })
+
+      const [, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
+      expect(params).toContain(1)
+    })
+  })
+
   // ── Row mapping edge cases ─────────────────────────────────────────
 
   describe('row mapping', () => {

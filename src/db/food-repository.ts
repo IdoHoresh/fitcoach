@@ -10,6 +10,7 @@
 import type { FoodCategory, FoodItem, ServingSize } from '../types'
 import { BaseRepository } from './base-repository'
 import { getDatabase } from './database'
+import { normalizeNameForDedup } from '../shared/normalizeFoodName'
 
 // ── DB row type (snake_case columns) ─────────────────────────────────
 
@@ -131,6 +132,58 @@ export class FoodRepository extends BaseRepository<FoodItem> {
       [limit],
     )
     return rows.map(rowToFoodItem)
+  }
+
+  /**
+   * Looks up a food by EAN barcode across all source tiers.
+   * Checks raw_, manual_, sh_, rl_ prefixes and returns the highest-tier match.
+   * Returns null if no tier has the barcode.
+   */
+  async getByBarcode(ean: string): Promise<FoodItem | null> {
+    const db = getDatabase()
+    const row = await db.getFirstAsync<FoodRow>(
+      `SELECT * FROM foods
+       WHERE id IN (?, ?, ?, ?)
+       ORDER BY CASE
+         WHEN id LIKE 'raw_%'    THEN 1
+         WHEN id LIKE 'manual_%' THEN 2
+         WHEN id LIKE 'sh_%'     THEN 3
+         ELSE                         4
+       END
+       LIMIT 1`,
+      [`raw_${ean}`, `manual_${ean}`, `sh_${ean}`, `rl_${ean}`],
+    )
+    return row ? rowToFoodItem(row) : null
+  }
+
+  /**
+   * Inserts or replaces a food in the database.
+   * Used to persist Open Food Facts results as manual_<ean> entries.
+   */
+  async insertFood(food: FoodItem): Promise<void> {
+    const db = getDatabase()
+    await db.runAsync(
+      `INSERT OR REPLACE INTO foods
+         (id, name_he, name_en, category,
+          calories_per_100g, protein_per_100g, fat_per_100g,
+          carbs_per_100g, fiber_per_100g,
+          is_user_created, serving_sizes_json, name_norm)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        food.id,
+        food.nameHe,
+        food.nameEn,
+        food.category,
+        food.caloriesPer100g,
+        food.proteinPer100g,
+        food.fatPer100g,
+        food.carbsPer100g,
+        food.fiberPer100g,
+        food.isUserCreated ? 1 : 0,
+        JSON.stringify(food.servingSizes),
+        normalizeNameForDedup(food.nameHe),
+      ],
+    )
   }
 }
 
