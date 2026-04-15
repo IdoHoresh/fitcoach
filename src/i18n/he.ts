@@ -522,6 +522,20 @@ export const he = {
     loadFailed: 'הטעינה נכשלה',
     networkError: 'בעיית חיבור',
   },
+
+  // ── Barcode scanner ──
+  barcode: {
+    scanPrompt: 'כוון את המצלמה לברקוד',
+    searching: 'מחפש...',
+    found: 'נמצא מוצר',
+    notFound: 'מוצר לא נמצא',
+    noConnection: 'אין חיבור לאינטרנט',
+    partialData: 'נתוני תזונה חלקיים',
+    permissionTitle: 'נדרשת גישה למצלמה',
+    permissionBody: 'FitCoach צריך גישה למצלמה כדי לסרוק ברקודים',
+    permissionOpenSettings: 'פתח הגדרות',
+    tryAgain: 'נסה שוב',
+  },
 } as const
 
 /** Deep structure type — allows different string values per language */

@@ -515,4 +515,18 @@ export const en: TranslationKeys = {
     loadFailed: 'Load failed',
     networkError: 'Connection error',
   },
+
+  // ── Barcode scanner ──
+  barcode: {
+    scanPrompt: 'Point the camera at a barcode',
+    searching: 'Searching...',
+    found: 'Product found',
+    notFound: 'Product not found',
+    noConnection: 'No internet connection',
+    partialData: 'Incomplete nutrition data',
+    permissionTitle: 'Camera access required',
+    permissionBody: 'FitCoach needs camera access to scan barcodes',
+    permissionOpenSettings: 'Open Settings',
+    tryAgain: 'Try again',
+  },
 } as const
