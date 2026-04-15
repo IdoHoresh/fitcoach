@@ -15,6 +15,7 @@ interface PortionPickerProps {
   date: string
   onBack: () => void
   onConfirmed: () => void
+  partialData?: boolean
   testID?: string
 }
 
@@ -24,6 +25,7 @@ export function PortionPicker({
   date,
   onBack,
   onConfirmed,
+  partialData = false,
   testID,
 }: PortionPickerProps) {
   const strings = t().nutrition
@@ -110,6 +112,17 @@ export function PortionPicker({
         </Text>
         <View style={{ width: 22 }} />
       </View>
+
+      {/* Partial data warning — shown when barcode hit OFF with missing macros */}
+      {partialData && (
+        <View
+          style={styles.partialDataBanner}
+          testID={testID ? `${testID}-partial-data` : undefined}
+        >
+          <Ionicons name="warning-outline" size={16} color={colors.textInverse} />
+          <Text style={styles.partialDataText}>{t().barcode.partialData}</Text>
+        </View>
+      )}
 
       {/* Quick serving chips */}
       {food.servingSizes.length > 0 && (
@@ -343,5 +356,23 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     fontWeight: fontWeight.bold,
     color: colors.textInverse,
+  },
+  partialDataBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.xs,
+    marginHorizontal: spacing.md,
+    marginBottom: spacing.md,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.md,
+    borderRadius: borderRadius.md,
+    backgroundColor: colors.warning,
+  },
+  partialDataText: {
+    fontSize: fontSize.xs,
+    fontWeight: fontWeight.semibold,
+    color: colors.textInverse,
+    flex: 1,
+    textAlign: 'right',
   },
 })

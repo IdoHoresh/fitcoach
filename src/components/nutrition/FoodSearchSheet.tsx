@@ -21,6 +21,7 @@ import { foodRepository } from '@/db/food-repository'
 import type { MealMacroTargetByName } from '@/algorithms/meal-targets'
 import { MacroTab } from './MacroTab'
 import { PortionPicker } from './PortionPicker'
+import { BarcodeScannerSheet } from './BarcodeScannerSheet'
 
 // ── Tab types & constants ────────────────────────────────────────────
 
@@ -119,6 +120,8 @@ export function FoodSearchSheet({
   const [selectedFood, setSelectedFood] = useState<FoodItem | null>(null)
   const [activeTab, setActiveTab] = useState<MacroTabId>('all')
   const [searchResults, setSearchResults] = useState<FoodItem[]>([])
+  const [scannerVisible, setScannerVisible] = useState(false)
+  const [isScanPartial, setIsScanPartial] = useState(false)
 
   // Reset to 'all' tab every time the sheet opens
   useEffect(() => {
@@ -170,9 +173,16 @@ export function FoodSearchSheet({
     setSelectedFood(food)
   }
 
+  function handleBarcodeFound(food: FoodItem, isPartial: boolean) {
+    setScannerVisible(false)
+    setIsScanPartial(isPartial)
+    setSelectedFood(food)
+  }
+
   function handleClose() {
     setQuery('')
     setSelectedFood(null)
+    setIsScanPartial(false)
     onClose()
   }
 
@@ -185,8 +195,12 @@ export function FoodSearchSheet({
           food={selectedFood}
           mealType={mealType}
           date={date}
-          onBack={() => setSelectedFood(null)}
+          onBack={() => {
+            setSelectedFood(null)
+            setIsScanPartial(false)
+          }}
           onConfirmed={handleClose}
+          partialData={isScanPartial}
         />
       </Modal>
     )
@@ -236,7 +250,21 @@ export function FoodSearchSheet({
             autoFocus
             testID={`${id}-input`}
           />
+          <Pressable
+            onPress={() => setScannerVisible(true)}
+            hitSlop={8}
+            testID={`${id}-barcode-btn`}
+          >
+            <Ionicons name="barcode-outline" size={22} color={colors.textMuted} />
+          </Pressable>
         </View>
+
+        {/* Barcode scanner */}
+        <BarcodeScannerSheet
+          visible={scannerVisible}
+          onClose={() => setScannerVisible(false)}
+          onFound={handleBarcodeFound}
+        />
 
         {/* Section label — show result count while searching */}
         {query.trim().length > 0 && results.length === 0 && (
