@@ -4,6 +4,7 @@ import Animated from 'react-native-reanimated'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
+import { selectedCardStyle } from '@/theme/selectedCard'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 import { triggerHaptic } from '@/hooks/useHaptics'
 import { t } from '@/i18n'
@@ -54,11 +55,11 @@ function CheckboxRow({
       accessibilityLabel={option.label}
       accessibilityState={{ checked: isChecked }}
       testID={testID}
-      style={[styles.row, animatedStyle]}
+      style={[styles.row, isChecked ? styles.rowChecked : styles.rowUnchecked, animatedStyle]}
     >
       <RTLWrapper style={styles.rowContent}>
         {option.icon ? <Text style={styles.icon}>{option.icon}</Text> : null}
-        <Text style={styles.label}>{option.label}</Text>
+        <Text style={[styles.label, isChecked && styles.labelChecked]}>{option.label}</Text>
         <View style={styles.spacer} />
         {isChecked ? (
           <View style={styles.checkmark} testID={`${testID.replace(/option/, 'checkmark')}`}>
@@ -141,13 +142,13 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
   },
   row: {
-    backgroundColor: colors.surface,
     borderRadius: borderRadius.md,
     paddingVertical: spacing.ms,
     paddingHorizontal: spacing.md,
-    borderWidth: 1,
-    borderColor: colors.border,
+    ...selectedCardStyle.base,
   },
+  rowChecked: selectedCardStyle.selected,
+  rowUnchecked: selectedCardStyle.unselected,
   rowContent: {
     alignItems: 'center',
     gap: spacing.sm,
@@ -160,6 +161,7 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     fontWeight: fontWeight.medium,
   },
+  labelChecked: selectedCardStyle.labelSelected,
   spacer: {
     flex: 1,
   },

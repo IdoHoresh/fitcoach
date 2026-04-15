@@ -3,6 +3,7 @@ import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
+import { selectedCardStyle } from '@/theme/selectedCard'
 import { t } from '@/i18n'
 import { isToday } from './daySelector.helpers'
 
@@ -105,10 +106,10 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.lg,
     minWidth: 44,
     gap: spacing.xxs,
+    ...selectedCardStyle.base,
+    borderColor: 'transparent',
   },
-  pillSelected: {
-    backgroundColor: colors.primary,
-  },
+  pillSelected: selectedCardStyle.selected,
   pillToday: {
     backgroundColor: colors.primaryTint,
   },
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
   },
   dayLabelSelected: {
-    color: colors.textInverse,
+    color: colors.primary,
     fontWeight: fontWeight.semibold,
   },
   dayNumber: {
@@ -127,6 +128,6 @@ const styles = StyleSheet.create({
     color: colors.textPrimary,
   },
   dayNumberSelected: {
-    color: colors.textInverse,
+    color: colors.primary,
   },
 })

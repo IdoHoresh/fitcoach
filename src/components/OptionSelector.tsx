@@ -4,11 +4,10 @@ import Animated from 'react-native-reanimated'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
+import { selectedCardStyle } from '@/theme/selectedCard'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 import { triggerHaptic } from '@/hooks/useHaptics'
 import { isRTL } from '@/hooks/rtl'
-
-const SELECTED_BG = colors.primaryTint
 
 type OptionLayout = 'grid' | 'list'
 
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
   option: {
     padding: spacing.md,
     borderRadius: borderRadius.md,
-    borderWidth: 1,
+    ...selectedCardStyle.base,
     alignItems: 'center',
     gap: spacing.xs,
   },
@@ -133,14 +132,8 @@ const styles = StyleSheet.create({
     flexBasis: '48%',
     flexGrow: 1,
   },
-  selected: {
-    backgroundColor: SELECTED_BG,
-    borderColor: colors.primary,
-  },
-  unselected: {
-    backgroundColor: colors.surface,
-    borderColor: colors.border,
-  },
+  selected: selectedCardStyle.selected,
+  unselected: selectedCardStyle.unselected,
   icon: {
     fontSize: fontSize.xl,
   },
@@ -150,9 +143,7 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
     textAlign: 'center',
   },
-  labelSelected: {
-    color: colors.primary,
-  },
+  labelSelected: selectedCardStyle.labelSelected,
   description: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
