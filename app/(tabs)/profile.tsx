@@ -25,13 +25,12 @@ import { resetApp } from '../../src/dev/resetApp'
 // start over. Production food logging will replace this entirely.
 
 /**
- * Dev-only: generates a starter meal plan + workout plan for the current
- * profile so the Home v2 dashboard can be tested with real data.
+ * Dev-only: regenerates the workout plan + weekly meal plan from the current
+ * profile. Useful when iterating on plan-generation algorithms without having
+ * to wipe the DB and re-run onboarding.
  *
- * Why this exists: onboarding currently only stores the profile — it does
- * NOT call generateMealPlan / generatePlan. Until the Nutrition and Workout
- * tabs are built out, this button is the only way to populate the stores
- * the Home tab reads from. Will be removed once the production flow exists.
+ * The production flow (onboarding → finishOnboarding) already generates both
+ * plans automatically; this button is a shortcut for dev iteration only.
  */
 function handleGenerateSamplePlans() {
   Alert.alert(

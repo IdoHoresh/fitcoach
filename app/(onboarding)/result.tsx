@@ -16,6 +16,9 @@ import { colors, fontSize, fontFamily, spacing, borderRadius } from '@/theme'
 import { t } from '@/i18n'
 import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
+import { useWorkoutStore } from '@/stores/useWorkoutStore'
+import { useNutritionStore } from '@/stores/useNutritionStore'
+import { finishOnboarding } from '@/stores/onboardingBootstrap'
 import {
   calculateBmr,
   calculateTdeeBreakdown,
@@ -187,11 +190,21 @@ export default function ResultScreen() {
   }, [draft])
 
   const handleStart = useCallback(async () => {
-    await completeOnboarding()
-    const currentError = useUserStore.getState().error
-    if (!currentError) {
-      router.replace('/(tabs)')
+    const result = await finishOnboarding({
+      completeOnboarding,
+      getUserError: () => useUserStore.getState().error,
+      generateWorkoutPlan: () => useWorkoutStore.getState().generatePlan(),
+      getWorkoutError: () => useWorkoutStore.getState().error,
+      generateMealPlan: (mealsPerDay) => useNutritionStore.getState().generateMealPlan(mealsPerDay),
+      getNutritionError: () => useNutritionStore.getState().error,
+    })
+    if (!result.ok) {
+      // Surface the first non-null error through useUserStore so the existing
+      // error rendering on this screen catches workout/nutrition failures too.
+      useUserStore.setState({ error: result.error })
+      return
     }
+    router.replace('/(tabs)')
   }, [completeOnboarding, router])
 
   if (!results) {

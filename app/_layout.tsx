@@ -10,7 +10,8 @@ import {
   Rubik_700Bold,
 } from '@expo-google-fonts/rubik'
 import { initializeDatabase } from '@/db'
-import { useUserStore } from '@/stores'
+import { useUserStore, useWorkoutStore, useNutritionStore } from '@/stores'
+import { rehydratePlans } from '@/stores/onboardingBootstrap'
 import { isRTL } from '@/i18n'
 
 // Force RTL at module level — must happen before first render.
@@ -41,6 +42,16 @@ export default function RootLayout() {
 
         // 2. Load user profile from DB into Zustand store
         await useUserStore.getState().loadProfile()
+
+        // 3. Re-hydrate workout + nutrition stores so the tabs have real data
+        //    on cold start. No-op for users who haven't finished onboarding.
+        await rehydratePlans({
+          isOnboarded: useUserStore.getState().isOnboarded,
+          loadWorkoutPlan: () => useWorkoutStore.getState().loadPlan(),
+          loadActiveMealPlan: () => useNutritionStore.getState().loadActivePlan(),
+          loadTodaysLog: () => useNutritionStore.getState().loadTodaysLog(),
+          refreshMealTargets: () => useNutritionStore.getState().refreshMealTargets(),
+        })
 
         // RTL is forced at module level (above), no need to do it here
       } catch (error) {
