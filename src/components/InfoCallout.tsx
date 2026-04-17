@@ -19,11 +19,11 @@ export function InfoCallout({ title, body, testID }: InfoCalloutProps) {
     <View style={styles.container} testID={testID}>
       <View style={styles.accentStrip} />
       <View style={styles.content}>
-        <Icon name="info-outline" size={ICON_SIZE} color={colors.primary} />
         <View style={styles.textColumn}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.body}>{body}</Text>
         </View>
+        <Icon name="info-outline" size={ICON_SIZE} color={colors.primary} />
       </View>
     </View>
   )

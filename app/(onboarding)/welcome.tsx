@@ -46,7 +46,7 @@ export default function WelcomeScreen() {
       <View style={styles.footer}>
         <Button
           label={strings.cta}
-          icon={<Icon name="arrow-forward" size={20} color={colors.onPrimary} />}
+          icon={<Icon name="arrow-back" size={20} color={colors.onPrimary} />}
           onPress={() => router.push('/(onboarding)/goal')}
           variant="primary"
           size="lg"

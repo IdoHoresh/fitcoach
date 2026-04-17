@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { colors, fontSize, fontWeight, spacing } from '@/theme'
 import { t } from '@/i18n'
 import { useUserStore } from '@/stores/useUserStore'
@@ -25,6 +26,7 @@ const GOAL_META: Record<
 
 export default function GoalScreen() {
   const router = useRouter()
+  const insets = useSafeAreaInsets()
   const strings = t().onboarding.goal
   const commonStrings = t().onboarding.common
   const updateDraft = useUserStore((s) => s.updateDraft)
@@ -41,7 +43,7 @@ export default function GoalScreen() {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { paddingTop: insets.top }]}>
       <ScrollView
         style={styles.scroll}
         contentContainerStyle={styles.scrollContent}
