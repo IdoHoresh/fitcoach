@@ -2,10 +2,11 @@
  * Open Food Facts service tests.
  *
  * normalizeOffProduct is a pure function — tested directly.
+ * retryOnNetworkError is a pure helper — tested directly.
  * fetchOffProduct does network I/O — verified manually on device.
  */
 
-import { normalizeOffProduct } from './open-food-facts'
+import { normalizeOffProduct, retryOnNetworkError, OffNetworkError } from './open-food-facts'
 
 // ── Fixtures ──────────────────────────────────────────────────────────
 
@@ -157,5 +158,87 @@ describe('normalizeOffProduct()', () => {
     expect(food.fatPer100g).toBe(0)
     expect(food.carbsPer100g).toBe(0)
     expect(isPartial).toBe(true)
+  })
+})
+
+// ── retryOnNetworkError ───────────────────────────────────────────────
+
+describe('retryOnNetworkError()', () => {
+  beforeEach(() => {
+    jest.useFakeTimers()
+  })
+
+  afterEach(() => {
+    jest.useRealTimers()
+  })
+
+  it('returns result on first-call success (zero retries fired)', async () => {
+    const fn = jest.fn().mockResolvedValue('ok')
+
+    const result = await retryOnNetworkError(fn, { retries: 1, delayMs: 2000 })
+
+    expect(result).toBe('ok')
+    expect(fn).toHaveBeenCalledTimes(1)
+  })
+
+  it('does not retry when fn returns null (known-absent is not a transient failure)', async () => {
+    const fn = jest.fn().mockResolvedValue(null)
+
+    const result = await retryOnNetworkError(fn, { retries: 1, delayMs: 2000 })
+
+    expect(result).toBeNull()
+    expect(fn).toHaveBeenCalledTimes(1)
+  })
+
+  it('retries once on thrown error, returns success on second attempt', async () => {
+    const fn = jest
+      .fn()
+      .mockRejectedValueOnce(new Error('network down'))
+      .mockResolvedValueOnce('recovered')
+
+    const promise = retryOnNetworkError(fn, { retries: 1, delayMs: 2000 })
+    await jest.advanceTimersByTimeAsync(2000)
+    const result = await promise
+
+    expect(result).toBe('recovered')
+    expect(fn).toHaveBeenCalledTimes(2)
+  })
+
+  it('throws OffNetworkError after retries exhausted', async () => {
+    const fn = jest.fn().mockRejectedValue(new Error('network down'))
+
+    const promise = retryOnNetworkError(fn, { retries: 1, delayMs: 2000 })
+    // Swallow the rejection so it doesn't crash the test runner while we advance timers
+    const caught = promise.catch((e) => e)
+    await jest.advanceTimersByTimeAsync(2000)
+    const error = await caught
+
+    expect(error).toBeInstanceOf(OffNetworkError)
+    expect(fn).toHaveBeenCalledTimes(2)
+  })
+
+  it('waits delayMs between attempts', async () => {
+    const fn = jest.fn().mockRejectedValueOnce(new Error('first fail')).mockResolvedValueOnce('ok')
+
+    const promise = retryOnNetworkError(fn, { retries: 1, delayMs: 2000 })
+
+    // Before advancing timers, second attempt must not have fired yet
+    await Promise.resolve() // let the first rejection settle
+    expect(fn).toHaveBeenCalledTimes(1)
+
+    await jest.advanceTimersByTimeAsync(1999)
+    expect(fn).toHaveBeenCalledTimes(1)
+
+    await jest.advanceTimersByTimeAsync(1)
+    await promise
+    expect(fn).toHaveBeenCalledTimes(2)
+  })
+
+  it('OffNetworkError.name === "OffNetworkError" and is instanceof Error', () => {
+    const err = new OffNetworkError('test')
+    expect(err.name).toBe('OffNetworkError')
+    expect(err).toBeInstanceOf(Error)
+    expect(err).toBeInstanceOf(OffNetworkError)
+    expect(err.message).toBe('test')
   })
 })

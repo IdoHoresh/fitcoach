@@ -257,6 +257,62 @@ export const mesocycleStateSchema = z.object({
   startDate: isoDateSchema,
 })
 
+/**
+ * Validates manual food creation input (used when OFF 404s and the user
+ * fills the fallback form). Messages are i18n-key tokens so the UI layer
+ * resolves them to Hebrew — the schema stays locale-agnostic.
+ *
+ * Invariants enforced:
+ *   - nameHe non-empty after trim; nameEn optional, empty-string treated as absent
+ *   - macros clamped to physical bounds (kcal 0-900, p/f/c/fiber 0-100)
+ *   - protein + fat + carbs ≤ 101 (physics cap 100g + 1g rounding slack)
+ *   - serving fields are complete-or-both-absent (no half-filled serving)
+ */
+const emptyStringToUndefined = <T extends z.ZodType>(schema: T) =>
+  z.preprocess((v) => (typeof v === 'string' && v.trim() === '' ? undefined : v), schema)
+
+export const ManualFoodInputSchema = z
+  .object({
+    nameHe: z.string().trim().min(1, 'nameRequired'),
+    nameEn: emptyStringToUndefined(z.string().trim().optional()),
+    caloriesPer100g: z.number().min(0, 'valueOutOfRange').max(900, 'valueOutOfRange'),
+    proteinPer100g: z.number().min(0, 'valueOutOfRange').max(100, 'valueOutOfRange'),
+    fatPer100g: z.number().min(0, 'valueOutOfRange').max(100, 'valueOutOfRange'),
+    carbsPer100g: z.number().min(0, 'valueOutOfRange').max(100, 'valueOutOfRange'),
+    fiberPer100g: z.number().min(0, 'valueOutOfRange').max(100, 'valueOutOfRange').default(0),
+    servingName: emptyStringToUndefined(z.string().trim().optional()),
+    servingGrams: z.number().min(0.1, 'valueOutOfRange').max(5000, 'valueOutOfRange').optional(),
+  })
+  .refine((d) => d.proteinPer100g + d.fatPer100g + d.carbsPer100g <= 101, {
+    message: 'MACRO_SUM_TOO_HIGH',
+    path: ['proteinPer100g'],
+  })
+  .refine(
+    (d) =>
+      (d.servingName == null && d.servingGrams == null) ||
+      (d.servingName != null && d.servingGrams != null),
+    { message: 'SERVING_FIELDS_INCOMPLETE', path: ['servingName'] },
+  )
+
+export type ManualFoodInput = z.infer<typeof ManualFoodInputSchema>
+
+/**
+ * Computes how far the entered kcal diverges from the Atwater estimate
+ * (4·protein + 9·fat + 4·carbs). Returned `deltaPct` is the absolute
+ * relative deviation, consumed by the manual-food form as a soft warning
+ * threshold (>25% ≈ kJ entered as kcal on an Israeli label).
+ */
+export function computeAtwaterDelta(
+  kcal: number,
+  protein: number,
+  fat: number,
+  carbs: number,
+): { expected: number; deltaPct: number } {
+  const expected = 4 * protein + 9 * fat + 4 * carbs
+  if (expected === 0) return { expected: 0, deltaPct: 0 }
+  return { expected, deltaPct: Math.abs(kcal - expected) / expected }
+}
+
 // ── Validation helper ───────────────────────────────────────────────
 
 export interface ValidationResult<T> {

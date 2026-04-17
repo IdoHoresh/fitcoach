@@ -2,6 +2,8 @@ import {
   workoutLogSchema,
   mesocycleStateSchema,
   userProfileSchema,
+  ManualFoodInputSchema,
+  computeAtwaterDelta,
   validateInput,
 } from './validation'
 
@@ -296,5 +298,201 @@ describe('mesocycleStateSchema', () => {
     const { isDeloadWeek: _, ...noDeload } = VALID_MESOCYCLE_STATE
     const result = validateInput(mesocycleStateSchema, noDeload)
     expect(result.success).toBe(false)
+  })
+})
+
+// ── ManualFoodInputSchema ────────────────────────────────────────────
+
+const VALID_MANUAL_FOOD = {
+  nameHe: 'פתיבר חלבון שוקולד',
+  nameEn: 'Protein Bar Chocolate',
+  caloriesPer100g: 350,
+  proteinPer100g: 30,
+  fatPer100g: 10,
+  carbsPer100g: 40,
+  fiberPer100g: 5,
+}
+
+describe('ManualFoodInputSchema', () => {
+  it('accepts minimal valid input (name + 4 macros)', () => {
+    const minimal = {
+      nameHe: 'מוצר',
+      caloriesPer100g: 200,
+      proteinPer100g: 10,
+      fatPer100g: 5,
+      carbsPer100g: 30,
+    }
+    const result = validateInput(ManualFoodInputSchema, minimal)
+    expect(result.success).toBe(true)
+    expect(result.data?.fiberPer100g).toBe(0)
+  })
+
+  it('accepts a fully-populated valid input', () => {
+    const result = validateInput(ManualFoodInputSchema, VALID_MANUAL_FOOD)
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects empty nameHe (whitespace-only after trim)', () => {
+    const bad = { ...VALID_MANUAL_FOOD, nameHe: '   ' }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+  })
+
+  it('trims whitespace from nameHe', () => {
+    const padded = { ...VALID_MANUAL_FOOD, nameHe: '  מוצר  ' }
+    const result = validateInput(ManualFoodInputSchema, padded)
+    expect(result.success).toBe(true)
+    expect(result.data?.nameHe).toBe('מוצר')
+  })
+
+  it('defaults fiberPer100g to 0 when absent', () => {
+    const { fiberPer100g: _fiber, ...noFiber } = VALID_MANUAL_FOOD
+    const result = validateInput(ManualFoodInputSchema, noFiber)
+    expect(result.success).toBe(true)
+    expect(result.data?.fiberPer100g).toBe(0)
+  })
+
+  it('rejects calories below 0', () => {
+    const bad = { ...VALID_MANUAL_FOOD, caloriesPer100g: -1 }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects calories above 900', () => {
+    const bad = { ...VALID_MANUAL_FOOD, caloriesPer100g: 901 }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects protein above 100', () => {
+    const bad = { ...VALID_MANUAL_FOOD, proteinPer100g: 101 }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects fat above 100', () => {
+    const bad = { ...VALID_MANUAL_FOOD, fatPer100g: 101 }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects carbs above 100', () => {
+    const bad = { ...VALID_MANUAL_FOOD, carbsPer100g: 101 }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects p+f+c > 101 with MACRO_SUM_TOO_HIGH token', () => {
+    const bad = { ...VALID_MANUAL_FOOD, proteinPer100g: 40, fatPer100g: 35, carbsPer100g: 30 }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+    expect(result.errors.some((e) => e.includes('MACRO_SUM_TOO_HIGH'))).toBe(true)
+  })
+
+  it('accepts p+f+c === 101 (1g rounding slack boundary)', () => {
+    const boundary = { ...VALID_MANUAL_FOOD, proteinPer100g: 34, fatPer100g: 32, carbsPer100g: 35 }
+    const result = validateInput(ManualFoodInputSchema, boundary)
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts p+f+c === 100 (pure sugar: 0/0/100)', () => {
+    const pureSugar = {
+      nameHe: 'סוכר',
+      caloriesPer100g: 400,
+      proteinPer100g: 0,
+      fatPer100g: 0,
+      carbsPer100g: 100,
+    }
+    const result = validateInput(ManualFoodInputSchema, pureSugar)
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts both serving fields filled', () => {
+    const withServing = { ...VALID_MANUAL_FOOD, servingName: 'יחידה', servingGrams: 40 }
+    const result = validateInput(ManualFoodInputSchema, withServing)
+    expect(result.success).toBe(true)
+    expect(result.data?.servingName).toBe('יחידה')
+    expect(result.data?.servingGrams).toBe(40)
+  })
+
+  it('accepts both serving fields blank', () => {
+    const result = validateInput(ManualFoodInputSchema, VALID_MANUAL_FOOD)
+    expect(result.success).toBe(true)
+    expect(result.data?.servingName).toBeUndefined()
+    expect(result.data?.servingGrams).toBeUndefined()
+  })
+
+  it('rejects servingName filled without servingGrams (SERVING_FIELDS_INCOMPLETE)', () => {
+    const bad = { ...VALID_MANUAL_FOOD, servingName: 'יחידה' }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+    expect(result.errors.some((e) => e.includes('SERVING_FIELDS_INCOMPLETE'))).toBe(true)
+  })
+
+  it('rejects servingGrams filled without servingName (SERVING_FIELDS_INCOMPLETE)', () => {
+    const bad = { ...VALID_MANUAL_FOOD, servingGrams: 40 }
+    const result = validateInput(ManualFoodInputSchema, bad)
+    expect(result.success).toBe(false)
+    expect(result.errors.some((e) => e.includes('SERVING_FIELDS_INCOMPLETE'))).toBe(true)
+  })
+
+  it('treats empty-string servingName as absent (both blank → accepted)', () => {
+    const withEmptyName = { ...VALID_MANUAL_FOOD, servingName: '', servingGrams: undefined }
+    const result = validateInput(ManualFoodInputSchema, withEmptyName)
+    expect(result.success).toBe(true)
+    expect(result.data?.servingName).toBeUndefined()
+  })
+
+  it('accepts nameEn blank (empty string → undefined)', () => {
+    const noEn = { ...VALID_MANUAL_FOOD, nameEn: '' }
+    const result = validateInput(ManualFoodInputSchema, noEn)
+    expect(result.success).toBe(true)
+    expect(result.data?.nameEn).toBeUndefined()
+  })
+
+  it('accepts nameEn missing entirely', () => {
+    const { nameEn: _en, ...noEn } = VALID_MANUAL_FOOD
+    const result = validateInput(ManualFoodInputSchema, noEn)
+    expect(result.success).toBe(true)
+    expect(result.data?.nameEn).toBeUndefined()
+  })
+})
+
+// ── computeAtwaterDelta ──────────────────────────────────────────────
+
+describe('computeAtwaterDelta()', () => {
+  it('returns 0 delta when kcal matches Atwater estimate exactly', () => {
+    // 4*10 + 9*5 + 4*20 = 40 + 45 + 80 = 165 kcal
+    const result = computeAtwaterDelta(165, 10, 5, 20)
+    expect(result.expected).toBe(165)
+    expect(result.deltaPct).toBe(0)
+  })
+
+  it('returns ~0.25 delta when kcal is 25% above expected', () => {
+    // expected = 165 kcal, entered = 206.25 (25% above)
+    const result = computeAtwaterDelta(206.25, 10, 5, 20)
+    expect(result.expected).toBe(165)
+    expect(result.deltaPct).toBeCloseTo(0.25, 4)
+  })
+
+  it('returns ~3 delta when kJ entered as kcal (kJ ≈ 4.184 × kcal)', () => {
+    // Real label: 165 kcal / ~690 kJ — user mistakenly types kJ (690) into kcal field
+    const result = computeAtwaterDelta(690, 10, 5, 20)
+    expect(result.expected).toBe(165)
+    expect(result.deltaPct).toBeGreaterThan(3) // far above the 0.25 warn threshold
+  })
+
+  it('returns { expected: 0, deltaPct: 0 } when all macros are 0', () => {
+    // Water, salt, plain coffee, erythritol — all legitimately 0 across the board
+    const result = computeAtwaterDelta(0, 0, 0, 0)
+    expect(result.expected).toBe(0)
+    expect(result.deltaPct).toBe(0)
+  })
+
+  it('handles kcal below expected as absolute delta (not signed)', () => {
+    // expected = 165, entered = 100 — delta = |100-165|/165 ≈ 0.394
+    const result = computeAtwaterDelta(100, 10, 5, 20)
+    expect(result.expected).toBe(165)
+    expect(result.deltaPct).toBeCloseTo(0.394, 2)
   })
 })

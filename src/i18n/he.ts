@@ -535,6 +535,39 @@ export const he = {
     permissionBody: 'FitCoach צריך גישה למצלמה כדי לסרוק ברקודים',
     permissionOpenSettings: 'פתח הגדרות',
     tryAgain: 'נסה שוב',
+    notFoundCreate: 'צור מוצר חדש',
+  },
+
+  // ── Manual food creation (barcode fallback form) ──
+  manualFood: {
+    title: 'יצירת מוצר ידני',
+    barcodeLabel: 'ברקוד',
+    nameHeLabel: 'שם בעברית',
+    nameHePlaceholder: 'לדוגמה: פתיבר חלבון שוקולד',
+    nameEnLabel: 'שם באנגלית (לא חובה)',
+    nameEnPlaceholder: 'לדוגמה: Protein Bar Chocolate',
+    per100gHeader: 'ערכים ל-100 גרם',
+    caloriesLabel: 'קלוריות',
+    proteinLabel: 'חלבון (גרם)',
+    fatLabel: 'שומן (גרם)',
+    carbsLabel: 'פחמימות (גרם)',
+    fiberLabel: 'סיבים תזונתיים (גרם, לא חובה)',
+    servingSectionLabel: 'גודל מנה נוסף (לא חובה)',
+    servingNameLabel: 'שם המנה',
+    servingNamePlaceholder: 'לדוגמה: יחידה / פרוסה / כוס',
+    servingGramsLabel: 'משקל בגרמים',
+    submitButton: 'שמור מוצר',
+    cancelButton: 'ביטול',
+    atwaterWarning:
+      'הקלוריות נראות חריגות ביחס למאקרו — ייתכן שהכנסת kJ במקום kcal. בדוק את האריזה.',
+    errors: {
+      nameRequired: 'שם בעברית נדרש',
+      macroSumTooHigh:
+        'סכום חלבון + שומן + פחמימות לא יכול לעבור 100 גרם ל-100 גרם מוצר. ייתכן שקראת את עמודת "ליחידה" במקום "ל-100 גרם".',
+      servingFieldsIncomplete: 'מלא שם ומשקל, או השאר את שני השדות ריקים',
+      numberInvalid: 'הכנס מספר תקין',
+      valueOutOfRange: 'הערך מחוץ לטווח המותר',
+    },
   },
 } as const
 

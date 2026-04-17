@@ -528,5 +528,38 @@ export const en: TranslationKeys = {
     permissionBody: 'FitCoach needs camera access to scan barcodes',
     permissionOpenSettings: 'Open Settings',
     tryAgain: 'Try again',
+    notFoundCreate: 'Create new product',
+  },
+
+  // ── Manual food creation (barcode fallback form) ──
+  manualFood: {
+    title: 'Create product manually',
+    barcodeLabel: 'Barcode',
+    nameHeLabel: 'Hebrew name',
+    nameHePlaceholder: 'e.g. Chocolate Protein Bar',
+    nameEnLabel: 'English name (optional)',
+    nameEnPlaceholder: 'e.g. Protein Bar Chocolate',
+    per100gHeader: 'Values per 100g',
+    caloriesLabel: 'Calories',
+    proteinLabel: 'Protein (g)',
+    fatLabel: 'Fat (g)',
+    carbsLabel: 'Carbs (g)',
+    fiberLabel: 'Fiber (g, optional)',
+    servingSectionLabel: 'Additional serving size (optional)',
+    servingNameLabel: 'Serving name',
+    servingNamePlaceholder: 'e.g. piece / slice / cup',
+    servingGramsLabel: 'Weight in grams',
+    submitButton: 'Save product',
+    cancelButton: 'Cancel',
+    atwaterWarning:
+      'Calories look unusual vs. macros — you may have entered kJ instead of kcal. Check the package.',
+    errors: {
+      nameRequired: 'Hebrew name is required',
+      macroSumTooHigh:
+        'Protein + fat + carbs cannot exceed 100g per 100g of product. You may have read the "per serving" column instead of "per 100g".',
+      servingFieldsIncomplete: 'Fill both name and weight, or leave both blank',
+      numberInvalid: 'Enter a valid number',
+      valueOutOfRange: 'Value is out of range',
+    },
   },
 } as const
