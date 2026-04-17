@@ -30,6 +30,11 @@ export const en: TranslationKeys = {
   },
 
   onboarding: {
+    common: {
+      stepOf: 'Step {step} of {total}',
+      continue: 'Continue',
+      didYouKnow: 'Did you know?',
+    },
     welcome: {
       title: 'Gibor',
       subtitle: 'Science-based personal fitness coach',
@@ -39,9 +44,15 @@ export const en: TranslationKeys = {
     },
     goal: {
       title: "What's your goal?",
+      subtitle: 'Personalization of your training and nutrition plan starts here.',
       muscleGain: 'Build Muscle',
+      muscleGainDesc: 'Increase muscle mass and improve physical strength',
       fatLoss: 'Lose Fat',
+      fatLossDesc: 'Body recomposition and reducing body fat percentage',
       maintenance: 'Maintain',
+      maintenanceDesc: 'Maintain current weight and a healthy lifestyle',
+      insight:
+        'Choosing the right goal lets us calibrate your macronutrients to gram-level precision, accelerating results by 40%.',
     },
     bodyStats: {
       title: 'Body Stats',

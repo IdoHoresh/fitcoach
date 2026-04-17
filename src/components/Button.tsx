@@ -13,7 +13,6 @@ import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
-import { isRTL } from '@/hooks/rtl'
 
 const DISABLED_OPACITY = 0.5
 
@@ -28,6 +27,8 @@ interface ButtonProps {
   disabled?: boolean
   loading?: boolean
   icon?: ReactNode
+  /** Ambient teal glow shadow — primary CTAs on hero/onboarding screens. */
+  glow?: boolean
   testID?: string
 }
 
@@ -49,7 +50,7 @@ const VARIANT_STYLES: Record<ButtonVariant, ViewStyle> = {
 }
 
 const VARIANT_TEXT_COLORS: Record<ButtonVariant, string> = {
-  primary: colors.textPrimary,
+  primary: colors.onPrimary,
   secondary: colors.textPrimary,
   outline: colors.textPrimary,
   ghost: colors.primary,
@@ -77,6 +78,7 @@ export function Button({
   disabled = false,
   loading = false,
   icon,
+  glow = false,
   testID,
 }: ButtonProps) {
   const isDisabled = disabled || loading
@@ -98,6 +100,7 @@ export function Button({
         styles.base,
         VARIANT_STYLES[variant],
         SIZE_STYLES[size],
+        glow && !isDisabled && styles.glow,
         isDisabled && styles.disabled,
         animatedStyle,
       ]}
@@ -135,10 +138,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   iconRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: spacing.sm,
+  },
+  glow: {
+    shadowColor: colors.primary,
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.28,
+    shadowRadius: 24,
+    elevation: 12,
   },
   disabled: {
     opacity: DISABLED_OPACITY,
