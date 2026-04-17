@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#dfe2eb",
+                    "tertiary-fixed": "#ffdadc",
+                    "tertiary-container": "#ffa5ae",
+                    "inverse-on-surface": "#2d3137",
+                    "secondary-fixed": "#e0e0ff",
+                    "surface-bright": "#353940",
+                    "on-background": "#dfe2eb",
+                    "on-error": "#690005",
+                    "surface": "#10141a",
+                    "on-tertiary": "#67001f",
+                    "outline-variant": "#3c4a46",
+                    "on-primary": "#003731",
+                    "background": "#10141a",
+                    "error": "#ffb4ab",
+                    "outline": "#859490",
+                    "secondary-container": "#2f3aa3",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#bdc2ff",
+                    "surface-container": "#1c2026",
+                    "primary-container": "#2dd4bf",
+                    "secondary": "#bdc2ff",
+                    "on-tertiary-fixed-variant": "#891933",
+                    "on-secondary-fixed-variant": "#2f3aa3",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "surface-container-low": "#181c22",
+                    "on-primary-fixed": "#00201c",
+                    "surface-variant": "#31353c",
+                    "on-tertiary-fixed": "#400010",
+                    "on-primary-container": "#00574d",
+                    "on-surface": "#dfe2eb",
+                    "on-tertiary-container": "#912038",
+                    "surface-dim": "#10141a",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#006b5f",
+                    "surface-container-highest": "#31353c",
+                    "on-secondary-fixed": "#000767",
+                    "primary-fixed": "#62fae3",
+                    "on-secondary-container": "#a8afff",
+                    "surface-container-lowest": "#0a0e14",
+                    "primary-fixed-dim": "#3cddc7",
+                    "surface-container-high": "#262a31",
+                    "on-primary-fixed-variant": "#005047",
+                    "primary": "#57f1db",
+                    "on-surface-variant": "#bacac5",
+                    "on-secondary": "#131e8c",
+                    "surface-tint": "#3cddc7",
+                    "tertiary": "#ffcdd1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Rubik", "sans-serif"],
+                    "body": ["Rubik", "sans-serif"],
+                    "label": ["Rubik", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Rubik', sans-serif; background-color: #10141a; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .day-button-active { background-color: #2dd4bf; color: #10141a; border-color: transparent; }
+        .day-button-inactive { background-color: #181c22; color: #9ca3af; border-color: #31353c; }
+        .glass-card { background: rgba(28, 32, 38, 0.7); backdrop-filter: blur(12px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background min-h-screen flex flex-col items-center">
+<!-- Top AppBar (from Shared Components) -->
+<header class="bg-[#181c22] text-[#2dd4bf] font-['Rubik'] font-bold text-right fixed top-0 left-0 w-full z-50 flex flex-row-reverse justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400">menu</span>
+<h1 class="text-xl font-bold text-[#2dd4bf] tracking-tight">גִּבּוֹר</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#2dd4bf]/20">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Portrait of a modern athlete with sharp features in low clinical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSNxGWlrEVnBmpc9Xz9hdSCeM_JvUtGSEF7VHX4uNYHmJd5DtWEERXgr4JNEdCyXCW9TfjhUrSnTI8tOgbJWFjvJgfsCl7dkEe32gPilSsxUNPLxj2rQRaQoa0JJe1Jmmtr2sLoECgBA36j_Bm9rzB1Fy0Ge65vCKAVQJNTmxhCIKdkJWOn_lDaTjhIErCeaqeYzcE_P71yqerL3MoutXt-xGHe43mpNlSL8cXnraRYikGjdDZv1QAUIxJa-4xPh9kHhQ2fn2C-5Y"/>
+</div>
+</header>
+<main class="w-full max-w-md mt-24 px-6 flex flex-col gap-10">
+<!-- Progress Bar -->
+<div class="w-full space-y-3">
+<div class="flex justify-between items-end">
+<span class="text-primary font-bold text-lg tracking-wider">6/11</span>
+<span class="text-slate-500 text-sm font-medium">שלב התוכנית</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-[54%] bg-gradient-to-l from-primary to-primary-container rounded-full shadow-[0_0_12px_rgba(45,212,191,0.3)]"></div>
+</div>
+</div>
+<!-- Title Section -->
+<section class="space-y-2">
+<h2 class="text-2xl md:text-3xl font-extrabold text-on-surface leading-tight">באילו ימים אתה רוצה להתאמן?</h2>
+<p class="text-slate-500 text-base">הגדרת הימים תעזור לנו לבנות לך לו"ז אופטימלי</p>
+</section>
+<!-- Day Selector Grid -->
+<div class="grid grid-cols-7 gap-2 rtl" dir="rtl">
+<!-- Sunday -->
+<button class="flex flex-col items-center justify-center aspect-[4/5] rounded-xl border day-button-inactive active:scale-95 transition-all">
+<span class="text-lg font-bold">א</span>
+</button>
+<!-- Monday (Active) -->
+<button class="flex flex-col items-center justify-center aspect-[4/5] rounded-xl border day-button-active active:scale-95 transition-all">
+<span class="text-lg font-bold">ב</span>
+</button>
+<!-- Tuesday (Active) -->
+<button class="flex flex-col items-center justify-center aspect-[4/5] rounded-xl border day-button-active active:scale-95 transition-all">
+<span class="text-lg font-bold">ג</span>
+</button>
+<!-- Wednesday -->
+<button class="flex flex-col items-center justify-center aspect-[4/5] rounded-xl border day-button-inactive active:scale-95 transition-all">
+<span class="text-lg font-bold">ד</span>
+</button>
+<!-- Thursday (Active) -->
+<button class="flex flex-col items-center justify-center aspect-[4/5] rounded-xl border day-button-active active:scale-95 transition-all">
+<span class="text-lg font-bold">ה</span>
+</button>
+<!-- Friday -->
+<button class="flex flex-col items-center justify-center aspect-[4/5] rounded-xl border day-button-inactive active:scale-95 transition-all">
+<span class="text-lg font-bold">ו</span>
+</button>
+<!-- Saturday -->
+<button class="flex flex-col items-center justify-center aspect-[4/5] rounded-xl border day-button-inactive active:scale-95 transition-all">
+<span class="text-lg font-bold">ש</span>
+</button>
+</div>
+<!-- Helper Text & Info Card -->
+<div class="space-y-6">
+<p class="text-center text-[#6B7280] font-medium text-sm">בחר 2-6 ימים</p>
+<div class="glass-card p-5 rounded-2xl border border-white/5 flex items-start gap-4">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div class="space-y-1">
+<h4 class="text-on-surface font-bold text-sm">עצת המומחים</h4>
+<p class="text-slate-400 text-xs leading-relaxed">מומלץ לשמור על לפחות יום מנוחה אחד בין אימונים עצימים כדי לאפשר לשריר התאוששות מלאה.</p>
+</div>
+</div>
+</div>
+<!-- Continue Button -->
+<div class="mt-auto pt-8 pb-32">
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary-container font-bold py-5 rounded-xl text-lg shadow-[0_8px_24px_rgba(45,212,191,0.15)] active:scale-95 transition-all duration-150">
+                המשך
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation (from Shared Components) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#10141a]/90 backdrop-blur-xl flex flex-row-reverse justify-around items-center px-4 pb-6 pt-2 rounded-t-2xl shadow-[0_-4px_24px_rgba(45,212,191,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Rubik'] text-[12px] font-medium mt-1">דף הבית</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2dd4bf] bg-[#2dd4bf]/10 rounded-xl px-4 py-1 transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-['Rubik'] text-[12px] font-medium mt-1">אימונים</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-['Rubik'] text-[12px] font-medium mt-1">תזונה</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Rubik'] text-[12px] font-medium mt-1">פרופיל</span>
+</a>
+</nav>
+</body></html>

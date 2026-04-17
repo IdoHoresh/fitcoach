@@ -11,7 +11,10 @@ export const colors = {
   primary: '#2DD4BF', // Teal — main CTA, active states
   primaryLight: '#57F1DB', // Lighter teal — hover, highlights
   primaryDark: '#14B8A6', // Deeper teal — pressed states
-  primaryTint: '#2DD4BF15', // Teal at ~8% opacity — selected backgrounds
+  primaryTint: '#2DD4BF15', // Teal at ~8% opacity — selected card backgrounds
+  primarySoft: 'rgba(45, 212, 191, 0.10)', // Teal at 10% — indicator halos, icon chips
+  primaryMuted: 'rgba(45, 212, 191, 0.40)', // Teal at 40% — accent strips on callouts
+  onPrimary: '#003731', // Darkest teal — text/icons on primary surfaces (WCAG AAA on #2DD4BF)
 
   // ── Semantic ──
   success: '#34D399', // Emerald — completed, on target
@@ -21,8 +24,10 @@ export const colors = {
 
   // ── Neutral (tonal layering, no hard borders) ──
   background: '#10141A', // Deep dark with blue undertone — canvas
+  surfaceContainerLow: '#181C22', // Subtle lift from canvas — selection cards, callouts
   surface: '#1C2026', // Slightly lighter — cards, panels
   surfaceElevated: '#262A31', // Elevated surfaces — modals, dropdowns
+  surfaceBright: '#353940', // Interaction layer — hover/active overlays
   border: '#3C4A46', // Subtle teal-tinted border (outline_variant)
 
   // ── Text (off-white to prevent halation on dark backgrounds) ──

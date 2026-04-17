@@ -9,6 +9,12 @@ export { ProgressBar } from './ProgressBar'
 export { MacroRing } from './MacroRing'
 export { StreakCounter } from './StreakCounter'
 export { RestTimer } from './RestTimer'
+export { Icon } from './Icon'
+export { AmbientOverlay } from './AmbientOverlay'
+export { SelectionCard } from './SelectionCard'
+export { StepProgressHeader } from './StepProgressHeader'
+export { InfoCallout } from './InfoCallout'
+export { BottomButtonBar } from './BottomButtonBar'
 export {
   OnboardingLayout,
   OnboardingTitle,

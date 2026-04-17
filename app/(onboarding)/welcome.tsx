@@ -1,43 +1,19 @@
-import { useEffect } from 'react'
 import { View, Text, Pressable, StyleSheet } from 'react-native'
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withRepeat,
-  withSequence,
-  withTiming,
-} from 'react-native-reanimated'
-import { Ionicons } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
-import { colors, spacing, fontSize, fontWeight, fontFamily, borderRadius } from '@/theme'
+import { colors, spacing, fontSize, fontWeight, borderRadius } from '@/theme'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
-import { Button } from '@/components'
+import { AmbientOverlay, Button, Icon } from '@/components'
 
-const PULSE_SCALE = 1.03
-const PULSE_DURATION = 1500
-const BRAND_FONT_SIZE = 56 // One-off display size for brand name — not a theme token
-const APP_ICON_SIZE = 72
-const BARBELL_ICON_SIZE = 32
+const HERO_CARD_SIZE = 128
+const HERO_ICON_SIZE = 72
+const HERO_CARD_RADIUS = 28
+const HERO_GLOW_OPACITY = 0.18
+const BRAND_SIZE = 48
+const DOT_HEIGHT = 4
 
 export default function WelcomeScreen() {
   const router = useRouter()
   const strings = t().onboarding.welcome
-  const pulseScale = useSharedValue(1)
-
-  useEffect(() => {
-    pulseScale.value = withRepeat(
-      withSequence(
-        withTiming(PULSE_SCALE, { duration: PULSE_DURATION }),
-        withTiming(1, { duration: PULSE_DURATION }),
-      ),
-      -1,
-    )
-  }, [pulseScale])
-
-  const pulseStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: pulseScale.value }],
-  }))
 
   const handleSignIn = () => {
     // TODO: wire to auth flow
@@ -45,31 +21,39 @@ export default function WelcomeScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.appIconContainer}>
-          <Ionicons name="barbell" size={BARBELL_ICON_SIZE} color={colors.textInverse} />
+      <AmbientOverlay />
+
+      <View style={styles.hero}>
+        <View style={styles.heroIconWrap}>
+          <View style={styles.heroGlow} pointerEvents="none" />
+          <View style={styles.heroCard}>
+            <Icon name="fitness-center" size={HERO_ICON_SIZE} color={colors.primary} />
+          </View>
         </View>
-        <Text style={styles.brandName}>{strings.title}</Text>
-        <Text style={styles.tagline}>{strings.subtitle}</Text>
+
+        <View style={styles.textBlock}>
+          <Text style={styles.brandName}>{strings.title}</Text>
+          <Text style={styles.tagline}>{strings.subtitle}</Text>
+        </View>
+
+        <View style={styles.dotsRow}>
+          <View style={[styles.dot, styles.dotActive]} />
+          <View style={styles.dot} />
+          <View style={styles.dot} />
+        </View>
       </View>
 
       <View style={styles.footer}>
-        <Animated.View style={[styles.ctaWrapper, pulseStyle]}>
-          <Button
-            label={strings.cta}
-            icon={
-              <Ionicons
-                name={isRTL() ? 'arrow-back' : 'arrow-forward'}
-                size={20}
-                color={colors.textPrimary}
-              />
-            }
-            onPress={() => router.push('/(onboarding)/goal')}
-            size="lg"
-            testID="welcome-cta"
-          />
-        </Animated.View>
-        <Pressable onPress={handleSignIn} testID="welcome-auth-link">
+        <Button
+          label={strings.cta}
+          icon={<Icon name="arrow-back" size={20} color={colors.onPrimary} />}
+          onPress={() => router.push('/(onboarding)/goal')}
+          variant="primary"
+          size="lg"
+          glow
+          testID="welcome-cta"
+        />
+        <Pressable onPress={handleSignIn} testID="welcome-auth-link" hitSlop={12}>
           <Text style={styles.authText}>
             {strings.authPrompt} <Text style={styles.authLink}>{strings.authLink}</Text>
           </Text>
@@ -83,48 +67,76 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    padding: spacing.xl,
+    paddingHorizontal: spacing.xl,
   },
-  content: {
+  hero: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    gap: spacing.lg,
+    justifyContent: 'center',
+    gap: spacing.xl,
   },
-  appIconContainer: {
-    width: APP_ICON_SIZE,
-    height: APP_ICON_SIZE,
-    borderRadius: borderRadius.xl,
-    backgroundColor: colors.primary,
+  heroIconWrap: {
+    width: HERO_CARD_SIZE,
+    height: HERO_CARD_SIZE,
     alignItems: 'center',
     justifyContent: 'center',
-    // Ambient glow (iOS only — Android elevation doesn't support colored shadows)
+  },
+  heroGlow: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: HERO_CARD_RADIUS,
+    backgroundColor: colors.primary,
+    opacity: HERO_GLOW_OPACITY,
+    transform: [{ scale: 1.4 }],
     shadowColor: colors.primary,
     shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.15,
-    shadowRadius: 20,
-    elevation: 8,
+    shadowOpacity: 0.8,
+    shadowRadius: 60,
+    elevation: 20,
+  },
+  heroCard: {
+    width: HERO_CARD_SIZE,
+    height: HERO_CARD_SIZE,
+    borderRadius: HERO_CARD_RADIUS,
+    backgroundColor: colors.surfaceElevated,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textBlock: {
+    alignItems: 'center',
+    gap: spacing.ms,
   },
   brandName: {
-    fontSize: BRAND_FONT_SIZE,
-    fontFamily: fontFamily.bold,
+    fontSize: BRAND_SIZE,
     fontWeight: fontWeight.bold,
     color: colors.textPrimary,
-    textAlign: 'center',
+    letterSpacing: -1,
   },
   tagline: {
-    fontSize: fontSize.md,
-    fontFamily: fontFamily.regular,
+    fontSize: fontSize.lg,
+    fontWeight: fontWeight.regular,
     color: colors.textSecondary,
     textAlign: 'center',
   },
-  footer: {
-    width: '100%',
-    gap: spacing.md,
-    paddingBottom: spacing.xxl,
+  dotsRow: {
+    flexDirection: 'row',
+    gap: spacing.sm,
+    marginTop: spacing.lg,
   },
-  ctaWrapper: {
-    width: '100%',
+  dot: {
+    height: DOT_HEIGHT,
+    width: DOT_HEIGHT * 2,
+    borderRadius: borderRadius.full,
+    backgroundColor: colors.border,
+    opacity: 0.4,
+  },
+  dotActive: {
+    width: DOT_HEIGHT * 8,
+    backgroundColor: colors.primary,
+    opacity: 1,
+  },
+  footer: {
+    gap: spacing.lg,
+    paddingBottom: spacing.xxl,
   },
   authText: {
     fontSize: fontSize.sm,

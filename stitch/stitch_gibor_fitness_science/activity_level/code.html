@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-surface": "#dfe2eb",
+                "tertiary-fixed": "#ffdadc",
+                "tertiary-container": "#ffa5ae",
+                "inverse-on-surface": "#2d3137",
+                "secondary-fixed": "#e0e0ff",
+                "surface-bright": "#353940",
+                "on-background": "#dfe2eb",
+                "on-error": "#690005",
+                "surface": "#10141a",
+                "on-tertiary": "#67001f",
+                "outline-variant": "#3c4a46",
+                "on-primary": "#003731",
+                "background": "#10141a",
+                "error": "#ffb4ab",
+                "outline": "#859490",
+                "secondary-container": "#2f3aa3",
+                "on-error-container": "#ffdad6",
+                "secondary-fixed-dim": "#bdc2ff",
+                "surface-container": "#1c2026",
+                "primary-container": "#2dd4bf",
+                "secondary": "#bdc2ff",
+                "on-tertiary-fixed-variant": "#891933",
+                "on-secondary-fixed-variant": "#2f3aa3",
+                "tertiary-fixed-dim": "#ffb2b9",
+                "surface-container-low": "#181c22",
+                "on-primary-fixed": "#00201c",
+                "surface-variant": "#31353c",
+                "on-tertiary-fixed": "#400010",
+                "on-primary-container": "#00574d",
+                "on-surface": "#dfe2eb",
+                "on-tertiary-container": "#912038",
+                "surface-dim": "#10141a",
+                "error-container": "#93000a",
+                "inverse-primary": "#006b5f",
+                "surface-container-highest": "#31353c",
+                "on-secondary-fixed": "#000767",
+                "primary-fixed": "#62fae3",
+                "on-secondary-container": "#a8afff",
+                "surface-container-lowest": "#0a0e14",
+                "primary-fixed-dim": "#3cddc7",
+                "surface-container-high": "#262a31",
+                "on-primary-fixed-variant": "#005047",
+                "primary": "#57f1db",
+                "on-surface-variant": "#bacac5",
+                "on-secondary": "#131e8c",
+                "surface-tint": "#3cddc7",
+                "tertiary": "#ffcdd1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Rubik", "Manrope"],
+                "body": ["Rubik", "Manrope"],
+                "label": ["Rubik", "Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #10141a;
+            font-family: 'Rubik', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface custom-scrollbar overflow-x-hidden selection:bg-primary-container/30">
+<!-- Top Navigation Bar (Simplified for transactional flow) -->
+<header class="flex flex-row-reverse justify-between items-center w-full px-6 py-4 fixed top-0 bg-[#181c22] z-50">
+<button class="text-slate-400 hover:bg-[#1c2026] p-2 rounded-xl transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="text-xl font-bold text-[#2dd4bf] tracking-tight font-['Rubik']">גִּבּוֹר</div>
+<div class="w-10 h-10 flex items-center justify-center">
+<!-- Placeholder for alignment balance -->
+</div>
+</header>
+<main class="min-h-screen pt-20 pb-32 px-6 flex flex-col max-w-md mx-auto">
+<!-- Progress Indicator -->
+<div class="mb-10 w-full">
+<div class="flex justify-between items-center mb-3">
+<span class="text-slate-500 font-medium text-sm">שלב 7 מתוך 11</span>
+<span class="text-primary font-bold text-sm tracking-wider">64%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-l from-primary to-primary-container w-[63.6%] rounded-full shadow-[0_0_12px_rgba(87,241,219,0.3)]"></div>
+</div>
+</div>
+<!-- Headline Section -->
+<section class="mb-10 text-right">
+<h1 class="text-3xl font-bold text-on-surface leading-tight mb-2">כמה אתה פעיל ביום?</h1>
+<p class="text-slate-400 text-lg">בחר את רמת הפעילות הממוצעת שלך כדי שנוכל להתאים לך תוכנית מדויקת.</p>
+</section>
+<!-- Section 1: Main Activity -->
+<section class="mb-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="work">work</span>
+<h2 class="text-lg font-bold text-on-surface">מה אתה עושה?</h2>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<!-- Option 1 -->
+<div class="group relative bg-[#181c22] p-4 rounded-xl cursor-pointer transition-all hover:bg-[#1c2026] active:scale-[0.98] border border-transparent">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-2xl">🪑</div>
+<div class="flex flex-col flex-1">
+<span class="font-bold text-on-surface">יושבני / משרדי</span>
+<span class="text-sm text-slate-500">עבודה מול מחשב, מעט תנועה במהלך היום</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-600 flex items-center justify-center transition-colors group-hover:border-primary/50"></div>
+</div>
+</div>
+<!-- Option 2 - Selected State -->
+<div class="group relative bg-[#1c2026] p-4 rounded-xl cursor-pointer transition-all border-2 border-primary shadow-[0_0_15px_rgba(45,212,191,0.08)] ring-1 ring-primary/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-2xl">🚶</div>
+<div class="flex flex-col flex-1">
+<span class="font-bold text-primary">פעיל באופן קל</span>
+<span class="text-sm text-slate-400">עבודה המשלבת הליכה או עמידה מרובה</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xs font-bold" data-icon="check" style="font-variation-settings: 'wght' 700">check</span>
+</div>
+</div>
+</div>
+<!-- Option 3 -->
+<div class="group relative bg-[#181c22] p-4 rounded-xl cursor-pointer transition-all hover:bg-[#1c2026] active:scale-[0.98] border border-transparent">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-2xl">🏃</div>
+<div class="flex flex-col flex-1">
+<span class="font-bold text-on-surface">פעיל</span>
+<span class="text-sm text-slate-500">עבודה פיזית מתונה או הליכה אינטנסיבית</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-600 flex items-center justify-center transition-colors group-hover:border-primary/50"></div>
+</div>
+</div>
+<!-- Option 4 -->
+<div class="group relative bg-[#181c22] p-4 rounded-xl cursor-pointer transition-all hover:bg-[#1c2026] active:scale-[0.98] border border-transparent">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-2xl">⚡</div>
+<div class="flex flex-col flex-1">
+<span class="font-bold text-on-surface">פעיל מאוד</span>
+<span class="text-sm text-slate-500">עבודה פיזית קשה ומאומצת רוב היום</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-600 flex items-center justify-center transition-colors group-hover:border-primary/50"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: After Work -->
+<section class="mb-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="history">history</span>
+<h2 class="text-lg font-bold text-on-surface">פעילות אחרי העבודה</h2>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-3 rounded-full bg-[#181c22] text-on-surface font-medium border border-outline-variant/20 hover:bg-[#1c2026] transition-all active:scale-95">
+                    אימונים (3+ בשבוע)
+                </button>
+<button class="px-5 py-3 rounded-full bg-primary/10 text-primary font-bold border border-primary/40 transition-all active:scale-95">
+                    הליכות ארוכות
+                </button>
+<button class="px-5 py-3 rounded-full bg-[#181c22] text-on-surface font-medium border border-outline-variant/20 hover:bg-[#1c2026] transition-all active:scale-95">
+                    ספורט מזדמן
+                </button>
+</div>
+</section>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background via-background to-transparent z-40">
+<button class="w-full py-5 bg-primary text-on-primary font-bold text-xl rounded-2xl shadow-[0_8px_32px_rgba(87,241,219,0.15)] active:scale-[0.97] transition-all">
+            המשך
+        </button>
+</div>
+</body></html>

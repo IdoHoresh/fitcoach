@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#dfe2eb",
+                        "tertiary-fixed": "#ffdadc",
+                        "tertiary-container": "#ffa5ae",
+                        "inverse-on-surface": "#2d3137",
+                        "secondary-fixed": "#e0e0ff",
+                        "surface-bright": "#353940",
+                        "on-background": "#dfe2eb",
+                        "on-error": "#690005",
+                        "surface": "#10141a",
+                        "on-tertiary": "#67001f",
+                        "outline-variant": "#3c4a46",
+                        "on-primary": "#003731",
+                        "background": "#10141a",
+                        "error": "#ffb4ab",
+                        "outline": "#859490",
+                        "secondary-container": "#2f3aa3",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "surface-container": "#1c2026",
+                        "primary-container": "#2dd4bf",
+                        "secondary": "#bdc2ff",
+                        "on-tertiary-fixed-variant": "#891933",
+                        "on-secondary-fixed-variant": "#2f3aa3",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-container-low": "#181c22",
+                        "on-primary-fixed": "#00201c",
+                        "surface-variant": "#31353c",
+                        "on-tertiary-fixed": "#400010",
+                        "on-primary-container": "#00574d",
+                        "on-surface": "#dfe2eb",
+                        "on-tertiary-container": "#912038",
+                        "surface-dim": "#10141a",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#006b5f",
+                        "surface-container-highest": "#31353c",
+                        "on-secondary-fixed": "#000767",
+                        "primary-fixed": "#62fae3",
+                        "on-secondary-container": "#a8afff",
+                        "surface-container-lowest": "#0a0e14",
+                        "primary-fixed-dim": "#3cddc7",
+                        "surface-container-high": "#262a31",
+                        "on-primary-fixed-variant": "#005047",
+                        "primary": "#57f1db",
+                        "on-surface-variant": "#bacac5",
+                        "on-secondary": "#131e8c",
+                        "surface-tint": "#3cddc7",
+                        "tertiary": "#ffcdd1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Rubik", "sans-serif"],
+                        "body": ["Rubik", "sans-serif"],
+                        "label": ["Rubik", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Rubik', sans-serif; background-color: #10141a; color: #dfe2eb; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .active-glow { box-shadow: 0 0 15px rgba(251, 191, 36, 0.15); border: 1px solid rgba(251, 191, 36, 0.3); }
+        .ltr-num { direction: ltr; display: inline-block; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-24">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#181c22] flex flex-row-reverse justify-between items-center w-full px-6 py-4 sticky top-0 z-40">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#2dd4bf]">fitness_center</span>
+<span class="text-xl font-bold text-[#2dd4bf] tracking-tight">גִּבּוֹר</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-high px-3 py-1 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-400 text-sm" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="text-sm font-bold ltr-num">05:23</span>
+</div>
+<button class="material-symbols-outlined text-slate-400 hover:bg-[#1c2026] p-2 rounded-full transition-colors">close</button>
+</div>
+</header>
+<main class="px-4 py-6 space-y-6">
+<!-- Guidance Banner -->
+<div class="bg-[#2dd4bf]/10 rounded-xl p-4 flex items-start gap-4">
+<span class="material-symbols-outlined text-[#2dd4bf] mt-1">info</span>
+<div class="flex flex-col">
+<span class="text-slate-400 text-sm leading-relaxed">האימון הראשון שלך! השבוע הוא שבוע היכרות, המטרה היא להבין את התנועה ולמצוא את המשקלים הנכונים עבורך.</span>
+</div>
+</div>
+<!-- Current Exercise Card -->
+<section class="bg-[#1c2026] rounded-2xl p-5 space-y-6">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="bg-[#2dd4bf] text-[#003731] text-[10px] font-extrabold px-2 py-0.5 rounded-full">1</span>
+<h2 class="text-xl font-bold text-on-surface">סקוואט בגובלט</h2>
+</div>
+<p class="text-slate-400 text-sm mr-6">Dumbbell Goblet Squat</p>
+</div>
+<button class="text-[#2dd4bf] bg-[#2dd4bf]/10 p-2 rounded-xl">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+</div>
+<!-- Set Header Labels -->
+<div class="grid grid-cols-4 px-4 text-[12px] font-medium text-slate-500 text-center">
+<span>סט</span>
+<span>ק"ג</span>
+<span>חזרות</span>
+<span>אישור</span>
+</div>
+<!-- Set Rows -->
+<div class="space-y-3">
+<!-- Set 1 (Confirmed) -->
+<div class="grid grid-cols-4 items-center bg-emerald-500/10 border border-emerald-500/20 py-3 rounded-xl px-4">
+<span class="text-sm font-bold text-emerald-400 text-center">1</span>
+<span class="text-sm font-medium text-on-surface text-center ltr-num">12.5</span>
+<span class="text-sm font-medium text-on-surface text-center ltr-num">12</span>
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-emerald-400" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Rest Timer Inline -->
+<div class="flex items-center justify-center py-2 relative">
+<div class="absolute inset-x-0 top-1/2 border-t border-dashed border-slate-700"></div>
+<div class="relative bg-[#1c2026] px-6 flex items-center gap-3">
+<div class="relative w-10 h-10 flex items-center justify-center">
+<svg class="absolute inset-0 w-full h-full -rotate-90">
+<circle class="text-slate-800" cx="20" cy="20" fill="none" r="18" stroke="currentColor" stroke-width="2.5"></circle>
+<circle class="text-[#2dd4bf]" cx="20" cy="20" fill="none" r="18" stroke="currentColor" stroke-dasharray="113" stroke-dashoffset="40" stroke-width="2.5"></circle>
+</svg>
+<span class="material-symbols-outlined text-[#2dd4bf] text-sm">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">זמן מנוחה</span>
+<span class="text-[#2dd4bf] font-bold ltr-num">01:45</span>
+</div>
+</div>
+</div>
+<!-- Set 2 (Active) -->
+<div class="grid grid-cols-4 items-center bg-surface-container-high active-glow py-3 rounded-xl px-4">
+<span class="text-sm font-bold text-amber-400 text-center">2</span>
+<div class="flex justify-center">
+<input class="w-14 bg-surface text-center border-none rounded-lg text-sm font-bold p-1 text-on-surface focus:ring-1 focus:ring-amber-400 ltr-num" type="text" value="12.5"/>
+</div>
+<div class="flex justify-center">
+<input class="w-14 bg-surface text-center border-none rounded-lg text-sm font-bold p-1 text-on-surface focus:ring-1 focus:ring-amber-400 ltr-num" type="text" value="12"/>
+</div>
+<div class="flex justify-center">
+<button class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center border border-slate-700">
+<span class="material-symbols-outlined text-slate-500 text-sm">check</span>
+</button>
+</div>
+</div>
+<!-- Set 3 (Upcoming) -->
+<div class="grid grid-cols-4 items-center bg-surface-container-low py-3 rounded-xl px-4 opacity-50">
+<span class="text-sm font-bold text-slate-500 text-center">3</span>
+<span class="text-sm font-medium text-slate-500 text-center ltr-num">12.5</span>
+<span class="text-sm font-medium text-slate-500 text-center ltr-num">12</span>
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-slate-700">radio_button_unchecked</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-4 flex gap-3">
+<button class="flex-1 bg-surface-container-highest text-on-surface py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>הוסף סט</span>
+</button>
+<button class="w-12 bg-surface-container-highest text-on-surface rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</section>
+<!-- Up Next Exercise Preview -->
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between border-r-4 border-slate-600">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 font-bold uppercase">התרגיל הבא</span>
+<span class="font-bold">לחיצת רגליים (Leg Press)</span>
+</div>
+<span class="material-symbols-outlined text-slate-600">chevron_left</span>
+</div>
+</main>
+<!-- Floating Stats & Finish Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-[#10141a]/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(45,212,191,0.06)] px-4 pb-8 pt-4">
+<div class="flex items-center justify-between gap-4 max-w-md mx-auto">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs text-slate-400 font-medium">התקדמות:</span>
+<span class="text-xs font-bold text-on-surface ltr-num">0/7</span>
+</div>
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-primary w-1/12 rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="text-slate-400 text-xs font-bold px-4 py-2 hover:text-[#57f1db] transition-colors">
+                    סיום מוקדם
+                </button>
+<button class="bg-[#2dd4bf] text-[#003731] font-bold px-6 py-3 rounded-xl flex items-center gap-2 shadow-lg shadow-[#2dd4bf]/20 active:scale-95 transition-all">
+<span>סיום אימון</span>
+<span class="material-symbols-outlined">celebration</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

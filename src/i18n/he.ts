@@ -30,6 +30,11 @@ export const he = {
 
   // ── Onboarding ──
   onboarding: {
+    common: {
+      stepOf: 'שלב {step} מתוך {total}',
+      continue: 'המשך',
+      didYouKnow: 'הידעת?',
+    },
     welcome: {
       title: 'גִּבּוֹר',
       subtitle: 'מאמן כושר אישי מבוסס מדע',
@@ -39,9 +44,15 @@ export const he = {
     },
     goal: {
       title: 'מה המטרה שלך?',
-      muscleGain: 'עלייה במסת שריר',
-      fatLoss: 'ירידה באחוזי שומן',
+      subtitle: 'התאמה אישית של תוכנית האימונים והתזונה שלך מתחילה כאן.',
+      muscleGain: 'בניית שריר',
+      muscleGainDesc: 'הגדלת מסת שריר ושיפור הכוח הפיזי',
+      fatLoss: 'הורדת שומן',
+      fatLossDesc: 'חיטוב הגוף והפחתת אחוז השומן',
       maintenance: 'שמירה על המצב',
+      maintenanceDesc: 'שמירה על משקל נוכחי ואורח חיים בריא',
+      insight:
+        'בחירת המטרה הנכונה מאפשרת לנו להתאים את המאקרו-נוטריאנטים שלך לרמת דיוק של גרמים בודדים, מה שמאיץ את התוצאות ב-40%.',
     },
     bodyStats: {
       title: 'נתוני גוף',

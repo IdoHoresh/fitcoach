@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&amp;family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#dfe2eb",
+                    "tertiary-fixed": "#ffdadc",
+                    "tertiary-container": "#ffa5ae",
+                    "inverse-on-surface": "#2d3137",
+                    "secondary-fixed": "#e0e0ff",
+                    "surface-bright": "#353940",
+                    "on-background": "#dfe2eb",
+                    "on-error": "#690005",
+                    "surface": "#10141a",
+                    "on-tertiary": "#67001f",
+                    "outline-variant": "#3c4a46",
+                    "on-primary": "#003731",
+                    "background": "#10141a",
+                    "error": "#ffb4ab",
+                    "outline": "#859490",
+                    "secondary-container": "#2f3aa3",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#bdc2ff",
+                    "surface-container": "#1c2026",
+                    "primary-container": "#2dd4bf",
+                    "secondary": "#bdc2ff",
+                    "on-tertiary-fixed-variant": "#891933",
+                    "on-secondary-fixed-variant": "#2f3aa3",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "surface-container-low": "#181c22",
+                    "on-primary-fixed": "#00201c",
+                    "surface-variant": "#31353c",
+                    "on-tertiary-fixed": "#400010",
+                    "on-primary-container": "#00574d",
+                    "on-surface": "#dfe2eb",
+                    "on-tertiary-container": "#912038",
+                    "surface-dim": "#10141a",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#006b5f",
+                    "surface-container-highest": "#31353c",
+                    "on-secondary-fixed": "#000767",
+                    "primary-fixed": "#62fae3",
+                    "on-secondary-container": "#a8afff",
+                    "surface-container-lowest": "#0a0e14",
+                    "primary-fixed-dim": "#3cddc7",
+                    "surface-container-high": "#262a31",
+                    "on-primary-fixed-variant": "#005047",
+                    "primary": "#57f1db",
+                    "on-surface-variant": "#bacac5",
+                    "on-secondary": "#131e8c",
+                    "surface-tint": "#3cddc7",
+                    "tertiary": "#ffcdd1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Rubik", "sans-serif"],
+                    "body": ["Rubik", "sans-serif"],
+                    "label": ["Rubik", "sans-serif"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Rubik', sans-serif; background-color: #10141a; }
+        .calorie-gauge {
+            mask-image: radial-gradient(circle at 50% 100%, transparent 45%, black 46%);
+            -webkit-mask-image: radial-gradient(circle at 50% 100%, transparent 45%, black 46%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface overflow-x-hidden pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#181c22] fixed top-0 w-full z-50 flex flex-row-reverse justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3 flex-row-reverse">
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a fit young man with a focused expression, athletic lighting, modern fitness aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSmqWr4YAH-Bj8Uc3jXQNQrXFkP_zHq6HJSo2VTz-pVp2fPD8SiauDVh6ZBlVGG61tkibzaRN1srRKVPHXPcJt7O8QsTXHxn6jz611tD9c7HV792U-Zy5ZK-qqLLZ1_3_fybmzPUZnPdteu39cQfaQAvOdvsIt5crldsu4TXCgMMmIw2DmvaQJEVR3h9AXQRNOSAnS11lTg-Xn-FVlnb72G-QvD73bKCiMANgzFwz90d64o-bYYi-LgYnOUOb-ze047Mn4uu8Jz5o"/>
+</div>
+<h1 class="text-on-surface font-bold text-xl tracking-tight font-headline">בוקר טוב, עידו</h1>
+</div>
+<button class="text-slate-400 hover:bg-[#1c2026] p-2 rounded-xl transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<main class="mt-20 px-5 space-y-8">
+<!-- Energy Hub (Calorie Gauge) -->
+<section class="flex flex-col items-center justify-center pt-4">
+<div class="relative w-64 h-32 overflow-hidden flex items-end justify-center">
+<!-- Background Arc -->
+<div class="absolute top-0 w-64 h-64 border-[16px] border-[#1c2026] rounded-full calorie-gauge"></div>
+<!-- Progress Arc -->
+<div class="absolute top-0 w-64 h-64 border-[16px] border-primary rounded-full calorie-gauge" style="clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); transform: rotate(115deg);"></div>
+<div class="z-10 text-center pb-2">
+<div class="flex items-baseline justify-center gap-1 dir-ltr">
+<span class="text-3xl font-extrabold text-on-surface">1,200</span>
+<span class="text-slate-500 font-medium">/ 1,852</span>
+</div>
+<p class="text-slate-400 text-sm font-medium">קלוריות</p>
+</div>
+</div>
+<!-- Macro Legend -->
+<div class="grid grid-cols-3 gap-3 w-full mt-6">
+<div class="bg-surface-container-low p-3 rounded-xl flex flex-col items-center space-y-1">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-[#FB7185]"></div>
+<span class="text-xs text-slate-400 font-medium">חלבון</span>
+</div>
+<span class="text-sm font-bold dir-ltr">95g</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl flex flex-col items-center space-y-1">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-[#818CF8]"></div>
+<span class="text-xs text-slate-400 font-medium">פחמימות</span>
+</div>
+<span class="text-sm font-bold dir-ltr">150g</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl flex flex-col items-center space-y-1">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-[#FBBF24]"></div>
+<span class="text-xs text-slate-400 font-medium">שומן</span>
+</div>
+<span class="text-sm font-bold dir-ltr">42g</span>
+</div>
+</div>
+</section>
+<!-- Today's Plan -->
+<section class="space-y-4">
+<h2 class="text-lg font-bold text-on-surface pr-1 font-headline">התוכנית של היום</h2>
+<div class="space-y-3">
+<!-- Workout Card -->
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between group active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">אימון כוח: פלג גוף עליון</h3>
+<p class="text-sm text-slate-500">45 דקות • 450 קלוריות</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center">
+<!-- Unchecked State -->
+</div>
+</div>
+<!-- Meal Card -->
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between group active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">ארוחת צהריים מזינה</h3>
+<p class="text-sm text-slate-500">עוף בגריל עם קינואה וירקות</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(45,212,191,0.3)]">
+<span class="material-symbols-outlined text-on-primary text-sm font-bold" data-icon="check">check</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Week Streak -->
+<section class="bg-surface-container-high/50 p-6 rounded-2xl border border-outline-variant/10">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-sm font-bold text-on-surface">התקדמות שבועית</h3>
+<span class="text-primary text-xs font-bold">5 ימים ברצף!</span>
+</div>
+<div class="flex flex-row-reverse justify-between items-center px-1">
+<!-- Sunday to Saturday -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(45,212,191,0.2)]">
+<span class="material-symbols-outlined text-on-primary text-xs font-bold" data-icon="check">check</span>
+</div>
+<span class="text-[10px] text-slate-400 font-medium">א'</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xs font-bold" data-icon="check">check</span>
+</div>
+<span class="text-[10px] text-slate-400 font-medium">ב'</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xs font-bold" data-icon="check">check</span>
+</div>
+<span class="text-[10px] text-slate-400 font-medium">ג'</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xs font-bold" data-icon="check">check</span>
+</div>
+<span class="text-[10px] text-slate-400 font-medium">ד'</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center border-2 border-primary-container ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-on-primary text-xs font-bold" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<span class="text-[10px] text-primary font-bold">ה'</span>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="w-8 h-8 rounded-full border-2 border-slate-600"></div>
+<span class="text-[10px] text-slate-400 font-medium">ו'</span>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="w-8 h-8 rounded-full border-2 border-slate-600"></div>
+<span class="text-[10px] text-slate-400 font-medium">ש'</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex flex-row-reverse justify-around items-center px-4 pb-6 pt-2 bg-[#10141a]/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(45,212,191,0.06)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-[#2dd4bf] bg-[#2dd4bf]/10 rounded-xl px-4 py-1 tap-highlight-none transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Rubik'] text-[12px] font-medium">דף הבית</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] tap-highlight-none transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-['Rubik'] text-[12px] font-medium">אימונים</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] tap-highlight-none transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-['Rubik'] text-[12px] font-medium">תזונה</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] tap-highlight-none transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Rubik'] text-[12px] font-medium">פרופיל</span>
+</a>
+</nav>
+</body></html>
