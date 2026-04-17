@@ -45,7 +45,6 @@ export default function SleepScreen() {
       </OnboardingTitle>
       <OnboardingContent>
         <NumberInput
-          label={strings.hours}
           value={sleepHours}
           onChangeValue={setSleepHours}
           min={VALIDATION.SLEEP_HOURS.min}

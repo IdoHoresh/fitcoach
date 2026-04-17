@@ -66,7 +66,7 @@ export function ExerciseCard({
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.ms,
   },
@@ -91,10 +91,10 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     fontWeight: fontWeight.semibold,
     color: colors.textPrimary,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'left',
   },
   detailsRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.xs,
   },

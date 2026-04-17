@@ -4,7 +4,6 @@ import { colors } from '@/theme/colors'
 import { spacing } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t, pickLocale } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 import { useWorkoutStore } from '@/stores/useWorkoutStore'
 import { useNutritionStore } from '@/stores/useNutritionStore'
 import { buildTodaysPlan, type PlanItem } from '@/utils/buildTodaysPlan'
@@ -115,7 +114,7 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     fontWeight: fontWeight.bold,
     color: colors.textPrimary,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'left',
     paddingHorizontal: spacing.xs,
   },
   celebration: {

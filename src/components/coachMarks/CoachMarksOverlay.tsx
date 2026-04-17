@@ -19,7 +19,7 @@ import { Modal, StyleSheet, Text, View, useWindowDimensions } from 'react-native
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
-import { isRTL, t } from '@/i18n'
+import { t } from '@/i18n'
 import { Button } from '../Button'
 import { useCoachMarks } from './CoachMarksContext'
 import type { TargetRect } from './types'
@@ -43,7 +43,6 @@ export function CoachMarksOverlay() {
   const labels = t().components.coachMarks
   const isFinalStep = activeIndex === steps.length - 1
   const stepCounter = `${activeIndex + 1} ${labels.stepSeparator} ${steps.length}`
-  const rtl = isRTL()
 
   const rect = getTargetRect(step.id)
   const spotlight = rect ? buildSpotlight(rect, screenWidth, screenHeight) : null
@@ -81,12 +80,12 @@ export function CoachMarksOverlay() {
               : { top: tooltipPosition.top, left: tooltipPosition.left },
           ]}
         >
-          <Text style={[styles.title, rtl && styles.rtlText]}>{step.title}</Text>
-          <Text style={[styles.body, rtl && styles.rtlText]}>{step.body}</Text>
+          <Text style={styles.title}>{step.title}</Text>
+          <Text style={styles.body}>{step.body}</Text>
 
-          <View style={[styles.footer, rtl && styles.footerRtl]}>
+          <View style={styles.footer}>
             <Text style={styles.counter}>{stepCounter}</Text>
-            <View style={[styles.actions, rtl && styles.actionsRtl]}>
+            <View style={styles.actions}>
               <Button
                 label={labels.skip}
                 onPress={skip}
@@ -203,17 +202,10 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginBottom: spacing.lg,
   },
-  rtlText: {
-    textAlign: 'right',
-    writingDirection: 'rtl',
-  },
   footer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-  },
-  footerRtl: {
-    flexDirection: 'row-reverse',
   },
   counter: {
     fontSize: fontSize.sm,
@@ -223,8 +215,5 @@ const styles = StyleSheet.create({
   actions: {
     flexDirection: 'row',
     gap: spacing.sm,
-  },
-  actionsRtl: {
-    flexDirection: 'row-reverse',
   },
 })

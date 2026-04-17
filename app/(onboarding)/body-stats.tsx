@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { Text, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { colors, fontSize, fontWeight, spacing } from '@/theme'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
 import { VALIDATION } from '@/data/constants'
 import {
@@ -73,50 +72,54 @@ export default function BodyStatsScreen() {
         <Text style={styles.title}>{strings.title}</Text>
       </OnboardingTitle>
       <OnboardingContent>
-        <TextInput
-          label={strings.name}
-          value={name}
-          onChangeText={setName}
-          placeholder={strings.namePlaceholder}
-          testID="name"
-        />
-        <NumberInput
-          label={strings.height}
-          value={height}
-          onChangeValue={setHeight}
-          min={VALIDATION.HEIGHT_CM.min}
-          max={VALIDATION.HEIGHT_CM.max}
-          step={1}
-          unit={t().common.cm}
-          testID="height"
-        />
-        <NumberInput
-          label={strings.weight}
-          value={weight}
-          onChangeValue={setWeight}
-          min={VALIDATION.WEIGHT_KG.min}
-          max={VALIDATION.WEIGHT_KG.max}
-          step={0.5}
-          unit={t().common.kg}
-          testID="weight"
-        />
-        <NumberInput
-          label={strings.age}
-          value={age}
-          onChangeValue={setAge}
-          min={VALIDATION.AGE.min}
-          max={VALIDATION.AGE.max}
-          step={1}
-          testID="age"
-        />
-        <Text style={styles.sectionLabel}>{strings.sex}</Text>
-        <OptionSelector
-          options={sexOptions}
-          selected={sex}
-          onSelect={setSex}
-          layout="grid"
-          testID="sex"
-        />
+        <View style={styles.fields}>
+          <TextInput
+            label={strings.name}
+            value={name}
+            onChangeText={setName}
+            placeholder={strings.namePlaceholder}
+            testID="name"
+          />
+          <NumberInput
+            label={strings.height}
+            value={height}
+            onChangeValue={setHeight}
+            min={VALIDATION.HEIGHT_CM.min}
+            max={VALIDATION.HEIGHT_CM.max}
+            step={1}
+            unit={t().common.cm}
+            testID="height"
+          />
+          <NumberInput
+            label={strings.weight}
+            value={weight}
+            onChangeValue={setWeight}
+            min={VALIDATION.WEIGHT_KG.min}
+            max={VALIDATION.WEIGHT_KG.max}
+            step={0.5}
+            unit={t().common.kg}
+            testID="weight"
+          />
+          <NumberInput
+            label={strings.age}
+            value={age}
+            onChangeValue={setAge}
+            min={VALIDATION.AGE.min}
+            max={VALIDATION.AGE.max}
+            step={1}
+            testID="age"
+          />
+          <View style={styles.sexSection}>
+            <Text style={styles.sectionLabel}>{strings.sex}</Text>
+            <OptionSelector
+              options={sexOptions}
+              selected={sex}
+              onSelect={setSex}
+              layout="grid"
+              testID="sex"
+            />
+          </View>
+        </View>
       </OnboardingContent>
     </OnboardingLayout>
   )
@@ -130,11 +133,16 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: spacing.xl,
   },
+  fields: {
+    gap: spacing.lg,
+  },
+  sexSection: {
+    gap: spacing.sm,
+  },
   sectionLabel: {
     fontSize: fontSize.sm,
     fontWeight: fontWeight.medium,
     color: colors.textSecondary,
-    marginTop: spacing.md,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'center',
   },
 })

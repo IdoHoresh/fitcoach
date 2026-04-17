@@ -89,12 +89,13 @@ export default function TabLayout() {
         }}
       >
         <Tabs.Screen
-          name="nutrition"
+          name="index"
           options={{
-            title: labels.nutrition,
+            title: labels.home,
+            headerShown: false,
             tabBarIcon: ({ color, size }: TabIconProps) => (
-              <TabIconTarget targetId={TARGET_NUTRITION}>
-                <Ionicons name="nutrition-outline" size={size} color={color} />
+              <TabIconTarget targetId={TARGET_HOME}>
+                <Ionicons name="home-outline" size={size} color={color} />
               </TabIconTarget>
             ),
           }}
@@ -111,13 +112,12 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
-          name="index"
+          name="nutrition"
           options={{
-            title: labels.home,
-            headerShown: false,
+            title: labels.nutrition,
             tabBarIcon: ({ color, size }: TabIconProps) => (
-              <TabIconTarget targetId={TARGET_HOME}>
-                <Ionicons name="home-outline" size={size} color={color} />
+              <TabIconTarget targetId={TARGET_NUTRITION}>
+                <Ionicons name="nutrition-outline" size={size} color={color} />
               </TabIconTarget>
             ),
           }}

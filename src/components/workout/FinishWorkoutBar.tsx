@@ -3,7 +3,6 @@ import { View, Text, StyleSheet } from 'react-native'
 import { colors } from '@/theme/colors'
 import { spacing } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
-import { isRTL } from '@/hooks/rtl'
 import { t } from '@/i18n'
 import { Button } from '@/components/Button'
 import { WorkoutTimer } from './WorkoutTimer'
@@ -29,11 +28,9 @@ export function FinishWorkoutBar({
 }: FinishWorkoutBarProps) {
   const strings = t().workout
 
-  const rtl = isRTL()
-
   return (
     <View style={styles.container} testID={testID}>
-      <View style={[styles.info, rtl && styles.infoRTL]}>
+      <View style={styles.info}>
         <Text style={styles.progress}>
           {strings.exercisesCompleted
             .replace('{done}', String(completedExercises))
@@ -68,9 +65,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  infoRTL: {
-    flexDirection: 'row-reverse',
   },
   progress: {
     fontSize: fontSize.sm,

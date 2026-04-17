@@ -21,7 +21,7 @@ interface Option {
 
 interface OptionSelectorProps {
   options: Option[]
-  selected: string
+  selected: string | string[]
   onSelect: (id: string) => void
   layout: OptionLayout
   testID?: string
@@ -101,6 +101,8 @@ export function OptionSelector({
   testID,
 }: OptionSelectorProps) {
   const isGrid = layout === 'grid'
+  const isMulti = Array.isArray(selected)
+  const isOptionSelected = (id: string) => (isMulti ? selected.includes(id) : id === selected)
 
   return (
     <View
@@ -111,7 +113,7 @@ export function OptionSelector({
         <OptionItem
           key={option.id}
           option={option}
-          isSelected={option.id === selected}
+          isSelected={isOptionSelected(option.id)}
           isGrid={isGrid}
           onSelect={onSelect}
           testID={testID ? `${testID}-option-${option.id}` : `option-${option.id}`}

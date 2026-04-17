@@ -4,7 +4,6 @@ import { colors } from '@/theme/colors'
 import { spacing } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 import type { DayOfWeek } from '@/types/user'
 import type { GeneratedWorkoutDay } from '@/algorithms/workout-generator'
 
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.sm,
   },
   dotsRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     justifyContent: 'space-between',
   },
   circle: {

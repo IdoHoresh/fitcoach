@@ -4,7 +4,6 @@ import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 
 const DOT_SIZE = 8
 
@@ -71,7 +70,7 @@ function MacroColumn({ label, stat, color, testID }: MacroColumnProps) {
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
     gap: spacing.sm,

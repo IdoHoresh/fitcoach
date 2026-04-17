@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
 
   // Macro cards
   macroRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     gap: spacing.sm,
     marginTop: spacing.md,
   },
@@ -404,7 +404,7 @@ const styles = StyleSheet.create({
     gap: spacing.xs,
   },
   barLabelRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     justifyContent: 'space-between',
   },
   barLabel: {
@@ -424,12 +424,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surfaceElevated,
     borderRadius: borderRadius.sm,
     overflow: 'hidden',
-    // RTL fix: same gotcha as calculating.tsx — reanimated's animated
-    // `width` output on the fill bypasses RN's RTL auto-alignment, so the
-    // bar would grow left→right in both languages. Mirror the entire
-    // track so the fill appears to grow from the correct edge in RTL.
-    // Track has no text children, so mirroring is safe.
-    transform: isRTL() ? [{ scaleX: -1 }] : undefined,
+    // Use flex to pin the fill to the start edge. forceRTL auto-flips
+    // `row` to right-to-left, so the fill grows from the correct edge
+    // in Hebrew. position:absolute + `left: 0` is not enough because
+    // reanimated's animated-style output bypasses the auto-swap.
+    flexDirection: 'row',
   },
   barFill: {
     height: '100%',

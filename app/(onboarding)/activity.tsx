@@ -3,7 +3,6 @@ import { Text, View, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { colors, fontSize, fontWeight, spacing } from '@/theme'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
 import { VALIDATION } from '@/data/constants'
 import {
@@ -101,57 +100,67 @@ export default function ActivityScreen() {
         <Text style={styles.subtitle}>{occupationStrings.subtitle}</Text>
       </OnboardingSubtitle>
       <OnboardingContent>
-        <OptionSelector
-          options={occupationOptions}
-          selected={occupation}
-          onSelect={setOccupation}
-          layout="list"
-          testID="occupation"
-        />
+        <View style={styles.sections}>
+          <OptionSelector
+            options={occupationOptions}
+            selected={occupation}
+            onSelect={setOccupation}
+            layout="list"
+            testID="occupation"
+          />
 
-        <Text style={styles.sectionTitle}>{lifestyleStrings.title}</Text>
-        <Text style={styles.sectionSubtitle}>{lifestyleStrings.subtitle}</Text>
-        <OptionSelector
-          options={lifestyleOptions}
-          selected={afterWorkActivity}
-          onSelect={setAfterWorkActivity}
-          layout="list"
-          testID="after-work-activity"
-        />
-
-        <Text style={styles.sectionTitle}>{stepsStrings.title}</Text>
-        <Text style={styles.sectionSubtitle}>{stepsStrings.subtitle}</Text>
-        {showSteps ? (
-          <View style={styles.stepsContainer}>
-            <NumberInput
-              label={stepsStrings.inputPlaceholder}
-              value={dailySteps ?? STEPS_DEFAULT}
-              onChangeValue={setDailySteps}
-              min={VALIDATION.DAILY_STEPS.min}
-              max={VALIDATION.DAILY_STEPS.max}
-              step={STEPS_STEP}
-              testID="daily-steps"
-            />
-            <Button
-              label={stepsStrings.dontKnow}
-              onPress={handleDontKnow}
-              variant="ghost"
-              size="sm"
-              testID="dont-know-steps"
+          <View style={styles.section}>
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionTitle}>{lifestyleStrings.title}</Text>
+              <Text style={styles.sectionSubtitle}>{lifestyleStrings.subtitle}</Text>
+            </View>
+            <OptionSelector
+              options={lifestyleOptions}
+              selected={afterWorkActivity}
+              onSelect={setAfterWorkActivity}
+              layout="list"
+              testID="after-work-activity"
             />
           </View>
-        ) : (
-          <View style={styles.stepsContainer}>
-            <Text style={styles.helpText}>{stepsStrings.helpText}</Text>
-            <Button
-              label={stepsStrings.iKnow}
-              onPress={handleShowSteps}
-              variant="outline"
-              size="sm"
-              testID="show-steps-input"
-            />
+
+          <View style={styles.section}>
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionTitle}>{stepsStrings.title}</Text>
+              <Text style={styles.sectionSubtitle}>{stepsStrings.subtitle}</Text>
+            </View>
+            {showSteps ? (
+              <View style={styles.stepsContainer}>
+                <NumberInput
+                  label={stepsStrings.inputPlaceholder}
+                  value={dailySteps ?? STEPS_DEFAULT}
+                  onChangeValue={setDailySteps}
+                  min={VALIDATION.DAILY_STEPS.min}
+                  max={VALIDATION.DAILY_STEPS.max}
+                  step={STEPS_STEP}
+                  testID="daily-steps"
+                />
+                <Button
+                  label={stepsStrings.dontKnow}
+                  onPress={handleDontKnow}
+                  variant="ghost"
+                  size="sm"
+                  testID="dont-know-steps"
+                />
+              </View>
+            ) : (
+              <View style={styles.stepsContainer}>
+                <Text style={styles.helpText}>{stepsStrings.helpText}</Text>
+                <Button
+                  label={stepsStrings.iKnow}
+                  onPress={handleShowSteps}
+                  variant="outline"
+                  size="sm"
+                  testID="show-steps-input"
+                />
+              </View>
+            )}
           </View>
-        )}
+        </View>
       </OnboardingContent>
     </OnboardingLayout>
   )
@@ -171,18 +180,25 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: spacing.xl,
   },
+  sections: {
+    gap: spacing.xl,
+  },
+  section: {
+    gap: spacing.md,
+  },
+  sectionHeader: {
+    gap: spacing.xs,
+  },
   sectionTitle: {
     fontSize: fontSize.lg,
     fontWeight: fontWeight.semibold,
     color: colors.textPrimary,
-    marginTop: spacing.xl,
-    marginBottom: spacing.xs,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'center',
   },
   sectionSubtitle: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
-    marginBottom: spacing.md,
+    textAlign: 'center',
   },
   stepsContainer: {
     alignItems: 'center',

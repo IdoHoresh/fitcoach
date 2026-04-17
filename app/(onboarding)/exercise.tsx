@@ -1,11 +1,16 @@
 import { useState } from 'react'
-import { Text, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { colors, fontSize, fontWeight, spacing } from '@/theme'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 import { useUserStore } from '@/stores/useUserStore'
-import { OnboardingLayout, OnboardingTitle, OnboardingContent, OptionSelector } from '@/components'
+import {
+  OnboardingLayout,
+  OnboardingTitle,
+  OnboardingSubtitle,
+  OnboardingContent,
+  OptionSelector,
+} from '@/components'
 import type { ExerciseType, ExerciseIntensity, SessionDuration } from '@/types'
 
 const DURATION_VALUES: SessionDuration[] = [30, 45, 60, 75, 90]
@@ -65,35 +70,44 @@ export default function ExerciseScreen() {
       <OnboardingTitle>
         <Text style={styles.title}>{strings.title}</Text>
       </OnboardingTitle>
-      <OnboardingContent>
+      <OnboardingSubtitle>
         <Text style={styles.subtitle}>{strings.subtitle}</Text>
+      </OnboardingSubtitle>
+      <OnboardingContent>
+        <View style={styles.sections}>
+          <View style={styles.section}>
+            <Text style={styles.sectionLabel}>{strings.sessionLength}</Text>
+            <OptionSelector
+              options={durationOptions}
+              selected={duration}
+              onSelect={setDuration}
+              layout="grid"
+              testID="session-duration"
+            />
+          </View>
 
-        <Text style={styles.sectionLabel}>{strings.sessionLength}</Text>
-        <OptionSelector
-          options={durationOptions}
-          selected={duration}
-          onSelect={setDuration}
-          layout="grid"
-          testID="session-duration"
-        />
+          <View style={styles.section}>
+            <Text style={styles.sectionLabel}>{strings.type}</Text>
+            <OptionSelector
+              options={typeOptions}
+              selected={exerciseType}
+              onSelect={setExerciseType}
+              layout="list"
+              testID="exercise-type"
+            />
+          </View>
 
-        <Text style={styles.sectionLabel}>{strings.type}</Text>
-        <OptionSelector
-          options={typeOptions}
-          selected={exerciseType}
-          onSelect={setExerciseType}
-          layout="list"
-          testID="exercise-type"
-        />
-
-        <Text style={styles.sectionLabel}>{strings.intensity}</Text>
-        <OptionSelector
-          options={intensityOptions}
-          selected={intensity}
-          onSelect={setIntensity}
-          layout="list"
-          testID="exercise-intensity"
-        />
+          <View style={styles.section}>
+            <Text style={styles.sectionLabel}>{strings.intensity}</Text>
+            <OptionSelector
+              options={intensityOptions}
+              selected={intensity}
+              onSelect={setIntensity}
+              layout="list"
+              testID="exercise-intensity"
+            />
+          </View>
+        </View>
       </OnboardingContent>
     </OnboardingLayout>
   )
@@ -105,20 +119,24 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.bold,
     color: colors.textPrimary,
     textAlign: 'center',
-    marginBottom: spacing.xl,
+    marginBottom: spacing.md,
   },
   subtitle: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
     textAlign: 'center',
-    marginBottom: spacing.lg,
+    marginBottom: spacing.xl,
+  },
+  sections: {
+    gap: spacing.xl,
+  },
+  section: {
+    gap: spacing.md,
   },
   sectionLabel: {
     fontSize: fontSize.md,
     fontWeight: fontWeight.semibold,
     color: colors.textPrimary,
-    marginTop: spacing.lg,
-    marginBottom: spacing.sm,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'center',
   },
 })

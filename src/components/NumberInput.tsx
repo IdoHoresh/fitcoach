@@ -6,7 +6,6 @@ import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontFamily } from '@/theme/typography'
 import { useAnimatedPress } from '@/hooks/useAnimatedPress'
 import { triggerHaptic } from '@/hooks/useHaptics'
-import { isRTL } from '@/hooks/rtl'
 import { t } from '@/i18n'
 import { RTLWrapper } from './shared/RTLWrapper'
 
@@ -16,7 +15,7 @@ const REPEAT_INTERVAL = 150
 const STEPPER_SIZE = 48
 
 interface NumberInputProps {
-  label: string
+  label?: string
   value: number
   onChangeValue: (value: number) => void
   min: number
@@ -104,7 +103,6 @@ export function NumberInput({
 
   const isAtMin = value <= min
   const isAtMax = value >= max
-  const textAlign = isRTL() ? 'right' : 'left'
 
   const doIncrement = useCallback(() => {
     const current = valueRef.current
@@ -186,7 +184,7 @@ export function NumberInput({
 
   return (
     <View style={styles.container}>
-      <Text style={[styles.label, { textAlign }]}>{label}</Text>
+      {label ? <Text style={styles.label}>{label}</Text> : null}
       <RTLWrapper style={styles.row}>
         <StepperButton
           direction="decrement"
@@ -243,12 +241,13 @@ export function NumberInput({
 
 const styles = StyleSheet.create({
   container: {
-    gap: spacing.xs,
+    gap: spacing.sm,
   },
   label: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
     fontFamily: fontFamily.medium,
+    textAlign: 'center',
   },
   row: {
     alignItems: 'center',
@@ -277,7 +276,7 @@ const styles = StyleSheet.create({
   },
   valueContainer: {
     flex: 1,
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'baseline',
     justifyContent: 'center',
     gap: spacing.xs,

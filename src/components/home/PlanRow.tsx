@@ -6,7 +6,6 @@ import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import { isRTL } from '@/hooks/rtl'
-import { RTLWrapper } from '../shared/RTLWrapper'
 import type { PlanItem } from '@/utils/buildTodaysPlan'
 
 const ICON_CONTAINER_SIZE = 48
@@ -65,24 +64,8 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
         </View>
       )}
 
-      <RTLWrapper style={styles.content}>
-        {leadingIcon}
-
-        {/* Primary + secondary label stack */}
-        <View style={styles.labelColumn}>
-          <Text
-            style={[styles.primaryLabel, (item.done || isGhost || isRest) && styles.labelMuted]}
-          >
-            {primaryLabel}
-          </Text>
-          {secondaryLabel && (
-            <Text style={styles.secondaryLabel} numberOfLines={1}>
-              {secondaryLabel}
-            </Text>
-          )}
-        </View>
-
-        {/* Trailing: value + pill OR check circle */}
+      <View style={styles.content}>
+        {/* Trailing: value + pill OR check circle (left side in RTL) */}
         <View style={styles.trailingColumn}>
           {trailing}
           {isNext && (
@@ -102,7 +85,23 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
           )}
           {!isNext && trailingCircle}
         </View>
-      </RTLWrapper>
+
+        {leadingIcon}
+
+        {/* Primary + secondary label stack (right side in RTL) */}
+        <View style={styles.labelColumn}>
+          <Text
+            style={[styles.primaryLabel, (item.done || isGhost || isRest) && styles.labelMuted]}
+          >
+            {primaryLabel}
+          </Text>
+          {secondaryLabel && (
+            <Text style={styles.secondaryLabel} numberOfLines={1}>
+              {secondaryLabel}
+            </Text>
+          )}
+        </View>
+      </View>
     </Pressable>
   )
 }
@@ -197,7 +196,7 @@ const styles = StyleSheet.create({
   nextLabel: {
     position: 'absolute',
     top: spacing.xs,
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.xxs,
   },
@@ -214,6 +213,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   content: {
+    flexDirection: 'row-reverse',
     alignItems: 'center',
     gap: spacing.sm,
   },
@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
   },
   trailingColumn: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.sm,
   },
@@ -270,7 +270,7 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   pill: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.xxs,
     backgroundColor: colors.warning,
