@@ -172,6 +172,30 @@ describe('completeOnboarding', () => {
     expect(useUserStore.getState().draft).toEqual({})
   })
 
+  it('is_idempotent_when_already_onboarded', async () => {
+    // Regression: if plan generation fails AFTER completeOnboarding succeeds,
+    // retry used to call completeOnboarding a second time — but draft was
+    // already cleared to {}, so validateDraft failed and the user got stuck
+    // with "Missing required profile fields". Idempotent short-circuit fixes
+    // this: on re-entry, if already onboarded, do nothing (plans can retry
+    // independently).
+    const { updateDraft } = useUserStore.getState()
+    mockSaveProfile.mockResolvedValue(SAVED_PROFILE)
+
+    updateDraft(COMPLETE_DRAFT)
+    await useUserStore.getState().completeOnboarding()
+    expect(useUserStore.getState().isOnboarded).toBe(true)
+    expect(mockSaveProfile).toHaveBeenCalledTimes(1)
+
+    // Second call with the now-empty draft — must NOT error, must NOT re-save.
+    await useUserStore.getState().completeOnboarding()
+
+    const state = useUserStore.getState()
+    expect(state.error).toBeNull()
+    expect(state.isOnboarded).toBe(true)
+    expect(mockSaveProfile).toHaveBeenCalledTimes(1)
+  })
+
   it('derives_exerciseDaysPerWeek_from_trainingDays_length', async () => {
     const { updateDraft } = useUserStore.getState()
     mockSaveProfile.mockResolvedValue(SAVED_PROFILE)

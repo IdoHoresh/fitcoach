@@ -120,6 +120,12 @@ export const useUserStore = create<UserStore>((set, get) => ({
   },
 
   completeOnboarding: async () => {
+    // Idempotent: if the profile was already saved (e.g. plan generation
+    // failed on the Result screen and the user taps retry), don't try to
+    // re-save with the now-empty draft — that would fail validation and
+    // strand the user with a misleading "Missing required fields" error.
+    if (get().isOnboarded) return
+
     const { draft } = get()
 
     if (!validateDraft(draft)) {

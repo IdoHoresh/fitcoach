@@ -152,6 +152,12 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Fresh-install migration chain replays cleanly v0→v18.** Cold start on wiped device ran v10 supermarket seed → v12 Tzameret purge → v14 Shufersal full (4,964) → v15 Rami Levy (6,799) → v16 raw ingredients (191) → v17 `name_norm` backfill (11,954 rows) + cross-source dedup (152 deletes) → v18 FK indices, no errors. Confirms the v17 ALTER-then-backfill pattern works on fresh installs, not just upgrades. The index-inside-migration rule (not in `CREATE_TABLE_STATEMENTS`) held: no "no such column" crash.
 - **Tier tiebreaker + cross-source cleanup both fire.** Device search for `חזה עוף`, `אורז לבן`, `תפוח`, `ביצה`, `שמן זית` all surfaced `raw_%` row first. Task 6's SQL `ORDER BY` tiebreaker (`raw > manual > sh > rl`) plus Task (v17) cross-source dup cleanup are redundant by design — defense in depth. Either alone would have been enough for these queries, but both together make the ranking robust against future seed sources drifting into overlap territory.
 
+## Post-Onboarding Orchestration (2026-04-17)
+
+- **Store actions that consume a draft must be idempotent.** `completeOnboarding` cleared `draft: {}` on success. When plan generation failed downstream and the user tapped retry, the second call hit `validateDraft({})` and surfaced "Missing required profile fields" — a misleading error for a user who had just entered all 11 screens. Fix: early-return when already onboarded so retry affects only the still-failing steps. Any action that mutates setup state should check whether that mutation already ran before doing it again.
+- **Orchestrate cross-store flows from a dependency-injected helper, not from inside a store.** `useUserStore` cannot import `useWorkoutStore` / `useNutritionStore` (cycle — both already depend on it). A pure function like `finishOnboarding(deps)` that takes store actions + error getters as parameters lets the Result screen wire them in, keeps stores decoupled, and is trivially unit-testable without `expo-sqlite`. Same pattern for cold-start hydration (`rehydratePlans`).
+- **Short-circuit multi-step flows on per-step `error` state, not per-step throws.** The existing store actions (`generatePlan`, `generateMealPlan`) `set({ error })` instead of throwing. The orchestrator reads each store's `error` after awaiting and stops on the first non-null one. Wrapping in try/catch around the async call would only catch thrown errors and miss the stored ones.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
