@@ -1,0 +1,194 @@
+<html class="dark" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#dfe2eb",
+                        "tertiary-fixed": "#ffdadc",
+                        "tertiary-container": "#ffa5ae",
+                        "inverse-on-surface": "#2d3137",
+                        "secondary-fixed": "#e0e0ff",
+                        "surface-bright": "#353940",
+                        "on-background": "#dfe2eb",
+                        "on-error": "#690005",
+                        "surface": "#10141a",
+                        "on-tertiary": "#67001f",
+                        "outline-variant": "#3c4a46",
+                        "on-primary": "#003731",
+                        "background": "#10141a",
+                        "error": "#ffb4ab",
+                        "outline": "#859490",
+                        "secondary-container": "#2f3aa3",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "surface-container": "#1c2026",
+                        "primary-container": "#2dd4bf",
+                        "secondary": "#bdc2ff",
+                        "on-tertiary-fixed-variant": "#891933",
+                        "on-secondary-fixed-variant": "#2f3aa3",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-container-low": "#181c22",
+                        "on-primary-fixed": "#00201c",
+                        "surface-variant": "#31353c",
+                        "on-tertiary-fixed": "#400010",
+                        "on-primary-container": "#00574d",
+                        "on-surface": "#dfe2eb",
+                        "on-tertiary-container": "#912038",
+                        "surface-dim": "#10141a",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#006b5f",
+                        "surface-container-highest": "#31353c",
+                        "on-secondary-fixed": "#000767",
+                        "primary-fixed": "#62fae3",
+                        "on-secondary-container": "#a8afff",
+                        "surface-container-lowest": "#0a0e14",
+                        "primary-fixed-dim": "#3cddc7",
+                        "surface-container-high": "#262a31",
+                        "on-primary-fixed-variant": "#005047",
+                        "primary": "#57f1db",
+                        "on-surface-variant": "#bacac5",
+                        "on-secondary": "#131e8c",
+                        "surface-tint": "#3cddc7",
+                        "tertiary": "#ffcdd1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Rubik", "Manrope"],
+                        "body": ["Rubik", "Manrope"],
+                        "label": ["Rubik", "Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-pulse {
+            box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#10141a] text-on-surface font-body min-h-screen flex flex-col">
+<!-- Top AppBar (Simulated from JSON Blueprint) -->
+<header class="bg-[#181c22] flex flex-row-reverse justify-between items-center w-full px-6 py-4 sticky top-0 z-50">
+<div class="text-[#2dd4bf] material-symbols-outlined cursor-pointer">menu</div>
+<div class="text-xl font-bold text-[#2dd4bf] tracking-tight font-headline">גִּבּוֹר</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional male trainer with a neutral expression and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCST6qUtlqy1koXX5GD-F8toZV9yECOefbcDL_jUjt3gQoN7E5kU9g5iLY-mitqGIRhQi8nIV2Hxw6BVgjxLl7jLid0LS8gfI4lHy1e_wt6Bv0Bc1Nwp1Zrxnv3hPP4lmehItnuxmDai_fXlG17OccNMzhzxUtqQSQB0y1lEg0UYaIJlP3lU0LTfr9hronv95UluAa6Bq-so1vqN7avVBBOT2UG3aahlUjgIWNQxi2YJ167v9jQuhOEYAyrJoljP96idUarezfoTbg"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col items-center justify-start pt-12 px-8 relative overflow-hidden">
+<!-- Progress Bar (RTL) -->
+<div class="w-full max-w-md bg-[#151B23] h-1.5 rounded-full overflow-hidden mb-16">
+<div class="bg-primary-container h-full w-[65%] rounded-full shadow-[0_0_12px_rgba(45,212,191,0.3)] transition-all duration-1000" style="margin-right: 0; margin-left: auto;"></div>
+</div>
+<!-- Hero Text -->
+<div class="text-center mb-12">
+<h1 class="text-3xl font-bold text-on-surface mb-4 tracking-tight">מחשב את התוכנית שלך...</h1>
+<p class="text-on-surface-variant text-lg">מעבד נתונים פיזיולוגיים ליצירת התאמה מושלמת</p>
+</div>
+<!-- Step List (The Bento-inspired Vertical Stack) -->
+<div class="w-full max-w-md space-y-4">
+<!-- Step 1: Completed -->
+<div class="group bg-surface-container-low p-5 rounded-xl flex items-center justify-between border-r-4 border-primary shadow-[0_0_15px_rgba(45,212,191,0.05)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="text-on-surface font-medium text-lg">מחשב קלוריות</span>
+</div>
+<span class="text-primary-container text-sm font-label font-bold">הושלם</span>
+</div>
+<!-- Step 2: Completed -->
+<div class="group bg-surface-container-low p-5 rounded-xl flex items-center justify-between border-r-4 border-primary shadow-[0_0_15px_rgba(45,212,191,0.05)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="text-on-surface font-medium text-lg">בונה תפריט</span>
+</div>
+<span class="text-primary-container text-sm font-label font-bold">הושלם</span>
+</div>
+<!-- Step 3: Active/Calculating -->
+<div class="group bg-surface-container p-5 rounded-xl flex items-center justify-between border-r-4 border-primary shadow-[0_0_20px_rgba(45,212,191,0.15)] ring-1 ring-primary/20 scale-[1.02]">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary animate-pulse">
+<span class="material-symbols-outlined text-[20px]">fitness_center</span>
+</div>
+<div class="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full border-2 border-[#10141a]"></div>
+</div>
+<span class="text-on-primary-fixed font-bold text-lg">מתכנן אימונים</span>
+</div>
+<div class="flex gap-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce [animation-delay:-0.3s]"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce [animation-delay:-0.15s]"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce"></div>
+</div>
+</div>
+<!-- Step 4: Pending -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between opacity-50 grayscale">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-700/30 flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<span class="text-slate-400 font-medium text-lg">מתאים התקדמות</span>
+</div>
+<span class="text-slate-600 text-sm font-label">ממתין...</span>
+</div>
+<!-- Step 5: Pending -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between opacity-50 grayscale">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-700/30 flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+</div>
+<span class="text-slate-400 font-medium text-lg">מסיים</span>
+</div>
+<span class="text-slate-600 text-sm font-label">ממתין...</span>
+</div>
+</div>
+<!-- Background Lab-Grade Decoration -->
+<div class="absolute bottom-24 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="absolute top-40 -right-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+</main>
+<!-- Bottom Navigation Bar (Simulated from JSON Blueprint) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex flex-row-reverse justify-around items-center px-4 pb-6 pt-2 bg-[#10141a]/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(45,212,191,0.06)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-slate-500 font-['Rubik'] text-[12px] font-medium hover:text-[#57f1db] transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>דף הבית</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2dd4bf] bg-[#2dd4bf]/10 rounded-xl px-4 py-1 font-['Rubik'] text-[12px] font-medium transition-all">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span>אימונים</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 font-['Rubik'] text-[12px] font-medium hover:text-[#57f1db] transition-all">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span>תזונה</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 font-['Rubik'] text-[12px] font-medium hover:text-[#57f1db] transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>פרופיל</span>
+</div>
+</nav>
+</body></html>

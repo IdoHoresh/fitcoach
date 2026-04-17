@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#dfe2eb",
+                    "tertiary-fixed": "#ffdadc",
+                    "tertiary-container": "#ffa5ae",
+                    "inverse-on-surface": "#2d3137",
+                    "secondary-fixed": "#e0e0ff",
+                    "surface-bright": "#353940",
+                    "on-background": "#dfe2eb",
+                    "on-error": "#690005",
+                    "surface": "#10141a",
+                    "on-tertiary": "#67001f",
+                    "outline-variant": "#3c4a46",
+                    "on-primary": "#003731",
+                    "background": "#10141a",
+                    "error": "#ffb4ab",
+                    "outline": "#859490",
+                    "secondary-container": "#2f3aa3",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#bdc2ff",
+                    "surface-container": "#1c2026",
+                    "primary-container": "#2dd4bf",
+                    "secondary": "#bdc2ff",
+                    "on-tertiary-fixed-variant": "#891933",
+                    "on-secondary-fixed-variant": "#2f3aa3",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "surface-container-low": "#181c22",
+                    "on-primary-fixed": "#00201c",
+                    "surface-variant": "#31353c",
+                    "on-tertiary-fixed": "#400010",
+                    "on-primary-container": "#00574d",
+                    "on-surface": "#dfe2eb",
+                    "on-tertiary-container": "#912038",
+                    "surface-dim": "#10141a",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#006b5f",
+                    "surface-container-highest": "#31353c",
+                    "on-secondary-fixed": "#000767",
+                    "primary-fixed": "#62fae3",
+                    "on-secondary-container": "#a8afff",
+                    "surface-container-lowest": "#0a0e14",
+                    "primary-fixed-dim": "#3cddc7",
+                    "surface-container-high": "#262a31",
+                    "on-primary-fixed-variant": "#005047",
+                    "primary": "#57f1db",
+                    "on-surface-variant": "#bacac5",
+                    "on-secondary": "#131e8c",
+                    "surface-tint": "#3cddc7",
+                    "tertiary": "#ffcdd1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Rubik", "Manrope"],
+                    "body": ["Rubik", "Manrope"],
+                    "label": ["Rubik", "Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0D1117; /* Specific requirement from task */
+            font-family: 'Rubik', sans-serif;
+        }
+        .glass-card {
+            background: rgba(28, 32, 38, 0.4);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface min-h-screen flex flex-col items-center overflow-hidden">
+<!-- Top Navigation Bar (Shared Component Logic) -->
+<header class="bg-[#181c22] flex flex-row-reverse justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">menu</span>
+</div>
+<h1 class="text-xl font-bold text-[#2dd4bf] tracking-tight font-['Rubik'] text-right">גִּבּוֹר</h1>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/20 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" data-alt="close-up minimalist avatar of an athlete in soft focus with clinical blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsx8Z1ung3yJC81rBRGA0jXJ8p-vyeovCyAz8RIIf6ZEJ0C8-VcH6eZ8sMDyjP36yZn-xUhUlzoSw3_WvYSFZbFQoaX87QH4aTYFs3poHid4CwQy6OwSoXpYrv17bMKn-6_Pv8ujAwbGSF5BXPJ7vw9X02OuYoj5Sa552sqmyZaO3Y1rtz_fW__kSIecXrClv-8KXEayNFwuMV-sO9ZC4vpO5wavXSCtbxIhqgCCRGwMJXqNGcxveBxI2O4FQAoo9kZfgEMKieqJo"/>
+</div>
+</header>
+<main class="w-full max-w-md flex flex-col flex-1 pt-24 px-6 pb-32">
+<!-- Progress Bar (9/11) -->
+<div class="w-full mb-10">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">שלב 9 מתוך 11</span>
+<span class="text-xs font-bold text-primary">82%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[81.8%]" style="box-shadow: 0 0 12px rgba(45,212,191,0.3)"></div>
+</div>
+</div>
+<!-- Hero Headline -->
+<div class="mb-12">
+<h2 class="text-3xl font-extrabold text-[#dfe2eb] leading-tight mb-2">כמה שעות שינה בלילה?</h2>
+<p class="text-slate-400 font-normal">איכות השינה שלך היא המפתח להתאוששות וצמיחה.</p>
+</div>
+<!-- Asymmetric Visual Element (Editorial Touch) -->
+<div class="relative w-full h-48 mb-12 flex justify-center items-center">
+<div class="absolute inset-0 bg-primary/5 rounded-[2rem] rotate-3 blur-2xl"></div>
+<div class="relative z-10 glass-card p-8 rounded-3xl border border-primary/10 flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+<div class="flex flex-col items-center">
+<span class="text-[64px] font-extrabold text-[#E5E7EB] leading-none mb-2">7.5</span>
+<span class="text-sm font-medium text-primary tracking-widest uppercase">שעות</span>
+</div>
+</div>
+</div>
+<!-- Stepper Control -->
+<div class="flex items-center justify-center gap-8 mb-12">
+<button class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center text-on-primary-container active:scale-95 transition-all shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</button>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<button class="w-16 h-16 rounded-2xl bg-surface-container-high border border-primary/40 flex items-center justify-center text-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl font-bold">remove</span>
+</button>
+</div>
+<!-- Warning Banner (Conditional logic context) -->
+<div class="bg-[#1F2937] border-r-4 border-[#FBBF24] p-4 rounded-xl flex items-start gap-4 mb-8">
+<span class="material-symbols-outlined text-[#FBBF24]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<p class="text-[#FBBF24] text-sm font-medium leading-relaxed">
+                שינה קצרה משפיעה על התאוששות השרירים והביצועים הקוגניטיביים שלך. מומלץ לשאוף ל-7-9 שעות.
+            </p>
+</div>
+</main>
+<!-- Bottom Actions -->
+<div class="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#0D1117] via-[#0D1117]/90 to-transparent">
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl text-lg shadow-xl shadow-primary/20 active:scale-[0.98] transition-transform">
+            המשך
+        </button>
+</div>
+<!-- Background Decoration -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10">
+<div class="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary-container/10 rounded-full blur-[100px]"></div>
+</div>
+<!-- Material Symbols Injection -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</body></html>

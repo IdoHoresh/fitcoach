@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#dfe2eb",
+                        "tertiary-fixed": "#ffdadc",
+                        "tertiary-container": "#ffa5ae",
+                        "inverse-on-surface": "#2d3137",
+                        "secondary-fixed": "#e0e0ff",
+                        "surface-bright": "#353940",
+                        "on-background": "#dfe2eb",
+                        "on-error": "#690005",
+                        "surface": "#10141a",
+                        "on-tertiary": "#67001f",
+                        "outline-variant": "#3c4a46",
+                        "on-primary": "#003731",
+                        "background": "#10141a",
+                        "error": "#ffb4ab",
+                        "outline": "#859490",
+                        "secondary-container": "#2f3aa3",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "surface-container": "#1c2026",
+                        "primary-container": "#2dd4bf",
+                        "secondary": "#bdc2ff",
+                        "on-tertiary-fixed-variant": "#891933",
+                        "on-secondary-fixed-variant": "#2f3aa3",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-container-low": "#181c22",
+                        "on-primary-fixed": "#00201c",
+                        "surface-variant": "#31353c",
+                        "on-tertiary-fixed": "#400010",
+                        "on-primary-container": "#00574d",
+                        "on-surface": "#dfe2eb",
+                        "on-tertiary-container": "#912038",
+                        "surface-dim": "#10141a",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#006b5f",
+                        "surface-container-highest": "#31353c",
+                        "on-secondary-fixed": "#000767",
+                        "primary-fixed": "#62fae3",
+                        "on-secondary-container": "#a8afff",
+                        "surface-container-lowest": "#0a0e14",
+                        "primary-fixed-dim": "#3cddc7",
+                        "surface-container-high": "#262a31",
+                        "on-primary-fixed-variant": "#005047",
+                        "primary": "#57f1db",
+                        "on-surface-variant": "#bacac5",
+                        "on-secondary": "#131e8c",
+                        "surface-tint": "#3cddc7",
+                        "tertiary": "#ffcdd1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Rubik"],
+                        "body": ["Rubik"],
+                        "label": ["Rubik"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Rubik', sans-serif; background-color: #10141a; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface antialiased overflow-x-hidden pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#181c22] flex flex-row-reverse justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/20">
+<img alt="User Profile" data-alt="professional portrait of a fit young man with a slight smile and athletic build, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzDvmpQVJOU9BcL_aSwVNco1DVAGqjlq8uClh5CY-9VRieP7apliMDkzpu3sZLyvP21hgis8zIyzMKNRzkFHtks6pn9JIC3LksutevqWNsUiPQm8CkkIETjLbEwoVjTqMgF-ghucPYeJ17y8ZHbtUQRBYGTN8L2EbZDJkkRjT_rjwEOqYffV1ONEjM3MOdSLKpJdptfHxXDdexog3xaReGBHShKwH06IDS2vmSEicQyrYvoV4unoJWRrl4kyxIA-VBRZ7CPrvTBzk"/>
+</div>
+</div>
+<h1 class="text-xl font-bold text-[#2dd4bf] tracking-tight font-['Rubik'] text-right">גִּבּוֹר</h1>
+<button class="text-slate-400 hover:bg-[#1c2026] p-2 rounded-xl transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="mt-20 px-6">
+<!-- Hero Header -->
+<div class="mb-8">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-3xl font-extrabold text-on-surface leading-tight">האימון של היום</h2>
+<span class="text-slate-500 font-medium pt-2">שבוע 1</span>
+</div>
+<div class="flex flex-wrap gap-2 items-center">
+<span class="bg-[#2dd4bf]/10 text-[#2dd4bf] px-3 py-1 rounded-full text-sm font-bold">רגליים B — דגש הינג׳</span>
+<div class="flex items-center text-slate-400 text-xs gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>65 דקות</span>
+</div>
+</div>
+</div>
+<!-- 7-Day Strip Selector -->
+<div class="flex flex-row-reverse justify-between mb-10 bg-surface-container-low p-4 rounded-2xl">
+<div class="flex flex-col items-center gap-2">
+<span class="text-slate-500 text-xs">א</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 font-medium">12</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-slate-500 text-xs">ב</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#2dd4bf] text-[#003731] font-bold shadow-[0_0_12px_rgba(45,212,191,0.3)]">13</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-slate-500 text-xs">ג</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 font-medium">14</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-slate-500 text-xs">ד</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 font-medium">15</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-slate-500 text-xs">ה</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 font-medium">16</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-slate-500 text-xs">ו</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 font-medium">17</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-slate-500 text-xs">ש</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 font-medium">18</div>
+</div>
+</div>
+<!-- Exercises List -->
+<div class="space-y-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full border-2 border-[#2dd4bf] flex items-center justify-center flex-shrink-0">
+<span class="text-[#2dd4bf] font-extrabold text-lg">1</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-on-surface">דדליפט רומני</h3>
+<span class="bg-surface-container-high text-slate-400 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">המסטרינג</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-400 text-sm">
+<span dir="ltr">3 × 8-12</span>
+<span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">timer</span> 2:00 מנוחה</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full border-2 border-[#2dd4bf] flex items-center justify-center flex-shrink-0">
+<span class="text-[#2dd4bf] font-extrabold text-lg">2</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-on-surface">סקוואט בולגרי</h3>
+<span class="bg-surface-container-high text-slate-400 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">ארבע ראשי</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-400 text-sm">
+<span dir="ltr">3 × 10-12</span>
+<span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">timer</span> 1:30 מנוחה</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full border-2 border-[#2dd4bf] flex items-center justify-center flex-shrink-0">
+<span class="text-[#2dd4bf] font-extrabold text-lg">3</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-on-surface">לחיצת רגליים</h3>
+<span class="bg-surface-container-high text-slate-400 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">ארבע ראשי</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-400 text-sm">
+<span dir="ltr">4 × 12-15</span>
+<span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">timer</span> 1:30 מנוחה</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full border-2 border-[#2dd4bf] flex items-center justify-center flex-shrink-0">
+<span class="text-[#2dd4bf] font-extrabold text-lg">4</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-on-surface">פשיטת ברכיים</h3>
+<span class="bg-surface-container-high text-slate-400 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">ארבע ראשי</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-400 text-sm">
+<span dir="ltr">3 × 15-20</span>
+<span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">timer</span> 1:00 מנוחה</span>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full border-2 border-[#2dd4bf] flex items-center justify-center flex-shrink-0">
+<span class="text-[#2dd4bf] font-extrabold text-lg">5</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-on-surface">כפיפת ברכיים בשכיבה</h3>
+<span class="bg-surface-container-high text-slate-400 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">המסטרינג</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-400 text-sm">
+<span dir="ltr">3 × 12-15</span>
+<span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">timer</span> 1:00 מנוחה</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center gap-4 transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full border-2 border-[#2dd4bf] flex items-center justify-center flex-shrink-0">
+<span class="text-[#2dd4bf] font-extrabold text-lg">6</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-on-surface">תאומים בעמידה</h3>
+<span class="bg-surface-container-high text-slate-400 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">תאומים</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-400 text-sm">
+<span dir="ltr">4 × 15-20</span>
+<span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">timer</span> 0:45 מנוחה</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Action Area -->
+<div class="fixed bottom-24 left-0 w-full px-6 pointer-events-none">
+<button class="pointer-events-auto w-full bg-[#2dd4bf] hover:bg-[#57f1db] text-[#003731] font-extrabold py-5 rounded-2xl text-xl shadow-[0_12px_32px_rgba(45,212,191,0.2)] transition-transform active:scale-95 flex items-center justify-center gap-3">
+                התחל אימון
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex flex-row-reverse justify-around items-center px-4 pb-6 pt-2 bg-[#10141a]/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(45,212,191,0.06)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-slate-500 font-['Rubik'] text-[12px] font-medium hover:text-[#57f1db] transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>דף הבית</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2dd4bf] bg-[#2dd4bf]/10 rounded-xl px-4 py-1 font-['Rubik'] text-[12px] font-medium transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span>אימונים</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 font-['Rubik'] text-[12px] font-medium hover:text-[#57f1db] transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span>תזונה</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 font-['Rubik'] text-[12px] font-medium hover:text-[#57f1db] transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>פרופיל</span>
+</a>
+</nav>
+</body></html>

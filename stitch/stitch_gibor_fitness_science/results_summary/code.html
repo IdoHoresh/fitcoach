@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&amp;family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#dfe2eb",
+                    "tertiary-fixed": "#ffdadc",
+                    "tertiary-container": "#ffa5ae",
+                    "inverse-on-surface": "#2d3137",
+                    "secondary-fixed": "#e0e0ff",
+                    "surface-bright": "#353940",
+                    "on-background": "#dfe2eb",
+                    "on-error": "#690005",
+                    "surface": "#10141a",
+                    "on-tertiary": "#67001f",
+                    "outline-variant": "#3c4a46",
+                    "on-primary": "#003731",
+                    "background": "#10141a",
+                    "error": "#ffb4ab",
+                    "outline": "#859490",
+                    "secondary-container": "#2f3aa3",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#bdc2ff",
+                    "surface-container": "#1c2026",
+                    "primary-container": "#2dd4bf",
+                    "secondary": "#bdc2ff",
+                    "on-tertiary-fixed-variant": "#891933",
+                    "on-secondary-fixed-variant": "#2f3aa3",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "surface-container-low": "#181c22",
+                    "on-primary-fixed": "#00201c",
+                    "surface-variant": "#31353c",
+                    "on-tertiary-fixed": "#400010",
+                    "on-primary-container": "#00574d",
+                    "on-surface": "#dfe2eb",
+                    "on-tertiary-container": "#912038",
+                    "surface-dim": "#10141a",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#006b5f",
+                    "surface-container-highest": "#31353c",
+                    "on-secondary-fixed": "#000767",
+                    "primary-fixed": "#62fae3",
+                    "on-secondary-container": "#a8afff",
+                    "surface-container-lowest": "#0a0e14",
+                    "primary-fixed-dim": "#3cddc7",
+                    "surface-container-high": "#262a31",
+                    "on-primary-fixed-variant": "#005047",
+                    "primary": "#57f1db",
+                    "on-surface-variant": "#bacac5",
+                    "on-secondary": "#131e8c",
+                    "surface-tint": "#3cddc7",
+                    "tertiary": "#ffcdd1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Rubik", "Manrope", "sans-serif"],
+                    "body": ["Rubik", "Manrope", "sans-serif"],
+                    "label": ["Rubik", "Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Rubik', sans-serif;
+        background-color: #10141a;
+      }
+      .macro-bar-gap {
+        gap: 4px;
+      }
+      .ambient-glow {
+        box-shadow: 0 0 24px 0 rgba(87, 241, 219, 0.06);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="bg-[#181c22] text-[#2dd4bf] font-['Rubik'] font-bold text-right flex flex-row-reverse justify-between items-center w-full px-6 py-4 sticky top-0 z-50">
+<div class="text-xl font-bold text-[#2dd4bf] tracking-tight">גִּבּוֹר</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400">menu</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional fitness coach with a friendly and confident expression, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1iIQOAK4lxwPZBD4sDTVtyFHjJIF4C01wzIShjBCbII9cU8Y1stnpFN9Wiu7RCHOR-gGYObOhSMZqjdYePcD-dIa4GMpOG0cB3hGoRGG-4WyAE1adXyEwFl5IrUFm3NFOX1brwtsq1epDSbujgIgH7Bxc9zZr45YJgekO_l6mhvq9kF0pHMa7Fj__Q66F5LRRM6PAJwwnQfkPba1O5hy1MjvDagaV9Vuk_iGaE8hYezhTzJ0LPnvzSfm_18GflBAS_kI1PWj4SSk"/>
+</div>
+</header>
+<main class="px-6 pt-8 max-w-md mx-auto">
+<!-- Split Badge -->
+<div class="flex justify-center mb-10">
+<div class="inline-flex items-center bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 gap-2">
+<span class="text-primary text-sm font-bold">פול בודי</span>
+<div class="w-px h-3 bg-primary/30"></div>
+<span class="text-primary text-sm font-medium">3 ימים</span>
+</div>
+</div>
+<!-- Calorie Counter -->
+<section class="text-center mb-12">
+<div class="relative inline-block">
+<!-- Ambient Glow Behind Numbers -->
+<div class="absolute inset-0 bg-primary/5 blur-3xl rounded-full"></div>
+<h1 class="text-[56px] font-extrabold text-[#E5E7EB] leading-none mb-2 tracking-tighter">1,852</h1>
+<p class="text-[#9CA3AF] text-lg font-medium">קלוריות ביום</p>
+</div>
+</section>
+<!-- Macro Grid -->
+<section class="grid grid-cols-3 gap-3 mb-10">
+<!-- Protein -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col items-center text-center ambient-glow border border-white/5">
+<span class="text-[#FB7185] text-xs font-bold mb-1 uppercase tracking-wider">חלבון</span>
+<span class="text-on-surface text-xl font-bold font-mono">145g</span>
+<div class="w-full h-1 bg-[#FB7185]/20 rounded-full mt-3 overflow-hidden">
+<div class="h-full bg-[#FB7185] w-full"></div>
+</div>
+</div>
+<!-- Carbs -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col items-center text-center ambient-glow border border-white/5">
+<span class="text-[#818CF8] text-xs font-bold mb-1 uppercase tracking-wider">פחמימות</span>
+<span class="text-on-surface text-xl font-bold font-mono">215g</span>
+<div class="w-full h-1 bg-[#818CF8]/20 rounded-full mt-3 overflow-hidden">
+<div class="h-full bg-[#818CF8] w-full"></div>
+</div>
+</div>
+<!-- Fat -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col items-center text-center ambient-glow border border-white/5">
+<span class="text-[#FBBF24] text-xs font-bold mb-1 uppercase tracking-wider">שומן</span>
+<span class="text-on-surface text-xl font-bold font-mono">62g</span>
+<div class="w-full h-1 bg-[#FBBF24]/20 rounded-full mt-3 overflow-hidden">
+<div class="h-full bg-[#FBBF24] w-full"></div>
+</div>
+</div>
+</section>
+<!-- TDEE Breakdown Section -->
+<section class="space-y-3 mb-12">
+<h3 class="text-on-surface-variant text-sm font-bold px-1 mb-4 uppercase tracking-widest">פירוט TDEE</h3>
+<!-- BMR Card -->
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between border border-white/5">
+<div class="flex flex-col gap-1 w-full">
+<div class="flex justify-between items-center mb-1">
+<span class="text-on-surface font-medium">BMR (חילוף חומרים בסיסי)</span>
+<span class="text-primary font-bold font-mono">1,420</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- NEAT Card -->
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between border border-white/5">
+<div class="flex flex-col gap-1 w-full">
+<div class="flex justify-between items-center mb-1">
+<span class="text-on-surface font-medium">NEAT (פעילות לא יזומה)</span>
+<span class="text-[#818CF8] font-bold font-mono">280</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#818CF8] w-[40%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- EAT Card -->
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between border border-white/5">
+<div class="flex flex-col gap-1 w-full">
+<div class="flex justify-between items-center mb-1">
+<span class="text-on-surface font-medium">EAT (פעילות גופנית)</span>
+<span class="text-[#34D399] font-bold font-mono">152</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#34D399] w-[25%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- TEF Card -->
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between border border-white/5">
+<div class="flex flex-col gap-1 w-full">
+<div class="flex justify-between items-center mb-1">
+<span class="text-on-surface font-medium">TEF (עיכול מזון)</span>
+<span class="text-[#9CA3AF] font-bold font-mono">185</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#9CA3AF] w-[30%] rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Health Disclaimer -->
+<footer class="text-center px-4 mb-8">
+<p class="text-[#6B7280] text-xs leading-relaxed">
+                המידע המוצג הינו הערכה בלבד. תמיד מומלץ להתייעץ עם תזונאי או רופא מוסמך לפני תחילת תוכנית תזונה חדשה.
+            </p>
+</footer>
+<!-- CTA Button -->
+<div class="fixed bottom-24 left-0 w-full px-6 flex justify-center pointer-events-none">
+<button class="pointer-events-auto w-full max-w-md bg-primary hover:bg-primary-container text-on-primary font-bold py-4 rounded-xl shadow-lg transition-transform active:scale-95 duration-150">
+                בוא נתחיל!
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="bg-[#10141a]/90 backdrop-blur-xl fixed bottom-0 left-0 w-full z-50 flex flex-row-reverse justify-around items-center px-4 pb-6 pt-2 shadow-[0_-4px_24px_rgba(45,212,191,0.06)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] transition-all cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Rubik'] text-[12px] font-medium mt-1">דף הבית</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] transition-all cursor-pointer">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-['Rubik'] text-[12px] font-medium mt-1">אימונים</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2dd4bf] bg-[#2dd4bf]/10 rounded-xl px-4 py-1 transition-all">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-['Rubik'] text-[12px] font-medium mt-1">תזונה</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-[#57f1db] transition-all cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Rubik'] text-[12px] font-medium mt-1">פרופיל</span>
+</div>
+</nav>
+</body></html>
