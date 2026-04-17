@@ -9,7 +9,7 @@ import {
   OnboardingTitle,
   OnboardingSubtitle,
   OnboardingContent,
-  CheckboxList,
+  OptionSelector,
 } from '@/components'
 import type { DayOfWeek } from '@/types'
 
@@ -63,11 +63,11 @@ export default function TrainingDaysScreen() {
         <Text style={styles.subtitle}>{strings.subtitle}</Text>
       </OnboardingSubtitle>
       <OnboardingContent>
-        <CheckboxList
+        <OptionSelector
           options={dayOptions}
           selected={selectedDays}
-          onToggle={handleToggle}
-          showSelectAll={false}
+          onSelect={handleToggle}
+          layout="list"
           testID="training-days"
         />
       </OnboardingContent>

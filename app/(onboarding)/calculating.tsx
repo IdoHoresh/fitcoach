@@ -13,8 +13,6 @@ import { useRouter } from 'expo-router'
 import { colors, spacing, fontSize, fontFamily, borderRadius } from '@/theme'
 import { t } from '@/i18n'
 import { OnboardingLayout, OnboardingTitle, OnboardingContent } from '@/components'
-import { RTLWrapper } from '@/components/shared/RTLWrapper'
-import { isRTL } from '@/hooks/rtl'
 
 const STEP_DURATION = 2000
 const TOTAL_DURATION = 10000
@@ -58,12 +56,12 @@ function CalculatingStep({
       entering={FadeIn.delay(index * 200).duration(300)}
       testID={`calculating-step-${index}`}
     >
-      <RTLWrapper style={styles.stepRow}>
+      <View style={styles.stepRow}>
         <Text style={[styles.stepLabel, { color: textColor }]}>{label}</Text>
         <Animated.Text style={[styles.stepIcon, { color: iconColor }, dotStyle]}>
           {icon}
         </Animated.Text>
-      </RTLWrapper>
+      </View>
     </Animated.View>
   )
 }
@@ -150,6 +148,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.xl,
   },
   stepRow: {
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.md,
   },
@@ -163,7 +162,7 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     fontFamily: fontFamily.medium,
     flex: 1,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'left',
   },
   progressTrack: {
     height: 6,
@@ -171,26 +170,14 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.full,
     overflow: 'hidden',
     marginTop: spacing.xl,
-    position: 'relative',
-    // RTL fix: mirror the entire track horizontally. The fill is pinned to
-    // `left: 0` and animates its `width` via reanimated's `useAnimatedStyle`.
-    // React Native is supposed to auto-swap `left` ↔ `right` in RTL, but
-    // that swap does NOT apply to style arrays that include a reanimated
-    // animated-style output — the UI-thread setter bypasses the JS-side
-    // layout interpolator that handles the swap. Result: the fill would
-    // grow left→right in both languages, which looks backwards in Hebrew.
-    //
-    // `transform: scaleX(-1)` is unaffected by RTL auto-swap and flips the
-    // entire track visually. The fill still grows left→right in raw layout,
-    // but the viewer sees right→left. The track has no text children, so
-    // there's nothing else to worry about mirroring.
-    transform: isRTL() ? [{ scaleX: -1 }] : undefined,
+    // Use flex to pin the fill to the start edge. forceRTL auto-flips
+    // `row` to right-to-left, so the fill grows from the correct edge
+    // in Hebrew. position:absolute + `left: 0` would NOT auto-swap
+    // because reanimated's animated-style output bypasses that.
+    flexDirection: 'row',
   },
   progressFill: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
+    height: '100%',
     backgroundColor: colors.primary,
     borderRadius: borderRadius.full,
   },

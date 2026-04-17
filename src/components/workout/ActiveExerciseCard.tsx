@@ -85,7 +85,7 @@ export function ActiveExerciseCard({
     return (
       <View onLayout={handleLayout}>
         <Card onPress={onToggleExpand} testID={testID}>
-          <View style={[styles.collapsedRow, rtl && styles.collapsedRowRTL]}>
+          <View style={styles.collapsedRow}>
             <View style={[styles.orderBadge, isCompleted && styles.orderBadgeCompleted]}>
               {isCompleted ? (
                 <Ionicons name="checkmark" size={16} color={colors.setComplete} />
@@ -94,15 +94,7 @@ export function ActiveExerciseCard({
               )}
             </View>
             <View style={styles.collapsedContent}>
-              <Text
-                style={[
-                  styles.exerciseName,
-                  rtl && styles.textRTL,
-                  isCompleted && styles.textCompleted,
-                ]}
-              >
-                {name}
-              </Text>
+              <Text style={[styles.exerciseName, isCompleted && styles.textCompleted]}>{name}</Text>
               {isCompleted && (
                 <Text style={styles.setSummary}>
                   {formatSetsSummary(completedSets, totalSets, lastWeight)}
@@ -124,13 +116,11 @@ export function ActiveExerciseCard({
       <Card testID={testID}>
         {/* Header */}
         <Pressable onPress={onToggleExpand}>
-          <View style={[styles.expandedHeader, rtl && styles.expandedHeaderRTL]}>
+          <View style={styles.expandedHeader}>
             <View style={styles.orderBadge}>
               <Text style={styles.orderText}>{order}</Text>
             </View>
-            <Text style={[styles.exerciseName, styles.exerciseNameExpanded, rtl && styles.textRTL]}>
-              {name}
-            </Text>
+            <Text style={[styles.exerciseName, styles.exerciseNameExpanded]}>{name}</Text>
             <Text style={styles.setCounter}>
               {strings.setsCompleted
                 .replace('{done}', String(completedSets))
@@ -212,9 +202,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: spacing.ms,
   },
-  collapsedRowRTL: {
-    flexDirection: 'row-reverse',
-  },
   collapsedContent: {
     flex: 1,
     gap: spacing.xxs,
@@ -250,9 +237,6 @@ const styles = StyleSheet.create({
   exerciseNameExpanded: {
     flex: 1,
   },
-  textRTL: {
-    textAlign: 'right',
-  },
   textCompleted: {
     color: colors.setComplete,
   },
@@ -263,9 +247,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: spacing.ms,
     marginBottom: spacing.sm,
-  },
-  expandedHeaderRTL: {
-    flexDirection: 'row-reverse',
   },
   setCounter: {
     fontSize: fontSize.xs,

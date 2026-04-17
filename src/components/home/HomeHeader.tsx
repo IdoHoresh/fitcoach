@@ -6,7 +6,6 @@ import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import { getGreetingKey } from '@/utils/greeting'
-import { isRTL } from '@/hooks/rtl'
 
 const AVATAR_SIZE = 40
 
@@ -93,7 +92,7 @@ export function HomeHeader({ onAvatarPress, onMenuPress, name, testID }: HomeHea
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
@@ -107,12 +106,12 @@ const styles = StyleSheet.create({
     color: colors.textPrimary,
     fontSize: fontSize.xl,
     fontWeight: fontWeight.bold,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'left',
   },
   date: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'left',
   },
   avatar: {
     width: AVATAR_SIZE,

@@ -115,7 +115,7 @@ export const he = {
       title: 'מה סוג העבודה שלך?',
       subtitle: 'זה עוזר לנו לחשב כמה קלוריות אתה שורף ביום',
       desk: 'יושב רוב היום',
-      deskDesc: 'מחשב, משרד, קולגים מסביב',
+      deskDesc: 'מחשב, משרד, סטודנט',
       mixed: 'חצי יושב חצי עומד',
       mixedDesc: 'מורה, מוכר, עובד מעבדה',
       active: 'הולך ועומד רוב היום',
@@ -521,6 +521,20 @@ export const he = {
     saveFailed: 'השמירה נכשלה',
     loadFailed: 'הטעינה נכשלה',
     networkError: 'בעיית חיבור',
+  },
+
+  // ── Barcode scanner ──
+  barcode: {
+    scanPrompt: 'כוון את המצלמה לברקוד',
+    searching: 'מחפש...',
+    found: 'נמצא מוצר',
+    notFound: 'מוצר לא נמצא',
+    noConnection: 'אין חיבור לאינטרנט',
+    partialData: 'נתוני תזונה חלקיים',
+    permissionTitle: 'נדרשת גישה למצלמה',
+    permissionBody: 'FitCoach צריך גישה למצלמה כדי לסרוק ברקודים',
+    permissionOpenSettings: 'פתח הגדרות',
+    tryAgain: 'נסה שוב',
   },
 } as const
 

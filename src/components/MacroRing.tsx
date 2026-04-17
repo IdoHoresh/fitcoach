@@ -6,7 +6,6 @@ import { colors } from '@/theme/colors'
 import { spacing } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 import { RTLWrapper } from './shared/RTLWrapper'
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle)
@@ -150,7 +149,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.xxs,
   },
   statsRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
     marginTop: spacing.lg,

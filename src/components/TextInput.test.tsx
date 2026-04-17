@@ -2,18 +2,8 @@ import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react-native'
 import { TextInput } from './TextInput'
 import { colors } from '@/theme/colors'
-import * as rtlModule from '@/hooks/rtl'
 
 describe('TextInput', () => {
-  beforeEach(() => {
-    jest.clearAllMocks()
-    jest.spyOn(rtlModule, 'isRTL').mockReturnValue(false)
-  })
-
-  afterEach(() => {
-    jest.restoreAllMocks()
-  })
-
   describe('rendering', () => {
     it('renders label text', () => {
       render(<TextInput label="Name" value="" onChangeText={jest.fn()} />)
@@ -64,24 +54,6 @@ describe('TextInput', () => {
     it('does not render error when no error prop', () => {
       render(<TextInput label="Name" value="" onChangeText={jest.fn()} />)
       expect(screen.queryByTestId('input-error')).toBeNull()
-    })
-  })
-
-  describe('RTL support', () => {
-    it('aligns text left in LTR mode', () => {
-      jest.spyOn(rtlModule, 'isRTL').mockReturnValue(false)
-      render(<TextInput label="Name" value="" onChangeText={jest.fn()} testID="input" />)
-      expect(screen.getByTestId('input-field')).toHaveStyle({
-        textAlign: 'left',
-      })
-    })
-
-    it('aligns text right in RTL mode', () => {
-      jest.spyOn(rtlModule, 'isRTL').mockReturnValue(true)
-      render(<TextInput label="Name" value="" onChangeText={jest.fn()} testID="input" />)
-      expect(screen.getByTestId('input-field')).toHaveStyle({
-        textAlign: 'right',
-      })
     })
   })
 

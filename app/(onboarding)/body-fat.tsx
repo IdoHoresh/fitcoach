@@ -49,7 +49,6 @@ export default function BodyFatScreen() {
       </OnboardingSubtitle>
       <OnboardingContent>
         <NumberInput
-          label="%"
           value={bodyFat}
           onChangeValue={(v) => {
             setBodyFat(v)

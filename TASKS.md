@@ -508,6 +508,6 @@ Apple reviews health/fitness apps more strictly. Key rules:
 
 ## Next Up
 
-- [ ] **Barcode scanning** — camera-based scan in FoodSearchSheet. Local DB lookup is a single `WHERE id = 'sh_' || code OR id = 'rl_' || code` (both seeds are already keyed by EAN). Fallback to Open Food Facts for unknown codes; on hit, persist as `manual_<ean>` so future scans stay offline. Needs: expo-camera (check expo-barcode-scanner deprecation), first-scan permission flow with Hebrew copy, offline-unreachable handling. Brainstorm decisions: scan entry point (button in search sheet vs dedicated tab), OFF save strategy (persist vs ephemeral), permission UX.
+- [x] **Barcode scanning** — expo-camera CameraView in FoodSearchSheet, barcode icon in search row, getByBarcode() local DB lookup (sh*/rl*/raw*/manual* tiers), Open Food Facts fallback with normalizeOffProduct(), manual\_<ean> persistence, partial-data badge in PortionPicker, permission-denied → Settings deep-link (2026-04-15)
 
 - [ ] **Add more Israeli supermarkets** — Tiv Taam, Victory, Yohananof, Am-Pm. Each needs a scraper module following the same pipeline pattern as Shufersal. Deferred until raw ingredients ship and usage data reveals a real catalog gap.

@@ -55,15 +55,15 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
     color: colors.textPrimary,
     marginBottom: spacing.sm,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'left',
   },
   restMessage: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: 'left',
   },
   workoutInfo: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.sm,
   },

@@ -9,7 +9,6 @@ import {
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
-import { isRTL } from '@/hooks/rtl'
 
 interface TextInputProps {
   label: string
@@ -32,7 +31,6 @@ export function TextInput({
   secureTextEntry,
   testID,
 }: TextInputProps) {
-  const textAlign = isRTL() ? 'right' : 'left'
   const fieldTestID = testID ? `${testID}-field` : 'input-field'
 
   return (
@@ -47,7 +45,7 @@ export function TextInput({
         secureTextEntry={secureTextEntry}
         accessibilityLabel={label}
         testID={fieldTestID}
-        style={[styles.input, { textAlign }, error ? styles.inputError : styles.inputDefault]}
+        style={[styles.input, error ? styles.inputError : styles.inputDefault]}
       />
       {error ? (
         <Text style={styles.error} testID={testID ? `${testID}-error` : 'input-error'}>
@@ -60,12 +58,13 @@ export function TextInput({
 
 const styles = StyleSheet.create({
   container: {
-    gap: spacing.xs,
+    gap: spacing.sm,
   },
   label: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
     fontWeight: fontWeight.medium,
+    textAlign: 'center',
   },
   input: {
     backgroundColor: colors.surface,

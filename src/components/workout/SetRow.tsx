@@ -4,7 +4,6 @@ import { Ionicons } from '@expo/vector-icons'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
-import { isRTL } from '@/hooks/rtl'
 import { t } from '@/i18n'
 import type { LoggedSet } from '@/types/workout'
 
@@ -30,7 +29,6 @@ export function SetRow({
   testID,
 }: SetRowProps) {
   const strings = t().workout
-  const rtl = isRTL()
 
   const defaultReps = Math.round((prescribedReps.min + prescribedReps.max) / 2)
   const hasWeight = suggestedWeightKg != null && suggestedWeightKg > 0
@@ -83,7 +81,6 @@ export function SetRow({
     <View
       style={[
         styles.row,
-        rtl && styles.rowRTL,
         isActive && styles.rowActive,
         isConfirmed && styles.rowConfirmed,
         isPending && styles.rowPending,
@@ -98,7 +95,7 @@ export function SetRow({
       {/* Weight input */}
       <View style={styles.inputGroup}>
         <TextInput
-          style={[styles.input, rtl && styles.inputRTL, isConfirmed && styles.inputConfirmed]}
+          style={[styles.input, isConfirmed && styles.inputConfirmed]}
           value={isConfirmed && loggedSet ? String(loggedSet.weightKg) : weightText}
           onChangeText={handleWeightChange}
           keyboardType="numeric"
@@ -115,7 +112,7 @@ export function SetRow({
       {/* Reps input */}
       <View style={styles.inputGroup}>
         <TextInput
-          style={[styles.input, rtl && styles.inputRTL, isConfirmed && styles.inputConfirmed]}
+          style={[styles.input, isConfirmed && styles.inputConfirmed]}
           value={isConfirmed && loggedSet ? String(loggedSet.reps) : repsText}
           onChangeText={handleRepsChange}
           keyboardType="number-pad"
@@ -159,9 +156,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.sm,
     borderRadius: borderRadius.md,
   },
-  rowRTL: {
-    flexDirection: 'row-reverse',
-  },
   rowActive: {
     backgroundColor: `${colors.setActive}15`,
     borderWidth: 1,
@@ -202,9 +196,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontVariant: ['tabular-nums'],
     paddingHorizontal: spacing.xs,
-  },
-  inputRTL: {
-    textAlign: 'center',
   },
   inputConfirmed: {
     backgroundColor: `${colors.setComplete}10`,

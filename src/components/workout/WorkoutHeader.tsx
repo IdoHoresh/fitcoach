@@ -57,10 +57,10 @@ export function WorkoutHeader({ workout, mesocycle, testID }: WorkoutHeaderProps
 const styles = StyleSheet.create({
   container: {
     gap: spacing.xs,
-    alignItems: isRTL() ? 'flex-end' : 'flex-start',
+    alignItems: 'flex-start',
   },
   titleRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.sm,
   },
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     color: colors.textInverse,
   },
   subtitleRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.sm,
   },

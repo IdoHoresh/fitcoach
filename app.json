@@ -17,7 +17,7 @@
       "supportsTablet": false,
       "bundleIdentifier": "com.fitcoach.app",
       "infoPlist": {
-        "NSCameraUsageDescription": "FitCoach uses the camera for progress photos",
+        "NSCameraUsageDescription": "FitCoach uses the camera to scan food barcodes and for progress photos",
         "NSPhotoLibraryUsageDescription": "FitCoach uses your photo library for progress photos"
       }
     },
@@ -33,7 +33,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-router", "expo-sqlite", "expo-secure-store"],
+    "plugins": ["expo-router", "expo-sqlite", "expo-secure-store", "expo-camera"],
     "extra": {
       "eas": {
         "projectId": ""

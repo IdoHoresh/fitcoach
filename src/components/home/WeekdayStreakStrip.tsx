@@ -5,7 +5,6 @@ import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 import type { DayOfWeek } from '@/types/user'
 
 const CIRCLE_SIZE = 36
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
     borderColor: colors.border + '1A',
   },
   headerRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: spacing.xs,
@@ -118,7 +117,7 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
   },
   dotsRow: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     justifyContent: 'space-between',
   },
   dayCell: {

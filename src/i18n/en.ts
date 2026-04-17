@@ -115,7 +115,7 @@ export const en: TranslationKeys = {
       title: 'What type of work do you do?',
       subtitle: 'This helps us calculate how many calories you burn daily',
       desk: 'Sitting most of the day',
-      deskDesc: 'Computer, office, desk work',
+      deskDesc: 'Computer, office, student',
       mixed: 'Half sitting, half standing',
       mixedDesc: 'Teacher, retail, lab work',
       active: 'Walking/standing most of the day',
@@ -514,5 +514,19 @@ export const en: TranslationKeys = {
     saveFailed: 'Save failed',
     loadFailed: 'Load failed',
     networkError: 'Connection error',
+  },
+
+  // ── Barcode scanner ──
+  barcode: {
+    scanPrompt: 'Point the camera at a barcode',
+    searching: 'Searching...',
+    found: 'Product found',
+    notFound: 'Product not found',
+    noConnection: 'No internet connection',
+    partialData: 'Incomplete nutrition data',
+    permissionTitle: 'Camera access required',
+    permissionBody: 'FitCoach needs camera access to scan barcodes',
+    permissionOpenSettings: 'Open Settings',
+    tryAgain: 'Try again',
   },
 } as const
