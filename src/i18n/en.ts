@@ -115,7 +115,7 @@ export const en: TranslationKeys = {
       title: 'What type of work do you do?',
       subtitle: 'This helps us calculate how many calories you burn daily',
       desk: 'Sitting most of the day',
-      deskDesc: 'Computer, office, desk work',
+      deskDesc: 'Computer, office, student',
       mixed: 'Half sitting, half standing',
       mixedDesc: 'Teacher, retail, lab work',
       active: 'Walking/standing most of the day',
