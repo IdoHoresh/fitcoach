@@ -275,7 +275,6 @@ export function ManualFoodForm({
       <Text style={styles.sectionHeader} testID={tid('per-100g-header')}>
         {strings.per100gHeader}
       </Text>
-      <Text style={styles.sectionSubtitle}>{strings.per100gSubtitle}</Text>
 
       <TextInput
         label={strings.caloriesLabel}
