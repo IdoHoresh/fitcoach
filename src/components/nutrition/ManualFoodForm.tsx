@@ -272,6 +272,11 @@ export function ManualFoodForm({
         testID={tid('name-he')}
       />
 
+      <Text style={styles.sectionHeader} testID={tid('per-100g-header')}>
+        {strings.per100gHeader}
+      </Text>
+      <Text style={styles.sectionSubtitle}>{strings.per100gSubtitle}</Text>
+
       <TextInput
         label={strings.caloriesLabel}
         value={calories}
@@ -434,6 +439,21 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     fontWeight: fontWeight.semibold,
     color: colors.textPrimary,
+  },
+  sectionHeader: {
+    fontSize: fontSize.sm,
+    fontWeight: fontWeight.semibold,
+    color: colors.textSecondary,
+    marginTop: spacing.md,
+    textAlign: 'right',
+  },
+  sectionSubtitle: {
+    fontSize: fontSize.xs,
+    color: colors.textMuted,
+    marginTop: -spacing.xs,
+    marginBottom: spacing.xs,
+    lineHeight: 18,
+    textAlign: 'right',
   },
   atwaterWarning: {
     fontSize: fontSize.xs,

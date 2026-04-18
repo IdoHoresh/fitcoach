@@ -276,6 +276,11 @@ describe('ManualFoodForm — auto-calculate calories', () => {
 })
 
 describe('ManualFoodForm — progressive disclosure + blank macros', () => {
+  it('renders a "values per 100g" section header above the macro fields', () => {
+    const { getByTestId } = setup()
+    expect(getByTestId('form-per-100g-header')).toBeTruthy()
+  })
+
   it('renders the "more details" expander (collapsed by default)', () => {
     const { getByTestId, queryByTestId } = setup()
     expect(getByTestId('form-more-details-toggle')).toBeTruthy()
