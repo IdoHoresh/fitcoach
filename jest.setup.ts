@@ -12,6 +12,13 @@ jest.mock('expo-haptics', () => ({
   },
 }))
 
+// expo-crypto pulls in expo-modules-core which crashes under jest. Tests that
+// need deterministic uuids can override via local jest.mock(); the default
+// here just keeps imports safe for tests that transitively touch this module.
+jest.mock('expo-crypto', () => ({
+  randomUUID: () => 'test-uuid-' + Math.random().toString(36).slice(2, 10),
+}))
+
 // expo-camera requires native modules — mock CameraView and useCameraPermissions for unit tests
 jest.mock('expo-camera', () => {
   const React = jest.requireActual('react')

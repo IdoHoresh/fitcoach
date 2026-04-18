@@ -555,6 +555,8 @@ export const en: TranslationKeys = {
     cancelButton: 'Cancel',
     atwaterWarning:
       'Calories look unusual vs. macros — you may have entered kJ instead of kcal. Check the package.',
+    eanInputLabel: 'Barcode (optional)',
+    eanInputPlaceholder: 'e.g. 7290012345678',
     errors: {
       nameRequired: 'Hebrew name is required',
       macroSumTooHigh:
@@ -562,6 +564,12 @@ export const en: TranslationKeys = {
       servingFieldsIncomplete: 'Fill both name and weight, or leave both blank',
       numberInvalid: 'Enter a valid number',
       valueOutOfRange: 'Value is out of range',
+    },
+    collision: {
+      title: 'A product with this barcode already exists: {name}',
+      useExisting: 'Use existing product',
+      replace: 'Replace with new data',
+      cancel: 'Cancel',
     },
   },
 } as const

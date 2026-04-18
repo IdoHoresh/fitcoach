@@ -1,20 +1,28 @@
 /**
- * ManualFoodForm — fallback form when OFF returns 404 for a scanned EAN.
+ * ManualFoodForm — fallback form for creating a manual food entry.
  *
- * Hebrew-first input (name + 4 macros required, fiber + natural-unit serving optional).
- * Emits a FoodItem on successful submit; the host (BarcodeScannerSheet this PR,
- * future text-search entry in a follow-up PR) is responsible for persistence.
+ * Two entry modes:
+ *   - Scanner unhappy-path: `ean` prop is provided; rendered read-only at top.
+ *     Id = `manual_<ean>`. Caller is `BarcodeScannerSheet` after OFF 404.
+ *   - Text-search no-results: `ean` prop omitted; an optional EAN input is
+ *     rendered. Id = `manual_<digits>` if user typed an EAN (digits stripped),
+ *     else `manual_<uuid-v4>`. Caller is `FoodSearchSheet` via the always-on
+ *     "הוסף מאכל אישי" button.
  *
  * Validation flow:
  *   1. Pre-parse numeric strings → numbers (empty / NaN surfaces as numberInvalid)
  *   2. Run ManualFoodInputSchema.safeParse → Zod enforces clamps + p+f+c ≤ 101 + serving-pair refine
- *   3. On success: construct FoodItem (id = manual_<ean>, isUserCreated, auto 100g serving)
+ *   3. On success: construct FoodItem (id per mode, isUserCreated, auto 100g serving)
  *   4. Atwater delta warning renders inline when kcal diverges >25% from 4·p + 9·f + 4·c
  *      (soft warn only — does not block submit)
+ *
+ * Persistence is the host's responsibility (insertFoodStrict for manual paths,
+ * upsertFood for OFF refresh paths). The form is repository-agnostic.
  */
 
 import React, { useState } from 'react'
 import { View, Text, ScrollView, StyleSheet } from 'react-native'
+import { randomUUID } from 'expo-crypto'
 import { TextInput } from '@/components/TextInput'
 import { Button } from '@/components/Button'
 import { colors } from '@/theme/colors'
@@ -23,11 +31,15 @@ import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import type { FoodItem, ServingSize } from '@/types'
 import { ManualFoodInputSchema, computeAtwaterDelta } from '@/security/validation'
+import { normalizeEan } from '@/shared/normalizeEan'
 
 // ── Types ─────────────────────────────────────────────────────────────
 
 interface ManualFoodFormProps {
-  ean: string
+  /** Pre-known EAN from the scanner path. Omit for text-search entry. */
+  ean?: string
+  /** Pre-fill the Hebrew name (e.g. from the FoodSearchSheet query). */
+  initialNameHe?: string
   onSubmit: (food: FoodItem) => void | Promise<void>
   onCancel: () => void
   testID?: string
@@ -75,13 +87,32 @@ function shouldShowAtwaterWarning(
   return computeAtwaterDelta(kcal, p, f, c).deltaPct > ATWATER_WARN_THRESHOLD
 }
 
+/**
+ * Picks the suffix used for the FoodItem id:
+ *   - scanner path (eanProp set) → use the scanned EAN as-is
+ *   - text-search path with typed EAN → strip non-digits; use if any remain
+ *   - text-search path with no usable EAN → fresh uuid v4
+ */
+function resolveFoodIdSuffix(eanProp: string | undefined, typedEan: string): string {
+  if (eanProp != null) return eanProp
+  const cleaned = normalizeEan(typedEan)
+  return cleaned.length > 0 ? cleaned : randomUUID()
+}
+
 // ── Component ─────────────────────────────────────────────────────────
 
-export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFormProps) {
+export function ManualFoodForm({
+  ean,
+  initialNameHe,
+  onSubmit,
+  onCancel,
+  testID,
+}: ManualFoodFormProps) {
   const strings = t().manualFood
 
-  const [nameHe, setNameHe] = useState('')
+  const [nameHe, setNameHe] = useState(initialNameHe ?? '')
   const [nameEn, setNameEn] = useState('')
+  const [typedEan, setTypedEan] = useState('')
   const [calories, setCalories] = useState('')
   const [protein, setProtein] = useState('')
   const [fat, setFat] = useState('')
@@ -182,7 +213,7 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
     }
 
     const food: FoodItem = {
-      id: `manual_${ean}`,
+      id: `manual_${resolveFoodIdSuffix(ean, typedEan)}`,
       nameHe: data.nameHe,
       nameEn: data.nameEn ?? data.nameHe,
       category: 'snacks',
@@ -203,12 +234,23 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID={testID}>
       <Text style={styles.title}>{strings.title}</Text>
 
-      <View style={styles.eanRow}>
-        <Text style={styles.eanLabel}>{strings.barcodeLabel}:</Text>
-        <Text style={styles.eanValue} testID={tid('ean-display')}>
-          {ean}
-        </Text>
-      </View>
+      {ean != null ? (
+        <View style={styles.eanRow}>
+          <Text style={styles.eanLabel}>{strings.barcodeLabel}:</Text>
+          <Text style={styles.eanValue} testID={tid('ean-display')}>
+            {ean}
+          </Text>
+        </View>
+      ) : (
+        <TextInput
+          label={strings.eanInputLabel}
+          value={typedEan}
+          onChangeText={setTypedEan}
+          placeholder={strings.eanInputPlaceholder}
+          keyboardType="number-pad"
+          testID={tid('ean-input')}
+        />
+      )}
 
       <TextInput
         label={strings.nameHeLabel}

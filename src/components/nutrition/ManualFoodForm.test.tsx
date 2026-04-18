@@ -8,6 +8,10 @@ import { render, fireEvent } from '@testing-library/react-native'
 import { ManualFoodForm } from './ManualFoodForm'
 import type { FoodItem } from '@/types'
 
+jest.mock('expo-crypto', () => ({
+  randomUUID: () => '00000000-0000-0000-0000-000000000000',
+}))
+
 const EAN = '7290000066318'
 
 function setup(props: Partial<React.ComponentProps<typeof ManualFoodForm>> = {}) {
@@ -15,6 +19,15 @@ function setup(props: Partial<React.ComponentProps<typeof ManualFoodForm>> = {})
   const onCancel = jest.fn()
   const utils = render(
     <ManualFoodForm ean={EAN} onSubmit={onSubmit} onCancel={onCancel} testID="form" {...props} />,
+  )
+  return { ...utils, onSubmit, onCancel }
+}
+
+function setupNoEan(props: Omit<React.ComponentProps<typeof ManualFoodForm>, 'ean'> | object = {}) {
+  const onSubmit = jest.fn<void, [FoodItem]>()
+  const onCancel = jest.fn()
+  const utils = render(
+    <ManualFoodForm onSubmit={onSubmit} onCancel={onCancel} testID="form" {...(props as object)} />,
   )
   return { ...utils, onSubmit, onCancel }
 }
@@ -200,5 +213,87 @@ describe('ManualFoodForm', () => {
     fireEvent.press(getByTestId('form-cancel'))
 
     expect(onCancel).toHaveBeenCalledTimes(1)
+  })
+})
+
+describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
+  it('renders an EAN input field when ean prop is undefined', () => {
+    const { getByTestId } = setupNoEan()
+    expect(getByTestId('form-ean-input-field')).toBeTruthy()
+  })
+
+  it('does NOT render the read-only EAN row when ean prop is undefined', () => {
+    const { queryByTestId } = setupNoEan()
+    expect(queryByTestId('form-ean-display')).toBeNull()
+  })
+
+  it('prefills nameHe from initialNameHe prop', () => {
+    const { getByTestId } = setupNoEan({ initialNameHe: 'פתיבר ביתי' })
+    expect(getByTestId('form-name-he-field').props.value).toBe('פתיבר ביתי')
+  })
+
+  it('does NOT prefill nameHe when initialNameHe is undefined', () => {
+    const { getByTestId } = setupNoEan()
+    expect(getByTestId('form-name-he-field').props.value).toBe('')
+  })
+
+  it('submits with id manual_<uuid> when EAN field is left blank', () => {
+    const { getByTestId, onSubmit } = setupNoEan()
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
+    fireEvent.changeText(getByTestId('form-calories-field'), '350')
+    fireEvent.changeText(getByTestId('form-protein-field'), '30')
+    fireEvent.changeText(getByTestId('form-fat-field'), '10')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '40')
+
+    fireEvent.press(getByTestId('form-submit'))
+
+    expect(onSubmit).toHaveBeenCalledTimes(1)
+    const submitted = onSubmit.mock.calls[0][0]
+    expect(submitted.id).toBe('manual_00000000-0000-0000-0000-000000000000')
+  })
+
+  it('submits with id manual_<digits> when EAN field has typed digits', () => {
+    const { getByTestId, onSubmit } = setupNoEan()
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
+    fireEvent.changeText(getByTestId('form-ean-input-field'), '7290012345678')
+    fireEvent.changeText(getByTestId('form-calories-field'), '350')
+    fireEvent.changeText(getByTestId('form-protein-field'), '30')
+    fireEvent.changeText(getByTestId('form-fat-field'), '10')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '40')
+
+    fireEvent.press(getByTestId('form-submit'))
+
+    const submitted = onSubmit.mock.calls[0][0]
+    expect(submitted.id).toBe('manual_7290012345678')
+  })
+
+  it('strips non-digit characters from typed EAN before constructing id', () => {
+    const { getByTestId, onSubmit } = setupNoEan()
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
+    fireEvent.changeText(getByTestId('form-ean-input-field'), '7290 0123 45678')
+    fireEvent.changeText(getByTestId('form-calories-field'), '350')
+    fireEvent.changeText(getByTestId('form-protein-field'), '30')
+    fireEvent.changeText(getByTestId('form-fat-field'), '10')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '40')
+
+    fireEvent.press(getByTestId('form-submit'))
+
+    const submitted = onSubmit.mock.calls[0][0]
+    expect(submitted.id).toBe('manual_7290012345678')
+  })
+
+  it('falls through to manual_<uuid> when typed EAN has no digits', () => {
+    const { getByTestId, onSubmit } = setupNoEan()
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
+    fireEvent.changeText(getByTestId('form-ean-input-field'), 'abc')
+    fireEvent.changeText(getByTestId('form-calories-field'), '350')
+    fireEvent.changeText(getByTestId('form-protein-field'), '30')
+    fireEvent.changeText(getByTestId('form-fat-field'), '10')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '40')
+
+    fireEvent.press(getByTestId('form-submit'))
+
+    const submitted = onSubmit.mock.calls[0][0]
+    expect(submitted.id).toBe('manual_00000000-0000-0000-0000-000000000000')
   })
 })

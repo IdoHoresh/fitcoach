@@ -562,6 +562,8 @@ export const he = {
     cancelButton: 'ביטול',
     atwaterWarning:
       'הקלוריות נראות חריגות ביחס למאקרו — ייתכן שהכנסת kJ במקום kcal. בדוק את האריזה.',
+    eanInputLabel: 'ברקוד (לא חובה)',
+    eanInputPlaceholder: 'לדוגמה: 7290012345678',
     errors: {
       nameRequired: 'שם בעברית נדרש',
       macroSumTooHigh:
@@ -569,6 +571,12 @@ export const he = {
       servingFieldsIncomplete: 'מלא שם ומשקל, או השאר את שני השדות ריקים',
       numberInvalid: 'הכנס מספר תקין',
       valueOutOfRange: 'הערך מחוץ לטווח המותר',
+    },
+    collision: {
+      title: 'מוצר עם הברקוד הזה כבר קיים: {name}',
+      useExisting: 'השתמש במוצר הקיים',
+      replace: 'החלף בנתונים החדשים',
+      cancel: 'ביטול',
     },
   },
 } as const
