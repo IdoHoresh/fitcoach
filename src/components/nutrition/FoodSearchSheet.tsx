@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback } from 'react'
+import React, { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import {
   View,
   Text,
@@ -130,6 +130,15 @@ export function FoodSearchSheet({
     attempted: FoodItem
   } | null>(null)
 
+  // Guards async handlers (insertFoodStrict / upsertFood) from calling setters
+  // on a sheet that was dismissed mid-flight. Matches lessons.md 2026-04-10 —
+  // "async callbacks must check a ref before setState when the triggering UI
+  // can dismiss". Kept in sync with manualFormVisible via the effect below.
+  const formAliveRef = useRef(false)
+  useEffect(() => {
+    formAliveRef.current = manualFormVisible
+  }, [manualFormVisible])
+
   // Reset to 'all' tab every time the sheet opens
   useEffect(() => {
     if (visible) {
@@ -189,10 +198,12 @@ export function FoodSearchSheet({
   async function handleManualSubmit(food: FoodItem) {
     try {
       await foodRepository.insertFoodStrict(food)
+      if (!formAliveRef.current) return
       setManualFormVisible(false)
       setSelectedFood(food)
     } catch (err) {
       if (err instanceof FoodCollisionError) {
+        if (!formAliveRef.current) return
         setCollisionState({ existing: err.existing, attempted: food })
         return
       }
@@ -212,6 +223,7 @@ export function FoodSearchSheet({
     if (!collisionState) return
     const attempted = collisionState.attempted
     await foodRepository.upsertFood(attempted)
+    if (!formAliveRef.current) return
     setCollisionState(null)
     setManualFormVisible(false)
     setSelectedFood(attempted)
@@ -336,7 +348,10 @@ export function FoodSearchSheet({
           <Text style={styles.customFoodLabel}>{strings.addCustomFood}</Text>
         </Pressable>
 
-        {/* Manual create form (text-search no-EAN entry point) */}
+        {/* Manual create form (text-search no-EAN entry point).
+            The collision sheet is nested INSIDE this Modal, not a sibling —
+            iOS requires nested-Modal pattern for correct z-ordering of stacked
+            modals (sibling modals under the same parent z-fight unpredictably). */}
         {manualFormVisible && (
           <Modal
             visible
@@ -350,20 +365,17 @@ export function FoodSearchSheet({
               onCancel={() => setManualFormVisible(false)}
               testID={`${id}-manual-form`}
             />
+            {collisionState && (
+              <ManualFoodCollisionSheet
+                visible
+                existing={collisionState.existing}
+                onUseExisting={handleUseExisting}
+                onReplace={handleReplace}
+                onCancel={handleCancelCollision}
+                testID={`${id}-collision`}
+              />
+            )}
           </Modal>
-        )}
-
-        {/* Collision confirm sheet — rendered over the form when the host
-            catches FoodCollisionError from insertFoodStrict */}
-        {collisionState && (
-          <ManualFoodCollisionSheet
-            visible
-            existing={collisionState.existing}
-            onUseExisting={handleUseExisting}
-            onReplace={handleReplace}
-            onCancel={handleCancelCollision}
-            testID={`${id}-collision`}
-          />
         )}
       </KeyboardAvoidingView>
     </Modal>
