@@ -168,6 +168,23 @@ describe('ManualFoodForm', () => {
     expect(submitted.servingSizes[1]).toMatchObject({ nameHe: 'יחידה', grams: 40 })
   })
 
+  it('renders quick-pick chips for common Hebrew serving units', () => {
+    const { getByTestId } = setup()
+    expect(getByTestId('form-serving-chip-יחידה')).toBeTruthy()
+    expect(getByTestId('form-serving-chip-פרוסה')).toBeTruthy()
+    expect(getByTestId('form-serving-chip-כוס')).toBeTruthy()
+    expect(getByTestId('form-serving-chip-כף')).toBeTruthy()
+  })
+
+  it('tapping a quick-pick chip fills the serving-name field', () => {
+    const { getByTestId } = setup()
+    expect(getByTestId('form-serving-name-field').props.value).toBe('')
+
+    fireEvent.press(getByTestId('form-serving-chip-פרוסה'))
+
+    expect(getByTestId('form-serving-name-field').props.value).toBe('פרוסה')
+  })
+
   it('copies nameHe into nameEn when nameEn is blank on submit', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)

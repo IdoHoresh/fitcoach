@@ -29,7 +29,7 @@
  */
 
 import React, { useState } from 'react'
-import { View, Text, ScrollView, StyleSheet } from 'react-native'
+import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native'
 import { randomUUID } from 'expo-crypto'
 import { TextInput } from '@/components/TextInput'
 import { Button } from '@/components/Button'
@@ -316,6 +316,43 @@ export function ManualFoodForm({
         testID={tid('carbs')}
       />
 
+      <Text style={styles.sectionHeader}>{strings.servingSectionLabel}</Text>
+      <Text style={styles.sectionSubtitle}>{strings.servingSectionSubtitle}</Text>
+
+      <View style={styles.chipRow}>
+        {strings.servingQuickPicks.map((unit) => {
+          const selected = servingName === unit
+          return (
+            <Pressable
+              key={unit}
+              style={[styles.chip, selected && styles.chipSelected]}
+              onPress={() => setServingName(unit)}
+              testID={tid(`serving-chip-${unit}`)}
+            >
+              <Text style={selected ? styles.chipTextSelected : styles.chipText}>{unit}</Text>
+            </Pressable>
+          )
+        })}
+      </View>
+
+      <TextInput
+        label={strings.servingNameLabel}
+        value={servingName}
+        onChangeText={setServingName}
+        placeholder={strings.servingNamePlaceholder}
+        error={resolveError('servingName')}
+        testID={tid('serving-name')}
+      />
+
+      <TextInput
+        label={strings.servingGramsLabel}
+        value={servingGrams}
+        onChangeText={setServingGrams}
+        keyboardType="decimal-pad"
+        error={resolveError('servingGrams')}
+        testID={tid('serving-grams')}
+      />
+
       <TextInput
         label={strings.fiberLabel}
         value={fiber}
@@ -342,24 +379,6 @@ export function ManualFoodForm({
         onChangeText={setNameEn}
         placeholder={strings.nameEnPlaceholder}
         testID={tid('name-en')}
-      />
-
-      <TextInput
-        label={strings.servingNameLabel}
-        value={servingName}
-        onChangeText={setServingName}
-        placeholder={strings.servingNamePlaceholder}
-        error={resolveError('servingName')}
-        testID={tid('serving-name')}
-      />
-
-      <TextInput
-        label={strings.servingGramsLabel}
-        value={servingGrams}
-        onChangeText={setServingGrams}
-        keyboardType="decimal-pad"
-        error={resolveError('servingGrams')}
-        testID={tid('serving-grams')}
       />
 
       <View style={styles.buttonRow}>
@@ -438,6 +457,33 @@ const styles = StyleSheet.create({
     color: colors.warning,
     paddingHorizontal: spacing.sm,
     lineHeight: 18,
+  },
+  chipRow: {
+    flexDirection: 'row-reverse',
+    flexWrap: 'wrap',
+    gap: spacing.xs,
+    marginBottom: spacing.xs,
+  },
+  chip: {
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    borderRadius: borderRadius.full,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surfaceElevated,
+  },
+  chipSelected: {
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
+  },
+  chipText: {
+    fontSize: fontSize.sm,
+    color: colors.textPrimary,
+  },
+  chipTextSelected: {
+    fontSize: fontSize.sm,
+    color: colors.onPrimary,
+    fontWeight: fontWeight.semibold,
   },
   buttonRow: {
     flexDirection: 'row',
