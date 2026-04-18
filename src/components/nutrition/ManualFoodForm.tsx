@@ -21,7 +21,7 @@
  */
 
 import React, { useState } from 'react'
-import { View, Text, ScrollView, StyleSheet } from 'react-native'
+import { View, Text, ScrollView, StyleSheet, Switch } from 'react-native'
 import { randomUUID } from 'expo-crypto'
 import { TextInput } from '@/components/TextInput'
 import { Button } from '@/components/Button'
@@ -121,6 +121,7 @@ export function ManualFoodForm({
   const [fiber, setFiber] = useState('')
   const [servingName, setServingName] = useState('')
   const [servingGrams, setServingGrams] = useState('')
+  const [caloriesOnly, setCaloriesOnly] = useState(false)
   const [errors, setErrors] = useState<FormErrors>({})
 
   // Auto-fill calories from Atwater (4·p + 9·f + 4·c) when all three macros are
@@ -128,6 +129,7 @@ export function ManualFoodForm({
   // Once the user overrides, flag is set and auto-fill stops — lets them match
   // a label's rounded kcal value instead of the strict Atwater estimate.
   React.useEffect(() => {
+    if (caloriesOnly) return
     if (caloriesManuallyEdited) return
     if (protein.trim() === '' || fat.trim() === '' || carbs.trim() === '') return
     const p = Number(protein)
@@ -136,7 +138,7 @@ export function ManualFoodForm({
     if ([p, f, c].some(Number.isNaN)) return
     const kcal = 4 * p + 9 * f + 4 * c
     setCalories(String(Math.round(kcal)))
-  }, [protein, fat, carbs, caloriesManuallyEdited])
+  }, [protein, fat, carbs, caloriesManuallyEdited, caloriesOnly])
 
   function handleCaloriesChange(next: string) {
     setCalories(next)
@@ -159,13 +161,21 @@ export function ManualFoodForm({
   function handleSubmit() {
     const newErrors: FormErrors = {}
 
-    // 1. Pre-parse numeric fields
+    // 1. Pre-parse numeric fields. In calories-only mode, macros bypass the
+    //    required-numeric parse and submit as 0 — hides the fields from UI AND
+    //    the validation surface, so a partially-filled macro from before the
+    //    toggle flip doesn't block submit.
     const caloriesParsed = parseRequiredNumeric(calories)
-    const proteinParsed = parseRequiredNumeric(protein)
-    const fatParsed = parseRequiredNumeric(fat)
-    const carbsParsed = parseRequiredNumeric(carbs)
-    const fiberParsed = parseOptionalNumeric(fiber)
     const servingGramsParsed = parseOptionalNumeric(servingGrams)
+
+    const proteinParsed = caloriesOnly
+      ? { ok: true as const, value: 0 }
+      : parseRequiredNumeric(protein)
+    const fatParsed = caloriesOnly ? { ok: true as const, value: 0 } : parseRequiredNumeric(fat)
+    const carbsParsed = caloriesOnly ? { ok: true as const, value: 0 } : parseRequiredNumeric(carbs)
+    const fiberParsed = caloriesOnly
+      ? { ok: true as const, value: 0 as number | undefined }
+      : parseOptionalNumeric(fiber)
 
     if (!caloriesParsed.ok) newErrors.caloriesPer100g = caloriesParsed.reason
     if (!proteinParsed.ok) newErrors.proteinPer100g = proteinParsed.reason
@@ -173,18 +183,6 @@ export function ManualFoodForm({
     if (!carbsParsed.ok) newErrors.carbsPer100g = carbsParsed.reason
     if (!fiberParsed.ok) newErrors.fiberPer100g = fiberParsed.reason
     if (!servingGramsParsed.ok) newErrors.servingGrams = servingGramsParsed.reason
-
-    if (
-      !caloriesParsed.ok ||
-      !proteinParsed.ok ||
-      !fatParsed.ok ||
-      !carbsParsed.ok ||
-      !fiberParsed.ok ||
-      !servingGramsParsed.ok
-    ) {
-      // Surface parse errors on macro fields; we still fall through to Zod for nameHe
-      // and serving-pair refinements, so the user sees everything wrong at once.
-    }
 
     // 2. Zod validation (uses parsed numbers; empty macros replaced with 0 so the
     //    schema still evaluates the p+f+c refinement meaningfully even on parse-fail
@@ -293,6 +291,18 @@ export function ManualFoodForm({
       <Text style={styles.sectionHeader}>{strings.per100gHeader}</Text>
       <Text style={styles.sectionSubtitle}>{strings.per100gSubtitle}</Text>
 
+      <View style={styles.toggleRow}>
+        <Switch
+          value={caloriesOnly}
+          onValueChange={setCaloriesOnly}
+          testID={tid('calories-only-toggle')}
+        />
+        <View style={styles.toggleTextColumn}>
+          <Text style={styles.toggleLabel}>{strings.caloriesOnlyToggle}</Text>
+          <Text style={styles.toggleHint}>{strings.caloriesOnlyHint}</Text>
+        </View>
+      </View>
+
       <TextInput
         label={strings.caloriesLabel}
         value={calories}
@@ -302,47 +312,51 @@ export function ManualFoodForm({
         testID={tid('calories')}
       />
 
-      {showAtwater && (
+      {!caloriesOnly && showAtwater && (
         <Text style={styles.atwaterWarning} testID={tid('atwater-warning')}>
           {strings.atwaterWarning}
         </Text>
       )}
 
-      <TextInput
-        label={strings.proteinLabel}
-        value={protein}
-        onChangeText={setProtein}
-        keyboardType="decimal-pad"
-        error={resolveError('proteinPer100g')}
-        testID={tid('protein')}
-      />
+      {!caloriesOnly && (
+        <>
+          <TextInput
+            label={strings.proteinLabel}
+            value={protein}
+            onChangeText={setProtein}
+            keyboardType="decimal-pad"
+            error={resolveError('proteinPer100g')}
+            testID={tid('protein')}
+          />
 
-      <TextInput
-        label={strings.fatLabel}
-        value={fat}
-        onChangeText={setFat}
-        keyboardType="decimal-pad"
-        error={resolveError('fatPer100g')}
-        testID={tid('fat')}
-      />
+          <TextInput
+            label={strings.fatLabel}
+            value={fat}
+            onChangeText={setFat}
+            keyboardType="decimal-pad"
+            error={resolveError('fatPer100g')}
+            testID={tid('fat')}
+          />
 
-      <TextInput
-        label={strings.carbsLabel}
-        value={carbs}
-        onChangeText={setCarbs}
-        keyboardType="decimal-pad"
-        error={resolveError('carbsPer100g')}
-        testID={tid('carbs')}
-      />
+          <TextInput
+            label={strings.carbsLabel}
+            value={carbs}
+            onChangeText={setCarbs}
+            keyboardType="decimal-pad"
+            error={resolveError('carbsPer100g')}
+            testID={tid('carbs')}
+          />
 
-      <TextInput
-        label={strings.fiberLabel}
-        value={fiber}
-        onChangeText={setFiber}
-        keyboardType="decimal-pad"
-        error={resolveError('fiberPer100g')}
-        testID={tid('fiber')}
-      />
+          <TextInput
+            label={strings.fiberLabel}
+            value={fiber}
+            onChangeText={setFiber}
+            keyboardType="decimal-pad"
+            error={resolveError('fiberPer100g')}
+            testID={tid('fiber')}
+          />
+        </>
+      )}
 
       <Text style={styles.sectionHeader}>{strings.servingSectionLabel}</Text>
       <Text style={styles.sectionSubtitle}>{strings.servingSectionSubtitle}</Text>
@@ -439,6 +453,31 @@ const styles = StyleSheet.create({
     color: colors.warning,
     paddingHorizontal: spacing.sm,
     lineHeight: 18,
+  },
+  toggleRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: spacing.sm,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.sm,
+    backgroundColor: colors.surfaceElevated,
+    borderRadius: borderRadius.md,
+  },
+  toggleTextColumn: {
+    flex: 1,
+  },
+  toggleLabel: {
+    fontSize: fontSize.sm,
+    fontWeight: fontWeight.semibold,
+    color: colors.textPrimary,
+    textAlign: 'right',
+  },
+  toggleHint: {
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+    textAlign: 'right',
+    lineHeight: 16,
+    marginTop: 2,
   },
   buttonRow: {
     flexDirection: 'row',

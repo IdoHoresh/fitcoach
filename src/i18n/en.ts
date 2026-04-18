@@ -557,6 +557,9 @@ export const en: TranslationKeys = {
       'Calories look unusual vs. macros — you may have entered kJ instead of kcal. Check the package.',
     eanInputLabel: 'Barcode (optional)',
     eanInputPlaceholder: 'e.g. 7290012345678',
+    caloriesOnlyToggle: 'Calories only (skip macro breakdown)',
+    caloriesOnlyHint:
+      "If you don't know the protein/fat/carbs values, toggle this to skip them. These foods won't count toward the daily macro totals.",
     errors: {
       nameRequired: 'Hebrew name is required',
       macroSumTooHigh:

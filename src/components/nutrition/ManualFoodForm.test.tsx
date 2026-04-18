@@ -267,6 +267,86 @@ describe('ManualFoodForm — auto-calculate calories', () => {
   })
 })
 
+describe('ManualFoodForm — calories-only mode', () => {
+  function turnOnCaloriesOnly(getByTestId: ReturnType<typeof render>['getByTestId']) {
+    fireEvent(getByTestId('form-calories-only-toggle'), 'valueChange', true)
+  }
+
+  it('renders a calories-only toggle (off by default)', () => {
+    const { getByTestId } = setup()
+    expect(getByTestId('form-calories-only-toggle').props.value).toBe(false)
+  })
+
+  it('hides the protein/fat/carbs/fiber fields when the toggle is on', () => {
+    const { getByTestId, queryByTestId } = setup()
+    turnOnCaloriesOnly(getByTestId)
+
+    expect(queryByTestId('form-protein-field')).toBeNull()
+    expect(queryByTestId('form-fat-field')).toBeNull()
+    expect(queryByTestId('form-carbs-field')).toBeNull()
+    expect(queryByTestId('form-fiber-field')).toBeNull()
+  })
+
+  it('submits with macros = 0 when calories-only is on', () => {
+    const { getByTestId, onSubmit } = setup()
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מאפה לא ידוע')
+    turnOnCaloriesOnly(getByTestId)
+    fireEvent.changeText(getByTestId('form-calories-field'), '400')
+
+    fireEvent.press(getByTestId('form-submit'))
+
+    expect(onSubmit).toHaveBeenCalledTimes(1)
+    const submitted = onSubmit.mock.calls[0][0]
+    expect(submitted.caloriesPer100g).toBe(400)
+    expect(submitted.proteinPer100g).toBe(0)
+    expect(submitted.fatPer100g).toBe(0)
+    expect(submitted.carbsPer100g).toBe(0)
+    expect(submitted.fiberPer100g).toBe(0)
+  })
+
+  it('ignores previously-entered macro values when calories-only is toggled on before submit', () => {
+    const { getByTestId, onSubmit } = setup()
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מאפה')
+    // User fills macros, then changes their mind and toggles calories-only
+    fireEvent.changeText(getByTestId('form-protein-field'), '30')
+    fireEvent.changeText(getByTestId('form-fat-field'), '10')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '40')
+    turnOnCaloriesOnly(getByTestId)
+    // Calories still auto-filled from the macros they typed? Override manually
+    fireEvent.changeText(getByTestId('form-calories-field'), '400')
+
+    fireEvent.press(getByTestId('form-submit'))
+
+    const submitted = onSubmit.mock.calls[0][0]
+    expect(submitted.proteinPer100g).toBe(0)
+    expect(submitted.fatPer100g).toBe(0)
+    expect(submitted.carbsPer100g).toBe(0)
+  })
+
+  it('still requires the Hebrew name in calories-only mode', () => {
+    const { getByTestId, onSubmit } = setup()
+    turnOnCaloriesOnly(getByTestId)
+    fireEvent.changeText(getByTestId('form-calories-field'), '400')
+
+    fireEvent.press(getByTestId('form-submit'))
+
+    expect(onSubmit).not.toHaveBeenCalled()
+    expect(getByTestId('form-name-he-error')).toBeTruthy()
+  })
+
+  it('still requires calories > 0 in calories-only mode', () => {
+    const { getByTestId, onSubmit } = setup()
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מאפה')
+    turnOnCaloriesOnly(getByTestId)
+    // Leave calories blank
+
+    fireEvent.press(getByTestId('form-submit'))
+
+    expect(onSubmit).not.toHaveBeenCalled()
+    expect(getByTestId('form-calories-error')).toBeTruthy()
+  })
+})
+
 describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
   it('renders an EAN input field when ean prop is undefined', () => {
     const { getByTestId } = setupNoEan()

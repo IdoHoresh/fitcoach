@@ -18,6 +18,7 @@ import { t } from '@/i18n'
 import type { FoodItem, FoodCategory, MealType } from '@/types'
 import { MACRO_SATISFIED_THRESHOLD } from '@/data/constants'
 import { foodRepository, FoodCollisionError } from '@/db/food-repository'
+import { isMacroIncomplete } from '@/shared/isMacroIncomplete'
 import type { MealMacroTargetByName } from '@/algorithms/meal-targets'
 import { MacroTab } from './MacroTab'
 import { PortionPicker } from './PortionPicker'
@@ -70,6 +71,9 @@ interface FoodRowProps {
 
 function FoodRow({ food, onPress, testID }: FoodRowProps) {
   const strings = t().nutrition
+  // Calories-only manual entries have 0 for every macro but positive calories.
+  // Show "—" instead of "0g protein" so users see "unknown" not "actually zero".
+  const macroUnknown = isMacroIncomplete(food)
   return (
     <Pressable style={styles.foodRow} onPress={() => onPress(food)} testID={testID}>
       <View style={styles.foodRowContent}>
@@ -85,7 +89,8 @@ function FoodRow({ food, onPress, testID }: FoodRowProps) {
           {Math.round(food.caloriesPer100g)} {strings.kcal}
         </Text>
         <Text style={styles.foodProtein}>
-          {Math.round(food.proteinPer100g)}g {strings.macros.protein}
+          {macroUnknown ? '— ' : `${Math.round(food.proteinPer100g)}g `}
+          {strings.macros.protein}
         </Text>
       </View>
     </Pressable>
