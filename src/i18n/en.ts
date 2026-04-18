@@ -546,13 +546,13 @@ export const en: TranslationKeys = {
     fatLabel: 'Fat (g)',
     carbsLabel: 'Carbs (g)',
     fiberLabel: 'Fiber (g, optional)',
-    servingSectionLabel: 'Household measurement (optional)',
+    servingSectionLabel: 'Custom serving (optional)',
     servingSectionSubtitle:
       'E.g. 1 piece = 30g, 1 slice = 40g. Lets you log by unit instead of weighing.',
     servingQuickPicks: ['piece', 'slice', 'cup', 'tablespoon'],
-    servingNameLabel: 'Unit name',
+    servingNameLabel: 'Serving name',
     servingNamePlaceholder: 'Or type a different name',
-    servingGramsLabel: 'Weight per unit (grams)',
+    servingGramsLabel: 'Serving weight (grams)',
     submitButton: 'Save product',
     cancelButton: 'Cancel',
     atwaterWarning:
