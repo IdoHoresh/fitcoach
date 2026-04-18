@@ -114,6 +114,7 @@ export function ManualFoodForm({
   const [nameEn, setNameEn] = useState('')
   const [typedEan, setTypedEan] = useState('')
   const [calories, setCalories] = useState('')
+  const [caloriesManuallyEdited, setCaloriesManuallyEdited] = useState(false)
   const [protein, setProtein] = useState('')
   const [fat, setFat] = useState('')
   const [carbs, setCarbs] = useState('')
@@ -121,6 +122,26 @@ export function ManualFoodForm({
   const [servingName, setServingName] = useState('')
   const [servingGrams, setServingGrams] = useState('')
   const [errors, setErrors] = useState<FormErrors>({})
+
+  // Auto-fill calories from Atwater (4·p + 9·f + 4·c) when all three macros are
+  // complete and the user hasn't manually typed into the calories field yet.
+  // Once the user overrides, flag is set and auto-fill stops — lets them match
+  // a label's rounded kcal value instead of the strict Atwater estimate.
+  React.useEffect(() => {
+    if (caloriesManuallyEdited) return
+    if (protein.trim() === '' || fat.trim() === '' || carbs.trim() === '') return
+    const p = Number(protein)
+    const f = Number(fat)
+    const c = Number(carbs)
+    if ([p, f, c].some(Number.isNaN)) return
+    const kcal = 4 * p + 9 * f + 4 * c
+    setCalories(String(Math.round(kcal)))
+  }, [protein, fat, carbs, caloriesManuallyEdited])
+
+  function handleCaloriesChange(next: string) {
+    setCalories(next)
+    setCaloriesManuallyEdited(true)
+  }
 
   const showAtwater = shouldShowAtwaterWarning(calories, protein, fat, carbs)
 
@@ -275,7 +296,7 @@ export function ManualFoodForm({
       <TextInput
         label={strings.caloriesLabel}
         value={calories}
-        onChangeText={setCalories}
+        onChangeText={handleCaloriesChange}
         keyboardType="decimal-pad"
         error={resolveError('caloriesPer100g')}
         testID={tid('calories')}

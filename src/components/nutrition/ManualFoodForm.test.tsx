@@ -216,6 +216,57 @@ describe('ManualFoodForm', () => {
   })
 })
 
+describe('ManualFoodForm — auto-calculate calories', () => {
+  it('auto-fills calories with Atwater estimate when all three macros are entered', () => {
+    const { getByTestId } = setup()
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר')
+    fireEvent.changeText(getByTestId('form-protein-field'), '10')
+    fireEvent.changeText(getByTestId('form-fat-field'), '5')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '20')
+
+    // Expected: 4*10 + 9*5 + 4*20 = 165
+    expect(getByTestId('form-calories-field').props.value).toBe('165')
+  })
+
+  it('does not auto-fill calories if the user typed calories first', () => {
+    const { getByTestId } = setup()
+    fireEvent.changeText(getByTestId('form-calories-field'), '500')
+    fireEvent.changeText(getByTestId('form-protein-field'), '10')
+    fireEvent.changeText(getByTestId('form-fat-field'), '5')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '20')
+
+    // Calories remains at user's typed value, not the Atwater 165
+    expect(getByTestId('form-calories-field').props.value).toBe('500')
+  })
+
+  it('stops auto-filling after user manually edits the auto-filled calories', () => {
+    const { getByTestId } = setup()
+    fireEvent.changeText(getByTestId('form-protein-field'), '10')
+    fireEvent.changeText(getByTestId('form-fat-field'), '5')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '20')
+    // Auto-filled to 165
+    expect(getByTestId('form-calories-field').props.value).toBe('165')
+
+    // User overrides to match a label-printed rounded value
+    fireEvent.changeText(getByTestId('form-calories-field'), '170')
+    expect(getByTestId('form-calories-field').props.value).toBe('170')
+
+    // Further macro edits do NOT overwrite user's 170
+    fireEvent.changeText(getByTestId('form-carbs-field'), '25')
+    expect(getByTestId('form-calories-field').props.value).toBe('170')
+  })
+
+  it('rounds the Atwater estimate to the nearest whole kcal', () => {
+    const { getByTestId } = setup()
+    // 4*3.5 + 9*2.5 + 4*7 = 14 + 22.5 + 28 = 64.5 → rounds to 65
+    fireEvent.changeText(getByTestId('form-protein-field'), '3.5')
+    fireEvent.changeText(getByTestId('form-fat-field'), '2.5')
+    fireEvent.changeText(getByTestId('form-carbs-field'), '7')
+
+    expect(getByTestId('form-calories-field').props.value).toBe('65')
+  })
+})
+
 describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
   it('renders an EAN input field when ean prop is undefined', () => {
     const { getByTestId } = setupNoEan()
