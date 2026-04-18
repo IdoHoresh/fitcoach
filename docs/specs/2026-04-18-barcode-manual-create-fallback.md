@@ -292,14 +292,14 @@ export const ManualFoodInputSchema = z
     servingGrams: z.number().min(0.1).max(5000).optional(),
   })
   .refine((d) => d.proteinPer100g + d.fatPer100g + d.carbsPer100g <= 101, {
-    message: 'MACRO_SUM_TOO_HIGH',
+    message: 'macroSumTooHigh',
     path: ['proteinPer100g'],
   })
   .refine(
     (d) =>
       (d.servingName == null && d.servingGrams == null) ||
       (d.servingName != null && d.servingGrams != null),
-    { message: 'SERVING_FIELDS_INCOMPLETE', path: ['servingName'] },
+    { message: 'servingFieldsIncomplete', path: ['servingName'] },
   )
 ```
 
@@ -317,13 +317,13 @@ describe('ManualFoodInputSchema', () => {
   it('clamps: rejects protein < 0 / > 100')
   it('clamps: rejects fat < 0 / > 100')
   it('clamps: rejects carbs < 0 / > 100')
-  it('rejects p+f+c > 101 with MACRO_SUM_TOO_HIGH')
+  it('rejects p+f+c > 101 with macroSumTooHigh')
   it('accepts p+f+c === 101 (boundary)')
   it('accepts p+f+c === 100 (pure sugar / pure oil)')
   it('accepts both serving fields filled')
   it('accepts both serving fields blank')
-  it('rejects serving name without grams (SERVING_FIELDS_INCOMPLETE)')
-  it('rejects serving grams without name (SERVING_FIELDS_INCOMPLETE)')
+  it('rejects serving name without grams (servingFieldsIncomplete)')
+  it('rejects serving grams without name (servingFieldsIncomplete)')
   it('accepts nameEn blank (schema stays valid)')
 })
 

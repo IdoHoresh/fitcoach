@@ -547,7 +547,7 @@ export const en: TranslationKeys = {
     fiberLabel: 'Fiber (g, optional)',
     servingSectionLabel: 'Additional serving size (optional)',
     servingNameLabel: 'Serving name',
-    servingNamePlaceholder: 'e.g. piece / slice / cup',
+    servingNamePlaceholder: 'e.g. piece / slice / cup / serving',
     servingGramsLabel: 'Weight in grams',
     submitButton: 'Save product',
     cancelButton: 'Cancel',

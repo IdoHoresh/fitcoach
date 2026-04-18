@@ -554,7 +554,7 @@ export const he = {
     fiberLabel: 'סיבים תזונתיים (גרם, לא חובה)',
     servingSectionLabel: 'גודל מנה נוסף (לא חובה)',
     servingNameLabel: 'שם המנה',
-    servingNamePlaceholder: 'לדוגמה: יחידה / פרוסה / כוס',
+    servingNamePlaceholder: 'לדוגמה: יחידה / פרוסה / כוס / מנה',
     servingGramsLabel: 'משקל בגרמים',
     submitButton: 'שמור מוצר',
     cancelButton: 'ביטול',

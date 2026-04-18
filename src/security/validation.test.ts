@@ -382,11 +382,11 @@ describe('ManualFoodInputSchema', () => {
     expect(result.success).toBe(false)
   })
 
-  it('rejects p+f+c > 101 with MACRO_SUM_TOO_HIGH token', () => {
+  it('rejects p+f+c > 101 with macroSumTooHigh token', () => {
     const bad = { ...VALID_MANUAL_FOOD, proteinPer100g: 40, fatPer100g: 35, carbsPer100g: 30 }
     const result = validateInput(ManualFoodInputSchema, bad)
     expect(result.success).toBe(false)
-    expect(result.errors.some((e) => e.includes('MACRO_SUM_TOO_HIGH'))).toBe(true)
+    expect(result.errors.some((e) => e.includes('macroSumTooHigh'))).toBe(true)
   })
 
   it('accepts p+f+c === 101 (1g rounding slack boundary)', () => {
@@ -422,18 +422,18 @@ describe('ManualFoodInputSchema', () => {
     expect(result.data?.servingGrams).toBeUndefined()
   })
 
-  it('rejects servingName filled without servingGrams (SERVING_FIELDS_INCOMPLETE)', () => {
+  it('rejects servingName filled without servingGrams (servingFieldsIncomplete)', () => {
     const bad = { ...VALID_MANUAL_FOOD, servingName: 'יחידה' }
     const result = validateInput(ManualFoodInputSchema, bad)
     expect(result.success).toBe(false)
-    expect(result.errors.some((e) => e.includes('SERVING_FIELDS_INCOMPLETE'))).toBe(true)
+    expect(result.errors.some((e) => e.includes('servingFieldsIncomplete'))).toBe(true)
   })
 
-  it('rejects servingGrams filled without servingName (SERVING_FIELDS_INCOMPLETE)', () => {
+  it('rejects servingGrams filled without servingName (servingFieldsIncomplete)', () => {
     const bad = { ...VALID_MANUAL_FOOD, servingGrams: 40 }
     const result = validateInput(ManualFoodInputSchema, bad)
     expect(result.success).toBe(false)
-    expect(result.errors.some((e) => e.includes('SERVING_FIELDS_INCOMPLETE'))).toBe(true)
+    expect(result.errors.some((e) => e.includes('servingFieldsIncomplete'))).toBe(true)
   })
 
   it('treats empty-string servingName as absent (both blank → accepted)', () => {

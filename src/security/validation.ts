@@ -284,14 +284,14 @@ export const ManualFoodInputSchema = z
     servingGrams: z.number().min(0.1, 'valueOutOfRange').max(5000, 'valueOutOfRange').optional(),
   })
   .refine((d) => d.proteinPer100g + d.fatPer100g + d.carbsPer100g <= 101, {
-    message: 'MACRO_SUM_TOO_HIGH',
+    message: 'macroSumTooHigh',
     path: ['proteinPer100g'],
   })
   .refine(
     (d) =>
       (d.servingName == null && d.servingGrams == null) ||
       (d.servingName != null && d.servingGrams != null),
-    { message: 'SERVING_FIELDS_INCOMPLETE', path: ['servingName'] },
+    { message: 'servingFieldsIncomplete', path: ['servingName'] },
   )
 
 export type ManualFoodInput = z.infer<typeof ManualFoodInputSchema>

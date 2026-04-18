@@ -283,21 +283,21 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
       <Text style={styles.sectionHeader}>{strings.servingSectionLabel}</Text>
 
       <TextInput
-        label={strings.servingNameLabel}
-        value={servingName}
-        onChangeText={setServingName}
-        placeholder={strings.servingNamePlaceholder}
-        error={resolveError('servingName')}
-        testID={tid('serving-name')}
-      />
-
-      <TextInput
         label={strings.servingGramsLabel}
         value={servingGrams}
         onChangeText={setServingGrams}
         keyboardType="decimal-pad"
         error={resolveError('servingGrams')}
         testID={tid('serving-grams')}
+      />
+
+      <TextInput
+        label={strings.servingNameLabel}
+        value={servingName}
+        onChangeText={setServingName}
+        placeholder={strings.servingNamePlaceholder}
+        error={resolveError('servingName')}
+        testID={tid('serving-name')}
       />
 
       <View style={styles.buttonRow}>
