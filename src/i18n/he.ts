@@ -544,7 +544,7 @@ export const he = {
     barcodeLabel: 'ברקוד',
     nameHeLabel: 'שם בעברית',
     nameHePlaceholder: 'לדוגמה: פתיבר חלבון שוקולד',
-    nameEnLabel: 'שם באנגלית (לא חובה)',
+    nameEnLabel: 'שם באנגלית',
     nameEnPlaceholder: 'לדוגמה: Protein Bar Chocolate',
     per100gHeader: 'ערכים תזונתיים ל 100 גרם',
     per100gSubtitle: '',
@@ -552,8 +552,8 @@ export const he = {
     proteinLabel: 'חלבון (גרם)',
     fatLabel: 'שומן (גרם)',
     carbsLabel: 'פחמימות (גרם)',
-    fiberLabel: 'סיבים תזונתיים (גרם, לא חובה)',
-    servingSectionLabel: 'מנה מותאמת (לא חובה)',
+    fiberLabel: 'סיבים תזונתיים (גרם)',
+    servingSectionLabel: 'מנה מותאמת',
     servingSectionSubtitle: 'למשל: יחידה = 30 גרם, פרוסה = 40 גרם. חוסך חישוב בתיעוד.',
     servingQuickPicks: ['יחידה', 'פרוסה', 'כוס', 'כף'],
     servingNameLabel: 'שם המנה',
@@ -563,7 +563,7 @@ export const he = {
     cancelButton: 'ביטול',
     atwaterWarning:
       'הקלוריות נראות חריגות ביחס למאקרו — ייתכן שהכנסת kJ במקום kcal. בדוק את האריזה.',
-    eanInputLabel: 'ברקוד (לא חובה)',
+    eanInputLabel: 'ברקוד',
     eanInputPlaceholder: 'לדוגמה: 7290012345678',
     errors: {
       nameRequired: 'שם בעברית נדרש',

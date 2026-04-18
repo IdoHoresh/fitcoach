@@ -267,6 +267,7 @@ export function ManualFoodForm({
         onChangeText={setNameHe}
         placeholder={strings.nameHePlaceholder}
         error={resolveError('nameHe')}
+        required
         testID={tid('name-he')}
       />
 
@@ -280,6 +281,7 @@ export function ManualFoodForm({
         onChangeText={handleCaloriesChange}
         keyboardType="decimal-pad"
         error={resolveError('caloriesPer100g')}
+        required
         testID={tid('calories')}
       />
 

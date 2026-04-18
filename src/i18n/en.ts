@@ -537,7 +537,7 @@ export const en: TranslationKeys = {
     barcodeLabel: 'Barcode',
     nameHeLabel: 'Hebrew name',
     nameHePlaceholder: 'e.g. Chocolate Protein Bar',
-    nameEnLabel: 'English name (optional)',
+    nameEnLabel: 'English name',
     nameEnPlaceholder: 'e.g. Protein Bar Chocolate',
     per100gHeader: 'Nutrition values per 100g',
     per100gSubtitle: '',
@@ -545,8 +545,8 @@ export const en: TranslationKeys = {
     proteinLabel: 'Protein (g)',
     fatLabel: 'Fat (g)',
     carbsLabel: 'Carbs (g)',
-    fiberLabel: 'Fiber (g, optional)',
-    servingSectionLabel: 'Custom serving (optional)',
+    fiberLabel: 'Fiber (g)',
+    servingSectionLabel: 'Custom serving',
     servingSectionSubtitle:
       'E.g. 1 piece = 30g, 1 slice = 40g. Lets you log by unit instead of weighing.',
     servingQuickPicks: ['piece', 'slice', 'cup', 'tablespoon'],
@@ -557,7 +557,7 @@ export const en: TranslationKeys = {
     cancelButton: 'Cancel',
     atwaterWarning:
       'Calories look unusual vs. macros — you may have entered kJ instead of kcal. Check the package.',
-    eanInputLabel: 'Barcode (optional)',
+    eanInputLabel: 'Barcode',
     eanInputPlaceholder: 'e.g. 7290012345678',
     errors: {
       nameRequired: 'Hebrew name is required',
