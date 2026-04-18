@@ -4,24 +4,33 @@
  * Two entry modes:
  *   - Scanner unhappy-path: `ean` prop is provided; rendered read-only at top.
  *     Id = `manual_<ean>`. Caller is `BarcodeScannerSheet` after OFF 404.
- *   - Text-search no-results: `ean` prop omitted; an optional EAN input is
- *     rendered. Id = `manual_<digits>` if user typed an EAN (digits stripped),
- *     else `manual_<uuid-v4>`. Caller is `FoodSearchSheet` via the always-on
- *     "הוסף מאכל אישי" button.
+ *   - Text-search no-results: `ean` prop omitted; an optional EAN input lives
+ *     in the collapsed "more details" section. Id = `manual_<digits>` if user
+ *     typed an EAN (digits stripped), else `manual_<uuid-v4>`.
+ *
+ * Form shape: MacroFactor/MFP-inspired progressive disclosure.
+ *   Always visible:    name, calories, protein, fat, carbs
+ *   Collapsed expander: English name, fiber, serving size (name + grams), EAN (text-search)
+ *
+ * Macros are visible but blank-allowed — leaving them empty submits the food
+ * with macros=0, which the `isMacroIncomplete` helper later detects to show
+ * "—" in search results and skip from daily macro totals. No separate
+ * "calories only" toggle is needed; the blank fields themselves ARE the signal.
  *
  * Validation flow:
- *   1. Pre-parse numeric strings → numbers (empty / NaN surfaces as numberInvalid)
+ *   1. Pre-parse numeric strings → numbers (blank macros → 0; blank calories blocks)
  *   2. Run ManualFoodInputSchema.safeParse → Zod enforces clamps + p+f+c ≤ 101 + serving-pair refine
  *   3. On success: construct FoodItem (id per mode, isUserCreated, auto 100g serving)
  *   4. Atwater delta warning renders inline when kcal diverges >25% from 4·p + 9·f + 4·c
- *      (soft warn only — does not block submit)
+ *      (soft warn only — only fires when all three macros are filled)
  *
  * Persistence is the host's responsibility (insertFoodStrict for manual paths,
  * upsertFood for OFF refresh paths). The form is repository-agnostic.
  */
 
 import React, { useState } from 'react'
-import { View, Text, ScrollView, StyleSheet, Switch } from 'react-native'
+import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
 import { randomUUID } from 'expo-crypto'
 import { TextInput } from '@/components/TextInput'
 import { Button } from '@/components/Button'
@@ -121,7 +130,7 @@ export function ManualFoodForm({
   const [fiber, setFiber] = useState('')
   const [servingName, setServingName] = useState('')
   const [servingGrams, setServingGrams] = useState('')
-  const [caloriesOnly, setCaloriesOnly] = useState(false)
+  const [showMoreDetails, setShowMoreDetails] = useState(false)
   const [errors, setErrors] = useState<FormErrors>({})
 
   // Auto-fill calories from Atwater (4·p + 9·f + 4·c) when all three macros are
@@ -129,7 +138,6 @@ export function ManualFoodForm({
   // Once the user overrides, flag is set and auto-fill stops — lets them match
   // a label's rounded kcal value instead of the strict Atwater estimate.
   React.useEffect(() => {
-    if (caloriesOnly) return
     if (caloriesManuallyEdited) return
     if (protein.trim() === '' || fat.trim() === '' || carbs.trim() === '') return
     const p = Number(protein)
@@ -138,7 +146,7 @@ export function ManualFoodForm({
     if ([p, f, c].some(Number.isNaN)) return
     const kcal = 4 * p + 9 * f + 4 * c
     setCalories(String(Math.round(kcal)))
-  }, [protein, fat, carbs, caloriesManuallyEdited, caloriesOnly])
+  }, [protein, fat, carbs, caloriesManuallyEdited])
 
   function handleCaloriesChange(next: string) {
     setCalories(next)
@@ -161,21 +169,15 @@ export function ManualFoodForm({
   function handleSubmit() {
     const newErrors: FormErrors = {}
 
-    // 1. Pre-parse numeric fields. In calories-only mode, macros bypass the
-    //    required-numeric parse and submit as 0 — hides the fields from UI AND
-    //    the validation surface, so a partially-filled macro from before the
-    //    toggle flip doesn't block submit.
+    // 1. Pre-parse numeric fields. Calories is required (blank blocks submit);
+    //    macros are blank-allowed (blank → 0 → isMacroIncomplete detects later
+    //    and hides them from daily totals).
     const caloriesParsed = parseRequiredNumeric(calories)
+    const proteinParsed = parseOptionalNumeric(protein)
+    const fatParsed = parseOptionalNumeric(fat)
+    const carbsParsed = parseOptionalNumeric(carbs)
+    const fiberParsed = parseOptionalNumeric(fiber)
     const servingGramsParsed = parseOptionalNumeric(servingGrams)
-
-    const proteinParsed = caloriesOnly
-      ? { ok: true as const, value: 0 }
-      : parseRequiredNumeric(protein)
-    const fatParsed = caloriesOnly ? { ok: true as const, value: 0 } : parseRequiredNumeric(fat)
-    const carbsParsed = caloriesOnly ? { ok: true as const, value: 0 } : parseRequiredNumeric(carbs)
-    const fiberParsed = caloriesOnly
-      ? { ok: true as const, value: 0 as number | undefined }
-      : parseOptionalNumeric(fiber)
 
     if (!caloriesParsed.ok) newErrors.caloriesPer100g = caloriesParsed.reason
     if (!proteinParsed.ok) newErrors.proteinPer100g = proteinParsed.reason
@@ -184,16 +186,15 @@ export function ManualFoodForm({
     if (!fiberParsed.ok) newErrors.fiberPer100g = fiberParsed.reason
     if (!servingGramsParsed.ok) newErrors.servingGrams = servingGramsParsed.reason
 
-    // 2. Zod validation (uses parsed numbers; empty macros replaced with 0 so the
-    //    schema still evaluates the p+f+c refinement meaningfully even on parse-fail
-    //    rows — the parse-fail errors above already block submit for those fields)
+    // 2. Zod validation (blank macros → 0; p+f+c refinement trivially passes when
+    //    all three are 0, which is the "calories-only" intent).
     const input = {
       nameHe,
       nameEn: nameEn || undefined,
       caloriesPer100g: caloriesParsed.ok ? caloriesParsed.value : 0,
-      proteinPer100g: proteinParsed.ok ? proteinParsed.value : 0,
-      fatPer100g: fatParsed.ok ? fatParsed.value : 0,
-      carbsPer100g: carbsParsed.ok ? carbsParsed.value : 0,
+      proteinPer100g: proteinParsed.ok ? (proteinParsed.value ?? 0) : 0,
+      fatPer100g: fatParsed.ok ? (fatParsed.value ?? 0) : 0,
+      carbsPer100g: carbsParsed.ok ? (carbsParsed.value ?? 0) : 0,
       fiberPer100g: fiberParsed.ok ? (fiberParsed.value ?? 0) : 0,
       servingName: servingName || undefined,
       servingGrams: servingGramsParsed.ok ? servingGramsParsed.value : undefined,
@@ -253,22 +254,13 @@ export function ManualFoodForm({
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID={testID}>
       <Text style={styles.title}>{strings.title}</Text>
 
-      {ean != null ? (
+      {ean != null && (
         <View style={styles.eanRow}>
           <Text style={styles.eanLabel}>{strings.barcodeLabel}:</Text>
           <Text style={styles.eanValue} testID={tid('ean-display')}>
             {ean}
           </Text>
         </View>
-      ) : (
-        <TextInput
-          label={strings.eanInputLabel}
-          value={typedEan}
-          onChangeText={setTypedEan}
-          placeholder={strings.eanInputPlaceholder}
-          keyboardType="number-pad"
-          testID={tid('ean-input')}
-        />
       )}
 
       <TextInput
@@ -281,29 +273,6 @@ export function ManualFoodForm({
       />
 
       <TextInput
-        label={strings.nameEnLabel}
-        value={nameEn}
-        onChangeText={setNameEn}
-        placeholder={strings.nameEnPlaceholder}
-        testID={tid('name-en')}
-      />
-
-      <Text style={styles.sectionHeader}>{strings.per100gHeader}</Text>
-      <Text style={styles.sectionSubtitle}>{strings.per100gSubtitle}</Text>
-
-      <View style={styles.toggleRow}>
-        <Switch
-          value={caloriesOnly}
-          onValueChange={setCaloriesOnly}
-          testID={tid('calories-only-toggle')}
-        />
-        <View style={styles.toggleTextColumn}>
-          <Text style={styles.toggleLabel}>{strings.caloriesOnlyToggle}</Text>
-          <Text style={styles.toggleHint}>{strings.caloriesOnlyHint}</Text>
-        </View>
-      </View>
-
-      <TextInput
         label={strings.caloriesLabel}
         value={calories}
         onChangeText={handleCaloriesChange}
@@ -312,39 +281,73 @@ export function ManualFoodForm({
         testID={tid('calories')}
       />
 
-      {!caloriesOnly && showAtwater && (
+      {showAtwater && (
         <Text style={styles.atwaterWarning} testID={tid('atwater-warning')}>
           {strings.atwaterWarning}
         </Text>
       )}
 
-      {!caloriesOnly && (
-        <>
-          <TextInput
-            label={strings.proteinLabel}
-            value={protein}
-            onChangeText={setProtein}
-            keyboardType="decimal-pad"
-            error={resolveError('proteinPer100g')}
-            testID={tid('protein')}
-          />
+      <TextInput
+        label={strings.proteinLabel}
+        value={protein}
+        onChangeText={setProtein}
+        keyboardType="decimal-pad"
+        error={resolveError('proteinPer100g')}
+        testID={tid('protein')}
+      />
+
+      <TextInput
+        label={strings.fatLabel}
+        value={fat}
+        onChangeText={setFat}
+        keyboardType="decimal-pad"
+        error={resolveError('fatPer100g')}
+        testID={tid('fat')}
+      />
+
+      <TextInput
+        label={strings.carbsLabel}
+        value={carbs}
+        onChangeText={setCarbs}
+        keyboardType="decimal-pad"
+        error={resolveError('carbsPer100g')}
+        testID={tid('carbs')}
+      />
+
+      <Pressable
+        style={styles.moreDetailsToggle}
+        onPress={() => setShowMoreDetails((v) => !v)}
+        testID={tid('more-details-toggle')}
+      >
+        <Text style={styles.moreDetailsLabel}>
+          {showMoreDetails ? strings.hideMoreDetails : strings.showMoreDetails}
+        </Text>
+        <Ionicons
+          name={showMoreDetails ? 'chevron-up' : 'chevron-down'}
+          size={18}
+          color={colors.primary}
+        />
+      </Pressable>
+
+      {showMoreDetails && (
+        <View style={styles.moreDetailsBlock} testID={tid('more-details-block')}>
+          {ean == null && (
+            <TextInput
+              label={strings.eanInputLabel}
+              value={typedEan}
+              onChangeText={setTypedEan}
+              placeholder={strings.eanInputPlaceholder}
+              keyboardType="number-pad"
+              testID={tid('ean-input')}
+            />
+          )}
 
           <TextInput
-            label={strings.fatLabel}
-            value={fat}
-            onChangeText={setFat}
-            keyboardType="decimal-pad"
-            error={resolveError('fatPer100g')}
-            testID={tid('fat')}
-          />
-
-          <TextInput
-            label={strings.carbsLabel}
-            value={carbs}
-            onChangeText={setCarbs}
-            keyboardType="decimal-pad"
-            error={resolveError('carbsPer100g')}
-            testID={tid('carbs')}
+            label={strings.nameEnLabel}
+            value={nameEn}
+            onChangeText={setNameEn}
+            placeholder={strings.nameEnPlaceholder}
+            testID={tid('name-en')}
           />
 
           <TextInput
@@ -355,29 +358,26 @@ export function ManualFoodForm({
             error={resolveError('fiberPer100g')}
             testID={tid('fiber')}
           />
-        </>
+
+          <TextInput
+            label={strings.servingNameLabel}
+            value={servingName}
+            onChangeText={setServingName}
+            placeholder={strings.servingNamePlaceholder}
+            error={resolveError('servingName')}
+            testID={tid('serving-name')}
+          />
+
+          <TextInput
+            label={strings.servingGramsLabel}
+            value={servingGrams}
+            onChangeText={setServingGrams}
+            keyboardType="decimal-pad"
+            error={resolveError('servingGrams')}
+            testID={tid('serving-grams')}
+          />
+        </View>
       )}
-
-      <Text style={styles.sectionHeader}>{strings.servingSectionLabel}</Text>
-      <Text style={styles.sectionSubtitle}>{strings.servingSectionSubtitle}</Text>
-
-      <TextInput
-        label={strings.servingNameLabel}
-        value={servingName}
-        onChangeText={setServingName}
-        placeholder={strings.servingNamePlaceholder}
-        error={resolveError('servingName')}
-        testID={tid('serving-name')}
-      />
-
-      <TextInput
-        label={strings.servingGramsLabel}
-        value={servingGrams}
-        onChangeText={setServingGrams}
-        keyboardType="decimal-pad"
-        error={resolveError('servingGrams')}
-        testID={tid('serving-grams')}
-      />
 
       <View style={styles.buttonRow}>
         <Button
@@ -435,49 +435,27 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
     color: colors.textPrimary,
   },
-  sectionHeader: {
-    fontSize: fontSize.sm,
-    fontWeight: fontWeight.semibold,
-    color: colors.textSecondary,
-    marginTop: spacing.md,
-  },
-  sectionSubtitle: {
-    fontSize: fontSize.xs,
-    color: colors.textMuted,
-    marginTop: -spacing.xs,
-    marginBottom: spacing.xs,
-    lineHeight: 18,
-  },
   atwaterWarning: {
     fontSize: fontSize.xs,
     color: colors.warning,
     paddingHorizontal: spacing.sm,
     lineHeight: 18,
   },
-  toggleRow: {
+  moreDetailsToggle: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
-    gap: spacing.sm,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.xs,
     paddingVertical: spacing.sm,
-    paddingHorizontal: spacing.sm,
-    backgroundColor: colors.surfaceElevated,
-    borderRadius: borderRadius.md,
+    marginTop: spacing.xs,
   },
-  toggleTextColumn: {
-    flex: 1,
-  },
-  toggleLabel: {
+  moreDetailsLabel: {
     fontSize: fontSize.sm,
     fontWeight: fontWeight.semibold,
-    color: colors.textPrimary,
-    textAlign: 'right',
+    color: colors.primary,
   },
-  toggleHint: {
-    fontSize: fontSize.xs,
-    color: colors.textSecondary,
-    textAlign: 'right',
-    lineHeight: 16,
-    marginTop: 2,
+  moreDetailsBlock: {
+    gap: spacing.md,
   },
   buttonRow: {
     flexDirection: 'row',

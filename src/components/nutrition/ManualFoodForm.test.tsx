@@ -48,6 +48,10 @@ function fillValidMacros(getByTestId: ReturnType<typeof render>['getByTestId']) 
   fillField(getByTestId, 'carbs', '40')
 }
 
+function openMoreDetails(getByTestId: ReturnType<typeof render>['getByTestId']) {
+  fireEvent.press(getByTestId('form-more-details-toggle'))
+}
+
 describe('ManualFoodForm', () => {
   it('renders the EAN as read-only context', () => {
     const { getByTestId } = setup()
@@ -123,6 +127,7 @@ describe('ManualFoodForm', () => {
   it('blocks submit when servingName is filled but servingGrams is empty', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)
+    openMoreDetails(getByTestId)
     fillField(getByTestId, 'serving-name', 'יחידה')
 
     fireEvent.press(getByTestId('form-submit'))
@@ -134,6 +139,7 @@ describe('ManualFoodForm', () => {
   it('blocks submit when servingGrams is filled but servingName is empty', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)
+    openMoreDetails(getByTestId)
     fillField(getByTestId, 'serving-grams', '40')
 
     fireEvent.press(getByTestId('form-submit'))
@@ -156,6 +162,7 @@ describe('ManualFoodForm', () => {
   it('submits with 100g + custom serving when both serving fields are filled', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)
+    openMoreDetails(getByTestId)
     fillField(getByTestId, 'serving-name', 'יחידה')
     fillField(getByTestId, 'serving-grams', '40')
 
@@ -182,6 +189,7 @@ describe('ManualFoodForm', () => {
   it('preserves user-entered nameEn when provided', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)
+    openMoreDetails(getByTestId)
     fillField(getByTestId, 'name-en', 'Protein Bar')
 
     fireEvent.press(getByTestId('form-submit'))
@@ -267,31 +275,33 @@ describe('ManualFoodForm — auto-calculate calories', () => {
   })
 })
 
-describe('ManualFoodForm — calories-only mode', () => {
-  function turnOnCaloriesOnly(getByTestId: ReturnType<typeof render>['getByTestId']) {
-    fireEvent(getByTestId('form-calories-only-toggle'), 'valueChange', true)
-  }
-
-  it('renders a calories-only toggle (off by default)', () => {
-    const { getByTestId } = setup()
-    expect(getByTestId('form-calories-only-toggle').props.value).toBe(false)
-  })
-
-  it('hides the protein/fat/carbs/fiber fields when the toggle is on', () => {
+describe('ManualFoodForm — progressive disclosure + blank macros', () => {
+  it('renders the "more details" expander (collapsed by default)', () => {
     const { getByTestId, queryByTestId } = setup()
-    turnOnCaloriesOnly(getByTestId)
-
-    expect(queryByTestId('form-protein-field')).toBeNull()
-    expect(queryByTestId('form-fat-field')).toBeNull()
-    expect(queryByTestId('form-carbs-field')).toBeNull()
-    expect(queryByTestId('form-fiber-field')).toBeNull()
+    expect(getByTestId('form-more-details-toggle')).toBeTruthy()
+    expect(queryByTestId('form-more-details-block')).toBeNull()
   })
 
-  it('submits with macros = 0 when calories-only is on', () => {
+  it('opens the expander on tap and reveals English name, fiber, serving fields', () => {
+    const { getByTestId, queryByTestId } = setup()
+    expect(queryByTestId('form-name-en-field')).toBeNull()
+    expect(queryByTestId('form-fiber-field')).toBeNull()
+    expect(queryByTestId('form-serving-name-field')).toBeNull()
+    expect(queryByTestId('form-serving-grams-field')).toBeNull()
+
+    openMoreDetails(getByTestId)
+
+    expect(getByTestId('form-name-en-field')).toBeTruthy()
+    expect(getByTestId('form-fiber-field')).toBeTruthy()
+    expect(getByTestId('form-serving-name-field')).toBeTruthy()
+    expect(getByTestId('form-serving-grams-field')).toBeTruthy()
+  })
+
+  it('submits with macros = 0 when all three macro fields are left blank', () => {
     const { getByTestId, onSubmit } = setup()
-    fireEvent.changeText(getByTestId('form-name-he-field'), 'מאפה לא ידוע')
-    turnOnCaloriesOnly(getByTestId)
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'מאפה')
     fireEvent.changeText(getByTestId('form-calories-field'), '400')
+    // Leave protein/fat/carbs blank — valid, submit should succeed
 
     fireEvent.press(getByTestId('form-submit'))
 
@@ -301,44 +311,28 @@ describe('ManualFoodForm — calories-only mode', () => {
     expect(submitted.proteinPer100g).toBe(0)
     expect(submitted.fatPer100g).toBe(0)
     expect(submitted.carbsPer100g).toBe(0)
-    expect(submitted.fiberPer100g).toBe(0)
   })
 
-  it('ignores previously-entered macro values when calories-only is toggled on before submit', () => {
+  it('submits partial macros (only protein filled) with the rest as 0', () => {
     const { getByTestId, onSubmit } = setup()
-    fireEvent.changeText(getByTestId('form-name-he-field'), 'מאפה')
-    // User fills macros, then changes their mind and toggles calories-only
-    fireEvent.changeText(getByTestId('form-protein-field'), '30')
-    fireEvent.changeText(getByTestId('form-fat-field'), '10')
-    fireEvent.changeText(getByTestId('form-carbs-field'), '40')
-    turnOnCaloriesOnly(getByTestId)
-    // Calories still auto-filled from the macros they typed? Override manually
-    fireEvent.changeText(getByTestId('form-calories-field'), '400')
+    fireEvent.changeText(getByTestId('form-name-he-field'), 'עוגה')
+    fireEvent.changeText(getByTestId('form-calories-field'), '300')
+    fireEvent.changeText(getByTestId('form-protein-field'), '5')
+    // Leave fat and carbs blank
 
     fireEvent.press(getByTestId('form-submit'))
 
+    expect(onSubmit).toHaveBeenCalledTimes(1)
     const submitted = onSubmit.mock.calls[0][0]
-    expect(submitted.proteinPer100g).toBe(0)
+    expect(submitted.proteinPer100g).toBe(5)
     expect(submitted.fatPer100g).toBe(0)
     expect(submitted.carbsPer100g).toBe(0)
   })
 
-  it('still requires the Hebrew name in calories-only mode', () => {
-    const { getByTestId, onSubmit } = setup()
-    turnOnCaloriesOnly(getByTestId)
-    fireEvent.changeText(getByTestId('form-calories-field'), '400')
-
-    fireEvent.press(getByTestId('form-submit'))
-
-    expect(onSubmit).not.toHaveBeenCalled()
-    expect(getByTestId('form-name-he-error')).toBeTruthy()
-  })
-
-  it('still requires calories > 0 in calories-only mode', () => {
+  it('still requires calories > 0 when macros are blank', () => {
     const { getByTestId, onSubmit } = setup()
     fireEvent.changeText(getByTestId('form-name-he-field'), 'מאפה')
-    turnOnCaloriesOnly(getByTestId)
-    // Leave calories blank
+    // Leave everything else blank
 
     fireEvent.press(getByTestId('form-submit'))
 
@@ -348,8 +342,12 @@ describe('ManualFoodForm — calories-only mode', () => {
 })
 
 describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
-  it('renders an EAN input field when ean prop is undefined', () => {
-    const { getByTestId } = setupNoEan()
+  it('renders an EAN input field inside the expander when ean prop is undefined', () => {
+    const { getByTestId, queryByTestId } = setupNoEan()
+    expect(queryByTestId('form-ean-input-field')).toBeNull()
+
+    openMoreDetails(getByTestId)
+
     expect(getByTestId('form-ean-input-field')).toBeTruthy()
   })
 
@@ -383,9 +381,10 @@ describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
     expect(submitted.id).toBe('manual_00000000-0000-0000-0000-000000000000')
   })
 
-  it('submits with id manual_<digits> when EAN field has typed digits', () => {
+  it('submits with id manual_<digits> when EAN field has typed digits (expander opened)', () => {
     const { getByTestId, onSubmit } = setupNoEan()
     fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
+    openMoreDetails(getByTestId)
     fireEvent.changeText(getByTestId('form-ean-input-field'), '7290012345678')
     fireEvent.changeText(getByTestId('form-calories-field'), '350')
     fireEvent.changeText(getByTestId('form-protein-field'), '30')
@@ -401,6 +400,7 @@ describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
   it('strips non-digit characters from typed EAN before constructing id', () => {
     const { getByTestId, onSubmit } = setupNoEan()
     fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
+    openMoreDetails(getByTestId)
     fireEvent.changeText(getByTestId('form-ean-input-field'), '7290 0123 45678')
     fireEvent.changeText(getByTestId('form-calories-field'), '350')
     fireEvent.changeText(getByTestId('form-protein-field'), '30')
@@ -416,6 +416,7 @@ describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
   it('falls through to manual_<uuid> when typed EAN has no digits', () => {
     const { getByTestId, onSubmit } = setupNoEan()
     fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
+    openMoreDetails(getByTestId)
     fireEvent.changeText(getByTestId('form-ean-input-field'), 'abc')
     fireEvent.changeText(getByTestId('form-calories-field'), '350')
     fireEvent.changeText(getByTestId('form-protein-field'), '30')
