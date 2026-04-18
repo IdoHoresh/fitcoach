@@ -18,6 +18,7 @@ interface TextInputProps {
   placeholder?: string
   keyboardType?: KeyboardTypeOptions
   secureTextEntry?: boolean
+  required?: boolean
   testID?: string
 }
 
@@ -29,13 +30,17 @@ export function TextInput({
   placeholder,
   keyboardType,
   secureTextEntry,
+  required,
   testID,
 }: TextInputProps) {
   const fieldTestID = testID ? `${testID}-field` : 'input-field'
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>{label}</Text>
+      <Text style={styles.label}>
+        {label}
+        {required && <Text style={styles.requiredMark}> *</Text>}
+      </Text>
       <RNTextInput
         value={value}
         onChangeText={onChangeText}
@@ -65,6 +70,9 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     fontWeight: fontWeight.medium,
     textAlign: 'center',
+  },
+  requiredMark: {
+    color: colors.error,
   },
   input: {
     backgroundColor: colors.surface,

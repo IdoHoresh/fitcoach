@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback } from 'react'
+import React, { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import {
   View,
   Text,
@@ -17,11 +17,14 @@ import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import type { FoodItem, FoodCategory, MealType } from '@/types'
 import { MACRO_SATISFIED_THRESHOLD } from '@/data/constants'
-import { foodRepository } from '@/db/food-repository'
+import { foodRepository, FoodCollisionError } from '@/db/food-repository'
+import { isMacroIncomplete } from '@/shared/isMacroIncomplete'
 import type { MealMacroTargetByName } from '@/algorithms/meal-targets'
 import { MacroTab } from './MacroTab'
 import { PortionPicker } from './PortionPicker'
 import { BarcodeScannerSheet } from './BarcodeScannerSheet'
+import { ManualFoodForm } from './ManualFoodForm'
+import { ManualFoodCollisionSheet } from './ManualFoodCollisionSheet'
 
 // ── Tab types & constants ────────────────────────────────────────────
 
@@ -68,6 +71,9 @@ interface FoodRowProps {
 
 function FoodRow({ food, onPress, testID }: FoodRowProps) {
   const strings = t().nutrition
+  // Calories-only manual entries have 0 for every macro but positive calories.
+  // Show "—" instead of "0g protein" so users see "unknown" not "actually zero".
+  const macroUnknown = isMacroIncomplete(food)
   return (
     <Pressable style={styles.foodRow} onPress={() => onPress(food)} testID={testID}>
       <View style={styles.foodRowContent}>
@@ -83,7 +89,8 @@ function FoodRow({ food, onPress, testID }: FoodRowProps) {
           {Math.round(food.caloriesPer100g)} {strings.kcal}
         </Text>
         <Text style={styles.foodProtein}>
-          {Math.round(food.proteinPer100g)}g {strings.macros.protein}
+          {macroUnknown ? '— ' : `${Math.round(food.proteinPer100g)}g `}
+          {strings.macros.protein}
         </Text>
       </View>
     </Pressable>
@@ -122,6 +129,20 @@ export function FoodSearchSheet({
   const [searchResults, setSearchResults] = useState<FoodItem[]>([])
   const [scannerVisible, setScannerVisible] = useState(false)
   const [isScanPartial, setIsScanPartial] = useState(false)
+  const [manualFormVisible, setManualFormVisible] = useState(false)
+  const [collisionState, setCollisionState] = useState<{
+    existing: FoodItem
+    attempted: FoodItem
+  } | null>(null)
+
+  // Guards async handlers (insertFoodStrict / upsertFood) from calling setters
+  // on a sheet that was dismissed mid-flight. Matches lessons.md 2026-04-10 —
+  // "async callbacks must check a ref before setState when the triggering UI
+  // can dismiss". Kept in sync with manualFormVisible via the effect below.
+  const formAliveRef = useRef(false)
+  useEffect(() => {
+    formAliveRef.current = manualFormVisible
+  }, [manualFormVisible])
 
   // Reset to 'all' tab every time the sheet opens
   useEffect(() => {
@@ -179,10 +200,50 @@ export function FoodSearchSheet({
     setSelectedFood(food)
   }
 
+  async function handleManualSubmit(food: FoodItem) {
+    try {
+      await foodRepository.insertFoodStrict(food)
+      if (!formAliveRef.current) return
+      setManualFormVisible(false)
+      setSelectedFood(food)
+    } catch (err) {
+      if (err instanceof FoodCollisionError) {
+        if (!formAliveRef.current) return
+        setCollisionState({ existing: err.existing, attempted: food })
+        return
+      }
+      throw err
+    }
+  }
+
+  function handleUseExisting() {
+    if (!collisionState) return
+    const existing = collisionState.existing
+    setCollisionState(null)
+    setManualFormVisible(false)
+    setSelectedFood(existing)
+  }
+
+  async function handleReplace() {
+    if (!collisionState) return
+    const attempted = collisionState.attempted
+    await foodRepository.upsertFood(attempted)
+    if (!formAliveRef.current) return
+    setCollisionState(null)
+    setManualFormVisible(false)
+    setSelectedFood(attempted)
+  }
+
+  function handleCancelCollision() {
+    setCollisionState(null)
+  }
+
   function handleClose() {
     setQuery('')
     setSelectedFood(null)
     setIsScanPartial(false)
+    setManualFormVisible(false)
+    setCollisionState(null)
     onClose()
   }
 
@@ -283,10 +344,44 @@ export function FoodSearchSheet({
         />
 
         {/* Add custom food */}
-        <Pressable style={styles.customFoodButton} testID={`${id}-custom-food`}>
+        <Pressable
+          style={styles.customFoodButton}
+          onPress={() => setManualFormVisible(true)}
+          testID={`${id}-custom-food`}
+        >
           <Ionicons name="add-circle-outline" size={18} color={colors.primary} />
           <Text style={styles.customFoodLabel}>{strings.addCustomFood}</Text>
         </Pressable>
+
+        {/* Manual create form (text-search no-EAN entry point).
+            The collision sheet is nested INSIDE this Modal, not a sibling —
+            iOS requires nested-Modal pattern for correct z-ordering of stacked
+            modals (sibling modals under the same parent z-fight unpredictably). */}
+        {manualFormVisible && (
+          <Modal
+            visible
+            animationType="slide"
+            presentationStyle="pageSheet"
+            onRequestClose={() => setManualFormVisible(false)}
+          >
+            <ManualFoodForm
+              initialNameHe={query.trim() || undefined}
+              onSubmit={handleManualSubmit}
+              onCancel={() => setManualFormVisible(false)}
+              testID={`${id}-manual-form`}
+            />
+            {collisionState && (
+              <ManualFoodCollisionSheet
+                visible
+                existing={collisionState.existing}
+                onUseExisting={handleUseExisting}
+                onReplace={handleReplace}
+                onCancel={handleCancelCollision}
+                testID={`${id}-collision`}
+              />
+            )}
+          </Modal>
+        )}
       </KeyboardAvoidingView>
     </Modal>
   )

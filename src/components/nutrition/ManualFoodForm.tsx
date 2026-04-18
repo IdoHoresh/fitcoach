@@ -1,20 +1,36 @@
 /**
- * ManualFoodForm — fallback form when OFF returns 404 for a scanned EAN.
+ * ManualFoodForm — fallback form for creating a manual food entry.
  *
- * Hebrew-first input (name + 4 macros required, fiber + natural-unit serving optional).
- * Emits a FoodItem on successful submit; the host (BarcodeScannerSheet this PR,
- * future text-search entry in a follow-up PR) is responsible for persistence.
+ * Two entry modes:
+ *   - Scanner unhappy-path: `ean` prop is provided; rendered read-only at top.
+ *     Id = `manual_<ean>`. Caller is `BarcodeScannerSheet` after OFF 404.
+ *   - Text-search no-results: `ean` prop omitted; an optional EAN input lives
+ *     in the collapsed "more details" section. Id = `manual_<digits>` if user
+ *     typed an EAN (digits stripped), else `manual_<uuid-v4>`.
+ *
+ * Form shape: MacroFactor/MFP-inspired progressive disclosure.
+ *   Always visible:    name, calories, protein, fat, carbs
+ *   Collapsed expander: English name, fiber, serving size (name + grams), EAN (text-search)
+ *
+ * Macros are visible but blank-allowed — leaving them empty submits the food
+ * with macros=0, which the `isMacroIncomplete` helper later detects to show
+ * "—" in search results and skip from daily macro totals. No separate
+ * "calories only" toggle is needed; the blank fields themselves ARE the signal.
  *
  * Validation flow:
- *   1. Pre-parse numeric strings → numbers (empty / NaN surfaces as numberInvalid)
+ *   1. Pre-parse numeric strings → numbers (blank macros → 0; blank calories blocks)
  *   2. Run ManualFoodInputSchema.safeParse → Zod enforces clamps + p+f+c ≤ 101 + serving-pair refine
- *   3. On success: construct FoodItem (id = manual_<ean>, isUserCreated, auto 100g serving)
+ *   3. On success: construct FoodItem (id per mode, isUserCreated, auto 100g serving)
  *   4. Atwater delta warning renders inline when kcal diverges >25% from 4·p + 9·f + 4·c
- *      (soft warn only — does not block submit)
+ *      (soft warn only — only fires when all three macros are filled)
+ *
+ * Persistence is the host's responsibility (insertFoodStrict for manual paths,
+ * upsertFood for OFF refresh paths). The form is repository-agnostic.
  */
 
 import React, { useState } from 'react'
-import { View, Text, ScrollView, StyleSheet } from 'react-native'
+import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native'
+import { randomUUID } from 'expo-crypto'
 import { TextInput } from '@/components/TextInput'
 import { Button } from '@/components/Button'
 import { colors } from '@/theme/colors'
@@ -23,11 +39,15 @@ import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
 import type { FoodItem, ServingSize } from '@/types'
 import { ManualFoodInputSchema, computeAtwaterDelta } from '@/security/validation'
+import { normalizeEan } from '@/shared/normalizeEan'
 
 // ── Types ─────────────────────────────────────────────────────────────
 
 interface ManualFoodFormProps {
-  ean: string
+  /** Pre-known EAN from the scanner path. Omit for text-search entry. */
+  ean?: string
+  /** Pre-fill the Hebrew name (e.g. from the FoodSearchSheet query). */
+  initialNameHe?: string
   onSubmit: (food: FoodItem) => void | Promise<void>
   onCancel: () => void
   testID?: string
@@ -75,14 +95,34 @@ function shouldShowAtwaterWarning(
   return computeAtwaterDelta(kcal, p, f, c).deltaPct > ATWATER_WARN_THRESHOLD
 }
 
+/**
+ * Picks the suffix used for the FoodItem id:
+ *   - scanner path (eanProp set) → use the scanned EAN as-is
+ *   - text-search path with typed EAN → strip non-digits; use if any remain
+ *   - text-search path with no usable EAN → fresh uuid v4
+ */
+function resolveFoodIdSuffix(eanProp: string | undefined, typedEan: string): string {
+  if (eanProp != null) return eanProp
+  const cleaned = normalizeEan(typedEan)
+  return cleaned.length > 0 ? cleaned : randomUUID()
+}
+
 // ── Component ─────────────────────────────────────────────────────────
 
-export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFormProps) {
+export function ManualFoodForm({
+  ean,
+  initialNameHe,
+  onSubmit,
+  onCancel,
+  testID,
+}: ManualFoodFormProps) {
   const strings = t().manualFood
 
-  const [nameHe, setNameHe] = useState('')
+  const [nameHe, setNameHe] = useState(initialNameHe ?? '')
   const [nameEn, setNameEn] = useState('')
+  const [typedEan, setTypedEan] = useState('')
   const [calories, setCalories] = useState('')
+  const [caloriesManuallyEdited, setCaloriesManuallyEdited] = useState(false)
   const [protein, setProtein] = useState('')
   const [fat, setFat] = useState('')
   const [carbs, setCarbs] = useState('')
@@ -90,6 +130,26 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
   const [servingName, setServingName] = useState('')
   const [servingGrams, setServingGrams] = useState('')
   const [errors, setErrors] = useState<FormErrors>({})
+
+  // Auto-fill calories from Atwater (4·p + 9·f + 4·c) when all three macros are
+  // complete and the user hasn't manually typed into the calories field yet.
+  // Once the user overrides, flag is set and auto-fill stops — lets them match
+  // a label's rounded kcal value instead of the strict Atwater estimate.
+  React.useEffect(() => {
+    if (caloriesManuallyEdited) return
+    if (protein.trim() === '' || fat.trim() === '' || carbs.trim() === '') return
+    const p = Number(protein)
+    const f = Number(fat)
+    const c = Number(carbs)
+    if ([p, f, c].some(Number.isNaN)) return
+    const kcal = 4 * p + 9 * f + 4 * c
+    setCalories(String(Math.round(kcal)))
+  }, [protein, fat, carbs, caloriesManuallyEdited])
+
+  function handleCaloriesChange(next: string) {
+    setCalories(next)
+    setCaloriesManuallyEdited(true)
+  }
 
   const showAtwater = shouldShowAtwaterWarning(calories, protein, fat, carbs)
 
@@ -107,11 +167,13 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
   function handleSubmit() {
     const newErrors: FormErrors = {}
 
-    // 1. Pre-parse numeric fields
+    // 1. Pre-parse numeric fields. Calories is required (blank blocks submit);
+    //    macros are blank-allowed (blank → 0 → isMacroIncomplete detects later
+    //    and hides them from daily totals).
     const caloriesParsed = parseRequiredNumeric(calories)
-    const proteinParsed = parseRequiredNumeric(protein)
-    const fatParsed = parseRequiredNumeric(fat)
-    const carbsParsed = parseRequiredNumeric(carbs)
+    const proteinParsed = parseOptionalNumeric(protein)
+    const fatParsed = parseOptionalNumeric(fat)
+    const carbsParsed = parseOptionalNumeric(carbs)
     const fiberParsed = parseOptionalNumeric(fiber)
     const servingGramsParsed = parseOptionalNumeric(servingGrams)
 
@@ -122,28 +184,15 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
     if (!fiberParsed.ok) newErrors.fiberPer100g = fiberParsed.reason
     if (!servingGramsParsed.ok) newErrors.servingGrams = servingGramsParsed.reason
 
-    if (
-      !caloriesParsed.ok ||
-      !proteinParsed.ok ||
-      !fatParsed.ok ||
-      !carbsParsed.ok ||
-      !fiberParsed.ok ||
-      !servingGramsParsed.ok
-    ) {
-      // Surface parse errors on macro fields; we still fall through to Zod for nameHe
-      // and serving-pair refinements, so the user sees everything wrong at once.
-    }
-
-    // 2. Zod validation (uses parsed numbers; empty macros replaced with 0 so the
-    //    schema still evaluates the p+f+c refinement meaningfully even on parse-fail
-    //    rows — the parse-fail errors above already block submit for those fields)
+    // 2. Zod validation (blank macros → 0; p+f+c refinement trivially passes when
+    //    all three are 0, which is the "calories-only" intent).
     const input = {
       nameHe,
       nameEn: nameEn || undefined,
       caloriesPer100g: caloriesParsed.ok ? caloriesParsed.value : 0,
-      proteinPer100g: proteinParsed.ok ? proteinParsed.value : 0,
-      fatPer100g: fatParsed.ok ? fatParsed.value : 0,
-      carbsPer100g: carbsParsed.ok ? carbsParsed.value : 0,
+      proteinPer100g: proteinParsed.ok ? (proteinParsed.value ?? 0) : 0,
+      fatPer100g: fatParsed.ok ? (fatParsed.value ?? 0) : 0,
+      carbsPer100g: carbsParsed.ok ? (carbsParsed.value ?? 0) : 0,
       fiberPer100g: fiberParsed.ok ? (fiberParsed.value ?? 0) : 0,
       servingName: servingName || undefined,
       servingGrams: servingGramsParsed.ok ? servingGramsParsed.value : undefined,
@@ -182,7 +231,7 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
     }
 
     const food: FoodItem = {
-      id: `manual_${ean}`,
+      id: `manual_${resolveFoodIdSuffix(ean, typedEan)}`,
       nameHe: data.nameHe,
       nameEn: data.nameEn ?? data.nameHe,
       category: 'snacks',
@@ -203,12 +252,14 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
     <ScrollView style={styles.container} contentContainerStyle={styles.content} testID={testID}>
       <Text style={styles.title}>{strings.title}</Text>
 
-      <View style={styles.eanRow}>
-        <Text style={styles.eanLabel}>{strings.barcodeLabel}:</Text>
-        <Text style={styles.eanValue} testID={tid('ean-display')}>
-          {ean}
-        </Text>
-      </View>
+      {ean != null && (
+        <View style={styles.eanRow}>
+          <Text style={styles.eanLabel}>{strings.barcodeLabel}:</Text>
+          <Text style={styles.eanValue} testID={tid('ean-display')}>
+            {ean}
+          </Text>
+        </View>
+      )}
 
       <TextInput
         label={strings.nameHeLabel}
@@ -216,26 +267,21 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
         onChangeText={setNameHe}
         placeholder={strings.nameHePlaceholder}
         error={resolveError('nameHe')}
+        required
         testID={tid('name-he')}
       />
 
-      <TextInput
-        label={strings.nameEnLabel}
-        value={nameEn}
-        onChangeText={setNameEn}
-        placeholder={strings.nameEnPlaceholder}
-        testID={tid('name-en')}
-      />
-
-      <Text style={styles.sectionHeader}>{strings.per100gHeader}</Text>
-      <Text style={styles.sectionSubtitle}>{strings.per100gSubtitle}</Text>
+      <Text style={styles.sectionHeader} testID={tid('per-100g-header')}>
+        {strings.per100gHeader}
+      </Text>
 
       <TextInput
         label={strings.caloriesLabel}
         value={calories}
-        onChangeText={setCalories}
+        onChangeText={handleCaloriesChange}
         keyboardType="decimal-pad"
         error={resolveError('caloriesPer100g')}
+        required
         testID={tid('calories')}
       />
 
@@ -272,17 +318,24 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
         testID={tid('carbs')}
       />
 
-      <TextInput
-        label={strings.fiberLabel}
-        value={fiber}
-        onChangeText={setFiber}
-        keyboardType="decimal-pad"
-        error={resolveError('fiberPer100g')}
-        testID={tid('fiber')}
-      />
-
       <Text style={styles.sectionHeader}>{strings.servingSectionLabel}</Text>
       <Text style={styles.sectionSubtitle}>{strings.servingSectionSubtitle}</Text>
+
+      <View style={styles.chipRow}>
+        {strings.servingQuickPicks.map((unit) => {
+          const selected = servingName === unit
+          return (
+            <Pressable
+              key={unit}
+              style={[styles.chip, selected && styles.chipSelected]}
+              onPress={() => setServingName(unit)}
+              testID={tid(`serving-chip-${unit}`)}
+            >
+              <Text style={selected ? styles.chipTextSelected : styles.chipText}>{unit}</Text>
+            </Pressable>
+          )
+        })}
+      </View>
 
       <TextInput
         label={strings.servingNameLabel}
@@ -300,6 +353,34 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
         keyboardType="decimal-pad"
         error={resolveError('servingGrams')}
         testID={tid('serving-grams')}
+      />
+
+      <TextInput
+        label={strings.fiberLabel}
+        value={fiber}
+        onChangeText={setFiber}
+        keyboardType="decimal-pad"
+        error={resolveError('fiberPer100g')}
+        testID={tid('fiber')}
+      />
+
+      {ean == null && (
+        <TextInput
+          label={strings.eanInputLabel}
+          value={typedEan}
+          onChangeText={setTypedEan}
+          placeholder={strings.eanInputPlaceholder}
+          keyboardType="number-pad"
+          testID={tid('ean-input')}
+        />
+      )}
+
+      <TextInput
+        label={strings.nameEnLabel}
+        value={nameEn}
+        onChangeText={setNameEn}
+        placeholder={strings.nameEnPlaceholder}
+        testID={tid('name-en')}
       />
 
       <View style={styles.buttonRow}>
@@ -363,6 +444,7 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
     color: colors.textSecondary,
     marginTop: spacing.md,
+    textAlign: 'right',
   },
   sectionSubtitle: {
     fontSize: fontSize.xs,
@@ -370,12 +452,40 @@ const styles = StyleSheet.create({
     marginTop: -spacing.xs,
     marginBottom: spacing.xs,
     lineHeight: 18,
+    textAlign: 'right',
   },
   atwaterWarning: {
     fontSize: fontSize.xs,
     color: colors.warning,
     paddingHorizontal: spacing.sm,
     lineHeight: 18,
+  },
+  chipRow: {
+    flexDirection: 'row-reverse',
+    flexWrap: 'wrap',
+    gap: spacing.xs,
+    marginBottom: spacing.xs,
+  },
+  chip: {
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    borderRadius: borderRadius.full,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surfaceElevated,
+  },
+  chipSelected: {
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
+  },
+  chipText: {
+    fontSize: fontSize.sm,
+    color: colors.textPrimary,
+  },
+  chipTextSelected: {
+    fontSize: fontSize.sm,
+    color: colors.onPrimary,
+    fontWeight: fontWeight.semibold,
   },
   buttonRow: {
     flexDirection: 'row',

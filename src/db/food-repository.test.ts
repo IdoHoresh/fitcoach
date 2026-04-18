@@ -6,7 +6,7 @@
  */
 
 import { CREATE_TABLE_STATEMENTS, SCHEMA_VERSION } from './schema'
-import { FoodRepository } from './food-repository'
+import { FoodRepository, FoodCollisionError } from './food-repository'
 import type { FoodItem } from '../types'
 
 // ── Mock the database ─────────────────────────────────────────────
@@ -324,9 +324,9 @@ describe('FoodRepository', () => {
     })
   })
 
-  // ── insertFood ────────────────────────────────────────────────────────
+  // ── upsertFood (renamed from insertFood) ─────────────────────────────
 
-  describe('insertFood()', () => {
+  describe('upsertFood()', () => {
     const FOOD_TO_INSERT: FoodItem = {
       id: 'manual_7290000066318',
       nameHe: 'עוגיות שוקולד',
@@ -344,7 +344,7 @@ describe('FoodRepository', () => {
     it('executes INSERT OR REPLACE with all 12 food columns', async () => {
       mockRunAsync.mockResolvedValueOnce({ changes: 1 })
 
-      await repo.insertFood(FOOD_TO_INSERT)
+      await repo.upsertFood(FOOD_TO_INSERT)
 
       expect(mockRunAsync).toHaveBeenCalledTimes(1)
       const [sql, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
@@ -359,7 +359,7 @@ describe('FoodRepository', () => {
     it('stores serving_sizes_json as a JSON string', async () => {
       mockRunAsync.mockResolvedValueOnce({ changes: 1 })
 
-      await repo.insertFood(FOOD_TO_INSERT)
+      await repo.upsertFood(FOOD_TO_INSERT)
 
       const [, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
       const servingJson = params.find((p) => typeof p === 'string' && p.startsWith('[')) as string
@@ -369,7 +369,7 @@ describe('FoodRepository', () => {
     it('sets is_user_created=0 for non-user foods', async () => {
       mockRunAsync.mockResolvedValueOnce({ changes: 1 })
 
-      await repo.insertFood(FOOD_TO_INSERT)
+      await repo.upsertFood(FOOD_TO_INSERT)
 
       const [, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
       expect(params).toContain(0)
@@ -378,10 +378,100 @@ describe('FoodRepository', () => {
     it('sets is_user_created=1 for user-created foods', async () => {
       mockRunAsync.mockResolvedValueOnce({ changes: 1 })
 
-      await repo.insertFood({ ...FOOD_TO_INSERT, isUserCreated: true })
+      await repo.upsertFood({ ...FOOD_TO_INSERT, isUserCreated: true })
 
       const [, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
       expect(params).toContain(1)
+    })
+
+    it('overwrites an existing row with the same id (INSERT OR REPLACE semantics)', async () => {
+      // Two consecutive upserts with the same id; the second supplies new macro
+      // values. INSERT OR REPLACE means the second call's params should arrive
+      // unchanged at the DB layer — the row replacement is SQLite's job, not ours.
+      mockRunAsync.mockResolvedValue({ changes: 1 })
+
+      await repo.upsertFood(FOOD_TO_INSERT)
+      await repo.upsertFood({ ...FOOD_TO_INSERT, caloriesPer100g: 999 })
+
+      expect(mockRunAsync).toHaveBeenCalledTimes(2)
+      const [, secondParams] = mockRunAsync.mock.calls[1] as [string, unknown[]]
+      expect(secondParams).toContain(999)
+    })
+  })
+
+  // ── insertFoodStrict ──────────────────────────────────────────────────
+
+  describe('insertFoodStrict()', () => {
+    const FOOD_TO_INSERT: FoodItem = {
+      id: 'manual_7290000066318',
+      nameHe: 'עוגיות שוקולד',
+      nameEn: 'Chocolate Cookies',
+      category: 'snacks',
+      caloriesPer100g: 480,
+      proteinPer100g: 6,
+      fatPer100g: 22,
+      carbsPer100g: 64,
+      fiberPer100g: 2,
+      isUserCreated: true,
+      servingSizes: [{ nameHe: '100 גרם', nameEn: '100g', unit: 'grams', grams: 100 }],
+    }
+
+    const EXISTING_ROW = {
+      id: 'manual_7290000066318',
+      name_he: 'מוצר ישן',
+      name_en: 'Old Product',
+      category: 'snacks',
+      calories_per_100g: 100,
+      protein_per_100g: 5,
+      fat_per_100g: 5,
+      carbs_per_100g: 10,
+      fiber_per_100g: 1,
+      is_user_created: 1,
+      serving_sizes_json: '[]',
+    }
+
+    it('persists a fresh food via plain INSERT INTO when no row exists', async () => {
+      mockGetFirstAsync.mockResolvedValueOnce(null) // pre-check: no collision
+      mockRunAsync.mockResolvedValueOnce({ changes: 1 })
+
+      await repo.insertFoodStrict(FOOD_TO_INSERT)
+
+      expect(mockRunAsync).toHaveBeenCalledTimes(1)
+      const [sql, params] = mockRunAsync.mock.calls[0] as [string, unknown[]]
+      expect(sql).toMatch(/INSERT INTO foods/i)
+      expect(sql).not.toMatch(/INSERT OR REPLACE/i)
+      expect(params).toContain('manual_7290000066318')
+    })
+
+    it('throws FoodCollisionError when a row with the same id already exists', async () => {
+      mockGetFirstAsync.mockResolvedValueOnce(EXISTING_ROW)
+
+      await expect(repo.insertFoodStrict(FOOD_TO_INSERT)).rejects.toBeInstanceOf(FoodCollisionError)
+    })
+
+    it('FoodCollisionError carries the existing FoodItem in its `existing` field', async () => {
+      mockGetFirstAsync.mockResolvedValueOnce(EXISTING_ROW)
+
+      let caught: unknown
+      try {
+        await repo.insertFoodStrict(FOOD_TO_INSERT)
+      } catch (err) {
+        caught = err
+      }
+
+      expect(caught).toBeInstanceOf(FoodCollisionError)
+      const collision = caught as FoodCollisionError
+      expect(collision.existing.id).toBe('manual_7290000066318')
+      expect(collision.existing.nameHe).toBe('מוצר ישן')
+      expect(collision.existing.caloriesPer100g).toBe(100)
+    })
+
+    it('does NOT execute any INSERT when a collision is detected', async () => {
+      mockGetFirstAsync.mockResolvedValueOnce(EXISTING_ROW)
+
+      await expect(repo.insertFoodStrict(FOOD_TO_INSERT)).rejects.toBeInstanceOf(FoodCollisionError)
+
+      expect(mockRunAsync).not.toHaveBeenCalled()
     })
   })
 

@@ -59,7 +59,7 @@ export function BarcodeScannerSheet({ visible, onClose, onFound }: BarcodeScanne
     () => ({
       getByBarcode: (ean: string) => foodRepository.getByBarcode(ean),
       fetchOffProduct,
-      insertFood: (food: FoodItem) => foodRepository.insertFood(food),
+      upsertFood: (food: FoodItem) => foodRepository.upsertFood(food),
     }),
     [],
   )
@@ -137,8 +137,10 @@ export function BarcodeScannerSheet({ visible, onClose, onFound }: BarcodeScanne
 
   async function handleManualSubmit(food: FoodItem) {
     // getByBarcode in handleBarcodeScanned already ruled out a manual_<ean>
-    // collision; insertFood is safe here without a pre-check.
-    await foodRepository.insertFood(food)
+    // collision before this form opened. insertFoodStrict adds defense in depth:
+    // if that pre-check ever stops working, surface the FoodCollisionError loudly
+    // instead of silently overwriting user data.
+    await foodRepository.insertFoodStrict(food)
     onFound(food, false)
   }
 
