@@ -157,10 +157,14 @@ export class FoodRepository extends BaseRepository<FoodItem> {
   }
 
   /**
-   * Inserts or replaces a food in the database.
-   * Used to persist Open Food Facts results as manual_<ean> entries.
+   * Upserts a food (INSERT OR REPLACE). Overwrite is intentional — used by
+   * the OFF refresh path where a partial-data row may be replaced by a
+   * full-data row on a later scan.
+   *
+   * For manual-create entry points where overwrite would silently destroy
+   * user data, use `insertFoodStrict` instead.
    */
-  async insertFood(food: FoodItem): Promise<void> {
+  async upsertFood(food: FoodItem): Promise<void> {
     const db = getDatabase()
     await db.runAsync(
       `INSERT OR REPLACE INTO foods
@@ -169,21 +173,59 @@ export class FoodRepository extends BaseRepository<FoodItem> {
           carbs_per_100g, fiber_per_100g,
           is_user_created, serving_sizes_json, name_norm)
        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      [
-        food.id,
-        food.nameHe,
-        food.nameEn,
-        food.category,
-        food.caloriesPer100g,
-        food.proteinPer100g,
-        food.fatPer100g,
-        food.carbsPer100g,
-        food.fiberPer100g,
-        food.isUserCreated ? 1 : 0,
-        JSON.stringify(food.servingSizes),
-        normalizeNameForDedup(food.nameHe),
-      ],
+      foodToRowParams(food),
     )
+  }
+
+  /**
+   * Inserts a food, but throws `FoodCollisionError` if a row with the same
+   * id already exists. Used by manual-create entry points (text-search,
+   * scanner unhappy-path) where silent overwrite would destroy user data.
+   *
+   * The thrown error carries the existing FoodItem so the caller can offer
+   * "use existing" UX without re-querying.
+   */
+  async insertFoodStrict(food: FoodItem): Promise<void> {
+    const existing = await this.getById(food.id)
+    if (existing != null) {
+      throw new FoodCollisionError(existing)
+    }
+    const db = getDatabase()
+    await db.runAsync(
+      `INSERT INTO foods
+         (id, name_he, name_en, category,
+          calories_per_100g, protein_per_100g, fat_per_100g,
+          carbs_per_100g, fiber_per_100g,
+          is_user_created, serving_sizes_json, name_norm)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      foodToRowParams(food),
+    )
+  }
+}
+
+function foodToRowParams(food: FoodItem): (string | number)[] {
+  return [
+    food.id,
+    food.nameHe,
+    food.nameEn,
+    food.category,
+    food.caloriesPer100g,
+    food.proteinPer100g,
+    food.fatPer100g,
+    food.carbsPer100g,
+    food.fiberPer100g,
+    food.isUserCreated ? 1 : 0,
+    JSON.stringify(food.servingSizes),
+    normalizeNameForDedup(food.nameHe),
+  ]
+}
+
+export class FoodCollisionError extends Error {
+  readonly existing: FoodItem
+  constructor(existing: FoodItem) {
+    super(`Food with id "${existing.id}" already exists`)
+    this.name = 'FoodCollisionError'
+    this.existing = existing
   }
 }
 

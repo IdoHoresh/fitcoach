@@ -23,7 +23,9 @@ export type ScanResolution =
 export interface ScanResolverDeps {
   getByBarcode: (ean: string) => Promise<FoodItem | null>
   fetchOffProduct: (ean: string) => Promise<OffResult | null>
-  insertFood: (food: FoodItem) => Promise<void>
+  // OFF refresh writes use upsert semantics: a later scan with full data
+  // legitimately overwrites an earlier partial-data row for the same EAN.
+  upsertFood: (food: FoodItem) => Promise<void>
 }
 
 // ── Resolver ──────────────────────────────────────────────────────────
@@ -37,7 +39,7 @@ export async function resolveScan(ean: string, deps: ScanResolverDeps): Promise<
   try {
     const result = await deps.fetchOffProduct(ean)
     if (result) {
-      await deps.insertFood(result.food)
+      await deps.upsertFood(result.food)
       return { kind: 'off_hit', food: result.food, isPartial: result.isPartial }
     }
     // OFF returned null — product is absent from OFF (not a transient error).

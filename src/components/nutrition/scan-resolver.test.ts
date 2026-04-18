@@ -39,7 +39,7 @@ function makeDeps(overrides: Partial<ScanResolverDeps> = {}): ScanResolverDeps {
   return {
     getByBarcode: jest.fn().mockResolvedValue(null),
     fetchOffProduct: jest.fn().mockResolvedValue(null),
-    insertFood: jest.fn().mockResolvedValue(undefined),
+    upsertFood: jest.fn().mockResolvedValue(undefined),
     ...overrides,
   }
 }
@@ -63,32 +63,32 @@ describe('resolveScan()', () => {
     expect(deps.fetchOffProduct).not.toHaveBeenCalled()
   })
 
-  it('does not call insertFood when local hit', async () => {
+  it('does not call upsertFood when local hit', async () => {
     const deps = makeDeps({ getByBarcode: jest.fn().mockResolvedValue(LOCAL_FOOD) })
 
     await resolveScan(EAN, deps)
 
-    expect(deps.insertFood).not.toHaveBeenCalled()
+    expect(deps.upsertFood).not.toHaveBeenCalled()
   })
 
-  it('returns off_hit with isPartial=false on full OFF response (insertFood called)', async () => {
+  it('returns off_hit with isPartial=false on full OFF response (upsertFood called)', async () => {
     const offResult: OffResult = { food: OFF_FOOD, isPartial: false }
     const deps = makeDeps({ fetchOffProduct: jest.fn().mockResolvedValue(offResult) })
 
     const result = await resolveScan(EAN, deps)
 
     expect(result).toEqual({ kind: 'off_hit', food: OFF_FOOD, isPartial: false })
-    expect(deps.insertFood).toHaveBeenCalledWith(OFF_FOOD)
+    expect(deps.upsertFood).toHaveBeenCalledWith(OFF_FOOD)
   })
 
-  it('returns off_hit with isPartial=true on partial OFF response (insertFood called)', async () => {
+  it('returns off_hit with isPartial=true on partial OFF response (upsertFood called)', async () => {
     const offResult: OffResult = { food: OFF_FOOD, isPartial: true }
     const deps = makeDeps({ fetchOffProduct: jest.fn().mockResolvedValue(offResult) })
 
     const result = await resolveScan(EAN, deps)
 
     expect(result).toEqual({ kind: 'off_hit', food: OFF_FOOD, isPartial: true })
-    expect(deps.insertFood).toHaveBeenCalledWith(OFF_FOOD)
+    expect(deps.upsertFood).toHaveBeenCalledWith(OFF_FOOD)
   })
 
   it('returns not_found when both local DB and OFF return null (no insert)', async () => {
@@ -97,7 +97,7 @@ describe('resolveScan()', () => {
     const result = await resolveScan(EAN, deps)
 
     expect(result).toEqual({ kind: 'not_found' })
-    expect(deps.insertFood).not.toHaveBeenCalled()
+    expect(deps.upsertFood).not.toHaveBeenCalled()
   })
 
   it('returns network_error when fetchOffProduct throws OffNetworkError', async () => {
@@ -108,7 +108,7 @@ describe('resolveScan()', () => {
     const result = await resolveScan(EAN, deps)
 
     expect(result).toEqual({ kind: 'network_error' })
-    expect(deps.insertFood).not.toHaveBeenCalled()
+    expect(deps.upsertFood).not.toHaveBeenCalled()
   })
 
   it("returns network_error on any unexpected error (preserves today's fallback)", async () => {
@@ -119,6 +119,6 @@ describe('resolveScan()', () => {
     const result = await resolveScan(EAN, deps)
 
     expect(result).toEqual({ kind: 'network_error' })
-    expect(deps.insertFood).not.toHaveBeenCalled()
+    expect(deps.upsertFood).not.toHaveBeenCalled()
   })
 })
