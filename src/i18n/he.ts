@@ -564,8 +564,6 @@ export const he = {
       'הקלוריות נראות חריגות ביחס למאקרו — ייתכן שהכנסת kJ במקום kcal. בדוק את האריזה.',
     eanInputLabel: 'ברקוד (לא חובה)',
     eanInputPlaceholder: 'לדוגמה: 7290012345678',
-    showMoreDetails: 'הוסף פרטים נוספים',
-    hideMoreDetails: 'הסתר פרטים',
     errors: {
       nameRequired: 'שם בעברית נדרש',
       macroSumTooHigh:

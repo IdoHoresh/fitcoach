@@ -557,8 +557,6 @@ export const en: TranslationKeys = {
       'Calories look unusual vs. macros — you may have entered kJ instead of kcal. Check the package.',
     eanInputLabel: 'Barcode (optional)',
     eanInputPlaceholder: 'e.g. 7290012345678',
-    showMoreDetails: 'Add more details',
-    hideMoreDetails: 'Hide details',
     errors: {
       nameRequired: 'Hebrew name is required',
       macroSumTooHigh:

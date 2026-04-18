@@ -48,10 +48,6 @@ function fillValidMacros(getByTestId: ReturnType<typeof render>['getByTestId']) 
   fillField(getByTestId, 'carbs', '40')
 }
 
-function openMoreDetails(getByTestId: ReturnType<typeof render>['getByTestId']) {
-  fireEvent.press(getByTestId('form-more-details-toggle'))
-}
-
 describe('ManualFoodForm', () => {
   it('renders the EAN as read-only context', () => {
     const { getByTestId } = setup()
@@ -127,7 +123,6 @@ describe('ManualFoodForm', () => {
   it('blocks submit when servingName is filled but servingGrams is empty', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)
-    openMoreDetails(getByTestId)
     fillField(getByTestId, 'serving-name', 'יחידה')
 
     fireEvent.press(getByTestId('form-submit'))
@@ -139,7 +134,6 @@ describe('ManualFoodForm', () => {
   it('blocks submit when servingGrams is filled but servingName is empty', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)
-    openMoreDetails(getByTestId)
     fillField(getByTestId, 'serving-grams', '40')
 
     fireEvent.press(getByTestId('form-submit'))
@@ -162,7 +156,6 @@ describe('ManualFoodForm', () => {
   it('submits with 100g + custom serving when both serving fields are filled', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)
-    openMoreDetails(getByTestId)
     fillField(getByTestId, 'serving-name', 'יחידה')
     fillField(getByTestId, 'serving-grams', '40')
 
@@ -189,7 +182,6 @@ describe('ManualFoodForm', () => {
   it('preserves user-entered nameEn when provided', () => {
     const { getByTestId, onSubmit } = setup()
     fillValidMacros(getByTestId)
-    openMoreDetails(getByTestId)
     fillField(getByTestId, 'name-en', 'Protein Bar')
 
     fireEvent.press(getByTestId('form-submit'))
@@ -275,27 +267,14 @@ describe('ManualFoodForm — auto-calculate calories', () => {
   })
 })
 
-describe('ManualFoodForm — progressive disclosure + blank macros', () => {
+describe('ManualFoodForm — flat layout + blank macros', () => {
   it('renders a "values per 100g" section header above the macro fields', () => {
     const { getByTestId } = setup()
     expect(getByTestId('form-per-100g-header')).toBeTruthy()
   })
 
-  it('renders the "more details" expander (collapsed by default)', () => {
-    const { getByTestId, queryByTestId } = setup()
-    expect(getByTestId('form-more-details-toggle')).toBeTruthy()
-    expect(queryByTestId('form-more-details-block')).toBeNull()
-  })
-
-  it('opens the expander on tap and reveals English name, fiber, serving fields', () => {
-    const { getByTestId, queryByTestId } = setup()
-    expect(queryByTestId('form-name-en-field')).toBeNull()
-    expect(queryByTestId('form-fiber-field')).toBeNull()
-    expect(queryByTestId('form-serving-name-field')).toBeNull()
-    expect(queryByTestId('form-serving-grams-field')).toBeNull()
-
-    openMoreDetails(getByTestId)
-
+  it('renders all fields inline — EN name, fiber, serving fields visible by default', () => {
+    const { getByTestId } = setup()
     expect(getByTestId('form-name-en-field')).toBeTruthy()
     expect(getByTestId('form-fiber-field')).toBeTruthy()
     expect(getByTestId('form-serving-name-field')).toBeTruthy()
@@ -347,12 +326,8 @@ describe('ManualFoodForm — progressive disclosure + blank macros', () => {
 })
 
 describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
-  it('renders an EAN input field inside the expander when ean prop is undefined', () => {
-    const { getByTestId, queryByTestId } = setupNoEan()
-    expect(queryByTestId('form-ean-input-field')).toBeNull()
-
-    openMoreDetails(getByTestId)
-
+  it('renders the EAN input field inline when ean prop is undefined', () => {
+    const { getByTestId } = setupNoEan()
     expect(getByTestId('form-ean-input-field')).toBeTruthy()
   })
 
@@ -389,7 +364,6 @@ describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
   it('submits with id manual_<digits> when EAN field has typed digits (expander opened)', () => {
     const { getByTestId, onSubmit } = setupNoEan()
     fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
-    openMoreDetails(getByTestId)
     fireEvent.changeText(getByTestId('form-ean-input-field'), '7290012345678')
     fireEvent.changeText(getByTestId('form-calories-field'), '350')
     fireEvent.changeText(getByTestId('form-protein-field'), '30')
@@ -405,7 +379,6 @@ describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
   it('strips non-digit characters from typed EAN before constructing id', () => {
     const { getByTestId, onSubmit } = setupNoEan()
     fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
-    openMoreDetails(getByTestId)
     fireEvent.changeText(getByTestId('form-ean-input-field'), '7290 0123 45678')
     fireEvent.changeText(getByTestId('form-calories-field'), '350')
     fireEvent.changeText(getByTestId('form-protein-field'), '30')
@@ -421,7 +394,6 @@ describe('ManualFoodForm — no-EAN mode (text-search entry point)', () => {
   it('falls through to manual_<uuid> when typed EAN has no digits', () => {
     const { getByTestId, onSubmit } = setupNoEan()
     fireEvent.changeText(getByTestId('form-name-he-field'), 'מוצר ידני')
-    openMoreDetails(getByTestId)
     fireEvent.changeText(getByTestId('form-ean-input-field'), 'abc')
     fireEvent.changeText(getByTestId('form-calories-field'), '350')
     fireEvent.changeText(getByTestId('form-protein-field'), '30')

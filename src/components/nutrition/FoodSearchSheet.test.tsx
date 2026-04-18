@@ -222,7 +222,6 @@ describe('FoodSearchSheet — manual create', () => {
     const { getByTestId } = render(<FoodSearchSheet {...defaultProps} />)
     fireEvent.press(getByTestId('search-sheet-custom-food'))
     fillFormMinimally(getByTestId)
-    fireEvent.press(getByTestId('search-sheet-manual-form-more-details-toggle'))
     fireEvent.changeText(getByTestId('search-sheet-manual-form-ean-input-field'), '7290012345678')
 
     await act(async () => {
@@ -251,7 +250,6 @@ describe('FoodSearchSheet — manual create', () => {
     const { getByTestId, queryByTestId } = render(<FoodSearchSheet {...defaultProps} />)
     fireEvent.press(getByTestId('search-sheet-custom-food'))
     fillFormMinimally(getByTestId)
-    fireEvent.press(getByTestId('search-sheet-manual-form-more-details-toggle'))
     fireEvent.changeText(getByTestId('search-sheet-manual-form-ean-input-field'), '7290012345678')
     await act(async () => {
       fireEvent.press(getByTestId('search-sheet-manual-form-submit'))
@@ -286,7 +284,6 @@ describe('FoodSearchSheet — manual create', () => {
     const { getByTestId, queryByTestId } = render(<FoodSearchSheet {...defaultProps} />)
     fireEvent.press(getByTestId('search-sheet-custom-food'))
     fillFormMinimally(getByTestId)
-    fireEvent.press(getByTestId('search-sheet-manual-form-more-details-toggle'))
     fireEvent.changeText(getByTestId('search-sheet-manual-form-ean-input-field'), '7290012345678')
     await act(async () => {
       fireEvent.press(getByTestId('search-sheet-manual-form-submit'))
@@ -322,7 +319,6 @@ describe('FoodSearchSheet — manual create', () => {
     const { getByTestId, queryByTestId } = render(<FoodSearchSheet {...defaultProps} />)
     fireEvent.press(getByTestId('search-sheet-custom-food'))
     fillFormMinimally(getByTestId)
-    fireEvent.press(getByTestId('search-sheet-manual-form-more-details-toggle'))
     fireEvent.changeText(getByTestId('search-sheet-manual-form-ean-input-field'), '7290012345678')
     await act(async () => {
       fireEvent.press(getByTestId('search-sheet-manual-form-submit'))

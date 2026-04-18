@@ -29,8 +29,7 @@
  */
 
 import React, { useState } from 'react'
-import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native'
-import { Ionicons } from '@expo/vector-icons'
+import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { randomUUID } from 'expo-crypto'
 import { TextInput } from '@/components/TextInput'
 import { Button } from '@/components/Button'
@@ -130,7 +129,6 @@ export function ManualFoodForm({
   const [fiber, setFiber] = useState('')
   const [servingName, setServingName] = useState('')
   const [servingGrams, setServingGrams] = useState('')
-  const [showMoreDetails, setShowMoreDetails] = useState(false)
   const [errors, setErrors] = useState<FormErrors>({})
 
   // Auto-fill calories from Atwater (4·p + 9·f + 4·c) when all three macros are
@@ -318,70 +316,51 @@ export function ManualFoodForm({
         testID={tid('carbs')}
       />
 
-      <Pressable
-        style={styles.moreDetailsToggle}
-        onPress={() => setShowMoreDetails((v) => !v)}
-        testID={tid('more-details-toggle')}
-      >
-        <Text style={styles.moreDetailsLabel}>
-          {showMoreDetails ? strings.hideMoreDetails : strings.showMoreDetails}
-        </Text>
-        <Ionicons
-          name={showMoreDetails ? 'chevron-up' : 'chevron-down'}
-          size={18}
-          color={colors.primary}
+      <TextInput
+        label={strings.fiberLabel}
+        value={fiber}
+        onChangeText={setFiber}
+        keyboardType="decimal-pad"
+        error={resolveError('fiberPer100g')}
+        testID={tid('fiber')}
+      />
+
+      {ean == null && (
+        <TextInput
+          label={strings.eanInputLabel}
+          value={typedEan}
+          onChangeText={setTypedEan}
+          placeholder={strings.eanInputPlaceholder}
+          keyboardType="number-pad"
+          testID={tid('ean-input')}
         />
-      </Pressable>
-
-      {showMoreDetails && (
-        <View style={styles.moreDetailsBlock} testID={tid('more-details-block')}>
-          {ean == null && (
-            <TextInput
-              label={strings.eanInputLabel}
-              value={typedEan}
-              onChangeText={setTypedEan}
-              placeholder={strings.eanInputPlaceholder}
-              keyboardType="number-pad"
-              testID={tid('ean-input')}
-            />
-          )}
-
-          <TextInput
-            label={strings.nameEnLabel}
-            value={nameEn}
-            onChangeText={setNameEn}
-            placeholder={strings.nameEnPlaceholder}
-            testID={tid('name-en')}
-          />
-
-          <TextInput
-            label={strings.fiberLabel}
-            value={fiber}
-            onChangeText={setFiber}
-            keyboardType="decimal-pad"
-            error={resolveError('fiberPer100g')}
-            testID={tid('fiber')}
-          />
-
-          <TextInput
-            label={strings.servingNameLabel}
-            value={servingName}
-            onChangeText={setServingName}
-            placeholder={strings.servingNamePlaceholder}
-            error={resolveError('servingName')}
-            testID={tid('serving-name')}
-          />
-
-          <TextInput
-            label={strings.servingGramsLabel}
-            value={servingGrams}
-            onChangeText={setServingGrams}
-            keyboardType="decimal-pad"
-            error={resolveError('servingGrams')}
-            testID={tid('serving-grams')}
-          />
-        </View>
       )}
+
+      <TextInput
+        label={strings.nameEnLabel}
+        value={nameEn}
+        onChangeText={setNameEn}
+        placeholder={strings.nameEnPlaceholder}
+        testID={tid('name-en')}
+      />
+
+      <TextInput
+        label={strings.servingNameLabel}
+        value={servingName}
+        onChangeText={setServingName}
+        placeholder={strings.servingNamePlaceholder}
+        error={resolveError('servingName')}
+        testID={tid('serving-name')}
+      />
+
+      <TextInput
+        label={strings.servingGramsLabel}
+        value={servingGrams}
+        onChangeText={setServingGrams}
+        keyboardType="decimal-pad"
+        error={resolveError('servingGrams')}
+        testID={tid('serving-grams')}
+      />
 
       <View style={styles.buttonRow}>
         <Button
@@ -459,22 +438,6 @@ const styles = StyleSheet.create({
     color: colors.warning,
     paddingHorizontal: spacing.sm,
     lineHeight: 18,
-  },
-  moreDetailsToggle: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: spacing.xs,
-    paddingVertical: spacing.sm,
-    marginTop: spacing.xs,
-  },
-  moreDetailsLabel: {
-    fontSize: fontSize.sm,
-    fontWeight: fontWeight.semibold,
-    color: colors.primary,
-  },
-  moreDetailsBlock: {
-    gap: spacing.md,
   },
   buttonRow: {
     flexDirection: 'row',
