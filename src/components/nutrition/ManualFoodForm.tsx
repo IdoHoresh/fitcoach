@@ -228,6 +228,7 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
       />
 
       <Text style={styles.sectionHeader}>{strings.per100gHeader}</Text>
+      <Text style={styles.sectionSubtitle}>{strings.per100gSubtitle}</Text>
 
       <TextInput
         label={strings.caloriesLabel}
@@ -281,15 +282,7 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
       />
 
       <Text style={styles.sectionHeader}>{strings.servingSectionLabel}</Text>
-
-      <TextInput
-        label={strings.servingGramsLabel}
-        value={servingGrams}
-        onChangeText={setServingGrams}
-        keyboardType="decimal-pad"
-        error={resolveError('servingGrams')}
-        testID={tid('serving-grams')}
-      />
+      <Text style={styles.sectionSubtitle}>{strings.servingSectionSubtitle}</Text>
 
       <TextInput
         label={strings.servingNameLabel}
@@ -298,6 +291,15 @@ export function ManualFoodForm({ ean, onSubmit, onCancel, testID }: ManualFoodFo
         placeholder={strings.servingNamePlaceholder}
         error={resolveError('servingName')}
         testID={tid('serving-name')}
+      />
+
+      <TextInput
+        label={strings.servingGramsLabel}
+        value={servingGrams}
+        onChangeText={setServingGrams}
+        keyboardType="decimal-pad"
+        error={resolveError('servingGrams')}
+        testID={tid('serving-grams')}
       />
 
       <View style={styles.buttonRow}>
@@ -361,6 +363,13 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.semibold,
     color: colors.textSecondary,
     marginTop: spacing.md,
+  },
+  sectionSubtitle: {
+    fontSize: fontSize.xs,
+    color: colors.textMuted,
+    marginTop: -spacing.xs,
+    marginBottom: spacing.xs,
+    lineHeight: 18,
   },
   atwaterWarning: {
     fontSize: fontSize.xs,
