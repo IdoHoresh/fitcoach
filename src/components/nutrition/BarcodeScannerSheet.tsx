@@ -5,12 +5,13 @@
  *   1. Opens → requests camera permission if not yet granted.
  *   2. Permission denied → shows Hebrew message + Settings deep-link.
  *   3. Permission granted → CameraView with ean13/ean8/upc_a detection.
- *   4. Barcode scanned → local DB lookup (getByBarcode) → OFF fallback.
- *   5. Hit → calls onFound(food, isPartial), sheet closes.
- *   6. Miss / network error → in-sheet message, "נסה שוב" clears lock.
+ *   4. Barcode scanned → resolveScan() orchestrates: local DB → OFF → insert.
+ *   5. local/off hit → onFound(food, isPartial), sheet closes.
+ *   6. not_found (OFF 404)   → "צור מוצר חדש" CTA → ManualFoodForm (scanState 'creating').
+ *   7. network_error          → "נסה שוב" re-fires OFF-only using lastEan (no re-scan).
  */
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import {
   View,
   Text,
@@ -30,6 +31,8 @@ import { t } from '@/i18n'
 import type { FoodItem } from '@/types'
 import { foodRepository } from '@/db/food-repository'
 import { fetchOffProduct } from '@/services/open-food-facts'
+import { resolveScan, type ScanResolverDeps, type ScanResolution } from './scan-resolver'
+import { ManualFoodForm } from './ManualFoodForm'
 
 // ── Types ─────────────────────────────────────────────────────────────
 
@@ -39,7 +42,7 @@ interface BarcodeScannerSheetProps {
   onFound: (food: FoodItem, isPartial: boolean) => void
 }
 
-type ScanState = 'scanning' | 'searching' | 'not_found' | 'no_connection'
+type ScanState = 'scanning' | 'searching' | 'not_found' | 'no_connection' | 'creating'
 
 // ── Component ─────────────────────────────────────────────────────────
 
@@ -48,12 +51,25 @@ export function BarcodeScannerSheet({ visible, onClose, onFound }: BarcodeScanne
   const [permission, requestPermission] = useCameraPermissions()
   const [scanState, setScanState] = useState<ScanState>('scanning')
   const scanLock = useRef(false)
+  const lastEan = useRef<string | null>(null)
+
+  // Dependencies for resolveScan — kept stable so the helper is easily testable
+  // via dependency injection in scan-resolver.test.ts.
+  const deps = useMemo<ScanResolverDeps>(
+    () => ({
+      getByBarcode: (ean: string) => foodRepository.getByBarcode(ean),
+      fetchOffProduct,
+      insertFood: (food: FoodItem) => foodRepository.insertFood(food),
+    }),
+    [],
+  )
 
   // Request permission and reset state whenever the sheet opens
   useEffect(() => {
     if (!visible) return
     setScanState('scanning')
     scanLock.current = false
+    lastEan.current = null
     if (permission && !permission.granted && permission.canAskAgain) {
       void requestPermission()
     }
@@ -61,43 +77,69 @@ export function BarcodeScannerSheet({ visible, onClose, onFound }: BarcodeScanne
 
   function handleClose() {
     scanLock.current = false
+    lastEan.current = null
     setScanState('scanning')
     onClose()
   }
 
-  function handleTryAgain() {
-    scanLock.current = false
-    setScanState('scanning')
+  function applyResolution(r: ScanResolution) {
+    switch (r.kind) {
+      case 'local_hit':
+        onFound(r.food, false)
+        return
+      case 'off_hit':
+        onFound(r.food, r.isPartial)
+        return
+      case 'not_found':
+        setScanState('not_found')
+        scanLock.current = false
+        return
+      case 'network_error':
+        setScanState('no_connection')
+        scanLock.current = false
+        return
+    }
   }
 
   async function handleBarcodeScanned({ data }: { data: string }) {
     if (scanLock.current) return
     scanLock.current = true
+    lastEan.current = data
     setScanState('searching')
 
-    try {
-      // 1. Local DB lookup first (instant, offline)
-      const local = await foodRepository.getByBarcode(data)
-      if (local) {
-        onFound(local, false)
-        return
-      }
+    const resolution = await resolveScan(data, deps)
+    applyResolution(resolution)
+  }
 
-      // 2. Open Food Facts fallback
-      const result = await fetchOffProduct(data)
-      if (result) {
-        await foodRepository.insertFood(result.food)
-        onFound(result.food, result.isPartial)
-        return
-      }
-
-      // Product unknown in both local DB and OFF
-      setScanState('not_found')
+  async function handleRetryOff() {
+    const ean = lastEan.current
+    if (!ean) {
+      // Defensive: if lastEan was cleared, fall back to rescanning
+      setScanState('scanning')
       scanLock.current = false
-    } catch {
-      setScanState('no_connection')
-      scanLock.current = false
+      return
     }
+    setScanState('searching')
+    const resolution = await resolveScan(ean, deps)
+    applyResolution(resolution)
+  }
+
+  function handleCreateManual() {
+    setScanState('creating')
+  }
+
+  function handleCancelCreate() {
+    // Back to camera — user may want to try a different product
+    scanLock.current = false
+    lastEan.current = null
+    setScanState('scanning')
+  }
+
+  async function handleManualSubmit(food: FoodItem) {
+    // getByBarcode in handleBarcodeScanned already ruled out a manual_<ean>
+    // collision; insertFood is safe here without a pre-check.
+    await foodRepository.insertFood(food)
+    onFound(food, false)
   }
 
   if (!visible) return null
@@ -132,8 +174,18 @@ export function BarcodeScannerSheet({ visible, onClose, onFound }: BarcodeScanne
           </View>
         )}
 
+        {/* ── Manual-create form (OFF 404 → user fills a new FoodItem) ── */}
+        {permission?.granted && scanState === 'creating' && lastEan.current && (
+          <ManualFoodForm
+            ean={lastEan.current}
+            onSubmit={handleManualSubmit}
+            onCancel={handleCancelCreate}
+            testID="manual-food-form"
+          />
+        )}
+
         {/* ── Camera viewfinder ── */}
-        {permission?.granted && (
+        {permission?.granted && scanState !== 'creating' && (
           <>
             <CameraView
               style={StyleSheet.absoluteFill}
@@ -165,12 +217,19 @@ export function BarcodeScannerSheet({ visible, onClose, onFound }: BarcodeScanne
                 </View>
               )}
 
-              {(scanState === 'not_found' || scanState === 'no_connection') && (
+              {scanState === 'not_found' && (
                 <View style={styles.errorBox}>
-                  <Text style={styles.errorText}>
-                    {scanState === 'not_found' ? strings.notFound : strings.noConnection}
-                  </Text>
-                  <Pressable style={styles.tryAgainButton} onPress={handleTryAgain}>
+                  <Text style={styles.errorText}>{strings.notFound}</Text>
+                  <Pressable style={styles.primaryCta} onPress={handleCreateManual}>
+                    <Text style={styles.primaryCtaLabel}>{strings.notFoundCreate}</Text>
+                  </Pressable>
+                </View>
+              )}
+
+              {scanState === 'no_connection' && (
+                <View style={styles.errorBox}>
+                  <Text style={styles.errorText}>{strings.noConnection}</Text>
+                  <Pressable style={styles.tryAgainButton} onPress={handleRetryOff}>
                     <Text style={styles.tryAgainLabel}>{strings.tryAgain}</Text>
                   </Pressable>
                 </View>
@@ -301,6 +360,18 @@ const styles = StyleSheet.create({
   tryAgainLabel: {
     fontSize: fontSize.sm,
     color: colors.primary,
+    fontWeight: fontWeight.semibold,
+  },
+  primaryCta: {
+    marginTop: spacing.xs,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.lg,
+    borderRadius: borderRadius.lg,
+    backgroundColor: colors.primary,
+  },
+  primaryCtaLabel: {
+    fontSize: fontSize.sm,
+    color: colors.onPrimary,
     fontWeight: fontWeight.semibold,
   },
 })

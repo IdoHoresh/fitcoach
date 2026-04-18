@@ -64,25 +64,96 @@ export function normalizeOffProduct(raw: unknown, ean: string): OffResult {
   return { food, isPartial }
 }
 
+// ── Network error taxonomy ────────────────────────────────────────────
+
+/**
+ * Thrown by retryOnNetworkError when all retry attempts fail.
+ * Consumers branch on `instanceof OffNetworkError` to distinguish
+ * transient network failures from genuine "product not found" (null) responses.
+ */
+export class OffNetworkError extends Error {
+  constructor(message: string, options?: { cause?: unknown }) {
+    super(message, options)
+    this.name = 'OffNetworkError'
+    // Preserve prototype chain across TS transpilation targets so
+    // `instanceof OffNetworkError` works reliably in tests + runtime.
+    Object.setPrototypeOf(this, OffNetworkError.prototype)
+  }
+}
+
+// ── Retry helper ──────────────────────────────────────────────────────
+
+interface RetryOptions {
+  retries: number
+  delayMs: number
+}
+
+/**
+ * Retries `fn` up to `retries` times when it THROWS, waiting `delayMs`
+ * between attempts. A resolved null is NOT a failure — the helper only
+ * retries on thrown errors, preserving the "null = product absent" semantics
+ * used by fetchOffProduct. After all retries exhaust, throws OffNetworkError.
+ */
+export async function retryOnNetworkError<T>(
+  fn: () => Promise<T>,
+  { retries, delayMs }: RetryOptions,
+): Promise<T> {
+  let lastError: unknown
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      return await fn()
+    } catch (err) {
+      lastError = err
+      if (attempt < retries) {
+        await new Promise((resolve) => setTimeout(resolve, delayMs))
+      }
+    }
+  }
+  throw new OffNetworkError('Open Food Facts network request failed after retries', {
+    cause: lastError,
+  })
+}
+
 // ── Network fetcher ───────────────────────────────────────────────────
 
 const OFF_BASE = 'https://world.openfoodfacts.org/api/v2/product'
+const OFF_TIMEOUT_MS = 10_000
+const OFF_RETRY_DELAY_MS = 2_000
 
 /**
  * Fetches a product from Open Food Facts by EAN barcode.
  *
- * Returns null when the product is not found (status=0 or HTTP 404).
- * Throws on network errors — caller is responsible for error handling.
+ * Returns null when the product is not found (status=404 or OFF status:0) —
+ * "not found" is not a failure, so no retry is fired.
+ *
+ * On transient network errors (DNS hiccup, timeout, connection reset) the
+ * helper retries once after 2s. If the retry also fails, throws OffNetworkError.
+ * The timeout is enforced per attempt via AbortController so a hanging request
+ * cannot stall the UI indefinitely.
  */
 export async function fetchOffProduct(ean: string): Promise<OffResult | null> {
-  const response = await fetch(`${OFF_BASE}/${ean}.json`)
+  return retryOnNetworkError(() => doFetchOffProduct(ean), {
+    retries: 1,
+    delayMs: OFF_RETRY_DELAY_MS,
+  })
+}
 
-  if (response.status === 404) return null
+async function doFetchOffProduct(ean: string): Promise<OffResult | null> {
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), OFF_TIMEOUT_MS)
 
-  const json = (await response.json()) as Record<string, unknown>
+  try {
+    const response = await fetch(`${OFF_BASE}/${ean}.json`, { signal: controller.signal })
 
-  // OFF returns status=0 when barcode is unknown
-  if (!json || json.status === 0) return null
+    if (response.status === 404) return null
 
-  return normalizeOffProduct(json, ean)
+    const json = (await response.json()) as Record<string, unknown>
+
+    // OFF returns status=0 when barcode is unknown
+    if (!json || json.status === 0) return null
+
+    return normalizeOffProduct(json, ean)
+  } finally {
+    clearTimeout(timeoutId)
+  }
 }
