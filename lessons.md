@@ -177,6 +177,75 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Loose-acceptance input normalization matches every other personal-log app.** MyFitnessPal, Yazio, FatSecret, LoseIt all accept any string in a manual-create "barcode" field — no format validation. Trim + strip non-digits (`normalizeEan` at [src/shared/normalizeEan.ts](src/shared/normalizeEan.ts)) handles the common "printed with spaces" case. Cost of accepting garbage is a dead dedup record (user-local, harmless); benefit is users aren't forced to skip logging when their Israeli local product has a weird internal code.
 - **Three-action collision sheet beats binary confirm when intent is genuinely ambiguous.** "Use existing" / "Replace" / "Cancel" — default is use-existing (data-preserving, matches most-common intent), replace is styled destructively, cancel returns to the still-mounted form. A two-button confirm ("Replace?" / "Cancel") forces the user through the destructive path when they really just wanted the existing entry. Three buttons feels heavier but each corresponds to a real user intent.
 
+## Tiv Taam Phase 1 — Transparency-Feed Catalog Gap (2026-04-21)
+
+### Findings
+
+- **Pipeline ran clean end-to-end.** The flagship store's feed
+  (`PriceFull…-014-…gz`, 13,931 items) produced a conclusive gap signal:
+  **10,024 net-new items** after deduping against Shufersal (4,918 IDs) +
+  Rami Levy (6,799 IDs). 2,797 are imported (non-Israeli `ManufactureCountry`).
+  Phase 2 is a clear go — decision threshold was ≥ 2,000 net-new and we're
+  5× over it. The imported slice validates the original moat thesis (Beyond
+  Meat, Joseph Drouhin wines, Milano cookies, Kraft mac & cheese — exactly
+  the non-kosher/imported niche Tiv Taam is known for; neither Shufersal nor
+  Rami Levy carry these).
+- **Transparency feeds ship one file per store; pick the biggest-catalog one.**
+  First run picked the newest file by time sort alone and landed on a
+  near-empty test-store upload (6 items). The right heuristic: among the
+  newest publish-date batch, pick the file with the largest `size`. Flagship
+  stores ship the full assortment; small/new/test stores ship fractions of
+  it. Catalog structure is identical across stores so picking the largest is
+  equivalent to picking the most complete catalog. Applies to every chain
+  on `publishedprices.co.il` — Yohananof, Victory, Am-Pm will all use the
+  same selector.
+- **The Israeli Price Transparency Law feed is a goldmine for future chains.**
+  Yohananof, Victory, Am-Pm, Osher Ad, Hatzi Hinam all publish to the same
+  `url.publishedprices.co.il` aggregator with the same XML schema. Login
+  creds are `<ChainName>` / empty password (legally public). Everything
+  except `download-<chain>-feed.ts` is directly reusable — promote the
+  parser + filter + types to `scripts/transparency/` when chain #2 lands.
+
+### Implementation lessons
+
+- **`url.publishedprices.co.il` ships an incomplete TLS chain.** Server
+  sends only the leaf cert (no intermediate) and relies on AIA-chasing. curl
+  - browsers handle this; **Node's native `fetch` does not**. Fix: download
+    the Sectigo intermediate once (public infra, safe to commit) from the AIA
+    URL in the leaf cert, convert DER → PEM, commit to `scripts/certs/`, wire
+    via `NODE_EXTRA_CA_CERTS` on the npm script. Do not reach for
+    `rejectUnauthorized: false` — this is fixable the right way in 5 minutes.
+- **Native `fetch` drops cookies across redirects.** The publishedprices
+  login flow returns `302 Location: /file` with a rotated `cftpSID` cookie
+  in the response; native fetch with `redirect: 'follow'` re-requests `/file`
+  without the new cookie and lands back on the login page (200 OK, login
+  page HTML — a silent auth failure that masquerades as success). Fix: set
+  `redirect: 'manual'` and implement the redirect hop loop yourself, letting
+  the cookie jar absorb `Set-Cookie` from every hop in order. 15 lines of
+  code, saves hours of debugging.
+- **Tiv Taam stores serialize the feed with inconsistent casing + field-
+  name aliases.** Different POS systems across stores produce XML with
+  `<Root>` vs `<root>`, `<ManufactureName>` vs `<ManufacturerName>`
+  (extra 'r'). Fix at the parser level with `transformTagName: n => n.toLowerCase()`
+  - alias fallback (`raw.manufacturername ?? raw.manufacturename`) so downstream
+    code sees one canonical shape. Adding a regression test with the lowercase
+    variant prevents the fixture-only "works on my store" illusion.
+- **Dedup by `id.slice('sh_'.length)` is unreliable against Shufersal.**
+  Only 71% of `sh_<code>` IDs are 13-digit EANs — the rest are 5–8 digit
+  internal SKU codes. Rami Levy is 97% EAN so the dedup is more accurate
+  there. The orchestrator's summary footnote makes this visible; without the
+  footnote a reader would take the overlap counts at face value. Pattern
+  worth repeating in any future cross-source dedup script: surface the
+  known-under-reporting limitation in the same terminal block as the
+  numbers.
+- **`ManufactureCountry` is a multi-format field.** Same chain, same feed
+  ships `'ישראל'` + `'IL'` + `'ISR'` + `'ISRAEL'` + `'לא ידוע'` + empty
+  string for "don't count as imported". First implementation only excluded
+  `'ישראל'` and `'לא ידוע'`, miscounting 561 IL-code Israeli items as
+  imported (inflated 1,822 → actual 1,261). Use a `NOT_IMPORTED_TOKENS`
+  set with normalized (trim + `.toUpperCase()`) keys. Hebrew strings pass
+  through `.toUpperCase()` unchanged, so one set handles both scripts.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?

@@ -29,6 +29,9 @@ expo-env.d.ts
 # macOS
 .DS_Store
 *.pem
+# Public CA intermediate certificates used by build-time scripts are safe
+# to commit (no private key material). See scripts/certs/README.md.
+!scripts/certs/*.pem
 
 # Windows
 Thumbs.db
