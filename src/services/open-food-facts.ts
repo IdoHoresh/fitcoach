@@ -17,6 +17,16 @@ export interface OffResult {
   isPartial: boolean
 }
 
+export interface NormalizeOptions {
+  /**
+   * Prefix for the generated `FoodItem.id` — emits `${idPrefix}_${ean}`.
+   * Defaults to `'manual'` for the runtime barcode-scan flow. Pass
+   * `'tt'` from the Tiv Taam Phase 2 seed builder so tt_<ean> rows
+   * land in `foods` under the Tiv Taam source tier.
+   */
+  idPrefix?: string
+}
+
 // ── Pure normalizer ───────────────────────────────────────────────────
 
 /**
@@ -25,7 +35,12 @@ export interface OffResult {
  * Name priority: product_name_he → product_name_en → product_name → EAN.
  * Missing macros default to 0; isPartial is set to true so the UI can warn.
  */
-export function normalizeOffProduct(raw: unknown, ean: string): OffResult {
+export function normalizeOffProduct(
+  raw: unknown,
+  ean: string,
+  options: NormalizeOptions = {},
+): OffResult {
+  const idPrefix = options.idPrefix ?? 'manual'
   const response = raw as Record<string, unknown>
   const product = (response.product ?? {}) as Record<string, unknown>
   const nutriments = (product.nutriments ?? {}) as Record<string, unknown>
@@ -48,7 +63,7 @@ export function normalizeOffProduct(raw: unknown, ean: string): OffResult {
   const isPartial = protein == null || fat == null || carbs == null
 
   const food: FoodItem = {
-    id: `manual_${ean}`,
+    id: `${idPrefix}_${ean}`,
     nameHe,
     nameEn,
     category: 'snacks',
