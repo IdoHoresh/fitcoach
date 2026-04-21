@@ -81,6 +81,8 @@ export const NON_FOOD_KEYWORDS: readonly string[] = [
   'גפרורים', // matches
   'סוללות', // batteries
   'שקית זבל', // trash bag
+  'שקיות זיפר', // zipper storage bags
+  'מפיות', // paper napkins
   'ספוג', // sponge
   'נרות', // candles
 ] as const

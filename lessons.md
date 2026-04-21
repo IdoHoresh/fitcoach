@@ -183,8 +183,8 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 
 - **Pipeline ran clean end-to-end.** The flagship store's feed
   (`PriceFull…-014-…gz`, 13,931 items) produced a conclusive gap signal:
-  **10,043 net-new items** after deduping against Shufersal (4,918 IDs) +
-  Rami Levy (6,799 IDs). 2,802 are imported (non-Israeli `ManufactureCountry`).
+  **10,024 net-new items** after deduping against Shufersal (4,918 IDs) +
+  Rami Levy (6,799 IDs). 2,797 are imported (non-Israeli `ManufactureCountry`).
   Phase 2 is a clear go — decision threshold was ≥ 2,000 net-new and we're
   5× over it. The imported slice validates the original moat thesis (Beyond
   Meat, Joseph Drouhin wines, Milano cookies, Kraft mac & cheese — exactly
