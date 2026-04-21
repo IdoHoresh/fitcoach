@@ -85,4 +85,29 @@ export const NON_FOOD_KEYWORDS: readonly string[] = [
   'מפיות', // paper napkins
   'ספוג', // sponge
   'נרות', // candles
+  // Added 2026-04-21 after Phase 2 Task 0 probe surfaced leakage.
+  // All observed in the `net-new` slice of `tmp/tivtaam-catalog.json`.
+  'תרחיץ', // face / body wash
+  'משחת שיניים', // toothpaste
+  'פלמוליב', // Palmolive — body soap / hand soap brand
+  'פרסיל', // Persil — laundry brand
+  'פיניש', // Finish — dishwasher / rinse aid brand
+  'מדיח', // dishwasher tablets / accessories
+  'פרלמנט', // Parliament — cigarette brand
+  'לכלב', // pet food — "for dog"
+  'לחתול', // pet food — "for cat"
+  'פיין קט', // "Fine Cat" pet food brand
+  'דנטל סטיקס', // dental sticks — pet chews
+  'קלינקס', // Kleenex — tissue brand
+  'ממחטות אף', // nose tissues (handkerchiefs)
+  'לשיער', // hair care — "for hair"
+  'דאב', // Dove — cosmetics brand
+  'וולה', // Wella — hair care brand
+  'נירוסטה', // stainless steel — cookware / bottles
+  'מסיר שומנים', // degreaser — kitchen cleaner
+  'רצפות', // floor cleaner
+  'ראש מגב', // mop head (includes telescopic-handle bundles)
+  'כפפות', // household / cooking gloves
+  'פחם', // charcoal — grilling supply
+  'סנו', // Sano — cleaning / household brand
 ] as const
