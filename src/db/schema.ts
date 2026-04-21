@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 18
+export const SCHEMA_VERSION = 19
 
 /**
  * All CREATE TABLE statements.
@@ -263,7 +263,7 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
   )`,
   `CREATE INDEX IF NOT EXISTS idx_meal_adherence_date ON meal_adherence(date)`,
 
-  // ── Foods (Tzameret database + user-created foods) ──
+  // ── Foods (supermarket + raw ingredients + user-created + Tiv Taam) ──
   `CREATE TABLE IF NOT EXISTS foods (
     id TEXT PRIMARY KEY,
     name_he TEXT NOT NULL,
@@ -276,7 +276,8 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     fiber_per_100g REAL NOT NULL,
     is_user_created INTEGER NOT NULL DEFAULT 0,
     serving_sizes_json TEXT NOT NULL DEFAULT '[]',
-    name_norm TEXT
+    name_norm TEXT,
+    origin_country TEXT
   )`,
   `CREATE INDEX IF NOT EXISTS idx_foods_category ON foods(category)`,
   `CREATE INDEX IF NOT EXISTS idx_foods_name_he ON foods(name_he)`,

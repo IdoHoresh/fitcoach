@@ -109,6 +109,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion < 17) {
       await migrateToV17(db)
     }
+    if (currentVersion < 19) {
+      await migrateToV19(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -519,6 +522,91 @@ async function migrateToV17(db: SQLite.SQLiteDatabase): Promise<void> {
   console.log(
     `[Database] v17: backfilled ${backfilled} name_norm, deleted ${deleted} cross-source dups`,
   )
+}
+
+/**
+ * v19: Tiv Taam Phase 2 seed migration.
+ *
+ * 1. Adds `origin_country TEXT` column to `foods` (fresh installs already
+ *    have it via CREATE TABLE; upgrade installs need ALTER TABLE).
+ *    Nullable — only tt_ rows populate it; sh_/rl_/raw_/manual_ stay NULL.
+ * 2. Wipes previous tt_ scrape so stale items don't persist.
+ * 3. Batch-inserts `src/assets/tivtaam-seed.json` with INSERT OR IGNORE —
+ *    user-created foods + cross-source dedup winners from v17 are preserved.
+ *
+ * Same DELETE-then-INSERT pattern as v14 (sh_), v15 (rl_), v16 (raw_).
+ * Silently skips if `tivtaam-seed.json` hasn't been generated yet (same
+ * "missing asset" escape hatch as v11/v14/v15/v16).
+ */
+async function migrateToV19(db: SQLite.SQLiteDatabase): Promise<void> {
+  // 1. Schema: add origin_country column if missing.
+  const columns = await db.getAllAsync<{ name: string }>(`PRAGMA table_info(foods)`)
+  const hasOriginCountry = columns.some((c) => c.name === 'origin_country')
+  if (!hasOriginCountry) {
+    await db.execAsync(`ALTER TABLE foods ADD COLUMN origin_country TEXT`)
+  }
+
+  // 2. Seed: load tivtaam-seed.json; silently skip if missing.
+  let seed: {
+    id: string
+    nameHe: string
+    nameEn: string
+    category: string
+    caloriesPer100g: number
+    proteinPer100g: number
+    fatPer100g: number
+    carbsPer100g: number
+    fiberPer100g: number
+    isUserCreated: boolean
+    servingSizesJson: string
+    originCountry: string | null
+  }[]
+
+  try {
+    seed = require('../assets/tivtaam-seed.json')
+  } catch {
+    console.log('[Database] tivtaam-seed.json not found — skipping v19 seeding')
+    return
+  }
+
+  if (seed.length === 0) {
+    console.log('[Database] tivtaam-seed.json is empty — skipping v19 seeding')
+    return
+  }
+
+  // 3. Wipe previous tt_ scrape so stale items don't persist across rebuilds.
+  await db.runAsync(`DELETE FROM foods WHERE id LIKE 'tt_%'`)
+
+  // 4. Batch INSERT OR IGNORE — 12 columns (11 shared + origin_country).
+  const BATCH_SIZE = 50
+  for (let i = 0; i < seed.length; i += BATCH_SIZE) {
+    const batch = seed.slice(i, i + BATCH_SIZE)
+    const placeholders = batch.map(() => '(?,?,?,?,?,?,?,?,?,?,?,?)').join(',')
+    const params = batch.flatMap((f) => [
+      f.id,
+      f.nameHe,
+      f.nameEn,
+      f.category,
+      f.caloriesPer100g,
+      f.proteinPer100g,
+      f.fatPer100g,
+      f.carbsPer100g,
+      f.fiberPer100g,
+      f.isUserCreated ? 1 : 0,
+      f.servingSizesJson,
+      f.originCountry, // nullable
+    ])
+    await db.runAsync(
+      `INSERT OR IGNORE INTO foods
+       (id, name_he, name_en, category,
+        calories_per_100g, protein_per_100g, fat_per_100g, carbs_per_100g, fiber_per_100g,
+        is_user_created, serving_sizes_json, origin_country)
+       VALUES ${placeholders}`,
+      params,
+    )
+  }
+
+  console.log(`[Database] v19: Seeded ${seed.length} Tiv Taam foods (with origin_country)`)
 }
 
 /**

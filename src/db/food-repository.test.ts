@@ -78,6 +78,13 @@ describe('schema v10 — foods table', () => {
     expect(foodsStmt).toContain('serving_sizes_json')
   })
 
+  it('foods table has origin_country column (v19 — Tiv Taam Phase 2 imported-goods moat)', () => {
+    const foodsStmt = CREATE_TABLE_STATEMENTS.find((s) =>
+      s.includes('CREATE TABLE IF NOT EXISTS foods'),
+    )!
+    expect(foodsStmt).toContain('origin_country TEXT')
+  })
+
   it('foods table has category index', () => {
     const indexStmt = CREATE_TABLE_STATEMENTS.find(
       (s) => s.includes('CREATE INDEX') && s.includes('foods') && s.includes('category'),
@@ -525,8 +532,8 @@ describe('supermarket-seed.json', () => {
 // ── Schema v15 — Rami Levy seed ───────────────────────────────────────────
 
 describe('schema v15 — Rami Levy seed', () => {
-  it('SCHEMA_VERSION is 18', () => {
-    expect(SCHEMA_VERSION).toBe(18)
+  it('SCHEMA_VERSION is 19', () => {
+    expect(SCHEMA_VERSION).toBe(19)
   })
 
   it('rami-levy-seed.json exists and is valid JSON array', () => {
