@@ -76,6 +76,16 @@ export function buildSeedRow(
 
   const { food } = normalizeOffProduct(cacheEntry.raw, catalogItem.itemCode, { idPrefix: 'tt' })
 
+  // Drop rows where protein + fat + carbs all 0 — OFF has the barcode
+  // indexed but no usable nutrition data. Shipping these would display
+  // "0g protein / 0g fat / 0g carbs" in the macro-tracking UI and mislead
+  // users. The real fetch surfaced ~31% of hits as these nutrition-empty
+  // rows (824 all-zero + 53 kcal-only on the 2,797-hit sample). Caller
+  // pushes them to the review queue for Phase 2.5 manual curation.
+  if (food.proteinPer100g === 0 && food.fatPer100g === 0 && food.carbsPer100g === 0) {
+    return null
+  }
+
   // When OFF had no name at all, the normalizer returns the EAN as nameHe.
   // Use the transparency-feed name in that case — always a real Hebrew string.
   const nameHe = food.nameHe === catalogItem.itemCode ? catalogItem.nameHe : food.nameHe
@@ -133,6 +143,7 @@ function main(): void {
 
   let cachedHits = 0
   let cachedMisses = 0
+  let droppedEmptyMacros = 0
   let uncached = 0
   let withOriginCountry = 0
 
@@ -155,7 +166,17 @@ function main(): void {
 
     cachedHits++
     const row = buildSeedRow(item, entry)
-    if (row === null) continue // defensive — buildSeedRow only returns null for miss, which we already handled
+    if (row === null) {
+      // OFF indexed the EAN but returned no usable macros. Route to review
+      // queue so Phase 2.5 can hand-curate from the label.
+      droppedEmptyMacros++
+      reviewQueue.push({
+        ean: item.itemCode,
+        nameHe: item.nameHe,
+        manufactureCountry: item.manufactureCountry,
+      })
+      continue
+    }
     seed.push(row)
     if (row.originCountry !== null) withOriginCountry++
   }
@@ -182,6 +203,7 @@ function main(): void {
   console.log('──────────────────────────────────────────')
   console.log(`  Net-new input         : ${total.toLocaleString()}`)
   console.log(`  Cached hits           : ${cachedHits.toLocaleString()} (${hitRate.toFixed(1)}%)`)
+  console.log(`    dropped (no macros) : ${droppedEmptyMacros.toLocaleString()}`)
   console.log(`  Cached misses         : ${cachedMisses.toLocaleString()}`)
   console.log(`  Un-cached (errors)    : ${uncached.toLocaleString()}`)
   console.log(`  Seed rows             : ${seedCount.toLocaleString()}`)

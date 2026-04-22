@@ -113,6 +113,56 @@ describe('buildSeedRow()', () => {
     expect(buildSeedRow(domesticCatalogItem, missEntry)).toBeNull()
   })
 
+  it('returns null when OFF hit has zero protein + fat + carbs (no usable data)', () => {
+    const emptyMacrosRaw = {
+      status: 1,
+      product: {
+        product_name_he: 'מוצר ריק',
+        nutriments: { 'energy-kcal_100g': 100 }, // kcal only, no macros
+      },
+    }
+    const row = buildSeedRow(domesticCatalogItem, {
+      status: 'hit',
+      fetchedAt: '2026-04-21T12:00:00Z',
+      raw: emptyMacrosRaw,
+    })
+    expect(row).toBeNull()
+  })
+
+  it('returns null when OFF hit has no nutrition data at all (garbage hit)', () => {
+    const garbageRaw = {
+      status: 1,
+      product: { product_name_he: "גרבאג'", nutriments: {} },
+    }
+    const row = buildSeedRow(domesticCatalogItem, {
+      status: 'hit',
+      fetchedAt: '2026-04-21T12:00:00Z',
+      raw: garbageRaw,
+    })
+    expect(row).toBeNull()
+  })
+
+  it('keeps rows with any non-zero macro (even partial data is usable)', () => {
+    const partialRaw = {
+      status: 1,
+      product: {
+        product_name_he: 'חלקי',
+        nutriments: {
+          'energy-kcal_100g': 100,
+          proteins_100g: 5, // protein present, fat/carbs missing
+          fiber_100g: 1,
+        },
+      },
+    }
+    const row = buildSeedRow(domesticCatalogItem, {
+      status: 'hit',
+      fetchedAt: '2026-04-21T12:00:00Z',
+      raw: partialRaw,
+    })
+    expect(row).not.toBeNull()
+    expect(row!.proteinPer100g).toBe(5)
+  })
+
   it('returns a TivTaamSeedRow with tt_<ean> id on hit', () => {
     const row = buildSeedRow(domesticCatalogItem, hitEntry)
     expect(row).not.toBeNull()
@@ -143,8 +193,14 @@ describe('buildSeedRow()', () => {
     const offRawWithEanAsName = {
       status: 1,
       product: {
-        // product_name_he absent → normalizer falls back through to EAN
-        nutriments: { 'energy-kcal_100g': 100 },
+        // product_name_he absent → normalizer falls back through to EAN.
+        // Macros present so the zero-macros drop doesn't mask the name test.
+        nutriments: {
+          'energy-kcal_100g': 100,
+          proteins_100g: 3,
+          fat_100g: 2,
+          carbohydrates_100g: 15,
+        },
       },
     }
     const row = buildSeedRow(domesticCatalogItem, {
