@@ -246,6 +246,47 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
   set with normalized (trim + `.toUpperCase()`) keys. Hebrew strings pass
   through `.toUpperCase()` unchanged, so one set handles both scripts.
 
+## Tiv Taam Phase 2 Task 0 — OFF Probe (2026-04-21)
+
+- **OFF CDN rate-limits hard at 500ms gap.** First probe pass of 100 items
+  at 500ms gap produced 42% `OffNetworkError` classifications. 1200ms gap
+  cut errors to 13%. 2500ms gap converted every error to a clean hit/miss.
+  Task 3's full 9,548-item fetcher uses 1500ms floor + automatic retry-
+  errors pass at 2500ms to get zero-error measurement. Don't paper over the
+  errors by lengthening fetchOffProduct's retry delay — OFF's rate limit is
+  per-IP-per-window, so only a wider inter-call gap across the whole loop
+  actually escapes it.
+- **EAN variant probing is dead weight for OFF.** Tested 11-digit and
+  12-digit misses with leading-zero padding (`0<code>`, `00<code>`): OFF
+  normalizes all variants internally and returns identical
+  `status:0 product not found`. OFF's search API returns 0 or overly-
+  generic results for niche imports (tested 3 imported misses: Joseph
+  Drouhin wine → 0, Dutch stroopwafel → 0, Cuervo tequila → 0). Don't
+  waste time on barcode-variant fallbacks or name-based lookups — OFF's
+  exact-EAN endpoint is the ceiling of coverage.
+- **Non-food filter measurement requires an OFF feedback loop.** Eyeballing
+  transparency-feed names for non-food keywords caught ~50% of
+  contamination. Running the OFF probe on the `net-new` pool and hand-
+  inspecting the miss list surfaced the next layer: cosmetics brands
+  (Palmolive, Wella, Dove), cleaning (Persil, Finish, Ritzpaz, floor
+  liquid), pet food markers (`לכלב`, `לחתול`, Fine Cat, dental sticks),
+  kitchenware (stainless steel, mop heads, gloves), tobacco (Parliament),
+  charcoal, toothpaste. Added 25 new keywords in one round. Overall hit
+  rate rose 22% → 31% and imported hit rate rose 22% → 40% on the tighter
+  pool. Each probe round catches progressively less — after 2–3 rounds the
+  filter is "good enough"; the remaining miss tail is real OFF coverage
+  gap, not filter leakage.
+- **The moat metric is imported-shipped, not overall hit rate.** Overall
+  31% on Tiv Taam's net-new is genuine OFF coverage floor — Israeli
+  private labels + fresh meats + Russian/Ukrainian imports are legitimately
+  sparse in OFF. But the imported slice hits 40% because European/US brand
+  products are well-indexed. The right Phase-2-worth-it question is
+  "imported × hit rate × net-new-imported" (~1,080 items exclusive to us)
+  not "overall hit rate × net-new" (~2,960 items, half of which overlap
+  Shufersal/RL on similar-name matches). Same framing should apply when
+  evaluating future transparency-feed chains: segment the catalog by
+  distinctiveness and measure hits against the distinctive slice.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?

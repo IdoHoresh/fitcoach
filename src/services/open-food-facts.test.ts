@@ -52,6 +52,16 @@ describe('normalizeOffProduct()', () => {
     expect(food.id).toBe('manual_1234567890123')
   })
 
+  it('defaults idPrefix to "manual" when options omitted (backward compat)', () => {
+    const { food } = normalizeOffProduct(FULL_OFF_RESPONSE, EAN)
+    expect(food.id).toBe(`manual_${EAN}`)
+  })
+
+  it('honors idPrefix option — produces tt_<ean> for seed builds', () => {
+    const { food } = normalizeOffProduct(FULL_OFF_RESPONSE, EAN, { idPrefix: 'tt' })
+    expect(food.id).toBe(`tt_${EAN}`)
+  })
+
   it('includes a default 100g serving size', () => {
     const { food } = normalizeOffProduct(FULL_OFF_RESPONSE, EAN)
     expect(food.servingSizes).toHaveLength(1)

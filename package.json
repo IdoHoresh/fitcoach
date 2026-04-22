@@ -24,7 +24,9 @@
     "fetch-usda-raw": "tsx scripts/raw-ingredients/fetch-usda.ts",
     "build-raw-ingredients-seed": "tsx scripts/raw-ingredients/build-raw-ingredients-seed.ts",
     "download-tivtaam-feed": "NODE_EXTRA_CA_CERTS=scripts/certs/sectigo-public-server-auth-ca-dv-r36.pem tsx scripts/download-tivtaam-feed.ts",
-    "build-tivtaam-catalog": "NODE_EXTRA_CA_CERTS=scripts/certs/sectigo-public-server-auth-ca-dv-r36.pem tsx scripts/build-tivtaam-catalog.ts"
+    "build-tivtaam-catalog": "NODE_EXTRA_CA_CERTS=scripts/certs/sectigo-public-server-auth-ca-dv-r36.pem tsx scripts/build-tivtaam-catalog.ts",
+    "fetch-tivtaam-off": "tsx scripts/fetch-tivtaam-off.ts",
+    "build-tivtaam-seed": "tsx scripts/build-tivtaam-seed.ts"
   },
   "dependencies": {
     "@expo-google-fonts/dm-sans": "^0.4.2",

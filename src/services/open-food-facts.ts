@@ -17,6 +17,16 @@ export interface OffResult {
   isPartial: boolean
 }
 
+export interface NormalizeOptions {
+  /**
+   * Prefix for the generated `FoodItem.id` — emits `${idPrefix}_${ean}`.
+   * Defaults to `'manual'` for the runtime barcode-scan flow. Pass
+   * `'tt'` from the Tiv Taam Phase 2 seed builder so tt_<ean> rows
+   * land in `foods` under the Tiv Taam source tier.
+   */
+  idPrefix?: string
+}
+
 // ── Pure normalizer ───────────────────────────────────────────────────
 
 /**
@@ -25,7 +35,12 @@ export interface OffResult {
  * Name priority: product_name_he → product_name_en → product_name → EAN.
  * Missing macros default to 0; isPartial is set to true so the UI can warn.
  */
-export function normalizeOffProduct(raw: unknown, ean: string): OffResult {
+export function normalizeOffProduct(
+  raw: unknown,
+  ean: string,
+  options: NormalizeOptions = {},
+): OffResult {
+  const idPrefix = options.idPrefix ?? 'manual'
   const response = raw as Record<string, unknown>
   const product = (response.product ?? {}) as Record<string, unknown>
   const nutriments = (product.nutriments ?? {}) as Record<string, unknown>
@@ -48,7 +63,7 @@ export function normalizeOffProduct(raw: unknown, ean: string): OffResult {
   const isPartial = protein == null || fat == null || carbs == null
 
   const food: FoodItem = {
-    id: `manual_${ean}`,
+    id: `${idPrefix}_${ean}`,
     nameHe,
     nameEn,
     category: 'snacks',
@@ -132,13 +147,32 @@ const OFF_RETRY_DELAY_MS = 2_000
  * cannot stall the UI indefinitely.
  */
 export async function fetchOffProduct(ean: string): Promise<OffResult | null> {
-  return retryOnNetworkError(() => doFetchOffProduct(ean), {
+  const raw = await fetchRawOffProduct(ean)
+  if (raw === null) return null
+  return normalizeOffProduct(raw, ean)
+}
+
+/**
+ * Fetches the raw OFF JSON response for an EAN (no normalization).
+ *
+ * Returns the parsed response body on a real product hit, or `null` when
+ * OFF doesn't have the EAN (HTTP 404 or `status: 0`). Transient errors
+ * throw `OffNetworkError` after one retry — same semantics as
+ * `fetchOffProduct`.
+ *
+ * Exposed so build-time tooling (Tiv Taam Phase 2 fetcher) can cache the
+ * full response body and re-normalize later with a different `idPrefix` or
+ * pull extra fields (categories_tags, brands, image_url) that the current
+ * normalizer drops.
+ */
+export async function fetchRawOffProduct(ean: string): Promise<unknown | null> {
+  return retryOnNetworkError(() => doFetchRawOffProduct(ean), {
     retries: 1,
     delayMs: OFF_RETRY_DELAY_MS,
   })
 }
 
-async function doFetchOffProduct(ean: string): Promise<OffResult | null> {
+async function doFetchRawOffProduct(ean: string): Promise<unknown | null> {
   const controller = new AbortController()
   const timeoutId = setTimeout(() => controller.abort(), OFF_TIMEOUT_MS)
 
@@ -152,7 +186,7 @@ async function doFetchOffProduct(ean: string): Promise<OffResult | null> {
     // OFF returns status=0 when barcode is unknown
     if (!json || json.status === 0) return null
 
-    return normalizeOffProduct(json, ean)
+    return json
   } finally {
     clearTimeout(timeoutId)
   }
