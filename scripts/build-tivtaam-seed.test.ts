@@ -216,6 +216,32 @@ describe('buildSeedRow()', () => {
     expect(row.nameHe).toBe('ביסלי ברביקיו')
   })
 
+  it('falls nameEn back to nameHe when OFF has no English name (no raw EAN as nameEn)', () => {
+    // OFF has product_name_he but neither product_name_en nor product_name —
+    // normalizer's nameEn fallback chain lands on the EAN. Seed builder must
+    // substitute nameHe so the UI never renders a barcode as the English subtitle.
+    const hebrewOnlyRaw = {
+      status: 1,
+      product: {
+        product_name_he: 'חלבה וניל',
+        // product_name_en + product_name absent
+        nutriments: {
+          'energy-kcal_100g': 500,
+          proteins_100g: 10,
+          fat_100g: 30,
+          carbohydrates_100g: 55,
+        },
+      },
+    }
+    const row = buildSeedRow(domesticCatalogItem, {
+      status: 'hit',
+      fetchedAt: '2026-04-22T12:00:00Z',
+      raw: hebrewOnlyRaw,
+    })!
+    expect(row.nameEn).not.toMatch(/^\d+$/)
+    expect(row.nameEn).toBe(row.nameHe)
+  })
+
   it('serializes servingSizes as JSON string (matches sh_/rl_/raw_ seed shape)', () => {
     const row = buildSeedRow(domesticCatalogItem, hitEntry)!
     expect(() => JSON.parse(row.servingSizesJson)).not.toThrow()

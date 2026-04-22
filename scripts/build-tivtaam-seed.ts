@@ -90,10 +90,16 @@ export function buildSeedRow(
   // Use the transparency-feed name in that case — always a real Hebrew string.
   const nameHe = food.nameHe === catalogItem.itemCode ? catalogItem.nameHe : food.nameHe
 
+  // When OFF has a Hebrew name but no English name, the normalizer's nameEn
+  // fallback chain lands on the EAN (bare digits). Matches the sh_/rl_
+  // convention: fall back to nameHe so the UI never renders raw barcode
+  // numbers as the English subtitle.
+  const nameEn = food.nameEn === catalogItem.itemCode ? nameHe : food.nameEn
+
   return {
     id: food.id,
     nameHe,
-    nameEn: food.nameEn,
+    nameEn,
     category: food.category,
     caloriesPer100g: food.caloriesPer100g,
     proteinPer100g: food.proteinPer100g,
