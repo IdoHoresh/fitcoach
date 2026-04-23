@@ -256,8 +256,6 @@ export const he = {
         dec: 'דצמבר',
       },
       todayTitle: 'התוכנית של היום',
-      startPill: 'התחל',
-      logPill: 'רשום',
       restDay: 'יום מנוחה — התאוששות',
       celebration: 'כל הכבוד להיום — סיימת',
       menuLabel: 'תפריט',

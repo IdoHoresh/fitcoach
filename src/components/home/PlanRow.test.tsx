@@ -24,11 +24,6 @@ describe('PlanRow', () => {
       render(<PlanRow item={makeItem({ done: true })} onPress={jest.fn()} testID="row" />)
       expect(screen.getByTestId('row-check')).toBeTruthy()
     })
-
-    it('does not render the next pill when done', () => {
-      render(<PlanRow item={makeItem({ done: true })} onPress={jest.fn()} testID="row" />)
-      expect(screen.queryByTestId('row-next-pill')).toBeNull()
-    })
   })
 
   describe('pending state (not next)', () => {
@@ -42,49 +37,12 @@ describe('PlanRow', () => {
       )
       expect(screen.getByTestId('row-pending-circle')).toBeTruthy()
     })
-
-    it('does not render the next pill', () => {
-      render(
-        <PlanRow
-          item={makeItem({ done: false, isNext: false })}
-          onPress={jest.fn()}
-          testID="row"
-        />,
-      )
-      expect(screen.queryByTestId('row-next-pill')).toBeNull()
-    })
   })
 
   describe('next state', () => {
-    it('renders a visible next-state marker', () => {
+    it('also shows empty circle indicator (next is signaled by border, not a pill)', () => {
       render(<PlanRow item={makeItem({ isNext: true })} onPress={jest.fn()} testID="row" />)
-      expect(screen.getByTestId('row-next-pill')).toBeTruthy()
-    })
-
-    it('uses the Log pill label for meal rows', () => {
-      render(
-        <PlanRow
-          item={makeItem({ kind: 'meal', isNext: true })}
-          onPress={jest.fn()}
-          testID="row"
-        />,
-      )
-      expect(screen.getByTestId('row-next-pill')).toHaveTextContent(/רשום|Log/)
-    })
-
-    it('uses the Start pill label for workout rows', () => {
-      const item = makeItem({
-        kind: 'workout',
-        id: 'workout',
-        labelKey: 'workout',
-        secondaryLabel: 'Push A',
-        durationMinutes: 45,
-        calories: null,
-        routeTarget: 'workout',
-        isNext: true,
-      })
-      render(<PlanRow item={item} onPress={jest.fn()} testID="row" />)
-      expect(screen.getByTestId('row-next-pill')).toHaveTextContent(/התחל|Start/)
+      expect(screen.getByTestId('row-pending-circle')).toBeTruthy()
     })
   })
 
@@ -107,13 +65,6 @@ describe('PlanRow', () => {
       render(<PlanRow item={restItem} onPress={onPress} testID="row" />)
       fireEvent.press(screen.getByTestId('row'))
       expect(onPress).not.toHaveBeenCalled()
-    })
-
-    it('is never marked as next', () => {
-      // Even if someone constructs a rest item with isNext=true (shouldn't happen
-      // via buildTodaysPlan), the component should never render a next pill.
-      render(<PlanRow item={{ ...restItem, isNext: true }} onPress={jest.fn()} testID="row" />)
-      expect(screen.queryByTestId('row-next-pill')).toBeNull()
     })
   })
 
@@ -149,10 +100,10 @@ describe('PlanRow', () => {
       expect(onPress).toHaveBeenCalledTimes(1)
     })
 
-    it('calls onPress when the next pill is tapped', () => {
+    it('calls onPress when the next-state row is tapped (no nested pill)', () => {
       const onPress = jest.fn()
       render(<PlanRow item={makeItem({ isNext: true })} onPress={onPress} testID="row" />)
-      fireEvent.press(screen.getByTestId('row-next-pill'))
+      fireEvent.press(screen.getByTestId('row'))
       expect(onPress).toHaveBeenCalledTimes(1)
     })
   })

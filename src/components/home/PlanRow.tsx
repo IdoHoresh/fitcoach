@@ -5,13 +5,11 @@ import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
 import { t } from '@/i18n'
-import { isRTL } from '@/hooks/rtl'
 import type { PlanItem } from '@/utils/buildTodaysPlan'
 
 const ICON_CONTAINER_SIZE = 48
 const ICON_SIZE = 22
 const CIRCLE_SIZE = 24
-const PILL_ICON_SIZE = 14
 
 interface PlanRowProps {
   item: PlanItem
@@ -23,14 +21,11 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
   const strings = t().home.v2
   const isRest = item.kind === 'rest'
   const isGhost = item.kind === 'ghost'
-  const isWorkout = item.kind === 'workout'
   const isNext = item.isNext && !isRest
 
   const planItemKey = item.labelKey as keyof typeof strings.planItems
   const primaryLabel = isRest ? strings.restDay : strings.planItems[planItemKey]
   const secondaryLabel = item.secondaryLabel
-
-  const pillLabel = isWorkout ? strings.startPill : strings.logPill
 
   const leadingIcon = renderLeadingIcon(item, testID)
   const trailing = renderTrailing(item, strings.caloriesShort, strings.minutesShort, testID)
@@ -52,25 +47,10 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
       accessibilityRole={isRest ? undefined : 'button'}
     >
       <View style={styles.content}>
-        {/* Trailing: value + pill OR check circle (left side in RTL) */}
+        {/* Trailing: value + check circle (left side in RTL) */}
         <View style={styles.trailingColumn}>
           {trailing}
-          {isNext && (
-            <Pressable
-              onPress={onPress}
-              style={styles.pill}
-              testID={testID ? `${testID}-next-pill` : undefined}
-              accessibilityRole="button"
-            >
-              <Text style={styles.pillText}>{pillLabel}</Text>
-              <Ionicons
-                name={isRTL() ? 'arrow-back' : 'arrow-forward'}
-                size={PILL_ICON_SIZE}
-                color={colors.textPrimary}
-              />
-            </Pressable>
-          )}
-          {!isNext && trailingCircle}
+          {trailingCircle}
         </View>
 
         {/* Primary + secondary label stack (right of icon in RTL) */}
@@ -236,19 +216,5 @@ const styles = StyleSheet.create({
     borderRadius: CIRCLE_SIZE / 2,
     borderWidth: 2,
     borderColor: colors.border,
-  },
-  pill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.xxs,
-    backgroundColor: colors.warning,
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.xs,
-    borderRadius: borderRadius.full,
-  },
-  pillText: {
-    fontSize: fontSize.sm,
-    color: colors.textPrimary,
-    fontWeight: fontWeight.bold,
   },
 })
