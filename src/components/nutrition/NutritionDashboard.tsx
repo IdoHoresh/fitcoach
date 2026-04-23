@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react'
-import { View, Text, ScrollView, StyleSheet, Animated } from 'react-native'
+import { View, Text, Pressable, ScrollView, StyleSheet, Animated } from 'react-native'
 import { useNutritionStore } from '@/stores/useNutritionStore'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
-import { fontSize } from '@/theme/typography'
+import { fontSize, fontWeight } from '@/theme/typography'
 import { todayISO } from '@/db'
 import { t } from '@/i18n'
 import type { MealType } from '@/types'
@@ -32,10 +32,20 @@ export function NutritionDashboard() {
   const refreshMealTargets = useNutritionStore((s) => s.refreshMealTargets)
   const redistributionToast = useNutritionStore((s) => s.redistributionToast)
   const clearRedistributionToast = useNutritionStore((s) => s.clearRedistributionToast)
+  const relogPreviousMeal = useNutritionStore((s) => s.relogPreviousMeal)
+  const relogToast = useNutritionStore((s) => s.relogToast)
+  const undoRelog = useNutritionStore((s) => s.undoRelog)
+  const clearRelogToast = useNutritionStore((s) => s.clearRelogToast)
+  const previousMealSourceDates = useNutritionStore((s) => s.previousMealSourceDates)
+  const loadPreviousMealLookup = useNutritionStore((s) => s.loadPreviousMealLookup)
 
-  // Toast fade animation
+  // Redistribution toast fade animation
   const toastOpacity = useRef(new Animated.Value(0)).current
   const toastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  // Re-log toast fade animation (5s dwell to allow undo)
+  const relogToastOpacity = useRef(new Animated.Value(0)).current
+  const relogToastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     if (!redistributionToast) return
@@ -68,6 +78,38 @@ export function NutritionDashboard() {
 
   const totals = useMemo(() => computeDayTotals(selectedDateLog), [selectedDateLog])
   const mealGroups = useMemo(() => groupFoodsByMeal(selectedDateLog), [selectedDateLog])
+
+  // Re-log toast fade in + 5s auto-dismiss
+  useEffect(() => {
+    if (!relogToast) return
+
+    if (relogToastTimerRef.current) clearTimeout(relogToastTimerRef.current)
+
+    Animated.timing(relogToastOpacity, {
+      toValue: 1,
+      duration: 200,
+      useNativeDriver: true,
+    }).start()
+
+    relogToastTimerRef.current = setTimeout(() => {
+      Animated.timing(relogToastOpacity, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true,
+      }).start(() => clearRelogToast())
+    }, 5000)
+
+    return () => {
+      if (relogToastTimerRef.current) clearTimeout(relogToastTimerRef.current)
+    }
+  }, [relogToast, relogToastOpacity, clearRelogToast])
+
+  // Refresh per-meal previous-meal lookup when date or log changes.
+  // Re-runs on selectedDateLog so a clone/undo immediately refreshes lookups
+  // (e.g. user fills in a past date, shifting the "most recent prior" for a future date).
+  useEffect(() => {
+    loadPreviousMealLookup(selectedDate)
+  }, [selectedDate, selectedDateLog, loadPreviousMealLookup])
 
   const goalCalories = activePlan?.targetCalories ?? 2000
   const goalProtein = activePlan?.targetProtein ?? 150
@@ -102,18 +144,24 @@ export function NutritionDashboard() {
           testID="macro-pills"
         />
 
-        {MEAL_TYPES.map((mealType) => (
-          <MealSection
-            key={mealType}
-            mealType={mealType}
-            date={selectedDate}
-            foods={mealGroups.get(mealType) ?? []}
-            onAddFood={() => setActiveMealSheet(mealType)}
-            onRemoveFood={(entryId) => removeFood(entryId)}
-            mealTarget={mealTargets?.[mealType]}
-            testID={`meal-section-${mealType}`}
-          />
-        ))}
+        {MEAL_TYPES.map((mealType) => {
+          const sourceDate = previousMealSourceDates[mealType] ?? null
+          const dayWord = sourceDate ? deriveDayWord(sourceDate, selectedDate, t().nutrition) : null
+          return (
+            <MealSection
+              key={mealType}
+              mealType={mealType}
+              date={selectedDate}
+              foods={mealGroups.get(mealType) ?? []}
+              onAddFood={() => setActiveMealSheet(mealType)}
+              onRemoveFood={(entryId) => removeFood(entryId)}
+              mealTarget={mealTargets?.[mealType]}
+              previousMealDayWord={dayWord}
+              onRelog={() => relogPreviousMeal(mealType, selectedDate)}
+              testID={`meal-section-${mealType}`}
+            />
+          )
+        })}
       </ScrollView>
 
       {/* Redistribution toast */}
@@ -123,6 +171,27 @@ export function NutritionDashboard() {
           testID="redistribution-toast"
         >
           <Text style={styles.toastText}>{buildToastText(redistributionToast, t().nutrition)}</Text>
+        </Animated.View>
+      )}
+
+      {/* Re-log toast with undo action */}
+      {relogToast && (
+        <Animated.View
+          style={[styles.toast, styles.relogToast, { opacity: relogToastOpacity }]}
+          testID="relog-toast"
+        >
+          <Text style={styles.toastText}>
+            {t().nutrition.itemsAddedWithUndo.replace('{count}', String(relogToast.count))}
+          </Text>
+          <Pressable
+            onPress={() => {
+              undoRelog(selectedDate)
+            }}
+            testID="relog-toast-undo"
+            hitSlop={8}
+          >
+            <Text style={styles.undoText}>{t().nutrition.undo}</Text>
+          </Pressable>
         </Animated.View>
       )}
 
@@ -178,6 +247,33 @@ function buildToastText(
   return `${toast.amount}${unit} ${macroLabel} ${strings.redistributedToast} ${mealNameMap[toast.mealName]}`
 }
 
+// Day-word picker: "אתמול" if sourceDate is one calendar day before selectedDate,
+// else the Hebrew weekday name of sourceDate.
+function deriveDayWord(
+  sourceDate: string,
+  selectedDate: string,
+  strings: NutritionStrings,
+): string {
+  const selected = new Date(`${selectedDate}T00:00:00Z`)
+  const yesterday = new Date(selected)
+  yesterday.setUTCDate(yesterday.getUTCDate() - 1)
+  const yesterdayIso = yesterday.toISOString().split('T')[0]
+  if (sourceDate === yesterdayIso) return strings.yesterdayWord
+
+  const source = new Date(`${sourceDate}T00:00:00Z`)
+  const dayIndex = source.getUTCDay() as 0 | 1 | 2 | 3 | 4 | 5 | 6
+  const keys = [
+    'sunday',
+    'monday',
+    'tuesday',
+    'wednesday',
+    'thursday',
+    'friday',
+    'saturday',
+  ] as const
+  return strings.daysOfWeek[keys[dayIndex]]
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -204,5 +300,15 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     color: colors.textPrimary,
     textAlign: 'center',
+  },
+  relogToast: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.md,
+  },
+  undoText: {
+    fontSize: fontSize.sm,
+    fontWeight: fontWeight.bold,
+    color: colors.primary,
   },
 })

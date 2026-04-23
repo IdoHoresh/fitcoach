@@ -9,6 +9,7 @@ import type { FoodLogEntry, MealType } from '@/types'
 import type { MealMacroTargetByName } from '@/algorithms/meal-targets'
 import { FoodItemRow } from './FoodItemRow'
 import { MealEmptyState } from './MealEmptyState'
+import { PreviousMealPill } from './PreviousMealPill'
 
 interface MealSectionProps {
   mealType: MealType
@@ -17,6 +18,8 @@ interface MealSectionProps {
   onAddFood: () => void
   onRemoveFood: (entryId: string) => void
   mealTarget?: MealMacroTargetByName
+  previousMealDayWord?: string | null
+  onRelog?: () => void
   testID?: string
 }
 
@@ -26,6 +29,8 @@ export function MealSection({
   onAddFood,
   onRemoveFood,
   mealTarget,
+  previousMealDayWord,
+  onRelog,
   testID,
 }: MealSectionProps) {
   const id = testID ?? `meal-section-${mealType}`
@@ -111,6 +116,16 @@ export function MealSection({
 
       {/* No-target empty state */}
       {isEmpty && !mealTarget && <MealEmptyState testID={`${id}-empty`} />}
+
+      {/* Re-log previous meal pill (only on empty meals when a prior meal was found) */}
+      {isEmpty && previousMealDayWord && onRelog && (
+        <PreviousMealPill
+          mealTypeLabel={mealName}
+          dayWord={previousMealDayWord}
+          onPress={onRelog}
+          testID={`${id}-relog`}
+        />
+      )}
 
       {/* Bottom row — "+" pinned to the right */}
       <View style={styles.bottomRow}>

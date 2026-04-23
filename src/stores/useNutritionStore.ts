@@ -76,6 +76,8 @@ interface NutritionStore {
   lastGeneratedFoodIds: Partial<Record<MealType, ReadonlySet<string>>>
   lastGeneratedEntryIds: Partial<Record<MealType, string[]>>
   redistributionToast: { macro: NonNullable<ToastMacro>; amount: number; mealName: MealName } | null
+  relogToast: { insertedIds: string[]; count: number } | null
+  previousMealSourceDates: Partial<Record<MealName, string | null>>
   isLoading: boolean
   error: string | null
 
@@ -89,6 +91,10 @@ interface NutritionStore {
   removeFood: (entryId: string) => Promise<void>
   loadTodaysLog: () => Promise<void>
   loadLogForDate: (date: string) => Promise<void>
+  relogPreviousMeal: (mealType: MealType, targetDate: string) => Promise<void>
+  undoRelog: (targetDate: string) => Promise<void>
+  clearRelogToast: () => void
+  loadPreviousMealLookup: (date: string) => Promise<void>
 
   // Meal Adherence
   setMealAdherence: (date: string, mealType: MealType, level: AdherenceLevel) => Promise<void>
@@ -177,6 +183,8 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
   lastGeneratedFoodIds: {},
   lastGeneratedEntryIds: {},
   redistributionToast: null,
+  relogToast: null,
+  previousMealSourceDates: {},
   isLoading: false,
   error: null,
 
@@ -687,6 +695,61 @@ export const useNutritionStore = create<NutritionStore>((set, get) => ({
   },
 
   clearRedistributionToast: () => set({ redistributionToast: null }),
+
+  clearRelogToast: () => set({ relogToast: null }),
+
+  relogPreviousMeal: async (mealType: MealType, targetDate: string) => {
+    set({ error: null })
+
+    try {
+      const prior = await foodLogRepository.getPreviousMealEntries(mealType, targetDate, 7)
+      if (!prior) return // silent no-op — nothing within 7 days
+
+      const cloned = await foodLogRepository.cloneEntriesToDate(prior.entries, targetDate)
+
+      set({
+        relogToast: {
+          insertedIds: cloned.map((e) => e.id),
+          count: cloned.length,
+        },
+      })
+
+      await get().loadLogForDate(targetDate)
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to re-log previous meal' })
+    }
+  },
+
+  undoRelog: async (targetDate: string) => {
+    const toast = get().relogToast
+    if (!toast) return
+
+    const idsToDelete = toast.insertedIds
+    set({ relogToast: null, error: null })
+
+    try {
+      await foodLogRepository.deleteManyByIds(idsToDelete)
+      await get().loadLogForDate(targetDate)
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to undo re-log' })
+    }
+  },
+
+  loadPreviousMealLookup: async (date: string) => {
+    const mealNames: MealName[] = ['breakfast', 'lunch', 'dinner', 'snack']
+
+    try {
+      const results = await Promise.all(
+        mealNames.map(async (m) => {
+          const prior = await foodLogRepository.getPreviousMealEntries(m, date, 7)
+          return [m, prior?.sourceDate ?? null] as const
+        }),
+      )
+      set({ previousMealSourceDates: Object.fromEntries(results) })
+    } catch (err) {
+      set({ error: err instanceof Error ? err.message : 'Failed to load previous meal lookup' })
+    }
+  },
 
   // ── Meal Generation ───────────────────────────────────────────
 
