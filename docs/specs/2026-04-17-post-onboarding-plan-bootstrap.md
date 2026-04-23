@@ -1,7 +1,7 @@
 # Feature: Post-Onboarding Plan Bootstrap
 
 **Date:** 2026-04-17
-**Status:** Approved
+**Status:** Done
 **Phase:** Bug fix / wiring
 
 ## What

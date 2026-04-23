@@ -13,8 +13,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { colors } from '@/theme/colors'
 import { spacing, borderRadius } from '@/theme/spacing'
 import { fontSize, fontWeight } from '@/theme/typography'
-import { isRTL } from '@/hooks/rtl'
-import { t } from '@/i18n'
+import { t, pickLocale } from '@/i18n'
 import { formatSetsReps, formatRestTime, translateMuscle } from './helpers'
 import type { Exercise, ExercisePrescription, ProgressionAdvice } from '@/types/workout'
 
@@ -61,7 +60,7 @@ export function ExerciseDetailSheet({
               <>
                 {exercise.gifUrl && <ExerciseGif url={exercise.gifUrl} testID={testID} />}
 
-                <Text style={styles.name}>{isRTL() ? exercise.nameHe : exercise.nameEn}</Text>
+                <Text style={styles.name}>{pickLocale(exercise.nameHe, exercise.nameEn)}</Text>
 
                 <Text style={styles.setsReps}>
                   {formatSetsReps(prescription.sets, prescription.minReps, prescription.maxReps)}
@@ -127,7 +126,7 @@ export function ExerciseDetailSheet({
                           : '—'}
                       </Text>
                       <Text style={styles.adviceReason}>
-                        {isRTL() ? progressionAdvice.reasonHe : progressionAdvice.reason}
+                        {pickLocale(progressionAdvice.reasonHe, progressionAdvice.reason)}
                       </Text>
                     </View>
                   )}

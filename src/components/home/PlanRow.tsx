@@ -86,9 +86,7 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
           {!isNext && trailingCircle}
         </View>
 
-        {leadingIcon}
-
-        {/* Primary + secondary label stack (right side in RTL) */}
+        {/* Primary + secondary label stack (right of icon in RTL) */}
         <View style={styles.labelColumn}>
           <Text
             style={[styles.primaryLabel, (item.done || isGhost || isRest) && styles.labelMuted]}
@@ -101,6 +99,8 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
             </Text>
           )}
         </View>
+
+        {leadingIcon}
       </View>
     </Pressable>
   )
