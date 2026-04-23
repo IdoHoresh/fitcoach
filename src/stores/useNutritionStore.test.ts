@@ -326,7 +326,13 @@ function resetStore() {
     recentCheckIns: [],
     latestRecalibration: null,
     weightLog: [],
+    dateAdherence: [],
+    mealTargets: null,
+    lastGeneratedFoodIds: {},
+    lastGeneratedEntryIds: {},
+    redistributionToast: null,
     relogToast: null,
+    previousMealSourceDates: {},
     isLoading: false,
     error: null,
   })
