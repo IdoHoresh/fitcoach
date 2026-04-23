@@ -254,7 +254,6 @@ export const en: TranslationKeys = {
         dec: 'December',
       },
       todayTitle: "Today's Plan",
-      nextLabel: 'Next',
       startPill: 'Start',
       logPill: 'Log',
       restDay: 'Rest day — recover',

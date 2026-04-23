@@ -12,7 +12,6 @@ const ICON_CONTAINER_SIZE = 48
 const ICON_SIZE = 22
 const CIRCLE_SIZE = 24
 const PILL_ICON_SIZE = 14
-const NEXT_LABEL_ICON_SIZE = 12
 
 interface PlanRowProps {
   item: PlanItem
@@ -52,18 +51,6 @@ export function PlanRow({ item, onPress, testID }: PlanRowProps) {
       testID={testID}
       accessibilityRole={isRest ? undefined : 'button'}
     >
-      {/* Next-state top label — absolute so it floats above the row */}
-      {isNext && (
-        <View style={[styles.nextLabel, isRTL() ? styles.nextLabelRTL : styles.nextLabelLTR]}>
-          <Text style={styles.nextLabelText}>{strings.nextLabel}</Text>
-          <Ionicons
-            name={isRTL() ? 'arrow-back' : 'arrow-forward'}
-            size={NEXT_LABEL_ICON_SIZE}
-            color={colors.warning}
-          />
-        </View>
-      )}
-
       <View style={styles.content}>
         {/* Trailing: value + pill OR check circle (left side in RTL) */}
         <View style={styles.trailingColumn}>
@@ -192,25 +179,6 @@ const styles = StyleSheet.create({
   rowRest: {
     backgroundColor: colors.surface,
     opacity: 0.7,
-  },
-  nextLabel: {
-    position: 'absolute',
-    top: spacing.xs,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.xxs,
-  },
-  nextLabelRTL: {
-    left: spacing.md,
-  },
-  nextLabelLTR: {
-    right: spacing.md,
-  },
-  nextLabelText: {
-    fontSize: fontSize.xs,
-    color: colors.warning,
-    fontWeight: fontWeight.bold,
-    textTransform: 'uppercase',
   },
   content: {
     flexDirection: 'row-reverse',

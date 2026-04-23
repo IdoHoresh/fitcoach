@@ -256,7 +256,6 @@ export const he = {
         dec: 'דצמבר',
       },
       todayTitle: 'התוכנית של היום',
-      nextLabel: 'הבא',
       startPill: 'התחל',
       logPill: 'רשום',
       restDay: 'יום מנוחה — התאוששות',
