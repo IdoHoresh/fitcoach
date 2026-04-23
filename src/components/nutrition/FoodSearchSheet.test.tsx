@@ -138,7 +138,49 @@ describe('FoodSearchSheet', () => {
   it('calls getRecent when sheet opens with empty query', async () => {
     render(<FoodSearchSheet {...defaultProps} />)
     await new Promise((r) => setTimeout(r, 0))
-    expect(mockGetRecent).toHaveBeenCalledWith(30)
+    // No explicit arg — uses the repo's built-in 15 default. See docs/specs/2026-04-23-recent-foods-default.md.
+    expect(mockGetRecent).toHaveBeenCalledWith()
+  })
+
+  // ── Recent-foods label ──────────────────────────────────────────────
+
+  it('shows the "לאחרונה" label when getRecent returns foods', async () => {
+    mockGetRecent.mockResolvedValue([MOCK_CHICKEN])
+
+    const { findByTestId } = render(<FoodSearchSheet {...defaultProps} />)
+
+    expect(await findByTestId('search-sheet-recent-label')).toBeTruthy()
+  })
+
+  it('hides the "לאחרונה" label when user has no log history (fallback path)', async () => {
+    mockGetRecent.mockResolvedValue([])
+    mockSearch.mockResolvedValue([MOCK_CHICKEN])
+
+    const { queryByTestId, findAllByTestId } = render(<FoodSearchSheet {...defaultProps} />)
+
+    await findAllByTestId(/^search-sheet-result-/)
+    expect(queryByTestId('search-sheet-recent-label')).toBeNull()
+    // Fallback must request 15 items, not the 50 used for typed queries.
+    expect(mockSearch).toHaveBeenCalledWith('', 15)
+  })
+
+  it('hides the "לאחרונה" label as soon as the user types a query', async () => {
+    mockGetRecent.mockResolvedValue([MOCK_CHICKEN])
+    mockSearch.mockResolvedValue([MOCK_CHICKEN])
+
+    const { getByTestId, queryByTestId, findByTestId } = render(
+      <FoodSearchSheet {...defaultProps} />,
+    )
+
+    // Label is present on open.
+    await findByTestId('search-sheet-recent-label')
+
+    fireEvent.changeText(getByTestId('search-sheet-input'), 'ע')
+    await act(async () => {
+      await new Promise((r) => setTimeout(r, 0))
+    })
+
+    expect(queryByTestId('search-sheet-recent-label')).toBeNull()
   })
 })
 

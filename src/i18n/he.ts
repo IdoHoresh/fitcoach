@@ -379,7 +379,7 @@ export const he = {
     addFirstItem: '+ הוספת פריט ראשון',
     addFromPlan: 'לחץ להוספת פריטים מהתפריט המתוכנן',
     searchPlaceholder: 'חפש מאכל...',
-    recentlyUsed: 'נפוצים לאחרונה',
+    recentlyUsed: 'לאחרונה',
     noResults: 'לא נמצאו תוצאות',
     grams: 'גרם',
     kcal: 'קק"ל',

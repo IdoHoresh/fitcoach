@@ -287,6 +287,10 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
   evaluating future transparency-feed chains: segment the catalog by
   distinctiveness and measure hits against the distinctive slice.
 
+## Planning Hygiene
+
+- **Before planning a new feature, grep for existing data paths** — "Recent foods as default" (2026-04-23) was scoped as a new repo query, but `foodRepository.getRecent(limit = 15)` was already implemented AND already wired into `FoodSearchSheet` via an empty-query branch. The real gap was purely visibility (no section label, wrong count arg). Reduced scope from 6 files to 4, from "new query + new state + new render" to "drop one arg + flip one i18n string + add one conditional `<Text>`". Always read the call-site before writing the spec; a 2-minute grep can compress a 2-session plan to a 1-session plan.
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
