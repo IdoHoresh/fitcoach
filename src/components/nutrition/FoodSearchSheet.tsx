@@ -127,6 +127,9 @@ export function FoodSearchSheet({
   const [selectedFood, setSelectedFood] = useState<FoodItem | null>(null)
   const [activeTab, setActiveTab] = useState<MacroTabId>('all')
   const [searchResults, setSearchResults] = useState<FoodItem[]>([])
+  // 'recent' = list came from getRecent and deserves the "לאחרונה" label;
+  // 'search' = typed-query result OR zero-history fallback (search('', 15)), no label.
+  const [resultSource, setResultSource] = useState<'recent' | 'search' | null>(null)
   const [scannerVisible, setScannerVisible] = useState(false)
   const [isScanPartial, setIsScanPartial] = useState(false)
   const [manualFormVisible, setManualFormVisible] = useState(false)
@@ -160,15 +163,26 @@ export function FoodSearchSheet({
       const run = async () => {
         const trimmed = q.trim()
         let found: FoodItem[]
+        let source: 'recent' | 'search'
         if (trimmed.length === 0) {
-          found = await foodRepository.getRecent(30)
-          if (found.length === 0) {
-            found = await foodRepository.search('', 50)
+          found = await foodRepository.getRecent()
+          if (found.length > 0) {
+            source = 'recent'
+          } else {
+            // Zero-history fallback: tier-ranker surfaces raw_ items first
+            // (chicken breast, eggs, rice, olive oil, apple). 15 keeps the
+            // list scannable on small screens — matches getRecent default.
+            found = await foodRepository.search('', 15)
+            source = 'search'
           }
         } else {
           found = await foodRepository.search(trimmed, 50)
+          source = 'search'
         }
-        if (!cancelled) setSearchResults(found)
+        if (!cancelled) {
+          setSearchResults(found)
+          setResultSource(source)
+        }
       }
 
       run()
@@ -244,6 +258,7 @@ export function FoodSearchSheet({
     setIsScanPartial(false)
     setManualFormVisible(false)
     setCollisionState(null)
+    setResultSource(null)
     onClose()
   }
 
@@ -327,7 +342,15 @@ export function FoodSearchSheet({
           onFound={handleBarcodeFound}
         />
 
-        {/* Section label — show result count while searching */}
+        {/* Section label — "לאחרונה" when recents are showing, or the no-results
+            message. The query-empty guard kills the ~1-frame flicker where the
+            stale recents still render after the user starts typing but before
+            the search promise resolves. */}
+        {query.trim().length === 0 && resultSource === 'recent' && results.length > 0 && (
+          <Text style={styles.sectionLabel} testID={`${id}-recent-label`}>
+            {strings.recentlyUsed}
+          </Text>
+        )}
         {query.trim().length > 0 && results.length === 0 && (
           <Text style={styles.sectionLabel}>{strings.noResults ?? 'לא נמצאו תוצאות'}</Text>
         )}
