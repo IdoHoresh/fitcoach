@@ -319,6 +319,96 @@ class FoodLogRepository extends BaseRepository<FoodLogRow> {
 
     return row?.avg_cal ?? 0
   }
+
+  /**
+   * Finds the most recent prior day within `maxLookback` days of `beforeDate`
+   * that has entries for the given `mealType`, and returns those entries.
+   *
+   * Strict `date < beforeDate` — the selectedDate itself is excluded so a user
+   * looking at an empty meal today never clones from a different empty meal today.
+   */
+  async getPreviousMealEntries(
+    mealType: MealType,
+    beforeDate: string,
+    maxLookback = 7,
+  ): Promise<{ entries: FoodLogEntry[]; sourceDate: string } | null> {
+    const db = getDatabase()
+    const minDate = subtractDays(beforeDate, maxLookback)
+
+    const rows = await db.getAllAsync<FoodLogRow>(
+      `SELECT * FROM food_log
+       WHERE meal_type = ? AND date < ? AND date >= ?
+       ORDER BY date DESC, id ASC`,
+      [mealType, beforeDate, minDate],
+    )
+
+    if (rows.length === 0) return null
+
+    const sourceDate = rows[0].date
+    const entries = rows.filter((r) => r.date === sourceDate).map(rowToFoodLogEntry)
+    return { entries, sourceDate }
+  }
+
+  /**
+   * Transactionally deletes the given ids. Empty input is a no-op.
+   * Matches the transaction semantics of `cloneEntriesToDate` so undo is
+   * all-or-nothing.
+   */
+  async deleteManyByIds(ids: string[]): Promise<void> {
+    if (ids.length === 0) return
+
+    const db = getDatabase()
+    await db.withTransactionAsync(async () => {
+      for (const id of ids) {
+        await db.runAsync(`DELETE FROM food_log WHERE id = ?`, [id])
+      }
+    })
+  }
+
+  /**
+   * Transactionally clones each entry into `targetDate` with fresh ids.
+   * Sequential inserts preserve original order. Empty input is a no-op.
+   */
+  async cloneEntriesToDate(entries: FoodLogEntry[], targetDate: string): Promise<FoodLogEntry[]> {
+    if (entries.length === 0) return []
+
+    const db = getDatabase()
+    const cloned: FoodLogEntry[] = []
+
+    await db.withTransactionAsync(async () => {
+      for (const entry of entries) {
+        const id = generateId()
+        await db.runAsync(
+          `INSERT INTO food_log (id, food_id, name_he, meal_type, date, serving_amount, serving_unit, grams_consumed, calories, protein, fat, carbs)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          [
+            id,
+            entry.foodId,
+            entry.nameHe,
+            entry.mealType,
+            targetDate,
+            entry.servingAmount,
+            entry.servingUnit,
+            entry.gramsConsumed,
+            entry.calories,
+            entry.protein,
+            entry.fat,
+            entry.carbs,
+          ],
+        )
+        cloned.push({ ...entry, id, date: targetDate })
+      }
+    })
+
+    return cloned
+  }
+}
+
+// YYYY-MM-DD arithmetic — UTC-safe to avoid DST/locale off-by-one.
+function subtractDays(isoDate: string, days: number): string {
+  const d = new Date(`${isoDate}T00:00:00Z`)
+  d.setUTCDate(d.getUTCDate() - days)
+  return d.toISOString().split('T')[0]
 }
 
 // ── Meal Plan Repository ────────────────────────────────────────

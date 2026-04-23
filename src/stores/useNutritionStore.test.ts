@@ -20,6 +20,9 @@ const mockGetDailySummary = jest.fn()
 const mockGetDailySummaries = jest.fn()
 const mockGetWeeklyAverageCalories = jest.fn()
 const mockDeleteById = jest.fn()
+const mockDeleteManyByIds = jest.fn()
+const mockGetPreviousMealEntries = jest.fn()
+const mockCloneEntriesToDate = jest.fn()
 
 // Meal plan repository
 const mockSavePlan = jest.fn()
@@ -56,6 +59,9 @@ jest.mock('../db', () => ({
     getDailySummaries: (...args: unknown[]) => mockGetDailySummaries(...args),
     getWeeklyAverageCalories: (...args: unknown[]) => mockGetWeeklyAverageCalories(...args),
     deleteById: (...args: unknown[]) => mockDeleteById(...args),
+    deleteManyByIds: (...args: unknown[]) => mockDeleteManyByIds(...args),
+    getPreviousMealEntries: (...args: unknown[]) => mockGetPreviousMealEntries(...args),
+    cloneEntriesToDate: (...args: unknown[]) => mockCloneEntriesToDate(...args),
   },
   mealPlanRepository: {
     savePlan: (...args: unknown[]) => mockSavePlan(...args),
@@ -314,11 +320,13 @@ function resetStore() {
   useNutritionStore.setState({
     activePlan: null,
     todaysLog: [],
+    selectedDateLog: [],
     dailySummary: null,
     savedMeals: [],
     recentCheckIns: [],
     latestRecalibration: null,
     weightLog: [],
+    relogToast: null,
     isLoading: false,
     error: null,
   })
@@ -973,5 +981,190 @@ describe('getMealPlanForToday', () => {
     const result = useNutritionStore.getState().getMealPlanForToday()
 
     expect(result).toBeNull()
+  })
+})
+
+// ═══════════════════════════════════════════════════════════════════
+// RE-LOG PREVIOUS MEAL
+// ═══════════════════════════════════════════════════════════════════
+
+const MOCK_PRIOR_ENTRY_A: FoodLogEntry = {
+  id: 'prior-a',
+  foodId: 'food_002',
+  nameHe: 'חזה עוף בגריל',
+  mealType: 'breakfast',
+  date: '2026-04-22',
+  servingAmount: 1,
+  servingUnit: 'piece',
+  gramsConsumed: 170,
+  calories: 281,
+  protein: 53,
+  fat: 6,
+  carbs: 0,
+}
+
+const MOCK_PRIOR_ENTRY_B: FoodLogEntry = {
+  ...MOCK_PRIOR_ENTRY_A,
+  id: 'prior-b',
+  foodId: 'food_006',
+  gramsConsumed: 100,
+  calories: 155,
+  protein: 13,
+  fat: 11,
+  carbs: 1,
+}
+
+describe('relogPreviousMeal', () => {
+  it('clones previous-day entries to the target date and sets relogToast', async () => {
+    mockGetPreviousMealEntries.mockResolvedValueOnce({
+      entries: [MOCK_PRIOR_ENTRY_A, MOCK_PRIOR_ENTRY_B],
+      sourceDate: '2026-04-22',
+    })
+    mockCloneEntriesToDate.mockResolvedValueOnce([
+      { ...MOCK_PRIOR_ENTRY_A, id: 'new-1', date: '2026-04-23' },
+      { ...MOCK_PRIOR_ENTRY_B, id: 'new-2', date: '2026-04-23' },
+    ])
+    mockGetEntriesByDate.mockResolvedValueOnce([])
+
+    await useNutritionStore.getState().relogPreviousMeal('breakfast', '2026-04-23')
+
+    expect(mockGetPreviousMealEntries).toHaveBeenCalledWith('breakfast', '2026-04-23', 7)
+    expect(mockCloneEntriesToDate).toHaveBeenCalledWith(
+      [MOCK_PRIOR_ENTRY_A, MOCK_PRIOR_ENTRY_B],
+      '2026-04-23',
+    )
+    const { relogToast } = useNutritionStore.getState()
+    expect(relogToast).not.toBeNull()
+    expect(relogToast!.count).toBe(2)
+    expect(relogToast!.insertedIds).toEqual(['new-1', 'new-2'])
+    expect(mockGetEntriesByDate).toHaveBeenCalledWith('2026-04-23')
+  })
+
+  it('is a silent no-op when no prior meal is found', async () => {
+    mockGetPreviousMealEntries.mockResolvedValueOnce(null)
+
+    await useNutritionStore.getState().relogPreviousMeal('breakfast', '2026-04-23')
+
+    expect(mockCloneEntriesToDate).not.toHaveBeenCalled()
+    expect(useNutritionStore.getState().relogToast).toBeNull()
+    expect(useNutritionStore.getState().error).toBeNull()
+  })
+
+  it('sets error state and leaves relogToast null when clone throws', async () => {
+    mockGetPreviousMealEntries.mockResolvedValueOnce({
+      entries: [MOCK_PRIOR_ENTRY_A],
+      sourceDate: '2026-04-22',
+    })
+    mockCloneEntriesToDate.mockRejectedValueOnce(new Error('db locked'))
+
+    await useNutritionStore.getState().relogPreviousMeal('breakfast', '2026-04-23')
+
+    expect(useNutritionStore.getState().relogToast).toBeNull()
+    expect(useNutritionStore.getState().error).toBe('db locked')
+  })
+})
+
+describe('undoRelog', () => {
+  it('deletes the inserted rows transactionally and clears the toast', async () => {
+    useNutritionStore.setState({
+      relogToast: { insertedIds: ['new-1', 'new-2'], count: 2 },
+      selectedDateLog: [
+        { ...MOCK_PRIOR_ENTRY_A, id: 'new-1', date: '2026-04-23' },
+        { ...MOCK_PRIOR_ENTRY_B, id: 'new-2', date: '2026-04-23' },
+      ],
+    })
+    mockDeleteManyByIds.mockResolvedValueOnce(undefined)
+    mockGetEntriesByDate.mockResolvedValueOnce([])
+
+    await useNutritionStore.getState().undoRelog('2026-04-23')
+
+    expect(mockDeleteManyByIds).toHaveBeenCalledWith(['new-1', 'new-2'])
+    expect(useNutritionStore.getState().relogToast).toBeNull()
+    expect(mockGetEntriesByDate).toHaveBeenCalledWith('2026-04-23')
+  })
+
+  it('is a no-op when relogToast is null', async () => {
+    useNutritionStore.setState({ relogToast: null })
+
+    await useNutritionStore.getState().undoRelog('2026-04-23')
+
+    expect(mockDeleteManyByIds).not.toHaveBeenCalled()
+  })
+})
+
+describe('loadPreviousMealLookup', () => {
+  it('queries all four meal types and stores their sourceDates', async () => {
+    mockGetPreviousMealEntries.mockImplementation(async (mealType: string) => {
+      if (mealType === 'breakfast')
+        return { entries: [MOCK_PRIOR_ENTRY_A], sourceDate: '2026-04-22' }
+      if (mealType === 'lunch') return { entries: [MOCK_PRIOR_ENTRY_B], sourceDate: '2026-04-20' }
+      return null
+    })
+
+    await useNutritionStore.getState().loadPreviousMealLookup('2026-04-23')
+
+    expect(mockGetPreviousMealEntries).toHaveBeenCalledTimes(4)
+    const lookup = useNutritionStore.getState().previousMealSourceDates
+    expect(lookup.breakfast).toBe('2026-04-22')
+    expect(lookup.lunch).toBe('2026-04-20')
+    expect(lookup.dinner).toBeNull()
+    expect(lookup.snack).toBeNull()
+  })
+
+  it('sets error state if any lookup throws', async () => {
+    mockGetPreviousMealEntries.mockRejectedValueOnce(new Error('db failure'))
+
+    await useNutritionStore.getState().loadPreviousMealLookup('2026-04-23')
+
+    expect(useNutritionStore.getState().error).toBe('db failure')
+  })
+})
+
+describe('clearRelogToast', () => {
+  it('sets relogToast to null', () => {
+    useNutritionStore.setState({
+      relogToast: { insertedIds: ['a'], count: 1 },
+    })
+
+    useNutritionStore.getState().clearRelogToast()
+
+    expect(useNutritionStore.getState().relogToast).toBeNull()
+  })
+})
+
+describe('consecutive re-logs', () => {
+  it('a second relog replaces the toast; undo deletes only the second batch', async () => {
+    // First relog: ids a, b
+    mockGetPreviousMealEntries.mockResolvedValueOnce({
+      entries: [MOCK_PRIOR_ENTRY_A],
+      sourceDate: '2026-04-22',
+    })
+    mockCloneEntriesToDate.mockResolvedValueOnce([
+      { ...MOCK_PRIOR_ENTRY_A, id: 'a', date: '2026-04-23' },
+    ])
+    mockGetEntriesByDate.mockResolvedValueOnce([])
+    await useNutritionStore.getState().relogPreviousMeal('breakfast', '2026-04-23')
+
+    // Second relog: ids c, d
+    mockGetPreviousMealEntries.mockResolvedValueOnce({
+      entries: [MOCK_PRIOR_ENTRY_B],
+      sourceDate: '2026-04-21',
+    })
+    mockCloneEntriesToDate.mockResolvedValueOnce([
+      { ...MOCK_PRIOR_ENTRY_B, id: 'c', date: '2026-04-23' },
+      { ...MOCK_PRIOR_ENTRY_B, id: 'd', date: '2026-04-23' },
+    ])
+    mockGetEntriesByDate.mockResolvedValueOnce([])
+    await useNutritionStore.getState().relogPreviousMeal('lunch', '2026-04-23')
+
+    expect(useNutritionStore.getState().relogToast!.insertedIds).toEqual(['c', 'd'])
+
+    mockDeleteManyByIds.mockResolvedValueOnce(undefined)
+    mockGetEntriesByDate.mockResolvedValueOnce([])
+    await useNutritionStore.getState().undoRelog('2026-04-23')
+
+    expect(mockDeleteManyByIds).toHaveBeenCalledWith(['c', 'd'])
+    const deletedBatch = mockDeleteManyByIds.mock.calls[0][0] as string[]
+    expect(deletedBatch).not.toContain('a')
   })
 })

@@ -103,4 +103,41 @@ describe('MealSection', () => {
     )
     expect(getByTestId('lunch-section-title')).toHaveTextContent('ארוחת צהריים')
   })
+
+  describe('re-log previous meal pill', () => {
+    it('renders PreviousMealPill when empty and previousMealDayWord is provided', () => {
+      const { getByTestId } = render(
+        <MealSection {...defaultProps} previousMealDayWord="אתמול" onRelog={jest.fn()} />,
+      )
+      expect(getByTestId('meal-section-relog')).toBeTruthy()
+    })
+
+    it('does not render PreviousMealPill when meal has foods', () => {
+      const { queryByTestId } = render(
+        <MealSection
+          {...defaultProps}
+          foods={MOCK_ENTRIES}
+          previousMealDayWord="אתמול"
+          onRelog={jest.fn()}
+        />,
+      )
+      expect(queryByTestId('meal-section-relog')).toBeNull()
+    })
+
+    it('does not render PreviousMealPill when previousMealDayWord is null', () => {
+      const { queryByTestId } = render(
+        <MealSection {...defaultProps} previousMealDayWord={null} onRelog={jest.fn()} />,
+      )
+      expect(queryByTestId('meal-section-relog')).toBeNull()
+    })
+
+    it('fires onRelog when the pill is pressed', () => {
+      const onRelog = jest.fn()
+      const { getByTestId } = render(
+        <MealSection {...defaultProps} previousMealDayWord="אתמול" onRelog={onRelog} />,
+      )
+      fireEvent.press(getByTestId('meal-section-relog'))
+      expect(onRelog).toHaveBeenCalledTimes(1)
+    })
+  })
 })

@@ -332,6 +332,158 @@ describe('FoodLogRepository', () => {
       expect(result).toBe(false)
     })
   })
+
+  describe('getPreviousMealEntries', () => {
+    const makeRow = (overrides: Partial<{ id: string; date: string; meal_type: string }>) => ({
+      id: overrides.id ?? 'row-1',
+      food_id: 'food_002',
+      name_he: 'חזה עוף בגריל',
+      meal_type: overrides.meal_type ?? 'breakfast',
+      date: overrides.date ?? '2026-04-22',
+      serving_amount: 1,
+      serving_unit: 'piece',
+      grams_consumed: 170,
+      calories: 281,
+      protein: 53,
+      fat: 6,
+      carbs: 0,
+    })
+
+    it('returns the most recent prior day with entries and groups them', async () => {
+      mockGetAllAsync.mockResolvedValueOnce([
+        makeRow({ id: 'r1', date: '2026-04-22' }),
+        makeRow({ id: 'r2', date: '2026-04-22' }),
+        makeRow({ id: 'r3', date: '2026-04-20' }),
+      ])
+
+      const result = await foodLogRepository.getPreviousMealEntries('breakfast', '2026-04-23', 7)
+
+      expect(result).not.toBeNull()
+      expect(result!.sourceDate).toBe('2026-04-22')
+      expect(result!.entries).toHaveLength(2)
+      expect(result!.entries.map((e) => e.id)).toEqual(['r1', 'r2'])
+    })
+
+    it('returns null when no prior entries exist in the window', async () => {
+      mockGetAllAsync.mockResolvedValueOnce([])
+
+      const result = await foodLogRepository.getPreviousMealEntries('breakfast', '2026-04-23', 7)
+
+      expect(result).toBeNull()
+    })
+
+    it('excludes the selectedDate itself (strict <, not <=)', async () => {
+      mockGetAllAsync.mockResolvedValueOnce([])
+
+      await foodLogRepository.getPreviousMealEntries('lunch', '2026-04-23', 7)
+
+      const [sql, params] = mockGetAllAsync.mock.calls[0] as [string, unknown[]]
+      expect(sql).toMatch(/date\s*<\s*\?/)
+      expect(sql).not.toMatch(/date\s*<=\s*\?/)
+      expect(params).toContain('2026-04-23')
+    })
+
+    it('bounds the window at exactly maxLookback days before the selectedDate', async () => {
+      mockGetAllAsync.mockResolvedValueOnce([])
+
+      await foodLogRepository.getPreviousMealEntries('breakfast', '2026-04-23', 7)
+
+      const [, params] = mockGetAllAsync.mock.calls[0] as [string, unknown[]]
+      // 7 days before 2026-04-23 = 2026-04-16 (inclusive lower bound)
+      expect(params).toContain('2026-04-16')
+    })
+
+    it('filters by mealType in the SQL query', async () => {
+      mockGetAllAsync.mockResolvedValueOnce([])
+
+      await foodLogRepository.getPreviousMealEntries('dinner', '2026-04-23', 7)
+
+      const [sql, params] = mockGetAllAsync.mock.calls[0] as [string, unknown[]]
+      expect(sql).toMatch(/meal_type\s*=\s*\?/)
+      expect(params).toContain('dinner')
+    })
+  })
+
+  describe('cloneEntriesToDate', () => {
+    const makeEntry = (overrides: Partial<FoodLogEntry>): FoodLogEntry => ({
+      id: 'old-1',
+      foodId: 'food_002',
+      nameHe: 'חזה עוף בגריל',
+      mealType: 'breakfast',
+      date: '2026-04-22',
+      servingAmount: 1,
+      servingUnit: 'piece',
+      gramsConsumed: 170,
+      calories: 281,
+      protein: 53,
+      fat: 6,
+      carbs: 0,
+      ...overrides,
+    })
+
+    it('inserts each entry in a transaction with a fresh id and the target date', async () => {
+      const entries = [
+        makeEntry({ id: 'old-1' }),
+        makeEntry({ id: 'old-2', foodId: 'food_023', gramsConsumed: 200 }),
+      ]
+
+      const cloned = await foodLogRepository.cloneEntriesToDate(entries, '2026-04-23')
+
+      expect(mockWithTransactionAsync).toHaveBeenCalledTimes(1)
+      expect(mockRunAsync).toHaveBeenCalledTimes(2)
+      expect(cloned).toHaveLength(2)
+      expect(cloned[0].id).not.toBe('old-1')
+      expect(cloned[1].id).not.toBe('old-2')
+      expect(cloned[0].date).toBe('2026-04-23')
+      expect(cloned[1].date).toBe('2026-04-23')
+      expect(cloned[0].foodId).toBe('food_002')
+      expect(cloned[1].foodId).toBe('food_023')
+      expect(cloned[1].gramsConsumed).toBe(200)
+    })
+
+    it('returns empty array and does not open a transaction for empty input', async () => {
+      const result = await foodLogRepository.cloneEntriesToDate([], '2026-04-23')
+
+      expect(result).toEqual([])
+      expect(mockWithTransactionAsync).not.toHaveBeenCalled()
+      expect(mockRunAsync).not.toHaveBeenCalled()
+    })
+
+    it('uses parameterized INSERT (? placeholders, no concatenation)', async () => {
+      await foodLogRepository.cloneEntriesToDate([makeEntry({ id: 'old-1' })], '2026-04-23')
+
+      const [sql] = mockRunAsync.mock.calls[0] as [string, unknown[]]
+      expect(sql).toMatch(/INSERT INTO food_log/)
+      expect(sql).toMatch(/\?/)
+      expect(sql).not.toMatch(/'2026-04-23'/) // no string-concat dates
+    })
+  })
+
+  describe('deleteManyByIds', () => {
+    it('deletes each id inside a single transaction', async () => {
+      await foodLogRepository.deleteManyByIds(['a', 'b', 'c'])
+
+      expect(mockWithTransactionAsync).toHaveBeenCalledTimes(1)
+      expect(mockRunAsync).toHaveBeenCalledTimes(3)
+      expect(mockRunAsync).toHaveBeenNthCalledWith(
+        1,
+        expect.stringContaining('DELETE FROM food_log'),
+        ['a'],
+      )
+      expect(mockRunAsync).toHaveBeenNthCalledWith(
+        3,
+        expect.stringContaining('DELETE FROM food_log'),
+        ['c'],
+      )
+    })
+
+    it('is a no-op for empty input (no transaction opened)', async () => {
+      await foodLogRepository.deleteManyByIds([])
+
+      expect(mockWithTransactionAsync).not.toHaveBeenCalled()
+      expect(mockRunAsync).not.toHaveBeenCalled()
+    })
+  })
 })
 
 // ═══════════════════════════════════════════════════════════════════

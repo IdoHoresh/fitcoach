@@ -291,6 +291,12 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 
 - **Before planning a new feature, grep for existing data paths** — "Recent foods as default" (2026-04-23) was scoped as a new repo query, but `foodRepository.getRecent(limit = 15)` was already implemented AND already wired into `FoodSearchSheet` via an empty-query branch. The real gap was purely visibility (no section label, wrong count arg). Reduced scope from 6 files to 4, from "new query + new state + new render" to "drop one arg + flip one i18n string + add one conditional `<Text>`". Always read the call-site before writing the spec; a 2-minute grep can compress a 2-session plan to a 1-session plan.
 
+## Undo / Transaction Semantics
+
+- **Undo toasts use "undo-last" semantics, not "undo-all-pending".** When a second bulk action fires before the first's toast dismisses, REPLACE the toast (ids = new batch only), don't MERGE (old + new). Rationale matches iOS/Gmail/Slack: "undo" undoes the last thing I did, not everything since the last dismiss. Merging would undo actions the user implicitly accepted by not tapping undo the first time. The "orphaned" first batch is still in the DB as normal rows — the user can swipe-delete individually. Test the consecutive-action case (different meal slots, back-to-back re-logs) to codify the decision so future reviewers don't flag it. (2026-04-23)
+- **Transactional symmetry: if the insert is transactional, the undo must be too.** `cloneEntriesToDate` wraps N INSERTs in `withTransactionAsync`. An undo implemented as a `for...of deleteById(id)` loop breaks that symmetry — a mid-loop crash leaves some rows deleted and others not, corrupting the meal. Add `deleteManyByIds(ids[])` with the matching `withTransactionAsync` wrapper. Rule: paired bulk operations (insert+undo, save+rollback) share transaction semantics. (2026-04-23)
+- **Components must not call repositories directly when a store already mediates the same data.** A second path to the DB splits error handling, bypasses store-level caching, and forces components to re-derive things the store could hold once. If new data is needed from the repo, add a store action + state field; components subscribe. Enforced by grep for `foodLogRepository\.` / `foodRepository\.` / etc. outside `src/db/` and `src/stores/`. (2026-04-23)
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
