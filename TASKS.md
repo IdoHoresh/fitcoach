@@ -514,30 +514,40 @@ Apple reviews health/fitness apps more strictly. Key rules:
 
 - **Spec:** `docs/specs/2026-04-24-two-mode-meal-logging.md` (research-informed revision 2026-04-24)
 - **Research:** `docs/research/2026-04-24-macro-app-competitive-research.md`
-- **Roadmap revision 2026-04-25:** added Tracks G / H / I / J / K; timeline realism pass; sequencing fixes
+- **Roadmap v3 (2026-04-25):** 🎯 **Launch target Nov 1, 2026** (27 weeks) · full v1 scope · iOS + Android parity · zero external paid contractors (self-research track)
 
-> **Realistic v1 timeline: 14–18 weeks end-to-end** (previous 8–12w estimate didn't account for external dependencies, brand redesign, notifications, paywall UX, App Store work, or solo-dev parallelization limits).
+> **Full v1 timeline: 27 weeks part-time (Apr 25 → Nov 1, 2026)**, based on 15–20h/week × Claude Code 2–3× productivity multiplier on engineering. Previous 14–18w estimate was pre-AI solo-dev baseline — Claude Code data shows solo devs shipping production apps in 2–8 weeks of focused work (Preppr iOS: 2w; 5 SaaS products: 8w; Claude Cowork: 10d). Israeli post-Sukkot reset season (Oct 4–Nov 1) is the target market window.
 > Philosophy: **Structured (מובנה) — "אני רוצה תוכנית"** vs **Free (חופשי) — "אני רוצה מעקב"**. The split is intent, not experience. No auto-redistribute in either; adaptive TDEE does the correction. **10 invariants** in the spec govern every PR — `/review` must block violations.
 
-**Phase → Track mapping (revised 2026-04-25):**
+**Phase → Calendar mapping (v3 — 27 weeks to Nov 1, 2026 launch):**
 
-| Phase                         | Weeks   | Tracks active                                                                                   |
-| ----------------------------- | ------- | ----------------------------------------------------------------------------------------------- |
-| 0 — External prep (start NOW) | ongoing | E1 dietitian · E1b composite dishes · D5 copy review · K brand designer · pricing/ARPU research |
-| 1 — Foundation                | 1–2     | A1-rest · A2 · A3 · D1 · D6                                                                     |
-| 2 — Mode flows + brand        | 2–5     | B1–B6 · C1–C3 · G · K (parallel)                                                                |
-| 3 — Retention engine          | 4–7     | D2 · D3 · D4 · H                                                                                |
-| 4 — Polish + gate prep        | 6–9     | F1 · F2 · F3 · I paywall · empty states · a11y · practice-meal (moved from A1)                  |
-| 5 — App Store submission      | 8–11    | J · TestFlight · F4 launch gate                                                                 |
+| Phase                                 | Weeks | Calendar        | Focus                                                                                   |
+| ------------------------------------- | ----- | --------------- | --------------------------------------------------------------------------------------- |
+| Self-research (ongoing, background)   | 1–27  | Apr 28 – Nov 1  | Gold list (10-15 foods/wk) · pricing/ARPU research · composite dishes (DIY photography) |
+| 1 — Foundation                        | 1–2   | Apr 28 – May 10 | A1-rest · A2 · A3 (iOS + Android from start)                                            |
+| 2 — Mode flows + Home redesign        | 3–6   | May 11 – Jun 7  | B1–B6 · C1–C3 · G (Home/Nutrition mode-aware)                                           |
+| 3 — Adaptive engine + partial-logging | 7–9   | Jun 8 – Jun 28  | D1 · D2 · D3 · D6 (HealthKit + Health Connect)                                          |
+| 4 — Weekly check-in + notifications   | 10–12 | Jun 29 – Jul 19 | D4 · D5 copy-variation · H1–H6                                                          |
+| 5 — Paywall + polish                  | 13–15 | Jul 20 – Aug 9  | I1–I4 paywall · F1–F3 · F6 empty states · F7 a11y · F8 perf                             |
+| 6 — Android polish + practice-meal    | 16–17 | Aug 10 – Aug 23 | Android-specific bugs · Play Store prep · F5 practice-meal                              |
+| 7 — Closed beta                       | 18–19 | Aug 24 – Sep 6  | **TestFlight Internal + Google Play Internal Testing** (family, 5–10 per platform)      |
+| 8 — Open beta (IL holidays window)    | 20–22 | Sep 7 – Sep 27  | **TestFlight External + Play Open Testing** (30–50 from fitness communities)            |
+| 9 — Bug crunch + copy review          | 23–24 | Sep 28 – Oct 11 | Beta feedback incorporation · final copy pass · self-research gold-list catch-up        |
+| 10 — Store submission                 | 25–26 | Oct 12 – Oct 25 | J1–J7 App Store + Play Store submission (target: Oct 20)                                |
+| 11 — Review + 🚀 launch               | 27    | Oct 26 – Nov 1  | Apple + Google review response · **🚀 Nov 1, 2026 public launch**                       |
 
-**Phase 0 — External prep (start NOW, runs ongoing through v1 ship)**
+**Alternate launch date:** Oct 6, 2026 hits peak post-Sukkot reset (Sukkot ends Oct 3). If engineering runs ahead of schedule, shifting launch earlier by 4 weeks captures stronger IL reset-season momentum.
 
-Critical path is non-engineering. Start these this week:
+**Phase 0 — Self-research (start NOW, runs parallel with engineering)**
 
-- [ ] **P0.1 — 💰 Dietitian contract** (external, 8–12w runway) — Hire part-time / contract per-food / partner with existing nutrition service. Scope: gold-list audit (E1, 300 foods), composite-dish macro verification (E1b), ongoing copy review for weekly check-in (D5). **Dietitian sign-off is the v1 ship gate.**
-- [ ] **P0.2 — 💰 Brand designer contract** (external, 4–6w runway) — Hebrew-first typography expert + brand strategist. Scope: Track K deliverables (wordmark, typography system, color palette refresh, app icon, illustrations, App Store assets). Lock brand by end of Phase 2 so engineering builds against final tokens (avoids 2–3w rework cost).
-- [ ] **P0.3 — 💰 Food photographer + composite-dish macro lab** (external, 2–4w runway) — For E1b 15–20 composite dishes. Photo session + lab analysis per dish.
-- [ ] **P0.4 — Pricing + ARPU research** — Israeli subscription benchmarks for macro/fitness apps; finance sim for the "logging verbs always free" invariant (#4). Resolve open Q #4 before App Store submission.
+Zero external paid contractors (budget decision). Replaces original P0.1–P0.3 with self-driven research:
+
+- [ ] **P0.1 — Self-audited gold list** (solo, ongoing background) — 300 foods cross-checked against 3 sources: (1) Israeli Ministry of Health nutrition tables, (2) USDA FoodData Central, (3) manufacturer labels (photograph + transcribe). **10–15 foods/week** × ~25 weeks = 300 by beta. Prioritize top-100 Israeli staples for beta window (Week 18). **E2 auto-consistency scan + E5 user error-reporting queue mitigate per-food error risk.**
+- [ ] **P0.2 — Self-research composite dishes (5–10 for v1)** — Starter: סביח, שקשוקה, פיתה חומוס, ארוחת שבת, כריך (sandwich). Macros = sum-of-ingredients from gold list. Phone photography (good lighting, simple styling). Expand to 15+ post-launch via E1b + user recipe builder.
+- [ ] **P0.3 — Copy review via Hebrew-speaking beta testers** (family + TestFlight cohort, no paid dietitian) — Every weekly-check-in variant reviewed by 2–3 Hebrew natives before ship. Recruit 1 friend who's good at writing for final D5 pass. Invariant #3 (pattern ≠ grade) is tonally fragile — needs multiple eyes.
+- [ ] **P0.4 — Pricing + ARPU research** — Israeli subscription benchmarks for macro/fitness apps; finance sim for the "logging verbs always free" invariant (#4). Reading + spreadsheet work, no external cost. Resolve open Q #4 before I2 paywall ship.
+
+_Track K (brand redesign) cancelled for v1._ Keep current Rubik + teal "Clinical Calm" theme. Revisit as v1.3+ if user feedback demands distinctive visual identity.
 
 **Track A — Foundation & shared infra**
 
@@ -618,19 +628,24 @@ User lands on Home + Nutrition tabs daily. Both must render differently per sele
 - [ ] **I3 — Subscription store integration** (M, NEW) — `expo-in-app-purchases` or RevenueCat. Annual + monthly SKUs. Receipt validation. Tier gating in runtime (Invariant #4 stays honored — logging verbs always free).
 - [ ] **I4 — Trial-end reminder** (S, NEW) — Day 12 soft notification: "עוד יומיים לנסיון. מה חשבת עליו?" Links to paywall. Non-aggressive copy.
 
-**Track J — App Store submission (NEW — ship blocker)**
+**Track J — App Store + Play Store submission (ship blockers, both platforms)**
 
-- [ ] **J1 — App Store Connect setup** (S) — Bundle ID, App ID, certs, provisioning. iOS + iPadOS (v1 iPhone-first; iPad may be deferred).
-- [ ] **J2 — Metadata IL-first** (M) — App title, subtitle, description, keywords (Hebrew primary, English secondary), category (Health & Fitness), age rating with dietary-app disclosures.
-- [ ] **J3 — Screenshots + App Preview video** (M, depends on K brand pass) — 6.7" iPhone mandatory + iPad if shipping. RTL-correct screenshots. Hebrew strings. One-minute preview video (Structured flow + Free flow + weekly check-in).
-- [ ] **J4 — Privacy policy + Terms of Service** (M) — Health data handling disclosure (HealthKit usage, local-only storage, no cloud sync yet). Hosted on gibor.app. Linked from paywall + Settings.
-- [ ] **J5 — Health disclaimers + medical-advice waivers** (S) — Required for health/dietary apps. In-app: Settings → Legal. App Store: review notes.
-- [ ] **J6 — TestFlight beta** (M, 2w cycle) — 10–20 Israeli-eater testers recruited from fitness communities. Feedback cycle: usability + copy + RTL + composite-dish accuracy + weekly-check-in tone. Incorporate via F4 gate.
-- [ ] **J7 — Review submission + response loop** (S) — Apple review typically 24-72h. Prepare response to common rejections (health data, HealthKit usage justification, subscription terms).
+v3 roadmap ships iOS + Android simultaneously. Track J covers BOTH stores.
 
-**Track K — Brand redesign (NEW — pre-launch visual identity, Phase 2 parallel)**
+- [ ] **J1 — App Store Connect + Play Console setup** (S) — iOS: Bundle ID, App ID, certs, provisioning. Android: Play Console account ($25 one-time), upload signing key, internal testing track. Both iPhone-first (iPad deferred to v1.1, Android tablet deferred).
+- [ ] **J2 — Metadata IL-first (both stores)** (M) — App title, subtitle, short + long description, keywords (Hebrew primary, English secondary), category (Health & Fitness), age rating with dietary-app disclosures. Play Store also needs: feature graphic, short description (80 chars), privacy questionnaire.
+- [ ] **J3 — Screenshots + preview videos (iOS + Android)** (M) — iOS: 6.7" iPhone mandatory. Android: phone + 7"/10" tablet screenshots, feature graphic. RTL-correct on both. Hebrew strings. One-minute preview video (Structured flow + Free flow + weekly check-in) for both stores.
+- [ ] **J4 — Privacy policy + Terms of Service** (M) — Health data handling disclosure (HealthKit + Health Connect usage, local-only storage, no cloud sync yet). Hosted on gibor.app. Linked from paywall + Settings + both store listings.
+- [ ] **J5 — Health disclaimers + medical-advice waivers** (S) — Required for health/dietary apps on both stores. In-app: Settings → Legal. Store review notes explaining nutrition guidance is educational, not medical.
+- [ ] **J6 — Beta testing both platforms** (M, 4-6w cycle) —
+  - **Phase 7 (closed):** TestFlight Internal (iOS) + Google Play Internal Testing (Android), 5–10 family testers per platform
+  - **Phase 8 (open):** TestFlight External + Google Play Open Testing, 30–50 from fitness communities
+  - Feedback cycle: usability + copy + RTL + composite-dish accuracy + weekly-check-in tone + platform-specific parity. Incorporate via F4 gate.
+- [ ] **J7 — Review submission + response loop** (S) — Apple review 1-7 days typical (target submission Oct 20 for Nov 1 launch). Google Play review 1-3 days typical. Prepare responses to common rejections: health data justification, HealthKit/Health Connect usage, subscription terms, dietary advice scope.
 
-FitCoach current design: Rubik font, teal `#2DD4BF` "Clinical Calm" palette. Feels generic / AI-assembled. Brand refresh locks visual identity BEFORE engineering wraps (avoids 2–3w rework). Runs parallel with Track B + C in Phase 2.
+**Track K — Brand redesign** (**DEFERRED to v1.3+** — out of v1 scope per v3 roadmap)
+
+FitCoach current design: Rubik font, teal `#2DD4BF` "Clinical Calm" palette. Feels generic / AI-assembled. Brand refresh cancelled for v1 to preserve Nov 1 launch window with zero external contractor budget. Revisit post-launch if user feedback demands distinctive visual identity.
 
 - [ ] **K1 — Brand strategy + mood board** (M, external) — Discovery: what is Gibor's identity? Clinical / premium / warm / playful? Israeli market positioning. Competitor visual survey (MacroFactor, Carbon, RP, MFP — what do they NOT do that we should).
 - [ ] **K2 — Wordmark + logo + app icon** (M, external) — Hebrew + Latin lockups (גיבור / Gibor). App icon iterations. Splash screen.
