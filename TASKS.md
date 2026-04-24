@@ -514,14 +514,46 @@ Apple reviews health/fitness apps more strictly. Key rules:
 
 - **Spec:** `docs/specs/2026-04-24-two-mode-meal-logging.md` (research-informed revision 2026-04-24)
 - **Research:** `docs/research/2026-04-24-macro-app-competitive-research.md`
+- **Roadmap v3 (2026-04-25):** 🎯 **Launch target Nov 1, 2026** (27 weeks) · full v1 scope · iOS + Android parity · zero external paid contractors (self-research track)
 
-> Multi-week, ~8–12 weeks end-to-end. Six parallel tracks. Dietitian + data-accuracy work ⚡ runs alongside engineering.
+> **Full v1 timeline: 27 weeks part-time (Apr 25 → Nov 1, 2026)**, based on 15–20h/week × Claude Code 2–3× productivity multiplier on engineering. Previous 14–18w estimate was pre-AI solo-dev baseline — Claude Code data shows solo devs shipping production apps in 2–8 weeks of focused work (Preppr iOS: 2w; 5 SaaS products: 8w; Claude Cowork: 10d). Israeli post-Sukkot reset season (Oct 4–Nov 1) is the target market window.
 > Philosophy: **Structured (מובנה) — "אני רוצה תוכנית"** vs **Free (חופשי) — "אני רוצה מעקב"**. The split is intent, not experience. No auto-redistribute in either; adaptive TDEE does the correction. **10 invariants** in the spec govern every PR — `/review` must block violations.
+
+**Phase → Calendar mapping (v3 — 27 weeks to Nov 1, 2026 launch):**
+
+| Phase                                 | Weeks | Calendar        | Focus                                                                                   |
+| ------------------------------------- | ----- | --------------- | --------------------------------------------------------------------------------------- |
+| Self-research (ongoing, background)   | 1–27  | Apr 28 – Nov 1  | Gold list (10-15 foods/wk) · pricing/ARPU research · composite dishes (DIY photography) |
+| 1 — Foundation                        | 1–2   | Apr 28 – May 10 | A1-rest · A2 · A3 (iOS + Android from start)                                            |
+| 2 — Mode flows + Home redesign        | 3–6   | May 11 – Jun 7  | B1–B6 · C1–C3 · G (Home/Nutrition mode-aware)                                           |
+| 3 — Adaptive engine + partial-logging | 7–9   | Jun 8 – Jun 28  | D1 · D2 · D3 · D6 (HealthKit + Health Connect)                                          |
+| 4 — Weekly check-in + notifications   | 10–12 | Jun 29 – Jul 19 | D4 · D5 copy-variation · H1–H6                                                          |
+| 5 — Paywall + polish                  | 13–15 | Jul 20 – Aug 9  | I1–I4 paywall · F1–F3 · F6 empty states · F7 a11y · F8 perf                             |
+| 6 — Android polish + practice-meal    | 16–17 | Aug 10 – Aug 23 | Android-specific bugs · Play Store prep · F5 practice-meal                              |
+| 7 — Closed beta                       | 18–19 | Aug 24 – Sep 6  | **TestFlight Internal + Google Play Internal Testing** (family, 5–10 per platform)      |
+| 8 — Open beta (IL holidays window)    | 20–22 | Sep 7 – Sep 27  | **TestFlight External + Play Open Testing** (30–50 from fitness communities)            |
+| 9 — Bug crunch + copy review          | 23–24 | Sep 28 – Oct 11 | Beta feedback incorporation · final copy pass · self-research gold-list catch-up        |
+| 10 — Store submission                 | 25–26 | Oct 12 – Oct 25 | J1–J7 App Store + Play Store submission (target: Oct 20)                                |
+| 11 — Review + 🚀 launch               | 27    | Oct 26 – Nov 1  | Apple + Google review response · **🚀 Nov 1, 2026 public launch**                       |
+
+**Alternate launch date:** Oct 6, 2026 hits peak post-Sukkot reset (Sukkot ends Oct 3). If engineering runs ahead of schedule, shifting launch earlier by 4 weeks captures stronger IL reset-season momentum.
+
+**Phase 0 — Self-research (start NOW, runs parallel with engineering)**
+
+Zero external paid contractors (budget decision). Replaces original P0.1–P0.3 with self-driven research:
+
+- [ ] **P0.1 — Self-audited gold list** (solo, ongoing background) — 300 foods cross-checked against 3 sources: (1) Israeli Ministry of Health nutrition tables, (2) USDA FoodData Central, (3) manufacturer labels (photograph + transcribe). **10–15 foods/week** × ~25 weeks = 300 by beta. Prioritize top-100 Israeli staples for beta window (Week 18). **E2 auto-consistency scan + E5 user error-reporting queue mitigate per-food error risk.**
+- [ ] **P0.2 — Self-research composite dishes (5–10 for v1)** — Starter: סביח, שקשוקה, פיתה חומוס, ארוחת שבת, כריך (sandwich). Macros = sum-of-ingredients from gold list. Phone photography (good lighting, simple styling). Expand to 15+ post-launch via E1b + user recipe builder.
+- [ ] **P0.3 — Copy review via Hebrew-speaking beta testers** (family + TestFlight cohort, no paid dietitian) — Every weekly-check-in variant reviewed by 2–3 Hebrew natives before ship. Recruit 1 friend who's good at writing for final D5 pass. Invariant #3 (pattern ≠ grade) is tonally fragile — needs multiple eyes.
+- [ ] **P0.4 — Pricing + ARPU research** — Israeli subscription benchmarks for macro/fitness apps; finance sim for the "logging verbs always free" invariant (#4). Reading + spreadsheet work, no external cost. Resolve open Q #4 before I2 paywall ship.
+
+_Track K (brand redesign) cancelled for v1._ Keep current Rubik + teal "Clinical Calm" theme. Revisit as v1.3+ if user feedback demands distinctive visual identity.
 
 **Track A — Foundation & shared infra**
 
-- [ ] **A1 — Mode preference + onboarding mode-choice screen** (M) — Add `mealLoggingMode: 'structured' \| 'free'` to `UserProfile`, SQLite v20 migration, `app/(onboarding)/mode-choice.tsx` (stacked cards, intent framing, Structured default-selected), practice-meal screen stub, Settings toggle + i18n.
-  - 2026-04-24 partial ship: mode-choice screen + `UserProfile.mealLoggingMode` type + SQLite v20 migration + i18n (he/en) + `ModeCard` / `ModeInfoSheet` / `StructuredModePreview` / `FreeModePreview` components landed. Remaining: **practice-meal screen stub** + **Settings toggle**.
+- [ ] **A1 — Mode preference + onboarding mode-choice screen** (M) — Add `mealLoggingMode: 'structured' \| 'free'` to `UserProfile`, SQLite v20 migration, `app/(onboarding)/mode-choice.tsx` (stacked cards, intent framing, Structured default-selected), Settings toggle + i18n.
+  - 2026-04-24 partial ship: mode-choice screen + `UserProfile.mealLoggingMode` type + SQLite v20 migration + i18n (he/en) + `ModeCard` / `ModeInfoSheet` / `StructuredModePreview` / `FreeModePreview` components landed (PR #85). Remaining: **Settings toggle**.
+  - **practice-meal screen moved to Track F (F5)** — circular dep: practice-meal demonstrates the Structured wizard (Track B) OR Free flow (Track C), so it can't build until B/C exist.
 - [ ] **A1-analytics — Default-select safety-net analytics** (S, NEW) — Because Structured is default-selected (reduces beginner paralysis, risk: users rubber-stamp the default), instrument: (1) `mode_choice_picked` with `mode` + `time_to_pick_ms` + `changed_from_default` bool, (2) `mode_switched_in_settings` with `from` / `to` / `days_since_onboarding`. Alert threshold: Structured adoption >90% of onboarding completions → default is being rubber-stamped, investigate whether switching is actually discoverable.
 - [ ] **A2 — Shared slider primitive** (L) — `src/components/nutrition/shared/Slider.tsx` with dual labels (`125 גר׳ · ½ גביע` on tick / `≈ 0.6 חזה עוף · 70 גר׳` between), tick marks at natural units, haptic snaps, cooked/raw toggle, quick-tap portion pills above track, hand-portion icon. Serving-unit data type + starter DB for 20 most-logged foods.
 - [ ] **A3 — Chip portion picker primitive** (M) — `src/components/nutrition/shared/ChipPortionPicker.tsx` for Free mode. Each chip = natural serving label + grams + per-macro delta + calories. Custom gram input via `✏`. Used by Free mode's add-food sheet.
@@ -565,17 +597,86 @@ Apple reviews health/fitness apps more strictly. Key rules:
 - [ ] **F1 — Kosher / Shabbat filter polish + miluim stub** (M) — Eating window auto-block Friday evening / Saturday; milchig-fleishig ⚠ inline warning; miluim mode = placeholder toggle in settings.
 - [ ] **F2 — Mode-switch edge-case QA sweep** (M) — Mid-day switches, mid-meal switches, data carryover.
 - [ ] **F3 — Full end-to-end manual test plan** (S) — Beginner (Structured) + intermediate (Free) walkthroughs on iOS simulator.
-- [ ] **F4 — v1 launch gate** — E1 dietitian sign-off + all tracks green + app store metadata.
+- [ ] **F4 — v1 launch gate** — E1 dietitian sign-off + all tracks green + K brand pass signed off + J App Store metadata approved + TestFlight beta feedback incorporated.
+- [ ] **F5 — Practice-meal screen (moved from A1)** (M) — First-log tutorial in chosen mode. Depends on Track B + Track C completion. Walks user through one sample log (Structured: 3-step wizard with guided picks; Free: add-food sheet with chip tap). Skippable. `app/(onboarding)/practice-meal.tsx` + i18n.
+- [ ] **F6 — Empty / first-launch states** (M, NEW) — Day 1, zero logs, zero weight entries: what every screen shows. Covers Home gauge at 0 / flat log empty / meal cards at 0 / weekly trend with <7d data / Settings with no weigh-ins yet.
+- [ ] **F7 — Accessibility audit** (M, NEW) — VoiceOver labels on every interactive element, dynamic type support for font scaling, contrast ratios verified (WCAG AA), reduce-motion respected on slider/progress animations, haptics opt-out.
+- [ ] **F8 — Performance pass** (S, NEW) — SQLite query profiling at 15k foods, cold-start time budget (<2s to Home), slider haptic jank check, re-render audit on heavy screens (NutritionDashboard, wizard).
+
+**Track G — Home + Nutrition tab mode-aware redesign (NEW — every-day surface)**
+
+User lands on Home + Nutrition tabs daily. Both must render differently per selected mode. High visibility, high retention impact.
+
+- [ ] **G1 — Home screen mode-aware layout** (L) — Daily gauge (primary) + **weekly trend mini-card** (secondary, new) + mode-specific body below. Structured: upcoming-meal card with per-meal target. Free: "you've logged X / daily target" + quick-add button.
+- [ ] **G2 — Nutrition tab mode-aware router** (M) — `app/(tabs)/nutrition.tsx` becomes a router: `<StructuredNutrition>` (renders Track B meal-card stack) or `<FreeNutrition>` (renders Track C flat-log-with-time-windows). Mode-switch handoff preserves current-day state.
+- [ ] **G3 — Weekly trend mini-card component** (M) — 7-day weight graph + kcal-vs-intake delta + 1-line Hebrew recommendation snippet. Tap → opens weekly check-in (if due) or trend detail sheet.
+- [ ] **G4 — History / trend detail view** (M, NEW) — Longer-horizon view: 30/60/90-day trend weight, adherence patterns (neutral, per Invariant #3), recent weekly check-ins list.
+
+**Track H — Notifications strategy (NEW — retention tool)**
+
+- [ ] **H1 — Notification permission flow** (S, NEW) — Post-onboarding, contextually-requested permission prompt (not cold ask). Copy explains what we'll send. Respects opt-out.
+- [ ] **H2 — Daily reminder** (S, NEW) — User-configurable: morning / evening / off. "שכחת לרשום אתמול?" style. Opt-out per user.
+- [ ] **H3 — Weekly check-in trigger** (S, NEW) — Friday evening (or user-preferred time) — "הגיע הזמן לצ׳ק-אין שבועי." Tap → opens check-in directly.
+- [ ] **H4 — Missed-day nudge** (S, NEW, CAREFUL) — Only if user had prior streak or consistency pattern. Neutral copy: "רשימה אחרונה לפני 2 ימים — הכל בסדר?" Never shame. Respects Invariant #3. Off by default; opt-in.
+- [ ] **H5 — Training-time carbs tip** (moved from C3) — Home notification post-workout window.
+- [ ] **H6 — Notification settings screen** (S, NEW) — Per-type toggles, time pickers, "disable all."
+
+**Track I — Paywall + trial-end flow (NEW — monetization UX)**
+
+- [ ] **I1 — 14-day trial state machine** (M, NEW) — Trial starts on onboarding complete; paywall fires after first weekly check-in (~day 7) OR on day 14 if no check-in. User store tracks `trialStartedAt` / `trialEndsAt` / `firstCheckInCompletedAt`.
+- [ ] **I2 — Paywall screen** (M, NEW) — Post-first-check-in: "זה איך האפליקציה תלווה אותך." Feature list (always-free barcode/search/voice/photo highlighted; premium = coaching + insight + planning), pricing tiers, restore purchases, Terms/Privacy links, dismiss flow (continue with free tier if applicable OR trial-end lockout).
+- [ ] **I3 — Subscription store integration** (M, NEW) — `expo-in-app-purchases` or RevenueCat. Annual + monthly SKUs. Receipt validation. Tier gating in runtime (Invariant #4 stays honored — logging verbs always free).
+- [ ] **I4 — Trial-end reminder** (S, NEW) — Day 12 soft notification: "עוד יומיים לנסיון. מה חשבת עליו?" Links to paywall. Non-aggressive copy.
+
+**Track J — App Store + Play Store submission (ship blockers, both platforms)**
+
+v3 roadmap ships iOS + Android simultaneously. Track J covers BOTH stores.
+
+- [ ] **J1 — App Store Connect + Play Console setup** (S) — iOS: Bundle ID, App ID, certs, provisioning. Android: Play Console account ($25 one-time), upload signing key, internal testing track. Both iPhone-first (iPad deferred to v1.1, Android tablet deferred).
+- [ ] **J2 — Metadata IL-first (both stores)** (M) — App title, subtitle, short + long description, keywords (Hebrew primary, English secondary), category (Health & Fitness), age rating with dietary-app disclosures. Play Store also needs: feature graphic, short description (80 chars), privacy questionnaire.
+- [ ] **J3 — Screenshots + preview videos (iOS + Android)** (M) — iOS: 6.7" iPhone mandatory. Android: phone + 7"/10" tablet screenshots, feature graphic. RTL-correct on both. Hebrew strings. One-minute preview video (Structured flow + Free flow + weekly check-in) for both stores.
+- [ ] **J4 — Privacy policy + Terms of Service** (M) — Health data handling disclosure (HealthKit + Health Connect usage, local-only storage, no cloud sync yet). Hosted on gibor.app. Linked from paywall + Settings + both store listings.
+- [ ] **J5 — Health disclaimers + medical-advice waivers** (S) — Required for health/dietary apps on both stores. In-app: Settings → Legal. Store review notes explaining nutrition guidance is educational, not medical.
+- [ ] **J6 — Beta testing both platforms** (M, 4-6w cycle) —
+  - **Phase 7 (closed):** TestFlight Internal (iOS) + Google Play Internal Testing (Android), 5–10 family testers per platform
+  - **Phase 8 (open):** TestFlight External + Google Play Open Testing, 30–50 from fitness communities
+  - Feedback cycle: usability + copy + RTL + composite-dish accuracy + weekly-check-in tone + platform-specific parity. Incorporate via F4 gate.
+- [ ] **J7 — Review submission + response loop** (S) — Apple review 1-7 days typical (target submission Oct 20 for Nov 1 launch). Google Play review 1-3 days typical. Prepare responses to common rejections: health data justification, HealthKit/Health Connect usage, subscription terms, dietary advice scope.
+
+**Track K — Brand redesign** (**DEFERRED to v1.3+** — out of v1 scope per v3 roadmap)
+
+FitCoach current design: Rubik font, teal `#2DD4BF` "Clinical Calm" palette. Feels generic / AI-assembled. Brand refresh cancelled for v1 to preserve Nov 1 launch window with zero external contractor budget. Revisit post-launch if user feedback demands distinctive visual identity.
+
+- [ ] **K1 — Brand strategy + mood board** (M, external) — Discovery: what is Gibor's identity? Clinical / premium / warm / playful? Israeli market positioning. Competitor visual survey (MacroFactor, Carbon, RP, MFP — what do they NOT do that we should).
+- [ ] **K2 — Wordmark + logo + app icon** (M, external) — Hebrew + Latin lockups (גיבור / Gibor). App icon iterations. Splash screen.
+- [ ] **K3 — Typography system (Hebrew-first)** (M, external) — Evaluate replacements for Rubik: Heebo, Suez One, Secular One, Assistant, or custom. Criteria: Hebrew character quality, weight range, number rendering, licensing. Tokenize into `@/theme/typography` — engineering re-applies via token swap, no string-level rework.
+- [ ] **K4 — Color palette refresh** (M, external) — Replace `#2DD4BF` teal (trend-common, Noom/Fabulous/many). New palette: distinctive brand hue + secondary + semantic (success/warning/error) + macro trio. Token swap via `@/theme/colors`.
+- [ ] **K5 — Spacing / radius / shadow tokens refresh** (S) — Pass over `@/theme/spacing`. Adjust if brand direction calls for tighter/looser rhythm.
+- [ ] **K6 — Micro-interaction + animation language** (M, design+code) — Define transition durations, easing curves, spring configs for: card selection, modal slide, progress fill, number increment, screen navigation. Token file `@/theme/motion.ts`.
+- [ ] **K7 — Illustration system** (L, external, if used) — If brand calls for illustrations: style guide, onboarding hero art, empty-state illustrations, weekly-check-in ceremony art. Lottie/JSON format for performance.
+- [ ] **K8 — App Store visual assets** (M, external) — App icon final, screenshots template, preview video brief. Depends on K1-K4 locked.
+- [ ] **K9 — Engineering token-swap pass** (S if done early, 2–3w if done late) — Apply final tokens across all screens. Mechanical if brand locked in Phase 2; painful if deferred to Phase 5.
 
 **Open decisions to resolve before / during this epic:**
 
 _Carried forward:_
 
-1. Dietitian sourcing (hire part-time / contract per-food / existing nutrition service)
+1. Dietitian sourcing (hire part-time / contract per-food / existing nutrition service) — **P0.1 critical path**
 2. Mode-switch mid-day behavior (current day stays in old mode, next day = new mode — provisional)
 3. v1 gamification depth (minimal: just day-count "X ימים רצופים")
-4. Subscription pricing ₪30 / ₪40 / ₪50; free tier limits (constrained by Invariant #4 — logging verbs stay free)
+4. Subscription pricing ₪30 / ₪40 / ₪50; free tier limits (constrained by Invariant #4 — logging verbs stay free) — **P0.4 runs ARPU research**
 5. Analytics — track mode choice (with default-rubber-stamp detection, see A1-analytics), step skip, escape usage, chip vs custom gram, weekly-check-in decision distribution, partial-logging prompt accept rate
+
+_New (added in 2026-04-25 roadmap revision):_
+
+16. Brand direction for K1 — clinical / premium / warm / playful? Locks Phase 2 visual work.
+17. Typography replacement for Rubik — Heebo / Suez One / Secular One / Assistant / custom. Hebrew-first eval.
+18. New primary color to replace teal `#2DD4BF` — distinctive vs. MacroFactor/Carbon/Noom palettes.
+19. Notification cadence defaults — daily reminder morning/evening, weekly check-in day/time, missed-day nudge threshold.
+20. Paywall tier content — exactly what's gated as premium vs. free tier (must honor Invariant #4).
+21. TestFlight beta cohort sourcing — 10–20 Israeli eaters from fitness communities; incentives?
+22. iPad support in v1 or deferred? Apple requires iPhone-only apps to explicitly opt out.
+23. iCloud / export / backup for local SQLite data — v1 scope or v1.1?
 
 _Research-derived (need user-testing before commit):_
 
