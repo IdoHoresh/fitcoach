@@ -92,10 +92,14 @@ const styles = StyleSheet.create({
     color: colors.textPrimary,
     fontSize: fontSize.xl,
     fontWeight: fontWeight.bold,
+    textAlign: 'right',
+    writingDirection: 'rtl',
   },
   description: {
     color: colors.textSecondary,
     fontSize: fontSize.sm,
+    textAlign: 'right',
+    writingDirection: 'rtl',
   },
   indicator: {
     width: INDICATOR_SIZE,
