@@ -139,6 +139,16 @@ export interface LifestyleProfile {
   readonly sleepHoursPerNight: number
 }
 
+/**
+ * Meal-logging mode.
+ * - 'structured' — per-meal macro targets, guided protein → carbs → fat wizard. The user wants a plan.
+ * - 'free' — daily-only targets, flat log grouped by time windows, chip picker. The user wants a tracker.
+ *
+ * Split is intent, not experience. Default is 'structured' because it provides more guidance, not because it's for beginners.
+ * See docs/specs/2026-04-24-two-mode-meal-logging.md §Invariants (#1–#3) and §Onboarding.
+ */
+export type MealLoggingMode = 'structured' | 'free'
+
 /** Complete user profile collected during onboarding */
 export interface UserProfile {
   readonly id: string
@@ -166,6 +176,9 @@ export interface UserProfile {
 
   // Meal planning preference
   readonly workoutTime: WorkoutTime
+
+  // Meal-logging mode (Structured "אני רוצה תוכנית" vs Free "אני רוצה מעקב")
+  readonly mealLoggingMode: MealLoggingMode
 }
 
 /** Calculated nutrition targets — output of TDEE + macro algorithms */

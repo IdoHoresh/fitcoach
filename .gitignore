@@ -69,3 +69,5 @@ docs/plans/
 # Claude Code
 .claude/settings.local.json
 .claude/worktrees/
+.claude/scheduled_tasks.lock
+.claude/launch.json

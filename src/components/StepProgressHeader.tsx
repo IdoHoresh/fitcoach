@@ -61,6 +61,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: borderRadius.full,
     overflow: 'hidden',
+    // flexDirection: 'row' lets forceRTL auto-flip the fill so it grows from
+    // the start edge (right in RTL, left in LTR). Matches calculating.tsx pattern.
+    flexDirection: 'row',
   },
   fill: {
     height: '100%',

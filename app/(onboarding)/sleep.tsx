@@ -29,7 +29,7 @@ export default function SleepScreen() {
         sleepHoursPerNight: sleepHours,
       } as typeof draft.lifestyle,
     })
-    router.push('/(onboarding)/calculating')
+    router.push('/(onboarding)/mode-choice')
   }
 
   return (

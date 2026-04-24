@@ -213,12 +213,12 @@ export function NumberInput({
             testID={testID ? `${testID}-value` : 'number-value'}
             style={styles.valueContainer}
           >
-            <Text style={styles.value}>{String(value)}</Text>
             {unit ? (
               <Text style={styles.unit} testID={testID ? `${testID}-unit` : 'number-unit'}>
                 {unit}
               </Text>
             ) : null}
+            <Text style={styles.value}>{String(value)}</Text>
           </Pressable>
         )}
         <StepperButton

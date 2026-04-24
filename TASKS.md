@@ -510,6 +510,88 @@ Apple reviews health/fitness apps more strictly. Key rules:
 
 ## Next Up
 
+### 🚀 Two-mode meal logging — v1 initiative
+
+- **Spec:** `docs/specs/2026-04-24-two-mode-meal-logging.md` (research-informed revision 2026-04-24)
+- **Research:** `docs/research/2026-04-24-macro-app-competitive-research.md`
+
+> Multi-week, ~8–12 weeks end-to-end. Six parallel tracks. Dietitian + data-accuracy work ⚡ runs alongside engineering.
+> Philosophy: **Structured (מובנה) — "אני רוצה תוכנית"** vs **Free (חופשי) — "אני רוצה מעקב"**. The split is intent, not experience. No auto-redistribute in either; adaptive TDEE does the correction. **10 invariants** in the spec govern every PR — `/review` must block violations.
+
+**Track A — Foundation & shared infra**
+
+- [ ] **A1 — Mode preference + onboarding mode-choice screen** (M) — Add `mealLoggingMode: 'structured' \| 'free'` to `UserProfile`, SQLite v20 migration, `app/(onboarding)/mode-choice.tsx` (stacked cards, intent framing, Structured default-selected), practice-meal screen stub, Settings toggle + i18n.
+  - 2026-04-24 partial ship: mode-choice screen + `UserProfile.mealLoggingMode` type + SQLite v20 migration + i18n (he/en) + `ModeCard` / `ModeInfoSheet` / `StructuredModePreview` / `FreeModePreview` components landed. Remaining: **practice-meal screen stub** + **Settings toggle**.
+- [ ] **A1-analytics — Default-select safety-net analytics** (S, NEW) — Because Structured is default-selected (reduces beginner paralysis, risk: users rubber-stamp the default), instrument: (1) `mode_choice_picked` with `mode` + `time_to_pick_ms` + `changed_from_default` bool, (2) `mode_switched_in_settings` with `from` / `to` / `days_since_onboarding`. Alert threshold: Structured adoption >90% of onboarding completions → default is being rubber-stamped, investigate whether switching is actually discoverable.
+- [ ] **A2 — Shared slider primitive** (L) — `src/components/nutrition/shared/Slider.tsx` with dual labels (`125 גר׳ · ½ גביע` on tick / `≈ 0.6 חזה עוף · 70 גר׳` between), tick marks at natural units, haptic snaps, cooked/raw toggle, quick-tap portion pills above track, hand-portion icon. Serving-unit data type + starter DB for 20 most-logged foods.
+- [ ] **A3 — Chip portion picker primitive** (M) — `src/components/nutrition/shared/ChipPortionPicker.tsx` for Free mode. Each chip = natural serving label + grams + per-macro delta + calories. Custom gram input via `✏`. Used by Free mode's add-food sheet.
+
+**Track B — Structured mode**
+
+- [ ] **B1 — Guided step wizard shell** (L) — Step progress header (● ○ ○), back button, skip link, "מנה שלמה" escape hatch. Auto-advance on step completion. Summary screen as step 4.
+- [ ] **B2 — Multi-pick screen per step** (M) — Curated food list per macro + meal slot + recents + search. Kosher/dietary filter upfront. "פופולרי ב[ארוחת בוקר]" header.
+- [ ] **B3 — Meal allocator algorithm** (L, TDD) — Pure function `allocatePortions(picks, stepTarget)` returning portion vector that sums to step target. Single-food → natural serving fallback. Multi-food → weighted distribution. Structural infeasibility → honest shortfall (no fake allocation).
+- [ ] **B4 — Slider-adjust screen with auto-allocate** (M) — Wires allocator into `Slider` primitives per food. Independent sliders (no cascading). `↻ איזון מחדש` re-solves after manual adjust. Live per-step running total.
+- [ ] **B5 — Summary screen + supplement suggestions** (M) — Gap-shape matching: single-macro vs multi-macro short. Ranker surfaces foods that close the exact gap in one portion (egg/cheese for P+F; tahini/avocado for F-only).
+- [ ] **B6 — Mixed-dish escape flow** (S) — "אני אוכלת מנה שלמה" jumps into direct search, logs all macros at once, skips remaining steps.
+
+**Track C — Free mode**
+
+- [ ] **C1 — Free mode daily log view** (M) — Home gauge primary, flat log **grouped by natural time windows** (בוקר / צהריים / ערב / לילה — soft grouping, not hard slots). "הוסף מה שאכלת" button as primary action.
+- [ ] **C2 — Free mode chip logging flow** (S) — Tap food → `ChipPortionPicker` → tap chip = commit instantly. Custom gram via `✏`.
+- [ ] **C3 — Training-time carbs soft tip** (S, NEW) — Home notification post-workout window (Free-mode equivalent of Structured's peri-workout macro shaping).
+
+**Track D — Adaptive algorithm + weekly check-in**
+
+- [ ] **D1 — Adaptive TDEE algorithm** (L, TDD) — **20-day EWMA** on weight (not 7-day), back-solve expenditure from intake + trend, **two-step adjustment cadence** (week 1 tentative, week 2 confirmed, week 3 full), Dynamic Maintenance mode near goal, fast-loss branch raises calories (not holds), user-settable calorie floor respected. TDD'd with known-good vectors from Stronger by Science algorithm description.
+- [ ] **D2 — Partial-logging detection module** (M, NEW — research) — Anomaly-detect days <50% of trend-average intake; "האם חסר לרשום?" prompt (2 copy variants, user-test to pick); exclude flagged days from adaptive calc. MacroFactor's quiet superpower.
+- [ ] **D3 — Pause mode ("הפסקה")** (M, NEW — research) — 3–14 day vacation/illness flag; algorithm freezes updates; preserves trend weight on re-entry. Gap across all 4 competitors.
+- [ ] **D4 — Weekly Hebrew check-in UI** (L, upgraded from M) — 3-screen flow (trend → recommendation → decision). Friday-evening default, defer to Sat/Sun. 3-emoji reflection input (hunger / energy / consistency). Menstrual flag input (female users). Skip-weigh-in tolerance (use last trend). Accept / switch-to-maintenance / keep-as-is actions. **Strict: no adherence gate, no red/shame colors** (Invariants #1, #2).
+- [ ] **D5 — Weekly check-in copy-variation table** (M, NEW — research, v1 gate) — `src/data/checkInCopy.ts` data-driven structure; ≥10 variants × 10 scenarios (on-track, plateau, fast-loss, slow-loss, over-target-week, under-target-week, first-check-in, post-pause, post-cycle-week, skipped-weigh-in). Neutral-pattern-surfacing strings reviewed for covert-grading risk. Native-Hebrew-speaker + dietitian review before ship.
+- [ ] **D6 — ⚡ Daily weigh-in HealthKit integration** (M, parallel) — `expo-health` or equivalent; manual-entry fallback.
+
+**Track E — Data accuracy ⚡ (parallel with eng)**
+
+- [ ] **E1 — ⚡ 💰 Dietitian-verified gold list (~300 foods)** (L, external) — Audit against 3 sources (Ministry of Health, manufacturer label, USDA). Hard gate for v1 ship.
+- [ ] **E1b — ⚡ Pre-built Israeli composite dishes (15–20 entries)** (M, NEW — research, parallel track equal weight to E1) — Curate list via Israeli-user validation (starter: סביח, שקשוקה, שווארמה, בורקס, מלאווח, חומוס בול, פלאפל צלחת, פסטה בולונז, פיצה משולש, ארוחת שבת, פיתה נקניק, טוסט גבינה, כריך, מוזלי, יוגורט גרנולה). Dietitian macro-verified per dish. Photography + hand-portion mapping. Restaurant variants where applicable.
+- [ ] **E2 — Internal consistency auto-scan** (S) — `4P + 4C + 9F ≈ kcal ± 8%` validator on every DB ingest. Fails loudly.
+- [ ] **E3 — Serving-unit tables for gold list** (M) — Per-food natural units + grams + hand-portion mapping.
+- [ ] **E4 — Hand-portion visual tokens** (S, design+code) — Palm / cupped-hand / thumb / unit icons mapped per food category.
+- [ ] **E5 — User error-reporting + review queue** (M) — "דווח על טעות" on every food entry; admin review flow.
+- [ ] **E6 — Restaurant meal entry flow** (M, NEW — research) — "מסעדה" tag + confidence-slider estimate + brand/chain search fallback (McDonald's IL, Aroma, etc.). Gap across all 4 competitors.
+
+**Track F — Polish & v1 gate**
+
+- [ ] **F1 — Kosher / Shabbat filter polish + miluim stub** (M) — Eating window auto-block Friday evening / Saturday; milchig-fleishig ⚠ inline warning; miluim mode = placeholder toggle in settings.
+- [ ] **F2 — Mode-switch edge-case QA sweep** (M) — Mid-day switches, mid-meal switches, data carryover.
+- [ ] **F3 — Full end-to-end manual test plan** (S) — Beginner (Structured) + intermediate (Free) walkthroughs on iOS simulator.
+- [ ] **F4 — v1 launch gate** — E1 dietitian sign-off + all tracks green + app store metadata.
+
+**Open decisions to resolve before / during this epic:**
+
+_Carried forward:_
+
+1. Dietitian sourcing (hire part-time / contract per-food / existing nutrition service)
+2. Mode-switch mid-day behavior (current day stays in old mode, next day = new mode — provisional)
+3. v1 gamification depth (minimal: just day-count "X ימים רצופים")
+4. Subscription pricing ₪30 / ₪40 / ₪50; free tier limits (constrained by Invariant #4 — logging verbs stay free)
+5. Analytics — track mode choice (with default-rubber-stamp detection, see A1-analytics), step skip, escape usage, chip vs custom gram, weekly-check-in decision distribution, partial-logging prompt accept rate
+
+_Research-derived (need user-testing before commit):_
+
+6. Time-window grouping in Free mode — pure timeline vs. soft windows vs. named meal slots (test 2 beginner + 2 intermediate per variant)
+7. Weekly check-in day/time — Friday evening (Shabbat reset) vs. Sunday morning
+8. "הפסקה" copy and trigger — "הפסקה" vs "יום חופש" vs "חופשה"
+9. Partial-logging prompt wording — "האם חסר לרשום?" vs "היום היה יום של מעט אוכל?"
+10. Adherence display language — "רשמת 5/7 ימים" vs "רשום היטב" vs no display (pattern ≠ grade is tonally fragile)
+11. Mode-choice onboarding copy — intent framing _"אני רוצה תוכנית"_ vs _"אני רוצה מעקב"_ with side-by-side screenshots
+12. Pre-built mixed dishes — final 15–20 list needs Israeli-user validation
+13. Pause mode max duration — 14 days vs 30 (algorithm-sim testing needed)
+14. Barcode-free rule vs. monetization reality — finance sim before public commitment
+15. Partial-logging anomaly threshold — 50% of trend-average; needs Israeli-eating-pattern user-test (Yom Kippur, Pesach, Ramadan)
+
+---
+
 - [x] **Barcode scanning** — expo-camera CameraView in FoodSearchSheet, barcode icon in search row, getByBarcode() local DB lookup (sh*/rl*/raw*/manual* tiers), Open Food Facts fallback with normalizeOffProduct(), manual\_<ean> persistence, partial-data badge in PortionPicker, permission-denied → Settings deep-link (2026-04-15)
 
 - [x] **Manual-create food from text-search "no results" + foodRepository strict-insert invariant (2026-04-18)** — `src/shared/normalizeEan.{ts,test.ts}` (new pure helper: trim + digit-strip, 6 tests). `src/db/food-repository.{ts,test.ts}` renames `insertFood` → `upsertFood` (INSERT OR REPLACE semantics — for OFF refresh overwrite path) and adds `insertFoodStrict` (pre-checks via `getById`, throws tagged `FoodCollisionError` carrying the existing `FoodItem`). `src/components/nutrition/ManualFoodForm.{tsx,test.tsx}` now supports a second entry mode: when `ean` prop is omitted, renders an optional EAN TextInput at top + prefills `nameHe` from new `initialNameHe` prop; id becomes `manual_<digits>` (digits stripped from typed EAN) or `manual_<uuid>` via `expo-crypto.randomUUID()` when no digits. `src/components/nutrition/ManualFoodCollisionSheet.{tsx,test.tsx}` (new, 4 tests) — three-action confirm: "השתמש במוצר הקיים" (default, routes to existing food in PortionPicker), "החלף בנתונים החדשים" (calls upsertFood on the new food), "ביטול" (sheet closes, form stays with values preserved). `src/components/nutrition/FoodSearchSheet.{tsx,test.tsx}` wires the always-visible "הוסף מאכל אישי" button (placeholder since PR #40) to open the form with the search query prefilled; catches `FoodCollisionError` from `insertFoodStrict` → renders collision sheet (nested INSIDE the form Modal for iOS z-ordering). `BarcodeScannerSheet.handleManualSubmit` switches to `insertFoodStrict` (defense in depth; scanner's `getByBarcode` pre-check already rules out collision on that path). `scan-resolver.ts` deps field renamed `insertFood` → `upsertFood` with comment explaining OFF refresh is the legitimate overwrite path. Async setState race guarded via `formAliveRef` (useRef pattern from lessons.md 2026-04-10). i18n: new `manualFood.eanInput*` + `manualFood.collision.*` keys in he/en. `expo-crypto` mocked globally in `jest.setup.ts`. Spec: `docs/specs/2026-04-18-text-search-manual-create.md`. +30 tests (6 normalizeEan + 5 foodRepository + 8 ManualFoodForm + 4 ManualFoodCollisionSheet + 7 FoodSearchSheet), 2,269 tests total.

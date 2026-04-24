@@ -134,8 +134,11 @@ export const useUserStore = create<UserStore>((set, get) => ({
     }
 
     // Derive exerciseDaysPerWeek from selected training days
+    // Default mealLoggingMode to 'structured' — mode-choice screen sets it explicitly,
+    // but this guard keeps legacy/partial drafts saving without validation failure.
     const resolvedDraft = {
       ...draft,
+      mealLoggingMode: draft.mealLoggingMode ?? 'structured',
       lifestyle: {
         ...draft.lifestyle,
         exerciseDaysPerWeek: draft.trainingDays!.length,
