@@ -9,6 +9,7 @@ import type {
   DayOfWeek,
   EquipmentItem,
   LifestyleProfile,
+  MealLoggingMode,
   SessionDuration,
   TrainingLocation,
   UserEquipment,
@@ -44,6 +45,7 @@ interface UserProfileRow {
   exercise_intensity: string
   sleep_hours_per_night: number
   workout_time: string
+  meal_logging_mode: string
 }
 
 /** Maps a database row to a UserProfile domain object */
@@ -80,6 +82,7 @@ function rowToProfile(row: UserProfileRow): UserProfile {
     equipment,
     lifestyle,
     workoutTime: row.workout_time as WorkoutTime,
+    mealLoggingMode: row.meal_logging_mode as MealLoggingMode,
   }
 }
 
@@ -143,6 +146,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
           session_duration_minutes = ?, exercise_intensity = ?,
           sleep_hours_per_night = ?,
           workout_time = ?,
+          meal_logging_mode = ?,
           updated_at = ?
         WHERE id = ?`,
         [
@@ -166,6 +170,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
           ls.exerciseIntensity,
           ls.sleepHoursPerNight,
           data.workoutTime,
+          data.mealLoggingMode,
           now,
           existing.id,
         ],
@@ -185,8 +190,9 @@ class UserRepository extends BaseRepository<UserProfileRow> {
         exercise_days_per_week, exercise_type,
         session_duration_minutes, exercise_intensity,
         sleep_hours_per_night, workout_time,
+        meal_logging_mode,
         created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         id,
         data.name,
@@ -209,6 +215,7 @@ class UserRepository extends BaseRepository<UserProfileRow> {
         ls.exerciseIntensity,
         ls.sleepHoursPerNight,
         data.workoutTime,
+        data.mealLoggingMode,
         now,
         now,
       ],

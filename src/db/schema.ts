@@ -11,7 +11,7 @@
  */
 
 /** Current schema version — increment when modifying tables */
-export const SCHEMA_VERSION = 19
+export const SCHEMA_VERSION = 20
 
 /**
  * All CREATE TABLE statements.
@@ -43,7 +43,8 @@ export const CREATE_TABLE_STATEMENTS: readonly string[] = [
     exercise_intensity TEXT NOT NULL CHECK (exercise_intensity IN ('light', 'moderate', 'intense')),
     sleep_hours_per_night REAL NOT NULL,
     coach_marks_completed INTEGER NOT NULL DEFAULT 0,
-    workout_time TEXT NOT NULL DEFAULT 'flexible' CHECK (workout_time IN ('morning', 'evening', 'flexible'))
+    workout_time TEXT NOT NULL DEFAULT 'flexible' CHECK (workout_time IN ('morning', 'evening', 'flexible')),
+    meal_logging_mode TEXT NOT NULL DEFAULT 'structured' CHECK (meal_logging_mode IN ('structured', 'free'))
   )`,
 
   // ── Workout Plan (generated from algorithm) ──

@@ -112,6 +112,9 @@ async function runMigrations(db: SQLite.SQLiteDatabase): Promise<void> {
     if (currentVersion < 19) {
       await migrateToV19(db)
     }
+    if (currentVersion < 20) {
+      await migrateToV20(db)
+    }
 
     // Update version
     await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`)
@@ -607,6 +610,24 @@ async function migrateToV19(db: SQLite.SQLiteDatabase): Promise<void> {
   }
 
   console.log(`[Database] v19: Seeded ${seed.length} Tiv Taam foods (with origin_country)`)
+}
+
+/**
+ * v20: Add meal_logging_mode column to user_profile.
+ *
+ * Powers the Structured ("אני רוצה תוכנית") vs Free ("אני רוצה מעקב") split.
+ * Default 'structured' so legacy profiles migrate into the guided path
+ * (can switch in Settings anytime — see mode-choice onboarding screen).
+ */
+async function migrateToV20(db: SQLite.SQLiteDatabase): Promise<void> {
+  const columns = await db.getAllAsync<{ name: string }>(`PRAGMA table_info(user_profile)`)
+  const existing = new Set(columns.map((c) => c.name))
+
+  if (!existing.has('meal_logging_mode')) {
+    await db.execAsync(
+      `ALTER TABLE user_profile ADD COLUMN meal_logging_mode TEXT NOT NULL DEFAULT 'structured' CHECK (meal_logging_mode IN ('structured', 'free'))`,
+    )
+  }
 }
 
 /**

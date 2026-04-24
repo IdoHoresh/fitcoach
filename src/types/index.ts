@@ -18,6 +18,7 @@ export type {
   ExerciseType,
   SessionDuration,
   LifestyleProfile,
+  MealLoggingMode,
   UserProfile,
   NutritionTargets,
   TdeeBreakdown,

@@ -9,7 +9,7 @@ import { MaterialIcons } from '@expo/vector-icons'
  * MaterialIcons names (e.g. "arrow-back") pass through unchanged.
  */
 
-type IconName =
+export type IconName =
   | 'fitness-center'
   | 'arrow-back'
   | 'arrow-forward'

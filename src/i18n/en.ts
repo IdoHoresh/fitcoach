@@ -168,6 +168,65 @@ export const en: TranslationKeys = {
       step4: 'Factoring food digestion...',
       step5: 'Building your plan...',
     },
+    modeChoice: {
+      title: 'How do you want to track your food?',
+      subtitle: "There's no wrong answer — you can switch anytime in Settings.",
+      continue: 'Continue',
+      back: 'Back',
+      infoAccessibilityLabel: 'More information',
+      structured: {
+        title: 'I want a plan',
+        subtitle: 'A target per meal · guided step by step',
+        calloutLabel: 'Meal target',
+        previewLabel: 'Plan mode preview',
+      },
+      free: {
+        title: 'I want to track',
+        subtitle: 'One daily target · log freely',
+        calloutLabel: 'Daily target',
+        previewLabel: 'Track mode preview',
+      },
+      sheet: {
+        close: 'Close',
+        sectionGet: 'What you get',
+        sectionHow: 'How it works',
+        sectionFit: 'Good fit if',
+      },
+      sheetStructured: {
+        header: 'Plan — guidance per meal',
+        intro:
+          'The app splits your daily target into meals and guides you to pick foods that fit each one. Good fit if you want structure and not to decide from scratch every time.',
+        get: [
+          'A target per meal — protein, carbs, and fat separately',
+          'Step-by-step picks — first protein, then carbs, then fat',
+          'A slider in real-world units — ½ chicken breast, not just grams',
+        ],
+        how: 'Tap "Breakfast" → app suggests proteins → pick an egg + yogurt → slider fills to target → move to carbs → finish with fat.',
+        fit: [
+          'You want a clear framework',
+          'You prefer the app to suggest foods',
+          'You want step-by-step guidance',
+        ],
+        footer: 'You can switch to "Track" anytime in Settings.',
+      },
+      sheetFree: {
+        header: 'Track — flexible daily target',
+        intro:
+          'One daily calorie + macro target. You eat what you want, log it, the app totals. No meal slots, no "your next meal" prompts.',
+        get: [
+          'One daily target — calories, protein, carbs, and fat, no meal splits',
+          'One list — everything you ate, ordered by time of day',
+          'One tap to log — chips for known portions, no messing with grams',
+        ],
+        how: 'You open the app at noon → "Add what you ate" → search "hummus sandwich" → tap "whole sandwich" → logged. Daily target updates live.',
+        fit: [
+          'You usually know what you eat',
+          'You prefer full flexibility',
+          'You prefer logging without meal slots',
+        ],
+        footer: 'You can switch to "Plan" anytime in Settings.',
+      },
+    },
     result: {
       title: 'Your Plan is Ready!',
       split: 'Training Split',
