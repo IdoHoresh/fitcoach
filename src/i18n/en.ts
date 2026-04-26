@@ -643,4 +643,12 @@ export const en: TranslationKeys = {
       cancel: 'Cancel',
     },
   },
+  settings: {
+    mealLoggingMode: {
+      title: 'Meal logging mode',
+      subtitleStructured: 'Structured — per-meal targets',
+      subtitleFree: 'Free — daily target',
+      sheetTitle: 'How do you want to track food?',
+    },
+  },
 } as const

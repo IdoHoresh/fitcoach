@@ -297,6 +297,10 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 - **Transactional symmetry: if the insert is transactional, the undo must be too.** `cloneEntriesToDate` wraps N INSERTs in `withTransactionAsync`. An undo implemented as a `for...of deleteById(id)` loop breaks that symmetry — a mid-loop crash leaves some rows deleted and others not, corrupting the meal. Add `deleteManyByIds(ids[])` with the matching `withTransactionAsync` wrapper. Rule: paired bulk operations (insert+undo, save+rollback) share transaction semantics. (2026-04-23)
 - **Components must not call repositories directly when a store already mediates the same data.** A second path to the DB splits error handling, bypasses store-level caching, and forces components to re-derive things the store could hold once. If new data is needed from the repo, add a store action + state field; components subscribe. Enforced by grep for `foodLogRepository\.` / `foodRepository\.` / etc. outside `src/db/` and `src/stores/`. (2026-04-23)
 
+## Testing — RNTL queries
+
+- **`accessibilityViewIsModal` siblings hide from `screen.getByTestId`.** A bottom-sheet `Modal` whose content view sets `accessibilityViewIsModal` makes RNTL treat the modal subtree as the sole accessibility container — sibling elements (like a backdrop `Pressable` with its own `testID`) become unreachable via `screen.getByTestId`, even though the testID is clearly present in the render tree. Workaround: `screen.UNSAFE_root.findAll((n) => n.props?.testID === 'x')` to bypass the a11y filter. Same pattern would bite any sibling-of-modal that needs a testID query in tests. (2026-04-27)
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
