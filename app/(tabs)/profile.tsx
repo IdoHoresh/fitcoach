@@ -1,12 +1,16 @@
+import { useState } from 'react'
 import { View, Text, StyleSheet, Alert } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { colors, spacing, fontSize } from '@/theme'
 import { t } from '@/i18n'
 import { Button } from '@/components/Button'
+import { SettingsRow } from '@/components/settings/SettingsRow'
+import { ModeToggleSheet } from '@/components/settings/ModeToggleSheet'
 import { useNutritionStore } from '@/stores/useNutritionStore'
+import { useUserStore } from '@/stores/useUserStore'
 import { useWorkoutStore } from '@/stores/useWorkoutStore'
 import { todayISO } from '@/utils/date'
-import type { DayOfWeek } from '@/types/user'
+import type { DayOfWeek, MealLoggingMode } from '@/types/user'
 import type { FoodLogEntry, DailyNutritionSummary } from '@/types/nutrition'
 import type { WorkoutLog } from '@/types/workout'
 // Relative import: `src/dev/` was added after Metro's initial cache build
@@ -232,10 +236,44 @@ function handleDevReset() {
 }
 
 export default function ProfileScreen() {
+  const profile = useUserStore((s) => s.profile)
+  const updateProfile = useUserStore((s) => s.updateProfile)
+  const [modeSheetVisible, setModeSheetVisible] = useState(false)
+  const strings = t().settings.mealLoggingMode
+
+  const currentMode: MealLoggingMode = profile?.mealLoggingMode ?? 'structured'
+  const modeSubtitle =
+    currentMode === 'structured' ? strings.subtitleStructured : strings.subtitleFree
+
+  const handleModeSelect = (next: MealLoggingMode) => {
+    if (next !== currentMode) {
+      void updateProfile({ mealLoggingMode: next })
+    }
+  }
+
   return (
     <View style={styles.container}>
       <Ionicons name="person-outline" size={64} color={colors.primary} />
       <Text style={styles.title}>{t().tabs.profile}</Text>
+
+      {profile ? (
+        <View style={styles.settingsSection}>
+          <SettingsRow
+            label={strings.title}
+            subtitle={modeSubtitle}
+            onPress={() => setModeSheetVisible(true)}
+            testID="settings-meal-logging-mode-row"
+          />
+        </View>
+      ) : null}
+
+      <ModeToggleSheet
+        visible={modeSheetVisible}
+        currentMode={currentMode}
+        onSelect={handleModeSelect}
+        onClose={() => setModeSheetVisible(false)}
+        testID="settings-mode-toggle-sheet"
+      />
 
       {__DEV__ ? (
         <View style={styles.devSection}>
@@ -301,5 +339,10 @@ const styles = StyleSheet.create({
     color: colors.textMuted,
     textTransform: 'uppercase',
     letterSpacing: 1,
+  },
+  settingsSection: {
+    marginTop: spacing.lg,
+    width: '88%',
+    gap: spacing.sm,
   },
 })

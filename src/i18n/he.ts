@@ -645,6 +645,14 @@ export const he = {
       cancel: 'ביטול',
     },
   },
+  settings: {
+    mealLoggingMode: {
+      title: 'מצב יומן ארוחות',
+      subtitleStructured: 'תוכנית — יעד לכל ארוחה',
+      subtitleFree: 'מעקב — יעד יומי גמיש',
+      sheetTitle: 'איך בא לך לעקוב אחרי האוכל?',
+    },
+  },
 } as const
 
 /** Deep structure type — allows different string values per language */
