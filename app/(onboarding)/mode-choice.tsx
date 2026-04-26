@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useRef, useState } from 'react'
 import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -16,7 +16,10 @@ import {
 } from '@/components/onboarding/ModeInfoSheet'
 import { StructuredModePreview } from '@/components/onboarding/previews/StructuredModePreview'
 import { FreeModePreview } from '@/components/onboarding/previews/FreeModePreview'
+import { track } from '@/analytics/track'
 import type { MealLoggingMode } from '@/types'
+
+const DEFAULT_MODE: MealLoggingMode = 'structured'
 
 const STEP = 12
 const TOTAL_STEPS = 13
@@ -44,8 +47,9 @@ export default function ModeChoiceScreen() {
   const draft = useUserStore((s) => s.draft)
   const updateDraft = useUserStore((s) => s.updateDraft)
 
-  const [selected, setSelected] = useState<MealLoggingMode>(draft.mealLoggingMode ?? 'structured')
+  const [selected, setSelected] = useState<MealLoggingMode>(draft.mealLoggingMode ?? DEFAULT_MODE)
   const [sheet, setSheet] = useState<SheetKind>(null)
+  const mountedAt = useRef(Date.now())
 
   const structuredSheet: ModeSheetContent = useMemo(
     () => ({
@@ -89,6 +93,12 @@ export default function ModeChoiceScreen() {
 
   const handleContinue = useCallback(() => {
     updateDraft({ mealLoggingMode: selected })
+    track({
+      type: 'mode_choice_picked',
+      mode: selected,
+      time_to_pick_ms: Date.now() - mountedAt.current,
+      changed_from_default: selected !== DEFAULT_MODE,
+    })
     router.push('/(onboarding)/calculating')
   }, [router, selected, updateDraft])
 

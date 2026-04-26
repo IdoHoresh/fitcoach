@@ -33,6 +33,22 @@ jest.mock('expo-camera', () => {
   }
 })
 
+// expo-linear-gradient pulls in expo-modules-core (not test-compatible). Render
+// as a View so screens that include gradient backgrounds can mount in tests.
+jest.mock('expo-linear-gradient', () => {
+  const React = jest.requireActual('react')
+  const { View } = jest.requireActual('react-native')
+  return {
+    LinearGradient: ({
+      children,
+      ...props
+    }: {
+      children?: React.ReactNode
+      [key: string]: unknown
+    }) => React.createElement(View, props, children),
+  }
+})
+
 // @expo/vector-icons pulls in expo-modules-core which is not test-compatible.
 // Render icon families as plain Views so components can import them safely.
 jest.mock('@expo/vector-icons', () => {

@@ -9,6 +9,7 @@ import { ModeToggleSheet } from '@/components/settings/ModeToggleSheet'
 import { useNutritionStore } from '@/stores/useNutritionStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWorkoutStore } from '@/stores/useWorkoutStore'
+import { track } from '@/analytics/track'
 import { todayISO } from '@/utils/date'
 import type { DayOfWeek, MealLoggingMode } from '@/types/user'
 import type { FoodLogEntry, DailyNutritionSummary } from '@/types/nutrition'
@@ -17,6 +18,8 @@ import type { WorkoutLog } from '@/types/workout'
 // and this is a single dev-only consumer — a relative path is simpler than
 // asking contributors to `expo start --clear` on first pull.
 import { resetApp } from '../../src/dev/resetApp'
+
+const MS_PER_DAY = 86_400_000
 
 // ── Dev helpers ──────────────────────────────────────────────────
 //
@@ -246,8 +249,17 @@ export default function ProfileScreen() {
     currentMode === 'structured' ? strings.subtitleStructured : strings.subtitleFree
 
   const handleModeSelect = (next: MealLoggingMode) => {
-    if (next !== currentMode) {
-      void updateProfile({ mealLoggingMode: next })
+    if (next === currentMode) return
+    void updateProfile({ mealLoggingMode: next })
+    if (profile) {
+      const onboardedAt = new Date(profile.createdAt).getTime()
+      const daysSinceOnboarding = Math.floor((Date.now() - onboardedAt) / MS_PER_DAY)
+      track({
+        type: 'mode_switched_in_settings',
+        from: currentMode,
+        to: next,
+        days_since_onboarding: daysSinceOnboarding,
+      })
     }
   }
 
