@@ -189,4 +189,37 @@ describe('Slider', () => {
     expect(queryAllByTestId(/^slider-pill-/)).toHaveLength(0)
     expect(queryAllByTestId(/^slider-tick-/)).toHaveLength(0)
   })
+
+  it('exposes accessibilityValue on the thumb (min, max, now, text) for VoiceOver', () => {
+    const { getByTestId } = render(
+      <Slider food={chickenRaw} grams={150} onChange={() => {}} testID="slider" />,
+    )
+    const thumb = getByTestId('slider-thumb')
+    // chicken_breast_raw curated ticks span 50–300g. Thumb at 150g.
+    expect(thumb.props.accessibilityRole).toBe('adjustable')
+    expect(thumb.props.accessibilityValue).toEqual(
+      expect.objectContaining({ min: 50, max: 300, now: 150 }),
+    )
+    expect(typeof thumb.props.accessibilityValue.text).toBe('string')
+    expect(thumb.props.accessibilityHint).toBeTruthy()
+  })
+
+  it('labels the active toggle pill with the current-selection prefix for VoiceOver', () => {
+    const { UNSAFE_root } = render(
+      <Slider
+        food={chickenRaw}
+        grams={150}
+        onChange={() => {}}
+        variant={{ food: chickenCooked, label: 'מבושל' }}
+        onVariantChange={() => {}}
+        testID="slider"
+      />,
+    )
+    // chickenRaw → variantState = 'raw' → label is "<currentSelection>: <raw>"
+    const labels = UNSAFE_root.findAll((node: { props?: Record<string, unknown> }) => {
+      const label = node.props?.accessibilityLabel
+      return typeof label === 'string' && label.includes('נא')
+    })
+    expect(labels.length).toBeGreaterThan(0)
+  })
 })
