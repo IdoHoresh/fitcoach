@@ -442,6 +442,8 @@ export const en: TranslationKeys = {
     slider: {
       gramsAbbreviated: 'g',
       approximately: '≈',
+      thumbHint: 'Drag to adjust portion. Each tick gives a short haptic.',
+      currentSelection: 'Current selection',
       cookedRaw: {
         raw: 'Raw',
         cooked: 'Cooked',

@@ -442,6 +442,8 @@ export const he = {
     slider: {
       gramsAbbreviated: 'גר׳',
       approximately: '≈',
+      thumbHint: 'גרור להתאמת מנה. כל סימון מספק רטט קצר.',
+      currentSelection: 'בחירה נוכחית',
       cookedRaw: {
         raw: 'נא',
         cooked: 'מבושל',

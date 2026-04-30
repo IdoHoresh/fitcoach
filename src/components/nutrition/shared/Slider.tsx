@@ -262,6 +262,16 @@ export function Slider({
           <Animated.View
             style={[styles.thumb, animatedThumbStyle]}
             testID={testID ? `${testID}-thumb` : undefined}
+            accessible={true}
+            accessibilityRole="adjustable"
+            accessibilityLabel={food.nameHe}
+            accessibilityHint={strings.thumbHint}
+            accessibilityValue={{
+              min: minGrams,
+              max: maxGrams,
+              now: grams,
+              text: currentLabel,
+            }}
           />
         </View>
       </GestureDetector>
@@ -282,11 +292,16 @@ export function Slider({
         </View>
       )}
 
-      {/* Cooked/raw toggle */}
+      {/* Cooked/raw toggle. RTL: framework forces I18nManager.isRTL=true
+          globally; flexDirection: 'row' flips automatically (per project
+          RTL architecture — no per-component isRTL() conditionals). */}
       {variant && (
         <View style={styles.toggleRow} testID={testID ? `${testID}-toggle` : undefined}>
           {variantState && (
-            <View style={[styles.togglePill, styles.togglePillActive]}>
+            <View
+              style={[styles.togglePill, styles.togglePillActive]}
+              accessibilityLabel={`${strings.currentSelection}: ${strings.cookedRaw[variantState]}`}
+            >
               <Text style={styles.togglePillTextActive}>{strings.cookedRaw[variantState]}</Text>
             </View>
           )}
@@ -294,6 +309,7 @@ export function Slider({
             style={styles.togglePill}
             onPress={() => onVariantChange?.(variant.food)}
             accessibilityRole="button"
+            accessibilityLabel={variant.label}
             testID={testID ? `${testID}-toggle-pill` : undefined}
           >
             <Text style={styles.togglePillText}>{variant.label}</Text>
