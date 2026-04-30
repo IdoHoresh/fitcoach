@@ -42,6 +42,7 @@ function serving(nameHe: string, nameEn: string, unit: ServingUnit, grams: numbe
 export const CHICKEN_BREAST_RAW = createFood({
   nameHe: 'חזה עוף (נא)',
   nameEn: 'Chicken Breast (raw)',
+  slug: 'chicken_breast_raw',
   category: 'protein',
   caloriesPer100g: 120,
   proteinPer100g: 23,
@@ -57,6 +58,7 @@ export const CHICKEN_BREAST_RAW = createFood({
 export const CHICKEN_BREAST = createFood({
   nameHe: 'חזה עוף (מבושל)',
   nameEn: 'Chicken Breast (cooked)',
+  slug: 'chicken_breast_cooked',
   category: 'protein',
   caloriesPer100g: 165,
   proteinPer100g: 31,
@@ -111,6 +113,7 @@ export const GROUND_TURKEY = createFood({
 export const EGGS = createFood({
   nameHe: 'ביצה',
   nameEn: 'Egg (whole)',
+  slug: 'egg',
   category: 'protein',
   caloriesPer100g: 155,
   proteinPer100g: 13,
@@ -141,6 +144,7 @@ export const EGG_WHITES = createFood({
 export const CANNED_TUNA = createFood({
   nameHe: 'טונה בקופסה (במים)',
   nameEn: 'Canned Tuna (in water)',
+  slug: 'tuna_water',
   category: 'protein',
   caloriesPer100g: 116,
   proteinPer100g: 26,
@@ -258,6 +262,7 @@ export const TOFU = createFood({
 export const COTTAGE_5 = createFood({
   nameHe: 'קוטג׳ 5%',
   nameEn: 'Cottage Cheese 5%',
+  slug: 'cottage_5pct',
   category: 'protein',
   caloriesPer100g: 98,
   proteinPer100g: 11,
@@ -288,6 +293,7 @@ export const COTTAGE_9 = createFood({
 export const GREEK_YOGURT = createFood({
   nameHe: 'יוגורט יווני',
   nameEn: 'Greek Yogurt (0%)',
+  slug: 'greek_yogurt_0pct',
   category: 'protein',
   caloriesPer100g: 59,
   proteinPer100g: 10,
@@ -333,6 +339,7 @@ export const LABNEH = createFood({
 export const WHITE_CHEESE_5 = createFood({
   nameHe: 'גבינה לבנה 5%',
   nameEn: 'White Cheese 5%',
+  slug: 'white_cheese_5pct',
   category: 'protein',
   caloriesPer100g: 89,
   proteinPer100g: 12,
@@ -367,6 +374,7 @@ export const BEEF_SHAWARMA = createFood({
 export const WHITE_RICE = createFood({
   nameHe: 'אורז לבן (מבושל)',
   nameEn: 'White Rice (cooked)',
+  slug: 'rice_cooked',
   category: 'carbs',
   caloriesPer100g: 130,
   proteinPer100g: 2.7,
@@ -403,6 +411,7 @@ export const WHOLE_WHEAT_PASTA = createFood({
 export const REGULAR_PASTA = createFood({
   nameHe: 'פסטה (מבושלת)',
   nameEn: 'Pasta (cooked)',
+  slug: 'pasta_cooked',
   category: 'carbs',
   caloriesPer100g: 131,
   proteinPer100g: 5,
@@ -415,6 +424,7 @@ export const REGULAR_PASTA = createFood({
 export const PITA_BREAD = createFood({
   nameHe: 'פיתה לבנה',
   nameEn: 'Pita Bread (white)',
+  slug: 'pita',
   category: 'carbs',
   caloriesPer100g: 275,
   proteinPer100g: 9,
@@ -460,6 +470,7 @@ export const CHALLAH = createFood({
 export const WHITE_BREAD = createFood({
   nameHe: 'לחם לבן',
   nameEn: 'White Bread',
+  slug: 'bread_white',
   category: 'carbs',
   caloriesPer100g: 265,
   proteinPer100g: 9,
@@ -490,6 +501,7 @@ export const WHOLE_WHEAT_BREAD = createFood({
 export const OATS = createFood({
   nameHe: 'שיבולת שועל',
   nameEn: 'Oats (dry)',
+  slug: 'oatmeal_dry',
   category: 'carbs',
   caloriesPer100g: 389,
   proteinPer100g: 17,
@@ -644,6 +656,7 @@ export const CUCUMBER = createFood({
 export const TOMATO = createFood({
   nameHe: 'עגבנייה',
   nameEn: 'Tomato',
+  slug: 'tomato',
   category: 'vegetables',
   caloriesPer100g: 18,
   proteinPer100g: 0.9,
@@ -846,6 +859,7 @@ export const BEET = createFood({
 export const BANANA = createFood({
   nameHe: 'בננה',
   nameEn: 'Banana',
+  slug: 'banana',
   category: 'fruits',
   caloriesPer100g: 89,
   proteinPer100g: 1.1,
@@ -861,6 +875,7 @@ export const BANANA = createFood({
 export const APPLE = createFood({
   nameHe: 'תפוח',
   nameEn: 'Apple',
+  slug: 'apple',
   category: 'fruits',
   caloriesPer100g: 52,
   proteinPer100g: 0.3,
@@ -994,6 +1009,7 @@ export const POMEGRANATE = createFood({
 export const MILK_3 = createFood({
   nameHe: 'חלב 3%',
   nameEn: 'Milk 3%',
+  slug: 'milk_3pct',
   category: 'dairy',
   caloriesPer100g: 60,
   proteinPer100g: 3.2,
@@ -1106,6 +1122,7 @@ export const HALLOUMI = createFood({
 export const OLIVE_OIL = createFood({
   nameHe: 'שמן זית',
   nameEn: 'Olive Oil',
+  slug: 'olive_oil',
   category: 'fats',
   caloriesPer100g: 884,
   proteinPer100g: 0,
@@ -1121,6 +1138,7 @@ export const OLIVE_OIL = createFood({
 export const TAHINI = createFood({
   nameHe: 'טחינה גולמית',
   nameEn: 'Raw Tahini',
+  slug: 'tahini',
   category: 'fats',
   caloriesPer100g: 595,
   proteinPer100g: 17,
@@ -1151,6 +1169,7 @@ export const TAHINI_PREPARED = createFood({
 export const AVOCADO = createFood({
   nameHe: 'אבוקדו',
   nameEn: 'Avocado',
+  slug: 'avocado',
   category: 'fats',
   caloriesPer100g: 160,
   proteinPer100g: 2,
@@ -1166,6 +1185,7 @@ export const AVOCADO = createFood({
 export const ALMONDS = createFood({
   nameHe: 'שקדים',
   nameEn: 'Almonds',
+  slug: 'almonds',
   category: 'fats',
   caloriesPer100g: 579,
   proteinPer100g: 21,

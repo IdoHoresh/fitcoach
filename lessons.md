@@ -301,6 +301,18 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 
 - **`accessibilityViewIsModal` siblings hide from `screen.getByTestId`.** A bottom-sheet `Modal` whose content view sets `accessibilityViewIsModal` makes RNTL treat the modal subtree as the sole accessibility container — sibling elements (like a backdrop `Pressable` with its own `testID`) become unreachable via `screen.getByTestId`, even though the testID is clearly present in the render tree. Workaround: `screen.UNSAFE_root.findAll((n) => n.props?.testID === 'x')` to bypass the a11y filter. Same pattern would bite any sibling-of-modal that needs a testID query in tests. (2026-04-27)
 
+## Portion Data — Hebrew & Israeli Retail Conventions (2026-04-30)
+
+- **`חופן` (handful) implies a cupped-hand gesture, not a thumb-portion.** Mixing `handPortion: 'thumb'` with a tick labeled `חופן` puts a contradictory icon next to the value. For thumb-register foods (oils, tahini, nuts), label larger ticks by count (`~40 שקדים`) or weight, not by hand gesture. Discovered while reviewing serving-ticks data for almonds — 50g is genuinely handful-range, but the icon enum has no nut-friendly cupped-hand variant in scope.
+- **`אונקיה` (ounce) is not natural Israeli kitchen language.** USDA's 28g/1-oz label convention reads as foreign in Hebrew UI. Use count (`~25 שקדים`) or grams. Trap when porting USDA-derived portion data.
+- **Israeli Greek yogurt single-serve = 150g, not 200g.** Tara/Yotvata `עשיר` cups are 150g. Anchors based on multiples of 200g imply a container size that does not exist in IL retail. For yogurt portions, snap ticks to multiples of the actual cup grammage.
+- **Rolled oats density: 1 IL כוס (240ml) ≈ 90g, not 80g.** USDA's 80g/cup figure assumes quick oats (denser). For fitness-app context where rolled oats dominate, use 90g. The 10g delta compounds at 1.5 cups.
+- **Cooked-vs-raw label asymmetry across slider toggle.** When two foods share gram values across a raw/cooked toggle (Q1b: grams stay, macros swap), make the natural-portion labels parallel at shared gram marks (`½ חזה` on both, not `½ חזה קטן` on raw + `½ חזה` on cooked). Asymmetric qualifiers feel like the toggle did something it didn't.
+
+## Review — Localized Data Files
+
+- **`/review` on portion-data files needs a Hebrew + Israeli-context reviewer to be useful.** Structural integrity tests (slug coverage, tick monotonicity, primary count) catch shape errors but say nothing about whether `חופן` makes sense at 50g, or whether `אונקיה` reads as Hebrew. The code-reviewer agent caught 4 should-fixes and 2 nits on a file the integrity tests rated 100% green. Pattern: when shipping localized data, /review against the target locale even if the structure tests pass. (2026-04-30)
+
 ## Open Questions
 
 - Navigation: stack-based onboarding → tab-based main app?
