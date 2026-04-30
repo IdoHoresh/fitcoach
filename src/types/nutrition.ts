@@ -48,6 +48,10 @@ export interface FoodItem {
 
   // Common serving sizes for quick-add
   readonly servingSizes: readonly ServingSize[]
+
+  // Stable identifier for serving-ticks lookup (only set on curated foods).
+  // Sequence-counter `id` shifts on reorder; `slug` does not.
+  readonly slug?: string
 }
 
 /** A predefined serving size for a food item */
@@ -56,6 +60,24 @@ export interface ServingSize {
   readonly nameEn: string
   readonly unit: ServingUnit
   readonly grams: number // How many grams this serving equals
+}
+
+/** Hand-portion icon mapping for visual portion estimation without a scale */
+export type HandPortion = 'palm' | 'cupped_hand' | 'thumb' | 'fist' | 'unit'
+
+/** A single tick mark on the portion slider */
+export interface ServingTick {
+  readonly grams: number
+  readonly nameHe: string // e.g. '½ חזה'
+  readonly nameEn: string // e.g. 'half a breast'
+  readonly isPrimary: boolean // top 3 → quick-pills above the track
+}
+
+/** Serving-tick metadata for one curated food (slug-keyed in SERVING_TICKS map) */
+export interface ServingTickEntry {
+  readonly ticks: readonly ServingTick[] // sorted strictly ascending by grams
+  readonly handPortion: HandPortion | null
+  readonly cookedVariantSlug: string | null // null if no raw/cooked sibling
 }
 
 /** How accurately a user followed a planned meal */
