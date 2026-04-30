@@ -2,6 +2,43 @@
 // @ts-expect-error -- __DEV__ is a React Native global not typed in Node
 globalThis.__DEV__ = true
 
+// react-native-gesture-handler — RNGH's bundled jestSetup pulls in real
+// Reanimated bindings (useEvent etc.) which the codebase's custom reanimated
+// mock at src/test/reanimated-mock.ts intentionally omits. We mock only the
+// surface the slider uses: GestureDetector renders children, Gesture.Pan
+// returns a chainable that captures onUpdate/onEnd handlers without
+// invoking the worklet runtime. Gesture wiring is verified manually on
+// device per lessons.md:101 (gesture math is not jest-testable).
+jest.mock('react-native-gesture-handler', () => {
+  const React = jest.requireActual('react')
+  const { View } = jest.requireActual('react-native')
+  const buildPanMock = () => {
+    const obj: Record<string, unknown> = {}
+    obj.onUpdate = () => obj
+    obj.onEnd = () => obj
+    obj.onBegin = () => obj
+    obj.onStart = () => obj
+    obj.onChange = () => obj
+    obj.onFinalize = () => obj
+    return obj
+  }
+  return {
+    GestureDetector: ({ children }: { children: React.ReactNode }) => children,
+    GestureHandlerRootView: ({
+      children,
+      ...props
+    }: {
+      children?: React.ReactNode
+      [key: string]: unknown
+    }) => React.createElement(View, props, children),
+    Gesture: {
+      Pan: buildPanMock,
+      Tap: buildPanMock,
+      LongPress: buildPanMock,
+    },
+  }
+})
+
 // Haptics mock — expo-haptics requires native modules, mock for unit tests
 jest.mock('expo-haptics', () => ({
   impactAsync: jest.fn(),

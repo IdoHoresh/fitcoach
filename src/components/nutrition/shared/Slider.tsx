@@ -2,14 +2,13 @@
  * Shared portion-slider primitive (A2).
  *
  * Consumed by Track B's B4 (slider-adjust screen, Structured mode) and
- * Track C's C2 (chip flow, Free mode). Pure presentation — gesture +
- * haptic wiring lands in Task 6.
+ * Track C's C2 (chip flow, Free mode).
  *
  * Layout:
  *   [ food name header                                   ]
  *   [ quick-pills row · 3 primary ticks                  ]
  *   [ hand-icon · current value (dual format)            ]
- *   [ track + thumb (LTR; Task 6 wires gestures)         ]
+ *   [ track + draggable thumb (LTR)                      ]
  *   [ tick row with dual-format labels                   ]
  *   [ cooked/raw toggle (only when variant prop given)   ]
  *
@@ -17,12 +16,20 @@
  *   - Q1 cooked/raw: parent owns sibling; gram preserved on swap
  *   - Q2 units: dual label `125 גר׳ · ½ חזה` on tick / between
  *   - Q3 RTL: track stays LTR (number row, lessons.md:99)
- *   - Q4 state: parent-controlled grams + onChange; sparse callbacks
+ *   - Q4 state: parent-controlled grams + sparse onChange (one fire per
+ *     tick crossing during drag); thumb position is reanimated shared
+ *     value (UI thread)
+ *   - Q5 haptic: tick-crossing detection inlined in worklet (helper
+ *     duplicated for worklet purity); manual device test verifies wiring
+ *     per lessons.md:101
  */
 
 import { Ionicons } from '@expo/vector-icons'
-import React from 'react'
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import * as Haptics from 'expo-haptics'
+import React, { useEffect, useMemo } from 'react'
+import { LayoutChangeEvent, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Gesture, GestureDetector } from 'react-native-gesture-handler'
+import Animated, { runOnJS, useAnimatedStyle, useSharedValue } from 'react-native-reanimated'
 
 import { t } from '@/i18n'
 import { colors } from '@/theme/colors'
@@ -102,7 +109,15 @@ function detectVariantState(food: FoodItem): 'raw' | 'cooked' | null {
   return null
 }
 
-export function Slider({ food, grams, onChange, variant, onVariantChange, testID }: SliderProps) {
+export function Slider({
+  food,
+  grams,
+  onChange,
+  onChangeEnd,
+  variant,
+  onVariantChange,
+  testID,
+}: SliderProps) {
   const strings = t().nutrition.slider
   const gramsAbbr = strings.gramsAbbreviated
   const approxSymbol = strings.approximately
@@ -113,6 +128,96 @@ export function Slider({ food, grams, onChange, variant, onVariantChange, testID
   const currentLabel = findCurrentLabel(grams, ticks, gramsAbbr, approxSymbol)
   const thumbLeftPct = computeThumbLeftPercent(grams, ticks)
   const variantState = detectVariantState(food)
+
+  // ── Gesture state (Q4: UI-thread reanimated; sparse JS callbacks) ──
+
+  // Track width is measured via onLayout. Shared value so the worklet
+  // can read it without crossing the JS↔UI bridge per frame.
+  const trackWidth = useSharedValue(0)
+
+  // Thumb position as 0..100 percent. Driven by gesture during drag,
+  // synced from the `grams` prop on external changes (toggle, quick-pill).
+  const thumbPercent = useSharedValue(thumbLeftPct)
+
+  // Last gram value reported via onChange. Lives in the worklet so it can
+  // detect tick crossings between gesture frames without JS round-trips.
+  const lastReportedGrams = useSharedValue(grams)
+
+  // Sync shared values with the prop-driven values. Quick-pill / toggle
+  // press updates `grams`, which jumps the thumb instantly here.
+  useEffect(() => {
+    thumbPercent.value = thumbLeftPct
+    lastReportedGrams.value = grams
+  }, [grams, thumbLeftPct, thumbPercent, lastReportedGrams])
+
+  const animatedThumbStyle = useAnimatedStyle(() => ({
+    left: `${thumbPercent.value}%`,
+  }))
+
+  // Stable copies for the gesture closure. Capturing the helpers' arrays
+  // directly is fine because they only change when `food` changes (which
+  // re-creates the gesture via the useMemo dep below).
+  const tickGramValues = useMemo(() => ticks.map((t) => t.grams), [ticks])
+  const minGrams = tickGramValues[0] ?? 0
+  const maxGrams = tickGramValues[tickGramValues.length - 1] ?? minGrams
+
+  // JS-thread side-effects fired sparsely from the worklet via runOnJS.
+  // Haptic + onChange per tick crossing; onChangeEnd once on release.
+  const fireCrossing = (newGrams: number) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {
+      // Haptics can throw on devices without Taptic engine. Silently
+      // swallow — drag still works, just no vibration.
+    })
+    onChange(newGrams)
+  }
+
+  const fireEnd = (finalGrams: number) => {
+    onChangeEnd?.(finalGrams)
+  }
+
+  // Re-create the gesture when the food (= tick set) changes so the
+  // worklet captures fresh tick values. RNGH attaches/detaches gestures
+  // automatically when the JSX updates.
+  const panGesture = useMemo(() => {
+    return Gesture.Pan()
+      .onUpdate((e) => {
+        'worklet'
+        if (trackWidth.value === 0 || tickGramValues.length === 0) return
+
+        const pct = Math.max(0, Math.min(100, (e.x / trackWidth.value) * 100))
+        thumbPercent.value = pct
+
+        if (maxGrams === minGrams) return // degenerate single-tick slider
+        const newGrams = Math.round(minGrams + (pct / 100) * (maxGrams - minGrams))
+
+        // Tick-crossing detection inlined for worklet purity. Mirrors
+        // detectTickCrossings — kept in lockstep with that helper.
+        const lo = Math.min(lastReportedGrams.value, newGrams)
+        const hi = Math.max(lastReportedGrams.value, newGrams)
+        let crossed = false
+        for (let i = 0; i < tickGramValues.length; i++) {
+          const tickG = tickGramValues[i]
+          if (tickG > lo && tickG <= hi) {
+            crossed = true
+            break
+          }
+        }
+
+        if (crossed) {
+          lastReportedGrams.value = newGrams
+          runOnJS(fireCrossing)(newGrams)
+        }
+      })
+      .onEnd(() => {
+        'worklet'
+        runOnJS(fireEnd)(lastReportedGrams.value)
+      })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tickGramValues, minGrams, maxGrams])
+
+  const onTrackLayout = (e: LayoutChangeEvent) => {
+    trackWidth.value = e.nativeEvent.layout.width
+  }
 
   return (
     <View style={styles.container} testID={testID}>
@@ -150,14 +255,16 @@ export function Slider({ food, grams, onChange, variant, onVariantChange, testID
         <Text style={styles.currentLabel}>{currentLabel}</Text>
       </View>
 
-      {/* Track + thumb (LTR; gesture wiring deferred to Task 6) */}
-      <View style={styles.trackContainer}>
-        <View style={styles.track} />
-        <View
-          style={[styles.thumb, { left: `${thumbLeftPct}%` }]}
-          testID={testID ? `${testID}-thumb` : undefined}
-        />
-      </View>
+      {/* Track + thumb. GestureDetector wraps the track; thumb is animated. */}
+      <GestureDetector gesture={panGesture}>
+        <View style={styles.trackContainer} onLayout={onTrackLayout}>
+          <View style={styles.track} />
+          <Animated.View
+            style={[styles.thumb, animatedThumbStyle]}
+            testID={testID ? `${testID}-thumb` : undefined}
+          />
+        </View>
+      </GestureDetector>
 
       {/* Tick row */}
       {ticks.length > 0 && (
