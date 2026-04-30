@@ -1,3 +1,9 @@
+// react-native-gesture-handler must be imported FIRST — before any other
+// import that might transitively load components which use gestures (e.g.
+// the A2 portion-slider). Importing GestureHandlerRootView from RNGH
+// triggers the same side-effect side; one import is enough.
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
+
 import { useEffect, useState } from 'react'
 import { I18nManager } from 'react-native'
 import { Slot } from 'expo-router'
@@ -74,5 +80,11 @@ export default function RootLayout() {
   // Keep splash screen visible until ready
   if (!appReady || !fontsLoaded) return null
 
-  return <Slot />
+  // GestureHandlerRootView wraps the app so RNGH's gesture recognizers can
+  // hook into the view hierarchy. Required for any gesture in any descendant.
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Slot />
+    </GestureHandlerRootView>
+  )
 }

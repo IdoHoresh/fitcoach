@@ -439,6 +439,23 @@ export const en: TranslationKeys = {
     confirm: 'Add to daily plan',
     servingSize: 'Quick pick',
     customAmount: 'Custom amount',
+    slider: {
+      gramsAbbreviated: 'g',
+      approximately: '≈',
+      thumbHint: 'Drag to adjust portion. Each tick gives a short haptic.',
+      currentSelection: 'Current selection',
+      cookedRaw: {
+        raw: 'Raw',
+        cooked: 'Cooked',
+      },
+      handPortion: {
+        palm: 'Palm',
+        cupped_hand: 'Cupped hand',
+        thumb: 'Thumb',
+        fist: 'Fist',
+        unit: 'Unit',
+      },
+    },
     generateMeal: '✨ Generate meal',
     regenerateMeal: '🔄 Change meal',
     addFoodLabel: '+ Add food',
