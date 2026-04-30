@@ -439,6 +439,21 @@ export const he = {
     confirm: 'הוסף לתפריט היומי',
     servingSize: 'בחירה מהירה',
     customAmount: 'כמות מותאמת אישית',
+    slider: {
+      gramsAbbreviated: 'גר׳',
+      approximately: '≈',
+      cookedRaw: {
+        raw: 'נא',
+        cooked: 'מבושל',
+      },
+      handPortion: {
+        palm: 'כף יד',
+        cupped_hand: 'חופן',
+        thumb: 'אגודל',
+        fist: 'אגרוף',
+        unit: 'יחידה',
+      },
+    },
     generateMeal: '✨ הכן ארוחה',
     regenerateMeal: '🔄 שנה ארוחה',
     addFoodLabel: '+ הוסף מאכל',

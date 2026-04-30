@@ -12,7 +12,7 @@
  * pattern (lessons.md:163, 2026-04-18).
  */
 
-import type { FoodItem, ServingTick, ServingTickEntry } from '@/types/nutrition'
+import type { FoodItem, HandPortion, ServingTick, ServingTickEntry } from '@/types/nutrition'
 import { SERVING_TICKS } from '@/data/serving-ticks'
 
 /**
@@ -77,4 +77,18 @@ export function getCookedVariant(
   const entry = tickMap[food.slug]
   if (!entry?.cookedVariantSlug) return null
   return allFoods.find((f) => f.slug === entry.cookedVariantSlug) ?? null
+}
+
+/**
+ * Resolves the hand-portion icon for a given food.
+ *
+ * Returns null when the food has no slug or no entry in the tick map —
+ * the slider shows no hand-portion icon for non-curated foods.
+ */
+export function getHandPortion(
+  food: FoodItem,
+  tickMap: Record<string, ServingTickEntry> = SERVING_TICKS,
+): HandPortion | null {
+  if (!food.slug) return null
+  return tickMap[food.slug]?.handPortion ?? null
 }
