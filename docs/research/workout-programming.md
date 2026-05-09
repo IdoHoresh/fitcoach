@@ -358,8 +358,10 @@ Week 6: DELOAD (back to MV)
 ### Mifflin-St Jeor (no body fat % known)
 
 ```
-Male:   BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age - 5  (was incorrectly +5)
+Male:   BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age + 5
 Female: BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age - 161
+
+Source: Mifflin MD, St Jeor ST, et al. (1990) Am J Clin Nutr 51(2):241-247
 
 TDEE = BMR × Activity Multiplier
 ```

@@ -24,12 +24,17 @@ import type {
 /**
  * Mifflin-St Jeor BMR formula coefficients (1990).
  * BMR = WEIGHT_COEFF × weight(kg) + HEIGHT_COEFF × height(cm) - AGE_COEFF × age + sexOffset
+ *
+ * Source: Mifflin MD, St Jeor ST, et al. (1990). "A new predictive equation for resting
+ * energy expenditure in healthy individuals." Am J Clin Nutr 51(2):241-247.
+ *   Male:   +5
+ *   Female: -161
  */
 export const BMR_COEFFICIENTS = {
   WEIGHT: 10,
   HEIGHT: 6.25,
   AGE: 5,
-  MALE_OFFSET: -5,
+  MALE_OFFSET: 5,
   FEMALE_OFFSET: -161,
 } as const
 
