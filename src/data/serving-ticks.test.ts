@@ -65,3 +65,38 @@ describe('SERVING_TICKS data integrity', () => {
     expect(SERVING_TICKS.chicken_breast_cooked.cookedVariantSlug).toBe('chicken_breast_raw')
   })
 })
+
+/**
+ * Israeli-retail anchor regression — spot checks, NOT full coverage.
+ *
+ * These guard the specific class of error caught at code review by the
+ * code-reviewer agent (Greek yogurt 200g single-serve that doesn't exist
+ * in IL retail; cottage tub size). The structural-integrity tests above
+ * pass even when retail facts are wrong — these tests pin the retail
+ * anchors that matter most.
+ *
+ * Coverage: 2 of 20 foods. The remaining 18 are verified at PR review
+ * (code-reviewer agent) only and are NOT regression-protected. Full
+ * retail-anchor coverage tracked as a follow-up; gap named in
+ * docs/velocity.md.
+ */
+describe('SERVING_TICKS Israeli retail anchors (spot-check regression)', () => {
+  it('greek_yogurt_0pct primary tick is 150g — Yotvata/Tara גביע (200g single-serve does not exist in IL retail)', () => {
+    const ticks = SERVING_TICKS.greek_yogurt_0pct.ticks
+    const cup = ticks.find((t) => t.nameHe === 'גביע')
+    expect(cup).toBeDefined()
+    expect(cup?.grams).toBe(150)
+    expect(cup?.isPrimary).toBe(true)
+    // Negative anchor: a 200g גביע must not exist — the failure mode this test guards against.
+    const fakeCup = ticks.find((t) => t.grams === 200 && t.nameHe.includes('גביע'))
+    expect(fakeCup).toBeUndefined()
+  })
+
+  it('cottage_5pct full tub tick is 250g — Tnuva גביע retail size', () => {
+    const ticks = SERVING_TICKS.cottage_5pct.ticks
+    const tub = ticks.find((t) => t.nameHe === 'גביע')
+    expect(tub).toBeDefined()
+    expect(tub?.grams).toBe(250)
+    expect(tub?.isPrimary).toBe(true)
+  })
+})
