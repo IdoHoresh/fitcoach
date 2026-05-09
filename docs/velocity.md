@@ -33,6 +33,23 @@ This file exists because the original 27-week launch budget (TASKS.md:521) cited
 
 **Kill condition (when committed):** cumulative audited foods at week N < 10×N → escalate to part-time dietitian OR shrink gold list to 100 items + composite-only and disclose curation in App Store description.
 
+## Known coverage gaps (not blockers; tracked here to prevent §4.3 deferral)
+
+### Retail-anchor regression coverage — `SERVING_TICKS` (PR #89 / Track A2)
+
+**Status (2026-05-10):** 2 of 20 foods have retail-anchor regression tests:
+
+- `greek_yogurt_0pct` — 150g גביע primary tick + negative anchor against the non-existent 200g cup (`src/data/serving-ticks.test.ts`, commit `f30f643`)
+- `cottage_5pct` — 250g גביע primary tick (Tnuva גביע retail size)
+
+**Remaining 18 foods** are verified at PR review by the code-reviewer agent only — NOT regression-protected. The 4 should-fixes the agent caught at PR #89 review (oats 90g, almonds count-labels, cottage 375g gap, chicken portion-qualifier alignment) would not have failed the existing test suite if the values had been wrong.
+
+**Why it matters:** if a future PR edits `serving-ticks.ts` and reverts an Israeli-retail anchor by accident, the structural-integrity tests pass and the regression ships unless someone reads the diff carefully or the agent runs again.
+
+**§4.3 risk acknowledged:** logging this gap here does NOT close it. Naming the gap in writing prevents the silent-deferral pattern but does not substitute for the work.
+
+**Resolution path (when scheduled):** one follow-up PR adds retail-anchor tests for the remaining 18 foods (~1 hour, mostly mechanical: assert each entry's primary tick(s) match the source-of-truth comment in `serving-ticks.ts`). Schedule TBD — to avoid §4.3, this row gets a date commit before Phase 2 ends or it gets explicitly accepted as "not adding coverage; remaining 18 foods stay review-time-only forever," in writing.
+
 ## Discipline
 
 - Update this file at the end of every Phase, not retrospectively at Phase 5.
