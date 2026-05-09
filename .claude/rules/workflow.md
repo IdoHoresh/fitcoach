@@ -12,6 +12,18 @@ This applies to the ENTIRE flow — every single step from branch creation to po
 2. **Brainstorm** — `/brainstorm` for new features, ask questions, get approval
 3. **Plan** — `/plan` if 3+ files, get approval before implementation
 
+### Spec discipline (binding-language rule)
+
+**No binding invariant language in any spec without a linked rip-out PR or a written exemption.**
+
+"Binding," "non-negotiable," "must," "always," and equivalent absolutes can appear in a spec **only if**:
+
+- (a) the codebase already complies, OR
+- (b) the spec links to an open-or-merged PR that brings the codebase into compliance, OR
+- (c) the spec contains a written exemption naming the specific divergence and its scheduled fix.
+
+Why: discovered 2026-05-10 via external red-team review §3.3. `docs/specs/2026-04-24-two-mode-meal-logging.md` declared ten invariants binding while shipped code (`redistribute-deficit.ts`, `weekly-recalibration.ts` adherence-named gate, full `MealAdherence` chain) violated #1 + #6. No rip-out plan was written, so every `/review` after that spec was measured against an aspirational baseline. Cleanup tracked in `docs/specs/2026-05-10-invariant-cleanup.md`. The rule is the structural fix.
+
 ### During Implementation
 
 4. **TDD** — failing test → implement → refactor → run tests (mandatory for business logic)
