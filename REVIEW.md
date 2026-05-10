@@ -18,6 +18,7 @@ Review every change against these rules. Flag violations with confidence score (
 - [ ] Protein recommendations use adjusted body weight (Helms formula)
 - [ ] Volume stays within per-session cap (8-12 direct sets per muscle)
 - [ ] Pull volume >= push volume in every split
+- [ ] Any function reproducing a published formula has at least one test pinned to the literature value (not the code's output), with the journal/source cited in the test comment
 
 ## Code Quality
 

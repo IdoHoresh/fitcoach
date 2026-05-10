@@ -15,21 +15,27 @@ import {
 // ── BMR Tests ────────────────────────────────────────────────────────
 
 describe('calculateBmrMifflin', () => {
-  it('calculates_male_bmr_correctly', () => {
-    // Formula: 10 × 80 + 6.25 × 180 - 5 × 30 + (-5) = 1,770
-    expect(calculateBmrMifflin(80, 180, 30, 'male')).toBe(1770)
+  // Mifflin-St Jeor (1990), AJCN canonical formula:
+  //   Male:   10·W + 6.25·H − 5·age + 5
+  //   Female: 10·W + 6.25·H − 5·age − 161
+  // These tests pin to the PUBLISHED formula, not what the code happens to compute.
+  // If a test fails after a code change, the code is wrong — not the test.
+
+  it('matches_published_mifflin_canonical_male', () => {
+    // 10×80 + 6.25×180 − 5×30 + 5 = 800 + 1125 − 150 + 5 = 1780
+    expect(calculateBmrMifflin(80, 180, 30, 'male')).toBe(1780)
   })
 
-  it('calculates_female_bmr_correctly', () => {
-    // Formula: 10 × 60 + 6.25 × 165 - 5 × 25 + (-161) = 1,345
+  it('matches_published_mifflin_canonical_female', () => {
+    // 10×60 + 6.25×165 − 5×25 − 161 = 600 + 1031.25 − 125 − 161 = 1345.25 → 1345
     expect(calculateBmrMifflin(60, 165, 25, 'female')).toBe(1345)
   })
 
   it('calculates_ido_bmr_correctly', () => {
     // Ido: 113kg, 189cm, 30yo male
-    // 10 × 113 + 6.25 × 189 - 5 × 30 + (-5) = 2,156
+    // 10×113 + 6.25×189 − 5×30 + 5 = 1130 + 1181.25 − 150 + 5 = 2166.25 → 2166
     const result = calculateBmrMifflin(113, 189, 30, 'male')
-    expect(result).toBe(2156)
+    expect(result).toBe(2166)
   })
 
   it('heavier_person_has_higher_bmr', () => {
@@ -318,9 +324,9 @@ describe('calculateTdeeBreakdown', () => {
   })
 
   it('ido_profile_matches_expected_range', () => {
-    // Ido: BMR ~2156, 113kg, desk, 5000-6000 steps, sedentary after work,
+    // Ido: BMR ~2166, 113kg, desk, 5000-6000 steps, sedentary after work,
     // 4x/week 90min strength (easy), target ~2288 kcal
-    const result = calculateTdeeBreakdown(2156, 113, {
+    const result = calculateTdeeBreakdown(2166, 113, {
       occupation: 'desk',
       dailySteps: 5500,
       afterWorkActivity: 'sedentary',
@@ -334,7 +340,7 @@ describe('calculateTdeeBreakdown', () => {
     // Should be in the ballpark of 2288 (±200 kcal)
     expect(result.total).toBeGreaterThan(2100)
     expect(result.total).toBeLessThan(2700)
-    expect(result.bmr).toBe(2156)
+    expect(result.bmr).toBe(2166)
     expect(result.neat).toBeGreaterThan(0)
     expect(result.eat).toBeGreaterThan(0)
     expect(result.tef).toBeGreaterThan(0)
