@@ -1,5 +1,10 @@
 import type { FoodItem, ServingTickEntry } from '@/types/nutrition'
-import { detectTickCrossings, getCookedVariant, getServingTicks } from './serving-ticks.helpers'
+import {
+  detectTickCrossings,
+  getCookedVariant,
+  getHandPortion,
+  getServingTicks,
+} from './serving-ticks.helpers'
 
 // ── Test fixtures ───────────────────────────────────────────────
 
@@ -177,5 +182,19 @@ describe('getCookedVariant', () => {
       tickMapWithChicken,
     )
     expect(result).toBeNull()
+  })
+})
+
+describe('getHandPortion', () => {
+  it('returns the hand-portion when food has a slug with a tickMap entry', () => {
+    expect(getHandPortion(chickenRaw, tickMapWithChicken)).toBe('palm')
+  })
+
+  it('returns null when food has no slug', () => {
+    expect(getHandPortion(orphanFood, tickMapWithChicken)).toBeNull()
+  })
+
+  it('returns null when slug is not in tickMap', () => {
+    expect(getHandPortion(chickenRaw, {})).toBeNull()
   })
 })

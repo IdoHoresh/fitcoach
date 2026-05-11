@@ -313,6 +313,11 @@ Codebase-specific patterns, gotchas, and decisions. Claude reads this at session
 
 - **`/review` on portion-data files needs a Hebrew + Israeli-context reviewer to be useful.** Structural integrity tests (slug coverage, tick monotonicity, primary count) catch shape errors but say nothing about whether `חופן` makes sense at 50g, or whether `אונקיה` reads as Hebrew. The code-reviewer agent caught 4 should-fixes and 2 nits on a file the integrity tests rated 100% green. Pattern: when shipping localized data, /review against the target locale even if the structure tests pass. (2026-04-30)
 
+## React Native Gesture Handler — Jest Compatibility (2026-04-30)
+
+- **`react-native-gesture-handler/jestSetup` is incompatible with the codebase's custom Reanimated mock.** RNGH's bundled jest setup expects real Reanimated bindings (specifically `Reanimated.useEvent`) which `src/test/reanimated-mock.ts` intentionally omits — the custom mock was hand-shaped for v4 API and doesn't include internal-only entry points. Loading RNGH's setup throws `TypeError: _reanimatedWrapper.Reanimated.useEvent is not a function` and fails every component test that transitively imports `react-native-gesture-handler`. Fix: write a minimal codebase-local jest mock for RNGH at `jest.setup.ts` that returns a `GestureDetector` that renders children, a `GestureHandlerRootView` that wraps in `View`, and a `Gesture.Pan()` chainable that captures `onUpdate` / `onEnd` without invoking the worklet runtime. Gesture wiring is verified manually on device per lessons.md:101 — the unit test gate is render-only.
+- **`import 'react-native-gesture-handler'` (side-effect) AND `import { GestureHandlerRootView } from 'react-native-gesture-handler'` together trip ESLint's `import/no-duplicates`.** With modern RNGH (≥2.x) the named import triggers the same native-side-effect setup, so a single named import is sufficient. Drop the side-effect-only line.
+
 ## Review & Audit Discipline (2026-05-10)
 
 Patterns surfaced across multi-layer reviews of the nutrition algorithm (mandate review → developer triage → meta-review → audit → red-team of the audit). Each layer caught real issues in the previous layer; each layer also introduced new convenience biases. These are the recurring failure modes inside an otherwise-working discipline.
